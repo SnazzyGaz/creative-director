@@ -8,7 +8,7 @@ Format: **What / Why / Check / Fix / Source**. These are strong defaults; a deli
 
 ### ILL-1. Composition: unequal divisions
 - **What:** In multi-part scenes, divide the frame unequally: big, medium and small areas, with the horizon and main dividing lines away from the exact middle. Avoid tangents (edges that just touch).
-- **Why:** Equal halves and kissing edges make a picture static or confusing. This rule is about *divisions*. For a single subject there is no default: centred and off-centre are equally valid, so judge placement by the brief's intent (decided by Gaz, 2026-11-01).
+- **Why:** Equal halves and kissing edges make a picture static or confusing. This rule is about *divisions*. For a single subject there is no default: centred and off-centre are equally valid, so judge placement by the brief's intent (maintainer decision, 2026-11-01).
 - **Check:** Measure where the horizon and main lines fall. Look for tangents: two contours touching, or a contour touching the frame edge. Do the big areas differ clearly in size?
 - **Fix:** Move a halving line to a clearly unequal position (no specific ratio is required). Overlap or separate tangent shapes decisively. Don't move a single subject on or off centre just to obey a rule; move it only if the placement works against the intent.
 - **Source:** NN/g, *5 Principles of Visual Design* (balance) [S2]; Gurney, *Getting a Fresh Eye* [S7]; Bucci, big-medium-small [S79]; evidence on thirds and centring [S43, S44].

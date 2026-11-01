@@ -1,6 +1,6 @@
 # Module: 3D
 
-How to check 3D work with Gaz's two tools, and how design judgement applies on top. Load with `core/`; add `illustration/` for a composed final render.
+How to check 3D work with two companion repos, and how design judgement applies on top. Load with `core/`; add `illustration/` for a composed final render.
 
 - **model-qa** (github.com/SnazzyGaz/model-qa): a "spell-checker" for 3D models. Measures defects a render hides (floating parts, inside-out normals, duplicates, holes, wrong units, asymmetry, UV problems) and reports what, where and how to fix. `--look` adds measurable looks advice and a lit `beauty.png`. MIT. [S29]
 - **bot-creative-toolkit** (`bct`, github.com/SnazzyGaz/bot-creative-toolkit): headless Blender/Inkscape/GIMP/potrace for bots. `bct look` renders a labelled multi-view contact sheet and can run model-qa via `--qa`. Also layered images (`bct layers`) and vectors (`bct vector`). MIT. [S30]
@@ -75,4 +75,4 @@ Format: **What / Why / Check / Fix / Source**.
 
 ## What these tools don't do
 
-model-qa checks whether a model is **built** correctly, not whether it **looks good** or is the right object; `--look` covers only measurable looks problems [S29]. Style, colour and appeal still go through `core/` and, finally, Gaz.
+model-qa checks whether a model is **built** correctly, not whether it **looks good** or is the right object; `--look` covers only measurable looks problems [S29]. Style, colour and appeal still go through `core/` and, finally, the owner of the work.

@@ -113,7 +113,7 @@ Every source cited in this repo. Ideas are paraphrased; no text or images are co
 - **[S110]** Kellogg Insight. *5 telltale signs that a photo is AI-generated* (with M. Groh). https://insight.kellogg.northwestern.edu/article/ai-photos-identification
 - **[S28]** Superdesign. *Why AI Design Looks Generic* (2026). https://superdesign.dev/blog/why-ai-design-looks-generic
 
-## Gaz's tools
+## Companion repos
 - **[S29]** SnazzyGaz/model-qa: README and AGENTS.md. https://github.com/SnazzyGaz/model-qa
 - **[S30]** SnazzyGaz/bot-creative-toolkit: README and AGENTS.md. https://github.com/SnazzyGaz/bot-creative-toolkit
 

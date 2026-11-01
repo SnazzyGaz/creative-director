@@ -25,5 +25,5 @@
 ### Take-over check (4b)
 - One MUST-BE-RIGHT rule fails (UI-6, many instances). The flow works and the page is usable. Nudge.
 
-### Questions for Gaz
+### Questions for the owner
 - The remaining UI-7 tells (gradient, centred hero, three cards, Inter) are choices, not errors. Do they need brand tokens from a brief before any change?

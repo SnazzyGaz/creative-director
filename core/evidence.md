@@ -19,7 +19,7 @@ Use this page when a critique wants to say "people prefer X". Cite it only for w
 Don't cite these as rules. If a bot's critique leans on one, correct it.
 
 - **"The golden ratio is what people find beautiful."** Early support did not survive re-testing. A large later study found at most a weak population preference, with large differences between individuals [S38]. Other tests found no special pull of the golden rectangle, including no automatic preference for it in art pictures [S39]. A golden-ratio type scale is just one ratio among many (UI-1).
-- **"Put the subject on a thirds line."** In one study, photos that follow the rule of thirds scored only slightly higher, and the link to aesthetic ratings was weak [S43]. For single-object images, a centred placement was preferred in about two thirds of judgements, at every object size [S44]. Unequal divisions still help in busy scenes (ILL-1). For a single subject, neither off-centre nor centred is the default: judge by intent (decided by Gaz, 2026-11-01).
+- **"Put the subject on a thirds line."** In one study, photos that follow the rule of thirds scored only slightly higher, and the link to aesthetic ratings was weak [S43]. For single-object images, a centred placement was preferred in about two thirds of judgements, at every object size [S44]. Unequal divisions still help in busy scenes (ILL-1). For a single subject, neither off-centre nor centred is the default: judge by intent (maintainer decision, 2026-11-01).
 - **"People like medium complexity" (Berlyne's inverted U) as a universal law.** The evidence is mixed. Many visual studies find a straight-line or no relation. It fits some music data better [S45]. Use S35's narrower finding instead: lower *perceived* complexity helps first impressions of interfaces.
 - **"Red makes people anxious/hungry; blue builds trust."** Colour-psychology effects are context-dependent and were mostly shown in small studies. A 2020 meta-analysis found little robust evidence that red impairs performance [S46]. Don't justify a palette with colour-emotion claims. Justify it with roles, contrast and the brief.
 - **"Seven plus or minus two menu items."** Miller's paper is about holding items in memory, not choosing from options that stay visible on screen [S64]. See the UX module.
@@ -29,4 +29,4 @@ Don't cite these as rules. If a bot's critique leans on one, correct it.
 
 - Write "evidence: [S41]" only when the study matches the case (similar task, similar viewers). Otherwise cite the craft rule and its source.
 - If a fix rests only on a myth above, drop it.
-- Taste questions with no rule and no evidence go to Gaz.
+- Taste questions with no rule and no evidence go to the owner of the work.

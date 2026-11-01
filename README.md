@@ -1,106 +1,71 @@
-# creative-director
+<p><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.png">
+  <img alt="creative director: design judgement for AI agents. A construction drawing of a box and a cylinder in perspective." src="docs/assets/banner-light.png" width="100%">
+</picture></p>
 
-Design judgement for AI bots. This repo helps a bot improve its own visual output (3D models, drawings, generated images, web and app UI, UX flows) by nudging it toward what people measurably prefer.
+A set of design rules and a critique loop that any AI agent can read. It helps an agent judge and improve its own visual work (drawings, illustrations, 3D renders, web and app UI, UX flows): render it, look at it the way a designer would, cite a rule for every problem, make up to three small fixes, and stop when the work is clearly better. Rules are grounded in perception research where it exists and in craft practice where it doesn't, and taste calls stay with the person who owns the work.
 
-It is a **light touch, not a rebuild**: keep the work's intent and what already works, make the smallest high-impact fixes (about three per round), and stop once it is clearly better. Only **MUST-BE-RIGHT** errors (perspective, anatomy, light, contrast and accessibility, broken flows, 3D build defects) are treated as blockers.
+<p><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/before-after-dark.jpg">
+  <img alt="Three before/after pairs: a box and can drawing with its perspective rebuilt, a knight illustration with a quieter sky, and a landing page with readable contrast." src="docs/assets/before-after-light.jpg" width="100%">
+</picture></p>
 
-"Human-preferred" is grounded in evidence where possible: people judge visual appeal within about 50 ms [S36], lower visual complexity predicts better first impressions [S35], easy-to-perceive work (clear figure-ground, symmetry, grouping) is liked more [S37], and attractive interfaces are perceived as easier to use, though looks don't excuse serious problems [S34]. Popular claims that don't hold up, such as the golden ratio and the rule of thirds as a law, are listed in `core/evidence.md` so bots stop repeating them. Where no evidence or rule decides, the question goes to Gaz (Garyck Arntzen), whose taste is the final word.
+All generated, one or two rounds each. Critiques, logs and honest misses: [examples/](examples/).
 
-It is written for bots, but a person should be able to read any page in two minutes.
+## How it works
 
-## How a bot uses it
+<p><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/loop-dark.png">
+  <img alt="The loop: 0 Brief, 1 Render, 2 Look, 3 Critique, 4 Fix, 5 Stop. Fix loops back to Render. If the work is fundamentally broken, take over and rework." src="docs/assets/loop-light.png" width="100%">
+</picture></p>
 
-1. Read `core/principles.md` once per session, and `core/creative-direction.md` when taking a brief. These rules apply to everything.
-2. Open `core/which-modules.md` and load only the modules the task needs.
-3. Make the work, then run the loop in `core/critique-loop.md`: render, look, critique, fix (up to ~3 changes), re-render.
-4. Write each critique with `core/critique-template.md`: neutral, factual, every point tied to a rule ID, ranked biggest first.
-5. Stop when it is clearly better or the loop says so, and hand to Gaz. Never claim the work is "done" on taste alone.
+Each rule has an ID (`CORE-2`, `TD-PER-1`, `UI-6`) and the same parts: what, why, a check you can run, the usual fix, and a source. Only **MUST-BE-RIGHT** errors (perspective, anatomy, light, contrast and accessibility, broken flows, 3D build defects) block; everything else is a default. Full loop: [`core/critique-loop.md`](core/critique-loop.md).
 
-## Usage: three ways to plug it in
+## Usage
 
-Pick the lightest one that fits the job. All three use the same rules, so results stay consistent whoever does the checking.
+| Mode | What happens |
+|---|---|
+| **Self-check**<br>`+ creative director` | The agent runs the loop on its own output. Cheapest. |
+| **Consult**<br>`consult creative director` | Send the brief and the real output; get back a neutral critique with ranked fixes ([template](core/critique-template.md)). |
+| **Direct**<br>`creative director: direct this` | Joins at the start: writes the brief, sets direction, picks from rough options, reviews at checkpoints ([CD-1..6](core/creative-direction.md)). |
 
-### 1. Self-check (cheapest)
-Add a line to a bot's instructions, or to a single request:
+Always send the actual output (image, screenshot at real size, URL or renders), never a description.
 
-> `+ creative director` (or "use the creative-director skill")
-
-The bot reads `core/`, loads the modules `core/which-modules.md` points to, and runs the loop on its own output: brief check, render, five look tests, critique against rule IDs, up to 3 fixes, re-render, stop when clearly better. Anything only a human can decide goes under "Questions for Gaz".
-
-### 2. Consult (a second pair of eyes)
-> `consult creative director`
-
-Send the creative-director bot the brief plus the render, screenshot or file. It returns a neutral critique using `core/critique-template.md`: criteria judged, what meets them, ranked fixes, questions for Gaz. The maker applies the fixes and can send it back for one more look. Use this when the work matters.
-
-### 3. Direct (for bigger jobs)
-> `creative director: direct this`
-
-The creative director joins at the start: writes the six-line brief (CD-1), sets the direction once (mood words, do/don't list, base colours and type, CD-2), asks for 2-3 rough options and picks one (CD-3), then reviews at checkpoints until the brief is met (CD-6).
-
-### What to send
-- The brief, or at least: what it is, who it's for, where and how big it's seen, what must stay.
-- The actual output (image file, screenshot at real size, URL, or model renders). Never just a description.
-
-## Using it with other AI tools
-
-The repo works with any agent that can read files. Each tool finds its entry point automatically:
+## Works with
 
 | Tool | Entry point |
 |---|---|
-| Cursor | `.cursor/rules/creative-director.mdc` and `AGENTS.md` |
-| Claude Code / Claude Agent Skills | `CLAUDE.md`, `SKILL.md` (copy the repo into your skills folder) |
-| OpenAI Codex, Gemini CLI, Jules, others | `AGENTS.md` |
-| GitHub Copilot | `.github/copilot-instructions.md` |
-| ChatGPT custom GPTs, Claude Projects, Gemini Gems | Upload `AGENTS.md`, `core/` and the modules you need as knowledge files, and paste the "How to use it" steps from `AGENTS.md` into the instructions |
-| Anything that reads `llms.txt` | `llms.txt` |
+| Cursor | [`.cursor/rules/creative-director.mdc`](.cursor/rules/creative-director.mdc), [`AGENTS.md`](AGENTS.md) |
+| Claude Code, Claude Skills | [`CLAUDE.md`](CLAUDE.md), [`SKILL.md`](SKILL.md) |
+| Codex, Gemini CLI, Jules | [`AGENTS.md`](AGENTS.md) |
+| GitHub Copilot | [`.github/copilot-instructions.md`](.github/copilot-instructions.md) |
+| ChatGPT, Gemini Gems, Claude Projects | Upload `AGENTS.md`, `core/` and the modules you need as knowledge |
+| Grok Bot | [`AGENTS.md`](AGENTS.md), or point it at this repo |
 
-All entry points point back to `AGENTS.md`, so there is one set of instructions to maintain.
+Every entry point leads back to `AGENTS.md`, and [`llms.txt`](llms.txt) is there for tools that read it.
 
-## Rule format
-
-Every rule has an ID (e.g. `CORE-2`, `TD-PER-1`, `UI-6`) that critiques cite, and the same five parts:
-
-- **What**: the rule in one line.
-- **Why**: what goes wrong without it.
-- **Check**: a test you can actually run or look for.
-- **Fix**: the usual remedy.
-- **Source**: where the idea comes from (full list in `SOURCES.md`).
-
-Technical-drawing rules are also tagged **MUST-BE-RIGHT** (an error here is a mistake, not a style choice) and say whether a tool could check them automatically.
-
-## Folder map
+## What's inside
 
 ```
-creative-director/
-  README.md              this file
-  PROPOSED-REPO.md       what the GitHub repo should look like (draft, not created yet)
-  SOURCES.md             every source cited, with links
-  core/
-    creative-direction.md brief, direction, options, feedback style, done-ness (CD-1..6)
-    principles.md        shared rules: hierarchy, contrast, value, spacing, alignment, colour, type, restraint, balance
-    evidence.md          what preference research supports, and the myths to stop citing
-    critique-loop.md     render -> look -> critique -> fix -> re-render, and when to stop
-    critique-template.md fill-in critique format
-    which-modules.md     task type -> modules to load
-  examples/              stress tests: before/after runs of the loop
-  tools/                 look sheet, WCAG contrast, screenshots, before/after, VP line-fit, ellipse check (+ README.md)
-  modules/
-    technical-drawing/   perspective, cone of vision, proportion, light and shadow, ellipses
-    illustration/        composition, focal point, shape, value, colour, edges, story, mood, gesture, generic AI image look (+ notes.md)
-    web-ui/              type, spacing, grid, components, colour roles, contrast, resize, generic AI look (+ notes.md)
-    ux/                  flows, feedback timing, errors, defaults, signifiers, target size, heuristics
-    3d/                  model-qa and bot-creative-toolkit, silhouette, lighting ratios, PBR ranges, view transform
-
-Each module README ends with **Myths and weak claims**. `notes.md` files hold optional depth.
+core/       principles, creative direction, evidence, the loop, critique template, module picker
+modules/    technical-drawing · illustration · web-ui · ux · 3d
+tools/      look tests, WCAG contrast, screenshots, vanishing points, ellipses, before/after
+examples/   stress tests, round by round, including this README's own critique
 ```
 
-## Ground rules for bots using this repo
+## Principles of the critique
 
-- Paraphrase; never paste other people's text or images into the work or the critique.
-- Be specific and neutral. Name the spot ("the left third", "the second button"), the evidence, the rule ID, and the fix.
-- Preserve intent. Improve the work the bot made; don't replace it with a different idea.
-- Rules are defaults, not laws. Breaking one on purpose is fine if you can say why. Breaking one by accident is the thing to catch.
+- **Neutral.** Factual, like a thesis supervisor. No praise padding, no harshness.
+- **Rule-cited.** Every point names a rule ID and the evidence. No rule, no point; it becomes a question for the owner.
+- **Light touch.** Keep the intent and what already works. At most three fixes a round, then stop when clearly better.
+- **Take over when broken.** If the construction is fundamentally wrong, rework it, then re-check it still answers the brief.
+
+This README went through the loop too: [examples/readme-self-critique](examples/readme-self-critique/).
+
+## Sources and evidence
+
+Every rule cites its sources in [SOURCES.md](SOURCES.md); what the research supports, and the myths to stop repeating, are in [core/evidence.md](core/evidence.md).
 
 ## Licence
 
-MIT, see [LICENSE](LICENSE). Cited works remain their authors' copyright; this repo paraphrases and links to them.
+MIT, see [LICENSE](LICENSE). Cited works stay with their authors; this repo paraphrases and links to them.

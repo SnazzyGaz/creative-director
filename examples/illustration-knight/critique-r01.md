@@ -26,5 +26,5 @@
 ### Next round
 - Apply fixes 1-3 as an image edit with round-01 as reference. Compare with round 1.
 
-### Questions for Gaz
+### Questions for the owner
 - Sunset orange-teal is the generic AI default here. Keep it, or ask for a different light family?

@@ -63,7 +63,7 @@ Format: **What / Why / Check / Fix / Auto / Source**. Tools are in `tools/` (see
 - **Fix:** Re-block the figure with a head-unit scale before detailing.
 - **Auto:** partly. Keypoint detectors can estimate limb ratios on clear poses; foreshortened limbs and stylised characters need a bot or human.
 - **Source:** Proko, *Human Proportions* (Loomis-based) [S25]; Loomis, *Figure Drawing for All It's Worth* [S26].
-- **Note:** Stylised work (chibi, heroic, cartoon) sets its own proportion. The rule is then *consistency with the chosen canon*, not realism. Ask Gaz which canon applies.
+- **Note:** Stylised work (chibi, heroic, cartoon) sets its own proportion. The rule is then *consistency with the chosen canon*, not realism. Ask the owner which canon applies.
 
 ### TD-PRO-2. Left and right agree
 - **What:** Paired features (eyes, ears, shoulders, wheels, table legs) obey the same perspective and size rules.

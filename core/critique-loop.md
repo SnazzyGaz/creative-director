@@ -46,7 +46,7 @@ Artists use these to get a "fresh eye", because the maker grows used to their ow
 Use `critique-template.md`. Tone: neutral and factual, like a doctoral supervisor reviewing a chapter. Every point is judged against a named criterion, never personal preference.
 
 - **State the criteria first.** List the rule IDs in scope (e.g. `CORE-1, CORE-2, TD-PER-1, ILL-2`).
-- **Cite a rule ID on every point.** If no rule supports a point, it is not a critique point; put it under "Questions for Gaz".
+- **Cite a rule ID on every point.** If no rule supports a point, it is not a critique point; put it under "Questions for the owner".
 - **No myths as reasons.** Don't justify a fix with the golden ratio, the rule of thirds as a law, or colour-emotion claims. Cite a preference study only if it fits the case (`evidence.md`).
 - **Meets criteria.** Record what is met, with evidence. This is a record of what to preserve, not encouragement.
 - **Needs improvement, ranked biggest first.** Rank by effect on the whole. Structure (hierarchy, perspective, composition, flow) before surface (texture, polish, micro-spacing). Five at most.
@@ -61,7 +61,7 @@ Register example:
 
 ## 4. Fix and re-render: light touch
 
-- **Preserve intent.** Don't change the subject, style, mood, palette concept or layout concept. Those belong to the brief and to Gaz.
+- **Preserve intent.** Don't change the subject, style, mood, palette concept or layout concept. Those belong to the brief and to the owner of the work.
 - **At most ~3 changes per round**, blockers first, then the highest-ranked improvements.
 - **Smallest effective change.** Adjust a value step, a size, a gap, an edge. Don't restyle the piece to fix one corner. Prefer removing to adding.
 - Re-run the five tests and compare with the previous round side by side. If a change made it worse or broke something that met a criterion, revert it.
@@ -90,7 +90,7 @@ Stop when any of these is true. "Clearly better" is enough; don't chase perfecti
 - No MUST-BE-RIGHT failures remain and the top-ranked improvements are done.
 - The latest round is not clearly better than the one before (side-by-side test).
 - Remaining points are questions no rule settles.
-- The next fix would change the brief or something Gaz made or approved.
+- The next fix would change the brief or something the owner made or approved.
 - Round 3 is reached for a routine piece (round 5 at most for anything). Report rather than polish.
 
-**Hand-off to Gaz:** latest and previous render, the criteria judged, what was changed (with rule IDs), what was left and why, and the specific questions for him. Never call work "finished" on taste; he makes that call.
+**Hand-off to the owner:** latest and previous render, the criteria judged, what was changed (with rule IDs), what was left and why, and the specific questions for them. Never call work "finished" on taste; the owner makes that call.

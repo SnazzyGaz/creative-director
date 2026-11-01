@@ -58,8 +58,8 @@ Why looks matter here, on evidence rather than taste: people form a stable judge
 - **Check:** Count the tells above. Two or more: flag. Ask: which colour, type and layout choices come from the brief or brand, and which are defaults?
 - **Fix:** Write down tokens (colour roles, type pair, spacing, radius) from the brand or subject before styling; take the accent colour from the subject itself; give shape a role (e.g. pill buttons, square images, small-radius cards); vary section layouts to fit content.
 - **Source:** Anticode, *Why so many AI websites look the same* [S27]; Superdesign, *Why AI design looks generic* [S28]. These are practitioner write-ups, not research; treat the list as a checklist, not a law.
-- **Needs a brief:** the fix comes from brand and brief input (CD-1, CD-2), not from more rounds. If there is no direction to draw tokens from, list the tells under Questions for Gaz and stop; don't invent a brand.
-- **Ask Gaz:** whether any of these tells are acceptable for a given project (e.g. Inter is a perfectly good typeface).
+- **Needs a brief:** the fix comes from brand and brief input (CD-1, CD-2), not from more rounds. If there is no direction to draw tokens from, list the tells under Questions for the owner and stop; don't invent a brand.
+- **Ask the owner:** whether any of these tells are acceptable for a given project (e.g. Inter is a perfectly good typeface).
 
 ### UI-8. Colour as a system of roles and ramps
 - **What:** Colours are defined once as roles (primary, surface, error...), each with a paired "on" colour for text and icons. Each hue has a ramp of about 5-10 shades, and the greys have about 8-10.

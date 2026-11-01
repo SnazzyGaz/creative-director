@@ -1,6 +1,6 @@
-# Proposed GitHub repo (draft, not created)
+# Proposed GitHub repo (original plan)
 
-Nothing has been pushed or created. This is what the repo could look like once Gaz approves.
+The plan the repo was set up from. Kept for reference.
 
 ## Name and home
 - Suggested: `SnazzyGaz/creative-director` (matches the folder name and the existing `model-qa` / `bot-creative-toolkit` naming: short, lower-case, hyphenated).
@@ -15,7 +15,7 @@ creative-director/
   skills/creative-director/SKILL.md   wrapper for agents that load "skills" (points at core/)
   core/                principles, evidence (preference research and myths), critique loop, template, which-modules
   modules/             technical-drawing, illustration, web-ui, ux, 3d (each README; optional notes.md for depth)
-  examples/            worked critiques (round-by-round), using Gaz's own work or openly licensed images only
+  examples/            worked critiques (round-by-round), using generated or openly licensed images only
   tools/               optional small scripts: blur/greyscale/flip/thumbnail sheet, WCAG contrast check, ellipse fit, PBR range check, 200% zoom diff
   SOURCES.md
   CHANGELOG.md
@@ -35,14 +35,14 @@ creative-director/
 5. Optional `tools/look.py` would produce one sheet (original | blur | greyscale | flipped | thumbnail) so a bot spends one image view per round instead of five.
 
 ## Versioning
-- Tag releases (`v0.1.0` first public draft). Note rule additions/changes in `CHANGELOG.md` so bots and Gaz can see what moved.
+- Tag releases (`v0.1.0` first public draft). Note rule additions/changes in `CHANGELOG.md` so bots and people can see what moved.
 
 ## Licence
-- **MIT for everything** (text, scripts and examples), chosen by Gaz on 2026-11-01 to keep it as open as possible. See `LICENSE`.
+- **MIT for everything** (text, scripts and examples), chosen by the maintainer on 2026-11-01 to keep it as open as possible. See `LICENSE`.
 - Example images are generated for this repo; no copied images from cited sources.
 - Cited works stay their authors' copyright; the repo only paraphrases and links.
 
 ## Before going public
-- Gaz reviews every rule marked as a default (non-MUST-BE-RIGHT) and the open questions in the hand-off.
+- The maintainer reviews every rule marked as a default (non-MUST-BE-RIGHT) and the open questions in the hand-off.
 - Add 2-3 worked examples from real bot output with before/after renders.
 - Decide whether `tools/` ships in v0.1 or later.

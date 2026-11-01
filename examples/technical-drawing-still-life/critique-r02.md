@@ -22,5 +22,5 @@
 ### Next round
 - Round 3 was spent on a base-ellipse edit after a misread at normal size (see log). Zoomed measurement showed round 2 already met TD-ELL-2, and round 3 is not clearly better. Stop and deliver round 2.
 
-### Questions for Gaz
+### Questions for the owner
 - Construction correct but flatter and less lively than round 1. Which matters more for this use?

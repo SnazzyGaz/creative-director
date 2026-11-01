@@ -35,7 +35,7 @@ Neutral and factual. Every point cites a rule ID. No praise padding, no harshnes
 - Apply up to 3 fixes, blockers first. Re-render. Re-run tests. Compare with round <n>.
 - Stop if the result is clearly better and no blockers remain.
 
-### Questions for Gaz (no rule settles these)
+### Questions for the owner (no rule settles these)
 - <specific choice, with the options>
 ```
 
@@ -54,4 +54,4 @@ Neutral and factual. Every point cites a rule ID. No praise padding, no harshnes
 > 2. [IMPROVEMENT] CORE-3 not met. Highest contrast is at the top-right sky, not the face. Fix: drop the sky one step; place the lightest light on the face.
 > 3. [IMPROVEMENT] ILL-1 not met. Horizon sits on the exact vertical centre, dividing the frame into equal halves. Fix: move it clearly above or below centre, whichever suits the brief (no specific ratio required).
 >
-> **Questions for Gaz:** warm or cool light family for the face?
+> **Questions for the owner:** warm or cool light family for the face?

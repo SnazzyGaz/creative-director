@@ -29,5 +29,5 @@
 ### Next round
 - Rework prompt: one level horizon slightly above the objects; both VPs on it, far outside the frame; verticals perfectly vertical; base ellipse more open than the top; light upper left, shadows touching the bases.
 
-### Questions for Gaz
+### Questions for the owner
 - Is a high-key, light pencil sketch a deliberate exception to CORE-2, or should it carry a darker value group?
