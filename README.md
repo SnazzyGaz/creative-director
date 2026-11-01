@@ -10,7 +10,7 @@ A set of design rules and a critique loop that any AI agent can read. It helps a
   <img alt="Three before/after pairs: a box and can drawing with its perspective rebuilt, a knight illustration with a quieter sky, and a landing page with readable contrast." src="docs/assets/before-after-light.jpg" width="100%">
 </picture></p>
 
-The three pairs above are generated, one or two rounds each. Eleven example sets across every domain: four take-overs of deliberately bad work, nudges, one small case per common agent failure, and a with-and-without-the-skill baseline, all with critiques, logs and honest misses: [examples/](examples/).
+The three pairs above are generated, one or two rounds each. Eleven example sets across every domain: four take-overs of deliberately bad work, nudges, one small case per common agent failure, and a with-and-without-the-skill baseline, all with critiques, logs and honest misses: [examples/](examples/). Browse them all, filterable by domain, in the [gallery](https://snazzygaz.github.io/creative-director/gallery/).
 
 ## How it works
 
