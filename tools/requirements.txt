@@ -1,0 +1,4 @@
+pillow
+numpy
+opencv-python
+# shot.sh needs a headless Chromium (e.g. playwright install chromium)

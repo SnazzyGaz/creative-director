@@ -1,0 +1,13 @@
+# creative-director
+
+> Cited, checkable design rules and a light-touch critique loop that AI agents use to judge and improve visual work.
+
+- [Agent instructions](AGENTS.md): start here
+- [Core principles](core/principles.md)
+- [Critique loop](core/critique-loop.md)
+- [Creative direction](core/creative-direction.md)
+- [Which modules to load](core/which-modules.md)
+- [Critique template](core/critique-template.md)
+- [Modules](modules/): technical-drawing, illustration, web-ui, ux, 3d
+- [Tools](tools/README.md)
+- [Sources](SOURCES.md)
