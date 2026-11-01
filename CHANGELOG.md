@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- `examples/aesthetic-benchmark/blind-ab-01/`: blind A/B run 01, 12 briefs across 12 media, rules only vs rules plus the aesthetic module, made and blinded by Grok Bot, not yet judged. Judging sheet, printable form, prompt for outside model judges, sides-swapped second pass. Answer key and sources withheld; their salted SHA-256 hashes are committed for later checking.
+- `examples/aesthetic-benchmark/reference-set/` (was `blind-ab-01/`): blind judging dropped; now an open, labelled reference set of 12 pieces (no skill / rules / rules + aesthetic layer), answer key, briefs and making log published. Originally:: blind A/B run 01, 12 briefs across 12 media, rules only vs rules plus the aesthetic module, made and blinded by Grok Bot, not yet judged. Judging sheet, printable form, prompt for outside model judges, sides-swapped second pass. Answer key and sources withheld; their salted SHA-256 hashes are committed for later checking.
 - Benchmark protocol: commit a salted key hash before judging; same start and equal effort between conditions, or report the confound.
 
 ## v0.4.0 (1 November 2026)

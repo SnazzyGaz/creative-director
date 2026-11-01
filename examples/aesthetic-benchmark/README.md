@@ -4,7 +4,7 @@ Does the aesthetic layer (`modules/aesthetic-critique/`) help produce work peopl
 
 ## Protocol
 
-**Run 01 (12 pairs) is made and blinded, awaiting judges:** [`blind-ab-01/`](blind-ab-01/) ([judging sheet](blind-ab-01/JUDGING.md), [prompt for model judges](blind-ab-01/OUTSIDE-JUDGE-PROMPT.md)).
+**Run 01 was turned into an open, labelled [reference set](reference-set/) (12 pieces, key published), so it is no longer blind.** A later blind run using this protocol is optional.
 
 **Conditions.** Same model, same briefs, same tools, same round limit.
 - **A:** `core/` plus the medium's modules (rules only).

@@ -1,0 +1,84 @@
+{
+ "note": "PRIVATE answer key for examples/aesthetic-benchmark/blind-ab-01. Do not open before judging is finished.",
+ "salt": "9c7a67c93d60d4b1b7a4bd0fb1447a94b7817236b24f3f004686c2f693487e67",
+ "seed": 1223633290184673492,
+ "created": "2026-11-01T16:24:37+00:00",
+ "conditions": {
+  "rules": "core + domain modules (v0.3.1 rule set, no AES)",
+  "rules+aes": "rules + modules/aesthetic-critique (AES-0..10)"
+ },
+ "pairs": {
+  "01": {
+   "A": "rules",
+   "B": "rules+aes",
+   "A_sha256": "5bb97a3b2e326dc838bb928cbac80d0d4f98516172e4136c56ca19b26dc6abd5",
+   "B_sha256": "d61860cb76a2fd3bd4a8770655712ec5822b5385cb722d838f080c12d50585eb"
+  },
+  "02": {
+   "A": "rules+aes",
+   "B": "rules",
+   "A_sha256": "4947c70c8d47e335ed1c1a3e568f74e98c146374d295927251123dc5e329f99d",
+   "B_sha256": "0a21e2146a3110a3a7783a611c6a050239fcbcfb6c2eda07632c19e4db3fe8e6"
+  },
+  "03": {
+   "A": "rules",
+   "B": "rules+aes",
+   "A_sha256": "b95fad52ef3e882419ceae7a2333d20dd2f5d5c2e51c9fb064f559b2c34431cb",
+   "B_sha256": "961de83b0ce4e70842e0ccfb5b3b232f65539998f4a86740503defdac3cbc7d3"
+  },
+  "04": {
+   "A": "rules",
+   "B": "rules+aes",
+   "A_sha256": "c0284458af1ac586ef5b0b1c130d06b99f76b8e73f6ded5d0b8fffcb513d7954",
+   "B_sha256": "e3237f983505025abd6628496b2119be67456c0b5b198f985f3a945f606fd5e1"
+  },
+  "05": {
+   "A": "rules+aes",
+   "B": "rules",
+   "A_sha256": "65692b86c0ada3e5556cd198a8708d44b8ddf23fa6380642445e23921e20f919",
+   "B_sha256": "37015878c035743932fc4ab6317b946bca0db622768ffa75c2b24d53f248b8cd"
+  },
+  "06": {
+   "A": "rules",
+   "B": "rules+aes",
+   "A_sha256": "88688d0ab2bc4b9aaa7bcb7e273dafbe9af5766ef1b9420d6e4d331a14673dd4",
+   "B_sha256": "5f45e5c55c704937eb061ebd5bea5626bf8756c248dcffc0e5cba361279f8333"
+  },
+  "07": {
+   "A": "rules+aes",
+   "B": "rules",
+   "A_sha256": "6643a54d326363f57903bef9dc51be500d7708d9708601e67c46d2124f2a604d",
+   "B_sha256": "773b2948169b05c0b31471316cc078530f20dc3f9e1e636d4c3dacefb9d0a541"
+  },
+  "08": {
+   "A": "rules+aes",
+   "B": "rules",
+   "A_sha256": "c23326adfe0a56f2e36cfccf8f36e95075c76145fd786a9fe1a8f7bb25bf62d4",
+   "B_sha256": "1af691abfbb9340fc31bd2de4887bd230edb96d3c66c6574d7049ed008abc132"
+  },
+  "09": {
+   "A": "rules",
+   "B": "rules+aes",
+   "A_sha256": "50f6a1c27a67f66a6901327ff63a50fb31142dd615f59553c95c4dc2c87f8192",
+   "B_sha256": "f829f29922cba08de929714b1af1291522485098b067bd75395c21169ddc77a9"
+  },
+  "10": {
+   "A": "rules",
+   "B": "rules+aes",
+   "A_sha256": "e7a2c65fd5dbd99a5a83814c4f9046ca41b819e71c3354b3e57e4ebfd118a417",
+   "B_sha256": "e69d57e5b6e2c4f25cb417c4fc932a00634fa5ae01520588bc1816dbfcc0e115"
+  },
+  "11": {
+   "A": "rules",
+   "B": "rules+aes",
+   "A_sha256": "312f5378f0be4d34ebb684e75ec78908993ba960dbe013851c87e754abbbbcb7",
+   "B_sha256": "31aeeebd288b188a59b8938c007b35f8459563920f1e5d927c7e937af06e688d"
+  },
+  "12": {
+   "A": "rules",
+   "B": "rules+aes",
+   "A_sha256": "137b0c53cd2affa57fa46e28f267c2cb3fe15aa13411a73d422f480c2078d5b3",
+   "B_sha256": "09af87d4adb06ff13866e06bdda09f0ec68e84e96b152d2d60965cf849afd5f5"
+  }
+ }
+}
