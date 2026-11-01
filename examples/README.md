@@ -25,6 +25,12 @@ Runs of the critique loop (`core/critique-loop.md`) done as a bot would: brief, 
 | [brand-intake](brand-intake/) | Brand | Intake run on the web-ui-landing case, no-answer mode | Step 0 | UI-7 (5 tells left after 2 rounds), BRAND-7 | Assumed token sheet (all roles pass contrast); 2 of 5 tells answerable, 3 need the owner's facts | 0 (intake) |
 | [character-hands](character-hands/) | Character / generative image | GenerateImage (AI), zoom audit at 2x | Check only (0 blockers) | CHAR-3, CHAR-4, CHAR-7 all pass; CHAR-3 note (hand about 1.15× face length) | Nothing to fix; the generator passed | 1 |
 | [character-anatomy-pass](character-anatomy-pass/) | Character / generative image | GenerateImage cover, image edits, `anatomy_crops.py` | Fix (3 rounds) | CHAR-9 A1/A2/A3 (orphan hand, armless cuff, fingerless shape) | Clean pass: one hand per arm, digits counted, grips traced | 3 |
+| [aesthetic-across-domains](aesthetic-across-domains/) | Illustration, technical drawing, web UI, UX flow, poster, 3D, data chart | GenerateImage, HTML/CSS + headless Chrome, matplotlib, Pillow, Blender 4.2 | Worked examples (one round each, after sign-off) | CD-1/AES-10 (invented claims in 5 of 7), UI-6/TYPE-3 (contrast 1.1-2.8:1), UX-1, UX-9, TD-PRO-1, LAY-7, 3D-1, 3D-7 | Every signed-off point applied and checked; fonts picked per brief from `fonts/` (TYPE-10); anatomy pass on the figures | 1 each |
+
+## The aesthetic layer across domains
+
+![overview](aesthetic-across-domains/overview.jpg)
+Seven briefs in seven media, each with a plausible first try, a critique in the template (measured vs interpreted findings, ranked fixes with rule IDs, Additions line, sign-off blurb) and an after with every point applied. The same faults recur in different forms: text too faint for where it is seen, content the brief never gave, and missing facts the reader needs. The interpreted findings drove most of the visible change; each after is plainer or darker than its before in some way, and its comparison says so. Self-judged. [Index](aesthetic-across-domains/).
 
 ## Take-overs
 

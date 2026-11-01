@@ -1,0 +1,73 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><style>
+@font-face{font-family:Atkinson;src:url("../../../../fonts/humanist-sans/atkinsonhyperlegiblenext/AtkinsonHyperlegibleNext[wght].ttf");font-weight:200 800}
+:root{--ink:#14181f;--soft:#4a525e;--line:#cfd4db;--bg:#f6f7f9;--green:#0b6e4f;--green-l:#e3f1ec}
+*{box-sizing:border-box;margin:0}
+body{background:#e9e9ee;font-family:Atkinson;display:flex;gap:40px;width:1250px;color:var(--ink)}
+.s{width:390px;height:844px;background:var(--bg);position:relative;overflow:hidden;padding:54px 20px 0}
+.bar{display:flex;align-items:center;gap:8px;height:48px;font-size:17px;font-weight:600}
+.bar .b{width:48px;height:48px;margin-left:-12px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:400}
+.step{font-size:15px;color:var(--soft);margin-top:6px}
+h1{font-weight:700;font-size:30px;line-height:1.15;margin:4px 0 20px}
+.q{font-size:17px;font-weight:600;margin:0 0 8px}
+.seg{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink);border-radius:10px;overflow:hidden;margin-bottom:24px}
+.seg span{height:48px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:600}
+.seg .on{background:var(--ink);color:#fff}
+.opt{background:#fff;border:2px solid var(--line);border-radius:12px;min-height:76px;padding:12px 16px;margin-bottom:10px;display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center}
+.opt.sel{border-color:var(--green);box-shadow:inset 0 0 0 1px var(--green)}
+.rad{width:24px;height:24px;border-radius:50%;border:2px solid var(--soft)}
+.sel .rad{border:7px solid var(--green)}
+.opt b{font-size:19px;font-weight:700;display:block}
+.opt i{font-style:normal;font-size:15px;color:var(--soft)}
+.opt em{font-style:normal;font-size:20px;font-weight:700}
+.btn{position:absolute;left:20px;right:20px;bottom:34px;height:56px;border-radius:12px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:19px}
+.sum{background:#fff;border:2px solid var(--line);border-radius:12px;padding:16px}
+.sum .t{font-size:20px;font-weight:700}
+.sum .d{font-size:16px;color:var(--soft);margin-top:2px}
+.sum .p{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:17px}
+.sum .p b{font-size:24px}
+.pay{background:#fff;border:2px solid var(--line);border-radius:12px;min-height:64px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;font-size:18px;margin-top:8px}
+.pay a{color:var(--green);font-weight:700;text-decoration:underline;min-height:48px;display:flex;align-items:center}
+.note{font-size:15px;color:var(--soft);margin-top:14px;line-height:1.45}
+.tk{background:#fff;border:2px solid var(--ink);border-radius:16px;overflow:hidden;margin-top:4px}
+.band{height:30px;background:repeating-linear-gradient(90deg,var(--green) 0 30px,#14905f 30px 60px)}
+.tk .in{padding:18px 20px 20px}
+.kind{font-size:44px;font-weight:800;line-height:1;letter-spacing:-.5px}
+.who{font-size:22px;font-weight:700;color:var(--soft);margin-top:4px}
+.valid{margin-top:16px;background:var(--green-l);border-radius:10px;padding:12px 14px}
+.valid small{font-size:15px;color:var(--soft);display:block}
+.valid b{font-size:30px;font-weight:800;color:var(--green)}
+.valid span{font-size:17px;font-weight:600;margin-left:6px}
+.qr{width:150px;height:150px;margin:18px auto 6px}
+.qr img{width:100%;height:100%}
+.ref{text-align:center;font-size:15px;color:var(--soft)}
+.hint{font-size:15px;color:var(--soft);margin-top:14px;text-align:center}
+</style></head><body>
+<div class="s">
+<div class="step">Step 1 of 2</div><h1>Buy a ticket</h1>
+<p class="q">Who is travelling?</p>
+<div class="seg"><span class="on">Adult</span><span>Child</span></div>
+<p class="q">Which ticket?</p>
+<div class="opt"><span class="rad"></span><div><b>Single</b><i>One journey</i></div><em>£2.00</em></div>
+<div class="opt sel"><span class="rad"></span><div><b>Day</b><i>Any bus until 23:59 today</i></div><em>£4.50</em></div>
+<div class="opt"><span class="rad"></span><div><b>Week</b><i>Any bus for 7 days</i></div><em>£18.00</em></div>
+<div class="btn">Next: pay £4.50</div></div>
+
+<div class="s"><div class="bar"><span class="b">‹</span>Back</div>
+<div class="step">Step 2 of 2</div><h1>Check and pay</h1>
+<div class="sum"><div class="t">Adult Day ticket</div><div class="d">Any Riverside bus until 23:59 today</div>
+<div class="p"><span>Total</span><b>£4.50</b></div></div>
+<p class="q" style="margin-top:22px">Pay with</p>
+<div class="pay"><span>Visa ending 4242</span><a>Change</a></div>
+<p class="note">The ticket starts as soon as you pay. Tickets cannot be refunded once started.</p>
+<div class="btn">Pay £4.50</div></div>
+
+<div class="s"><div class="bar" style="justify-content:space-between"><span style="font-size:17px">Your ticket</span><span style="font-weight:600;color:var(--green);font-size:17px;min-width:48px;height:48px;display:flex;align-items:center;justify-content:flex-end">Done</span></div>
+<p class="hint" style="margin:0 0 10px;text-align:left">Show this screen to the driver.</p>
+<div class="tk"><div class="band" aria-label="Moving band shows the ticket is live"></div><div class="in">
+<div class="kind">DAY</div><div class="who">Adult · Riverside Buses</div>
+<div class="valid"><small>Valid until</small><b>23:59</b><span>today, Sun 1 Nov</span></div>
+<div class="qr"><img src="qr.svg" alt="Ticket code for the reader"></div>
+<div class="ref">Ticket RB-0000</div></div></div>
+<p class="hint">The striped band moves on a live ticket.</p>
+</div>
+</body></html>

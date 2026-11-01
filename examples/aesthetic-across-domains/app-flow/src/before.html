@@ -1,0 +1,61 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Outfit;src:url("../../../../fonts/geometric-sans/outfit/Outfit[wght].ttf");font-weight:100 900}
+*{box-sizing:border-box;margin:0}
+body{background:#e9e9ee;font-family:Outfit;display:flex;gap:40px;width:1250px}
+.s{width:390px;height:844px;background:#fff;position:relative;overflow:hidden;padding:56px 22px 0}
+.top{display:flex;justify-content:space-between;align-items:center;color:#a1a1aa;font-size:13px;font-weight:300}
+h1{font-weight:300;font-size:28px;color:#3f3f46;margin:18px 0 18px;letter-spacing:-.3px}
+.seg{display:inline-flex;background:#f4f4f5;border-radius:999px;padding:3px;margin-bottom:20px}
+.seg span{font-size:12px;padding:5px 14px;border-radius:999px;color:#a1a1aa;font-weight:300}
+.seg .on{background:#fff;color:#6d28d9;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.card{border:1px solid #f1f1f4;border-radius:16px;padding:16px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.card.sel{border-color:#c4b5fd;background:#faf8ff}
+.card b{font-weight:400;font-size:16px;color:#52525b;display:block}
+.card i{font-style:normal;font-size:12px;color:#c4c4cc;font-weight:300}
+.card em{font-style:normal;color:#a78bfa;font-weight:300;font-size:15px}
+.btn{position:absolute;left:22px;right:22px;bottom:40px;height:52px;border-radius:999px;background:linear-gradient(90deg,#2dd4bf,#a78bfa);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:300;font-size:16px;letter-spacing:.5px}
+.row{display:flex;justify-content:space-between;font-size:14px;color:#a1a1aa;font-weight:300;padding:10px 0;border-bottom:1px solid #f4f4f5}
+.row span:last-child{color:#71717a}
+.lbl{font-size:12px;color:#c4c4cc;margin:22px 0 8px;font-weight:300;text-transform:uppercase;letter-spacing:1px}
+.input{border:1px solid #ececf0;border-radius:12px;height:40px;padding:0 12px;display:flex;align-items:center;color:#d4d4d8;font-size:13px;font-weight:300}
+.pm{display:flex;align-items:center;gap:10px;font-size:14px;color:#71717a;font-weight:300;padding:9px 0}
+.r{width:14px;height:14px;border-radius:50%;border:1px solid #d4d4d8}
+.r.on{border:4px solid #a78bfa}
+.tiny{font-size:10px;color:#d4d4d8;font-weight:300;margin-top:16px;line-height:1.5}
+.tk{margin-top:6px;border-radius:24px;padding:24px;background:linear-gradient(135deg,#a78bfa,#2dd4bf);color:#fff}
+.tk .p{display:inline-block;background:rgba(255,255,255,.25);padding:3px 10px;border-radius:999px;font-size:11px;letter-spacing:1px}
+.tk h2{font-weight:300;font-size:22px;margin:14px 0 2px}
+.tk small{font-size:12px;opacity:.8;font-weight:300}
+.qr{background:#fff;border-radius:16px;margin:20px auto 0;width:210px;height:210px;padding:18px}
+.qr img{width:100%;height:100%}
+.meta{display:flex;justify-content:space-between;margin-top:18px;font-size:11px;opacity:.85;font-weight:300}
+.back{font-size:18px;color:#a1a1aa}
+</style></head><body>
+<div class="s"><div class="top"><span>9:41</span><span>Riverside</span><span>☰</span></div>
+<h1>Tickets</h1>
+<div class="seg"><span class="on">Adult</span><span>Child</span></div>
+<div class="card"><div><b>Single</b><i>One journey</i></div><em>£2.00</em></div>
+<div class="card sel"><div><b>Day</b><i>Unlimited travel</i></div><em>£4.50</em></div>
+<div class="card"><div><b>Week</b><i>7 days unlimited</i></div><em>£18.00</em></div>
+<div class="btn">Continue</div></div>
+
+<div class="s"><div class="top"><span class="back">‹</span><span>Checkout</span><span></span></div>
+<h1>Review order</h1>
+<div class="row"><span>Day ticket</span><span>£4.50</span></div>
+<div class="row"><span>Service fee</span><span>£0.00</span></div>
+<div class="row"><span>Total</span><span>£4.50</span></div>
+<div class="lbl">Promo code</div><div class="input">Enter code</div>
+<div class="lbl">Payment method</div>
+<div class="pm"><span class="r on"></span>Visa •••• 4242</div>
+<div class="pm"><span class="r"></span>Apple Pay</div>
+<div class="pm"><span class="r"></span>Add new card</div>
+<p class="tiny">By continuing you agree to our Terms of Service and Privacy Policy. Tickets are non-refundable once activated.</p>
+<div class="btn">Pay now</div></div>
+
+<div class="s"><div class="top"><span class="back">‹</span><span>My Tickets</span><span></span></div>
+<h1>Your Ticket</h1>
+<div class="tk"><span class="p">● ACTIVE</span><h2>Adult Day</h2><small>Valid until 23:59</small>
+<div class="qr"><img src="qr.svg"></div>
+<div class="meta"><span>#RB-0000</span><span>Riverside Buses</span></div></div>
+</div>
+</body></html>
