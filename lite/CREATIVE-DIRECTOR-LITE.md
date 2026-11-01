@@ -23,7 +23,7 @@ Only these block. Everything else is an improvement.
 - **Ellipses:** the minor axis follows the cylinder's axis; ellipses get fuller further from eye level; smooth and symmetrical, no lemons or footballs (TD-ELL-1..3).
 - **Proportion and anatomy:** measured, not guessed; left and right agree (TD-PRO-1..2).
 - **Light:** one key light direction; lit and shadow sides stay separate; cast shadows sit on the ground (TD-LIT-1..3).
-- **Figures:** right digit count per hand, thumbs on the correct side; eyes match and look at one point; every limb traceable, none fused or extra (CHAR-3, CHAR-4, CHAR-7).
+- **Figures, hands, animals (delivery gate):** crop each hand, limb join, face and animal head at 2x-4x and check one by one: hand count and five digits per hand; each hand traced along its forearm to the shoulder on the correct side (a figure facing you has its right arm on the image's left); thumb opposes the fingers on anything held; joints bend the right way; nothing merged or extra; eyes match; animal eyes, legs or fins match the species. Any fail blocks delivery; re-check everything after each edit (CHAR-3, CHAR-4, CHAR-7, CHAR-9, CHAR-10).
 - **Fixed frames (social, thumbnails, print):** key content inside the platform's safe area; main message readable at feed size (about 400 px wide); print has 3 mm bleed and 300 ppi at final size (LAY-5, LAY-6, LAY-9).
 - **Type size:** no reading text under 14 px, nothing meaningful under 12 px (TYPE-3).
 - **Logo:** the supplied file, unaltered, with its clear space and minimum size (BRAND-4).

@@ -42,6 +42,10 @@ Artists use these to get a "fresh eye", because the maker grows used to their ow
 
 `tools/look.py` makes all five as one contact sheet, with value stats. Record one factual line per test (what was observed), e.g. "Blur: the badge top-right leads; the headline is second."
 
+## 2b. Anatomy pass: a delivery gate
+
+If a person, a hand or an animal is anywhere in the frame, run the anatomy pass in `modules/character/` (CHAR-9) after the five tests: crop each hand, limb join, face and animal head at 2x-4x, and write one pass or fail line per crop (hand and finger count, trace to the correct shoulder, thumb side, grip, joint direction, no merged or extra limbs, eyes and teeth, animal counts). A whole-image look doesn't count. Any fail is a blocker, and the work isn't delivered until the pass is clean or the failure is reported to the owner.
+
 ## 3. Critique
 
 Use `critique-template.md`. Tone: neutral and factual, like a doctoral supervisor reviewing a chapter. Every point is judged against a named criterion, never personal preference.
@@ -67,6 +71,7 @@ Register example:
 - **At most ~3 changes per round**, blockers first, then the highest-ranked improvements.
 - **Smallest effective change.** Adjust a value step, a size, a gap, an edge. Don't restyle the piece to fix one corner. Prefer removing to adding.
 - Re-run the five tests and compare with the previous round side by side. If a change made it worse or broke something that met a criterion, revert it.
+- **Re-run the anatomy pass in full after any image edit** that touches or regenerates a figure, not only on the region you fixed: edits move, add and remove hands elsewhere.
 - **Check each fix applied.** Compare the new render with the fix as written. Image generators often skip or drift on edits. A fix that didn't apply counts as not done; retry it or report it.
 - Keep a one-line log per round: what changed, which rule, result.
 - **Aesthetic changes: one or two at a time.** Compare old and new side by side and decide keep, refine or revert, stating what the change cost; re-run the measured checks so a mood gain doesn't hide a regression (AES-9, AES-10).
@@ -90,7 +95,7 @@ When taking over: keep the brief's intent (subject, mood, purpose), say plainly 
 
 Stop when any of these is true. "Clearly better" is enough; don't chase perfection.
 
-- No MUST-BE-RIGHT failures remain and the top-ranked improvements are done.
+- No MUST-BE-RIGHT failures remain and the top-ranked improvements are done. When a figure, hand or animal is in frame, that includes a clean anatomy pass on the latest render (CHAR-9).
 - The latest round is not clearly better than the one before (side-by-side test).
 - Remaining points are questions no rule settles.
 - The next fix would change the brief or something the owner made or approved.

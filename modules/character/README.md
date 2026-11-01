@@ -1,6 +1,6 @@
 # Module: character and anatomy
 
-Figures, faces and hands in drawings, paintings, 3D characters and AI-generated images. Load with `core/`, `technical-drawing/` (TD-PRO-1 and TD-PRO-2 set the measuring habit) and `illustration/` (ILL-10 gesture). This module adds the body-specific checks.
+Figures, faces, hands and animals in drawings, paintings, 3D characters and AI-generated images. Load it whenever a person, a hand or an animal is in the frame, however small: the anatomy pass (CHAR-9) is then required. Load with `core/`, `technical-drawing/` (TD-PRO-1 and TD-PRO-2 set the measuring habit) and `illustration/` (ILL-10 gesture). This module adds the body-specific checks.
 
 Format: **What / Why / Check / Fix / Source**. Rules marked **MUST-BE-RIGHT** are blockers; the rest are defaults. Every check is something you can count, measure or compare on the image, at 200% zoom where small. Choices of style (how cartoony, how idealised, how cute) are taste calls for the owner of the work; the rules only ask that the choice is made and kept.
 
@@ -25,9 +25,9 @@ Why it matters: people are expert face and body readers. Small errors that would
 ### CHAR-3. Hands are countable and built right (MUST-BE-RIGHT)
 - **What:** Each visible hand has the right number of digits for the design (five for realistic; a consistent four is a valid cartoon convention), the thumb on the correct side for a left or right hand, fingers bending only at their joints and only towards the palm, and lengths in order (middle longest; index and ring similar; little finger ending near the ring finger's last joint). Hand length is about the face from chin to hairline.
 - **Why:** Hands are the most frequent and most noticed anatomy error in generated images [S141, S110].
-- **Check:** At 200%, count digits per hand, including hidden ones that should be implied. For each hand, say which arm it belongs to and whether the thumb is on the right side. Check for extra joints, merged fingers, or fingers passing through held objects. Compare hand length with the face.
+- **Check:** At 200%, count digits per hand, including hidden ones that should be implied. For each hand, say which arm it belongs to and whether the thumb is on the right side. Check for extra joints, merged fingers, or fingers passing through held objects. Compare hand length with the face. For a hand that holds something, name the grip: in a power grip the fingers curl round the object and the thumb presses back from the other side; in a precision grip the object is pinched between fingertips and thumb pad [S149]. A hand that "holds" with flat, straight fingers, or with the thumb on the same side as the fingers, isn't holding.
 - **Fix:** Repaint or regenerate the hand alone (inpaint) with a simpler pose: a fist, a hand partly hidden, or an object held. Use a photo or a 3D hand as reference rather than guessing.
-- **Source:** Narasimhaswamy et al., *HanDiffuser* [S141]; Kellogg Insight / Groh [S110]; Hampton [S135].
+- **Source:** Narasimhaswamy et al., *HanDiffuser* [S141]; Kellogg Insight / Groh [S110]; Hampton [S135]; Napier [S149].
 
 ### CHAR-4. Faces: placement and matched eyes (MUST-BE-RIGHT for the eyes)
 - **What:** In an adult head seen front-on, the eyes sit near the halfway line of the head; the gap between the eyes is about one eye width; the ears lie between brow and nose base; the mouth's corners fall roughly under the pupils. Both eyes match in size, shape and highlight direction, and look at the same point.
@@ -64,18 +64,41 @@ Why it matters: people are expert face and body readers. Small errors that would
 - **Fix:** Make a one-page character sheet (front, side, colours, head count) and correct each image to it. How stylised to go is the owner's call.
 - **Source:** Glocker et al. [S140]; CHAR-1.
 
-## Zoom audit for generated figures
+### CHAR-9. Anatomy pass: crop, trace, count (MUST-BE-RIGHT, delivery gate)
+- **What:** Whenever a person, a hand or an animal is in the frame, run the anatomy pass below before any hand-off. Each check is done on a zoomed crop of one region, never on the whole image at a glance. Any failed line is a blocker: the work can't be delivered as it is, whatever else is right.
+- **Why:** Generators still produce wrong finger counts, merged body parts and limbs that belong to no one [S150, S151], and people spot these faults readily [S150, S110]. They are small in the frame, so a whole-image look misses them; a check of light, edges and type passes them straight through.
+- **Check:** The table below, one line per crop, each line pass or fail with what was seen.
+- **Fix:** Edit or inpaint the failing region only, with the anatomy spelled out (which arm, which side, how many fingers, what the hand holds and how) [S151]. Then run the **whole** pass again, not only the fixed line: an edit can move, add or remove another hand. If three edits fail, regenerate the figure (core loop section 4b) or report the failure; don't deliver it.
+- **Source:** Kamali et al. [S150]; Lu et al., *HandRefiner* [S151]; Napier [S149]; Bridgman [S153]; Goldfinger [S142, S152].
 
-Run at 200% on every person in an AI image. One line each; any "no" is a finding under the rule shown.
+### CHAR-10. Animals: count and match the species (MUST-BE-RIGHT for counts)
+- **What:** Each animal has the right number of eyes, legs, wings or fins for its species, in the right places; parts connect to the body; eyes match each other and catch the same light; teeth, claws and beaks are the right kind and number for the animal. Stylised animals may simplify, but consistently.
+- **Why:** Viewers know common animals well, and generators duplicate or drop parts on animals as they do on people.
+- **Check:** Name the species. Count eyes, limbs or fins against a photo or anatomy reference of that species. Trace each limb or fin to where it joins the body. Zoom on the eye: one pupil, round or slit as the species has it, highlight on the key-light side. If the mouth is open, look at the teeth.
+- **Fix:** Edit the region with the species and the count stated; use a reference photo.
+- **Source:** Goldfinger, *Animal Anatomy for Artists* [S152]; Kamali et al. [S150].
 
-| Check | Rule |
-|---|---|
-| Digits counted, thumbs on the right side | CHAR-3 |
-| Eyes match; gaze converges; catchlights agree with the light | CHAR-4, TD-LIT-1 |
-| Limbs traced end to end; none fused or extra | CHAR-7 |
-| Earrings, glasses arms, collars and sleeves match left to right | TD-PRO-2 |
-| Teeth, text on clothing, and background people not melted | CHAR-4, ILL-11 |
-| Feet on the ground plane; shadows agree | CHAR-6, TD-LIT-3 |
+## The anatomy pass (CHAR-9)
+
+**How.** List every person, hand and animal you can find, including partial ones at the frame edge and in the background. Crop each hand, each limb join and each face or animal head at 2x-4x (`tools/anatomy_crops.py` makes the crops and a labelled sheet; by hand, any image viewer at 200%+ works). Write one line per crop. "Looks fine" without a crop doesn't count.
+
+**Left and right.** Name sides from the figure's own point of view, then say which side of the image that is. A figure facing the viewer has its right arm on the image's left. Trace from the shoulder, not from where the hand happens to be.
+
+| # | Check | Pass when | Rule |
+|---|---|---|---|
+| A1 | Hand count | Each person shows two hands, or the missing one is plainly hidden (behind a body, object or frame edge) | CHAR-7 |
+| A2 | Finger count | Each visible hand: five digits for realistic work (four is a valid, consistent cartoon convention); hidden digits are plausibly hidden, not missing | CHAR-3 |
+| A3 | Trace | Each hand follows back along a wrist and forearm, through an elbow, to a shoulder on the correct side of the same person; no hand without an arm, no arm ending without a hand or an occluder | CHAR-7 |
+| A4 | Thumb and side | Thumb on the correct side for a left or right hand seen palm-in or palm-out | CHAR-3 |
+| A5 | Grip | A held object is wrapped by curled fingers with the thumb opposing (power grip), or pinched between fingertips and thumb pad (precision grip); fingers sit on the surface, not through it [S149] | CHAR-3 |
+| A6 | Joints | Elbows, knees, wrists and finger joints bend only the way they can; no extra joints; upper arm and forearm similar length | CHAR-2, CHAR-3 |
+| A7 | Merges and extras | No extra or missing limbs, no limb fused with another person, clothing or object, no sleeve that changes arm partway | CHAR-7 |
+| A8 | Face | Eyes match in size, shape and highlight; gaze converges (or both lids closed alike); teeth, if shown, are a believable row, not a strip | CHAR-4 |
+| A9 | Animals | Eye count and pupil, limb or fin count and placement match the species; each joins the body | CHAR-10 |
+| A10 | Clothing symmetry | Collars, cuffs, sleeves, earrings and glasses match left to right | TD-PRO-2 |
+| A11 | Ground and shadow | Feet on the ground plane; shadows agree with the key light | CHAR-6, TD-LIT-3 |
+
+Record it in the critique (template section *Anatomy pass*): crop file, line number, pass or fail, what was seen. A1-A9 failures are blockers; A10-A11 follow their own rules.
 
 ---
 

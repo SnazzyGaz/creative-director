@@ -21,6 +21,11 @@ Neutral and factual. Every point cites a rule ID. No praise padding, no harshnes
 - Greyscale: <number of value groups; subject/ground separation>
 - Crop/edges: <tangents, frame contacts, empty regions>
 
+### Anatomy pass (CHAR-9; required when a person, hand or animal is in frame, else "n/a")
+- Inventory: <people, hands, animals found, incl. partial and background ones>
+- <crop file> | A<n> <check> | PASS/FAIL | <what was seen, e.g. "figure's left hand (image right): 5 digits, thumb on top, traced along yellow sleeve to left shoulder">
+- Any FAIL is a BLOCKER below; re-run every line after each image edit.
+
 ### Meets criteria
 - <RULE-ID>: <evidence, one line>
 

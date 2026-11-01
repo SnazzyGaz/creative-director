@@ -188,3 +188,11 @@ Every source cited in this repo. Ideas are paraphrased; no text or images are co
 - **[S146]** Zheng, L., et al. (2023). Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. *NeurIPS 2023 Datasets and Benchmarks*. https://arxiv.org/abs/2306.05685 (documents position bias in model judges; swapping order is the suggested control).
 - **[S147]** Kirstain, Y., et al. (2023). Pick-a-Pic: an open dataset of user preferences for text-to-image generation. *NeurIPS 2023*. https://arxiv.org/abs/2305.01569
 - **[S148]** Hayes, A. F., & Krippendorff, K. (2007). Answering the call for a standard reliability measure for coding data. *Communication Methods and Measures* 1(1), 77-89. https://doi.org/10.1080/19312450709336664
+
+## Anatomy pass (CHAR-9, CHAR-10; Unreleased)
+
+- **[S149]** Napier, J. R. (1956). The prehensile movements of the human hand. *Journal of Bone and Joint Surgery, British Volume* 38-B(4), 902-913. https://doi.org/10.1302/0301-620X.38B4.902 (two basic grips: precision, object pinched between fingers and the opposing thumb; power, object clamped between flexed fingers and palm with the thumb pressing back).
+- **[S150]** Kamali, N., Nakamura, K., Kumar, A., Chatzimparmpas, A., Hullman, J., & Groh, M. (2025). Characterizing photorealism and artifacts in diffusion model-generated images. *CHI 2025*. https://doi.org/10.1145/3706598.3713962 · https://arxiv.org/abs/2502.11989 (taxonomy of generator artifacts; "anatomical implausibilities" include extra or missing fingers, merged body parts across people, odd limb proportions and configurations, teeth overlapping the mouth, empty or overly shiny eyes).
+- **[S151]** Lu, W., Xu, Y., Zhang, J., Wang, C., & Tao, D. (2024). HandRefiner: refining malformed hands in generated images by diffusion-based conditional inpainting. *ACM Multimedia 2024*. https://arxiv.org/abs/2311.17957 (wrong finger counts and irregular hand shapes persist in diffusion models because hands deform and occlude each other; fix by inpainting the hand region only).
+- **[S152]** Goldfinger, E. (2004). *Animal Anatomy for Artists: The Elements of Form*. Oxford University Press.
+- **[S153]** Bridgman, G. B. (1920). *Constructive Anatomy*. Public domain (hands and arms built as connected masses; the forearm turns the hand).

@@ -24,6 +24,7 @@ Runs of the critique loop (`core/critique-loop.md`) done as a bot would: brief, 
 | [typography-scale](typography-scale/) | Typography | Re-judging the common-failures type case | Single-round fix | TYPE-1 (5 families), TYPE-2 (31 vs 29 px, ratio 1.07), TYPE-7 | 2 families; sizes 36/24/17/14 (ratios ≥ 1.21) | 1 |
 | [brand-intake](brand-intake/) | Brand | Intake run on the web-ui-landing case, no-answer mode | Step 0 | UI-7 (5 tells left after 2 rounds), BRAND-7 | Assumed token sheet (all roles pass contrast); 2 of 5 tells answerable, 3 need the owner's facts | 0 (intake) |
 | [character-hands](character-hands/) | Character / generative image | GenerateImage (AI), zoom audit at 2x | Check only (0 blockers) | CHAR-3, CHAR-4, CHAR-7 all pass; CHAR-3 note (hand about 1.15× face length) | Nothing to fix; the generator passed | 1 |
+| [character-anatomy-pass](character-anatomy-pass/) | Character / generative image | GenerateImage cover, image edits, `anatomy_crops.py` | Fix (3 rounds) | CHAR-9 A1/A2/A3 (orphan hand, armless cuff, fingerless shape) | Clean pass: one hand per arm, digits counted, grips traced | 3 |
 
 ## Take-overs
 
