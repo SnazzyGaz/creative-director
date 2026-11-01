@@ -3,7 +3,7 @@
 Claude Project knowledge pack. Run from anywhere: python3 tools/package_skill.py [OUT.zip]
 
 Contents: creative-director/ with SKILL.md (frontmatter + the full AGENTS.md instructions), core/, modules/, lite/,
-tools/ (scripts only) and SOURCES.md, LICENSE. No examples, images or caches.
+tools/ (scripts only), the font catalogue (fonts/*.md, catalogue.json; no font files) and SOURCES.md, LICENSE. No examples, images or caches.
 Checked against Anthropic's Agent Skills docs (1 Nov 2026): name <= 64 chars, lowercase letters, digits and hyphens,
 no reserved words; description non-empty, <= 1024 chars, says what and when; SKILL.md body kept short (< 5k tokens)."""
 import pathlib, re, sys, zipfile
@@ -17,7 +17,7 @@ DESC = ("Judge and improve visual work (generated images, illustrations, technic
         "render-critique-fix loop and a comparative aesthetic layer (intent, side-by-side judgement, revision checks). Use when making or reviewing anything visual, or when the user says "
         "\"+ creative director\", \"consult creative director\" or \"creative director: direct this\".")
 DIRS = ["core", "modules", "lite", "tools"]
-FILES = ["SOURCES.md", "LICENSE"]
+FILES = ["SOURCES.md", "LICENSE", "fonts/README.md", "fonts/CATALOGUE.md", "fonts/catalogue.json"]   # font catalogue only; font files stay in the repo
 SKIP_EXT = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg", ".blend", ".pyc"}
 SKIP_PARTS = {"__pycache__", ".pytest_cache"}
 
@@ -33,10 +33,13 @@ def skill_md():
              "critique with ranked fixes (`core/critique-template.md`).\n"
              "- **Direct** (`creative director: direct this`): join at the start, write the brief, set direction, pick from "
              "rough options, review at checkpoints (`core/creative-direction.md`, CD-1..6).\n"
+             "- **Hand-off with no specific ask:** analyse, send a ranked sign-off blurb of the imperative changes, and apply "
+             "nothing until the owner signs off; \"just fix it\" gets the finished result with a done / not done list "
+             "(`core/interaction-flow.md`).\n"
              "\nAlways work from the actual output (image, screenshot at real size, URL or renders), never a description.\n")
     tail = (f"\n## Files in this skill\n`core/` (always), `modules/<name>/README.md` (as `core/which-modules.md` says), "
             f"`lite/CREATIVE-DIRECTOR-LITE.md` (short version for small contexts), `tools/` (optional Python: Pillow, NumPy), "
-            f"`SOURCES.md`. Worked examples and images live in the repo, not here: {REPO}/tree/main/examples\n")
+            f"`fonts/CATALOGUE.md` (theme catalogue of free fonts; the font files are in the repo's `fonts/`), `SOURCES.md`. Worked examples and images live in the repo, not here: {REPO}/tree/main/examples\n")
     return f"---\nname: {NAME}\ndescription: '{DESC}'\n---\n\n# Creative director\n\n{body.rstrip()}\n{modes}{tail}"
 
 def main():

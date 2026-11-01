@@ -16,6 +16,10 @@ make -> render -> LOOK (5 tests) -> CRITIQUE (criteria, ranked) -> FIX up to 3 -
 - Perceived visual complexity is the strongest single predictor of that first impression; high complexity is liked least [S35]. Simplifying is usually the highest-impact fix.
 - Attractive work is perceived as more usable and earns tolerance for minor problems, but not for serious ones [S34]. So: fix blockers first, then polish lightly.
 
+## 0a. Read the ask (interaction-flow.md)
+
+Before anything else, decide which ask this is: an unprompted hand-off (work with no specific request), "just fix it", consult, direct, or self-check. An unprompted hand-off ends step 3 with a sign-off blurb and waits; nothing is applied until the owner signs off (FLOW-1). "Just fix it" skips the wait but not the checks (FLOW-4). Full flow and diagram: `core/interaction-flow.md`.
+
 ## 0. Brief (creative-direction.md)
 
 - Before making, have the brief (CD-1) and the direction (CD-2). If the brief has no brand input (no colours, type, voice or logo), run `core/brand-intake.md` first; more rounds can't fix a generic look. For an open brief, compare 2-3 rough options first (CD-3).
@@ -65,6 +69,10 @@ Register example:
 - Not: "The lighting is a bit confusing and the face feels weak."
 - But: "CORE-3 not met. Highest value contrast is at the top-right sky, not the face (focal point per brief). Fix: lower the sky one value step; place the lightest light on the face."
 
+## 3b. Sign-off (unprompted hand-offs)
+
+When the work was handed over with no specific ask, send the imperative changes as a short blurb before fixing anything: ranked, each with its rule ID, what will change, and a tag, **[edit]** (keep the art) or **[regenerate]** (new art or redo). Ask for sign-off and wait (FLOW-1). Skip this step only for "just fix it", self-check, or once the owner has already said "do it". After sign-off, every signed-off point is applied; the three-fix cap below does not cut a signed-off list short (spread it over rounds, or regenerate) (FLOW-2).
+
 ## 4. Fix and re-render: light touch
 
 - **Preserve intent.** Don't change the subject, style, mood, palette concept or layout concept. Those belong to the brief and to the owner of the work.
@@ -101,4 +109,4 @@ Stop when any of these is true. "Clearly better" is enough; don't chase perfecti
 - The next fix would change the brief or something the owner made or approved.
 - Round 3 is reached for a routine piece (round 5 at most for anything). Report rather than polish.
 
-**Hand-off to the owner:** latest and previous render, the criteria judged, what was changed (with rule IDs), what was left and why, and the specific questions for them. Never call work "finished" on taste; the owner makes that call.
+**Hand-off to the owner:** lead with the result, then one line per signed-off or imperative point marked done or not done (with the reason), and the QA blockers re-run: light, anatomy, type (FLOW-3). A critique that wasn't applied is never delivered as the result. Then: latest and previous render, the criteria judged, what was changed (with rule IDs), what was left and why, and the specific questions for them. Never call work "finished" on taste; the owner makes that call.

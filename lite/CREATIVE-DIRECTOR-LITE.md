@@ -6,6 +6,8 @@ A short version of this repo for tools with a small context window. It keeps the
 
 Always judge a fresh render or screenshot, never your own code or prompt.
 
+**Read the ask first.** Work handed over with no specific request: analyse it, reply with a short ranked list of only the imperative changes (rule ID, what will change, [edit] or [regenerate]) and wait for sign-off; change nothing yet. After sign-off apply every signed-off point (regenerate if an edit can't do it), re-check each one and the light, anatomy and type blockers, and deliver the result with one done / not done line per point. "Just fix it" skips the sign-off, not the checks. Never hand over an unapplied critique as the result.
+
 0. **Brief.** Before making anything, write down: purpose, audience, where it will be seen, must-keeps, and what "done" means. Don't invent facts the brief doesn't give (names, prices, addresses, slogans), and don't add story content (characters, creatures, objects) to make a piece prettier unless the brief leaves room or the owner agrees. No brand input? Ask the owner for name, audience, colours, type, three voice words, likes and dislikes; if no answer, label your choices as assumed. Add the intended mood, style and degree of polish, marked [brief] or [inferred]. Before calling a choice a flaw, ask whether it looks deliberate and whether it works.
 1. **Render** at the real viewing size plus a thumbnail. UI: phone (390 px), desktop (1280 px) and 200% zoom. Keep every round (`round-01.png`, ...).
 2. **Look** with five tests, one factual line each: blur (what leads?), thumbnail (does the idea survive?), flip (lopsided or tilted?), greyscale (is the value structure there?), edges and corners (tangents, stray spots).

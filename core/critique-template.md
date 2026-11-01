@@ -1,6 +1,6 @@
 # Critique template
 
-Neutral and factual. Every point cites a rule ID. No praise padding, no harshness. Light touch: preserve the intent and what meets criteria; propose at most ~3 changes per round. Copy, fill in, keep it short.
+Neutral and factual. Every point cites a rule ID. No praise padding, no harshness. Light touch: preserve the intent and what meets criteria; propose at most ~3 changes per round. Copy, fill in, keep it short. When the work was handed over with no specific ask, the reader gets the **Sign-off blurb** at the end, not the whole critique, and nothing is applied until they sign off (`interaction-flow.md`, FLOW-1). The delivery after fixes uses the **Delivery checklist**.
 
 ```markdown
 ## Critique: <piece name>, round <n>
@@ -55,6 +55,17 @@ Neutral and factual. Every point cites a rule ID. No praise padding, no harshnes
 
 ### Questions for the owner (no rule settles these)
 - <specific choice, with the options>
+
+### Sign-off blurb (unprompted hand-off only; FLOW-1). Send this, then wait. Apply nothing yet.
+Imperative changes (sign off and I'll apply all of them):
+1. [edit|regenerate] <RULE-ID>: <what is wrong, where>. <what will visibly change>.
+2. ...
+Also possible (not needed): <one line, or omit>. OK to go ahead?
+
+### Delivery checklist (after the fixes; FLOW-3). Lead with the result, then:
+1. <point> (<RULE-ID>): done / not done, <evidence or reason>.
+2. ...
+QA re-run on the final render: light (TD-LIT-1) <pass/fail> · anatomy (CHAR-9) <pass/fail/n.a.> · type size and contrast (TYPE-3, UI-6) <pass/fail> · additions (AES-10) <none/list>.
 ```
 
 ## Worked example

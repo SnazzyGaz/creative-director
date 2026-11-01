@@ -41,29 +41,30 @@ Always load `core/`. Then add only what the task needs. Loading everything waste
 
 ## Token cost per module
 
-Approximate: counted with tiktoken's `cl100k_base` encoding (OpenAI's GPT-4 tokenizer) on 1 Nov 2026 (v0.4.0; `core/`, `AGENTS.md`, character and lite recounted after the anatomy pass was added). Other models tokenise differently, so expect roughly ±15%.
+Approximate: counted with tiktoken's `cl100k_base` encoding (OpenAI's GPT-4 tokenizer) on 1 Nov 2026 (v0.4.0; `core/`, `AGENTS.md`, character, typography and lite recounted after the anatomy pass, the interaction flow and TYPE-10 were added). Other models tokenise differently, so expect roughly ±15%.
 
 | File or set | Tokens |
 |---|---|
-| `AGENTS.md` (entry point) | 635 |
-| `core/` (all seven files) | 10,230 |
+| `AGENTS.md` (entry point) | 793 |
+| `core/` (all eight files) | 13,254 |
 | `core/principles.md` | 2,330 |
-| `core/critique-loop.md` | 2,332 |
+| `core/critique-loop.md` | 2,646 |
+| `core/interaction-flow.md` | 2,433 |
 | `core/which-modules.md` | 1,298 |
 | `core/evidence.md` | 1,260 |
 | `core/creative-direction.md` | 1,053 |
-| `core/critique-template.md` | 1,259 |
+| `core/critique-template.md` | 1,516 |
 | `core/brand-intake.md` (only when the brief has no brand input) | 698 |
 | `modules/technical-drawing/` | 3,010 |
 | `modules/web-ui/` (+ notes 437) | 2,658 |
 | `modules/illustration/` (+ notes 484) | 2,618 |
 | `modules/layout/` | 2,475 |
-| `modules/typography/` | 2,454 |
+| `modules/typography/` (+ `fonts/CATALOGUE.md` when picking type, about 7,600) | 2,868 |
 | `modules/character/` | 3,512 |
 | `modules/ux/` | 1,828 |
 | `modules/3d/` | 1,815 |
 | `modules/aesthetic-critique/` | 2,054 |
 | `modules/brand/` | 1,717 |
-| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 1,741 |
+| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 1,868 |
 
-Typical loads (core without brand intake is about 9,500): core + web-ui + ux is about 14,000 tokens; core + one module about 11,200-13,000; a social card (core + layout + typography) about 14,500; a figure (core + character + technical-drawing + illustration) about 18,700. Adding aesthetic-critique costs about 2,050 more (a poster with it: about 16,500). If that is too much, use the lite file.
+Typical loads (core without brand intake is about 12,600): core + web-ui + ux is about 17,000 tokens; core + one module about 14,300-16,100; a social card (core + layout + typography) about 17,900; a figure (core + character + technical-drawing + illustration) about 21,700. Adding aesthetic-critique costs about 2,050 more (a poster with it: about 20,000). If that is too much, use the lite file.

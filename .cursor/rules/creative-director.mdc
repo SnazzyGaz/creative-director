@@ -3,4 +3,4 @@ description: Creative-director rules for judging and improving visual work (imag
 alwaysApply: false
 ---
 
-When making or reviewing anything visual, or when asked to consult the creative director, follow `AGENTS.md` at the repo root: brief check, load `core/` and the relevant `modules/`, render the real output, critique against rule IDs using `core/critique-template.md`, at most 3 verified fixes per round, stop when clearly better.
+When making or reviewing anything visual, or when asked to consult the creative director, follow `AGENTS.md` at the repo root: read the ask (`core/interaction-flow.md`; unprompted hand-offs get a sign-off blurb first), brief check, load `core/` and the relevant `modules/`, render the real output, critique against rule IDs using `core/critique-template.md`, at most 3 verified fixes per round, stop when clearly better.

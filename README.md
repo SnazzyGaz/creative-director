@@ -20,7 +20,7 @@ A set of design rules and a critique loop that any AI agent can read. It helps a
 
 **Grok Bot.** One click: [Creative Director bot](https://x.ai/bot/XWBKgRnDOw7uR5SpKx3Af). Or point any bot at [`AGENTS.md`](AGENTS.md).
 
-**Claude.** Download [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip) (about 100 KB: `SKILL.md`, `core/`, `modules/`, `lite/`, `tools/`; no images or examples; built by [`tools/package_skill.py`](tools/package_skill.py)). The zip has the `creative-director/` folder at its top level, as Claude requires.
+**Claude.** Download [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip) (about 140 KB: `SKILL.md`, `core/`, `modules/`, `lite/`, `tools/`, the font catalogue; no images, font files or examples; built by [`tools/package_skill.py`](tools/package_skill.py)). The zip has the `creative-director/` folder at its top level, as Claude requires.
 - **claude.ai:** first turn on *Code execution and file creation* in Settings > Capabilities (skills need it). Then, as [Anthropic's guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude) describes: go to Customize > Skills, click **+**, then **+ Create skill**, choose **Upload a skill**, and upload the zip. Toggle it on in the skills list. On Team and Enterprise plans an owner may need to allow skills first (see the guide).
 - **Claude Code:** `unzip creative-director-skill.zip -d ~/.claude/skills/` (or `.claude/skills/` inside a project).
 - **Claude Projects:** unzip, then add `creative-director/SKILL.md`, `core/` and the modules you need as project knowledge.
@@ -79,6 +79,10 @@ In the [baseline](examples/baseline-comparison/) the with-skill poster won on ac
 
 Always send the actual output (image, screenshot at real size, URL or renders), never a description.
 
+**Handing over work with no specific ask** gets a short, ranked list of the changes that matter, each tied to a rule and marked *edit* or *regenerate*, and nothing changes until you sign off. Then every signed-off point is applied and checked, and the result comes back with a done / not done line per point. Say "just fix it" to skip the sign-off. Flow and diagram: [`core/interaction-flow.md`](core/interaction-flow.md).
+
+**Type:** a [font library](fonts/) of 62 free families (SIL OFL or Apache) grouped into 18 themes, from editorial serif to horror to nautical, with a [catalogue](fonts/CATALOGUE.md) and specimen sheets, so type matches the brief's genre instead of repeating one face.
+
 ## Requirements
 
 - **Vision.** The agent has to *see* its output: a model that accepts images.
@@ -86,16 +90,17 @@ Always send the actual output (image, screenshot at real size, URL or renders), 
 - **Recommended setup:** Playwright or headless Chrome for UI (`tools/shot.sh` uses Chrome), Blender for 3D (plus [model-qa](https://github.com/SnazzyGaz/model-qa) for build checks), and Python 3 with Pillow and NumPy for the `tools/` scripts (look tests, contrast, vanishing points, ellipses, layout grid, 3D intersections; `pip install -r tools/requirements.txt`).
 - **Without vision** you only get a rules-only review of code or a description. It can still catch contrast, spacing and flow problems in code, but it can't judge how the work looks, and it is much weaker.
 
-Context cost: about 9,500 tokens for `core/` plus 1,700-3,500 per module ([table](core/which-modules.md#token-cost-per-module)). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 1,700 tokens.
+Context cost: about 12,600 tokens for `core/` plus 1,700-3,500 per module ([table](core/which-modules.md#token-cost-per-module)). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 1,900 tokens.
 
 ## What's inside
 
 ```
-core/       principles, creative direction, brand intake, evidence, the loop, critique template, module picker
+core/       principles, interaction flow, creative direction, brand intake, evidence, the loop, critique template, module picker
 modules/    technical-drawing · illustration · character · web-ui · ux · 3d
             typography · layout (social, posters, slides, print) · brand · aesthetic-critique
 tools/      look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, 3D intersections, before/after
 examples/   stress tests, round by round, including this README's own critique
+fonts/      62 free font families in 18 themes, catalogue and specimen sheets
 lite/       the loop, core rules and blockers in one short file
 docs/       gallery, README images, reference library, design notes (DECISIONS.md, PROPOSED-REPO.md)
 ```

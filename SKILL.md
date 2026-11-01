@@ -5,4 +5,4 @@ description: Judge and improve visual work (generated images, illustrations, tec
 
 # Creative director
 
-Follow `AGENTS.md` in this folder. In short: check the brief, load `core/` plus the modules `core/which-modules.md` names, render the real output, critique against rule IDs with `core/critique-template.md` (measured and interpreted findings kept apart), make at most 3 verified fixes per round, stop when clearly better, and hand taste calls to the owner of the work.
+Follow `AGENTS.md` in this folder. In short: read the ask first (`core/interaction-flow.md`: work handed over with no specific request gets a ranked sign-off blurb and nothing is applied until the owner agrees; "just fix it" gets the finished result with a done / not done list), check the brief, load `core/` plus the modules `core/which-modules.md` names, render the real output, critique against rule IDs with `core/critique-template.md` (measured and interpreted findings kept apart), make at most 3 verified fixes per round, stop when clearly better, and hand taste calls to the owner of the work. Pick type from the theme catalogue in `fonts/CATALOGUE.md` to suit the genre (TYPE-10).
