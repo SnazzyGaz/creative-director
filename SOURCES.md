@@ -179,3 +179,12 @@ Every source cited in this repo. Ideas are paraphrased; no text or images are co
 - **[S140]** Glocker, M. L., et al. (2009). Baby schema in infant faces induces cuteness perception and motivation for caretaking in adults. *Ethology* 115(3), 257-263. https://doi.org/10.1111/j.1439-0310.2008.01603.x
 - **[S141]** Narasimhaswamy, S., et al. (2024). HanDiffuser: text-to-image generation with realistic hand appearances. *CVPR 2024*. https://arxiv.org/abs/2403.01693
 - **[S142]** Goldfinger, E. (1991). *Human Anatomy for Artists: The Elements of Form*. Oxford University Press.
+
+## Comparative judgement and evaluation (aesthetic-critique, v0.4.0)
+
+- **[S143]** Thurstone, L. L. (1927). A law of comparative judgment. *Psychological Review* 34(4), 273-286. https://doi.org/10.1037/h0070288
+- **[S144]** Pollitt, A. (2012). The method of Adaptive Comparative Judgement. *Assessment in Education: Principles, Policy & Practice* 19(3), 281-300. https://doi.org/10.1080/0969594X.2012.665354
+- **[S145]** Amabile, T. M. (1982). Social psychology of creativity: a consensual assessment technique. *Journal of Personality and Social Psychology* 43(5), 997-1013. https://doi.org/10.1037/0022-3514.43.5.997
+- **[S146]** Zheng, L., et al. (2023). Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. *NeurIPS 2023 Datasets and Benchmarks*. https://arxiv.org/abs/2306.05685 (documents position bias in model judges; swapping order is the suggested control).
+- **[S147]** Kirstain, Y., et al. (2023). Pick-a-Pic: an open dataset of user preferences for text-to-image generation. *NeurIPS 2023*. https://arxiv.org/abs/2305.01569
+- **[S148]** Hayes, A. F., & Krippendorff, K. (2007). Answering the call for a standard reliability measure for coding data. *Communication Methods and Measures* 1(1), 77-89. https://doi.org/10.1080/19312450709336664

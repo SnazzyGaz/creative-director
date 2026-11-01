@@ -20,6 +20,7 @@ make -> render -> LOOK (5 tests) -> CRITIQUE (criteria, ranked) -> FIX up to 3 -
 
 - Before making, have the brief (CD-1) and the direction (CD-2). If the brief has no brand input (no colours, type, voice or logo), run `core/brand-intake.md` first; more rounds can't fix a generic look. For an open brief, compare 2-3 rough options first (CD-3).
 - The first critique point each round is: does it answer the brief and audience, and are the must-keeps intact (CD-1, CD-5)?
+- **Intent model.** Write a short intent block: purpose, audience, mood, style, focal experience, degree of polish, must-keeps. Mark each line [brief] or [inferred]; inferred lines are guesses to confirm, not facts (AES-0 in `modules/aesthetic-critique/`). Before calling a choice a flaw, ask whether it is deliberate and whether it works.
 
 ## 1. Render
 
@@ -52,6 +53,7 @@ Use `critique-template.md`. Tone: neutral and factual, like a doctoral superviso
 - **Needs improvement, ranked biggest first.** Rank by effect on the whole. Structure (hierarchy, perspective, composition, flow) before surface (texture, polish, micro-spacing). Five at most.
 - **Blockers vs improvements.** Only **MUST-BE-RIGHT** failures are blockers: perspective, anatomy/proportion, light consistency, contrast/accessibility minimums, a main flow that can't be completed, 3D build defects. Everything else is an improvement, optional by nature.
 - **Measure at zoom before calling a failure.** For ellipses, verticals, alignment and edges, look at 2x or more, or use the tool (`tools/vp.py`, `tools/ellipse.py`, `tools/contrast.py`). A call made at normal size is a candidate, not a finding.
+- **Two kinds of finding.** MEASURED findings are checked with a tool or a count (contrast ratio, type size, collisions, perspective). INTERPRETED findings are aesthetic readings: tie each to a visible feature, state its effect and the trade-off, and label it as interpretation (AES-1 to AES-8). Only measured findings can be blockers. When the two disagree, state the trade-off; don't resolve it toward the neater option by default.
 - **Specific and actionable.** Where (region, element, coordinates), the observed evidence, the rule, and one concrete fix.
 - **No padding, no harshness.** No approval or disapproval adjectives ("lovely", "weak", "terrible"), no hedging. Describe what is observed against the criterion.
 
@@ -67,6 +69,7 @@ Register example:
 - Re-run the five tests and compare with the previous round side by side. If a change made it worse or broke something that met a criterion, revert it.
 - **Check each fix applied.** Compare the new render with the fix as written. Image generators often skip or drift on edits. A fix that didn't apply counts as not done; retry it or report it.
 - Keep a one-line log per round: what changed, which rule, result.
+- **Aesthetic changes: one or two at a time.** Compare old and new side by side and decide keep, refine or revert, stating what the change cost; re-run the measured checks so a mood gain doesn't hide a regression (AES-9, AES-10).
 
 ## 4b. Nudge or take over
 

@@ -26,7 +26,7 @@ A set of design rules and a critique loop that any AI agent can read. It helps a
 Generated, one or two rounds each.
 </details>
 
-Eleven example sets across every domain: four take-overs of deliberately bad work, nudges, one small case per common agent failure, and the baseline above, all with critiques, logs and honest misses: [examples/](examples/), or filter them in the [gallery](https://snazzygaz.github.io/creative-director/gallery/). To test it on another model, the [cross-model kit](examples/cross-model/) has the inputs, prompts and scoring. There are two outside pilot runs so far, [Claude Opus 5.5 and ChatGPT GPT-6](examples/cross-model/runs/), both contaminated (the models had read the answer keys), so they score nothing. What they suggest: without the skill the models already found most faults; with it, the critiques were better structured (blockers first, rule IDs, brief kept), and where the tools were run they gave measurements instead of guesses. A clean, blind run is still wanted.
+Example sets across every domain: four take-overs of deliberately bad work, nudges, one small case per common agent failure, the baseline above and an aesthetic demo, all with critiques, logs and honest misses: [examples/](examples/), or filter them in the [gallery](https://snazzygaz.github.io/creative-director/gallery/). To test it on another model, the [cross-model kit](examples/cross-model/) has the inputs, prompts and scoring. There are two outside pilot runs so far, [Claude Opus 5.5 and ChatGPT GPT-6](examples/cross-model/runs/), both contaminated (the models had read the answer keys), so they score nothing. What they suggest: without the skill the models already found most faults; with it, the critiques were better structured (blockers first, rule IDs, brief kept), and where the tools were run they gave measurements instead of guesses. A clean, blind run is still wanted.
 
 ## How it works
 
@@ -36,6 +36,10 @@ Eleven example sets across every domain: four take-overs of deliberately bad wor
 </picture></p>
 
 Each rule has an ID (`CORE-2`, `TD-PER-1`, `UI-6`) and the same parts: what, why, a check you can run, the usual fix, and a source. Only **MUST-BE-RIGHT** errors (perspective, anatomy, light, contrast and accessibility, broken flows, 3D build defects) block; everything else is a default. Full loop: [`core/critique-loop.md`](core/critique-loop.md).
+
+### Correctness and quality
+
+Passing the rules makes work correct, not necessarily good: in the [baseline](examples/baseline-comparison/) the with-skill poster won on accuracy and legibility but lost on atmosphere. The [aesthetic layer](modules/aesthetic-critique/) addresses that in three ways. It starts from an intent model (purpose, audience, mood, style, polish), with each line marked as stated or guessed. It judges versions side by side for the brief ("which is stronger, why, at what cost"), not by adding up scores. And it changes one or two aesthetic things at a time, re-running the measured checks so a mood gain can't hide a regression. Critiques keep **measured** findings (checked with a tool; only these block) apart from **interpreted** ones (aesthetic readings, labelled as such). A [reference library](docs/references.md) of 27 public works and a [blind test protocol](examples/aesthetic-benchmark/) come with it. So far there is one demo, self-judged: the poster's night-time atmosphere won back with every check still passing.
 
 ## Usage
 
@@ -62,7 +66,7 @@ Download [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-d
 - **Recommended setup:** Playwright or headless Chrome for UI (`tools/shot.sh` uses Chrome), Blender for 3D (plus [model-qa](https://github.com/SnazzyGaz/model-qa) for build checks), and Python 3 with Pillow and NumPy for the `tools/` scripts (look tests, contrast, vanishing points, ellipses, layout grid, 3D intersections; `pip install -r tools/requirements.txt`).
 - **Without vision** you only get a rules-only review of code or a description. It can still catch contrast, spacing and flow problems in code, but it can't judge how the work looks, and it is much weaker.
 
-Context cost: about 7,500 tokens for `core/` plus 1,800-3,000 per module ([table](core/which-modules.md#token-cost-per-module)). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 1,300 tokens.
+Context cost: about 9,100 tokens for `core/` plus 1,700-3,000 per module ([table](core/which-modules.md#token-cost-per-module)). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 1,600 tokens.
 
 ## Works with
 
@@ -82,11 +86,11 @@ Every entry point leads back to `AGENTS.md`, and [`llms.txt`](llms.txt) is there
 ```
 core/       principles, creative direction, brand intake, evidence, the loop, critique template, module picker
 modules/    technical-drawing · illustration · character · web-ui · ux · 3d
-            typography · layout (social, posters, slides, print) · brand
+            typography · layout (social, posters, slides, print) · brand · aesthetic-critique
 tools/      look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, 3D intersections, before/after
 examples/   stress tests, round by round, including this README's own critique
 lite/       the loop, core rules and blockers in one short file
-docs/       gallery, README images, design notes (DECISIONS.md, PROPOSED-REPO.md)
+docs/       gallery, README images, reference library, design notes (DECISIONS.md, PROPOSED-REPO.md)
 ```
 
 ## Principles of the critique

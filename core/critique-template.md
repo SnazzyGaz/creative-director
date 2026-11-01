@@ -6,6 +6,7 @@ Neutral and factual. Every point cites a rule ID. No praise padding, no harshnes
 ## Critique: <piece name>, round <n>
 
 **Brief:** <purpose, audience, the one idea, where and how big it is seen, must-keeps, how done is judged (CD-1)>
+**Intent (AES-0):** purpose [brief] / audience [brief] / mood [inferred?] / style / focal experience / polish / must-keeps. Mark each [brief] or [inferred].
 **Criteria judged against:** <rule IDs, e.g. CORE-1, CORE-2, CORE-3, CORE-10, ILL-1, TD-PER-1>
 **Evidence looked at:** <render file names and sizes; tests run>
 
@@ -23,10 +24,21 @@ Neutral and factual. Every point cites a rule ID. No praise padding, no harshnes
 ### Meets criteria
 - <RULE-ID>: <evidence, one line>
 
+### Findings: MEASURED (checked with a tool or count; only these can be blockers)
+- <RULE-ID>: <value measured, tool, threshold>. e.g. "UI-6: headline 8.97:1 on its background (`tools/contrast.py`), needs 4.5:1. Met."
+
+### Findings: INTERPRETED (aesthetic reading; labelled as interpretation)
+- <AES-ID>: feature <what is visible, where> -> effect <what it does to the viewer> -> trade-off <what changing it would cost>. Confidence: <high / low>.
+- If a measured and an interpreted finding pull in opposite directions, write both and the trade-off. Don't settle it toward the neater option; it's the owner's call.
+
 ### Needs improvement (ranked, biggest first, max 5)
 1. [BLOCKER|IMPROVEMENT] <RULE-ID> not met. <where>: <observed evidence>.
    Fix: <one concrete, smallest effective change>.
 2. ...
+
+### Comparison with the previous round or alternatives (AES-9)
+- Stronger for this brief: <A / B / none good enough>. Strongest difference: <...>. Caused by: <decisions>. Cost: <what the winner gives up>. Preference: <strong / marginal; did it hold with left and right swapped?>.
+- Aesthetic change this round: <one or two>. Decision: <keep / refine / revert> (AES-10). Measured checks still pass: <yes / list regressions>.
 
 ### Deliberate exceptions (if any)
 - <RULE-ID>: broken on purpose because <reason in the brief>.

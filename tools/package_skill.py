@@ -14,7 +14,7 @@ NAME = "creative-director"
 REPO = "https://github.com/SnazzyGaz/creative-director"
 DESC = ("Judge and improve visual work (generated images, illustrations, technical drawings, 3D renders, web and app UI, "
         "UX flows, typography, layout, brand) against cited, checkable design rules, with a light-touch "
-        "render-critique-fix loop. Use when making or reviewing anything visual, or when the user says "
+        "render-critique-fix loop and a comparative aesthetic layer (intent, side-by-side judgement, revision checks). Use when making or reviewing anything visual, or when the user says "
         "\"+ creative director\", \"consult creative director\" or \"creative director: direct this\".")
 DIRS = ["core", "modules", "lite", "tools"]
 FILES = ["SOURCES.md", "LICENSE"]

@@ -51,6 +51,8 @@ Prompt: *"A poster for a neighbourhood jazz night on Friday 14 March at The Lant
 | Type (TYPE-1) | Four styles (spaced caps, condensed, brush script, handwriting) | Two families |
 | **Still loses on** | | **Atmosphere.** The without version's street at dusk is richer and more inviting at a glance. The with version is cleaner, more legible and correct, but plainer. Smaller misses: the lamp is drawn at an odd scale next to the bass, and the orange rule under the title is 2.36:1 on the paper (decorative only, carries no information, so no WCAG failure, but it is faint). |
 
+> **Follow-up (v0.4.0):** the aesthetic layer was used to win back the poster's atmosphere without breaking a blocker: [`../aesthetic-benchmark/`](../aesthetic-benchmark/) (one sample, self-judged).
+
 ## What this shows, honestly
 
 - With type set properly, both with-skill pieces are now **complete, accurate and legible**: no invented facts, one reading order, two typefaces, every text pair well above 4.5:1. On accuracy and hierarchy they win outright.
