@@ -39,6 +39,7 @@ Neutral and factual. Every point cites a rule ID. No praise padding, no harshnes
 ### Comparison with the previous round or alternatives (AES-9)
 - Stronger for this brief: <A / B / none good enough>. Strongest difference: <...>. Caused by: <decisions>. Cost: <what the winner gives up>. Preference: <strong / marginal; did it hold with left and right swapped?>.
 - Aesthetic change this round: <one or two>. Decision: <keep / refine / revert> (AES-10). Measured checks still pass: <yes / list regressions>.
+- Additions (content not in the brief or the previous version: characters, creatures, objects, text, claims): <none / list, each marked [inferred], with the brief line or owner sign-off that allows it, or "remove">.
 
 ### Deliberate exceptions (if any)
 - <RULE-ID>: broken on purpose because <reason in the brief>.

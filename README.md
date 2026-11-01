@@ -9,12 +9,35 @@
 
 <p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/baseline-dark.jpg">
-  <img alt="Same prompts without the skill, with the skill, and with the skill plus the aesthetic layer. Book cover: without, a busy rainbow cover with an invented subtitle, signs and slogans; with, a calm painted fox under a tree with the title set in type; plus aesthetic layer, the same cover in warm golden-hour light with a robin beside the fox. Event poster: without, a rich street scene with an invented address and slogans; with, a plain cream poster with a navy double bass and only the given facts; plus aesthetic layer, a navy night street with lit windows and a lamp, same facts in cream type." src="docs/assets/baseline-light.jpg" width="100%">
+  <img alt="Same prompts without the skill, with the skill, and with the skill plus the aesthetic layer. Book cover: without, a busy rainbow cover with an invented subtitle, signs and slogans; with, a calm painted fox under a tree with the title set in type; plus aesthetic layer, the same cover in warm golden-hour light, lit from the low sun on the left. Event poster: without, a rich street scene with an invented address and slogans; with, a plain cream poster with a navy double bass and only the given facts; plus aesthetic layer, a navy night street with lit windows and a lamp, same facts in cream type; its bass stands outside the lamp's light, a known lighting fault." src="docs/assets/baseline-light.jpg" width="100%">
 </picture></p>
 
-Same prompt, same image model (Grok Bot's built-in GenerateImage), one sample each, so an illustration, not a benchmark. *Without:* the prompt as is; the model lettered its own text and invented a subtitle, signs, slogans and an address. *With:* the skill's loop; art generated without text, then every word set in code from the brief's facts only (the cover's author is a marked placeholder), two to three rounds. The with-skill versions win on accuracy, hierarchy and legibility, and lose on first-impression energy and atmosphere. *+ aesthetic layer:* one more pass with the [aesthetic module](modules/aesthetic-critique/) (one new text-free image each, same facts and type in code, contrast re-checked); it wins back warmth and atmosphere, though that's Grok Bot's own judgement on one sample each. [Full write-up](examples/baseline-comparison/) · [aesthetic notes](examples/aesthetic-benchmark/).
+Same prompt, same image model (Grok Bot's built-in GenerateImage), one sample each, so an illustration, not a benchmark. *Without:* the prompt as is; the model lettered its own text and invented a subtitle, signs, slogans and an address. *With:* the skill's loop; art generated without text, then every word set in code from the brief's facts only (the cover's author is a marked placeholder), two to three rounds. The with-skill versions win on accuracy, hierarchy and legibility, and lose on first-impression energy and atmosphere. *+ aesthetic layer:* one more round with the [aesthetic module](modules/aesthetic-critique/) (new text-free art, same facts and type in code, contrast re-checked). It wins back warmth and atmosphere, but in Grok Bot's own judgement on one sample each, and with one more round of work than the middle column. **Known fault:** in the aesthetic poster the bass stands outside the lamp's cone of light yet is brightly lit, and it is shaped more like a violin than a double bass. That breaks the repo's own lighting blocker (TD-LIT-1); one edit to fix it failed, so it is left visible and labelled here. The fox was re-made after review to remove a robin and fireflies the brief never asked for and a second light glowing from the book. [Full write-up](examples/baseline-comparison/) · [aesthetic notes](examples/aesthetic-benchmark/).
 
 A set of design rules and a critique loop that any AI agent can read. It helps an agent judge and improve its own visual work (drawings, illustrations, 3D renders, web and app UI, UX flows): render it, look at it the way a designer would, cite a rule for every problem, make up to three small fixes, and stop when the work is clearly better. Rules are grounded in perception research where it exists and in craft practice where it doesn't, and taste calls stay with the person who owns the work.
+
+## Install
+
+**Grok Bot.** One click: [Creative Director bot](https://x.ai/bot/XWBKgRnDOw7uR5SpKx3Af). Or point any bot at [`AGENTS.md`](AGENTS.md).
+
+**Claude.** Download [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip) (about 100 KB: `SKILL.md`, `core/`, `modules/`, `lite/`, `tools/`; no images or examples; built by [`tools/package_skill.py`](tools/package_skill.py)). The zip has the `creative-director/` folder at its top level, as Claude requires.
+- **claude.ai:** first turn on *Code execution and file creation* in Settings > Capabilities (skills need it). Then, as [Anthropic's guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude) describes: go to Customize > Skills, click **+**, then **+ Create skill**, choose **Upload a skill**, and upload the zip. Toggle it on in the skills list. On Team and Enterprise plans an owner may need to allow skills first (see the guide).
+- **Claude Code:** `unzip creative-director-skill.zip -d ~/.claude/skills/` (or `.claude/skills/` inside a project).
+- **Claude Projects:** unzip, then add `creative-director/SKILL.md`, `core/` and the modules you need as project knowledge.
+
+**Other tools.**
+
+| Tool | Entry point |
+|---|---|
+| Cursor | [`.cursor/rules/creative-director.mdc`](.cursor/rules/creative-director.mdc), [`AGENTS.md`](AGENTS.md) |
+| Claude Code, Claude Skills | Skill zip (above), [`CLAUDE.md`](CLAUDE.md), [`SKILL.md`](SKILL.md) |
+| Codex, Gemini CLI, Jules | [`AGENTS.md`](AGENTS.md) |
+| GitHub Copilot | [`.github/copilot-instructions.md`](.github/copilot-instructions.md) |
+| ChatGPT, Gemini Gems, Claude Projects | Upload `AGENTS.md`, `core/` and the modules you need as knowledge |
+
+Every entry point leads back to `AGENTS.md`, and [`llms.txt`](llms.txt) is there for tools that read it.
+
+## Examples
 
 <details><summary>Three more before/after pairs</summary>
 
@@ -39,7 +62,12 @@ Each rule has an ID (`CORE-2`, `TD-PER-1`, `UI-6`) and the same parts: what, why
 
 ### Correctness and quality
 
-Passing the rules makes work correct, not necessarily good: in the [baseline](examples/baseline-comparison/) the with-skill poster won on accuracy and legibility but lost on atmosphere. The [aesthetic layer](modules/aesthetic-critique/) addresses that in three ways. It starts from an intent model (purpose, audience, mood, style, polish), with each line marked as stated or guessed. It judges versions side by side for the brief ("which is stronger, why, at what cost"), not by adding up scores. And it changes one or two aesthetic things at a time, re-running the measured checks so a mood gain can't hide a regression. Critiques keep **measured** findings (checked with a tool; only these block) apart from **interpreted** ones (aesthetic readings, labelled as such). A [reference library](docs/references.md) of 27 public works and a [blind test protocol](examples/aesthetic-benchmark/) come with it. See it in the [reference set](examples/aesthetic-benchmark/reference-set/): 12 briefs across posters, web, app, 3D, technical drawing, branding, editorial and game art, each shown rules-only next to rules plus the aesthetic layer (four also with the plain no-skill output). It's made and judged by Grok Bot, so it's a showcase, not evidence.
+Passing the rules makes work correct, not necessarily good. The [aesthetic layer](modules/aesthetic-critique/) adds an intent model, side-by-side verdicts instead of scores, and one-or-two-change revisions that re-run the measured checks and may restyle but not add story content. Examples: the [reference set](examples/aesthetic-benchmark/reference-set/) (12 pieces, self-made and self-judged, so a showcase, not evidence).
+
+<details><summary>More on the aesthetic layer</summary>
+
+In the [baseline](examples/baseline-comparison/) the with-skill poster won on accuracy and legibility but lost on atmosphere; the aesthetic layer is the answer to that. It starts from an intent model (purpose, audience, mood, style, polish), with each line marked as stated or guessed. It judges versions side by side for the brief ("which is stronger, why, at what cost"), not by adding up scores. It changes one or two aesthetic things at a time and re-runs the measured checks, so a mood gain can't hide a regression. It may restyle light, palette, composition, texture and type, but may not add characters, objects, text or claims the brief didn't give without the owner's say-so. Critiques keep **measured** findings (checked with a tool; only these block) apart from **interpreted** ones (aesthetic readings, labelled as such). A [reference library](docs/references.md) of 27 public works and a [test protocol](examples/aesthetic-benchmark/) come with it. In every comparison so far the aesthetic version had one more round of work than the rules-only one; the protocol now requires equal rounds.
+</details>
 
 ## Usage
 
@@ -51,14 +79,6 @@ Passing the rules makes work correct, not necessarily good: in the [baseline](ex
 
 Always send the actual output (image, screenshot at real size, URL or renders), never a description.
 
-## Install in Claude
-
-Download [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip) (about 100 KB: `SKILL.md` with the full instructions, `core/`, `modules/`, `lite/`, `tools/`; no images or examples). Built by [`tools/package_skill.py`](tools/package_skill.py).
-
-- **claude.ai:** Customize > Skills > **+** > Upload a skill, and pick the zip. Needs code execution on (Settings > Capabilities).
-- **Claude Code:** `unzip creative-director-skill.zip -d ~/.claude/skills/` (or `.claude/skills/` inside a project).
-- **Claude Projects:** unzip, then add `creative-director/SKILL.md`, `core/` and the modules you need as project knowledge.
-
 ## Requirements
 
 - **Vision.** The agent has to *see* its output: a model that accepts images.
@@ -67,19 +87,6 @@ Download [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-d
 - **Without vision** you only get a rules-only review of code or a description. It can still catch contrast, spacing and flow problems in code, but it can't judge how the work looks, and it is much weaker.
 
 Context cost: about 9,100 tokens for `core/` plus 1,700-3,000 per module ([table](core/which-modules.md#token-cost-per-module)). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 1,600 tokens.
-
-## Works with
-
-| Tool | Entry point |
-|---|---|
-| Cursor | [`.cursor/rules/creative-director.mdc`](.cursor/rules/creative-director.mdc), [`AGENTS.md`](AGENTS.md) |
-| Claude Code, Claude Skills | [Skill zip](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip) ([install](#install-in-claude)), [`CLAUDE.md`](CLAUDE.md), [`SKILL.md`](SKILL.md) |
-| Codex, Gemini CLI, Jules | [`AGENTS.md`](AGENTS.md) |
-| GitHub Copilot | [`.github/copilot-instructions.md`](.github/copilot-instructions.md) |
-| ChatGPT, Gemini Gems, Claude Projects | Upload `AGENTS.md`, `core/` and the modules you need as knowledge |
-| Grok Bot | One-click install: [Creative Director bot](https://x.ai/bot/XWBKgRnDOw7uR5SpKx3Af), or point any bot at [`AGENTS.md`](AGENTS.md) |
-
-Every entry point leads back to `AGENTS.md`, and [`llms.txt`](llms.txt) is there for tools that read it.
 
 ## What's inside
 

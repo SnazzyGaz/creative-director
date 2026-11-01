@@ -2,6 +2,8 @@
 
 Does the aesthetic layer (`modules/aesthetic-critique/`) help produce work people prefer, while keeping the brief and passing the measured checks? If it only adds vocabulary, it has failed. This folder holds a protocol for testing that properly, and two small demos that are **not** tests.
 
+> **Unequal effort in everything shown here.** In the two demos below and in the [reference set](reference-set/), the rules + aesthetic version always had **one more round of work** than the rules-only version. Part of any gain may come from that extra round. The protocol now requires equal rounds.
+
 ## Protocol
 
 **Run 01 was turned into an open, labelled [reference set](reference-set/) (12 pieces, key published), so it is no longer blind.** A later blind run using this protocol is optional.
@@ -14,7 +16,9 @@ Does the aesthetic layer (`modules/aesthetic-critique/`) help produce work peopl
 
 **Blinding.** Strip file names and labels; give each output a random ID; randomise left/right per pair and show each pair twice with sides swapped. Judges see the brief and the two images only, never the critique or which condition made what. Commit a hash of the answer key (with a random salt, since 12 left/right choices are only 4,096 combinations) before judging, and publish the key afterwards.
 
-**Same start, equal effort.** Where possible both conditions start from the same generation or file. If B is made as a revision of A, A has had less work; either give A an equal extra round with rules only, or report this as a confound (run 01 reports it).
+**Same start, equal effort (required).** Both conditions start from the same generation or file and get **the same number of rounds** and the same image-generation budget. If B is made as a revision of A, A gets an equal extra round with rules only. A comparison where one side had more rounds is not a valid result under this protocol; report it only as a showcase (run 01 and the demos below are in that category).
+
+**No added story.** B may restyle what the brief gives but may not add characters, creatures, objects, text or claims without room in the brief or owner sign-off ([AES-10](../../modules/aesthetic-critique/README.md#aes-10-revision-with-regression-check)). Judges should be told to mark any addition they notice.
 
 **Judges.** At least 5 people who did not make the work; ideally a mix of designers and the target audience. Agreement among independent judges is the standard check for creative quality [S145]. A model judge may be added as an extra rater but is reported separately, because model judges show position and self-preference bias [S146].
 
@@ -64,11 +68,20 @@ Does the aesthetic layer (`modules/aesthetic-critique/`) help produce work peopl
 - **Strongest difference:** B says *a night on your street* at thumbnail size; A says *a music event*.
 - **Caused by:** dark ground with one warm light source; a specific place (terraces, lit windows); the lamp at believable scale.
 - **Cost:** B is darker and busier in its lower half and loses some of A's clean, print-like calm. At the blur test the bass and lamp lead and the title comes second; on a poster the title should arguably lead at distance (LAY-7), so this is a real trade-off for the owner. A is the safer choice if the venue wants a quiet, typographic look.
-- **Honest misses in B:** the bass stands just outside the drawn cone of light yet is lit from the right (a lighting inconsistency, flagged as a TD-LIT candidate, not fixed); the generated bass has a slightly violin-like waist. Neither was fixed, to stay within the two-image budget (one call used).
+- **Honest misses in B (unfixed, fails TD-LIT-1):** the bass stands outside the drawn cone of lamplight yet is brightly lit, a second, unexplained light; the generated bass also has a violin-like waist and sharp corners rather than a double bass's sloped shoulders. A second image edit (1 Nov review) asked for the bass inside the cone with double-bass proportions; the generator instead mirrored the lamp to the left, left the bass outside the cone and kept the violin shape ([rejected attempt](src/poster-art-night-attempt2-rejected.jpg)). It also put the lamp head into the type area. So the poster keeps the first art and the fault is captioned in the README hero.
+- **Added content (AES-10):** the terraced rooftops, lit windows and street are a setting the brief didn't specify; they were inferred from "neighbourhood". Under the current rule they should be marked [inferred] and confirmed with the owner.
 - **Against the original without-skill poster:** similar atmosphere; B keeps the v0.3.1 gains in accuracy (no invented address or slogans) and legibility.
 
 What this demo can't show: whether other people agree, whether it generalises beyond one poster, or whether rules alone with a better prompt would have done the same. That is what the protocol above is for.
 
-## Fox cover: second sample, self-judged (1 November 2026)
+## Fox cover: second sample, self-judged (1 November 2026, revised after review)
 
-**Not evidence either.** The v0.3.1 with-skill fox cover ([`../baseline-comparison/fox-with.jpg`](../baseline-comparison/fox-with.jpg)) was correct but pale next to the busy without-skill cover. AES-0: picture book for ages 4-7 [brief], mood cosy and charming [inferred]. Two changes (AES-3, AES-7): golden-hour light with a warmer palette, and a robin watching the glowing book for storybook charm; one GenerateImage edit of the old art ([prompt](src/PROMPTS.md)), type re-set in code in warm cocoa with an italic *Reading* ([`src/compose_fox.py`](src/compose_fox.py)), same wording and placeholder author. Measured: title 8.50:1 on the sky average and 7.27:1 on the darkest sky pixel under it (needs 3:1); author 5.55:1 at worst (needs 4.5:1). Unfixed: the fox is barely larger than before, and the low sun competes with it in the blur test. [Result](fox-aes.jpg) · [look sheet](look-fox-aes.jpg).
+**Not evidence either.** The v0.3.1 with-skill fox cover ([`../baseline-comparison/fox-with.jpg`](../baseline-comparison/fox-with.jpg)) was correct but pale next to the busy without-skill cover. AES-0: picture book for ages 4-7 [brief], mood cosy and charming [inferred]. One change (AES-3, AES-7): golden-hour light with a warmer palette. Type re-set in code in warm cocoa with an italic *Reading* ([`src/compose_fox.py`](src/compose_fox.py)), same wording and placeholder author.
+
+**Round 1 ([`fox-aes-r1.jpg`](fox-aes-r1.jpg)), withdrawn.** It also added a robin and fireflies (story content the brief didn't ask for, now against AES-10) and lit the fox's face from below with a glowing book while the sun sat low on the left: two key lights, a TD-LIT-1 blocker. An outside review caught both.
+
+**Round 2 ([`fox-aes.jpg`](fox-aes.jpg), current).** One GenerateImage edit of round 1's art ([prompt](src/PROMPTS.md)): robin and fireflies removed, the book is plain paper with no glow, one key light from the low sun, fox about 15% larger.
+- **Lighting (TD-LIT-1).** Mean grey level, sun side (left) vs far side (right): fox head 139 vs 120, fox body 117 vs 75, tree trunk 85 vs 47. All forms are lighter on the sun side; no light from below; the book catches light only on its left. Pass, with one caveat: the sun sits low and slightly behind the fox, so its front is lit more brightly than strict backlight would allow (read as soft sky fill).
+- **Contrast (`tools/contrast.py`).** Title on the sky average 9.07:1 and on the 1st-percentile sky pixel under it 9.22:1 (needs 3:1); author 5.68:1 at worst (needs 4.5:1). Pass. The only darker pixels in the title box are 26 leaf-tip pixels at x 466-469, clear of the glyphs.
+- **Look tests.** The fox now leads at the blur test; the low sun is second. [Look sheet](look-fox-aes.jpg).
+- **Unfixed:** the scene is still a backlit sunset by design, so the fox has no strong rim light; the extra round means this column had one more round than the rules-only cover.

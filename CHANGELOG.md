@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+Changes after a third outside review (by Claude, consulted by the owner).
+
+- **Aesthetic layer: restyle, don't add story.** New working rule in `modules/aesthetic-critique/` and in AES-10: an aesthetic change may restyle what the brief gives (light, palette, composition, crop, texture, finish, type styling) but may not add characters, creatures, objects, text or claims unless the brief leaves room or the owner signs off; additions are marked [inferred] and listed. AES-10's check now lists every new visible element and re-checks light direction (TD-LIT-1). Critique template gains an *Additions* line; the lite file gains one sentence.
+- **Hero fixes.** Aesthetic fox cover re-made (one image edit): robin and fireflies removed, book no longer glows, one key light from the low sun (sun side lighter on fox head, body and trunk), fox larger; contrast re-checked (title 9.07:1, author 5.68:1 worst). Round 1 kept as `fox-aes-r1.jpg`. Aesthetic poster: one edit to put the bass inside the lamp's light with double-bass proportions failed (rejected attempt kept in `src/`), so the poster is unchanged and its TD-LIT-1 fault is captioned in the README hero.
+- **Reference set audit.** Pieces 01, 03, 04 and 12 (07 borderline) labelled as breaking the new AES-10 rule for added content (torch beam, moth, suitcase, satchel, bookmark, dome glow, dot field). Not regenerated.
+- **Equal effort.** The unequal-rounds disclosure is now a callout at the top of the reference set and the benchmark README; the protocol now requires both conditions to get the same number of rounds and image budget.
+- **README.** Install (Grok Bot, Claude, other tools) moved up under the hero; the Claude upload steps re-checked against Anthropic's help page (Customize > Skills > + > + Create skill > Upload a skill; code execution on in Settings > Capabilities) and linked; "Correctness and quality" cut to two lines plus a collapsed section.
+
 - `examples/aesthetic-benchmark/reference-set/` (was `blind-ab-01/`): blind judging dropped; now an open, labelled reference set of 12 pieces (no skill / rules / rules + aesthetic layer), answer key, briefs and making log published. Originally:: blind A/B run 01, 12 briefs across 12 media, rules only vs rules plus the aesthetic module, made and blinded by Grok Bot, not yet judged. Judging sheet, printable form, prompt for outside model judges, sides-swapped second pass. Answer key and sources withheld; their salted SHA-256 hashes are committed for later checking.
 - Benchmark protocol: commit a salted key hash before judging; same start and equal effort between conditions, or report the confound.
 

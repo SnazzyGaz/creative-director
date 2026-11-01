@@ -2,10 +2,11 @@
 
 Judging whether a piece is *good*, not only *correct*. The other modules catch errors and weak structure; this one helps with energy, atmosphere, distinctiveness and fit to intent. Load it with `core/` once the blockers are known, or whenever the brief asks for mood, character or a particular feel. It adds no new blockers.
 
-Three working rules for this module:
+Four working rules for this module:
 - **Interpretation, labelled as such.** Every aesthetic finding names a visible feature, the effect it has, and what to do. "It feels flat" is not a finding; "the sky and the figure share one value group, so nothing comes forward" is.
 - **Compare, don't score.** The verdict comes from side-by-side comparison against the brief (AES-9), not from adding up dimension notes. Dimension notes are evidence for the comparison.
 - **Taste calls go to the owner of the work.** Where two readings are both defensible, say so and ask.
+- **Restyle, don't add story.** An aesthetic change may restyle what the brief gives: light, palette, composition, crop, texture, finish, type styling. It may not add story content (new characters, creatures, objects, props, text, claims) unless the brief explicitly leaves room for it or the owner of the work signs off. Any addition is marked **[inferred]** in the AES-0 intent model and listed in the critique as an addition. This is the same line the rest of the repo draws against invented facts (CD-1; the brief step in `core/critique-loop.md`).
 
 Format: **What / Check / Fix / See** (the existing rules cited under *See* carry the sources). Procedures AES-0, AES-9 and AES-10 frame the loop; AES-1 to AES-8 are diagnostic prompts.
 
@@ -62,7 +63,7 @@ A deliberate break that works is recorded as a deliberate exception, not fixed.
 ### AES-6. Originality and specificity
 - **What:** Whether the piece could only belong to this brief. Generic work uses the first idea, stock poses, default palettes and centred everything.
 - **Check:** Swap the title for another subject: would the image still fit? If yes, it is generic. Name one specific detail drawn from the brief's subject or audience.
-- **Fix:** Replace one generic element with a specific one taken from the brief (place, object, period, gesture).
+- **Fix:** Replace one generic element with a specific one taken from the brief (place, object, period, gesture). Adding an element the brief doesn't name is an addition (see AES-10).
 - **See:** ILL-11, UI-7, TYPE-9, CD-3, BRAND-7.
 
 ### AES-7. Emotional and narrative charge
@@ -92,8 +93,9 @@ A deliberate break that works is recorded as a deliberate exception, not fixed.
 
 ### AES-10. Revision with regression check
 - **What:** Change one or two aesthetic things at a time, then compare old and new side by side (AES-9). Decide **keep**, **refine** or **revert**, and state the cost.
-- **Check:** After each change re-run the measured checks: contrast, type size, collisions, safe area, anatomy. A change that improves mood but breaks a blocker is a regression, not a win.
-- **Fix:** Revert what regressed; refine what helped partly; stop when the next change is a coin-flip.
+- **Restyle, don't add story:** a revision may change light, palette, composition, crop, texture, finish and type styling. It may not add characters, creatures, objects, props, text or claims the brief didn't give, unless the brief explicitly leaves room ("add whatever charm you like") or the owner of the work signs off. Mark any addition **[inferred]** in AES-0 and list it under *Additions* in the critique.
+- **Check:** After each change re-run the measured checks: contrast, type size, collisions, safe area, anatomy, and the light direction (TD-LIT-1) if the change touched the light. A change that improves mood but breaks a blocker is a regression, not a win. Then compare new against old and list every visible thing that is in the new version but not in the brief or the old version (a bird, sparkles, a beam of light, a sign). Each one either has a brief line or sign-off behind it, or it comes out.
+- **Fix:** Revert what regressed or was added without leave; refine what helped partly; stop when the next change is a coin-flip.
 - **See:** `core/critique-loop.md` (round limits), CD-6.
 
 ---
@@ -103,7 +105,7 @@ A deliberate break that works is recorded as a deliberate exception, not fixed.
 1. AES-0 before anything else; flag inferred lines.
 2. Measured findings first (other modules, tools). These decide blockers.
 3. Pick the 2 or 3 dimensions (AES-1 to 8) that explain the biggest gap from intent. Diagnose the cause, not the symptom: "generic" is a symptom; "default centred layout, even lighting, no specific detail" is a cause.
-4. Propose at most two aesthetic changes, make them, then AES-9 and AES-10.
+4. Propose at most two aesthetic changes, make them, then AES-9 and AES-10. Restyle what the brief gives; don't add story content without leave, and list any addition.
 
 Evidence quality, weakest to best: a general adjective; a named visible feature; a named feature plus its effect plus a side-by-side showing the change helped.
 
