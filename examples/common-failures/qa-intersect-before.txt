@@ -1,0 +1,6 @@
+stool-before.glb: 5 parts, size 490 mm, up axis y, tol 1.0 mm, near-miss < 24.5 mm
+[INTERSECT] seat x leg0: 15.5 cm3 shared, 28.6 mm deep; leg0 passes right through seat (sticks out 18.0 mm above it)
+[GAP] seat - leg3: 12.0 mm apart (near-miss: meant to touch?)
+[GAP] seat - leg2: 12.0 mm apart (near-miss: meant to touch?)
+[GAP] seat - leg1: 12.0 mm apart (near-miss: meant to touch?)
+4 finding(s)

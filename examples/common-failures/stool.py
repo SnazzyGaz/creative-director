@@ -1,4 +1,4 @@
-"""stool.py: blender -b -P stool.py -- before|after. A stool: seat on four legs.
+"""stool.py: blender -b -P stool.py -- before|after [--export]. --export writes stool-TAG.glb (no floor) for tools/intersect.py and skips the render. A stool: seat on four legs.
 Before (planted): seat floats 12 mm above the legs, and one leg is 60 mm too long so it pokes through the seat."""
 import bpy, sys, math
 tag=sys.argv[sys.argv.index('--')+1]; B=tag=='before'
@@ -23,6 +23,8 @@ w=bpy.data.worlds.new('w'); S.world=w; w.use_nodes=True; w.node_tree.nodes['Back
 S.view_settings.view_transform='AgX'; S.render.engine='CYCLES'; S.cycles.samples=32; S.cycles.use_denoising=True
 S.render.resolution_x=640; S.render.resolution_y=480; S.render.filepath=f'//stool-{tag}.png'
 bpy.data.objects.remove(fl)  # check the model without the floor, then add it back for the render
+if '--export' in sys.argv:
+    bpy.ops.export_scene.gltf(filepath=f'stool-{tag}.glb', export_format='GLB'); sys.exit(0)
 bpy.ops.wm.save_as_mainfile(filepath=f'stool-{tag}.blend')
 bpy.ops.mesh.primitive_plane_add(size=4); fl=bpy.context.object; fl.data.materials.append(fm)
 bpy.ops.render.render(write_still=True)

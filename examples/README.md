@@ -36,7 +36,7 @@ A "more is more" prompt produced the generic AI look on purpose: rainbow nebula,
 
 ### Technical drawing: box and tin (take-over, 2 rounds)
 ![before/after](technical-drawing-takeover/before-after.png)
-A synthetic drawing with five planted errors, to test the tools on known answers. `tools/vp.py` found the VPs 200 px apart in height and the verticals leaning three different ways. `tools/ellipse.py` found both ellipses' minor axes about 19 deg off the tin's axis. **It missed the planted lemon-shaped top**: the tin's side lines fall inside the fit box and pull the fit, so the end check said "OK". Caught by eye at 2x zoom. The redraw by construction passes every check.
+A synthetic drawing with five planted errors, to test the tools on known answers. `tools/vp.py` found the VPs 200 px apart in height and the verticals leaning three different ways. `tools/ellipse.py` found both ellipses' minor axes about 19 deg off the tin's axis. **In v0.2.0 it missed the planted lemon-shaped top**: the tin's side lines fall inside the fit box and pull the fit, so the end check said "OK". Caught by eye at 2x zoom. The v0.3.0 `ellipse.py` (robust fit, new end check) flags it. The redraw by construction passes every check.
 
 ### Technical drawing: box and can (take-over, 3 rounds)
 ![before/after](technical-drawing-still-life/before-after.png)
@@ -74,7 +74,7 @@ Kept here on purpose. A critic that never reports its own misses can't be truste
 | [illustration-knight](illustration-knight/) round 2 | Rim light edit did not apply | Verify step | Left as a miss; 2 of 3 fixes landed |
 | [3d-mug-nudge](3d-mug-nudge/) round 3 | Right light layout, about 5x too bright: highlights blew out again | `measure.py` clipped share went back up | Extra round 4 to re-balance |
 | [ux-signup-nudge](ux-signup-nudge/) round 2 draft | Removed the "password again" field: a fourth change and a product decision | Counting changes against the 3-fix cap | Put back; asked the owner instead |
-| [technical-drawing-takeover](technical-drawing-takeover/) | `tools/ellipse.py` said "OK" on a planted lemon-shaped ellipse | By eye at 2x zoom | Tool limit noted in `tools/README.md` |
+| [technical-drawing-takeover](technical-drawing-takeover/) | `tools/ellipse.py` said "OK" on a planted lemon-shaped ellipse | By eye at 2x zoom | Fixed in v0.3.0: `ellipse.py` now flags it (`ell-r01-top-v03.png`) |
 | [common-failures](common-failures/) stool | model-qa reported the leg poking through the seat only as "asymmetry", not as an intersection | Reading the report against the known plant | Fixed; noted as a tool limit |
 | [baseline-comparison](baseline-comparison/) poster | Skill version's amber glow reads as a blob and vanishes in greyscale; the poster without the skill looks more attractive | Look tests | Reported, not fixed (one round only) |
 | [web-ui-landing](web-ui-landing/) | Still looks generic after the round | Critique | Needs a brand brief, not more rounds |
@@ -89,4 +89,4 @@ Kept here on purpose. A critic that never reports its own misses can't be truste
 
 ## Tools
 
-In the top-level `tools/` folder (see `tools/README.md`): `look.py` (five look tests and value stats), `contrast.py` (WCAG ratios), `shot.sh` (headless Chrome at 390, 1280 and 200% zoom), `beforeafter.py`, `vp.py`, `ellipse.py`. The 3D example also has a small `measure.py` (clipped-pixel share and L* samples) and uses model-qa for build checks.
+In the top-level `tools/` folder (see `tools/README.md`): `look.py` (five look tests and value stats), `contrast.py` (WCAG ratios), `shot.sh` (headless Chrome at 390, 1280 and 200% zoom), `beforeafter.py`, `vp.py`, `ellipse.py`, `grid.py` (layout grid from a screenshot), `intersect.py` (intersecting and floating 3D parts). The 3D example also has a small `measure.py` (clipped-pixel share and L* samples) and uses model-qa for build checks.

@@ -6,22 +6,27 @@ G = "https://github.com/SnazzyGaz/creative-director/blob/main/examples/"
 E = [
  ("web-ui","Bakery page","Take-over","Hand-built bad HTML","web-ui-takeover/before-after.png","web-ui-takeover/log.md","11 of 11 text pairs failed contrast (worst 1.13:1); rebuilt, all pass (min 6.31:1)."),
  ("illustration","The keeper's cat","Take-over","GenerateImage (AI)","illustration-takeover/before-after.png","illustration-takeover/log.md","Light from four directions and the generic AI look; regenerated with one light and a value plan. Round 3 made it worse; round 2 delivered."),
- ("technical-drawing","Box and tin","Take-over","Code, errors planted","technical-drawing-takeover/before-after.png","technical-drawing-takeover/log.md","VPs 200 px apart, verticals leaning, ellipses 19 deg off; redrawn by construction. ellipse.py missed the lemon shape."),
+ ("technical-drawing","Box and tin","Take-over","Code, errors planted","technical-drawing-takeover/before-after.png","technical-drawing-takeover/log.md","VPs 200 px apart, verticals leaning, ellipses 19 deg off; redrawn by construction. ellipse.py missed the lemon shape until v0.3.0."),
+ ("technical-drawing","Lemon-shaped ellipse, caught","Tool check","Code, error planted","technical-drawing-takeover/ell-r01-top-v03.png","technical-drawing-takeover/log.md","v0.3.0 ellipse.py on the planted top: ends 0.71/0.68 of a true ellipse, pointed; tilted 12 deg. v0.2.0 said OK."),
  ("technical-drawing","Box and can","Take-over","GenerateImage (AI)","technical-drawing-still-life/before-after.png","technical-drawing-still-life/log.md","Perspective rebuilt; the rework dropped the open box from the brief."),
  ("ux","Library sign-up","Nudge","Hand-built HTML","ux-signup-nudge/before-after.png","ux-signup-nudge/log.md","Placeholder labels at 1.92:1 and 'Error 422'; real labels, inline errors that keep the input."),
  ("3d","White mug","Nudge","Blender 4.2 Cycles","3d-mug-nudge/before-after.png","3d-mug-nudge/log.md","24.2% clipped to flat white; AgX, plausible materials, three lights. 0% clipped."),
  ("illustration","Knight and castle","Nudge","GenerateImage (AI)","illustration-knight/before-after.png","illustration-knight/log.md","Sky out-shouted the knight; quieter sky and mist. The rim light edit did not apply."),
  ("web-ui","AI landing page","Nudge","Generated HTML","web-ui-landing/before-after.png","web-ui-landing/log.md","Six pairs failed contrast; fixed. Still generic: needs a brand brief."),
  ("web-ui","Inconsistent spacing","Common failure","Code","common-failures/spacing-before-after.png","common-failures/README.md","Three different paddings; one 16 px scale."),
- ("web-ui","Misaligned grid","Common failure","Code","common-failures/grid-before-after.png","common-failures/README.md","Card tops at 24, 37 and 19 px; shared top and column step."),
+ ("web-ui","Misaligned grid","Common failure","Code","common-failures/grid-before-after.png","common-failures/README.md","Card tops at 24, 37 and 19 px; shared top and column step. v0.3.0 grid.py measures the same numbers from the screenshot."),
  ("web-ui","Clashing type scale","Common failure","Code","common-failures/type-scale-before-after.png","common-failures/README.md","Five typefaces; two faces, four steps."),
  ("web-ui","Mixed icon set","Common failure","Code","common-failures/icons-before-after.png","common-failures/README.md","Four icon styles; one outline set."),
  ("technical-drawing","SVG perspective","Common failure","Code (SVG)","common-failures/svg-box-before-after.png","common-failures/README.md","Horizon tilt 8.26 deg (vp.py); 0.02 deg after."),
- ("3d","Floating and intersecting parts","Common failure","Blender 4.2, model-qa","common-failures/stool-before-after.png","common-failures/README.md","Seat floating 12 mm, a leg through the seat; model-qa PASS after."),
+ ("3d","Floating and intersecting parts","Common failure","Blender 4.2, model-qa","common-failures/stool-before-after.png","common-failures/README.md","Seat floating 12 mm, a leg through the seat; model-qa PASS after. v0.3.0 intersect.py names the leg through the seat directly."),
+ ("layout","X launch card","Critique","Code (Pillow)","layout-social-card/feed-400.png","layout-social-card/README.md","Passes the blockers; the proof-point caption is about 2 px tall in the feed, and the footer margin is half the side margins."),
+ ("typography","Plan card type scale","Critique","Code","common-failures/type-scale-before-after.png","typography-scale/README.md","Five families and ratios of 1.07 between sizes; two families and a 1.2-1.5 scale."),
+ ("brand","Brand intake: AI landing page","Intake","Generated HTML","web-ui-landing/before-after.png","brand-intake/README.md","Five generic-look tells left after round 2; seven questions and an assumed token sheet. Three tells need the owner's facts."),
+ ("character","Barista hands and face","Zoom audit","AI image generator","character-hands/generated.jpg","character-hands/README.md","Five digits, joints that bend right, eyes that match: no blockers. One hand reads about 10% large."),
  ("illustration","Fox cover: with and without the skill","Baseline","GenerateImage (AI), both","baseline-comparison/fox-side-by-side.jpg","baseline-comparison/README.md","Without: invented title and slogans, cluttered. With: one focal point, space for the real title."),
  ("illustration","Jazz poster: with and without the skill","Baseline","GenerateImage (AI), both","baseline-comparison/poster-side-by-side.jpg","baseline-comparison/README.md","With the skill: only the given facts, two typefaces. Plainer, and the glow shape failed."),
 ]
-mods = ["all","web-ui","ux","illustration","technical-drawing","3d"]
+mods = ["all","web-ui","ux","illustration","technical-drawing","3d","layout","typography","brand","character"]
 cards = "\n".join(f'''<article data-m="{m}"><a href="{G}{l}"><img loading="lazy" src="{R}{i}" alt="Before and after: {html.escape(t)}"></a>
 <div class="b"><p class="k">{m} · {k} · {html.escape(w)}</p><h2>{html.escape(t)}</h2><p>{html.escape(d)}</p><a href="{G}{l}">Critique and log</a></div></article>''' for m,t,k,w,i,l,d in E)
 btns = "".join(f'<button data-f="{m}"{" aria-pressed=\"true\"" if m=="all" else " aria-pressed=\"false\""}>{m}</button>' for m in mods)

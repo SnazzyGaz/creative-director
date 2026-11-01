@@ -1,6 +1,6 @@
 # Tools
 
-Small scripts that back the **Auto: yes/partly** notes in the modules. Python 3 with Pillow and numpy; `vp.py detect` and `ellipse.py` also need OpenCV (`pip install opencv-python-headless`). `shot.sh` needs google-chrome.
+Small scripts that back the **Auto: yes/partly** notes in the modules. Python 3 with Pillow and numpy; `vp.py detect`, `ellipse.py` and `grid.py` also need OpenCV, and `intersect.py` needs trimesh, rtree and manifold3d (`pip install -r tools/requirements.txt`). `shot.sh` needs google-chrome.
 
 | Script | What it does | Rules |
 |---|---|---|
@@ -9,9 +9,17 @@ Small scripts that back the **Auto: yes/partly** notes in the modules. Python 3 
 | `shot.sh FILE.html PREFIX` | Headless screenshots at 390 px, 1280 px and 200% zoom | UI-10, critique loop step 1 |
 | `beforeafter.py A B OUT.png` | Labelled side-by-side of two rounds | critique loop step 4 |
 | `vp.py fit SEGS.csv` / `vp.py detect IMG OUT.png` | Least-squares vanishing points per edge family, horizon tilt, VP height mismatch, tilt of verticals. `detect` finds long straight segments to sort into groups | TD-PER-1, TD-PER-3 |
-| `ellipse.py IMG ROI [--axis ...]` | Fits an ellipse in a box. Reports degree, minor-axis angle against the form's axis, fit residual, and a pointed/flat end check | TD-ELL-1, -2, -3 |
+| `ellipse.py IMG ROI [--axis ...]` | Fits an ellipse in a box (RANSAC over the edge pixels, so side lines and hatching don't pull it). Reports degree, tilt of the axes and the minor axis against the form's axis, fit residual, and an end check that flags pointed ("lemon") or flattened ends | TD-ELL-1, -2, -3 |
+| `intersect.py MODEL [--up y\|z] [--unit m] [--tol 1] [--near MM]` | For a GLB/glTF/OBJ/STL/PLY: parts that cut into each other (shared volume, depth, "passes right through"), parts floating off the ground or their support, and near-miss gaps between parts. Exit 1 if anything is found | 3D-1, 3D-2 |
+| `grid.py SHOT.png [--out overlay.png] [--scale 4]` | Layout grid from a screenshot: left-edge alignment lines and boxes that miss one by 2-6 px, rows of cards with uneven tops, steps, gaps or padding, and whether gaps between boxes sit on a 4 or 8 px scale | CORE-5, UI-4, UI-3 |
+
+**Tests:** `python3 tools/tests/ellipse_cases.py`, `intersect_cases.py`, `grid_cases.py`. Each builds synthetic good and bad cases and also runs the tool on the matching files in `examples/`. Current results: ellipse 32/32 synthetic + 4/4 example images; intersect 6/6 synthetic + 2/2 (the stool, broken and fixed); grid 6/6 synthetic + 12/12 example screenshots.
+
+**`intersect.py` and model-qa.** [model-qa](https://github.com/SnazzyGaz/model-qa) is the companion repo: a broader Blender-based build check (symmetry, normals, scale, gaps, close-up renders). In `examples/common-failures/` it reported the stool's leg poking through the seat only as "asymmetry". `intersect.py` is a narrower, Blender-free check for exactly two faults, intersecting and floating parts, and names them directly. Use model-qa for the full build check and `intersect.py` when parts must touch without cutting into each other; they don't share code.
 
 **Limits:**
 - `vp.py` does not group edges into families: a bot or person does. Its result depends on the endpoints, so take them at zoom. Far vanishing points are unstable (see the `spread` figure).
-- `ellipse.py` needs a tight box around one ellipse. Half-visible ellipses, such as a cylinder base, give an approximate degree. Its end check passed a synthetic test (a clean ellipse reads OK; a lemon shape is flagged) but has not been tested on real bad drawings. In `examples/technical-drawing-takeover/` it missed a planted lemon-shaped ellipse because the cylinder's side lines were inside the box; the minor-axis check (TD-ELL-1) still worked.
+- `ellipse.py` needs a box around one ellipse; a loose box round concentric rims can lock onto a different rim (seen on the generated can in `technical-drawing-still-life/`). Half-visible ellipses give an approximate degree. Since v0.3.0 it catches the planted lemon in `examples/technical-drawing-takeover/` (end check 0.71/0.68 against ~1.0-1.15 for a true ellipse; overlay `ell-r01-top-v03.png`), which v0.2.0 missed. The end-check thresholds were set on the same synthetic and example cases they are tested on, and on only two real (generated) drawings: treat a borderline reading (0.9-0.95, 1.2-1.3) as "look at 2x". Ellipses drawn with a wobbly hand line are untested.
+- `intersect.py` treats every overlap as a fault, so it also flags intended joints (a dowel in a hole, a tenon in a mortise): read the list against the design. Non-watertight parts fall back to a vertex-depth test with no volume. Ground is the model's lowest point, so a model that is wholly floating (nothing at ground level) isn't caught; pass a scene with its floor or check the placement by eye.
+- `grid.py` sees ink, not the DOM. It checks rows, gaps and padding only between "solid" boxes (with a border, background or image edge); text blocks a few px off a line are listed as "check", because letter side bearings move ink by 1-5 px. Vertical gaps between text blocks are printed but not judged. Centred layouts give it few lines to work with. On the existing `web-ui-*` screenshots it raises no false alarms, but those pages have few framed boxes, so they test silence more than detection.
 - Confirm overlays by eye. Tested on `examples/technical-drawing-still-life/` (see `measurements.md` there).

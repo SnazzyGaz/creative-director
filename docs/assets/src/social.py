@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Build the X/Twitter social card (1600x900 + 1200x675). Run from repo root: python3 docs/assets/src/social.py"""
+"""Build the social cards: X/Twitter (1600x900 + 1200x675) and the GitHub social preview (1280x640).
+Run from repo root: python3 docs/assets/src/social.py [x|github|all]  (default all)"""
 import subprocess, pathlib, sys
 from PIL import Image
 ROOT = pathlib.Path(__file__).resolve().parents[3]
@@ -15,7 +16,7 @@ def inter(a, va, b, vb):
     return (((x1*y2-y1*x2)*(x3-x4)-(x1-x2)*(x3*y4-y3*x4))/d, ((x1*y2-y1*x2)*(y3-y4)-(y1-y2)*(x3*y4-y3*x4))/d)
 P = lambda *ps: " ".join(f"{x:.1f},{y:.1f}" for x, y in ps)
 
-def card():
+def card(kind="x"):
     hy = 300; vl, vr = (520, hy), (2050, hy)        # two vanishing points on one horizon, both outside the cone
     fx, ft, fb = 1130, 410, 590                      # front vertical edge of the box (below eye level)
     lt, lb = on((fx,ft), vl, 975), on((fx,fb), vl, 975)
@@ -23,7 +24,11 @@ def card():
     bk = inter(lt, vr, rt, vl)
     cx, cw, ctop, cbot = 1415, 62, 440, 590          # cylinder: ellipse degree matches the box station point and opens further below the horizon (TD-ELL-2)
     ext = lambda p, v, x: on(p, v, x)
-    svg = f'''<svg width="{W}" height="{H}" style="position:absolute;left:0;top:0">
+    gh = kind == "github"
+    CW, CH = (1280, 640) if gh else (W, H)
+    # GitHub preview: the same sketch at 0.72, right edge of its labels on the 80 px margin (12.5% of the short side, LAY-5)
+    tf = f'translate({1200 - (W - 112) * 0.72:.1f},0) scale(0.72)' if gh else ''
+    svg = f'''<svg width="{CW}" height="{CH}" style="position:absolute;left:0;top:0"><g transform="{tf}">
  <g stroke="{c['faint']}" stroke-width="1.2" fill="none">
   <line x1="860" y1="{hy}" x2="{W}" y2="{hy}"/>
   {''.join(f'<line x1="{p[0]:.1f}" y1="{p[1]:.1f}" x2="{ext(p,vl,880)[0]:.1f}" y2="{ext(p,vl,880)[1]:.1f}" stroke-dasharray="2 5"/>' for p in (lt, lb))}
@@ -43,22 +48,38 @@ def card():
   <text x="{W-112}" y="{hy-14}" text-anchor="end" fill="{c['mute']}">HL · eye level</text>
   <text x="{W-112}" y="{cbot+90}" text-anchor="end" fill="{c['accent']}">TD-ELL-1</text>
   <text x="{W-112}" y="{cbot+114}" text-anchor="end" fill="{c['accent']}">minor axis = cylinder axis</text>
- </g></svg>'''
-    html = f'''<html><head><style>{FACES}</style></head><body style="margin:0;background:{c['bg']};width:{W}px;height:{H}px;position:relative;overflow:hidden">{svg}
- <div style="position:absolute;left:112px;top:196px;color:{c['ink']}">
+ </g></g></svg>'''
+    if gh:
+        m = 80
+        txt = f'''<div style="position:absolute;left:{m}px;top:118px;color:{c['ink']}">
+  <div style="font:380 128px/0.94 'CD Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 50,'WONK' 0;letter-spacing:-2.6px">creative<br>director</div>
+  <div style="margin-top:32px;font:400 38px/1.2 'CD Instrument Sans',sans-serif;color:{c['ink']}">Design judgement for AI agents</div>
+ </div>
+ <div style="position:absolute;left:{m}px;right:{m}px;bottom:{m}px;display:flex;justify-content:space-between;font:400 20px/1 'DM Mono';letter-spacing:.5px">
+  <span style="color:{c['ink']}">github.com/SnazzyGaz/creative-director</span>
+  <span style="color:{c['mute']}">MIT · Claude, Cursor, GPT, Grok</span>
+ </div>'''
+    html = f'''<html><head><style>{FACES}</style></head><body style="margin:0;background:{c['bg']};width:{CW}px;height:{CH}px;position:relative;overflow:hidden">{svg}
+ {txt if gh else ''}<div style="position:absolute;left:112px;top:196px;color:{c['ink']};display:{'none' if gh else 'block'}">
   <div style="font:380 172px/0.94 'CD Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 50,'WONK' 0;letter-spacing:-3.5px">creative<br>director</div>
   <div style="margin-top:44px;font:400 50px/1.2 'CD Instrument Sans',sans-serif;color:{c['ink']}">Design judgement for AI agents</div>
  </div>
- <div style="position:absolute;left:112px;right:112px;bottom:64px;display:flex;justify-content:space-between;font:400 24px/1 'DM Mono';letter-spacing:.5px">
+ <div style="position:absolute;left:112px;right:112px;bottom:64px;display:{'none' if gh else 'flex'};justify-content:space-between;font:400 24px/1 'DM Mono';letter-spacing:.5px">
   <span style="color:{c['ink']}">github.com/SnazzyGaz/creative-director</span>
   <span style="color:{c['mute']}">MIT · works with Claude, Cursor, GPT, Grok</span>
  </div></body></html>'''
     p = SRC / "_social.html"; p.write_text(html); big = OUT / "_card@2x.png"
     subprocess.run(["google-chrome", "--headless=new", "--no-sandbox", "--disable-gpu", "--hide-scrollbars",
-        f"--window-size={W},{H}", "--force-device-scale-factor=2", f"--screenshot={big}", f"file://{p}"], check=True, capture_output=True)
+        f"--window-size={CW},{CH}", "--force-device-scale-factor=2", f"--screenshot={big}", f"file://{p}"], check=True, capture_output=True)
     p.unlink()
     im = Image.open(big).convert("RGB"); big.unlink()
+    if gh:
+        im.resize((1280, 640), Image.LANCZOS).save(OUT / "card-1280x640.png", optimize=True); return
     im.resize((1600, 900), Image.LANCZOS).save(OUT / "card-1600x900.png", optimize=True)
     im.resize((1200, 675), Image.LANCZOS).save(OUT / "card-1200x675.png", optimize=True)
     im.resize((500, 281), Image.LANCZOS).save("/tmp/card-feed-500.png")
-if __name__ == "__main__": card(); print("ok")
+if __name__ == "__main__":
+    k = sys.argv[1] if len(sys.argv) > 1 else "all"
+    if k in ("x", "all"): card("x")
+    if k in ("github", "all"): card("github")
+    print("ok")

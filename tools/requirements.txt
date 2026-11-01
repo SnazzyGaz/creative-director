@@ -1,4 +1,7 @@
 pillow
 numpy
 opencv-python
+trimesh      # intersect.py
+rtree        # intersect.py (proximity queries)
+manifold3d   # intersect.py (exact overlap volumes)
 # shot.sh needs a headless Chromium (e.g. playwright install chromium)

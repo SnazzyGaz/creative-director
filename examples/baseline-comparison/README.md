@@ -41,6 +41,8 @@ Prompt: *"A poster for a neighbourhood jazz night on Friday 14 March at The Lant
 
 ## Cross-model runs wanted
 
+**Now a kit:** [`examples/cross-model/`](../cross-model/) has fixed inputs, exact prompts for three tasks, a scoring rubric tied to rule IDs and a results template. Use that for new runs; the prompts below still work for these two cases.
+
 No Claude, GPT or Gemini runs are included, because none were available for this batch, and faking them would defeat the point. If you can run one, please open a PR with the outputs labelled by model and date.
 
 Without the skill, send the prompt alone. With the skill, load `SKILL.md` (or `lite/CREATIVE-DIRECTOR-LITE.md`) first, then send:

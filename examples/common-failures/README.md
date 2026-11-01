@@ -8,11 +8,11 @@ Each case plants **one** common failure, runs one round of the loop, and checks 
 | Broken mobile layout | [web-ui-takeover](../web-ui-takeover/) | UI-10, CORE-10 | tools/shot.sh at 390 px and 200% |
 | Form with no field-level error states | [ux-signup-nudge](../ux-signup-nudge/) | UX-3, UX-7 | walkthrough with a typo |
 | Inconsistent spacing / padding | here | UI-3, CORE-4 | CSS values read from code |
-| Misaligned grid | here | CORE-5, UI-4 | box positions read from code |
+| Misaligned grid | here | CORE-5, UI-4 | box positions read from code; `tools/grid.py` (v0.3.0) |
 | Clashing type scale | here | UI-1, CORE-7 | font list and sizes read from code |
 | Mixed-style icon set | here | CORE-9, UI-5 | by eye at 2x, plus SVG attributes |
 | SVG with wrong perspective | here | TD-PER-1 | tools/vp.py fit |
-| 3D: floating and intersecting parts | here | 3D-1 | model-qa |
+| 3D: floating and intersecting parts | here | 3D-1 | model-qa, `tools/intersect.py` |
 
 Criteria for every case: the rule IDs listed; the brief is "a pricing / nav / product component that keeps its content and colours". One round each; at most three changes; each fix checked after.
 
@@ -53,3 +53,4 @@ Criteria for every case: the rule IDs listed; the brief is "a pricing / nav / pr
 - **Detected:** 3D-1 not met. `model-qa check --no-render --brief --profile render` (`qa-stool-before.txt`): 4 medium issues. Three NEAR_MISS_GAP ("touches nothing: 12.0 mm gap to nearest part 'seat'"). The over-long leg that pokes through the seat was reported only indirectly, as ASYMMETRY on leg0 ("max off 20.1 mm"); model-qa did not name it as an intersection.
 - **Fix (2 changes):** seat lowered 12 mm onto the legs; leg0 cut to the same length as the others.
 - **Verified:** `qa-stool-after.txt`: PASS, 0 high, 0 medium.
+- **v0.3.0 tool check:** `python3 tools/intersect.py stool-before.glb` (`qa-intersect-before.txt`) names the fault directly: "[INTERSECT] seat x leg0: 15.5 cm3 shared, 28.6 mm deep; leg0 passes right through seat (sticks out 18.0 mm above it)", plus the three 12.0 mm gaps. The fixed stool (`stool-after.glb`) reads OK. The GLBs come from `blender -b -P stool.py -- before|after --export`.

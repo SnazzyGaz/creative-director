@@ -1,0 +1,2 @@
+stool-after.glb: 5 parts, size 460 mm, up axis y, tol 1.0 mm, near-miss < 23.0 mm
+OK: no intersections, nothing floating, no near-miss gaps

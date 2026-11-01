@@ -22,4 +22,6 @@ Brief: an X post image announcing the repo; seen in a phone feed; one idea: "des
 3. **LAY-5, reuse crops.** As a GitHub social preview (2:1, centre crop) the footer would sit 13 px from the bottom edge; as a 1:1 crop the title is cut. *Fix:* use separate exports (the repo already has a 1200 × 675; a 1280 × 640 is still needed for GitHub) rather than reusing this file.
 4. **Footer at feed size.** The URL's x-height is about 3 px at 400 wide. Acceptable because the URL is in the post text too; mention only.
 
+Follow-up (v0.3.0): finding 3 is done: `docs/assets/social/card-1280x640.png` is a separate 2:1 export with 80 px margins on all four sides, footer included.
+
 Verdict: passes all blockers; three default findings, one (the proof point caption) worth fixing in the next version. Taste questions for the owner: whether the sketch should carry more weight than the title in the thumbnail.
