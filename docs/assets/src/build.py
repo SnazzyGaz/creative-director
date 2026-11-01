@@ -98,20 +98,25 @@ def strip(t):
     html = f'''<html><body style="margin:0;background:{c['bg']}"><div style="display:flex;gap:28px;padding:28px 33px 30px">{cols}</div></body></html>'''
     return shot(html, f"before-after-{t}", 1280, 650)
 
-BASE = [("Book cover", "examples/baseline-comparison/fox-without.jpg", "examples/baseline-comparison/fox-with.jpg"),
-        ("Event poster", "examples/baseline-comparison/poster-without.jpg", "examples/baseline-comparison/poster-with.jpg")]
+BASE = [("Book cover", "examples/baseline-comparison/fox-without.jpg", "examples/baseline-comparison/fox-with.jpg",
+         "examples/aesthetic-benchmark/fox-aes.jpg"),
+        ("Event poster", "examples/baseline-comparison/poster-without.jpg", "examples/baseline-comparison/poster-with.jpg",
+         "examples/aesthetic-benchmark/poster-aes.jpg")]
 def baseline(t):
-    # hero: same prompt, same model, one sample each. Labels 40 px and titles 46 px stay >= 11 px when GitHub scales it to 390 px.
-    c = THEMES[t]; groups = ""
-    for i, (title, wo, wi) in enumerate(BASE):
-        for k, f in (("wo", wo), ("wi", wi)):
-            Image.open(ROOT / f).convert("RGB").resize((576, 768), Image.LANCZOS).save(SRC / f"_b{i}{k}.jpg", quality=90)
-        pan = lambda k, lab, col, w: f'''<div style="width:288px"><img src="_b{i}{k}.jpg" style="width:288px;height:384px;display:block;border-radius:3px">
-          <div style="margin-top:12px;font:{w} 40px/1 'CD Instrument Sans',sans-serif;color:{col}">{lab}</div></div>'''
-        groups += f'''<div><div style="font:400 46px/1 'CD Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 50;color:{c['ink']};margin-bottom:16px">{title}</div>
-          <div style="display:flex;gap:12px">{pan("wo","Without",c['mute'],400)}{pan("wi","With the skill",c['ink'],600)}</div></div>'''
-    html = f'''<html><head><style>{FACES}</style></head><body style="margin:0;background:{c['bg']}"><div style="display:flex;gap:40px;padding:26px 32px 30px">{groups}</div></body></html>'''
-    out = shot(html, f"baseline-{t}", 1280, 566)
+    # hero: same prompt, same model, one sample each; third column adds the aesthetic layer (self-judged).
+    # Pieces stacked as rows so each image stays ~1/3 of README width; labels 40 px and titles 46 px stay >= 12 px at 390 px.
+    c = THEMES[t]; rows = ""; W, H = 392, 523
+    for i, (title, *files) in enumerate(BASE):
+        for k, f in zip(("wo", "wi", "ae"), files):
+            Image.open(ROOT / f).convert("RGB").resize((W*2, H*2), Image.LANCZOS).save(SRC / f"_b{i}{k}.jpg", quality=90)
+        def pan(k, lab, col, w, accent=False):
+            bar = f"border-top:6px solid {c['accent']};padding-top:10px;" if accent else "border-top:6px solid transparent;padding-top:10px;"
+            return f'''<div style="width:{W}px"><img src="_b{i}{k}.jpg" style="width:{W}px;height:{H}px;display:block;border-radius:3px">
+          <div style="margin-top:12px;{bar}font:{w} 40px/1 'CD Instrument Sans',sans-serif;color:{col};white-space:nowrap">{lab}</div></div>'''
+        rows += f'''<div style="margin-top:{0 if i == 0 else 34}px"><div style="font:400 46px/1 'CD Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 50;color:{c['ink']};margin-bottom:16px">{title}</div>
+          <div style="display:flex;gap:16px">{pan("wo","Without",c['mute'],400)}{pan("wi","With the skill",c['ink'],600)}{pan("ae","+ aesthetic layer",c['accent'],600,True)}</div></div>'''
+    html = f'''<html><head><style>{FACES}</style></head><body style="margin:0;background:{c['bg']}"><div style="padding:26px 32px 30px">{rows}</div></body></html>'''
+    out = shot(html, f"baseline-{t}", 1280, 1418)
     for p in SRC.glob("_b*.jpg"): p.unlink()
     return out
 

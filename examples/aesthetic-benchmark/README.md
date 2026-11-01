@@ -1,6 +1,6 @@
 # Aesthetic benchmark
 
-Does the aesthetic layer (`modules/aesthetic-critique/`) help produce work people prefer, while keeping the brief and passing the measured checks? If it only adds vocabulary, it has failed. This folder holds a protocol for testing that properly, and one small demo that is **not** a test.
+Does the aesthetic layer (`modules/aesthetic-critique/`) help produce work people prefer, while keeping the brief and passing the measured checks? If it only adds vocabulary, it has failed. This folder holds a protocol for testing that properly, and two small demos that are **not** tests.
 
 ## Protocol
 
@@ -68,3 +68,7 @@ Does the aesthetic layer (`modules/aesthetic-critique/`) help produce work peopl
 - **Against the original without-skill poster:** similar atmosphere; B keeps the v0.3.1 gains in accuracy (no invented address or slogans) and legibility.
 
 What this demo can't show: whether other people agree, whether it generalises beyond one poster, or whether rules alone with a better prompt would have done the same. That is what the protocol above is for.
+
+## Fox cover: second sample, self-judged (1 November 2026)
+
+**Not evidence either.** The v0.3.1 with-skill fox cover ([`../baseline-comparison/fox-with.jpg`](../baseline-comparison/fox-with.jpg)) was correct but pale next to the busy without-skill cover. AES-0: picture book for ages 4-7 [brief], mood cosy and charming [inferred]. Two changes (AES-3, AES-7): golden-hour light with a warmer palette, and a robin watching the glowing book for storybook charm; one GenerateImage edit of the old art ([prompt](src/PROMPTS.md)), type re-set in code in warm cocoa with an italic *Reading* ([`src/compose_fox.py`](src/compose_fox.py)), same wording and placeholder author. Measured: title 8.50:1 on the sky average and 7.27:1 on the darkest sky pixel under it (needs 3:1); author 5.55:1 at worst (needs 4.5:1). Unfixed: the fox is barely larger than before, and the low sun competes with it in the blur test. [Result](fox-aes.jpg) · [look sheet](look-fox-aes.jpg).
