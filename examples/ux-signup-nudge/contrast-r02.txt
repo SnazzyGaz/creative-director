@@ -1,0 +1,5 @@
+label on white                           15.91:1  need 4.5:1  PASS
+hint on white                             7.46:1  need 4.5:1  PASS
+error message                             6.54:1  need 4.5:1  PASS
+button                                    5.47:1  need 4.5:1  PASS
+field border (non-text, 3:1)              4.54:1  need 3.0:1  PASS

@@ -1,0 +1,7 @@
+body ink on ground|#2a211b|#fbf6ef|4.5
+muted on ground|#5e5046|#fbf6ef|4.5
+headline accent on ground|#9a3f12|#fbf6ef|3
+button white on brand-ink|#ffffff|#9a3f12|4.5
+step label on card|#9a3f12|#ffffff|4.5
+muted on card|#5e5046|#ffffff|4.5
+brand orange on ground (decorative rule only, not text)|#E8743B|#fbf6ef|3

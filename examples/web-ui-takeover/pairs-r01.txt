@@ -1,0 +1,11 @@
+nav text|#ffff00|#00ff00|4.5
+headline orange on cyan mid|#ff6a00|#00ffea|3
+tagline white on cyan|#ffffff|#00ffea|3
+loaves orange on yellow|#ff9900|#ffe600|4.5
+click green on red|#00ff00|#ff0000|4.5
+here magenta on blue|#ff00ff|#0000ff|4.5
+pre-order body purple on purple|#5b00c9|#7a00ff|4.5
+Submit yellow on brand orange|#ffcc00|#E8743B|4.5
+Go white on cyan|#ffffff|#00ffff|4.5
+hours grey on white|#c0c0c0|#ffffff|4.5
+footer pink-white on cyan|#ffeeee|#00ffea|4.5

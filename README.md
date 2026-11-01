@@ -10,7 +10,7 @@ A set of design rules and a critique loop that any AI agent can read. It helps a
   <img alt="Three before/after pairs: a box and can drawing with its perspective rebuilt, a knight illustration with a quieter sky, and a landing page with readable contrast." src="docs/assets/before-after-light.jpg" width="100%">
 </picture></p>
 
-All generated, one or two rounds each. Critiques, logs and honest misses: [examples/](examples/).
+The three pairs above are generated, one or two rounds each. Nine stress tests across every domain, including three take-overs of deliberately bad work, with critiques, logs and honest misses: [examples/](examples/).
 
 ## How it works
 

@@ -1,0 +1,6 @@
+WARN mug-r01.blend | high 0 med 2 low 0 info 6 | 3 obj 126 tris size [2.0, 2.0, 0.095] m
+[med] UV_ZERO_AREA mug_body: 8 faces collapsed to zero area in UV space
+[med] NEAR_GROUND mug_handle: bottom is 20.5 mm above the lowest point of the model (should it touch the ground?) @[0.047, 0.0, 0.05]
+(6 low/info not shown)
+full report: mug-r01_qa/report.md
+next: re-run without --no-render and look at closeups/ for the issues above

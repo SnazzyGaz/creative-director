@@ -1,0 +1,5 @@
+placeholder-as-label on white             1.92:1  need 4.5:1  FAIL
+small print on white                      2.32:1  need 4.5:1  FAIL
+error banner                              4.92:1  need 4.5:1  PASS
+button                                    5.47:1  need 4.5:1  PASS
+field underline (non-text, 3:1)           1.36:1  need 3.0:1  FAIL

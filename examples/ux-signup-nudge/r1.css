@@ -1,0 +1,7 @@
+body{margin:0;font-family:'Source Sans 3',sans-serif;background:#fff;color:#222}
+.w{padding:24px}.h{font-size:24px;font-weight:700;margin:0 0 20px}
+.err{background:#fdecea;color:#c62828;padding:8px;font-size:13px;margin-bottom:16px}
+input{display:block;width:100%;box-sizing:border-box;border:0;border-bottom:1px solid #ddd;padding:12px 0;font-size:16px;margin-bottom:14px;color:#222}
+input::placeholder{color:#bbb}
+.btn{background:#0f766e;color:#fff;border:0;padding:12px;width:100%;font-size:16px;margin-top:8px}
+.small{font-size:12px;color:#aaa;margin-top:16px}

@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crumb & Co: weekend bread, pre-order by Thursday</title>
+<style>
+:root{--ink:#2a211b;--muted:#5e5046;--ground:#fbf6ef;--card:#ffffff;--brand:#E8743B;--brand-ink:#9a3f12;--line:#e7dccf;--s1:8px;--s2:16px;--s3:24px;--s4:40px;--s5:64px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font:1.0625rem/1.55 'Source Sans 3','Source Sans Pro',sans-serif}
+.wrap{max-width:68rem;margin:0 auto;padding:0 var(--s3)}
+header{display:flex;justify-content:space-between;align-items:center;padding:var(--s2) 0}
+.logo{font-family:'Fraunces','Abril Fatface',serif;font-weight:700;font-size:1.5rem}
+header a{color:var(--ink)}
+.hero{padding:var(--s4) 0 var(--s5);display:grid;gap:var(--s4);grid-template-columns:1fr}
+@media(min-width:56rem){.hero{grid-template-columns:3fr 2fr;align-items:center}}
+h1{font-family:'Fraunces','Abril Fatface',serif;font-size:clamp(2.25rem,6vw,3.75rem);line-height:1.05;margin:0 0 var(--s2)}
+h1 em{font-style:normal;color:var(--brand-ink)}
+.lede{font-size:1.25rem;color:var(--muted);margin:0 0 var(--s3);max-width:32rem}
+.btn{display:inline-block;background:var(--brand-ink);color:#fff;text-decoration:none;font-weight:700;padding:14px 24px;border-radius:999px;font-size:1.125rem}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.note{display:block;margin-top:var(--s1);color:var(--muted);font-size:.95rem}
+.steps{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:var(--s3)}
+.steps ol{margin:0;padding-left:1.25rem}.steps li{margin:var(--s1) 0}
+.steps strong{color:var(--brand-ink)}
+h2{font-family:'Fraunces','Abril Fatface',serif;font-size:1.75rem;margin:0 0 var(--s3)}
+.loaves{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));margin-bottom:var(--s5)}
+.loaf{border-top:4px solid var(--brand);padding-top:var(--s2)}
+.loaf h3{margin:0 0 4px;font-size:1.25rem}.loaf p{margin:0;color:var(--muted)}
+.price{font-weight:700;color:var(--ink)}
+.visit{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));border-top:1px solid var(--line);padding:var(--s4) 0}
+.visit dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px var(--s2)}.visit dt{font-weight:700}
+footer{color:var(--muted);font-size:.95rem;padding:var(--s3) 0 var(--s4)}
+</style></head><body><div class="wrap">
+<header><span class="logo">Crumb &amp; Co</span><a href="#visit">Hours &amp; address</a></header>
+<section class="hero">
+ <div>
+  <h1>Weekend bread, <em>baked to order</em></h1>
+  <p class="lede">Pre-order by Thursday, collect on Saturday morning from our shop on Mill Lane.</p>
+  <a class="btn" href="mailto:orders@example.com?subject=Saturday%20pre-order">Pre-order for Saturday</a>
+  <span class="note">Orders close on Thursday.</span>
+ </div>
+ <div class="steps"><ol>
+  <li><strong>By Thursday:</strong> tell us which loaves you want.</li>
+  <li><strong>Friday night:</strong> we bake them.</li>
+  <li><strong>Saturday 8 am-1 pm:</strong> collect and pay in the shop.</li>
+ </ol></div>
+</section>
+<h2>This weekend's loaves</h2>
+<div class="loaves">
+ <div class="loaf"><h3>Sourdough</h3><p>Two-day ferment, dark crust.</p></div>
+ <div class="loaf"><h3>Rye</h3><p>Dense, 70% rye, keeps a week.</p></div>
+ <div class="loaf"><h3>Seeded</h3><p>Sunflower, pumpkin, linseed.</p></div>
+</div>
+<section class="visit" id="visit">
+ <div><h2>Opening hours</h2><dl><dt>Tue-Fri</dt><dd>7 am-3 pm</dd><dt>Sat</dt><dd>8 am-1 pm</dd><dt>Sun-Mon</dt><dd>Closed</dd></dl></div>
+ <div><h2>Find us</h2><p>14 Mill Lane, Hebden Bridge<br>01422 000000</p></div>
+</section>
+<footer>© Crumb &amp; Co. Allergen information is on each loaf's label in the shop.</footer>
+</div></body></html>

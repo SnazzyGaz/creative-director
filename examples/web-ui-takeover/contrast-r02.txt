@@ -1,0 +1,7 @@
+body ink on ground                       14.66:1  need 4.5:1  PASS
+muted on ground                           7.20:1  need 4.5:1  PASS
+headline accent on ground                 6.31:1  need 3.0:1  PASS
+button white on brand-ink                 6.79:1  need 4.5:1  PASS
+step label on card                        6.79:1  need 4.5:1  PASS
+muted on card                             7.74:1  need 4.5:1  PASS
+brand orange on ground (decorative rule only, not text)  2.79:1  need 3.0:1  FAIL

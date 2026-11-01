@@ -1,21 +1,70 @@
 # Examples: stress tests
 
-Four runs of the critique loop (core/critique-loop.md) on generated work, done as a bot would. Every image here is generated or rendered from code; no third-party images. Each folder has the rounds, the look-test sheets (`look-rNN.png`), the critiques (`critique-rNN.md`) and a short `log.md`.
+Runs of the critique loop (`core/critique-loop.md`) done as a bot would: brief, render, five look tests, a rule-cited critique, at most three fixes per round (no cap in a take-over), check each fix applied, stop when clearly better. Each folder has the brief (or states it in the first critique), every round, the critiques (`critique-rNN.md`) and a short `log.md` that includes what went wrong.
 
-## Illustration: knight and castle (nudge, 2 rounds)
-![before/after](illustration-knight/before-after.png)
-Generic prompt gave a sky that out-shouted the knight (CORE-3, ILL-2) and a body lost in the forest (ILL-3, CORE-2). Three edits: simpler sky, mist behind the legs, rim light. The first two applied, the rim light didn't. Values went from murky to two clear groups. Clearly better.
+**How each was made** is stated in its folder and repeated in the table. Some starting pieces were made badly *on purpose* to test the take-over path; they are labelled as such. Nothing here is third-party work.
 
-## Web UI: typical "AI" landing page (nudge, 2 rounds)
-![before/after](web-ui-landing/before-after.png)
-Six text pairs failed WCAG contrast (UI-6 blocker, worst 1.84:1) and the page had 8 generic-AI tells (UI-7). Three code fixes: contrast tokens, less decoration, cards stack at zoom. Now every pair passes (min 5.17:1). It still looks generic, which needs a brand brief rather than another round. Phone view: `web-ui-landing/before-after-390.png`.
+## What was detected and what was fixed
 
-## Technical drawing: box and can (take-over, 3 rounds)
+| Example | Domain | Made with | Nudge or take-over | Key rule IDs detected | What was fixed | Rounds |
+|---|---|---|---|---|---|---|
+| [web-ui-takeover](web-ui-takeover/) | Web UI | Hand-built bad HTML, headless Chrome | **Take-over** (3 blockers) | UX-1, UI-6 (11/11 pairs fail, worst 1.13:1), UI-10, UI-1 (6 fonts), CORE-1 | Rebuilt from the brief: tokens, 2 typefaces, one-column flow, one real action. All pairs pass (min 6.31:1) | 2 |
+| [illustration-takeover](illustration-takeover/) | Illustration / generative image | GenerateImage (AI) | **Take-over** | TD-LIT-1, ILL-2, CORE-3, ILL-11 (rainbow sky, sparkles, god rays), ILL-6, CD-5 (wrong boat) | Regenerated with composition, value plan, palette and one light written in. Round-3 edit (cat's pose, beam) did not apply; delivered round 2 | 3 |
+| [technical-drawing-takeover](technical-drawing-takeover/) | Technical drawing | Synthetic line drawing from code, errors planted | **Take-over** (5 blockers) | TD-PER-1 (VPs 200 px apart), TD-PER-3 (verticals -7.6 to +2.3 deg), TD-ELL-1 (~19 deg off), TD-ELL-2, TD-ELL-3 | Redrawn by construction: one horizon, true verticals, tin on the lid's diagonals. All tool checks pass. ellipse.py missed the planted lemon shape | 2 |
+| [technical-drawing-still-life](technical-drawing-still-life/) | Technical drawing | GenerateImage (AI) | **Take-over** | TD-PER-1, TD-PER-3 | Regenerated with construction in the prompt. Correct, but lost the open box (led to CD-5) | 3 |
+| [ux-signup-nudge](ux-signup-nudge/) | UX flow | Hand-built HTML form states | Nudge (1 blocker) | UI-6 (placeholder labels 1.92:1), UX-3 ("Error 422", input cleared), UX-6, UX-7 | Real labels and borders; rule up front; inline error that says how to fix and keeps input; plain wording; email typo suggestion | 3 |
+| [3d-mug-nudge](3d-mug-nudge/) | 3D | Blender 4.2 Cycles renders from a script | Nudge (0 blockers) | 3D-7 (24.2% clipped), 3D-6 (albedo 255, metal 0.5), 3D-4 (8 sides, flat), 3D-5 (frontal light) | AgX; plausible materials; smooth + bevel; key/fill/rim, dark backdrop, raised camera; lights re-balanced. 0% clipped | 4 |
+| [illustration-knight](illustration-knight/) | Illustration | GenerateImage (AI) | Nudge | CORE-3, ILL-2, ILL-3, CORE-2 | Simpler sky, mist behind the legs; rim light did not apply | 2 |
+| [web-ui-landing](web-ui-landing/) | Web UI | Generated HTML, headless Chrome | Nudge (1 blocker) | UI-6 (6 pairs, worst 1.84:1), UI-7 (8 tells), UI-2 at 200% | Contrast tokens; less decoration; cards stack at zoom. Still generic: needs a brand brief | 2 |
+| [readme-self-critique](readme-self-critique/) | Web UI (docs page) | This repo's README, headless Chrome | Nudge (1 blocker) | CORE-10 (banner text unreadable on a phone), spacing, tables | Phone-size assets; spacing and table fixes | 2 |
+
+## Take-overs
+
+### Web UI: "Crumb & Co" bakery page (take-over, 2 rounds)
+![before/after](web-ui-takeover/before-after.png)
+Built badly on purpose: six typefaces, clashing gradient, absolute layout, buttons that go nowhere. Three MUST-BE-RIGHT failures fired section 4b: the pre-order action can't be completed (UX-1), 11 of 11 text pairs fail contrast (UI-6), and the fixed 1250 px layout clips on a phone (UI-10). The rework kept every must-keep (name, action, hours, address, brand orange, the three loaves) and rebuilt from tokens. The brand orange fails as text on cream (2.79:1), so it moved to decoration and a darker shade carries the text. Placeholder copy added in the rework is flagged for the owner. Phone view: `web-ui-takeover/before-after-390.png`.
+
+### Illustration: "The keeper's cat" (take-over, 3 rounds, delivered round 2)
+![before/after](illustration-takeover/before-after.png)
+A "more is more" prompt produced the generic AI look on purpose: rainbow nebula, sparkles, god rays, light from four directions (TD-LIT-1), and the cat lost at blur and thumbnail size (ILL-2, CORE-3). Regenerating with the composition, value groups, palette and single light written into the prompt fixed the structure in one go. A round-3 edit asking for the cat in profile and the beam pointed at the boat did not apply, and the beam got brighter, so round 2 was delivered and the cat's pose is a question for the owner.
+
+### Technical drawing: box and tin (take-over, 2 rounds)
+![before/after](technical-drawing-takeover/before-after.png)
+A synthetic drawing with five planted errors, to test the tools on known answers. `tools/vp.py` found the VPs 200 px apart in height and the verticals leaning three different ways. `tools/ellipse.py` found both ellipses' minor axes about 19 deg off the tin's axis. **It missed the planted lemon-shaped top**: the tin's side lines fall inside the fit box and pull the fit, so the end check said "OK". Caught by eye at 2x zoom. The redraw by construction passes every check.
+
+### Technical drawing: box and can (take-over, 3 rounds)
 ![before/after](technical-drawing-still-life/before-after.png)
-Vanishing points at different heights and sheared verticals (TD-PER-1, TD-PER-3) triggered a rework (section 4b). The rework gets the construction right, but it dropped the open box from the brief and came out paler. Round 3 fixed a misread and didn't help. More correct, not clearly more appealing.
+Vanishing points at different heights and sheared verticals (TD-PER-1, TD-PER-3) triggered a rework. The rework got the construction right but dropped the open box from the brief and came out paler. Round 3 fixed a misread and didn't help. More correct, not clearly more appealing. Measurements: `technical-drawing-still-life/measurements.md`.
 
-## README: this repo's own front page (nudge, 2 rounds)
+## Nudges
+
+### UX: library sign-up form (nudge, 3 rounds)
+![before/after](ux-signup-nudge/before-after.png)
+The same typo-and-short-password input before and after. Round 1: labels were placeholders at 1.92:1 that vanish when typed in (UI-6, UX-7), and a failed submit showed "Error 422: Validation failed" at the top and cleared the passwords (UX-3). Three fixes in round 2, one in round 3 (suggest gmail.com for gmial.com). The first draft of round 2 also removed the "password again" field; that was a fourth change and a product decision, so it was put back and asked about instead.
+
+### 3D: white mug product render (nudge, 4 rounds)
+![before/after](3d-mug-nudge/before-after.png)
+Real Blender renders. Built correctly (model-qa: 0 high), but rendered with bot defaults: Standard view transform clipping the mug to flat white (3D-7), pure-white half-metal ceramic on a pure-black table (3D-6), 8-sided flat-shaded geometry (3D-4), one light from the camera (3D-5). Round 3's three-point light was right in layout but about 5x too bright, so a fourth round re-balanced it. Ended at 0% clipped, with the key-to-fill ratio left to the owner.
+
+### Illustration: knight and castle (nudge, 2 rounds)
+![before/after](illustration-knight/before-after.png)
+Generic prompt gave a sky that out-shouted the knight (CORE-3, ILL-2) and a body lost in the forest (ILL-3, CORE-2). Three edits: simpler sky, mist behind the legs, rim light. The first two applied, the rim light didn't. Values went from murky to two clear groups.
+
+### Web UI: typical "AI" landing page (nudge, 2 rounds)
+![before/after](web-ui-landing/before-after.png)
+Six text pairs failed WCAG contrast (UI-6 blocker, worst 1.84:1) and the page had 8 generic-AI tells (UI-7). Three code fixes; every pair now passes (min 5.17:1). It still looks generic, which needs a brand brief rather than another round. Phone view: `web-ui-landing/before-after-390.png`.
+
+### README: this repo's own front page (nudge, 2 rounds)
 The loop run on `README.md` itself, at 1280 and 390 px. One blocker (banner and diagram text unreadable on a phone, CORE-10) and two spacing and table fixes. Every problem was invisible at desktop width. See `readme-self-critique/`.
 
+## What the stress tests taught
+
+- **Take-overs fix structure in one go; edits drift.** Regenerating with the construction spelled out worked twice. Three small edits to generated images, across two runs, failed to apply (rim light; cat pose and beam). Check every fix at zoom.
+- **Code fixes apply exactly.** The HTML and Blender runs never had a fix silently skipped; their misses were wrong values (light energy) or scope creep (a removed field).
+- **Tools need clean input.** `ellipse.py` misses a pointed ellipse when other lines share its box. Measured calls are still candidates until confirmed by eye.
+- **The loop can't invent a brand.** Generic-looking UI needs brand input from the owner, not more rounds.
+- **Re-read the brief before reworking (CD-5).** The one take-over that lost a must-keep was the first one, before that rule existed.
+
 ## Tools
-Tools now live in the top-level `tools/` folder (see `tools/README.md`): `tools/look.py` (five look tests and value stats), `tools/contrast.py` (WCAG ratios), `tools/shot.sh` (headless Chrome at 390, 1280 and 200% zoom), `tools/beforeafter.py`.
+
+In the top-level `tools/` folder (see `tools/README.md`): `look.py` (five look tests and value stats), `contrast.py` (WCAG ratios), `shot.sh` (headless Chrome at 390, 1280 and 200% zoom), `beforeafter.py`, `vp.py`, `ellipse.py`. The 3D example also has a small `measure.py` (clipped-pixel share and L* samples) and uses model-qa for build checks.

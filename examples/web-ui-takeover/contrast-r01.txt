@@ -1,0 +1,11 @@
+nav text                                  1.28:1  need 4.5:1  FAIL
+headline orange on cyan mid               2.25:1  need 3.0:1  FAIL
+tagline white on cyan                     1.27:1  need 3.0:1  FAIL
+loaves orange on yellow                   1.69:1  need 4.5:1  FAIL
+click green on red                        2.91:1  need 4.5:1  FAIL
+here magenta on blue                      2.74:1  need 4.5:1  FAIL
+pre-order body purple on purple           1.43:1  need 4.5:1  FAIL
+Submit yellow on brand orange             1.99:1  need 4.5:1  FAIL
+Go white on cyan                          1.25:1  need 4.5:1  FAIL
+hours grey on white                       1.82:1  need 4.5:1  FAIL
+footer pink-white on cyan                 1.13:1  need 4.5:1  FAIL

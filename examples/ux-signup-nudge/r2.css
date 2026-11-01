@@ -1,0 +1,10 @@
+body{margin:0;font-family:'Source Sans 3',sans-serif;background:#fff;color:#222}
+.w{padding:24px}.h{font-size:24px;font-weight:700;margin:0 0 4px}.sub{margin:0 0 20px;color:#555}
+label{display:block;font-weight:600;font-size:16px;margin:0 0 4px}
+.hint{display:block;font-size:14px;color:#555;margin:0 0 6px}
+input{display:block;width:100%;box-sizing:border-box;border:1px solid #767676;border-radius:6px;padding:10px 12px;font:16px 'Source Sans 3',sans-serif;color:#222}
+.f{margin-bottom:18px}
+.bad input{border:2px solid #b3261e}
+.msg{display:flex;gap:6px;color:#b3261e;font-size:15px;margin-top:6px}
+.btn{background:#0f766e;color:#fff;border:0;border-radius:6px;padding:14px;width:100%;font:600 17px 'Source Sans 3',sans-serif;margin-top:4px}
+.small{font-size:14px;color:#555;margin-top:16px}

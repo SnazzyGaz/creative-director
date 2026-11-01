@@ -1,0 +1,5 @@
+placeholder-as-label on white|#bbbbbb|#ffffff|4.5
+small print on white|#aaaaaa|#ffffff|4.5
+error banner|#c62828|#fdecea|4.5
+button|#ffffff|#0f766e|4.5
+field underline (non-text, 3:1)|#dddddd|#ffffff|3
