@@ -16,3 +16,20 @@ What it does show:
 - It ended with questions for the owner (the pre-order route is a phone link because no online order link was given; allergen wording; navigation removed because no pages were given).
 
 Still wanted: a **clean, blind run** per model, in a fresh chat, without the rubric, with a baseline. See [the kit](../README.md).
+
+## gpt-6-2026-11-01-pilot (pilot)
+
+ChatGPT GPT-6, run by the repo owner on 1 November 2026. GPT labelled it itself as **contaminated**: it had read the rubric, and the with and without outputs were written in one chat, not in fresh sessions. Its scorecard is indicative only and **is not a result**. Files as delivered, plus [`VERIFY.md`](gpt-6-2026-11-01-pilot/VERIFY.md).
+
+What it shows:
+- The baseline (without) critiques already found most faults: 5/5 on task A, 4/5 on B and C, by its own count.
+- The with-skill critiques differed mainly in **structure**: blockers first, rule IDs on each point, the brief's must-keeps stated and kept, and confidence and measurement limits stated.
+- GPT ran no tools, so it gave **no measurements** (no vanishing points, ellipse checks or contrast ratios); its drawing critique is a visual judgement.
+- Task A's rewritten page was not rendered by GPT. Checked here: it passes contrast (all text pairs, lowest 3.00:1 for large text, 5.89:1 for normal text), reflows at 390 px and at 200% text, and keeps the brief's facts. See [`VERIFY.md`](gpt-6-2026-11-01-pilot/VERIFY.md).
+
+## What the two pilots suggest (not proof)
+
+- **Baselines are already good at finding faults.** In both pilots the strong models found most planted faults without the skill (GPT's baseline: 4 or 5 of 5). The skill is not mainly a fault-finder for these models.
+- **The added value showed as structure:** blockers ranked first, rule IDs, the brief kept intact, confidence stated, and owner questions at the end.
+- **Measurements came from the tools, not the skill text.** Where the tools were run (Claude), the critique gave measured numbers (horizon tilt in degrees, ellipse axis error, contrast ratios); where they weren't (GPT), it gave visual estimates.
+- Both runs are contaminated pilots (rubric read; no fresh sessions or blind scoring). A clean, blind run per model is still wanted.

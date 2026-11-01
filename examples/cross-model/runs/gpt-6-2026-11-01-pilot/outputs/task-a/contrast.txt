@@ -1,0 +1,19 @@
+body ink on paper                        15.24:1  need 4.5:1  PASS
+nav and brand on header white            15.82:1  need 4.5:1  PASS
+brand "&" orange on header white (large, 21.6px bold)  3.00:1  need 3.0:1  PASS
+kicker green on paper                     9.42:1  need 4.5:1  PASS
+lede on paper                            10.94:1  need 4.5:1  PASS
+deadline on paper                         8.91:1  need 4.5:1  PASS
+cta text on orange                        5.89:1  need 4.5:1  PASS
+cta hover text                            7.17:1  need 4.5:1  PASS
+note muted on paper                       6.78:1  need 4.5:1  PASS
+stamp big green on mint                   8.79:1  need 4.5:1  PASS
+stamp body on mint                       14.22:1  need 4.5:1  PASS
+loaf muted on card                        7.04:1  need 4.5:1  PASS
+order heading on dark                    15.82:1  need 4.5:1  PASS
+order text on dark                       13.12:1  need 4.5:1  PASS
+input text on white                      16.88:1  need 4.5:1  PASS
+button text on orange                     5.89:1  need 4.5:1  PASS
+footer muted on paper                     6.78:1  need 4.5:1  PASS
+input border vs white (non-text)          1.63:1  need 3.0:1  FAIL
+detail orange rule vs paper (decorative)  2.89:1  need 3.0:1  FAIL

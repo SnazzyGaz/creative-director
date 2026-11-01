@@ -1,6 +1,6 @@
 # Cross-model test kit
 
-**Status: one outside smoke test, no clean runs yet.** Every example in this repo was produced by one agent (Grok Bot), except one Claude Opus 5.5 run in [`runs/`](runs/), which is **contaminated** (the model had read the answer keys and ran no baseline), so it shows the kit and tools work outside Grok Bot but is not a score. This kit lets anyone check whether the skill helps in Claude, ChatGPT, Gemini or another model, with the same inputs, the same prompts and the same scoring. Results are welcome as a pull request or an issue (see [Contribute](#contribute)).
+**Status: two outside pilot runs, no clean runs yet.** Besides Grok Bot, there is one Claude Opus 5.5 run and one ChatGPT GPT-6 run in [`runs/`](runs/). Both are **contaminated** (each model had read the rubric first; GPT also wrote its with and without answers in one chat), so they are smoke tests, not scores. What they suggest: the baselines already found most faults (4 or 5 of 5); the skill's added value showed as structure (blockers first, rule IDs, the brief kept intact, confidence stated) and, where the tools were run (Claude), measured numbers instead of visual guesses. Details in [`runs/README.md`](runs/README.md). This kit lets anyone check whether the skill helps in Claude, ChatGPT, Gemini or another model, with the same inputs, the same prompts and the same scoring. Results are welcome as a pull request or an issue (see [Contribute](#contribute)).
 
 ## What you run
 
@@ -12,7 +12,7 @@ Three tasks, each run twice per model: **without** the skill (baseline) and **wi
 | B. Illustration critique | `illustration-keepers-cat.jpg` | [`illustration-takeover/critique-r01.md`](../illustration-takeover/critique-r01.md) |
 | C. Technical drawing critique | `drawing-box-tin.png` | [`technical-drawing-takeover/critique-r01.md`](../technical-drawing-takeover/critique-r01.md) |
 
-All three inputs are deliberately bad, with known faults (planted or measured), so a critique can be scored against a fixed list. **Don't show the model the answer key**, and don't let it read `RUBRIC.md` or `examples/` in the same chat (the one outside run so far did, see [`runs/`](runs/)).
+All three inputs are deliberately bad, with known faults (planted or measured), so a critique can be scored against a fixed list. **Don't show the model the answer key**, and don't let it read `RUBRIC.md` or `examples/` in the same chat (both outside runs so far did, see [`runs/`](runs/)).
 
 ## How to give the model the skill
 

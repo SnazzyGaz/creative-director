@@ -1,0 +1,19 @@
+body ink on paper|#25221f|#fffaf4|4.5
+nav and brand on header white|#25221f|#ffffff|4.5
+brand "&" orange on header white (large, 21.6px bold)|#E8743B|#ffffff|3
+kicker green on paper|#244b3c|#fffaf4|4.5
+lede on paper|#403932|#fffaf4|4.5
+deadline on paper|#763414|#fffaf4|4.5
+cta text on orange|#21160f|#E8743B|4.5
+cta hover text|#21160f|#f18a54|4.5
+note muted on paper|#61574f|#fffaf4|4.5
+stamp big green on mint|#244b3c|#f0f4ed|4.5
+stamp body on mint|#25221f|#f0f4ed|4.5
+loaf muted on card|#61574f|#ffffff|4.5
+order heading on dark|#ffffff|#25221f|4.5
+order text on dark|#f3e8de|#25221f|4.5
+input text on white|#211c18|#ffffff|4.5
+button text on orange|#21160f|#E8743B|4.5
+footer muted on paper|#61574f|#fffaf4|4.5
+input border vs white (non-text)|#d9c8b8|#ffffff|3
+detail orange rule vs paper (decorative)|#E8743B|#fffaf4|3

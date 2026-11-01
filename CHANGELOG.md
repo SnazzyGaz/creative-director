@@ -17,11 +17,14 @@ Response to an outside review of the repo.
 - `tools/package_skill.py` builds `creative-director-skill.zip`: `creative-director/` with `SKILL.md` (frontmatter checked against Anthropic's Agent Skills rules; body is the full `AGENTS.md` instructions plus the three modes), `core/`, `modules/`, `lite/`, `tools/`, `SOURCES.md`, `LICENSE`. No examples or images. Attached to this release.
 
 **Cross-model**
-- First outside run, `examples/cross-model/runs/claude-opus-5.5-2026-11-01/` (Claude Opus 5.5, claude.ai), added as a **contaminated smoke test, not a score**: the model had read the answer keys and ran no baseline. It shows the repo and tools (`vp.py`, `ellipse.py`) work outside Grok Bot, with correct rule IDs, a take-over rework that passes contrast (lowest 6.11:1) and 390 px, and questions for the owner. A clean, blind run is still wanted. The kit now warns not to let the model read `RUBRIC.md` or `examples/` first.
+- Two outside pilot runs added under `examples/cross-model/runs/`, both labelled **contaminated, not a score** (each model had read the rubric first):
+  - `claude-opus-5.5-2026-11-01` (claude.ai): loaded the repo, ran `vp.py` and `ellipse.py` itself, cited correct rule IDs, made a take-over rework that passes contrast (lowest 6.11:1) and 390 px, and asked owner questions.
+  - `gpt-6-2026-11-01-pilot` (ChatGPT): with and without answers written in one chat; no tools run, so no measurements. Its HTML rework was rendered and checked here (`VERIFY.md`): passes contrast, 390 px and 200% text.
+- What they suggest: the baselines already found most faults (4 or 5 of 5); the skill added structure (blockers first, rule IDs, brief kept intact, confidence stated) and, with the tools, measured numbers. A clean, blind run is still wanted. The kit now warns not to let the model read `RUBRIC.md` or `examples/` first.
 
 **Housekeeping**
 - `PROPOSED-REPO.md` and `DECISIONS.md` moved to `docs/`.
-- Gallery: baseline cards updated, smoke-test card added (22 cards).
+- Gallery: baseline cards updated, two pilot-run cards added (23 cards).
 - Repo About, homepage (gallery) and topics set.
 
 ## v0.3.0 (1 November 2026)

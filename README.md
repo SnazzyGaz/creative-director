@@ -26,7 +26,7 @@ A set of design rules and a critique loop that any AI agent can read. It helps a
 Generated, one or two rounds each.
 </details>
 
-Eleven example sets across every domain: four take-overs of deliberately bad work, nudges, one small case per common agent failure, and the baseline above, all with critiques, logs and honest misses: [examples/](examples/), or filter them in the [gallery](https://snazzygaz.github.io/creative-director/gallery/). To test it on another model, the [cross-model kit](examples/cross-model/) has the inputs, prompts and scoring. There is one outside smoke test so far (Claude Opus 5.5); it is [contaminated](examples/cross-model/runs/) because the model had read the answer keys, so it shows the skill and tools run outside Grok Bot but scores nothing. A clean, blind run is still wanted.
+Eleven example sets across every domain: four take-overs of deliberately bad work, nudges, one small case per common agent failure, and the baseline above, all with critiques, logs and honest misses: [examples/](examples/), or filter them in the [gallery](https://snazzygaz.github.io/creative-director/gallery/). To test it on another model, the [cross-model kit](examples/cross-model/) has the inputs, prompts and scoring. There are two outside pilot runs so far, [Claude Opus 5.5 and ChatGPT GPT-6](examples/cross-model/runs/), both contaminated (the models had read the answer keys), so they score nothing. What they suggest: without the skill the models already found most faults; with it, the critiques were better structured (blockers first, rule IDs, brief kept), and where the tools were run they gave measurements instead of guesses. A clean, blind run is still wanted.
 
 ## How it works
 
