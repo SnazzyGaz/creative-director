@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Set the type for the with-skill fox cover and jazz poster over the generated art (art has no text).
 Fonts: Fraunces and Instrument Sans (OFL 1.1, vendored in docs/assets/src/fonts). Output 864x1152, same as the
-without-skill images. Usage: python3 compose.py ROUND   (writes ../fox-with-rROUND.png and ../poster-with-rROUND.png)"""
+without-skill images. Usage: python3 compose.py ROUND [fox|poster]   (writes ../fox-with-rROUND.png and/or ../poster-with-rROUND.png)"""
 import pathlib, subprocess, sys
 HERE = pathlib.Path(__file__).resolve().parent
 FONTS = (HERE / "../../../docs/assets/src/fonts").resolve()
 FACES = (f"@font-face{{font-family:F;src:url('file://{FONTS}/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf');font-weight:100 900}}"
          f"@font-face{{font-family:S;src:url('file://{FONTS}/InstrumentSans-VariableFont_wdth,wght.ttf');font-weight:400 700;font-stretch:75% 100%}}")
 R = sys.argv[1] if len(sys.argv) > 1 else "1"
+ONLY = sys.argv[2] if len(sys.argv) > 2 else None   # render just one of the two
 from params import FOX, POSTER   # per-round values live in params.py so each round's change is a small diff
 
 def page(art, body, extra=""):
@@ -32,6 +33,7 @@ def poster(p):
  </div>''')
 
 for name, fn, p in (("fox", fox, FOX), ("poster", poster, POSTER)):
+    if ONLY and name != ONLY: continue
     h = HERE / f"_{name}.html"; h.write_text(fn(p)); out = HERE.parent / f"{name}-with-r{R}.png"
     subprocess.run(["google-chrome", "--headless=new", "--no-sandbox", "--disable-gpu", "--hide-scrollbars",
                     "--window-size=864,1152", f"--screenshot={out}", f"file://{h}"], check=True, capture_output=True)

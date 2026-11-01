@@ -1,4 +1,4 @@
-# Round 3: poster only (fox stopped at round 2). Changes from round 1 marked. Fox: title is the brief's own phrase as a working title; author is a marked placeholder.
+# Poster round 3 is final. Fox round 3: type unchanged from round 2; only the art changed (fox-art.jpg re-edited so the book no longer glows, TD-LIT-1). Changes from round 1 marked. Fox: title is the brief's own phrase as a working title; author is a marked placeholder.
 FOX = dict(x=64, y=72, title="A Fox<br>Who Loves<br>Reading", size=92, w=560, ink="#24331F", gap=24,   # size 112 -> 92: clear the leaves
            author="AUTHOR NAME", asize=26, atrack=3, aink="#3E4A36")
 # Poster: exactly the brief's facts (what, when, where, price). No act names were given, so none are set.

@@ -20,7 +20,8 @@ Prompt: *"A cover illustration for a children's book about a fox who loves readi
 | Round | Finding (rule) | Fix |
 |---|---|---|
 | 1 ([r1](fox-with-r1.jpg)) | Second title line "Who Loves" runs into the tree's leaves: text over busy texture (TYPE-3 legibility, CORE-2 value, UI-6 text over images) | Title 112 → 92 px so the whole block sits on plain sky |
-| 2 ([r2](fox-with-r2.jpg), final) | No blockers. Title 8.97:1 and author 6.78:1 on the sky (`tools/contrast.py`); title readable at a 150 px thumbnail; fox and book are the blur-test focal point | Stopped: clearly better, no rule left to cite |
+| 2 ([r2](fox-with-r2.jpg)) | Title 8.97:1 and author 6.78:1 on the sky (`tools/contrast.py`); title readable at a 150 px thumbnail; fox and book are the blur-test focal point. Missed at the time: the open book glows and lights the fox's face from below while the low sun lights it from the left, two key lights (TD-LIT-1 blocker). The art prompt itself asked for a glowing book | Stopped (wrongly) at round 2 |
+| 3 ([r3](fox-with-r3.jpg), final; added 1 Nov 2026 after review) | Art re-edited (one GenerateImage edit, [prompt](src/PROMPTS.md)): the book is plain paper, the low sun is the only key light; type unchanged. Contrast re-checked on the new art, mean ground in the type box: title 9.71:1, author 7.48:1 (9.62 and 7.41 on the old art, same method). Anatomy pass (CHAR-9/10): fox head, both paws on the book, hind leg and tail all pass ([sheet](../anatomy-sweep/fox-with-r3-anatomy-sheet.jpg), [before and after](../anatomy-sweep/fox-with-book-before-after.jpg)) | Stopped: no blocker left |
 
 | | Without | With |
 |---|---|---|

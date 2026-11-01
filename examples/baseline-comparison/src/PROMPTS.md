@@ -6,4 +6,12 @@ Both ask for **no text**, so all type can be set in code (`compose.py`).
 
 **poster-art.jpg:** Poster artwork for a neighbourhood jazz night, no text, no letters, no signs anywhere. Warm cream paper background with subtle print grain. In the lower half, a large upright double bass in deep navy blue, drawn as a bold flat screen-print shape with a few fine cream highlight lines for strings and f-holes, leaning slightly to the right. Behind it a soft round warm amber glow from a single old street lamp drawn small on the right, the light falling off smoothly into the cream paper as a soft radial gradient (no hard-edged blob). Two-colour screen print look, navy and amber on cream. The entire top 50 percent of the poster is plain empty cream paper with nothing in it, left free for type. Simple, bold, uncluttered.
 
-One sample each; both were used as generated (no art regeneration rounds were needed: no text, no glow blob).
+One sample each; both were used as generated (no art regeneration rounds were needed: no text, no glow blob). The fox prompt's "book that glows softly" was itself a mistake (a second key light); the art was re-edited in round 3, below.
+
+## Fox round 3: lighting fix (1 Nov 2026)
+
+The original prompt above asked for "an open book that glows softly" as well as "one warm light source from the left". That is two key lights, a TD-LIT-1 blocker: the book lit the fox's face from below while the sun sat low on the left. The previous art is kept as `fox-art-r1-glowing-book.jpg`.
+
+**fox-art.jpg** (round 3; one GenerateImage call, edit of the previous `fox-art.jpg` as reference, 3:4, used as generated): Edit the reference picture-book gouache painting. Keep EVERYTHING identical: same style, same fox in the same pose and position, same big old tree on the right, same pale sky, same low sun on the left horizon, same meadow and flowers, same composition and framing. Absolutely no text, letters or signs. Only change: the open book must NOT glow or emit any light. It is an ordinary open book with plain cream paper pages, slightly shaded, no radiance, no halo, no light spilling onto the fox's face or chest. The fox's face and chest are lit only by the low sun from the left: the left side of the fox a little warmer and lighter, the right side and the underside of the chin in soft shadow. Keep the top 38 percent of the sky calm and plain.
+
+Prompt vs result: the glow and halo round the book are gone; the pages are shaded cream and catch a little sun on their left edge only. Composition, fox, tree and sky are unchanged to the eye. The fox's sun side is only slightly lighter than its far side (soft, not a strong rim light). Type re-set with round 2's values (`compose.py 3 fox`).

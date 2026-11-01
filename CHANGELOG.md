@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased (1 November 2026)
+
+Examples and README only; nothing in the skill zip changed, so no new release.
+
+- **Hero lighting fixes (TD-LIT-1).** Aesthetic poster: after two more image edits (the first rejected, kept in `src/`), the bass now stands in the lamp's light, lit from the lamp side with its shadow falling away, and is drawn as a double bass (sloped shoulders) rather than a violin; type unchanged, contrast re-checked (all pass). It is `poster-aes-r3.jpg`; the round 2 art is kept. Middle "with the skill" fox cover: the art prompt had asked for a glowing book, which lit the fox's face from below against the low sun; one edit made the book plain paper (`fox-with-r3.jpg`, old art kept as `src/fox-art-r1-glowing-book.jpg`), contrast re-checked. Side-by-sides, look sheets, gallery text and the README hero (light and dark) rebuilt; the hero's "known fault" caption replaced with what was fixed.
+- **Anatomy sweep.** New `examples/anatomy-sweep/`: CHAR-9/10 run over every image in `examples/` and the hero, with crops for the fixed images. No delivered, with-skill or aesthetic-layer image failed; without, before and input images are noted, not changed.
+- `examples/baseline-comparison/src/compose.py` takes an optional `fox` or `poster` argument to render just one.
+
 ## v0.4.1 (1 November 2026)
 
 - **Interaction flow (FLOW-1 to FLOW-5).** New `core/interaction-flow.md`: what the creative director is good for, how it reads the ask, and a mermaid diagram of the flow. Work handed over with no specific ask now gets a short sign-off blurb of only the imperative changes (ranked, rule ID, what will change, tagged [edit] or [regenerate]) and nothing is applied until the owner signs off. After sign-off every signed-off point is applied, with regeneration when an edit can't do it; each point and the light, anatomy and type blockers are re-checked; the result is delivered with a done / not done line per point. "Just fix it" skips the sign-off, not the checks; a take-over is named as a redo up front. Prompted by a generated book cover that came back lightly edited with a paragraph of critique that neither the edit nor a later redo fully applied. Added to the critique loop (steps 0a and 3b, hand-off), the critique template (*Sign-off blurb*, *Delivery checklist*), `AGENTS.md`, `SKILL.md`, the Cursor rule, `lite/`, `llms.txt`, the skill zip's modes and the README.
