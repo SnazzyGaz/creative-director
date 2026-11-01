@@ -49,7 +49,7 @@ Context cost: about 7,500 tokens for `core/` plus 1,800-3,000 per module ([table
 | Codex, Gemini CLI, Jules | [`AGENTS.md`](AGENTS.md) |
 | GitHub Copilot | [`.github/copilot-instructions.md`](.github/copilot-instructions.md) |
 | ChatGPT, Gemini Gems, Claude Projects | Upload `AGENTS.md`, `core/` and the modules you need as knowledge |
-| Grok Bot | [`AGENTS.md`](AGENTS.md), or point it at this repo |
+| Grok Bot | One-click install: [Creative Director bot](https://x.ai/bot/XWBKgRnDOw7uR5SpKx3Af), or point any bot at [`AGENTS.md`](AGENTS.md) |
 
 Every entry point leads back to `AGENTS.md`, and [`llms.txt`](llms.txt) is there for tools that read it.
 
