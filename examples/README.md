@@ -17,6 +17,8 @@ Runs of the critique loop (`core/critique-loop.md`) done as a bot would: brief, 
 | [illustration-knight](illustration-knight/) | Illustration | GenerateImage (AI) | Nudge | CORE-3, ILL-2, ILL-3, CORE-2 | Simpler sky, mist behind the legs; rim light did not apply | 2 |
 | [web-ui-landing](web-ui-landing/) | Web UI | Generated HTML, headless Chrome | Nudge (1 blocker) | UI-6 (6 pairs, worst 1.84:1), UI-7 (8 tells), UI-2 at 200% | Contrast tokens; less decoration; cards stack at zoom. Still generic: needs a brand brief | 2 |
 | [readme-self-critique](readme-self-critique/) | Web UI (docs page) | This repo's README, headless Chrome | Nudge (1 blocker) | CORE-10 (banner text unreadable on a phone), spacing, tables | Phone-size assets; spacing and table fixes | 2 |
+| [common-failures](common-failures/) | Web UI, technical drawing, 3D | Code-built panels, SVG, Blender 4.2 | Single-round fixes | UI-3/CORE-4 spacing, CORE-5/UI-4 grid, UI-1/CORE-7 type, CORE-9/UI-5 icons, TD-PER-1 (tilt 8.26 deg), 3D-1 (12 mm float, leg through seat) | One small case per common agent failure; each fix checked (vp.py 0.02 deg; model-qa PASS) | 1 each |
+| [baseline-comparison](baseline-comparison/) | Illustration, poster | GenerateImage, same prompt with and without the skill | Baseline | CD-1/CORE-8 (invented title, address, slogans), ILL-2, UI-1 (4 type styles) | Skill version kept only given facts and one focal point; plainer, and one glow shape failed | 1 |
 
 ## Take-overs
 
@@ -56,6 +58,22 @@ Six text pairs failed WCAG contrast (UI-6 blocker, worst 1.84:1) and the page ha
 
 ### README: this repo's own front page (nudge, 2 rounds)
 The loop run on `README.md` itself, at 1280 and 390 px. One blocker (banner and diagram text unreadable on a phone, CORE-10) and two spacing and table fixes. Every problem was invisible at desktop width. See `readme-self-critique/`.
+
+## Honest misses: where the loop made it worse or missed
+
+Kept here on purpose. A critic that never reports its own misses can't be trusted.
+
+| Example | What went wrong | How it was caught | Outcome |
+|---|---|---|---|
+| [illustration-takeover](illustration-takeover/) round 3 | Two edits (cat in profile, beam toward the boat) did not apply, and the beam got *brighter*: worse than round 2 | Verify-each-fix step, side by side at 2x | Round 2 delivered; pose left as a question for the owner |
+| [technical-drawing-still-life](technical-drawing-still-life/) rounds 2-3 | Rework dropped the open box from the brief (brief drift) and came out paler; round 3 fixed a misread, not a real fault | Re-reading the brief after the round | More correct, not clearly better. Led to rule CD-5 |
+| [illustration-knight](illustration-knight/) round 2 | Rim light edit did not apply | Verify step | Left as a miss; 2 of 3 fixes landed |
+| [3d-mug-nudge](3d-mug-nudge/) round 3 | Right light layout, about 5x too bright: highlights blew out again | `measure.py` clipped share went back up | Extra round 4 to re-balance |
+| [ux-signup-nudge](ux-signup-nudge/) round 2 draft | Removed the "password again" field: a fourth change and a product decision | Counting changes against the 3-fix cap | Put back; asked the owner instead |
+| [technical-drawing-takeover](technical-drawing-takeover/) | `tools/ellipse.py` said "OK" on a planted lemon-shaped ellipse | By eye at 2x zoom | Tool limit noted in `tools/README.md` |
+| [common-failures](common-failures/) stool | model-qa reported the leg poking through the seat only as "asymmetry", not as an intersection | Reading the report against the known plant | Fixed; noted as a tool limit |
+| [baseline-comparison](baseline-comparison/) poster | Skill version's amber glow reads as a blob and vanishes in greyscale; the poster without the skill looks more attractive | Look tests | Reported, not fixed (one round only) |
+| [web-ui-landing](web-ui-landing/) | Still looks generic after the round | Critique | Needs a brand brief, not more rounds |
 
 ## What the stress tests taught
 

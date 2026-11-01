@@ -10,7 +10,7 @@ A set of design rules and a critique loop that any AI agent can read. It helps a
   <img alt="Three before/after pairs: a box and can drawing with its perspective rebuilt, a knight illustration with a quieter sky, and a landing page with readable contrast." src="docs/assets/before-after-light.jpg" width="100%">
 </picture></p>
 
-The three pairs above are generated, one or two rounds each. Nine stress tests across every domain, including three take-overs of deliberately bad work, with critiques, logs and honest misses: [examples/](examples/).
+The three pairs above are generated, one or two rounds each. Eleven example sets across every domain: four take-overs of deliberately bad work, nudges, one small case per common agent failure, and a with-and-without-the-skill baseline, all with critiques, logs and honest misses: [examples/](examples/).
 
 ## How it works
 
@@ -30,6 +30,15 @@ Each rule has an ID (`CORE-2`, `TD-PER-1`, `UI-6`) and the same parts: what, why
 | **Direct**<br>`creative director: direct this` | Joins at the start: writes the brief, sets direction, picks from rough options, reviews at checkpoints ([CD-1..6](core/creative-direction.md)). |
 
 Always send the actual output (image, screenshot at real size, URL or renders), never a description.
+
+## Requirements
+
+- **Vision.** The agent has to *see* its output: a model that accepts images.
+- **A way to render or screenshot** the work at real size: a browser for UI, a renderer for 3D, the image file for pictures.
+- **Recommended setup:** Playwright or headless Chrome for UI (`tools/shot.sh` uses Chrome), Blender for 3D (plus [model-qa](https://github.com/SnazzyGaz/model-qa) for build checks), and Python 3 with Pillow and NumPy for the `tools/` scripts (look tests, contrast, vanishing points, ellipses).
+- **Without vision** you only get a rules-only review of code or a description. It can still catch contrast, spacing and flow problems in code, but it can't judge how the work looks, and it is much weaker.
+
+Context cost: about 7,500 tokens for `core/` plus 1,800-3,000 per module ([table](core/which-modules.md#token-cost-per-module)). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 1,300 tokens.
 
 ## Works with
 
@@ -51,6 +60,8 @@ core/       principles, creative direction, evidence, the loop, critique templat
 modules/    technical-drawing · illustration · web-ui · ux · 3d
 tools/      look tests, WCAG contrast, screenshots, vanishing points, ellipses, before/after
 examples/   stress tests, round by round, including this README's own critique
+lite/       the loop, core rules and blockers in one short file
+docs/       gallery and README images
 ```
 
 ## Principles of the critique

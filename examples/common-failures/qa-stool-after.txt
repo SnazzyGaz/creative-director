@@ -1,0 +1,3 @@
+PASS stool-after.blend | high 0 med 0 low 1 info 1 | 5 obj 556 tris size [0.38, 0.38, 0.46] m
+(2 low/info not shown)
+full report: stool-after_qa/report.md

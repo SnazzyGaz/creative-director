@@ -1,0 +1,8 @@
+WARN stool-before.blend | high 0 med 4 low 1 info 3 | 5 obj 556 tris size [0.38, 0.38, 0.49] m
+[med] ASYMMETRY leg0: model is 91.7% mirror-symmetric in x, but 24 sampled verts here have no mirror partner (max off 20.1 mm) — pinched/moved geometry? @[0.13, 0.13, 0.49]
+[med] NEAR_MISS_GAP leg1: touches nothing: 12.0 mm gap to nearest part 'seat' (floating?) @[-0.13, 0.13, 0.215]
+[med] NEAR_MISS_GAP leg2: touches nothing: 12.0 mm gap to nearest part 'seat' (floating?) @[0.13, -0.13, 0.215]
+[med] NEAR_MISS_GAP leg3: touches nothing: 12.0 mm gap to nearest part 'seat' (floating?) @[-0.13, -0.13, 0.215]
+(4 low/info not shown)
+full report: stool-before_qa/report.md
+next: re-run without --no-render and look at closeups/ for the issues above

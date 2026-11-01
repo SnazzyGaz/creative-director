@@ -29,3 +29,26 @@ Always load `core/`. Then add only what the task needs. Loading everything waste
 2. Technical errors (perspective, proportion, light, broken flows, failing contrast) - these are ERRORs.
 3. Composition and layout.
 4. Surface: edges, texture, micro-spacing, polish.
+
+## Token cost per module
+
+Approximate: counted with tiktoken's `cl100k_base` encoding (OpenAI's GPT-4 tokenizer) on 1 Nov 2026. Other models tokenise differently, so expect roughly ±15%.
+
+| File or set | Tokens |
+|---|---|
+| `AGENTS.md` (entry point) | 442 |
+| `core/` (all six files) | 7,476 |
+| `core/principles.md` | 2,330 |
+| `core/critique-loop.md` | 1,848 |
+| `core/creative-direction.md` | 1,053 |
+| `core/evidence.md` | 999 |
+| `core/critique-template.md` | 779 |
+| `core/which-modules.md` | 467 |
+| `modules/technical-drawing/` | 3,010 |
+| `modules/web-ui/` (+ notes 437) | 2,658 |
+| `modules/illustration/` (+ notes 484) | 2,618 |
+| `modules/ux/` | 1,828 |
+| `modules/3d/` | 1,815 |
+| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 1,306 |
+
+Typical loads: core + web-ui + ux is about 12,000 tokens; core + one module is about 9,500-10,500. If that is too much, use the lite file.

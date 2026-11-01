@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Build the README images: banner, before/after strip, loop diagram (light + dark).
-Run from the repo root: python3 docs/assets/src/build.py   (needs google-chrome and Pillow)"""
+Run from the repo root: python3 docs/assets/src/build.py   (needs google-chrome and Pillow; banner fonts are in src/fonts/)"""
 import os, subprocess, pathlib
 from PIL import Image
 ROOT = pathlib.Path(__file__).resolve().parents[3]
@@ -10,6 +10,10 @@ THEMES = {
   "dark":  dict(bg="#161514", ink="#EEE9DF", mute="#A39C91", faint="#3E3A35", accent="#D9825F"),
 }
 FONTS = "font-family:'Inter',sans-serif;"
+# Banner type: Fraunces (display, opsz 144, soft) over Instrument Sans. Both OFL 1.1, vendored in src/fonts/
+# and loaded from file so the variable axes (opsz, SOFT) apply.
+FACES = ("@font-face{font-family:'CD Fraunces';src:url('fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf');font-weight:100 900}"
+         "@font-face{font-family:'CD Instrument Sans';src:url('fonts/InstrumentSans-VariableFont_wdth,wght.ttf');font-weight:400 700}")
 def shot(html, name, w, h):
     p = SRC / f"_{name}.html"; p.write_text(html)
     out = OUT / f"{name}.png"
@@ -54,10 +58,10 @@ def banner(t):
  <g fill="{c['mute']}" font-family="DM Mono" font-size="12" letter-spacing="1">
   <text x="1182" y="{hy-8}">HL</text><text x="{cx-150}" y="{cbot+50}" fill="{c['accent']}">minor axis = cylinder axis</text>
  </g></svg>'''
-    html = f'''<html><body style="margin:0;background:{c['bg']};width:1280px;height:400px;position:relative;overflow:hidden">{svg}
- <div style="position:absolute;left:84px;top:128px;{FONTS}color:{c['ink']}">
-  <div style="font:400 104px/1 'Instrument Serif',serif;letter-spacing:-1px">creative director</div>
-  <div style="margin-top:24px;font-size:38px;line-height:1.2;color:{c['mute']}">Design judgement for AI agents</div>
+    html = f'''<html><head><style>{FACES}</style></head><body style="margin:0;background:{c['bg']};width:1280px;height:400px;position:relative;overflow:hidden">{svg}
+ <div style="position:absolute;left:84px;top:128px;color:{c['ink']}">
+  <div style="font:380 104px/1 'CD Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 50,'WONK' 0;letter-spacing:-2px">creative director</div>
+  <div style="margin-top:24px;font:400 38px/1.2 'CD Instrument Sans',sans-serif;color:{c['mute']}">Design judgement for AI agents</div>
  </div></body></html>'''
     return shot(html, f"banner-{t}", 1280, 400)
 

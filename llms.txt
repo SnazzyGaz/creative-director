@@ -9,5 +9,6 @@
 - [Which modules to load](core/which-modules.md)
 - [Critique template](core/critique-template.md)
 - [Modules](modules/): technical-drawing, illustration, web-ui, ux, 3d
+- [Lite version](lite/CREATIVE-DIRECTOR-LITE.md): loop, core rules and blockers in one short file
 - [Tools](tools/README.md)
 - [Sources](SOURCES.md)
