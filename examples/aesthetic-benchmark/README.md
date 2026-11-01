@@ -2,7 +2,9 @@
 
 Does the aesthetic layer (`modules/aesthetic-critique/`) help produce work people prefer, while keeping the brief and passing the measured checks? If it only adds vocabulary, it has failed. This folder holds a protocol for testing that properly, and one small demo that is **not** a test.
 
-## Protocol (not yet run)
+## Protocol
+
+**Run 01 (12 pairs) is made and blinded, awaiting judges:** [`blind-ab-01/`](blind-ab-01/) ([judging sheet](blind-ab-01/JUDGING.md), [prompt for model judges](blind-ab-01/OUTSIDE-JUDGE-PROMPT.md)).
 
 **Conditions.** Same model, same briefs, same tools, same round limit.
 - **A:** `core/` plus the medium's modules (rules only).
@@ -10,7 +12,9 @@ Does the aesthetic layer (`modules/aesthetic-critique/`) help produce work peopl
 
 **Briefs.** At least 12, spread across media and moods: a poster, a book cover, a logo, an ink illustration, a product render, a landing page, a social card, a character, a calm piece, a loud one, a deliberately rough one, a deliberately rule-breaking one. Write each brief once and freeze it.
 
-**Blinding.** Strip file names and labels; give each output a random ID; randomise left/right per pair and show each pair twice with sides swapped. Judges see the brief and the two images only, never the critique or which condition made what.
+**Blinding.** Strip file names and labels; give each output a random ID; randomise left/right per pair and show each pair twice with sides swapped. Judges see the brief and the two images only, never the critique or which condition made what. Commit a hash of the answer key (with a random salt, since 12 left/right choices are only 4,096 combinations) before judging, and publish the key afterwards.
+
+**Same start, equal effort.** Where possible both conditions start from the same generation or file. If B is made as a revision of A, A has had less work; either give A an equal extra round with rules only, or report this as a confound (run 01 reports it).
 
 **Judges.** At least 5 people who did not make the work; ideally a mix of designers and the target audience. Agreement among independent judges is the standard check for creative quality [S145]. A model judge may be added as an extra rater but is reported separately, because model judges show position and self-preference bias [S146].
 
