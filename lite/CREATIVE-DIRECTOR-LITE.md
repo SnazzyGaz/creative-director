@@ -6,7 +6,7 @@ A short version of this repo for tools with a small context window. It keeps the
 
 Always judge a fresh render or screenshot, never your own code or prompt.
 
-0. **Brief.** Before making anything, write down: purpose, audience, where it will be seen, must-keeps, and what "done" means. Don't invent facts the brief doesn't give (names, prices, addresses, slogans).
+0. **Brief.** Before making anything, write down: purpose, audience, where it will be seen, must-keeps, and what "done" means. Don't invent facts the brief doesn't give (names, prices, addresses, slogans). No brand input? Ask the owner for name, audience, colours, type, three voice words, likes and dislikes; if no answer, label your choices as assumed.
 1. **Render** at the real viewing size plus a thumbnail. UI: phone (390 px), desktop (1280 px) and 200% zoom. Keep every round (`round-01.png`, ...).
 2. **Look** with five tests, one factual line each: blur (what leads?), thumbnail (does the idea survive?), flip (lopsided or tilted?), greyscale (is the value structure there?), edges and corners (tangents, stray spots).
 3. **Critique.** List the rule IDs in scope first. Every point names a rule, the evidence and one fix. No rule, no point: it becomes a question for the owner. Record what already meets the criteria, so it is kept. Rank by effect, structure before surface, five points at most. Neutral and factual: no praise, no harshness. Measure at 2x zoom or with a tool before calling a failure.
@@ -23,6 +23,10 @@ Only these block. Everything else is an improvement.
 - **Ellipses:** the minor axis follows the cylinder's axis; ellipses get fuller further from eye level; smooth and symmetrical, no lemons or footballs (TD-ELL-1..3).
 - **Proportion and anatomy:** measured, not guessed; left and right agree (TD-PRO-1..2).
 - **Light:** one key light direction; lit and shadow sides stay separate; cast shadows sit on the ground (TD-LIT-1..3).
+- **Figures:** right digit count per hand, thumbs on the correct side; eyes match and look at one point; every limb traceable, none fused or extra (CHAR-3, CHAR-4, CHAR-7).
+- **Fixed frames (social, thumbnails, print):** key content inside the platform's safe area; main message readable at feed size (about 400 px wide); print has 3 mm bleed and 300 ppi at final size (LAY-5, LAY-6, LAY-9).
+- **Type size:** no reading text under 14 px, nothing meaningful under 12 px (TYPE-3).
+- **Logo:** the supplied file, unaltered, with its clear space and minimum size (BRAND-4).
 - **Contrast:** text at least 4.5:1; 3:1 for large text (about 24 px) and for UI boundaries; never colour as the only signal (UI-6).
 - **Zoom:** text can grow to 200% without clipping or overlap (UI-10).
 - **Flow:** the main task can be completed, with every step reachable (UX-1).

@@ -14,7 +14,7 @@ creative-director/
   AGENTS.md            one-page instructions for any agent (same role as in model-qa)
   skills/creative-director/SKILL.md   wrapper for agents that load "skills" (points at core/)
   core/                principles, evidence (preference research and myths), critique loop, template, which-modules
-  modules/             technical-drawing, illustration, web-ui, ux, 3d (each README; optional notes.md for depth)
+  modules/             technical-drawing, illustration, character, web-ui, ux, 3d, typography, layout, brand (each README; optional notes.md for depth)
   examples/            worked critiques (round-by-round), using generated or openly licensed images only
   tools/               optional small scripts: blur/greyscale/flip/thumbnail sheet, WCAG contrast check, ellipse fit, PBR range check, 200% zoom diff
   SOURCES.md

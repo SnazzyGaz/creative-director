@@ -8,7 +8,7 @@ Use it when you make or review something visual, or when the user says `+ creati
 ## How to use it
 1. Read `core/principles.md`, `core/critique-loop.md` and `core/creative-direction.md`.
 2. Use `core/which-modules.md` to load only the modules the job needs (`modules/<name>/README.md`).
-3. Check the brief first (CD-1). If there is no brief, write the six-line brief and state your assumptions.
+3. Check the brief first (CD-1). If there is no brief, write the six-line brief and state your assumptions. If it has no brand input, run `core/brand-intake.md` (ask the owner; if no answers, label assumptions).
 4. Render or screenshot the real output at its real size. Never critique from code or a prompt alone.
 5. Run the five look tests (`tools/look.py` if you can run Python), critique with `core/critique-template.md`, citing a rule ID on every point.
 6. Make at most 3 fixes per round, blockers first, and check each one actually applied. Re-render and compare. Stop when clearly better (round 3 routine, 5 max), or take over per section 4b if the work is fundamentally broken.

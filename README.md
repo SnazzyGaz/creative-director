@@ -56,8 +56,9 @@ Every entry point leads back to `AGENTS.md`, and [`llms.txt`](llms.txt) is there
 ## What's inside
 
 ```
-core/       principles, creative direction, evidence, the loop, critique template, module picker
-modules/    technical-drawing · illustration · web-ui · ux · 3d
+core/       principles, creative direction, brand intake, evidence, the loop, critique template, module picker
+modules/    technical-drawing · illustration · character · web-ui · ux · 3d
+            typography · layout (social, posters, slides, print) · brand
 tools/      look tests, WCAG contrast, screenshots, vanishing points, ellipses, before/after
 examples/   stress tests, round by round, including this README's own critique
 lite/       the loop, core rules and blockers in one short file

@@ -18,7 +18,7 @@ make -> render -> LOOK (5 tests) -> CRITIQUE (criteria, ranked) -> FIX up to 3 -
 
 ## 0. Brief (creative-direction.md)
 
-- Before making, have the brief (CD-1) and the direction (CD-2). For an open brief, compare 2-3 rough options first (CD-3).
+- Before making, have the brief (CD-1) and the direction (CD-2). If the brief has no brand input (no colours, type, voice or logo), run `core/brand-intake.md` first; more rounds can't fix a generic look. For an open brief, compare 2-3 rough options first (CD-3).
 - The first critique point each round is: does it answer the brief and audience, and are the must-keeps intact (CD-1, CD-5)?
 
 ## 1. Render

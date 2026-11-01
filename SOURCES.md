@@ -139,3 +139,43 @@ Every source cited in this repo. Ideas are paraphrased; no text or images are co
 - **[S105]** The Sherwood Group. *Interview with Michael Bierut* (Pentagram; listening to clients' concerns). https://thesherwoodgroup.com/interviews/interview-with-michael-bierut/
 - **[S106]** ScreenSkills. *Production designer* job profile (film and TV). https://www.screenskills.com/job-profiles/browse/film-and-tv-drama/craft/production-designer-film-and-tv-drama/
 - **[S107]** D&AD. *Writing great creative briefs* (masterclass page). https://www.dandad.org/insights/learning/writing-great-creative-briefs-training-content
+
+## Typography (v0.3.0)
+- **[S111]** Arditi, A., & Cho, J. (2005). Serifs and font legibility. *Vision Research* 45(23), 2926-2933. https://doi.org/10.1016/j.visres.2005.06.013
+- **[S112]** Dyson, M. C. (2004). How physical text layout affects reading from screen. *Behaviour & Information Technology* 23(6), 377-393. https://doi.org/10.1080/01449290410001715714
+- **[S113]** Rello, L., Pielot, M., & Marcos, M.-C. (2016). Make it big! The effect of font size and line spacing on online readability. *CHI 2016*. https://doi.org/10.1145/2858036.2858204
+- **[S114]** Legge, G. E., & Bigelow, C. A. (2011). Does print size matter for reading? A review of findings from vision science and typography. *Journal of Vision* 11(5):8. https://doi.org/10.1167/11.5.8
+- **[S115]** Beier, S. (2012). *Reading Letters: Designing for Legibility*. BIS Publishers.
+- **[S116]** Google Fonts Knowledge (pairing typefaces; tracking; optical size). https://fonts.google.com/knowledge
+- **[S117]** W3C. WCAG 2.1, Success Criterion 1.4.12 Text Spacing. https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html
+- **[S118]** Larson, K. (2004). *The Science of Word Recognition*. Microsoft Typography. https://learn.microsoft.com/en-us/typography/develop/word-recognition
+
+## Brand (v0.3.0)
+- **[S119]** Wheeler, A. *Designing Brand Identity* (5th ed., 2017). Wiley (brand standards, logo usage, brand assets).
+- **[S120]** Romaniuk, J. (2018). *Building Distinctive Brand Assets*. Oxford University Press (Ehrenberg-Bass Institute).
+- **[S121]** Moran, K. (2016). *The Four Dimensions of Tone of Voice* and *The Impact of Tone of Voice on Users' Brand Perception*. Nielsen Norman Group. https://www.nngroup.com/articles/tone-of-voice-dimensions/ ; https://www.nngroup.com/articles/tone-voice-users/
+- **[S122]** Mailchimp. *Content Style Guide: Voice and Tone*. https://styleguide.mailchimp.com/voice-and-tone/
+
+## Layout, print and social (v0.3.0; platform pages checked 1 November 2026)
+- **[S123]** X Developer Platform. *Summary card with large image* (2:1, min 300 × 157, max 4096 × 4096, under 5 MB). https://developer.x.com/en/docs/x-for-websites/cards/overview/summary-card-with-large-image
+- **[S124]** Social Media Today (2021). *Twitter rolls out larger image display in timelines to all users on Android and iOS*. https://www.socialmediatoday.com/news/twitter-rolls-out-larger-image-display-in-timelines-to-all-users-on-android/599664/
+- **[S125]** Instagram Help Center. *Image resolution of photos you share on Instagram* (width up to 1080; 1.91:1 to 3:4). https://help.instagram.com/1631821640426723
+- **[S126]** LinkedIn Help. *Share photos on LinkedIn* (a527229) and *link sharing image requirements* (a521928). https://www.linkedin.com/help/lms/answer/a527229 ; https://www.linkedin.com/help/linkedin/answer/a521928
+- **[S127]** YouTube Help. *Add custom thumbnails* (answer 72431). https://support.google.com/youtube/answer/72431
+- **[S128]** GitHub Docs. *Customizing your repository's social media preview*. https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview
+- **[S129]** Meta for Developers. *Images in link shares* (og:image). https://developers.facebook.com/docs/sharing/webmasters/images
+- **[S130]** Sked Social (2026). *Instagram post size 2026* and *X (Twitter) image size guide* (practitioner guides; safe zones and display ranges). https://skedsocial.com/blog/best-instagram-image-and-video-size-recommendations ; https://skedsocial.com/blog/twitter-post-size-guide
+- **[S131]** Adobe. *InDesign User Guide*: bleed and slug, preparing files for print. https://helpx.adobe.com/indesign/user-guide.html
+- **[S132]** Mayer, R. E. (2009). *Multimedia Learning* (2nd ed.). Cambridge University Press (coherence, signalling, redundancy).
+- **[S133]** Duarte, N. (2008). *slide:ology: The Art and Science of Creating Great Presentations*. O'Reilly.
+
+## Character and anatomy (v0.3.0)
+- **[S134]** Loomis, A. (1943). *Figure Drawing for All It's Worth*. Viking (proportion charts: average, idealised, heroic).
+- **[S135]** Hampton, M. (2009). *Figure Drawing: Design and Invention*.
+- **[S136]** Seyama, J., & Nagayama, R. S. (2007). The uncanny valley: effect of realism on the impression of artificial human faces. *Presence* 16(4), 337-351. https://doi.org/10.1162/pres.16.4.337
+- **[S137]** Mori, M., MacDorman, K. F., & Kageki, N. (2012). The uncanny valley [from the field] (translation of Mori, 1970). *IEEE Robotics & Automation Magazine* 19(2), 98-100. https://doi.org/10.1109/MRA.2012.2192811
+- **[S138]** Kätsyri, J., Förger, K., Mäkäräinen, M., & Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses. *Frontiers in Psychology* 6:390. https://doi.org/10.3389/fpsyg.2015.00390
+- **[S139]** Rhodes, G. (2006). The evolutionary psychology of facial beauty. *Annual Review of Psychology* 57, 199-226. https://doi.org/10.1146/annurev.psych.57.102904.190208
+- **[S140]** Glocker, M. L., et al. (2009). Baby schema in infant faces induces cuteness perception and motivation for caretaking in adults. *Ethology* 115(3), 257-263. https://doi.org/10.1111/j.1439-0310.2008.01603.x
+- **[S141]** Narasimhaswamy, S., et al. (2024). HanDiffuser: text-to-image generation with realistic hand appearances. *CVPR 2024*. https://arxiv.org/abs/2403.01693
+- **[S142]** Goldfinger, E. (1991). *Human Anatomy for Artists: The Elements of Form*. Oxford University Press.

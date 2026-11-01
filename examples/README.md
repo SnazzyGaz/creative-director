@@ -19,6 +19,10 @@ Runs of the critique loop (`core/critique-loop.md`) done as a bot would: brief, 
 | [readme-self-critique](readme-self-critique/) | Web UI (docs page) | This repo's README, headless Chrome | Nudge (1 blocker) | CORE-10 (banner text unreadable on a phone), spacing, tables | Phone-size assets; spacing and table fixes | 2 |
 | [common-failures](common-failures/) | Web UI, technical drawing, 3D | Code-built panels, SVG, Blender 4.2 | Single-round fixes | UI-3/CORE-4 spacing, CORE-5/UI-4 grid, UI-1/CORE-7 type, CORE-9/UI-5 icons, TD-PER-1 (tilt 8.26 deg), 3D-1 (12 mm float, leg through seat) | One small case per common agent failure; each fix checked (vp.py 0.02 deg; model-qa PASS) | 1 each |
 | [baseline-comparison](baseline-comparison/) | Illustration, poster | GenerateImage, same prompt with and without the skill | Baseline | CD-1/CORE-8 (invented title, address, slogans), ILL-2, UI-1 (4 type styles) | Skill version kept only given facts and one focal point; plainer, and one glow shape failed | 1 |
+| [layout-social-card](layout-social-card/) | Layout / social | The repo's own X card, measured with Python | Critique only (0 blockers) | LAY-6/TYPE-3 (proof-point caption about 2 px x-height at feed size), LAY-2 (bottom margin 6.8% vs sides 12.4%), LAY-5 (reuse crops) | Not changed: findings left for the next version | 1 |
+| [typography-scale](typography-scale/) | Typography | Re-judging the common-failures type case | Single-round fix | TYPE-1 (5 families), TYPE-2 (31 vs 29 px, ratio 1.07), TYPE-7 | 2 families; sizes 36/24/17/14 (ratios ≥ 1.21) | 1 |
+| [brand-intake](brand-intake/) | Brand | Intake run on the web-ui-landing case, no-answer mode | Step 0 | UI-7 (5 tells left after 2 rounds), BRAND-7 | Assumed token sheet (all roles pass contrast); 2 of 5 tells answerable, 3 need the owner's facts | 0 (intake) |
+| [character-hands](character-hands/) | Character / generative image | GenerateImage (AI), zoom audit at 2x | Check only (0 blockers) | CHAR-3, CHAR-4, CHAR-7 all pass; CHAR-3 note (hand about 1.15× face length) | Nothing to fix; the generator passed | 1 |
 
 ## Take-overs
 

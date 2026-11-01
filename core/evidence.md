@@ -25,6 +25,13 @@ Don't cite these as rules. If a bot's critique leans on one, correct it.
 - **"Seven plus or minus two menu items."** Miller's paper is about holding items in memory, not choosing from options that stay visible on screen [S64]. See the UX module.
 - **"Three clicks or users leave."** No published evidence supports this. Click count alone doesn't predict success [S66].
 
+- **"Serifs read better in print, sans on screen."** Controlled tests find no reliable legibility difference between serif and sans at normal sizes [S111]. Size, measure and spacing matter more [S113, S114]. See `modules/typography/`.
+- **"The ideal line is exactly 66 characters."** 45-90 is a comfort range; some studies find faster reading on longer lines while people prefer medium ones [S112].
+- **"We read words by their outline shape."** The word-shape account is not supported; we recognise words from their letters [S118].
+- **"Beautiful faces follow the golden ratio."** No good evidence (see the golden-ratio point above). Averageness and symmetry have modest, supported effects [S139]; perfect mirror symmetry can look artificial.
+- **"The uncanny valley is one universal curve."** Evidence for a single curve is mixed. Mismatched realism cues, such as realistic skin with abnormal eyes, are the best-supported trigger [S136, S138]. See CHAR-5.
+- **"72 dpi for screen, 300 for print" as a screen rule.** On screen only pixel dimensions matter; ppi matters only at print size (LAY-9).
+
 ## How to use this in a critique
 
 - Write "evidence: [S41]" only when the study matches the case (similar task, similar viewers). Otherwise cite the craft rule and its source.
