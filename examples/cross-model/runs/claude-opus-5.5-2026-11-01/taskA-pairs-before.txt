@@ -1,0 +1,10 @@
+nav|#ffff00|#00ff00|4.5
+tagline-on-cyan|#ffffff|#40ffd0|4.5
+b1-text|#ff9900|#ffe600|4.5
+click|#00ff00|#ff0000|4.5
+here|#ff00ff|#0000ff|4.5
+b2-text|#5b00c9|#7a00ff|4.5
+submit|#ffcc00|#E8743B|4.5
+go|#ffffff|#00ffff|4.5
+b3-info|#c0c0c0|#ffffff|4.5
+footer|#ffeeee|#ff00cc|4.5

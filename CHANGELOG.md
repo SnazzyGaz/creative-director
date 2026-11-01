@@ -1,5 +1,29 @@
 # Changelog
 
+## v0.3.1 (1 November 2026)
+
+Response to an outside review of the repo.
+
+**README**
+- Plain pitch at the top: the skill gives restraint and accuracy, not flair, and says where it loses.
+- New hero: the with-and-without baseline (light and dark, built by `docs/assets/src/build.py baseline`, checked at 390 px). The three earlier before/after pairs are folded under it.
+- Link row near the top: gallery, Grok Bot install, Claude Skill zip, lite version. New "Install in Claude" section (claude.ai, Claude Code, Projects).
+
+**Baseline redone (`examples/baseline-comparison/`)**
+- The with-skill fox cover and jazz poster are now complete pieces: new art generated with no text, then all type set in code (`src/compose.py`, Fraunces and Instrument Sans) using only the brief's facts, judged against TYPE, LAY and CORE rules, 2 rounds (cover) and 3 rounds (poster). The poster's glow blob is gone. Without-skill versions unchanged.
+- Honest result: the with-skill versions win on accuracy, hierarchy and legibility, and still lose on first-impression energy and atmosphere. The earlier art-only versions are kept as `*-image-only.jpg`.
+
+**Claude Skill package**
+- `tools/package_skill.py` builds `creative-director-skill.zip`: `creative-director/` with `SKILL.md` (frontmatter checked against Anthropic's Agent Skills rules; body is the full `AGENTS.md` instructions plus the three modes), `core/`, `modules/`, `lite/`, `tools/`, `SOURCES.md`, `LICENSE`. No examples or images. Attached to this release.
+
+**Cross-model**
+- First outside run, `examples/cross-model/runs/claude-opus-5.5-2026-11-01/` (Claude Opus 5.5, claude.ai), added as a **contaminated smoke test, not a score**: the model had read the answer keys and ran no baseline. It shows the repo and tools (`vp.py`, `ellipse.py`) work outside Grok Bot, with correct rule IDs, a take-over rework that passes contrast (lowest 6.11:1) and 390 px, and questions for the owner. A clean, blind run is still wanted. The kit now warns not to let the model read `RUBRIC.md` or `examples/` first.
+
+**Housekeeping**
+- `PROPOSED-REPO.md` and `DECISIONS.md` moved to `docs/`.
+- Gallery: baseline cards updated, smoke-test card added (22 cards).
+- Repo About, homepage (gallery) and topics set.
+
 ## v0.3.0 (1 November 2026)
 
 **New modules**

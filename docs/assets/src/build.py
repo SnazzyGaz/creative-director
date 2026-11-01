@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Build the README images: banner, before/after strip, loop diagram (light + dark).
-Run from the repo root: python3 docs/assets/src/build.py   (needs google-chrome and Pillow; banner fonts are in src/fonts/)"""
+"""Build the README images: banner, baseline (with/without) hero, before/after strip, loop diagram (light + dark).
+Run from the repo root: python3 docs/assets/src/build.py [banner|baseline|strip|loop ...]   (needs google-chrome and Pillow; banner fonts are in src/fonts/)"""
 import os, subprocess, pathlib
 from PIL import Image
 ROOT = pathlib.Path(__file__).resolve().parents[3]
@@ -98,6 +98,23 @@ def strip(t):
     html = f'''<html><body style="margin:0;background:{c['bg']}"><div style="display:flex;gap:28px;padding:28px 33px 30px">{cols}</div></body></html>'''
     return shot(html, f"before-after-{t}", 1280, 650)
 
+BASE = [("Book cover", "examples/baseline-comparison/fox-without.jpg", "examples/baseline-comparison/fox-with.jpg"),
+        ("Event poster", "examples/baseline-comparison/poster-without.jpg", "examples/baseline-comparison/poster-with.jpg")]
+def baseline(t):
+    # hero: same prompt, same model, one sample each. Labels 40 px and titles 46 px stay >= 11 px when GitHub scales it to 390 px.
+    c = THEMES[t]; groups = ""
+    for i, (title, wo, wi) in enumerate(BASE):
+        for k, f in (("wo", wo), ("wi", wi)):
+            Image.open(ROOT / f).convert("RGB").resize((576, 768), Image.LANCZOS).save(SRC / f"_b{i}{k}.jpg", quality=90)
+        pan = lambda k, lab, col, w: f'''<div style="width:288px"><img src="_b{i}{k}.jpg" style="width:288px;height:384px;display:block;border-radius:3px">
+          <div style="margin-top:12px;font:{w} 40px/1 'CD Instrument Sans',sans-serif;color:{col}">{lab}</div></div>'''
+        groups += f'''<div><div style="font:400 46px/1 'CD Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 50;color:{c['ink']};margin-bottom:16px">{title}</div>
+          <div style="display:flex;gap:12px">{pan("wo","Without",c['mute'],400)}{pan("wi","With the skill",c['ink'],600)}</div></div>'''
+    html = f'''<html><head><style>{FACES}</style></head><body style="margin:0;background:{c['bg']}"><div style="display:flex;gap:40px;padding:26px 32px 30px">{groups}</div></body></html>'''
+    out = shot(html, f"baseline-{t}", 1280, 566)
+    for p in SRC.glob("_b*.jpg"): p.unlink()
+    return out
+
 def loop(t):
     c = THEMES[t]
     steps = [("0","Brief","what, who, where, must-keeps"),("1","Render","real output, real size"),("2","Look","blur, thumbnail, flip,<br>greyscale, crop"),
@@ -122,8 +139,10 @@ def loop(t):
     return shot(html, f"loop-{t}", 1280, 260)
 
 if __name__ == "__main__":
+    import sys
+    jobs = sys.argv[1:] or ["banner", "baseline", "strip", "loop"]
     for t in THEMES:
-        print(banner(t), strip(t), loop(t))
+        print(*[globals()[j](t) for j in jobs])
     for p in SRC.glob("_c*.jpg"): p.unlink()
-    for p in OUT.glob("before-after-*.png"):     # photos compress better as JPEG
+    for p in [*OUT.glob("before-after-*.png"), *OUT.glob("baseline-*.png")]:     # photos compress better as JPEG
         Image.open(p).convert("RGB").save(p.with_suffix(".jpg"), quality=86, optimize=True); p.unlink()

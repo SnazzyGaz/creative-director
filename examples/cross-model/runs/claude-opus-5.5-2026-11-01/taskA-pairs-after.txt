@@ -1,0 +1,6 @@
+body-ink-on-paper|#231B15|#FBF6EE|4.5
+muted-on-paper|#5A4B40|#FBF6EE|4.5
+orange-dark-on-paper|#9E4012|#FBF6EE|4.5
+cta-white-on-orange-dark|#FFFFFF|#9E4012|4.5
+loaf-ink-on-card|#231B15|#FFFFFF|4.5
+orange-border-vs-paper|#E8743B|#FBF6EE|3

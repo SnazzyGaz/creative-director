@@ -1,0 +1,9 @@
+# Art prompts (with-skill versions, GenerateImage, 3:4, 1 Nov 2026)
+
+Both ask for **no text**, so all type can be set in code (`compose.py`).
+
+**fox-art.jpg:** Children's picture book cover artwork, no text, no letters, no signs anywhere. A small red fox sits curled at the foot of a big old tree in a warm late-afternoon meadow, reading an open book that glows softly; the fox and the book are the single focal point, placed in the lower-middle third. One warm light source from the left (low sun), soft shadows to the right. Limited palette: fox orange and cream page light against soft sage green and pale sky blue, gentle and bright enough for ages 4-7, not dark. The top 38 percent of the picture is calm, plain pale sky with a soft gradient and almost no detail, left empty for a title. Painterly gouache picture-book style, simple shapes, clean silhouette of the fox, no clutter, no bunting, no extra objects, no book spines with writing.
+
+**poster-art.jpg:** Poster artwork for a neighbourhood jazz night, no text, no letters, no signs anywhere. Warm cream paper background with subtle print grain. In the lower half, a large upright double bass in deep navy blue, drawn as a bold flat screen-print shape with a few fine cream highlight lines for strings and f-holes, leaning slightly to the right. Behind it a soft round warm amber glow from a single old street lamp drawn small on the right, the light falling off smoothly into the cream paper as a soft radial gradient (no hard-edged blob). Two-colour screen print look, navy and amber on cream. The entire top 50 percent of the poster is plain empty cream paper with nothing in it, left free for type. Simple, bold, uncluttered.
+
+One sample each; both were used as generated (no art regeneration rounds were needed: no text, no glow blob).
