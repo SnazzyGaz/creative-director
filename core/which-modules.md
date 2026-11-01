@@ -41,7 +41,7 @@ Always load `core/`. Then add only what the task needs. Loading everything waste
 
 ## Token cost per module
 
-Approximate: counted with tiktoken's `cl100k_base` encoding (OpenAI's GPT-4 tokenizer) on 1 Nov 2026 (v0.4.0; `core/`, `AGENTS.md`, character, typography and lite recounted after the anatomy pass, the interaction flow and TYPE-10 were added). Other models tokenise differently, so expect roughly ±15%.
+Approximate: counted with tiktoken's `cl100k_base` encoding (OpenAI's GPT-4 tokenizer) on 1 Nov 2026 (v0.4.1; `core/`, `AGENTS.md`, character, typography and lite recounted after the anatomy pass, the interaction flow and TYPE-10 were added). Other models tokenise differently, so expect roughly ±15%.
 
 | File or set | Tokens |
 |---|---|

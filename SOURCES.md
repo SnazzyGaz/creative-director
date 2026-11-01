@@ -189,7 +189,7 @@ Every source cited in this repo. Ideas are paraphrased; no text or images are co
 - **[S147]** Kirstain, Y., et al. (2023). Pick-a-Pic: an open dataset of user preferences for text-to-image generation. *NeurIPS 2023*. https://arxiv.org/abs/2305.01569
 - **[S148]** Hayes, A. F., & Krippendorff, K. (2007). Answering the call for a standard reliability measure for coding data. *Communication Methods and Measures* 1(1), 77-89. https://doi.org/10.1080/19312450709336664
 
-## Anatomy pass (CHAR-9, CHAR-10; Unreleased)
+## Anatomy pass (CHAR-9, CHAR-10; v0.4.1)
 
 - **[S149]** Napier, J. R. (1956). The prehensile movements of the human hand. *Journal of Bone and Joint Surgery, British Volume* 38-B(4), 902-913. https://doi.org/10.1302/0301-620X.38B4.902 (two basic grips: precision, object pinched between fingers and the opposing thumb; power, object clamped between flexed fingers and palm with the thumb pressing back).
 - **[S150]** Kamali, N., Nakamura, K., Kumar, A., Chatzimparmpas, A., Hullman, J., & Groh, M. (2025). Characterizing photorealism and artifacts in diffusion model-generated images. *CHI 2025*. https://doi.org/10.1145/3706598.3713962 · https://arxiv.org/abs/2502.11989 (taxonomy of generator artifacts; "anatomical implausibilities" include extra or missing fingers, merged body parts across people, odd limb proportions and configurations, teeth overlapping the mouth, empty or overly shiny eyes).
@@ -197,7 +197,7 @@ Every source cited in this repo. Ideas are paraphrased; no text or images are co
 - **[S152]** Goldfinger, E. (2004). *Animal Anatomy for Artists: The Elements of Form*. Oxford University Press.
 - **[S153]** Bridgman, G. B. (1920). *Constructive Anatomy*. Public domain (hands and arms built as connected masses; the forearm turns the hand).
 
-## Type selection and font library (TYPE-10; Unreleased)
+## Type selection and font library (TYPE-10; v0.4.1)
 
 - **[S154]** SIL International. *SIL Open Font License 1.1* and its FAQ. https://openfontlicense.org (fonts may be used, bundled, modified and redistributed, including commercially, provided the licence travels with them and the fonts aren't sold on their own; reserved font names can't be used for modified versions).
 - **[S155]** Google Fonts. *google/fonts* repository: font binaries, licences and metadata for every family on Google Fonts. https://github.com/google/fonts (source of the files in `fonts/`; folders `ofl/` and `apache/` give each family's licence).
