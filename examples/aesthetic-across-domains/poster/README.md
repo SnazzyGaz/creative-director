@@ -17,4 +17,6 @@
 5. Sentence case, two inks (TYPE-6, TYPE-9, AES-3): **done.** No exclamation marks.
 - Type (TYPE-10): **done.**
 
+**Known issue (found later):** the brief's "Saturday 14 March 2027" is a Sunday. The light-touch fix kept the brief's wording and didn't check it. The fact check in the first-principles remake caught it (FP-3, [`../../first-principles-remake/`](../../first-principles-remake/)).
+
 QA re-run on the final poster: light not applicable · anatomy not applicable · contrast pass · far-read pass · additions none.

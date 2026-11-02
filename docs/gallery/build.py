@@ -35,8 +35,9 @@ E = [
  ("aesthetic-critique","Mauna Loa CO2 chart","Across domains","Code (matplotlib), NOAA data","aesthetic-across-domains/data-chart/side-by-side.jpg","aesthetic-across-domains/data-chart/critique.md","No source, an added 'Alarming increase!', rainbow bars; one line, a title that states the finding, source line."),
  ("web-ui","Claude Opus 5.5 smoke test (contaminated)","Outside run","Claude Opus 5.5, claude.ai","cross-model/runs/claude-opus-5.5-2026-11-01/crumb-1280.png","cross-model/runs/README.md","Not a score: the model had read the answer keys and ran no baseline. Shows the tools and rule IDs work outside Grok Bot; its rework passes contrast (min 6.11:1) and 390 px."),
  ("web-ui","GPT-6 pilot (contaminated)","Outside run","ChatGPT GPT-6","cross-model/runs/gpt-6-2026-11-01-pilot/outputs/task-a/shot-1280.png","cross-model/runs/README.md","Not a score: rubric read, with and without written in one chat, no tools run. Its rework, checked here, passes contrast, 390 px and 200% text."),
+ ("first-principles","Seed swap poster: remade from scratch","Remake","Code (Pillow)","first-principles-remake/side-by-side.jpg","first-principles-remake/README.md","Stepped back to the poster's one job (bring seeds), caught a Saturday that is a Sunday, compared three concepts, built Bring / Take. Self-judged."),
 ]
-mods = ["all","web-ui","ux","illustration","technical-drawing","3d","layout","typography","brand","character","aesthetic-critique"]
+mods = ["all","web-ui","ux","illustration","technical-drawing","3d","layout","typography","brand","character","aesthetic-critique","first-principles"]
 cards = "\n".join(f'''<article data-m="{m}"><a href="{G}{l}"><img loading="lazy" src="{R}{i}" alt="Before and after: {html.escape(t)}"></a>
 <div class="b"><p class="k">{m} · {k} · {html.escape(w)}</p><h2>{html.escape(t)}</h2><p>{html.escape(d)}</p><a href="{G}{l}">Critique and log</a></div></article>''' for m,t,k,w,i,l,d in E)
 btns = "".join(f'<button data-f="{m}"{" aria-pressed=\"true\"" if m=="all" else " aria-pressed=\"false\""}>{m}</button>' for m in mods)

@@ -59,7 +59,7 @@ Use `critique-template.md`. Tone: neutral and factual, like a doctoral superviso
 - **No myths as reasons.** Don't justify a fix with the golden ratio, the rule of thirds as a law, or colour-emotion claims. Cite a preference study only if it fits the case (`evidence.md`).
 - **Meets criteria.** Record what is met, with evidence. This is a record of what to preserve, not encouragement.
 - **Needs improvement, ranked biggest first.** Rank by effect on the whole. Structure (hierarchy, perspective, composition, flow) before surface (texture, polish, micro-spacing). Five at most.
-- **Blockers vs improvements.** Only **MUST-BE-RIGHT** failures are blockers: perspective, anatomy/proportion, light consistency, contrast/accessibility minimums, a main flow that can't be completed, 3D build defects. Everything else is an improvement, optional by nature.
+- **Blockers vs improvements.** Only **MUST-BE-RIGHT** failures are blockers: perspective, anatomy/proportion, light consistency, contrast/accessibility minimums, a main flow that can't be completed, 3D build defects, official marks that are altered, redrawn or invented (BRAND-4, BRAND-8). Everything else is an improvement, optional by nature.
 - **Measure at zoom before calling a failure.** For ellipses, verticals, alignment and edges, look at 2x or more, or use the tool (`tools/vp.py`, `tools/ellipse.py`, `tools/contrast.py`). A call made at normal size is a candidate, not a finding.
 - **Two kinds of finding.** MEASURED findings are checked with a tool or a count (contrast ratio, type size, collisions, perspective). INTERPRETED findings are aesthetic readings: tie each to a visible feature, state its effect and the trade-off, and label it as interpretation (AES-1 to AES-8). Only measured findings can be blockers. When the two disagree, state the trade-off; don't resolve it toward the neater option by default.
 - **Specific and actionable.** Where (region, element, coordinates), the observed evidence, the rule, and one concrete fix.
@@ -98,6 +98,8 @@ Take over (full rework or redo) when any of these is true:
 Note: take-over fires easily on AI-generated images, which often break perspective or construction outright. That's expected. Regenerating with the construction spelled out is cheap, but it is where the subject drifts, so check CD-5 first in the next critique.
 
 When taking over: keep the brief's intent (subject, mood, purpose), say plainly that it is a rework and which triggers fired, then run the normal loop on the new version. Otherwise, nudge.
+
+**Take-over is not a remake.** A take-over repairs a broken piece and keeps its idea. When the owner asks for it "from scratch", "redo", "rejig", "start over" or "reimagine", step back and rebuild from a new brief instead: `core/first-principles.md` (FP-1..8).
 
 ## 5. When to stop
 

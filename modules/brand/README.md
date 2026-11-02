@@ -31,12 +31,28 @@ The known failure this module addresses: critique rounds remove errors but canno
 - **Fix:** Load the brand fonts, or document the fallback in the hand-off. Then apply the typography module (TYPE-2 to TYPE-6).
 - **Source:** Wheeler [S119]; TYPE-1.
 
-### BRAND-4. Logo: clear space, minimum size, unaltered (MUST-BE-RIGHT)
-- **What:** Use the supplied logo file, never redrawn or regenerated. Keep its clear space (often defined as a unit of the logo, such as the cap height or a symbol width) and its minimum size. Don't stretch, recolour, rotate, add effects or set it on a busy background unless the guide allows that version.
-- **Why:** The logo is the brand's legal and visual signature; altered logos are the most visible brand error, and image generators routinely garble them.
-- **Check:** Measure the logo's width-to-height ratio against the file (within 1%). Measure the gap to the nearest element against the clear-space unit. Measure its width at display size against the minimum. Compare it side by side with the source file at 200%: same letters, same shapes?
-- **Fix:** Place the original vector file; restore clear space by moving other elements, not by shrinking the logo below minimum; use the guide's one-colour or reversed version on dark or busy grounds.
-- **Source:** Wheeler [S119].
+### BRAND-4. Official marks: the real file, unaltered, at good quality (MUST-BE-RIGHT)
+- **What:** This covers any official mark in the work: the client's own logo, and also sports teams, sponsors, crests, partner and product logos. The default is to **include the official mark**, at better quality rather than worse, from an official file. Use the first of these that exists:
+  1. the file the owner supplies;
+  2. the brand's own site, press kit or brand centre;
+  3. Wikimedia Commons, checked against the official source for shape and colour.
+
+  Prefer a vector or the largest raster. Use it unaltered: official proportions and colours, the version the guide gives for the background, its clear space (often a unit of the logo, such as the cap height or a symbol width) and its minimum size. Never redraw, trace, retype, restyle, recolour, stretch, rotate, add effects to, or AI-generate a mark, not even to "clean it up" or to match the piece's style. A labelled placeholder (a plain box reading "[Team] crest: official file needed") is the last resort, used only when no faithful source exists. Say so in the hand-off.
+- **Why:** A logo is a trademark. It identifies who the goods or services come from [S170]. In UK law, using a sign identical with or similar to a registered mark, in the course of trade and in a way likely to confuse, infringes it [S171]. Brand guides are explicit. Spotify says its logo is not to be modified or added to, and its orientation, colour and composition are not to change [S172]. Mastercard says its artwork is to be downloaded and not altered, and its Symbol is used only in full colour [S173]. A file on Commons carries no permission to use the trademark; that stays with the owner of the mark [S174]. Image generators routinely garble marks. A near-miss mark is worse than none, because it looks like a fake.
+- **Check:**
+  - The logo's width-to-height ratio matches the source file within 1%.
+  - Colours are sampled against the guide (ΔE under about 3).
+  - The gap to the nearest element is at least the clear-space unit.
+  - Its width at display size is at or above the minimum.
+  - Compared side by side with the source at 200%, it has the same letters and the same shapes.
+  - The hand-off names the source of each mark (owner, brand site, or Commons with its file page).
+  - For third-party marks, a line notes that permission to use them is the owner's call.
+- **Fix:**
+  - Place the original file.
+  - Restore clear space by moving other elements, not by shrinking the logo below its minimum.
+  - On dark or busy grounds, use the guide's one-colour or reversed version.
+  - If you can't find a faithful source, use the labelled placeholder and ask the owner for the file.
+- **Source:** Wheeler [S119]; USPTO [S170]; Trade Marks Act 1994 s.10 [S171]; Spotify [S172]; Mastercard [S173]; Wikimedia Commons [S174].
 
 ### BRAND-5. Voice matches, in words and in pictures
 - **What:** Headlines, labels and microcopy follow the brand's voice (the guide's words, or the three from intake). Tone may shift with context (error message vs launch post); voice stays the same.
@@ -58,6 +74,20 @@ The known failure this module addresses: critique rounds remove errors but canno
 - **Check:** Does the hand-off list the assumed colours, type and voice? Can each be traced to the subject rather than to a tool's default?
 - **Fix:** Add the "assumed" sheet and a question for the owner. Don't run extra rounds to fix "generic"; ask.
 - **Source:** CD-1, CD-2; web-ui-landing log.
+
+### BRAND-8. No invented marks in generated imagery (MUST-BE-RIGHT)
+- **What:** Generated or edited images often put pseudo-logos, fake wordmarks and garbled lettering on things that would carry a brand in real life. Look at jerseys and kits, bottles and cans, packaging, signage and shopfronts, vehicles, screens, pitch boards and caps. Each mark must be one of two things: the official one, placed from the file per BRAND-4, or none at all.
+- **Why:** An invented mark reads as a fake, or as an existing brand the owner did not choose. A mark similar to a real one can raise the same confusion problem as copying it [S171]. Generators don't know which brands the brief allows.
+- **Check:**
+  - Crop every surface where a mark could appear at 2x-4x, and write one line per crop: none, official (with its source) or invented.
+  - Read any lettering. Gibberish text that looks like a logo counts as invented.
+  - Re-check after every regenerate or edit.
+- **Fix:**
+  - Regenerate with the surfaces described as plain ("plain white jersey, no logos or text; unlabelled bottle").
+  - Or paint the mark out to the plain surface.
+  - Then, if the brief calls for a real mark, composite the official file in afterwards (BRAND-4), following the surface's perspective without distorting the mark's proportions beyond what the surface's own perspective causes.
+  - Never ask a generator to draw a real logo.
+- **Source:** BRAND-4; Trade Marks Act 1994 s.10 [S171]; ILL-11.
 
 ---
 

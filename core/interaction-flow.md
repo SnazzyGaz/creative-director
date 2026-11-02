@@ -4,7 +4,7 @@
 
 ## What it is good for
 
-- **Catching what breaks a piece:** perspective, anatomy and hands, light from more than one place, unreadable or low-contrast type, broken flows, 3D build faults (the MUST-BE-RIGHT list in `critique-loop.md`).
+- **Catching what breaks a piece:** perspective, anatomy and hands, light from more than one place, unreadable or low-contrast type, broken flows, 3D build faults, altered or invented logos (the MUST-BE-RIGHT list in `critique-loop.md`).
 - **Keeping work honest to the brief:** no invented names, slogans, addresses or story content (CD-1, CD-5, AES-10).
 - **Turning a rough or generated piece into a finished one:** text-free art plus type set in code, picked from the [font library](../fonts/README.md) to suit the genre (TYPE-10).
 - **Judging versions side by side** for a brief, with the trade-off stated (AES-9).
@@ -19,9 +19,10 @@ It is not a taste oracle. Where no rule settles a choice, it asks the owner of t
 | "Just fix it", "I want the result", "don't critique, do it" | **Result wanted** | Skip the blurb. Fix every imperative point, check, and deliver the result with the change list (FLOW-4). |
 | "What's wrong with this?", "consult creative director" | **Consult** | Critique only, with the template. Change nothing. |
 | "creative director: direct this", or a brief with no work yet | **Direct** | Write the brief, set direction, compare rough options (CD-1 to CD-3), then run the loop. |
+| "Redo this from scratch", "rejig it", "start over", "reimagine it" | **Remake from first principles** | Step back: what it is, who it is for, its one job, the feeling, the given facts, what must survive. Send a 5-8 line brief for sign-off, then 2-3 structurally different concepts with a recommendation, build the chosen one and run the full QA (`core/first-principles.md`, FP-1..8). |
 | The agent's own output (`+ creative director`) | **Self-check** | Run the loop silently and deliver the checked result. |
 
-If the ask is unclear, treat it as an unprompted hand-off: a blurb costs one message, a wrong redo costs the whole piece.
+Without a from-scratch word, a remake is never assumed: the light touch stays the default (FP-1). If the ask is unclear, treat it as an unprompted hand-off: a blurb costs one message, a wrong redo costs the whole piece.
 
 ## The flow
 
@@ -32,6 +33,10 @@ flowchart TD
     B -->|Just fix it / I want the result| C2[Analyse the same way]
     B -->|Critique only| K[Consult: critique with the template, change nothing]
     B -->|Start from a brief| D[Direct: brief, direction, rough options]
+    B -->|From scratch / rejig / reimagine| P[Step back: what it is, for whom, one job,<br>feeling, given facts, must-survive FP-2, FP-3]
+    P --> P1[Brief from first principles, 5-8 lines:<br>owner signs off FP-4]
+    P1 --> P2[2-3 concepts that differ in structure,<br>recommend one, owner picks FP-5, FP-6]
+    P2 --> H
     D --> C2
     C --> E{Egregious?<br>take-over triggers in 4b}
     E -->|Yes| E1[Say up front: this is a redo, and why]
@@ -94,11 +99,12 @@ flowchart TD
 | **Self-check** (`+ creative director`) | The agent is the owner's maker, so it runs the loop and FLOW-3 without asking, and delivers with the checklist. It asks only for taste calls no rule settles. |
 | **Consult** (`consult creative director`) | Critique only, per the template; nothing applied. If the person then says "do it", that is the sign-off: go to FLOW-2. |
 | **Direct** (`creative director: direct this`) | Sign-off happens at the checkpoints in `creative-direction.md` (brief, direction, chosen option). The final delivery uses FLOW-3. |
+| **Remake** ("from scratch", "rejig", "reimagine") | Sign-off happens twice: on the brief from first principles (FP-4), then on the chosen concept (FP-6). "Just do it" skips both waits but states the brief and the reason for the pick at the top of the delivery. The delivery uses FLOW-3 and compares the remake with the original (FP-7). |
 | **Hand-off with no mode named** | FLOW-1 (blurb, sign-off), then FLOW-2 and FLOW-3. "Just fix it" switches to FLOW-4. |
 
 ## Quick check before you reply
 
-- [ ] I know which of the five asks this is.
+- [ ] I know which of the six asks this is (a remake only on a from-scratch word).
 - [ ] Unprompted: my reply is a ranked, tagged blurb and a question, and nothing was changed.
 - [ ] After sign-off: every signed-off point was attempted; edits that couldn't do it became regenerations.
 - [ ] Each point re-checked on the new render; light, anatomy and type blockers re-run.

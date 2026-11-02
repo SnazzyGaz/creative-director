@@ -1,8 +1,29 @@
 # Changelog
 
-## Unreleased (1 November 2026)
+## v0.4.2 (2 November 2026)
 
-Examples and README only; nothing in the skill zip changed, so no new release.
+- **First-principles remake (FP-1 to FP-8).** New `core/first-principles.md`, a mode for when the owner of the work asks for something "from scratch", "redo", "rejig", "start over" or "reimagine".
+  - It steps back before drawing: what the piece is and where it is seen, who it is for, its one job, the feeling, the given facts word for word, what must survive and what was incidental, and how done is judged.
+  - It checks the given facts against each other and never invents.
+  - It sends a 5-8 line brief from first principles for sign-off.
+  - It makes 2-3 concepts that differ in structure, not only style (a one-sentence structure test), recommends one against the brief and drops the others with reasons.
+  - It builds the chosen concept and runs the full loop: anatomy (CHAR-9), light (TD-LIT-1), type and contrast, marks, additions, and a side-by-side with the original and any light-touch fix (AES-9).
+  - The light touch stays the default without a trigger word, and a take-over (section 4b) is not a remake.
+  - Wired into `AGENTS.md`, `SKILL.md`, the skill zip's modes and description, `core/interaction-flow.md` (ask table, diagram, mode mapping), `core/which-modules.md`, `core/critique-template.md` (new *Brief from first principles* section), `core/critique-loop.md`, `core/creative-direction.md`, `lite/`, `llms.txt`, the Cursor rule and the README.
+  - Sources S163-S169: Rand, Schön, Dorst, the d.school, IDEO Design Kit and two by Dubberly.
+- **Official logos and marks (BRAND-4 widened, new BRAND-8).**
+  - BRAND-4 now covers every official mark: the client's own logo, and also sports teams, sponsors, crests and partners. The default is to include the official mark, at good quality, from the owner's file, the brand's own site or press kit, or Wikimedia Commons checked against the brand, and to use it unaltered.
+  - A mark is never redrawn, restyled or AI-generated. A labelled placeholder is only a last resort, when no faithful source exists.
+  - BRAND-8 (blocker): check generated images for invented logos and garbled lettering on jerseys, bottles, packaging and signs. Regenerate those surfaces plain, then composite the official file in if the brief calls for it.
+  - Added to the MUST-BE-RIGHT list, the delivery QA line, FP-8, `AGENTS.md`, `SKILL.md` and `lite/`.
+  - Sources S170-S174: USPTO, the Trade Marks Act 1994 s.10, Spotify and Mastercard brand guidelines, and Wikimedia Commons on non-copyright restrictions.
+- **Example: `examples/first-principles-remake/`.** The seed-swap poster from the aesthetic-across-domains set, rebuilt from the brief.
+  - It includes the original, the step-back brief, three concept thumbnails (seed packet, Bring / Take, calendar), the remake, a labelled side-by-side with the light-touch fix, a three-up, a far read at 10% and a critique. Fonts: Bricolage Grotesque and Hanken Grotesk; the concepts use Alfa Slab One with Zilla Slab, and Jost with Literata.
+  - The fact check found that the brief's "Saturday 14 March 2027" is a Sunday. The remake holds the weekday back for the owner, and the earlier poster's README now notes the issue.
+  - It is self-judged. Gallery gains a card and a `first-principles` filter.
+- Token counts in `which-modules.md` updated.
+
+### Also in this release (previously unreleased, 1 November 2026)
 
 - **Hero lighting fixes (TD-LIT-1).** Aesthetic poster: after two more image edits (the first rejected, kept in `src/`), the bass now stands in the lamp's light, lit from the lamp side with its shadow falling away, and is drawn as a double bass (sloped shoulders) rather than a violin; type unchanged, contrast re-checked (all pass). It is `poster-aes-r3.jpg`; the round 2 art is kept. Middle "with the skill" fox cover: the art prompt had asked for a glowing book, which lit the fox's face from below against the low sun; one edit made the book plain paper (`fox-with-r3.jpg`, old art kept as `src/fox-art-r1-glowing-book.jpg`), contrast re-checked. Side-by-sides, look sheets, gallery text and the README hero (light and dark) rebuilt; the hero's "known fault" caption replaced with what was fixed.
 - **Anatomy sweep.** New `examples/anatomy-sweep/`: CHAR-9/10 run over every image in `examples/` and the hero, with crops for the fixed images. No delivered, with-skill or aesthetic-layer image failed; without, before and input images are noted, not changed.

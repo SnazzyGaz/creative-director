@@ -7,6 +7,7 @@
 - [Interaction flow](core/interaction-flow.md): what the CD is for, sign-off before changes, delivery checklist
 - [Critique loop](core/critique-loop.md)
 - [Creative direction](core/creative-direction.md)
+- [First-principles remake](core/first-principles.md): when asked to redo or reimagine from scratch, step back, write a brief, compare concepts, rebuild
 - [Which modules to load](core/which-modules.md)
 - [Critique template](core/critique-template.md)
 - [Modules](modules/): technical-drawing, illustration, character, web-ui, ux, 3d, typography, layout, brand

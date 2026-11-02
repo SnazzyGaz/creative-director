@@ -76,10 +76,13 @@ In the [baseline](examples/baseline-comparison/) the with-skill poster won on ac
 | **Self-check**<br>`+ creative director` | The agent runs the loop on its own output. Cheapest. |
 | **Consult**<br>`consult creative director` | Send the brief and the real output; get back a neutral critique with ranked fixes ([template](core/critique-template.md)). |
 | **Direct**<br>`creative director: direct this` | Joins at the start: writes the brief, sets direction, picks from rough options, reviews at checkpoints ([CD-1..6](core/creative-direction.md)). |
+| **Remake from scratch**<br>"redo", "rejig", "start over", "reimagine" | Steps back first: what the piece is, who it is for, its one job, the feeling, the given facts (checked against each other) and what must survive. Sends a 5-8 line brief for sign-off, then 2-3 concepts that differ in structure, recommends one, builds it and runs the full checks ([FP-1..8](core/first-principles.md), [example](examples/first-principles-remake/)). Without these words the light touch stays the default. |
 
 Always send the actual output (image, screenshot at real size, URL or renders), never a description.
 
 **Handing over work with no specific ask** gets a short, ranked list of the changes that matter, each tied to a rule and marked *edit* or *regenerate*, and nothing changes until you sign off. Then every signed-off point is applied and checked, and the result comes back with a done / not done line per point. Say "just fix it" to skip the sign-off. Flow and diagram: [`core/interaction-flow.md`](core/interaction-flow.md).
+
+**Logos and marks:** the official file goes in (from the owner, the brand's own site or Wikimedia Commons, checked against the brand), unaltered and at good quality. A mark is never redrawn, restyled or AI-generated, and generated images are checked for invented logos on jerseys, bottles and signs ([BRAND-4, BRAND-8](modules/brand/README.md)).
 
 **Type:** a [font library](fonts/) of 62 free families (SIL OFL or Apache) grouped into 18 themes, from editorial serif to horror to nautical, with a [catalogue](fonts/CATALOGUE.md) and specimen sheets, so type matches the brief's genre instead of repeating one face.
 

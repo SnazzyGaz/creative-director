@@ -15,7 +15,8 @@ REPO = "https://github.com/SnazzyGaz/creative-director"
 DESC = ("Judge and improve visual work (generated images, illustrations, technical drawings, 3D renders, web and app UI, "
         "UX flows, typography, layout, brand) against cited, checkable design rules, with a light-touch "
         "render-critique-fix loop and a comparative aesthetic layer (intent, side-by-side judgement, revision checks). Use when making or reviewing anything visual, or when the user says "
-        "\"+ creative director\", \"consult creative director\" or \"creative director: direct this\".")
+        "\"+ creative director\", \"consult creative director\" or \"creative director: direct this\", or asks to redo, rejig or reimagine "
+        "a piece from scratch (step back, brief from first principles, 2-3 concepts, then build).")
 DIRS = ["core", "modules", "lite", "tools"]
 FILES = ["SOURCES.md", "LICENSE", "fonts/README.md", "fonts/CATALOGUE.md", "fonts/catalogue.json"]   # font catalogue only; font files stay in the repo
 SKIP_EXT = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg", ".blend", ".pyc"}
@@ -36,6 +37,10 @@ def skill_md():
              "- **Hand-off with no specific ask:** analyse, send a ranked sign-off blurb of the imperative changes, and apply "
              "nothing until the owner signs off; \"just fix it\" gets the finished result with a done / not done list "
              "(`core/interaction-flow.md`).\n"
+             "- **Remake from scratch** (\"redo\", \"rejig\", \"start over\", \"reimagine\"): step back to what the piece is, "
+             "who it is for, its one job, the feeling and the given facts; send a 5-8 line brief from first principles for "
+             "sign-off; make 2-3 structurally different concepts, recommend one, build it, then run the full QA "
+             "(`core/first-principles.md`, FP-1..8). Otherwise the light touch is the default.\n"
              "\nAlways work from the actual output (image, screenshot at real size, URL or renders), never a description.\n")
     tail = (f"\n## Files in this skill\n`core/` (always), `modules/<name>/README.md` (as `core/which-modules.md` says), "
             f"`lite/CREATIVE-DIRECTOR-LITE.md` (short version for small contexts), `tools/` (optional Python: Pillow, NumPy), "
