@@ -20,10 +20,10 @@ A set of design rules and a critique loop that any AI agent can read. It helps a
 
 **Grok Bot.** One click: [Creative Director bot](https://x.ai/bot/XWBKgRnDOw7uR5SpKx3Af). Or point any bot at [`AGENTS.md`](AGENTS.md).
 
-**Claude.** Download [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip) (about 140 KB: `SKILL.md`, `core/`, `modules/`, `lite/`, `tools/`, the font catalogue; no images, font files or examples; built by [`tools/package_skill.py`](tools/package_skill.py)). The zip has the `creative-director/` folder at its top level, as Claude requires.
+**Claude.** Download [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip) (about 200 KB: `SKILL.md`, `core/`, `modules/`, `lite/`, `tools/`, the font catalogue; no images, font files or examples; built by [`tools/package_skill.py`](tools/package_skill.py)). The zip has the `creative-director/` folder at its top level, as Claude requires.
 - **claude.ai:** first turn on *Code execution and file creation* in Settings > Capabilities (skills need it). Then, as [Anthropic's guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude) describes: go to Customize > Skills, click **+**, then **+ Create skill**, choose **Upload a skill**, and upload the zip. Toggle it on in the skills list. On Team and Enterprise plans an owner may need to allow skills first (see the guide).
 - **Claude Code:** `unzip creative-director-skill.zip -d ~/.claude/skills/` (or `.claude/skills/` inside a project).
-- **Claude Projects:** unzip, then add `creative-director/SKILL.md`, `core/` and the modules you need as project knowledge.
+- **Claude Projects:** unzip, then add `creative-director/SKILL.md`, `core/principles.md`, `core/critique-loop.md`, `core/critique-template.md` and the modules you need as project knowledge.
 
 **Other tools.**
 
@@ -33,7 +33,7 @@ A set of design rules and a critique loop that any AI agent can read. It helps a
 | Claude Code, Claude Skills | Skill zip (above), [`CLAUDE.md`](CLAUDE.md), [`SKILL.md`](SKILL.md) |
 | Codex, Gemini CLI, Jules | [`AGENTS.md`](AGENTS.md) |
 | GitHub Copilot | [`.github/copilot-instructions.md`](.github/copilot-instructions.md) |
-| ChatGPT, Gemini Gems, Claude Projects | Upload `AGENTS.md`, `core/` and the modules you need as knowledge |
+| ChatGPT, Gemini Gems, Claude Projects | Upload `AGENTS.md`, `core/principles.md`, `core/critique-loop.md`, `core/critique-template.md` and the modules you need as knowledge |
 
 Every entry point leads back to `AGENTS.md`, and [`llms.txt`](llms.txt) is there for tools that read it.
 
@@ -58,7 +58,7 @@ Example sets across every domain: four take-overs of deliberately bad work, nudg
   <img alt="The loop: 0 Brief, 1 Render, 2 Look, 3 Critique, 4 Fix, 5 Stop. Fix loops back to Render. If the work is fundamentally broken, take over and rework." src="docs/assets/loop-light.png" width="100%">
 </picture></p>
 
-Each rule has an ID (`CORE-2`, `TD-PER-1`, `UI-6`) and the same parts: what, why, a check you can run, the usual fix, and a source. Only **MUST-BE-RIGHT** errors (perspective, anatomy, light, contrast and accessibility, broken flows, 3D build defects) block; everything else is a default. Any picture with a person, hand or animal also gets an anatomy pass: every hand, limb and face is cropped and checked one by one (count, trace to the shoulder, grip, joints), and a fail blocks delivery ([CHAR-9](modules/character/README.md#char-9-anatomy-pass-crop-trace-count-must-be-right-delivery-gate)). Full loop: [`core/critique-loop.md`](core/critique-loop.md).
+Each rule has an ID (`CORE-2`, `TD-PER-1`, `UI-6`) and the same parts: what, why, a check you can run, the usual fix, an honest evidence grade, and a source. Only **MUST-BE-RIGHT** errors (perspective, anatomy, light, contrast and accessibility, broken flows, 3D build defects) block; everything else is a default. Any picture with a person, hand or animal also gets an anatomy pass: every hand, limb and face is cropped and checked one by one (count, trace to the shoulder, grip, joints), and a fail blocks delivery ([CHAR-9](modules/character/README.md#char-9-anatomy-pass-crop-trace-count-must-be-right-delivery-gate)). Full loop: [`core/critique-loop.md`](core/critique-loop.md).
 
 ### Correctness and quality
 
@@ -84,7 +84,7 @@ Always send the actual output (image, screenshot at real size, URL or renders), 
 
 **Logos and marks:** the official file goes in (from the owner, the brand's own site or Wikimedia Commons, checked against the brand), unaltered and at good quality. A mark is never redrawn, restyled or AI-generated, and generated images are checked for invented logos on jerseys, bottles and signs ([BRAND-4, BRAND-8](modules/brand/README.md)).
 
-**Type:** a [font library](fonts/) of 62 free families (SIL OFL or Apache) grouped into 18 themes, from editorial serif to horror to nautical, with a [catalogue](fonts/CATALOGUE.md) and specimen sheets, so type matches the brief's genre instead of repeating one face.
+**Type:** a [font library](fonts/) of 61 free families (SIL OFL or Apache) grouped into 18 themes, from editorial serif to horror to nautical, with a [catalogue](fonts/CATALOGUE.md) and specimen sheets, so type matches the brief's genre instead of repeating one face.
 
 ## Requirements
 
@@ -93,18 +93,19 @@ Always send the actual output (image, screenshot at real size, URL or renders), 
 - **Recommended setup:** Playwright or headless Chrome for UI (`tools/shot.sh` uses Chrome), Blender for 3D (plus [model-qa](https://github.com/SnazzyGaz/model-qa) for build checks), and Python 3 with Pillow and NumPy for the `tools/` scripts (look tests, contrast, vanishing points, ellipses, layout grid, 3D intersections; `pip install -r tools/requirements.txt`).
 - **Without vision** you only get a rules-only review of code or a description. It can still catch contrast, spacing and flow problems in code, but it can't judge how the work looks, and it is much weaker.
 
-Context cost: about 16,100 tokens for the everyday `core/` files (19,600 with brand intake and first-principles) plus 1,800-9,900 per module ([table](core/which-modules.md#token-cost-per-module)). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 2,800 tokens.
+Context cost: about 6,100 tokens always loaded (`AGENTS.md`, principles and the loop; 7,600 with the critique template), plus 1,900-8,800 per module ([table](core/which-modules.md#token-cost-per-module)). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 2,900 tokens.
 
 ## What's inside
 
 ```
-core/       principles, interaction flow, creative direction, brand intake, evidence, the loop, critique template, module picker
+core/       always: principles, the loop (with sign-off and delivery). On demand: critique template,
+            creative direction, first-principles remake, brand intake, evidence, module picker
 modules/    technical-drawing · illustration · character · web-ui · ux · 3d
             typography · layout (social, posters, slides, print) · brand · aesthetic-critique
             composition (balance, focus, unity, space, beauty) · colour-value
 tools/      look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, 3D intersections, before/after
 examples/   stress tests, round by round, including this README's own critique
-fonts/      62 free font families in 18 themes, catalogue and specimen sheets
+fonts/      61 free font families in 18 themes, catalogue and specimen sheets
 lite/       the loop, core rules and blockers in one short file
 docs/       gallery, README images, reference library, design notes (DECISIONS.md, PROPOSED-REPO.md)
 ```

@@ -3,7 +3,7 @@
 ## Grids (Müller-Brockmann) [S60]
 - Divide the page into columns and rows of fields, separated by consistent gutters. Text, images and captions fill whole fields.
 - Fewer image sizes give a calmer, more legible page. Choose the grid to suit the content, not the other way round.
-- On the web, a column grid plus a spacing scale (UI-3) does the same job. Intrinsic layouts (*Every Layout*) let content set breakpoints [S56].
+- On the web, a column grid plus a spacing scale (CORE-4) does the same job. Intrinsic layouts (*Every Layout*) let content set breakpoints [S56].
 
 ## Modular scale [S55, S56]
 Start at the body size and multiply or divide by one ratio for headings, and for spacing too if you like. Round the results. Treat the scale as suggestions, not law.

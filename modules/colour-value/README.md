@@ -1,6 +1,6 @@
 # Module: colour and value
 
-The light-dark structure of a piece (value, key, notan) and how its colours work together (contrast in place, harmony, chroma, light, distance, colour-vision deficiency). It deepens CORE-2, CORE-3 and CORE-6 and ILL-4 and ILL-9; it doesn't replace them. Load with `core/` for any picture, poster, page or palette decision; with `composition/` for structure.
+The light-dark structure of a piece (value, key, notan) and how its colours work together (contrast in place, harmony, chroma, light, distance, colour-vision deficiency). It deepens CORE-2, CORE-3 and CORE-6, and is the home for value and colour rules in pictures (former ILL-4 and ILL-9). Load with `core/` for any picture, poster, page or palette decision; with `composition/` for structure.
 
 Format: **What / Why / Check / Fix / Grade / Source**. Grades as in `core/evidence.md` (well supported, partly supported, craft wisdom, contested / myth). Nothing here is MUST-BE-RIGHT except where it repeats an existing blocker (text contrast, UI-6).
 
@@ -22,7 +22,7 @@ Measuring: `tools/look.py` gives a greyscale copy and L* statistics; `tools/cont
 - **Check:** Threshold the greyscale at its median (2 values) and at the 33rd and 66th percentiles (3 values). Does the main idea still read? Are the darks a few connected shapes or many isolated spots? Is any important edge lost because both sides fall in one group?
 - **Fix:** Merge isolated darks into a connected chain (Gurney's linking darks); push the focus's edge across the threshold; simplify a busy pattern into fewer, larger shapes.
 - **Grade:** Craft wisdom, consistent with coarse-to-fine perception.
-- **Source:** Dow [S181]; Gurney, *Linking Darks* [S16]; Schyns & Oliva [S244]; ILL-4; COMP-13.
+- **Source:** Dow [S181]; Gurney, *Linking Darks* [S16]; Schyns & Oliva [S244]; COMP-13.
 
 ### CV-3. Don't separate with hue alone: check every important edge in greyscale
 - **What:** Two areas of different hue but equal lightness (equiluminant) seem to shimmer, float or lose their position, and the edge disappears in greyscale. Use that only for a deliberate glow or vibration. Every edge that carries meaning (figure against ground, text against background, a data series against its neighbour) needs a lightness step.
@@ -38,7 +38,7 @@ Measuring: `tools/look.py` gives a greyscale copy and L* statistics; `tools/cont
 - **Check:** Peephole test: punch a small hole in grey card (or crop a tiny patch digitally and place it on mid grey) and look at a colour isolated from its neighbours. Does it match what you thought you used? Look at the same colour in two places in the piece: do they look the same? Should they?
 - **Fix:** Adjust the colour in place until it reads as intended; if the same brand or role colour must look the same in two places, keep its surroundings similar or tune it locally.
 - **Grade:** Well supported.
-- **Source:** Chevreul [S188]; Albers [S47]; Palmer, Schloss & Sammartino [S217]; CORE-6; ILL-9.
+- **Source:** Chevreul [S188]; Albers [S47]; Palmer, Schloss & Sammartino [S217]; CORE-6.
 
 ### CV-5. Harmony: hold one dimension steady, vary another in steps
 - **What:** A palette feels unified when its colours share something: a narrow hue range with lightness steps, a shared lightness with hue steps, or a shared low chroma with one strong accent. Colour-wheel schemes (complementary, triadic, split-complementary) are starting points, not proof of harmony.
@@ -60,9 +60,9 @@ Measuring: `tools/look.py` gives a greyscale copy and L* statistics; `tools/cont
 - **What:** All the colours in a scene sit under the same light, so they share its tint: everything under warm evening light leans warm, everything in shade leans toward the sky colour. A palette that ignores the light looks pasted together.
 - **Why:** The visual system expects a common illuminant and judges colours relative to it (colour constancy) [S217]; painters unify a scene with one light colour, sometimes by literally glazing or tinting the whole (Gurney) [S51].
 - **Check:** Sample a white or neutral in the light and the same in shadow. Do they shift the same way as the stated light (key, sky, bounce)? Does any object keep its "local" colour unchanged when everything else has shifted?
-- **Fix:** Shift the outlier toward the light's tint; add a light colour overlay at low opacity to the whole and then restore the focus.
+- **Fix:** Shift the outlier toward the light's tint; add a light colour overlay at low opacity to the whole and then restore the focus. Set shadow colour from the fill light, not a formula: shadows are not always blue; up-facing shadow planes take the sky colour, down-facing ones can warm from bounced light.
 - **Grade:** Colour constancy: well supported. The painting practice: craft wisdom.
-- **Source:** Gurney, *Color and Light* [S51]; Palmer, Schloss & Sammartino [S217]; Rood [S190]; ILL-9; TD-LIT-1.
+- **Source:** Gurney, *Color and Light* [S51]; Palmer, Schloss & Sammartino [S217]; Rood [S190]; TD-LIT-1. Former ILL-9 merged here and in CV-4.
 
 ### CV-8. Distance lowers contrast and sharpness
 - **What:** Further away means lower value contrast, lower chroma, softer edges and a shift toward the colour of the air (usually lighter and bluer by day). Keep the strongest contrasts and sharpest edges in the foreground or at the focus.

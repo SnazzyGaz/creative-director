@@ -2,7 +2,7 @@
 
 Fixed-frame layouts: social cards and posts, link previews, thumbnails, posters, slides and print. Load with `core/`; add `typography/` for any text and `brand/` for anything with a name on it. Web pages that scroll and reflow are `web-ui/`.
 
-Format: **What / Why / Check / Fix / Source**. Rules marked **MUST-BE-RIGHT** are blockers; the rest are defaults.
+Format: **What / Why / Check / Fix / Grade / Source**. Rules marked **MUST-BE-RIGHT** are blockers; the rest are defaults.
 
 Why it matters: most social images are first seen as a small tile in a moving feed, where appeal is judged in about 50 ms [S36]. The job of the layout is to survive that glance and the platform's crop.
 
@@ -11,8 +11,9 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 ### LAY-1. Build on a grid
 - **What:** Divide the frame into columns (and rows for posters and slides), with margins and gutters from one spacing unit. Text blocks and images start and end on grid lines.
 - **Why:** Shared edges make a layout read as one ordered thing; near-miss alignments look like errors (CORE-4).
-- **Check:** Overlay the grid (or list the left x and top y of every block). Are there edges within about 1% of the frame width of each other that don't match exactly?
+- **Check:** Overlay the grid (or list the left x and top y of every block). Any edges that almost match but don't (bands: COMP-24)?
 - **Fix:** Snap near-misses to the same line. Common starting grids: 12 columns for 16:9, 6 for square and 4:5, 4 for 9:16.
+- **Grade:** Craft wisdom.
 - **Source:** Müller-Brockmann, *Grid Systems* [S60]; UI-4.
 
 ### LAY-2. Margins that breathe, and are even
@@ -20,6 +21,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Why:** Content crammed against the frame looks cropped, and platforms round corners and overlay buttons near edges.
 - **Check:** Measure the smallest distance from text and key shapes to each edge, in pixels and as a % of the short side.
 - **Fix:** Shrink or cut content rather than the margin. Set the margin as a token and use it for every edge.
+- **Grade:** Craft wisdom.
 - **Source:** Müller-Brockmann [S60]; Lupton [S54].
 
 ### LAY-3. One focal point, one reading order
@@ -27,6 +29,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Why:** A feed tile gets a glance. With two competing focal points, neither lands (CORE-1).
 - **Check:** Blur and thumbnail tests (`tools/look.py`). What is seen first, second, third? Is that the order the brief needs? Count text elements.
 - **Fix:** Scale up the lead element; cut the rest to the essentials; move secondary text to the post body or caption.
+- **Grade:** Partly supported (CORE-1).
 - **Source:** CORE-1; NN/g, *Visual Hierarchy* [S1].
 
 ### LAY-4. Export at the platform's size and ratio
@@ -34,6 +37,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Why:** Wrong ratios get cropped or padded; small images get blurred or shown as tiny thumbnails.
 - **Check:** Read the file's pixel size, ratio and file size against the table.
 - **Fix:** Re-render at the right size. Lay out once at the largest size, then make the other crops deliberately, not by auto-crop.
+- **Grade:** Standard (platform specs).
 - **Source:** the platform docs cited in the table.
 
 **Platform specs, checked 1 November 2026.** Platforms change these often; re-check the cited page before relying on them.
@@ -55,6 +59,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Why:** A headline cut off by the grid crop or a play badge makes the piece fail at its one job.
 - **Check:** Draw the platform's crops on the image: centre crops to 1:1, 3:4 and 1.91:1 for any image that may be reused; the 9:16 overlay zones; the bottom-right badge zone on thumbnails. Does any key element cross a line?
 - **Fix:** Pull key elements towards the centre; keep a margin of at least 6-8% of the short side free of text; make separate crops instead of one compromise.
+- **Grade:** Standard (platform specs).
 - **Source:** [S125, S127, S130]; LAY-2.
 
 ### LAY-6. Legible at feed size (MUST-BE-RIGHT for the main message)
@@ -62,6 +67,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Why:** That is the size most people see it at; the full-size file is what only the designer sees.
 - **Check:** Scale the export to 400 px wide. Is the headline readable without zoom? Measure its x-height: about 6 px or more (TYPE-3). Does the idea survive the thumbnail test at 200 px wide?
 - **Fix:** Fewer, bigger words; stronger value contrast between text and ground (UI-6 ratios apply to text in images too); remove detail that turns to noise.
+- **Grade:** Partly supported (legibility research); the feed-size test is craft.
 - **Source:** Lindgaard et al. [S36]; Legge & Bigelow [S114]; UI-6.
 
 ### LAY-7. Posters: read at distance, then up close
@@ -70,6 +76,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Check:** View the poster at about 10% of its size (roughly how a 50 cm-wide poster looks from 5 m). Do the image and headline still read? Is the detail text set together, not scattered?
   **Signage and A-boards (viewing-distance check):** write down the printed size and the distances it is read from (a pavement board: headline and price from 3-5 m, body from about 1-1.5 m). Convert each key line's cap height from pixels to millimetres at print size and compare with the distance. A practical working minimum is cap height ≈ distance ÷ 250 (12-20 mm for 3-5 m). The sign industry's best-case figure, head-on in good light, is about distance ÷ 360; signs seen at an angle or in passing need far more, about distance ÷ 120 [S179, S180]. Report each line as "reads to X m".
 - **Fix:** Enlarge the headline and simplify the image; group details into one block on the grid. On signage, cut words before shrinking the type that must read from the pavement.
+- **Grade:** Standard (sign-industry guidance) for the size rule; the two-distance test is craft.
 - **Source:** Müller-Brockmann [S60]; CORE-1; United States Sign Council Foundation [S179, S180].
 
 ### LAY-8. Slides: one point each, with signals
@@ -77,6 +84,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Why:** People learn more when extraneous material is cut (coherence) and when the key items are signalled; text that duplicates speech word for word can hurt (redundancy) [S132]. Dense slides become documents nobody reads [S133].
 - **Check:** Can the slide's point be read from its title alone? Count lines and the smallest size. Is there clip art, a stock photo or a template ornament with no job?
 - **Fix:** Rewrite titles as claims; split crowded slides; move detail to speaker notes or a handout.
+- **Grade:** Partly supported (multimedia-learning experiments [S132]).
 - **Source:** Mayer, *Multimedia Learning* [S132]; Duarte, *slide:ology* [S133].
 
 ### LAY-9. Print files: bleed, resolution, colour (MUST-BE-RIGHT for print)
@@ -84,18 +92,20 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Why:** Trimming is not exact; without bleed you get white slivers, and without a safe margin text gets cut. Low-res images print soft; RGB colours shift when converted late.
 - **Check:** Read the document setup (bleed, trim, margins). Compute ppi: image pixels ÷ printed inches. Check the output intent or profile of the PDF and that fonts are embedded.
 - **Fix:** Extend backgrounds into the bleed; re-source or re-render low-res images (don't upsample and call it 300); export PDF/X with the printer's profile, or ask the printer.
+- **Grade:** Standard (print production; the printer's spec wins).
 - **Source:** Adobe InDesign user guide (bleed, slug, printing) [S131]; ask the printer for their spec, which overrides these defaults.
 
 ### LAY-10. Whitespace is distributed on purpose (squint for dead zones)
 - **What:** Every empty area is either a margin, a gap between groups, or deliberate focal space (room the subject looks or moves into, a quiet field that frames the one message). Related items sit closer to each other than to anything else, so each group reads as one unit. No empty band or block is much larger than the largest intended gap between groups unless it is deliberate and said so. After any image swap, crop change or regenerate, re-review the **whole** layout, not only the changed element: new imagery changes where the space is.
-- **Why:** People group what is near together (Gestalt proximity) and what shares a region together (common region) [S175, S176]. Spacing is how a layout says which things belong together; consistent gaps read as structure, and a stray large gap reads as a missing element or a mistake [S177, S178]. An empty area is only white space if it was designed; otherwise it is a dead zone that pulls the eye and makes groups float.
+- **Why:** People group by nearness and shared region [S175, S176]; consistent gaps read as structure, a stray large gap as something missing [S177, S178]. This rule is the measure; the idea (active versus dead space) lives in COMP-23.
 - **Check:**
   1. **Measure rows:** list the empty horizontal bands between groups. Flag any band larger than about 1.5× the largest intended inter-group gap that isn't marked as deliberate.
   2. **Squint for 2-D dead zones:** blur the piece (or view it at thumbnail size). Look for empty blocks *inside* a row, e.g. between a small item at the left and a small item at the right of the same row. A row scan alone can't see these. Flag any block whose short side exceeds about 1.5× the largest intended gap, unless it is a symmetric flank of a centred group or declared focal space.
   3. **After any image change:** re-run 1 and 2 on the full piece and write one line on what moved.
   `tools/whitespace.py IMAGE [--intended Y0-Y1]` does 1 and 2 and draws a squint sheet; treat its PASS as "review by eye", not as approval.
 - **Fix:** Pull each group together, then share out the space between groups evenly; enlarge or regroup the content that sits next to a dead zone (put small items on one line, align them to a shared centre line, let the main element fill its field); move or re-crop the image so the subject sits one gap from the type; or name the space as deliberate in the critique and keep it. Big, deliberate empty fields are valid and often the strongest choice: the flag is for space with no job, not for space itself (COMP-23). Fixing a dead zone never means centring the layout by default.
-- **Source:** Wertheimer [S175]; Palmer [S176]; NN/g on proximity [S177]; White [S178]; LAY-3. Space as a designed shape: COMP-7. Active versus dead space, and the rest of the pre-delivery *Sitting right* pass (floating, crammed, tangents, near-alignments, uneven gutters, optical centring): COMP-23, COMP-24, COMP-25.
+- **Grade:** Proximity grouping: well supported. The 1.5x dead-zone threshold: self-chosen craft number.
+- **Source:** Wertheimer [S175]; Palmer [S176]; NN/g on proximity [S177]; White [S178]; LAY-3; COMP-23 to COMP-25.
 
 ### LAY-11. Commit to one axis: symmetric or asymmetric
 - **What:** Decide whether the layout is built on a central axis (centred, symmetric, formal) or on edges (flush left or right, asymmetric, active), and keep each group consistent. Mixing centred and flush blocks at random gives many weak alignment lines.
@@ -107,7 +117,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 
 ### LAY-12. Margins from a system, with the optical centre a little high
 - **What:** Derive margins from one rule (a single unit, a ratio, or a classic book canon) and keep them consistent across pages. When a block is centred vertically, place it slightly above the true centre, and make the bottom margin at least as large as the top; equal top and bottom space looks bottom-heavy.
-- **Why:** Book canons (the Van de Graaf construction, Tschichold's 2:3 page with margins of about 2:3:4:6) give consistent, generous margins [S211]. The "optical centre" sitting above the true centre is a long-standing printing rule: Gress (1917) shows a word at the exact centre looking low and puts the main line well above it, about a third of the way down [S205]. Studies of vertical attention bias give the idea only a small perceptual basis [S264]; his pin-and-card "physics" demonstration does not hold up.
+- **Why:** Book canons (Van de Graaf, Tschichold's 2:3 page with margins about 2:3:4:6) give consistent, generous margins [S211]. The slightly high optical centre is an old printing rule [S205] with only a small perceptual basis; evidence and limits: COMP-22.
 - **Check:** Measure the four margins. Do they follow one rule? For a vertically centred block, is it at the true centre (often reads low) or a little above (a few percent of the page height)?
 - **Fix:** Move the block up slightly; enlarge the bottom margin; set margins from the system, not by eye per page.
 - **Grade:** Canons: traditional craft. Optical centre: craft wisdom with a small perceptual basis. "Margins must follow the golden ratio": myth (COMP-16).

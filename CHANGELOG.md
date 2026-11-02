@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.6.0 (2 November 2026)
+
+A top-to-bottom tidy: one home per rule, a much smaller always-on load, and an honest grade on every rule. No rule was renumbered; a merged rule leaves a "Moved to" line under its old ID.
+
+- **Smaller load.** Always loaded is now `AGENTS.md`, `core/principles.md` and `core/critique-loop.md`: about 6,100 tokens (7,600 with the critique template), down from about 17,300 for `AGENTS.md` plus the everyday `core/` files. A social card (with layout and typography) drops from about 24,600 to 16,200 tokens. The rest of `core/` loads only when the job needs it, and `AGENTS.md` has a one-glance table of which module to load when.
+- **Interaction flow merged into the loop.** FLOW-1 to FLOW-5 (sign-off, apply, "just fix it", take over, delivery) now sit inside the loop step they belong to in `core/critique-loop.md`, with the blocker list at the top. `core/interaction-flow.md` keeps only the diagram and a pointer.
+- **Seven merges, one home each.** ILL-4 and ILL-9 to colour-value (CV-1, CV-2, CV-4, CV-5, CV-7); UI-1 and UI-2 to typography (TYPE-2 to TYPE-5, TYPE-13), which is now the one home for type numbers; UI-3 to CORE-4 (the spacing scale); COMP-7 (*ma*) to COMP-23; COMP-21 (weight and the lever) to COMP-2. The near-miss bands live in COMP-20 and COMP-24 only.
+- **Grades on every rule.** Two grades added to the legend in `core/evidence.md`: *Standard* (geometry, optics or a published spec such as WCAG) and *Procedure* (a working method). All 174 live rules now carry a grade, per rule or per file (CD, FP and FLOW are procedures).
+- **Contradictions fixed.** Body leading is 1.3-1.5 everywhere (up to 1.6 on long measures); typography no longer claims every number agrees; CD-1 says six lines; AES-6 no longer counts centring as a tell; a disputed Material type-ratio claim went with UI-1; CORE-8 now credits the right study authors.
+- **Cuts.** Eleven Example lines (several named real brands) and the template's worked example removed; duplicated legends, viewing-test lists and the "quick questions" in `which-modules.md` removed; long Why lines trimmed. `SKILL.md` and the Cursor rule now just point at `AGENTS.md`; `tools/package_skill.py` builds the zip's `SKILL.md` from `AGENTS.md` alone.
+- **Housekeeping.** README images now use Newsreader from the font library; Fraunces removed from the library (61 families). Two broken font paths fixed, S147 cited in AES-9, token table recounted, `llms.txt` and `lite/` updated to match. The *Sitting right* guard is unchanged: flag only accidental imbalance; fix with a counterweight or a firmer asymmetry; never centre or symmetrise by default.
+
 ## v0.5.1 (2 November 2026)
 
 - **Sitting right: the broken-balance pass (new COMP-19 to COMP-25).** A pre-delivery judgement call that asks "does anything sit weirdly?". It flags only balance and placement that read as accidental, unresolved or lopsided by mistake.

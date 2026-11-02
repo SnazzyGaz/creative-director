@@ -2,10 +2,10 @@
 
 **Purpose:** the critique loop checks craft. This file adds the step a creative director takes before that: does the work answer the brief, for its audience? A bot acts as its own first-pass director. The yardstick is the brief, not taste. Where the brief is silent, the question goes to the owner of the work (the person who commissioned it).
 
-Keep it light. These are defaults, not blockers. Only the MUST-BE-RIGHT list in `critique-loop.md` blocks.
+Keep it light. These are defaults, not blockers; only the MUST-BE-RIGHT list in `critique-loop.md` blocks. Grade: every CD rule is a Procedure, built on the practice and studies cited (`evidence.md`).
 
 ## CD-1. Have a brief before making anything
-- **What:** Five short lines: the problem or purpose; the audience; the one idea (a single sentence); where and how big it is seen; must-keeps and constraints (brand, subject, format). Add a sixth: how you'll judge it done.
+- **What:** Six short lines: the problem or purpose; the audience; the one idea (a single sentence); where and how big it is seen; must-keeps and constraints (brand, subject, format); how you'll judge it done.
 - **Why:** Weak briefs waste work. In a 2022 survey most agency staff called client briefs inadequate, and few marketers had agreed criteria for judging the work [S88]. A good brief is a platform that opens up ideas, not a box that closes them [S89, S90, S107].
 - **Check:** Can you fill all six lines? If not, ask the owner, or write your assumptions down and flag them.
 
@@ -31,7 +31,7 @@ Keep it light. These are defaults, not blockers. Only the MUST-BE-RIGHT list in 
 
 ## CD-6. Done means the brief is met
 - **What:** Stop when the work meets the CD-1 criteria with no blockers. If the next change serves taste rather than the brief or audience, it's done.
-- **Why:** A key art-direction skill is telling real improvement from personal preference [S101]. Agreed criteria make "done" checkable [S88]. The loop's stop rules apply (`critique-loop.md` section 5).
+- **Why:** A key art-direction skill is telling real improvement from personal preference [S101]. Agreed criteria make "done" checkable [S88]. The loop's stop rules apply (`critique-loop.md` section 7).
 
 ## When the ask is "from scratch"
 CD-1 to CD-6 assume the brief is given. When the owner asks for a redo, rejig or reimagining, write the brief yourself from first principles, get it signed off, and compare 2-3 structurally different concepts before building: `core/first-principles.md` (FP-1..9).

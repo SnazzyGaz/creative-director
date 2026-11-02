@@ -2,11 +2,15 @@
 
 Use this page when a critique wants to say "people prefer X". Cite it only for what the studies show. Where the evidence is weak, say so, and treat the rule as a craft default, not a fact about viewers.
 
-**Evidence grades used across the repo** (introduced in v0.5.0 for `composition/`, `colour-value/` and the new rules elsewhere):
+**Evidence grades.** Every rule in the repo carries one (or one per claim):
 - **Well supported:** replicated experiments or a meta-analysis back the core claim.
 - **Partly supported:** some experimental support, but narrow stimuli, small effects or mixed results.
 - **Craft wisdom:** long agreement among teachers and practitioners, untested or untestable in the lab. A default, not a fact about viewers.
 - **Contested / myth:** tested and not supported, or the popular version goes well beyond the evidence. Don't cite it as a reason.
+- **Standard:** follows from geometry or optics, or from a published spec (WCAG, platform and print specs, trade-mark law). True within its scope; not a claim about taste.
+- **Procedure:** a working method (the loop, sign-off, the anatomy pass). Judged by whether it catches faults, not by research.
+
+State only well-supported findings and standards as facts about viewers or requirements; say "craft default" for the rest.
 
 ## Findings strong enough to lean on
 
@@ -36,7 +40,7 @@ Use this page when a critique wants to say "people prefer X". Cite it only for w
 
 Don't cite these as rules. If a bot's critique leans on one, correct it.
 
-- **"The golden ratio is what people find beautiful."** Early support did not survive re-testing. A large later study found at most a weak population preference, with large differences between individuals [S38]. Other tests found no special pull of the golden rectangle, including no automatic preference for it in art pictures [S39]. A golden-ratio type scale is just one ratio among many (UI-1).
+- **"The golden ratio is what people find beautiful."** Early support did not survive re-testing. A large later study found at most a weak population preference, with large differences between individuals [S38]. Other tests found no special pull of the golden rectangle, including no automatic preference for it in art pictures [S39]. A golden-ratio type scale is just one ratio among many (TYPE-2).
 - **"Put the subject on a thirds line."** In one study, photos that follow the rule of thirds scored only slightly higher, and the link to aesthetic ratings was weak [S43]. For single-object images, a centred placement was preferred in about two thirds of judgements, at every object size [S44]. Unequal divisions still help in busy scenes (ILL-1). For a single subject, neither off-centre nor centred is the default: judge by intent (maintainer decision, 2026-11-01).
 - **"People like medium complexity" (Berlyne's inverted U) as a universal law.** The evidence is mixed. Many visual studies find a straight-line or no relation. It fits some music data better [S45]. Use S35's narrower finding instead: lower *perceived* complexity helps first impressions of interfaces.
 - **"Red makes people anxious/hungry; blue builds trust."** Colour-psychology effects are context-dependent and were mostly shown in small studies. A 2020 meta-analysis found little robust evidence that red impairs performance [S46]. Don't justify a palette with colour-emotion claims. Justify it with roles, contrast and the brief.
@@ -50,7 +54,7 @@ Don't cite these as rules. If a bot's critique leans on one, correct it.
 - **"The uncanny valley is one universal curve."** Evidence for a single curve is mixed. Mismatched realism cues, such as realistic skin with abnormal eyes, are the best-supported trigger [S136, S138]. See CHAR-5.
 - **"72 dpi for screen, 300 for print" as a screen rule.** On screen only pixel dimensions matter; ppi matters only at print size (LAY-9).
 
-**Added in v0.5.0 (composition, colour, layout):**
+**Composition, colour and layout:**
 - **"Balance means symmetry or centring."** Balance is equilibrium of visual weights. Asymmetric and off-centre work balances by the lever (weight times distance), and fulcrum and centre-of-mass studies measure exactly that [S235, S237]. Balance only loosely predicts liking, and for art first-glance balance follows grouping and recognition more than a weight sum [S238]. Never centre or symmetrise by default (COMP-19).
 - **The golden ratio, again, in depth.** Reviews of a century of tests find no robust preference for the golden rectangle [S220]; replications of Fechner's original method found none [S221]. Famous "golden" buildings and paintings rely on choosing what to measure [S222, S224]; the nautilus shell's spiral is not golden [S223]. Book canons called "golden" are built on simple ratios such as 2:3 [S211]. Hambidge's dynamic symmetry is a usable design system, but not proof of what the Greeks did [S194]. Use any ratio for consistency (COMP-16), never as a reason for beauty.
 - **"Leading lines force the eye along a path."** Eye-tracking shows paths depend on content (people and faces first), task and viewer [S241, S242, S243]; lines help connect places but there is little evidence they steer on their own (COMP-4).

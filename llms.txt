@@ -2,14 +2,14 @@
 
 > Cited, checkable design rules and a light-touch critique loop that AI agents use to judge and improve visual work.
 
-- [Agent instructions](AGENTS.md): start here
-- [Core principles](core/principles.md)
-- [Interaction flow](core/interaction-flow.md): what the CD is for, sign-off before changes, delivery checklist
-- [Critique loop](core/critique-loop.md)
-- [Creative direction](core/creative-direction.md)
-- [First-principles remake](core/first-principles.md): when asked to redo or reimagine from scratch, step back, write a brief, compare concepts, rebuild
-- [Which modules to load](core/which-modules.md)
-- [Critique template](core/critique-template.md)
+- [Agent instructions](AGENTS.md): start here; says what to load
+- [Core principles](core/principles.md): always loaded
+- [Critique loop](core/critique-loop.md): always loaded; read the ask, brief, render, look, critique, fix, take over, deliver; the blocker list
+- [Critique template](core/critique-template.md): when writing a critique
+- [Creative direction](core/creative-direction.md): intent, mood and judging between versions
+- [First-principles remake](core/first-principles.md): when asked to redo or reimagine from scratch
+- [Which modules to load](core/which-modules.md): task-to-module table and token costs
+- [Evidence](core/evidence.md): grades and myths, before claiming people prefer something
 - [Modules](modules/): technical-drawing, illustration, character, web-ui, ux, 3d, typography, layout, brand, aesthetic-critique, composition, colour-value
 - [Lite version](lite/CREATIVE-DIRECTOR-LITE.md): loop, core rules and blockers in one short file
 - [Font library](fonts/README.md): theme-grouped free fonts (OFL / Apache) with a catalogue and specimens

@@ -1,24 +1,49 @@
 # AGENTS.md — creative-director
 
-Instructions for any AI agent (Cursor, Claude Code, Codex, Copilot, Gemini, ChatGPT, Grok Bot, etc.) using this repo to judge and improve visual work: images, drawings, 3D renders, web and app UI, UX flows.
+Design judgement for any AI agent (Cursor, Claude, Codex, Copilot, Gemini, ChatGPT, Grok Bot and others) that makes or reviews visual work: images, drawings, 3D renders, web and app UI, UX flows, posters, slides, type. Cited, checkable rules plus a light-touch render-critique-fix loop. Taste calls stay with the owner of the work.
 
 ## When to use it
-Use it when you make or review something visual, or when the user says `+ creative director`, `consult creative director`, or `creative director: direct this` (see README "Usage"), or asks for a piece to be redone, rejigged or reimagined from scratch.
+Whenever you make or review something visual, or the user says `+ creative director` (self-check), `consult creative director` (critique only), `creative director: direct this` (start from the brief), hands over work with no specific ask, says "just fix it", or asks for a redo, rejig or reimagining from scratch.
 
-## How to use it
-0. Read the ask (`core/interaction-flow.md`): work handed over with no specific request gets a short, ranked sign-off blurb of the imperative changes (each with its rule ID, what changes, and [edit] or [regenerate]), and nothing is applied until the owner signs off. After sign-off, apply every signed-off point (regenerate if an edit can't do it), re-check each one plus the light, anatomy and type blockers, and deliver the result with one done / not done line per point. "Just fix it" skips the sign-off, not the checks. Never deliver an unapplied critique as the result. If the owner asks for it "from scratch", "redo", "rejig", "start over" or "reimagine", use `core/first-principles.md` instead of the light touch: step back (what it is, for whom, its one job, the feeling, the given facts, what must survive), send a 5-8 line brief for sign-off, make 2-3 structurally different concepts, recommend one, build it, and run the full QA (FP-1..9).
-1. Read `core/principles.md`, `core/critique-loop.md`, `core/creative-direction.md` and `core/interaction-flow.md`.
-2. Use `core/which-modules.md` to load only the modules the job needs (`modules/<name>/README.md`).
-3. Check the brief first (CD-1). If there is no brief, write the six-line brief and state your assumptions. If it has no brand input, run `core/brand-intake.md` (ask the owner; if no answers, label assumptions). Write the intent model too (purpose, audience, mood, style, focal experience, polish, must-keeps), marking each line from the brief or inferred.
-4. Render or screenshot the real output at its real size. Never critique from code or a prompt alone.
-5. Run the five look tests (`tools/look.py` if you can run Python), critique with `core/critique-template.md`, citing a rule ID on every point. Keep MEASURED findings (checked with a tool) apart from INTERPRETED ones (aesthetic readings tied to a visible feature, labelled as interpretation). If a person, hand or animal is in frame, run the anatomy pass (`modules/character/`, CHAR-9): crop and check every hand, limb join, face and animal head; any fail blocks delivery. For mood, energy or distinctiveness, load `modules/aesthetic-critique/` and judge versions side by side, not by score. For balance, focus, unity, space and beauty, load `modules/composition/` (COMP-1..25) and for value and palette `modules/colour-value/` (CV-1..9); every rule there carries an evidence grade, and only well-supported findings are stated as facts about viewers (`core/evidence.md`). Before delivery, run the *Sitting right* pass (COMP-19..25). It flags only balance and placement that look accidental and asks "intended?". Asymmetric and off-centre work is valid; never centre or symmetrise by default.
-6. Make at most 3 fixes per round, blockers first, and check each one actually applied. Aesthetic changes: one or two at a time, then keep, refine or revert, and re-run the measured checks. Re-render and compare. Stop when clearly better (round 3 routine, 5 max), or take over per section 4b if the work is fundamentally broken.
-7. Hand off: the result first, with the done / not done checklist (FLOW-3), then before/after, rules judged, what changed, what was left, and questions for the human. Taste calls belong to the owner of the work.
+## What to load
+1. **Always:** this file, `core/principles.md` (CORE-1 to 11) and `core/critique-loop.md` (the ask, the loop, the blockers, sign-off and delivery: FLOW-1 to 5).
+2. **To write a critique:** `core/critique-template.md`.
+3. **Only when needed:** `core/creative-direction.md` (direct mode, open briefs), `core/brand-intake.md` (no brand input), `core/first-principles.md` (remake from scratch), `core/evidence.md` (before saying "people prefer X").
+4. **Modules** (`modules/<name>/README.md`), only those the job needs. Combinations and token costs: `core/which-modules.md`.
 
-Official logos, crests and sponsor marks are placed from the official file, unaltered, at good quality; never redrawn, restyled or generated (cleaning is limited to a background knockout, a faithful trace or a one-colour silhouette, checked by overlay; no file means the name in plain text). Before delivery, squint for dead space: every empty area is a margin, a group gap or named focal space, and the whole layout is re-reviewed after any image swap (LAY-10, `tools/whitespace.py`). New imagery is built from what the subject really is, not by re-describing the reference (FP-9, ILL-12). Check generated imagery for invented marks on jerseys, bottles and signs (BRAND-4, BRAND-8).
+| Module | Load when the work has... |
+|---|---|
+| `technical-drawing` | 3D space, objects or bodies drawn or generated (perspective, ellipses, proportion, light) |
+| `character` | any person, hand or animal, however small (anatomy pass CHAR-9 is a delivery gate) |
+| `illustration` | a picture people look at: focus, shape, edges, story, generated-image look |
+| `composition` | balance, focus, unity, space, beauty; "it feels off"; the pre-delivery *Sitting right* pass |
+| `colour-value` | a value plan, palette or colour that looks wrong in place |
+| `layout` | a fixed frame: social card, poster, cover, slide, print |
+| `typography` | words: type choice, scale, measure, leading, setting |
+| `brand` | a name, logo or brand guide (official marks: BRAND-4, BRAND-8) |
+| `web-ui` | a screen: grid, components, contrast, colour roles |
+| `ux` | a task people complete: flows, errors, defaults |
+| `3d` | a 3D file or render (build checks via [model-qa](https://github.com/SnazzyGaz/model-qa)) |
+| `aesthetic-critique` | mood, energy or distinctiveness; choosing between versions |
 
-## Tone
-Neutral and factual, like a doctoral supervisor. Every point is tied to a named criterion. No praise padding, no harshness. Light touch: preserve the intent and what already works.
+For small contexts, `lite/CREATIVE-DIRECTOR-LITE.md` holds the loop, core rules and blockers in one file.
+
+## The job in seven steps
+0. **Read the ask** (`critique-loop.md` section 0). Unprompted hand-off: ranked sign-off blurb, apply nothing until the owner agrees (FLOW-1). "Just fix it": no blurb, same checks (FLOW-4). From-scratch words only: remake (`first-principles.md`).
+1. **Brief:** six lines (CD-1) and an intent model, each line [brief] or [inferred]. No brand input: `brand-intake.md`.
+2. **Render** the real output at its real size, plus a thumbnail. Never critique from code or a prompt.
+3. **Look:** five tests (`tools/look.py`); the anatomy pass if a person, hand or animal is in frame.
+4. **Critique** with the template: a rule ID on every point, measured findings apart from interpreted ones, blockers first.
+5. **Fix:** at most 3 a round (a signed-off list is applied in full), each checked as applied; re-render and compare.
+6. **Stop and deliver:** when clearly better (round 3 routine, 5 max), or take over if broken (loop section 6). Deliver the result first with one done / not done line per point and the QA gates re-run (FLOW-3).
+
+## Always true
+- **Blockers are only the MUST-BE-RIGHT list** in `critique-loop.md`; everything else is a default.
+- **Never invent** facts, names, slogans, addresses or story content (CD-1, FP-3, AES-10).
+- **Official marks** go in from the official file, unaltered, never redrawn or generated; check generated images for invented marks (BRAND-4, BRAND-8).
+- **Balance is not symmetry.** The *Sitting right* pass (COMP-19 to 25) flags only what looks accidental and asks "intended?". Fix with a counterweight or by committing harder to the asymmetry. Never centre or symmetrise by default.
+- **Evidence grades are honest:** state only well-supported findings and standards as facts; no golden ratio, thirds-as-law or colour-emotion tables as reasons (`evidence.md`).
+- **Tone:** neutral and factual, like a thesis supervisor; no praise padding, no harshness. Label your own verdicts as self-judged. Where no rule settles it, ask the owner.
 
 ## Tools (optional)
-`tools/` has small Python scripts: look tests, WCAG contrast, screenshots, vanishing points, ellipses, visual-weight balance, before/after sheets. See `tools/README.md`. If you can't run code, do the same checks by eye and say so.
+`tools/` has small Python scripts (Pillow, NumPy): look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, anatomy crops, 3D intersections. See `tools/README.md`. If you can't run code, do the checks by eye and say so.

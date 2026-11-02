@@ -2,7 +2,7 @@
 
 Reading a brand guide and applying it, or working without one. Load with `core/` whenever work carries a name, logo or product, and add the module for the medium (web-ui, layout, illustration). If the brief has no brand input at all, run `core/brand-intake.md` first.
 
-Format: **What / Why / Check / Fix / Source**. Rules marked **MUST-BE-RIGHT** are blockers; the rest are defaults.
+Format: **What / Why / Check / Fix / Grade / Source**. Rules marked **MUST-BE-RIGHT** are blockers; the rest are defaults.
 
 What a brand is for, on evidence: brands are remembered through **distinctive assets** (colours, shapes, characters, type, sounds) that people link to the brand name. Assets only work if they are used consistently, over time, and are actually unique to the brand [S120]. So the critique question is not "is it pretty" but "would someone know whose this is".
 
@@ -15,6 +15,7 @@ The known failure this module addresses: critique rounds remove errors but canno
 - **Why:** Guides are long; agents skim them and then fall back to defaults. A token sheet makes the rules checkable.
 - **Check:** Is there a written sheet with values (hex, font names, sizes, clear space) and the page each came from? Is anything marked "don't" in the guide present in the work?
 - **Fix:** Write the sheet (format in `core/brand-intake.md`) and check the work against it line by line. If the guide contradicts itself, note it and ask the owner.
+- **Grade:** Procedure.
 - **Source:** Wheeler [S119]; CD-1.
 
 ### BRAND-2. Colours: exact values, right roles, right proportions
@@ -22,6 +23,7 @@ The known failure this module addresses: critique rounds remove errors but canno
 - **Why:** Distinctive colour is one of the strongest brand assets, and near-misses weaken it [S120]. A brand accent used as body-text colour often fails contrast.
 - **Check:** Sample the colours in the render and compare to the sheet (ΔE under about 3 is a match by eye). Is any off-brand colour present? Does any brand colour pair fail 4.5:1 for text?
 - **Fix:** Replace near-misses with exact values. Where a brand pair fails contrast, use the brand's darker or lighter step, or move the colour to a non-text role. Never ship a contrast failure to match a guide; flag the conflict to the owner.
+- **Grade:** Partly supported (distinctive brand assets [S120]).
 - **Source:** Romaniuk [S120]; Wheeler [S119]; UI-6.
 
 ### BRAND-3. Type follows the guide, set well
@@ -29,6 +31,7 @@ The known failure this module addresses: critique rounds remove errors but canno
 - **Why:** Type is a distinctive asset like colour. A silent substitution looks off-brand to anyone who knows it.
 - **Check:** Compare computed font families to the sheet. Any substitution not listed as a fallback?
 - **Fix:** Load the brand fonts, or document the fallback in the hand-off. Then apply the typography module (TYPE-2 to TYPE-6).
+- **Grade:** Procedure.
 - **Source:** Wheeler [S119]; TYPE-1.
 
 ### BRAND-4. Official marks: the real file, unaltered, at good quality (MUST-BE-RIGHT)
@@ -58,6 +61,7 @@ The known failure this module addresses: critique rounds remove errors but canno
   - Restore clear space by moving other elements, not by shrinking the logo below its minimum.
   - On dark or busy grounds, use the guide's one-colour or reversed version.
   - If you can't find a faithful source, set the name in plain text (or, for a nameless symbol, use the labelled placeholder) and ask the owner for the file.
+- **Grade:** Standard (trade-mark law and brand guidelines).
 - **Source:** Wheeler [S119]; USPTO [S170]; Trade Marks Act 1994 s.10 [S171]; Spotify [S172]; Mastercard [S173]; Wikimedia Commons [S174].
 
 ### BRAND-5. Voice matches, in words and in pictures
@@ -65,6 +69,7 @@ The known failure this module addresses: critique rounds remove errors but canno
 - **Why:** Tone of voice measurably changes how people judge a brand's friendliness, trustworthiness and desirability [S121]. Generic AI copy ("seamless", "elevate", "unlock") has no voice.
 - **Check:** Place each piece of copy on NN/g's four scales: funny-serious, formal-casual, respectful-irreverent, enthusiastic-matter-of-fact. Does it land where the guide says? Count generic filler words.
 - **Fix:** Rewrite to the voice; cut filler; never invent facts, claims or quotes (CD-1). Copy changes beyond fixing errors are suggestions for the owner.
+- **Grade:** Partly supported (tone-of-voice testing [S121]).
 - **Source:** Moran, NN/g [S121]; Mailchimp Content Style Guide, voice and tone [S122].
 
 ### BRAND-6. Consistent across pieces
@@ -78,6 +83,7 @@ The known failure this module addresses: critique rounds remove errors but canno
 
   Each piece still keeps its own theme and image.
 - **Fix:** Pull every piece from one token sheet; vary layout and content, not the assets. Write the set's shared tokens down once and build every piece from them.
+- **Grade:** Partly supported (distinctive brand assets [S120]).
 - **Source:** Romaniuk [S120]; Wheeler [S119].
 
 ### BRAND-7. No brand? Make the defaults visible and owned
@@ -85,6 +91,7 @@ The known failure this module addresses: critique rounds remove errors but canno
 - **Why:** Hidden defaults produce the generic look (UI-7, ILL-11, TYPE-9). Labelled assumptions turn it into a question the owner can answer.
 - **Check:** Does the hand-off list the assumed colours, type and voice? Can each be traced to the subject rather than to a tool's default?
 - **Fix:** Add the "assumed" sheet and a question for the owner. Don't run extra rounds to fix "generic"; ask.
+- **Grade:** Procedure.
 - **Source:** CD-1, CD-2; web-ui-landing log.
 
 ### BRAND-8. No invented marks in generated imagery (MUST-BE-RIGHT)
@@ -99,6 +106,7 @@ The known failure this module addresses: critique rounds remove errors but canno
   - Or paint the mark out to the plain surface.
   - Then, if the brief calls for a real mark, composite the official file in afterwards (BRAND-4), following the surface's perspective without distorting the mark's proportions beyond what the surface's own perspective causes.
   - Never ask a generator to draw a real logo.
+- **Grade:** Standard (trade-mark law).
 - **Source:** BRAND-4; Trade Marks Act 1994 s.10 [S171]; ILL-11.
 
 ---

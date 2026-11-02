@@ -17,13 +17,14 @@ Follow each repo's own `AGENTS.md` for commands; this module only says where the
 
 ## Rules
 
-Format: **What / Why / Check / Fix / Source**.
+Format: **What / Why / Check / Fix / Grade / Source**.
 
 ### 3D-1. Built correctly before judged for looks (MUST-BE-RIGHT)
 - **What:** No high or medium model-qa issues, or each remaining one is intended and stated.
 - **Why:** In model-qa's tests an agent caught 4 of 8 planted defects by eye; the tool caught 7 of 8. Renders hide gaps, flipped normals and duplicates.
 - **Check:** `model-qa check FILE --no-render --brief`; exit code 0.
 - **Fix:** Use each issue's `fix` hint; ignore intended items in a spec file rather than "fixing" them.
+- **Grade:** Procedure (build checks).
 - **Source:** model-qa README and AGENTS.md [S29].
 
 ### 3D-2. Right size and right way up (MUST-BE-RIGHT)
@@ -31,6 +32,7 @@ Format: **What / Why / Check / Fix / Source**.
 - **Why:** Wrong units and lying-on-its-side models break every scene they go into.
 - **Check:** `--category` (IMPLAUSIBLE_SIZE, LOOK_PROPORTION, NEAR_GROUND); the `bct look` header shows size in metres.
 - **Fix:** Scale, rotate, apply transforms.
+- **Grade:** Standard (units and axis conventions).
 - **Source:** [S29, S30].
 
 ### 3D-3. Silhouette reads from the main view
@@ -38,6 +40,7 @@ Format: **What / Why / Check / Fix / Source**.
 - **Why:** Same reason as ILL-3: silhouette is what survives at small size.
 - **Check:** model-qa `--look` writes `silhouettes.png`; also read its boxy-silhouette advice. Fill the render's alpha black: is the object recognisable?
 - **Fix:** Turn the object or camera; exaggerate the defining forms. For characters and props in a set, each should be identifiable from its silhouette alone, as Valve did for *Team Fortress 2*.
+- **Grade:** Craft wisdom.
 - **Source:** model-qa `--look` [S29]; Mitchell et al., *Illustrative Rendering in Team Fortress 2* [S83]; ILL-3.
 
 ### 3D-4. Surfaces catch light believably
@@ -45,6 +48,7 @@ Format: **What / Why / Check / Fix / Source**.
 - **Why:** Faceted curves and razor edges are the clearest "made by a bot" tells in 3D.
 - **Check:** model-qa `--look` flags (LOOK_FACETED, LOOK_NO_BEVEL, LOOK_FLAT_SHADED_CURVE, LOOK_BAD_NORMALS). Judge on `beauty.png`.
 - **Fix:** Go to the suggested segment count once (don't keep adding); bevel modifier; shade smooth by angle. Don't bevel deliberately low-poly or stylised work.
+- **Grade:** Craft wisdom.
 - **Source:** model-qa AGENTS.md [S29].
 
 ### 3D-5. Presentation renders follow the picture rules
@@ -52,6 +56,7 @@ Format: **What / Why / Check / Fix / Source**.
 - **Why:** A good model in flat, frontal, centred light looks worse than it is.
 - **Check:** Run the core five tests on the beauty render.
 - **Fix:** Three-point light: key, fill, and a rim or back light for separation from the background. Set the key-to-fill ratio for the mood: about 2:1 is soft and even, 4:1 is more modelled, 8:1 is dramatic and low-key. Use a darker or lighter backdrop than the object, and put the camera at a deliberate height.
+- **Grade:** Craft wisdom.
 - **Source:** Gurney, *Light and Form* [S20, S21]; lighting ratios [S84]; rim light instead of outlines in TF2 [S83]; core principles.
 
 ### 3D-6. Materials stay in physically plausible ranges
@@ -59,6 +64,7 @@ Format: **What / Why / Check / Fix / Source**.
 - **Why:** Values outside these ranges don't occur in real materials. They render too dark, glowing or plastic-looking under good lighting.
 - **Check:** Sample the base colour and metallic maps (or material values): min, max, and the share of in-between metalness. **Auto: yes.**
 - **Fix:** Clamp the albedo into range; set metalness to 0 or 1 and use in-between values only for transitions such as dust or rust edges.
+- **Grade:** Standard (PBR value ranges).
 - **Source:** Adobe, *The PBR Guide* parts 1-2 [S82].
 
 ### 3D-7. The view transform doesn't clip the light
@@ -66,6 +72,7 @@ Format: **What / Why / Check / Fix / Source**.
 - **Why:** Clipped highlights lose form at the brightest point, which is often the focal point.
 - **Check:** Inspect the brightest areas: are there flat blobs of pure colour or white? Which view transform was used? **Auto: partly** (count clipped pixels).
 - **Fix:** Switch to AgX, then re-balance exposure. Don't fix clipping by dimming the whole scene.
+- **Grade:** Standard (colour management).
 - **Source:** Blender manual, *Displays and Views* [S85].
 
 ## Myths and weak claims

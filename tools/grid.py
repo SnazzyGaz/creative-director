@@ -1,4 +1,4 @@
-"""grid.py: layout-grid check from a screenshot (CORE-5 alignment, UI-4 grid, UI-3 spacing scale).
+"""grid.py: layout-grid check from a screenshot (CORE-5 alignment, UI-4 grid, CORE-4 spacing scale).
 
 python3 tools/grid.py SHOT.png [--out overlay.png] [--near 6] [--merge 9] [--min 8] [--scale 4] [--dpr 1]
 
@@ -126,7 +126,7 @@ def main():
             li = [i[0] for i in ins]; ti = [i[1] for i in ins]
             if max(li) - min(li) > 2 or max(ti) - min(ti) > 3: bad.append('content insets differ (padding)')
         if bad: issues += 1; red += r
-        print(('  ROW ' if bad else 'row ') + msg + (' -> ' + '; '.join(bad) + ' -> CORE-5, UI-4' + (', UI-3' if any('inset' in x or 'gaps' in x for x in bad) else '') if bad else ' OK'))
+        print(('  ROW ' if bad else 'row ') + msg + (' -> ' + '; '.join(bad) + ' -> CORE-5, UI-4' + (', CORE-4' if any('inset' in x or 'gaps' in x for x in bad) else '') if bad else ' OK'))
     # 3. vertical gaps between stacked solid boxes in one column
     for c in groups([s[0] for s in S]):
         col = sorted([s for s in S if s[0] in c], key=lambda b: b[1])
@@ -140,8 +140,8 @@ def main():
         cl = [round(float(np.median(c))) for c in groups(vals, 1)]
         dup = [(x, y) for x, y in zip(cl, cl[1:]) if 1 < y - x <= a.near * k]
         print(f'spacing between solid boxes: {sorted(px(v) for v in vals)}; on a {a.scale} px scale: {len(vals) - len(off)}/{len(vals)}, on 8 px: {on8}/{len(vals)}')
-        if off: print('  SCALE off-scale: ' + ', '.join(f'{n} {px(v)}' for n, v in off) + ' -> UI-3')
-        if dup: print('  SCALE near-duplicate values: ' + ', '.join(f'{px(x)} vs {px(y)}' for x, y in dup) + ' -> UI-3 (pick one)')
+        if off: print('  SCALE off-scale: ' + ', '.join(f'{n} {px(v)}' for n, v in off) + ' -> CORE-4')
+        if dup: print('  SCALE near-duplicate values: ' + ', '.join(f'{px(x)} vs {px(y)}' for x, y in dup) + ' -> CORE-4 (pick one)')
         issues += bool(off) + bool(dup)
     tg = []
     for c in lines:

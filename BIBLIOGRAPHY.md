@@ -51,11 +51,11 @@ An annotated reading list behind `modules/composition/`, `modules/colour-value/`
 
 | ID | Work | Read it | Why it matters |
 |---|---|---|---|
-| S199 | Okakura Kakuzō, *The Book of Tea* (1906) | [Gutenberg](https://www.gutenberg.org/ebooks/769) | Emptiness as the container of possibility; asymmetry; no repeated motif; the viewer completes the work. COMP-7, COMP-17. |
+| S199 | Okakura Kakuzō, *The Book of Tea* (1906) | [Gutenberg](https://www.gutenberg.org/ebooks/769) | Emptiness as the container of possibility; asymmetry; no repeated motif; the viewer completes the work. COMP-23, COMP-17. |
 | S200 | Laurence Binyon, *The Flight of the Dragon* (1911) | [Archive](https://archive.org/details/flightofdragones00binyuoft) | Rhythmic vitality as the first aim of Chinese and Japanese painting; empty space as part of design. |
 | S201 | Ernest Fenollosa, *Epochs of Chinese and Japanese Art* (1912) | [Archive](https://archive.org/details/ost-art-epochsofchinesej01fenouoft) | Dow's teacher; the source of notan in Western teaching. |
 | S216 | Xie He's six principles (6th century) | [Overview](https://en.wikipedia.org/wiki/Six_principles_of_Chinese_painting) | Spirit resonance before likeness; placement and composition as one of six. |
-| S213 | Arata Isozaki, *Ma: Space-Time in Japan* (1979, exhibition catalogue) | [Library record](https://library.nga.gov/discovery/fulldisplay/alma99926733504896/01NGA_INST:NGA) | Ma as the meaningful interval between things. COMP-7. In copyright. |
+| S213 | Arata Isozaki, *Ma: Space-Time in Japan* (1979, exhibition catalogue) | [Library record](https://library.nga.gov/discovery/fulldisplay/alma99926733504896/01NGA_INST:NGA) | Ma as the meaningful interval between things. COMP-23. In copyright. |
 | S214 | Graham Parkes and Adam Loughnane, *Japanese Aesthetics* (Stanford Encyclopedia of Philosophy) | [SEP](https://plato.stanford.edu/entries/japanese-aesthetics/) | Mono no aware, wabi, sabi, yūgen, kire: a careful modern overview. COMP-17. |
 
 ## 5. Modern classics (in copyright; used through publisher pages and summaries)

@@ -1,7 +1,7 @@
 # Technical drawing: nest box exploded view (assembly sheet)
 
 **Made with:** code only (matplotlib, 2D drawing of a hand-written 3D model in [src/geometry.py](src/geometry.py)). Before: [src/draw_before.py](src/draw_before.py), matplotlib's 3D axes with defaults kept, the way a bot usually answers "draw an exploded view". After: [src/draw_after.py](src/draw_after.py), own isometric projection with back-face culling and depth sorting. Self-judged by the agent that made it.
-**Type:** before DejaVu Sans (matplotlib's default). After **Public Sans** for title, list and notes (`fonts/ui-sans/public-sans/`, neutral and legible, made for government documents) and **Martian Mono** for balloons and sizes (`fonts/mono/martian-mono/`), so digits line up in columns (TYPE-10). Static weights cut from the variable files with fontTools, because matplotlib otherwise loads the variable font's default weight.
+**Type:** before DejaVu Sans (matplotlib's default). After **Public Sans** for title, list and notes (`fonts/grotesk-neutral/publicsans/`, neutral and legible, made for government documents) and **Martian Mono** for balloons and sizes (`fonts/monospace-code/martianmono/`), so digits line up in columns (TYPE-10). Static weights cut from the variable files with fontTools, because matplotlib otherwise loads the variable font's default weight.
 
 ![Before and after](side-by-side.jpg)
 

@@ -1,8 +1,8 @@
 # Module: typography
 
-Choosing and setting type anywhere words appear: UI, posters, social cards, decks, covers, banners. Load with `core/`. It goes deeper than UI-1 and UI-2 in `web-ui/`, which stay the short version for screens. Where the two overlap, the numbers agree.
+Choosing and setting type anywhere words appear: UI, posters, social cards, decks, covers, banners. Load with `core/`. It is the one home for type numbers; `web-ui/` points here (former UI-1 and UI-2 merged into TYPE-2 to TYPE-5 and TYPE-13).
 
-Format: **What / Why / Check / Fix / Source**. Rules marked **MUST-BE-RIGHT** are blockers; the rest are defaults. Most checks are measurements an agent can run on computed styles or on a render.
+Format: **What / Why / Check / Fix / Grade / Source**. Rules marked **MUST-BE-RIGHT** are blockers; the rest are defaults. Most checks are measurements an agent can run on computed styles or on a render.
 
 Evidence in one line: typeface choice matters less than most people think (serif vs sans makes no reliable legibility difference [S111]), while size, measure and spacing make measurable differences [S113, S114, S117]. So spend critique on setting, not on font taste.
 
@@ -13,34 +13,39 @@ Evidence in one line: typeface choice matters less than most people think (serif
 - **Why:** Each extra family adds visual complexity, the main predictor of low first-impression appeal [S35]. Two faces that are *nearly* alike (two geometric sans) look like an error, not a choice.
 - **Check:** List every computed `font-family` (or every face in the file). More than two text families? Two that differ only slightly in the same category?
 - **Fix:** Drop to one family with weight and size contrast, or pair faces that differ clearly in one dimension (serif with sans, or condensed with wide) and share a similar x-height. Keep the pair's mood consistent with the brief.
+- **Grade:** Craft wisdom.
 - **Source:** Lupton, *Thinking with Type* [S54]; Google Fonts Knowledge, pairing [S116]; Butterick [S10].
 
 ### TYPE-2. Sizes come from one scale
 - **What:** All sizes come from a single ratio from the body size. Dense UI: about 1.125 to 1.25. Editorial pages, posters and slides: about 1.25 to 1.618 (big jumps read as deliberate).
 - **Why:** Sizes a few percent apart look like mistakes and flatten hierarchy.
-- **Check:** Sort every size used. Divide each by the next smaller one. Any neighbouring pair with a ratio under 1.1 (except the same role)? More than about 5-6 sizes on one page?
+- **Check:** List every computed size and weight. Sort the sizes. Divide each by the next smaller one. Any neighbouring pair with a ratio under 1.1 (except the same role)? More than about 5-6 sizes on one page?
 - **Fix:** Snap each size to the nearest scale step; merge near-duplicates. The golden ratio is one option, not the right one (`core/evidence.md`).
-- **Source:** Brown, *More Meaningful Typography* [S55]; Material 3 type scale [S13]; UI-1.
+- **Grade:** Craft wisdom.
+- **Source:** Brown, *More Meaningful Typography* [S55]; NN/g (about 3 sizes) [S1]; *Every Layout* (one ratio for type and space) [S56]. Former UI-1 merged here.
 
 ### TYPE-3. Text is big enough to read where it is seen (MUST-BE-RIGHT below the floor)
 - **What:** Default: reading text on screen at 16 px CSS or more (17 pt on iOS), captions and labels at 12 px or more. **Blocker:** reading text under 14 px, any meaningful text under 12 px, or (in an image) text whose x-height is under about 6 px at the size the platform shows it (LAY-6).
 - **Why:** Reading speed falls sharply below a critical print size [S114]. On websites, larger text (18 px and up in one study) improved readability and comprehension, with no penalty [S113].
 - **Check:** Read computed `font-size` for each text role. For images: scale to the display size (e.g. 600 px wide for a phone feed) and measure the x-height in pixels.
 - **Fix:** Raise the body size and rebuild the scale from it (TYPE-2); in images, cut words rather than shrink them.
-- **Source:** Legge & Bigelow [S114]; Rello et al. [S113]; Apple HIG [S58]; UI-2.
+- **Grade:** Partly supported (reading research); platform minimums are Standard.
+- **Source:** Legge & Bigelow [S114]; Rello et al. [S113]; Apple HIG [S58]. Former UI-2 merged here and in TYPE-4, TYPE-5, TYPE-13.
 
 ### TYPE-4. Measure: 45-90 characters, about 65 ideal
 - **What:** Lines of running text hold about 45-90 characters including spaces. Narrow columns (captions, sidebars) can go to about 30-40.
 - **Why:** Long lines make the return sweep hard; very short lines break phrases. Speed studies favour somewhat longer lines than preference does, so the range is a comfort range, not a speed optimum [S112].
 - **Check:** At desktop width, count characters on three full lines of a paragraph (or divide container width by the average character width, about 0.5 em for most text faces). **Auto:** `ch` units in CSS give this directly.
 - **Fix:** `max-inline-size: 65ch` on text blocks; split wide layouts into columns or widen margins.
+- **Grade:** Partly supported (speed and preference studies disagree; the range is a comfort range).
 - **Source:** Bringhurst [S52]; Butterick, *Line Length* [S12]; Dyson [S112].
 
 ### TYPE-5. Leading follows size and measure
-- **What:** Body line height about 1.4-1.6 (longer measure needs more). Headlines tighter, about 1.0-1.2. Paragraph spacing larger than line spacing.
+- **What:** Body line height about 1.3-1.5, up to about 1.6 on long measures. Headlines tighter, about 1.0-1.2. Paragraph spacing larger than line spacing.
 - **Why:** Tight leading on long lines makes the eye skip lines; loose leading on headlines breaks the headline into separate lines. Users who need it must be able to set line height to 1.5 and letter spacing to 0.12 em without content breaking.
 - **Check:** Read computed `line-height` per role. Does any block of 3+ lines sit below 1.3? Does any headline exceed 1.3? Apply the WCAG text-spacing override (line height 1.5, paragraph spacing 2 em, letter 0.12 em, word 0.16 em): does anything clip or overlap?
 - **Fix:** Set line height per role, not one global value; use unitless line heights; avoid fixed-height text boxes.
+- **Grade:** Craft wisdom; the WCAG text-spacing override is Standard.
 - **Source:** Butterick [S10, S53]; WCAG 2.1 SC 1.4.12 Text Spacing [S117]; Rello et al. [S113].
 
 ### TYPE-6. Track display type tighter, small caps and all-caps looser
@@ -48,6 +53,7 @@ Evidence in one line: typeface choice matters less than most people think (serif
 - **Why:** Fonts are spaced for text sizes; at display sizes the gaps look loose. Caps have no ascenders or descenders to separate them, so they crowd.
 - **Check:** Render the headline at size and squint: are the gaps between letters visibly uneven (e.g. "AV", "To", "LT")? Is any all-caps label at 0 tracking? Is body text tracked at all? (It shouldn't be.)
 - **Fix:** Use the font's optical size or display cut if it has one; apply tracking per role; turn on kerning (`font-kerning: normal`). Hand-kern only the visible bad pairs in a logo or headline.
+- **Grade:** Craft wisdom.
 - **Source:** Apple HIG, tracking tables [S58]; Google Fonts Knowledge [S116]; Butterick [S10]; Beier, *Reading Letters* [S115].
 
 ### TYPE-7. Hierarchy uses as few signals as needed
@@ -55,6 +61,7 @@ Evidence in one line: typeface choice matters less than most people think (serif
 - **Why:** When everything is bold, large and coloured, nothing leads (CORE-1).
 - **Check:** Blur test: can you name the first, second and third things read? For each text role, list how it differs from the role below. Three or more differences at once, or none that survives greyscale?
 - **Fix:** Remove signals until each level is separated by one strong difference (usually size or weight). Keep colour for meaning.
+- **Grade:** Craft wisdom.
 - **Source:** NN/g, *Visual Hierarchy* [S1]; Lupton [S54]; CORE-1.
 
 ### TYPE-8. Typesetting details are right
@@ -62,6 +69,7 @@ Evidence in one line: typeface choice matters less than most people think (serif
 - **Why:** These are the marks readers notice without knowing why; they read as care or the lack of it.
 - **Check:** Search the text for straight quotes, `--`, double spaces. Does any headline end with one short word on its own line? Is any face distorted (width not 100%)?
 - **Fix:** Replace characters; use `text-wrap: balance` on headlines and `text-wrap: pretty` on paragraphs; load the real weights you use.
+- **Grade:** Craft wisdom (typographic convention).
 - **Source:** Butterick, *Practical Typography* [S10]; Bringhurst [S52].
 
 ### TYPE-9. Avoid the generic AI type look
@@ -69,13 +77,15 @@ Evidence in one line: typeface choice matters less than most people think (serif
 - **Why:** None is wrong alone. Together they say "no one chose this" (UI-7) and make the work look like everything else [S27, S28].
 - **Check:** Count the tells. Two or more: flag. For each typeface, can you name the reason it was chosen (brand, subject, legibility need)? If not, it's a default.
 - **Fix:** Take type from the brand guide (BRAND-3). With none, pick a face whose voice suits the subject, then set it carefully (TYPE-2 to TYPE-6). A neutral face set well beats a distinctive face set badly. The choice of face itself is a taste call for the owner of the work.
+- **Grade:** Craft wisdom (practitioner write-ups).
 - **Source:** Anticode [S27]; Superdesign [S28]; UI-7.
 
 ### TYPE-10. Pick type from the theme catalogue to suit the genre; don't reuse one face everywhere
-- **What:** Match the display face to the brief's genre and tone, using the theme catalogue in [`fonts/CATALOGUE.md`](../../fonts/CATALOGUE.md) (62 free families in 18 themes, each with what it's good for, what to avoid and pairings). Name the theme and the reason in the critique or the log ("pulp comedy cover: Shrikhand title, Cabin author line"). Don't default to the same family across unrelated briefs, and vary type across a set of examples or a portfolio; one face in every piece reads as a house style nobody chose.
+- **What:** Match the display face to the brief's genre and tone, using the theme catalogue in [`fonts/CATALOGUE.md`](../../fonts/CATALOGUE.md) (61 free families in 18 themes, each with what it's good for, what to avoid and pairings). Name the theme and the reason in the critique or the log ("pulp comedy cover: Shrikhand title, Cabin author line"). Don't default to the same family across unrelated briefs, and vary type across a set of examples or a portfolio; one face in every piece reads as a house style nobody chose.
 - **Why:** Readers consistently attribute personality to typefaces, and to text, so a face whose persona clashes with the content changes how the piece is read [S156, S157]. Choosing on voice is the craft advice too [S54, S116]. Repeating one face across unrelated briefs is the type form of the generic look (TYPE-9).
 - **Check:** Which catalogue theme fits the brief's genre and tone? Is the chosen face from it (or is there a stated reason not)? Across the last few pieces, or across a set of examples, does one family recur where the briefs differ? The face's "avoid" line in the catalogue: does this use break it (e.g. a script in all caps, a thin deco face at text size)?
 - **Fix:** Pick from the matching theme; pair with a text face from the catalogue's "pairs with" line; then set it carefully (TYPE-2 to TYPE-6). This is a default, not a blocker; the owner of the work can choose otherwise, and a brand guide (BRAND-3) wins over the catalogue.
+- **Grade:** Partly supported (type-personality studies [S156, S157]).
 - **Source:** Brumberger [S156]; Shaikh, Chaparro & Fox [S157]; Lupton [S54]; Google Fonts Knowledge [S116].
 
 ### TYPE-11. Vertical space in measured intervals
@@ -95,7 +105,7 @@ Evidence in one line: typeface choice matters less than most people think (serif
 - **Source:** Bringhurst, 2.3.1-2.3.2 [S212]; Butterick [S53].
 
 ### TYPE-13. Rag and hyphenation: an even edge without holes
-- **What:** On narrow measures, set ragged right; justify only with good hyphenation and spacing, so there are no rivers or wide word gaps. A ragged edge should look like a gentle, uneven ripple, not a staircase or a big notch. Hyphenation: at least two letters before the break and three after, and no more than three hyphenated lines in a row.
+- **What:** Body text, and anything on a narrow measure or on the web, is set flush left, ragged right; justify only with good hyphenation and spacing, so there are no rivers or wide word gaps. A ragged edge should look like a gentle, uneven ripple, not a staircase or a big notch. Hyphenation: at least two letters before the break and three after, and no more than three hyphenated lines in a row.
 - **Why:** Justified narrow columns force uneven word spaces; Bringhurst gives the hyphenation limits [S212].
 - **Check:** In justified text, squint for white rivers. In ragged text, look at the right edge: any line much shorter than its neighbours, or a regular pattern of short-long? Count consecutive hyphens.
 - **Fix:** Switch to ragged right; turn on hyphenation with sensible limits; rewrite or rebreak the worst lines in display text by hand.
@@ -125,5 +135,5 @@ Evidence in one line: typeface choice matters less than most people think (serif
 | Measure | characters per line on 3 lines | 45-90 |
 | Scale | neighbouring size ratio | ≥ 1.1, one ratio |
 | Body size | computed px | ≥ 16 (web) |
-| Leading | line-height ÷ font-size | body 1.4-1.6, display 1.0-1.2 |
+| Leading | line-height ÷ font-size | body 1.3-1.5 (to 1.6 on long measures), display 1.0-1.2 |
 | Families | distinct `font-family` | ≤ 2 (+1 functional) |

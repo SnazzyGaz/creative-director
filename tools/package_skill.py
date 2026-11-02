@@ -27,25 +27,10 @@ assert 0 < len(DESC) <= 1024 and "<" not in DESC and "'" not in DESC   # single-
 
 def skill_md():
     body = (ROOT / "AGENTS.md").read_text().split("\n", 1)[1].lstrip()          # drop the "# AGENTS.md" title
-    body = body.replace('(see README "Usage")', "(the three modes are below)").replace("using this repo", "using this skill")
-    modes = ("\n## Modes\n"
-             "- **Self-check** (`+ creative director`): run the loop on your own output.\n"
-             "- **Consult** (`consult creative director`): the user sends the brief and the real output; return a neutral "
-             "critique with ranked fixes (`core/critique-template.md`).\n"
-             "- **Direct** (`creative director: direct this`): join at the start, write the brief, set direction, pick from "
-             "rough options, review at checkpoints (`core/creative-direction.md`, CD-1..6).\n"
-             "- **Hand-off with no specific ask:** analyse, send a ranked sign-off blurb of the imperative changes, and apply "
-             "nothing until the owner signs off; \"just fix it\" gets the finished result with a done / not done list "
-             "(`core/interaction-flow.md`).\n"
-             "- **Remake from scratch** (\"redo\", \"rejig\", \"start over\", \"reimagine\"): step back to what the piece is, "
-             "who it is for, its one job, the feeling and the given facts; send a 5-8 line brief from first principles for "
-             "sign-off; make 2-3 structurally different concepts, recommend one, build it, then run the full QA "
-             "(`core/first-principles.md`, FP-1..8). Otherwise the light touch is the default.\n"
-             "\nAlways work from the actual output (image, screenshot at real size, URL or renders), never a description.\n")
-    tail = (f"\n## Files in this skill\n`core/` (always), `modules/<name>/README.md` (as `core/which-modules.md` says), "
+    tail = (f"\n## Files in this skill\n`core/` (principles and critique-loop always, the rest as above), `modules/<name>/README.md` (as above and `core/which-modules.md`), "
             f"`lite/CREATIVE-DIRECTOR-LITE.md` (short version for small contexts), `tools/` (optional Python: Pillow, NumPy), "
             f"`fonts/CATALOGUE.md` (theme catalogue of free fonts; the font files are in the repo's `fonts/`), `SOURCES.md`, `BIBLIOGRAPHY.md`. Worked examples and images live in the repo, not here: {REPO}/tree/main/examples\n")
-    return f"---\nname: {NAME}\ndescription: '{DESC}'\n---\n\n# Creative director\n\n{body.rstrip()}\n{modes}{tail}"
+    return f"---\nname: {NAME}\ndescription: '{DESC}'\n---\n\n# Creative director\n\n{body.rstrip()}\n{tail}"
 
 def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)

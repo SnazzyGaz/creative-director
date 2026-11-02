@@ -2,7 +2,9 @@
 
 **Purpose:** the critique loop is a light touch. It keeps the layout idea and nudges the craft. Sometimes the owner of the work wants the opposite: "redo this from scratch", "rejig it", "start over", "reimagine it". Polishing the old layout doesn't answer that ask. This mode steps back first: what the piece is, who it is for and what it has to do. Then it rebuilds from that, using the same rules and checks as everything else.
 
-Load with: `core/principles.md`, `core/creative-direction.md`, `core/interaction-flow.md`, the medium's module, and `modules/aesthetic-critique/`. The template section is "Brief from first principles" in `core/critique-template.md`.
+Grade: every FP rule is a Procedure (`core/evidence.md`); the rules it calls on keep their own grades.
+
+Load with: `core/principles.md`, `core/creative-direction.md`, `core/critique-loop.md`, the medium's module, and `modules/aesthetic-critique/`. The brief block to fill in is at the end of this file; the rest of the critique uses `core/critique-template.md`.
 
 ```
 step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 2-3 concepts (FP-5)
@@ -12,7 +14,7 @@ step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 2-3 co
 ---
 
 ## FP-1. Use this mode only when asked
-- **What:** The triggers are "from scratch", "redo", "rejig", "start over", "reimagine" and "rethink", or an explicit "don't just polish it". Without one of these, the light touch stays the default (`critique-loop.md` section 4). A take-over (section 4b) is not this mode: a take-over repairs a broken piece and keeps its idea. This mode questions the idea itself.
+- **What:** The triggers are "from scratch", "redo", "rejig", "start over", "reimagine" and "rethink", or an explicit "don't just polish it". Without one of these, the light touch stays the default (`critique-loop.md` section 5). A take-over (section 6) is not this mode: a take-over repairs a broken piece and keeps its idea. This mode questions the idea itself.
 - **Why:** Reframing is how designers handle a problem the first framing can't solve [S164, S165]. But redoing work that only needed a nudge throws away what the owner made and approved (CD-5, AES-10).
 - **Check:** Can you quote the words that put you in this mode? If you can't, use the light touch, or ask.
 
@@ -58,7 +60,7 @@ step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 2-3 co
   - marks (BRAND-4, BRAND-8);
   - additions (AES-10).
   Then compare side by side with both the original and a light-touch fix, if one exists (AES-9): which is stronger for the brief, why, and at what cost. "The light touch was enough" is an allowed answer. Report it and offer the polish.
-- **Why:** A remake drops the light-touch cap, not the checks. The MUST-BE-RIGHT list still blocks (`critique-loop.md`), and regenerating is exactly where subjects drift and hands break (section 4b).
+- **Why:** A remake drops the light-touch cap, not the checks. The MUST-BE-RIGHT list still blocks (`critique-loop.md`), and regenerating is exactly where subjects drift and hands break (section 6).
 - **Check:** Is there a delivery checklist (FLOW-3) with the brief at the top, the three-way comparison, and the QA line?
 
 ## FP-8. Official marks survive the remake unaltered
@@ -80,3 +82,18 @@ step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 2-3 co
 - It is not the default. Light-touch fixes remain the default for every other ask.
 
 Worked example: [`examples/first-principles-remake/`](../examples/first-principles-remake/) (the seed-swap poster from `examples/aesthetic-across-domains/poster/`, rebuilt from the brief).
+
+## Template: brief from first principles
+
+Send this first, then wait.
+
+```markdown
+- Trigger (FP-1): <the owner's words>
+- Step back (FP-2), one line each, [brief] or [inferred]: what it is and where it is seen / who it is for / its one job / the feeling / the given facts, word for word / must survive vs incidental / success
+- Facts (FP-3): <transcription of the original, word for word, incl. disclaimers> then <one line per check; contradictions and unsourced claims as questions; what is held back until answered>
+- Imagery (FP-9, ILL-12; only if new imagery is made): <subject sheet: what it is, its parts, 2+ real references with sources> · <art direction> · <2-4× crops: structure / no tiling / components / material and light / marks>
+- **Brief (5-8 lines, FP-4):** <what and where> · <for whom> · <one job> · <feeling> · <must survive, incl. official marks (FP-8)> · <free to change> · <judged done when> · <open questions>
+- Concepts (FP-5), each with a thumbnail: A <one-line idea; what leads> / B <...> / C <...>. Structure test: <the one-sentence descriptions differ without naming a font, colour or effect: yes / no>
+- Recommend (FP-6): <concept, reason citing a brief line>. Dropped: <one line each: what it does better, why it lost>. The owner picks.
+- Comparison after the build (FP-7, AES-9): original vs light-touch fix (if any) vs remake: <stronger for the brief, why, cost>
+```

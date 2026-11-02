@@ -1,116 +1,125 @@
-# The critique loop: render, look, critique, fix, re-render
+# The critique loop: read the ask, render, look, critique, fix, deliver
 
-**Purpose:** a light touch. The loop nudges a bot's output (a 3D model, drawing, generated image, UI or flow) toward what people measurably prefer, while keeping its intent and what already works. It is not a rebuild. Make the smallest changes with the biggest effect, and stop once the work is clearly better.
-
-Always look at a fresh render or screenshot. Never assume from your own code or prompt.
+**Purpose:** a light touch. The loop nudges output (a drawing, generated image, 3D model, UI or flow) toward what people measurably prefer while keeping its intent and what already works. Smallest changes with the biggest effect; stop once it is clearly better. Always look at a fresh render, never at your own code or prompt.
 
 ```
-make -> render -> LOOK (5 tests) -> CRITIQUE (criteria, ranked) -> FIX up to 3 -> re-render -> compare
-         ^                                                                                    |
-         +----------------------- repeat only while it is clearly improving ------------------+
+read the ask -> brief -> render -> LOOK (5 tests) -> CRITIQUE (ranked, rule IDs) -> [sign-off] -> FIX -> re-render -> compare -> deliver
+                           ^                                                                       |
+                           +---------------------- repeat only while clearly improving ------------+
 ```
 
-## Why bother (evidence, not taste)
+Why bother: appeal is judged in about 50 ms [S36]; high visual complexity is liked least [S35]; attractive work earns tolerance for minor problems, not serious ones [S34]. So fix blockers first, simplify, then polish lightly. Grades: `evidence.md`. Every rule in this file is a Procedure.
 
-- People judge visual appeal within about 50 ms, and those judgements are stable [S36].
-- Perceived visual complexity is the strongest single predictor of that first impression; high complexity is liked least [S35]. Simplifying is usually the highest-impact fix.
-- Attractive work is perceived as more usable and earns tolerance for minor problems, but not for serious ones [S34]. So: fix blockers first, then polish lightly.
+## Blockers (MUST-BE-RIGHT)
 
-## 0a. Read the ask (interaction-flow.md)
+Only these block delivery; everything else is a default.
+- **Construction:** one horizon and consistent perspective, ellipses, proportion, one key light (TD-PER, TD-ELL, TD-PRO, TD-LIT).
+- **Bodies:** a clean anatomy pass (CHAR-9) when a person, hand or animal is in frame; animal counts (CHAR-10); the MUST-BE-RIGHT lines in CHAR-2 to CHAR-7.
+- **Fixed frames:** safe area (LAY-5), legible at feed size (LAY-6), print bleed and resolution (LAY-9), text over images (LAY-15), type under the size floor (TYPE-3).
+- **Screens and flows:** contrast (UI-6), text resize (UI-10), the main flow completes (UX-1).
+- **3D:** builds clean, right size and way up (3D-1, 3D-2).
+- **Marks and subjects:** official marks unaltered (BRAND-4), no invented marks (BRAND-8), food physically plausible (ILL-12).
 
-Before anything else, decide which ask this is: an unprompted hand-off (work with no specific request), "just fix it", consult, direct, or self-check. An unprompted hand-off ends step 3 with a sign-off blurb and waits; nothing is applied until the owner signs off (FLOW-1). "Just fix it" skips the wait but not the checks (FLOW-4). Full flow and diagram: `core/interaction-flow.md`.
+## 0. Read the ask
 
-## 0. Brief (creative-direction.md)
-
-- Before making, have the brief (CD-1) and the direction (CD-2). If the brief has no brand input (no colours, type, voice or logo), run `core/brand-intake.md` first; more rounds can't fix a generic look. For an open brief, compare 2-3 rough options first (CD-3).
-- The first critique point each round is: does it answer the brief and audience, and are the must-keeps intact (CD-1, CD-5)?
-- **Intent model.** Write a short intent block: purpose, audience, mood, style, focal experience, degree of polish, must-keeps. Mark each line [brief] or [inferred]; inferred lines are guesses to confirm, not facts (AES-0 in `modules/aesthetic-critique/`). Before calling a choice a flaw, ask whether it is deliberate and whether it works.
-
-## 1. Render
-
-- Render at the size people will see it, plus a thumbnail. For UI, screenshot at phone and desktop widths, and at 200% zoom (`tools/shot.sh`).
-- For 3D, run the cheap measured checks first (`modules/3d/`), then one contact sheet.
-- Keep every round: `round-01.png`, `round-02.png`... for side-by-side comparison.
-
-## 2. Look: five quick tests
-
-Artists use these to get a "fresh eye", because the maker grows used to their own mistakes [S7, S8].
-
-| Test | How (bot version) | What it reveals |
+| What the person said | Call it | What happens |
 |---|---|---|
-| **Squint / blur** | Gaussian blur ~5-10 px at screen size (more for big images) | Hierarchy and grouping: what leads when detail is gone [S1] |
-| **Thumbnail** | Shrink to ~150-200 px wide | Whether the idea survives at feed or icon size |
-| **Flip / mirror** | Mirror horizontally (upside down too, for pictures) | Drawing errors, lopsided balance, tilts you no longer see [S7] |
-| **Greyscale** | Desaturate by perceived lightness (luminance or OKLCH L, not HSL L) | Value structure; colour doing work that value should do [S5] |
-| **Crop / edges** | Inspect each edge and corner; try a tighter crop | Tangents, frame contacts, dead space, stray bright spots |
+| Work handed over, no specific ask ("here's a cover", "put this through the CD") | **Unprompted hand-off** | Analyse, send a sign-off blurb, wait (FLOW-1). |
+| "Just fix it", "I want the result" | **Result wanted** | No blurb. Fix every imperative point, check, deliver (FLOW-4). |
+| "What's wrong with this?", "consult creative director" | **Consult** | Critique only (`critique-template.md`); change nothing. "Do it" afterwards is the sign-off. |
+| "creative director: direct this", or a brief with no work | **Direct** | Brief, direction, rough options (`creative-direction.md`, CD-1 to CD-3), then the loop; sign-off at those checkpoints. |
+| "Redo / rejig / start over / reimagine / from scratch" | **Remake** | `first-principles.md` (FP-1 to FP-9): brief signed off, 2-3 concepts, build, full QA. |
+| The agent's own output (`+ creative director`) | **Self-check** | Run the loop silently; ask only taste calls; deliver with the FLOW-3 checklist. |
 
-Before delivery, add the **Sitting right** pass (`modules/composition/`, COMP-19 to COMP-25). Rotate 180°, cover each half, and sweep the edges and alignments. Flag only what looks accidental: lopsided weight, near-misses, floating or crammed elements, tangents, near-alignments, uneven gutters, mathematical rather than optical centring. Ask "intended?" for each. Asymmetric and off-centre work is valid; never centre or symmetrise by default to clear a flag.
+Never assume a remake without a from-scratch word. If the ask is unclear, treat it as an unprompted hand-off: a blurb costs one message, a wrong redo costs the piece. Flow diagram: `interaction-flow.md`.
 
-`tools/look.py` makes all five as one contact sheet, with value stats. Record one factual line per test (what was observed), e.g. "Blur: the badge top-right leads; the headline is second."
+## 1. Brief
 
-## 2b. Anatomy pass: a delivery gate
+- Have the brief (CD-1) and direction (CD-2). No brand input (colours, type, voice, logo)? Run `brand-intake.md` first. Open brief: 2-3 rough options first (CD-3).
+- **Intent model (AES-0):** purpose, audience, mood, style, focal experience, polish, must-keeps, each marked [brief] or [inferred]. Before calling a choice a flaw, ask whether it is deliberate and whether it works.
+- The first critique point every round: does it answer the brief, are the must-keeps intact (CD-1, CD-5)?
 
-If a person, a hand or an animal is anywhere in the frame, run the anatomy pass in `modules/character/` (CHAR-9) after the five tests: crop each hand, limb join, face and animal head at 2x-4x, and write one pass or fail line per crop (hand and finger count, trace to the correct shoulder, thumb side, grip, joint direction, no merged or extra limbs, eyes and teeth, animal counts). A whole-image look doesn't count. Any fail is a blocker, and the work isn't delivered until the pass is clean or the failure is reported to the owner.
+## 2. Render
 
-## 3. Critique
+At the size people see it, plus a thumbnail. UI: phone and desktop widths and 200% zoom (`tools/shot.sh`). 3D: the measured checks first (`modules/3d/`), then a contact sheet. Keep every round (`round-01.png`, ...).
 
-Use `critique-template.md`. Tone: neutral and factual, like a doctoral supervisor reviewing a chapter. Every point is judged against a named criterion, never personal preference.
+## 3. Look: five tests
 
-- **State the criteria first.** List the rule IDs in scope (e.g. `CORE-1, CORE-2, TD-PER-1, ILL-2`).
-- **Cite a rule ID on every point.** If no rule supports a point, it is not a critique point; put it under "Questions for the owner".
-- **No myths as reasons.** Don't justify a fix with the golden ratio, the rule of thirds as a law, or colour-emotion claims. Cite a preference study only if it fits the case (`evidence.md`).
-- **Meets criteria.** Record what is met, with evidence. This is a record of what to preserve, not encouragement.
-- **Needs improvement, ranked biggest first.** Rank by effect on the whole. Structure (hierarchy, perspective, composition, flow) before surface (texture, polish, micro-spacing). Five at most.
-- **Blockers vs improvements.** Only **MUST-BE-RIGHT** failures are blockers: perspective, anatomy/proportion, light consistency, contrast/accessibility minimums, a main flow that can't be completed, 3D build defects, official marks that are altered, redrawn or invented (BRAND-4, BRAND-8). Everything else is an improvement, optional by nature.
-- **Measure at zoom before calling a failure.** For ellipses, verticals, alignment and edges, look at 2x or more, or use the tool (`tools/vp.py`, `tools/ellipse.py`, `tools/contrast.py`). A call made at normal size is a candidate, not a finding.
-- **Two kinds of finding.** MEASURED findings are checked with a tool or a count (contrast ratio, type size, collisions, perspective). INTERPRETED findings are aesthetic readings: tie each to a visible feature, state its effect and the trade-off, and label it as interpretation (AES-1 to AES-8). Only measured findings can be blockers. When the two disagree, state the trade-off; don't resolve it toward the neater option by default.
-- **Specific and actionable.** Where (region, element, coordinates), the observed evidence, the rule, and one concrete fix.
-- **No padding, no harshness.** No approval or disapproval adjectives ("lovely", "weak", "terrible"), no hedging. Describe what is observed against the criterion.
+| Test | How | Reveals |
+|---|---|---|
+| **Squint / blur** | Blur ~5-10 px at screen size | What leads when detail goes [S1] |
+| **Thumbnail** | ~150-200 px wide | Whether the idea survives at feed size |
+| **Mirror** | Flip horizontally (and upside down for pictures) | Drawing errors, lopsided weight, tilts [S7] |
+| **Greyscale** | By luminance or OKLCH L, not HSL L | Value structure [S5] |
+| **Crop / edges** | Each edge and corner; a tighter crop | Tangents, frame contacts, dead space, stray brights |
 
-Register example:
-- Not: "The lighting is a bit confusing and the face feels weak."
-- But: "CORE-3 not met. Highest value contrast is at the top-right sky, not the face (focal point per brief). Fix: lower the sky one value step; place the lightest light on the face."
+`tools/look.py` makes all five as one sheet. Write one factual line per test ("Blur: the badge leads; the headline is second").
 
-## 3b. Sign-off (unprompted hand-offs)
+**Anatomy pass (delivery gate):** with any person, hand or animal in frame, crop each hand, limb join, face and animal head at 2-4x and write one pass/fail line per crop (CHAR-9, `tools/anatomy_crops.py`). A whole-image look doesn't count; any fail blocks.
 
-When the work was handed over with no specific ask, send the imperative changes as a short blurb before fixing anything: ranked, each with its rule ID, what will change, and a tag, **[edit]** (keep the art) or **[regenerate]** (new art or redo). Ask for sign-off and wait (FLOW-1). Skip this step only for "just fix it", self-check, or once the owner has already said "do it". After sign-off, every signed-off point is applied; the three-fix cap below does not cut a signed-off list short (spread it over rounds, or regenerate) (FLOW-2).
+**Before delivery, the Sitting right pass** (COMP-19 to COMP-25): rotate 180°, cover each half, gap measure (LAY-10), `tools/balance.py`, edge and alignment sweep. Flag only what looks accidental and ask "intended?". Asymmetric and off-centre work is valid: fix broken balance with a counterweight or by committing harder to the asymmetry. Never centre or symmetrise by default.
 
-## 4. Fix and re-render: light touch
+## 4. Critique (`critique-template.md`)
 
-- **Preserve intent.** Don't change the subject, style, mood, palette concept or layout concept. Those belong to the brief and to the owner of the work.
-- **At most ~3 changes per round**, blockers first, then the highest-ranked improvements.
-- **Smallest effective change.** Adjust a value step, a size, a gap, an edge. Don't restyle the piece to fix one corner. Prefer removing to adding.
-- Re-run the five tests and compare with the previous round side by side. If a change made it worse or broke something that met a criterion, revert it.
-- **Re-run the anatomy pass in full after any image edit** that touches or regenerates a figure, not only on the region you fixed: edits move, add and remove hands elsewhere.
-- **Check each fix applied.** Compare the new render with the fix as written. Image generators often skip or drift on edits. A fix that didn't apply counts as not done; retry it or report it.
-- Keep a one-line log per round: what changed, which rule, result.
-- **Aesthetic changes: one or two at a time.** Compare old and new side by side and decide keep, refine or revert, stating what the change cost; re-run the measured checks so a mood gain doesn't hide a regression (AES-9, AES-10).
+- **Criteria first:** list the rule IDs in scope. **Every point cites a rule ID**; no rule, no point: it becomes a question for the owner.
+- **No myths as reasons** (golden ratio, thirds as law, colour-emotion tables; `evidence.md`).
+- **Meets criteria:** record what to preserve.
+- **Needs improvement:** ranked by effect on the whole, structure before surface, five at most. Blockers marked.
+- **Measure at zoom** (2x+, or `tools/vp.py`, `ellipse.py`, `contrast.py`) before calling a failure.
+- **MEASURED vs INTERPRETED:** measured findings (tool or count) can block; interpreted ones (AES-1 to AES-8) name a visible feature, its effect and the trade-off, labelled as interpretation. When they conflict, state the trade-off; don't settle it toward the neater option.
+- **Register:** neutral and factual, like a thesis supervisor. Not "the face feels weak", but "CORE-3 not met: highest contrast is the top-right sky, not the face. Fix: lower the sky one value step."
 
-## 4b. Nudge or take over
+### FLOW-1. An unprompted hand-off gets a sign-off blurb, not a redo
+- **What:** After the full analysis, reply with only the **imperative** changes (blockers, and what the piece fails its brief without): ranked, five at most, each with its rule ID, what visibly changes, and **[edit]** (keep the art) or **[regenerate]** (new art or redo). Optional ideas go on one "also possible" line or nowhere. Ask for sign-off; apply nothing before it.
+- **Why:** Notes are suggestions until the owner accepts them (CD-4). Asking costs one message; a wrong guess costs a redo. An edit sent with a paragraph of critique leaves the owner unsure which is the answer.
+- **Check:** Ranked, cited, concrete, tagged, five lines at most, nothing changed yet?
+- **Format:**
+  ```
+  Imperative changes (sign off and I'll apply all of them):
+  1. [regenerate] CHAR-9: the hand at bottom right has no arm. New art with both hands traced to the shoulders.
+  2. [edit] TYPE-3, UI-6: author name is 3.1:1 on the sky. Set in code on a darker band, at least 4.5:1.
+  Also possible (not needed): a warmer palette. OK to go ahead?
+  ```
 
-The light-touch rules assume the work is basically sound. If it isn't, drop the cap and rework it properly.
+## 5. Fix and re-render
 
-Take over (full rework or redo) when any of these is true:
-- Three or more MUST-BE-RIGHT failures at once, or one that breaks the whole piece (e.g. no consistent horizon, anatomy that reads as broken, a main flow that can't be completed, a 3D model that fails build checks).
-- It fails the thumbnail and blur tests outright: no readable focal point or hierarchy at all.
-- Fixing it with three-change rounds would take more than three rounds.
-- It is unusable for its stated purpose.
-- A rework still keeps the brief's idea and must-keeps (CD-5). Re-read the brief before regenerating.
+- **Preserve intent:** subject, style, mood, palette and layout concepts belong to the brief and the owner.
+- **At most ~3 changes a round**, blockers first; smallest effective change; prefer removing to adding.
+- **Check each fix applied** against the fix as written (generators skip and drift); a fix that didn't apply is not done.
+- **Re-run the anatomy pass in full** after any edit touching a figure, and the LAY-10 whole-layout review after any image swap or re-crop.
+- **Aesthetic changes one or two at a time**: compare side by side, keep, refine or revert, and re-run the measured checks (AES-9, AES-10).
+- Re-run the five tests; revert anything that made it worse. One log line per round: change, rule, result.
 
-Note: take-over fires easily on AI-generated images, which often break perspective or construction outright. That's expected. Regenerating with the construction spelled out is cheap, but it is where the subject drifts, so check CD-5 first in the next critique.
+### FLOW-2. After sign-off, apply every signed-off point
+- **What:** Apply all signed-off points; the three-fix cap doesn't cut the list short (spread it over rounds). If an edit can't achieve a point, regenerate rather than drop it, and say so. Keep the idea and must-keeps (CD-5).
+- **Check:** Points signed off = points attempted.
 
-When taking over: keep the brief's intent (subject, mood, purpose), say plainly that it is a rework and which triggers fired, then run the normal loop on the new version. Otherwise, nudge.
+### FLOW-4. "Just fix it" skips the sign-off, not the checks
+- **What:** Apply every imperative point, run FLOW-3, and deliver the result first, with the change list after it.
+- **Check:** Is the first thing delivered the result, with done / not done lines?
 
-**Take-over is not a remake.** A take-over repairs a broken piece and keeps its idea. When the owner asks for it "from scratch", "redo", "rejig", "start over" or "reimagine", step back and rebuild from a new brief instead: `core/first-principles.md` (FP-1..9).
+## 6. Take over or nudge
 
-## 5. When to stop
+Take over (full rework) when any is true: three or more blockers at once, or one that breaks the whole piece (no consistent horizon, broken anatomy, a main flow that can't complete, a failed 3D build); it fails the thumbnail and blur tests outright; three-change rounds would need more than three rounds; it is unusable for its purpose. Keep the brief's idea and must-keeps (CD-5) and re-read the brief before regenerating; regeneration is where the subject drifts. Generated images trip this often; that is expected.
 
-Stop when any of these is true. "Clearly better" is enough; don't chase perfection.
+A take-over repairs a broken piece and keeps its idea. A **remake** ("from scratch") rebuilds from a new brief: `first-principles.md`.
 
-- No MUST-BE-RIGHT failures remain and the top-ranked improvements are done. When a figure, hand or animal is in frame, that includes a clean anatomy pass on the latest render (CHAR-9).
-- The latest round is not clearly better than the one before (side-by-side test).
-- Remaining points are questions no rule settles.
-- The next fix would change the brief or something the owner made or approved.
-- Round 3 is reached for a routine piece (round 5 at most for anything). Report rather than polish.
+### FLOW-5. Egregious work: take over, but say so first
+- **What:** Put "this needs a redo, not an edit, because ..." in the first line. In an unprompted hand-off the redo is point 1 [regenerate] and still waits for sign-off; under "just fix it", do it and say so up front.
 
-**Hand-off to the owner:** lead with the result, then one line per signed-off or imperative point marked done or not done (with the reason), and the QA blockers re-run: light, anatomy, type (FLOW-3). A critique that wasn't applied is never delivered as the result. Then: latest and previous render, the criteria judged, what was changed (with rule IDs), what was left and why, and the specific questions for them. Never call work "finished" on taste; the owner makes that call.
+## 7. Stop and deliver
+
+Stop when: no blockers remain (including a clean anatomy pass on the latest render) and the top improvements are done; or the latest round isn't clearly better; or what is left are questions no rule settles; or the next fix would change the brief or something the owner approved; or round 3 for routine work (5 at most). Report rather than polish.
+
+### FLOW-3. Re-check before delivery; never pass off an unapplied critique as the result
+- **What:** On the final render, check each signed-off point, then the QA gates: light (TD-LIT-1), anatomy (CHAR-9), type size and contrast (TYPE-3, UI-6), whitespace (LAY-10), Sitting right (COMP-25), marks (BRAND-4 overlay check, BRAND-8), real-subject crops (ILL-12), transcribed facts (FP-3), no additions (AES-10); signage adds viewing distance (LAY-7), a series adds the set pass (BRAND-6). Deliver the result first, then one line per point, **done** or **not done** with the reason. A critique alone is never the deliverable.
+- **Why:** Edits silently skip instructions, and an anatomy fault once passed light, edge and type checks because nobody cropped the hands (`examples/character-anatomy-pass/`).
+- **Check:** A line for every point? Does each "done" match the render?
+- **Format:**
+  ```
+  1. Hand traced to the arm (CHAR-9): done, anatomy pass clean.
+  2. Author contrast (UI-6): done, 7.2:1.
+  QA: light pass · anatomy pass · type pass · whitespace pass · sitting right: 1 flag, intended. Left for you: palette (taste call).
+  ```
+
+After the checklist: latest and previous render, what changed (rule IDs), what was left and why, questions for the owner. Never call work finished on taste; label your own verdicts as self-judged.

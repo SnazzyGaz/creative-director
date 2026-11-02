@@ -31,6 +31,8 @@ Only these block. Everything else is an improvement.
 - **Fixed frames (social, thumbnails, print):** key content inside the platform's safe area; main message readable at feed size (about 400 px wide); print has 3 mm bleed and 300 ppi at final size (LAY-5, LAY-6, LAY-9). Signage: key lines' cap height about distance ÷ 250 (LAY-7).
 - **Whitespace (LAY-10):** every empty area is a margin, a gap between groups, or named focal space. Squint: no empty band or block (including inside a row, between a small left item and a small right item) larger than about 1.5x the largest intended gap between groups. After any image swap or re-crop, re-review the whole layout. A series also gets a set pass: same logo size and position, margins, palette and type logic (BRAND-6).
 - **Type size:** no reading text under 14 px, nothing meaningful under 12 px (TYPE-3).
+- **Text over images:** a quiet zone, and contrast checked on the worst pixels behind the text (LAY-15).
+- **Food and real subjects:** physically plausible at 2-4x crops (ILL-12).
 - **Logos and marks:** include the official mark (own, team, sponsor, crest) from the official file (owner, brand site, or Wikimedia Commons checked against the brand), at good quality, unaltered, with its clear space and minimum size; never redrawn, restyled or AI-generated; the only cleaning allowed is a background knockout, a faithful trace or a one-colour silhouette, with the shapes unchanged and checked by overlaying the source; with no file, set the name in plain text (or a labelled placeholder for a nameless symbol). Generated images: no invented logos or garbled lettering on jerseys, bottles, packaging or signs (BRAND-4, BRAND-8).
 - **Contrast:** text at least 4.5:1; 3:1 for large text (about 24 px) and for UI boundaries; never colour as the only signal (UI-6).
 - **Zoom:** text can grow to 200% without clipping or overlap (UI-10).
@@ -42,24 +44,24 @@ Only these block. Everything else is an improvement.
 - **CORE-1 One hierarchy.** One thing leads, then a clear second and third. Check with blur.
 - **CORE-2 Value before colour.** The greyscale version must still read.
 - **CORE-3 Contrast where it matters.** Strongest contrast at the focal point, nowhere else.
-- **CORE-4 Spacing groups things.** Related items closer; spacing from one scale.
+- **CORE-4 Spacing groups things.** Related items closer; every gap from one small scale (4/8/16/24/32).
 - **CORE-5 Align to something.** Shared edges and a grid.
 - **CORE-6 Colour with a job.** Each colour has a role; few accents.
-- **CORE-7 Type that reads.** One or two families, a few clear size steps.
+- **CORE-7 Type that reads.** Three to five sizes on one scale; body 45-90 characters a line, leading about 1.3-1.5; contrast 4.5:1.
 - **CORE-8 Restraint.** Remove before adding; every element has a reason.
 - **CORE-9 Consistency.** Same thing, same look (icons, buttons, radii, strokes).
 - **CORE-10 Reads at its real size.** Check at the size people will see it.
-- **CORE-11 Balance by visual weight.**
+- **CORE-11 Balance by visual weight.** Settled unless tension is wanted; fix with a counterweight or a firmer asymmetry, never by centring by default.
 
 ## Common module checks
 
-- **Illustration:** one focal point (ILL-2); clear silhouettes (ILL-3); plan values, then palette (ILL-4); hard edges only where you want attention (ILL-5); avoid the generic AI look: rainbow glow, sparkles, light from everywhere (ILL-11).
-- **Web UI:** one type scale (UI-1); spacing from a scale (UI-3); a grid and one obvious primary action (UI-4); consistent components with visible states (UI-5); avoid generic AI tells such as gradient blobs, emoji icons and three identical cards (UI-7).
+- **Illustration:** one focal point (ILL-2); clear silhouettes (ILL-3); plan values, then palette (CV-1, CV-2); hard edges only where you want attention (ILL-5); avoid the generic AI look: rainbow glow, sparkles, light from everywhere (ILL-11).
+- **Web UI:** one type scale (TYPE-2); spacing from a scale (CORE-4); a grid and one obvious primary action (UI-4); consistent components with visible states (UI-5); avoid generic AI tells such as gradient blobs, emoji icons and three identical cards (UI-7).
 - **UX:** errors prevented, then explained in place with the input kept (UX-3); plain language (UX-6); labels stay visible (UX-7).
 - **Composition:** place things clearly on or clearly off the centre and axes, never just off (COMP-1); weigh it, then mirror-flip (COMP-2); faces and words are heavy (COMP-3); room in front of anything that looks or moves (COMP-5); one dominant per attribute (COMP-8); repeat families, vary members (COMP-9); 3-5 big shapes at thumbnail (COMP-13); full symmetry or clear asymmetry (COMP-17).
 - **Sitting right (before delivery):** squint, thumbnail, mirror, rotate 180°, cover each half, sweep edges. Flag only what looks accidental: lopsided weight, near-misses, floating or crammed elements, tangents, near-alignments, uneven gutters, box-centred round shapes. Ask "intended?". Fix broken balance with a counterweight or a firmer asymmetry; never centre or symmetrise by default (COMP-19 to COMP-25).
 - **Colour and value:** check every important edge in greyscale (CV-3); judge colour in place (CV-4); hold one of hue, lightness or chroma steady (CV-5); strongest colour in the smallest area at the focus (CV-6); survives colour-vision deficiency (CV-9).
-- **Pages:** one axis (LAY-11); text over images checked on the worst pixels (LAY-15); paragraphs marked one way (TYPE-12).
+- **Pages:** one alignment axis per group (LAY-11); text over images checked on the worst pixels (LAY-15); paragraphs marked one way (TYPE-12).
 - **3D:** physically plausible materials (3D-6); a view transform that doesn't clip (AgX in current Blender, not Standard; 3D-7).
 
 ## Myths: don't use as reasons
