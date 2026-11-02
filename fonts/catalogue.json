@@ -398,49 +398,6 @@
    ]
   },
   {
-   "family": "Fraunces",
-   "themes": [
-    "editorial-serif",
-    "childrens-playful",
-    "pulp-retro-comic"
-   ],
-   "licence": "OFL-1.1",
-   "licence_file": "docs/assets/src/fonts/OFL-Fraunces.txt",
-   "designer": "Undercase Type (Phaedra Charles, Flavia Zimbardi)",
-   "source": "https://github.com/google/fonts/tree/main/ofl/fraunces",
-   "specimen": "https://fonts.google.com/specimen/Fraunces",
-   "path": "docs/assets/src/fonts/",
-   "files": [
-    "Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf"
-   ],
-   "axes": {
-    "SOFT": [
-     0,
-     100
-    ],
-    "WONK": [
-     0,
-     1
-    ],
-    "opsz": [
-     9,
-     144
-    ],
-    "wght": [
-     100,
-     900
-    ]
-   },
-   "static_weights": [],
-   "good_for": "Soft, wonky 'old style' display; warm literary and food covers.",
-   "avoid": "Using it by default: it has been the house display face in this repo's examples, so pick something else unless the brief calls for its voice.",
-   "pairs_with": [
-    "Instrument Sans",
-    "Inter"
-   ],
-   "note": "Vendored earlier for the README images; not duplicated under fonts/."
-  },
-  {
    "family": "Libre Caslon Text",
    "themes": [
     "editorial-serif",
@@ -797,7 +754,6 @@
    "good_for": "Neat neutral grotesk with a width axis for labels and subtitles.",
    "avoid": "Being the default partner for every display face.",
    "pairs_with": [
-    "Fraunces",
     "Newsreader"
    ],
    "note": "Vendored earlier for the README images; not duplicated under fonts/."

@@ -1,12 +1,12 @@
 # Font library
 
-62 free font families in 18 themes, so type can match a brief's genre instead of the same face turning up in every piece (TYPE-10 in [`modules/typography/`](../modules/typography/README.md#type-10-pick-type-from-the-theme-catalogue-to-suit-the-genre-dont-reuse-one-face-everywhere)).
+61 free font families in 18 themes, so type can match a brief's genre instead of the same face turning up in every piece (TYPE-10 in [`modules/typography/`](../modules/typography/README.md#type-10-pick-type-from-the-theme-catalogue-to-suit-the-genre-dont-reuse-one-face-everywhere)).
 
 <p><img alt="Every family in the library, set in its own face, grouped by theme from editorial serif to luxury didone." src="specimens/overview.png" width="100%"></p>
 
 - **[CATALOGUE.md](CATALOGUE.md):** per family, its themes, licence, axes or weights, what it's good for, what to avoid and what it pairs with. Same data as [`catalogue.json`](catalogue.json) for scripts.
 - **Specimens:** one sheet per theme in [`specimens/`](specimens/) (sample line, weight range, pangram), plus the overview above.
-- **Files:** `fonts/<theme>/<family>/`, each folder with its font files (variable versions where they exist) and its licence. Fraunces and Instrument Sans, used for the README images, stay in `docs/assets/src/fonts/` and are listed in the catalogue too.
+- **Files:** `fonts/<theme>/<family>/`, each folder with its font files (variable versions where they exist) and its licence. Instrument Sans, used for the README images, stays in `docs/assets/src/fonts/` and is listed in the catalogue too.
 
 ## How to pick
 
@@ -22,7 +22,7 @@ A brand guide always wins over the catalogue (BRAND-3), and the face is a taste 
 
 | Theme | For | Families (primary) |
 |---|---|---|
-| [Editorial / literary serif](specimens/editorial-serif.png) | Novels, essays, magazines, serious non-fiction. | EB Garamond, Fraunces, Libre Caslon Text, Literata, Newsreader |
+| [Editorial / literary serif](specimens/editorial-serif.png) | Novels, essays, magazines, serious non-fiction. | EB Garamond, Libre Caslon Text, Literata, Newsreader |
 | [Pulp / retro / comic](specimens/pulp-retro-comic.png) | Comic books, pulp paperbacks, comedy, loud retro. | Bangers, Luckiest Guy, Shrikhand |
 | [Noir / thriller](specimens/noir-thriller.png) | Crime, spy, hard-boiled, case files. | Big Shoulders, Courier Prime, Special Elite |
 | [Horror](specimens/horror.png) | B-movie, gothic, slasher, folk horror. | Butcherman, Creepster, Jim Nightshade |

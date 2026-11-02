@@ -10,9 +10,9 @@ THEMES = {
   "dark":  dict(bg="#161514", ink="#EEE9DF", mute="#A39C91", faint="#3E3A35", accent="#D9825F"),
 }
 FONTS = "font-family:'Inter',sans-serif;"
-# Banner type: Fraunces (display, opsz 144, soft) over Instrument Sans. Both OFL 1.1, vendored in src/fonts/
-# and loaded from file so the variable axes (opsz, SOFT) apply.
-FACES = ("@font-face{font-family:'CD Fraunces';src:url('fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf');font-weight:100 900}"
+# Banner type: Newsreader (display optical size, from fonts/editorial-serif/) over Instrument Sans (src/fonts/).
+# Both OFL 1.1, loaded from file so the opsz axis applies.
+FACES = ("@font-face{font-family:'CD Newsreader';src:url('../../../fonts/editorial-serif/newsreader/Newsreader%5Bopsz,wght%5D.ttf');font-weight:200 800}"
          "@font-face{font-family:'CD Instrument Sans';src:url('fonts/InstrumentSans-VariableFont_wdth,wght.ttf');font-weight:400 700}")
 def shot(html, name, w, h):
     p = SRC / f"_{name}.html"; p.write_text(html)
@@ -60,7 +60,7 @@ def banner(t):
  </g></svg>'''
     html = f'''<html><head><style>{FACES}</style></head><body style="margin:0;background:{c['bg']};width:1280px;height:400px;position:relative;overflow:hidden">{svg}
  <div style="position:absolute;left:84px;top:128px;color:{c['ink']}">
-  <div style="font:380 104px/1 'CD Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 50,'WONK' 0;letter-spacing:-2px">creative director</div>
+  <div style="font:380 90px/1 'CD Newsreader',serif;font-variation-settings:'opsz' 72;letter-spacing:-1.5px">creative director</div>
   <div style="margin-top:24px;font:400 38px/1.2 'CD Instrument Sans',sans-serif;color:{c['mute']}">Design judgement for AI agents</div>
  </div></body></html>'''
     return shot(html, f"banner-{t}", 1280, 400)
@@ -113,7 +113,7 @@ def baseline(t):
             bar = f"border-top:6px solid {c['accent']};padding-top:10px;" if accent else "border-top:6px solid transparent;padding-top:10px;"
             return f'''<div style="width:{W}px"><img src="_b{i}{k}.jpg" style="width:{W}px;height:{H}px;display:block;border-radius:3px">
           <div style="margin-top:12px;{bar}font:{w} 40px/1 'CD Instrument Sans',sans-serif;color:{col};white-space:nowrap">{lab}</div></div>'''
-        rows += f'''<div style="margin-top:{0 if i == 0 else 34}px"><div style="font:400 46px/1 'CD Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 50;color:{c['ink']};margin-bottom:16px">{title}</div>
+        rows += f'''<div style="margin-top:{0 if i == 0 else 34}px"><div style="font:400 46px/1 'CD Newsreader',serif;font-variation-settings:'opsz' 72;color:{c['ink']};margin-bottom:16px">{title}</div>
           <div style="display:flex;gap:16px">{pan("wo","Without",c['mute'],400)}{pan("wi","With the skill",c['ink'],600)}{pan("ae","+ aesthetic layer",c['accent'],600,True)}</div></div>'''
     html = f'''<html><head><style>{FACES}</style></head><body style="margin:0;background:{c['bg']}"><div style="padding:26px 32px 30px">{rows}</div></body></html>'''
     out = shot(html, f"baseline-{t}", 1280, 1418)

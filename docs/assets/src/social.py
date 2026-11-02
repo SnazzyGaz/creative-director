@@ -6,7 +6,7 @@ from PIL import Image
 ROOT = pathlib.Path(__file__).resolve().parents[3]
 SRC = ROOT / "docs/assets/src"; OUT = ROOT / "docs/assets/social"
 c = dict(bg="#161514", ink="#EEE9DF", mute="#A39C91", faint="#3E3A35", accent="#D9825F")
-FACES = ("@font-face{font-family:'CD Fraunces';src:url('fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf');font-weight:100 900}"
+FACES = ("@font-face{font-family:'CD Newsreader';src:url('../../../fonts/editorial-serif/newsreader/Newsreader%5Bopsz,wght%5D.ttf');font-weight:200 800}"
          "@font-face{font-family:'CD Instrument Sans';src:url('fonts/InstrumentSans-VariableFont_wdth,wght.ttf');font-weight:400 700}")
 W, H = 1600, 900
 def on(p, v, x): return (x, p[1] + (v[1]-p[1]) * (x-p[0]) / (v[0]-p[0]))
@@ -52,7 +52,7 @@ def card(kind="x"):
     if gh:
         m = 80
         txt = f'''<div style="position:absolute;left:{m}px;top:118px;color:{c['ink']}">
-  <div style="font:380 128px/0.94 'CD Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 50,'WONK' 0;letter-spacing:-2.6px">creative<br>director</div>
+  <div style="font:380 128px/0.94 'CD Newsreader',serif;font-variation-settings:'opsz' 72;letter-spacing:-2.6px">creative<br>director</div>
   <div style="margin-top:32px;font:400 38px/1.2 'CD Instrument Sans',sans-serif;color:{c['ink']}">Design judgement for AI agents</div>
  </div>
  <div style="position:absolute;left:{m}px;right:{m}px;bottom:{m}px;display:flex;justify-content:space-between;font:400 20px/1 'DM Mono';letter-spacing:.5px">
@@ -61,7 +61,7 @@ def card(kind="x"):
  </div>'''
     html = f'''<html><head><style>{FACES}</style></head><body style="margin:0;background:{c['bg']};width:{CW}px;height:{CH}px;position:relative;overflow:hidden">{svg}
  {txt if gh else ''}<div style="position:absolute;left:112px;top:196px;color:{c['ink']};display:{'none' if gh else 'block'}">
-  <div style="font:380 172px/0.94 'CD Fraunces',serif;font-variation-settings:'opsz' 144,'SOFT' 50,'WONK' 0;letter-spacing:-3.5px">creative<br>director</div>
+  <div style="font:380 172px/0.94 'CD Newsreader',serif;font-variation-settings:'opsz' 72;letter-spacing:-3.5px">creative<br>director</div>
   <div style="margin-top:44px;font:400 50px/1.2 'CD Instrument Sans',sans-serif;color:{c['ink']}">Design judgement for AI agents</div>
  </div>
  <div style="position:absolute;left:112px;right:112px;bottom:64px;display:{'none' if gh else 'flex'};justify-content:space-between;font:400 24px/1 'DM Mono';letter-spacing:.5px">
