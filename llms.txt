@@ -11,6 +11,7 @@
 - [Which modules to load](core/which-modules.md): task-to-module table and token costs
 - [Evidence](core/evidence.md): grades and myths, before claiming people prefer something
 - [Modules](modules/): technical-drawing, illustration, character, web-ui, ux, 3d, typography, layout, brand, aesthetic-critique, composition, colour-value
+- [Lookbook](modules/lookbook/README.md): optional; established looks with tags and image sheets, for from-scratch concepts or work that feels generic
 - [Lite version](lite/CREATIVE-DIRECTOR-LITE.md): loop, core rules and blockers in one short file
 - [Font library](fonts/README.md): theme-grouped free fonts (OFL / Apache) with a catalogue and specimens
 - [Tools](tools/README.md): measuring scripts (contrast, grids, perspective, ellipses, intersections, whitespace, balance)

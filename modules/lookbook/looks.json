@@ -1,0 +1,5485 @@
+{
+ "about": "Lookbook tag file: one row per live look. Filter here (tools/lookbook_find.py), then open only the listed sheet. Every example image is our own render from that look's rules. Optional reference, never a rule source.",
+ "batch": 1,
+ "generated_by": "tools/lookbook_sync.py from the breeder export (see modules/lookbook/UPDATING.md)",
+ "paths_relative_to": "modules/lookbook/",
+ "counts": {
+  "live": 132,
+  "established": 65,
+  "keepers": 67,
+  "partial": [
+   "LB-066"
+  ],
+  "retired": 2
+ },
+ "scales": {
+  "out_there": {
+   "1": "default: ubiquitous in current commercial work; reads as normal design",
+   "2": "familiar revival: widely known and often quoted today, a deliberate period/style choice",
+   "3": "specialist: known to designers, rarely in mainstream briefs; reads as a clear reference",
+   "4": "deep cut: niche or historically remote; would surprise most clients",
+   "5": "far out: no established commercial use; an unfamiliar fusion",
+   "how": "established looks hand-scored by Grok Bot (self-judged); keepers = max(breeder novelty score, out_there of nearest looks)"
+  },
+  "energy": "low / medium / high visual energy. Established looks hand-scored; keepers from mood words (self-judged).",
+  "read_status": "reads = recognisable as the look from our render alone; partial = some layers miss (do not pick as a strong direction); retired = never use",
+  "nn_similarity": "CLIP ViT-B/32 cosine to the nearest other look (dedup_check.py). FLAG >= 0.90, REVIEW >= 0.85. Same-subject keepers score high on content, not style."
+ },
+ "fields": [
+  "id",
+  "name",
+  "kind",
+  "family",
+  "family_name",
+  "also_family",
+  "theme",
+  "use",
+  "mood",
+  "energy",
+  "avoid_for",
+  "hallmarks{palette,type,mark_making,composition,subject}",
+  "hint",
+  "out_there",
+  "read_status",
+  "era",
+  "care",
+  "themes",
+  "type_pairing",
+  "sheet",
+  "panel",
+  "nearest_neighbour",
+  "nn_similarity",
+  "nearest_looks",
+  "status"
+ ],
+ "looks": [
+  {
+   "id": "LB-001",
+   "name": "Hatched broadsheet relief satire",
+   "kind": "established",
+   "family": 1,
+   "family_name": "Revolutionary and political",
+   "also_family": 6,
+   "theme": "Broadsheet satire: skeletons as the living",
+   "use": "protest posters, remembrance festivals, satirical editorial",
+   "mood": [
+    "rebellious",
+    "humorous",
+    "bold"
+   ],
+   "energy": "high",
+   "avoid_for": "luxury branding; solemn or reverent briefs",
+   "hallmarks": {
+    "palette": "black ink on cheap off-white newsprint",
+    "type": "",
+    "mark_making": "relief engraving, dense parallel hatching",
+    "composition": "one central figure on a plain ground, big headline band above",
+    "subject": "skeletons in everyday clothes and hats"
+   },
+   "hint": "a skeleton in everyday dress, cut in black line",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1890s–1960s",
+   "care": "skeleton imagery is tied to a living remembrance observance; keep the satire, skip sugar-skull merch",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F1_revolutionary_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-062",
+   "nn_similarity": 0.6458,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-002",
+   "name": "Italian Futurism",
+   "kind": "established",
+   "family": 1,
+   "family_name": "Revolutionary and political",
+   "also_family": "",
+   "theme": "Speed, machines and noise as typography",
+   "use": "motorsport, sports kit, experimental music, festival type",
+   "mood": [
+    "bold",
+    "rebellious",
+    "optimistic"
+   ],
+   "energy": "high",
+   "avoid_for": "calm, wellness or heritage subjects; long reading text",
+   "hallmarks": {
+    "palette": "black and red on cream",
+    "type": "letters in jumping sizes set at angles, sound-words as shapes",
+    "mark_making": "printed letters scattered as shapes on uncoated paper",
+    "composition": "one subject repeated in overlapping fragmented planes (simultaneity); diagonal thrust",
+    "subject": ""
+   },
+   "hint": "one form repeated in overlapping outlines to show speed",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1909–1930s",
+   "care": "the movement fed into Fascism; borrow the form, not the creed",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F1_revolutionary_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-038",
+   "nn_similarity": 0.5228,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-003",
+   "name": "Vorticism",
+   "kind": "established",
+   "family": 1,
+   "family_name": "Revolutionary and political",
+   "also_family": "",
+   "theme": "Machine-age manifesto: angles burst outward",
+   "use": "magazine covers, manifesto campaigns, punk and electronic sleeves",
+   "mood": [
+    "bold",
+    "rebellious",
+    "austere"
+   ],
+   "energy": "high",
+   "avoid_for": "soft, romantic or children's subjects",
+   "hallmarks": {
+    "palette": "heavy black plus one hot magenta or red",
+    "type": "massive slab capitals",
+    "mark_making": "flat hard-edged blocks, no modelling",
+    "composition": "angular planes radiating from a single vortex point",
+    "subject": ""
+   },
+   "hint": "hard angular planes radiating from one point",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1914–1915",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F1_revolutionary_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R04R12",
+   "nn_similarity": 0.5101,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-004",
+   "name": "Dada and photomontage",
+   "kind": "established",
+   "family": 1,
+   "family_name": "Revolutionary and political",
+   "also_family": "",
+   "theme": "Anti-art: found type, photos, nonsense collide",
+   "use": "political satire, gig and art-school posters, zines",
+   "mood": [
+    "rebellious",
+    "humorous",
+    "bold"
+   ],
+   "energy": "high",
+   "avoid_for": "clear instructions, wayfinding, trust-led brands",
+   "hallmarks": {
+    "palette": "",
+    "type": "cut-up found letters in mixed fonts and sizes, some upside down",
+    "mark_making": "pasted photo fragments with torn edges",
+    "composition": "elements scattered at odd angles on white",
+    "subject": ""
+   },
+   "hint": "one cut-out photo fragment pasted at an odd angle",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1916–1924",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F1_revolutionary_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R05R04",
+   "nn_similarity": 0.5634,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-005",
+   "name": "Russian Constructivism",
+   "kind": "established",
+   "family": 1,
+   "family_name": "Revolutionary and political",
+   "also_family": "",
+   "theme": "Geometry as a call to action",
+   "use": "protest and campaign posters, music sleeves, bold editorial",
+   "mood": [
+    "heroic",
+    "bold",
+    "rebellious"
+   ],
+   "energy": "high",
+   "avoid_for": "soft luxury, nostalgia, quiet or private subjects",
+   "hallmarks": {
+    "palette": "red, black and white only",
+    "type": "condensed sans set on angles",
+    "mark_making": "photomontage with bars and circles",
+    "composition": "a red wedge driving into a field on a strong diagonal",
+    "subject": ""
+   },
+   "hint": "one red diagonal wedge",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1917–1930s",
+   "care": "state propaganda origin; don't use its symbols as decoration",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F1_revolutionary_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R04R21",
+   "nn_similarity": 0.6021,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-006",
+   "name": "Soviet agitprop and socialist-realist poster",
+   "kind": "established",
+   "family": 1,
+   "family_name": "Revolutionary and political",
+   "also_family": "",
+   "theme": "Heroic two-ink poster: a worker surges ahead",
+   "use": "calls to action, activism, sports campaigns, ironic retro",
+   "mood": [
+    "heroic",
+    "bold",
+    "austere"
+   ],
+   "energy": "high",
+   "avoid_for": "subtle or playful briefs; contexts where coercion reads badly",
+   "hallmarks": {
+    "palette": "red and black plus paper only",
+    "type": "one slab of chunky sans slogan in a single band",
+    "mark_making": "monumental sculpted face in 3 flat tonal planes; no cel shading, glossy eyes or fashion face",
+    "composition": "one figure on a strong diagonal from a low angle, gazing up and out past the viewer or lunging",
+    "subject": ""
+   },
+   "hint": "a monumental low-angle figure on a hard diagonal",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1918–1980s",
+   "care": "propaganda for a repressive state; use with context or irony",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F1_revolutionary_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-045",
+   "nn_similarity": 0.5231,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-007",
+   "name": "WPA Federal Art Project silkscreen poster",
+   "kind": "established",
+   "family": 1,
+   "family_name": "Revolutionary and political",
+   "also_family": "",
+   "theme": "Public-service silkscreen poster: parks, health",
+   "use": "national parks, public health, civic campaigns, outdoor brands",
+   "mood": [
+    "calm",
+    "optimistic",
+    "heroic"
+   ],
+   "energy": "medium",
+   "avoid_for": "luxury, tech-futurist or edgy briefs",
+   "hallmarks": {
+    "palette": "3–5 muted earth and sky inks",
+    "type": "",
+    "mark_making": "flat silkscreen colour areas, no gradients",
+    "composition": "simplified landscape or figure with a bold band for the message",
+    "subject": ""
+   },
+   "hint": "flat silkscreen landscape in a few muted inks",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1935–1943",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F1_revolutionary_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-062",
+   "nn_similarity": 0.5787,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-008",
+   "name": "Sunburst gouache propaganda poster",
+   "kind": "established",
+   "family": 1,
+   "family_name": "Revolutionary and political",
+   "also_family": 6,
+   "theme": "Optimistic poster: smiling workers, harvests",
+   "use": "ironic retro, history editorial, cultural exhibitions",
+   "mood": [
+    "heroic",
+    "optimistic",
+    "bold"
+   ],
+   "energy": "high",
+   "avoid_for": "real political messaging; casual merch",
+   "hallmarks": {
+    "palette": "saturated red, warm yellow, sky blue",
+    "type": "",
+    "mark_making": "smooth painted gouache, soft modelling",
+    "composition": "figures low in frame, rays or flags behind",
+    "subject": "beaming rosy-cheeked figures, harvest abundance"
+   },
+   "hint": "warm red-and-gold rays behind a beaming figure",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1949–1980s",
+   "care": "state propaganda tied to real harm; use only with context",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F1_revolutionary_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-055",
+   "nn_similarity": 0.5059,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-009",
+   "name": "Painterly metaphor poster",
+   "kind": "established",
+   "family": 1,
+   "family_name": "Revolutionary and political",
+   "also_family": "",
+   "theme": "Painterly, surreal theatre and film poster",
+   "use": "theatre, film festivals, book covers, cultural events",
+   "mood": [
+    "mysterious",
+    "humorous",
+    "bold"
+   ],
+   "energy": "medium",
+   "avoid_for": "corporate clarity, price-led retail",
+   "hallmarks": {
+    "palette": "muted colour with one shock accent",
+    "type": "hand-drawn lettering integrated in the image",
+    "mark_making": "loose hand-painted brushwork, visible texture",
+    "composition": "",
+    "subject": "one surreal metaphor image (heads, birds, masks)"
+   },
+   "hint": "a single painted surreal metaphor",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1950s–1980s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F1_revolutionary_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R02R02",
+   "nn_similarity": 0.59,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-010",
+   "name": "Stencil-silhouette solidarity silkscreen",
+   "kind": "established",
+   "family": 1,
+   "family_name": "Revolutionary and political",
+   "also_family": 6,
+   "theme": "Solidarity silkscreen: stark icon in pop colour",
+   "use": "activism, cultural events, music, solidarity campaigns",
+   "mood": [
+    "heroic",
+    "bold",
+    "rebellious"
+   ],
+   "energy": "high",
+   "avoid_for": "neutral corporate or luxury briefs",
+   "hallmarks": {
+    "palette": "2–3 saturated flat inks",
+    "type": "bold sans slogan band",
+    "mark_making": "flat silkscreen, high-contrast silhouette",
+    "composition": "one icon or figure, big and centred",
+    "subject": ""
+   },
+   "hint": "a single high-contrast silhouette in saturated flat ink",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1960s–1980s",
+   "care": "political solidarity art; don't strip it to a style",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F1_revolutionary_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-062",
+   "nn_similarity": 0.5532,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-011",
+   "name": "Punk zine and DIY photocopy",
+   "kind": "established",
+   "family": 1,
+   "family_name": "Revolutionary and political",
+   "also_family": "",
+   "theme": "DIY cut-and-photocopy fanzine",
+   "use": "gig posters, zines, streetwear, music editorial",
+   "mood": [
+    "rebellious",
+    "humorous",
+    "bold"
+   ],
+   "energy": "high",
+   "avoid_for": "premium, calm or institutional briefs",
+   "hallmarks": {
+    "palette": "",
+    "type": "ransom-note cut letters and typewriter text",
+    "mark_making": "photocopy grain, harsh black and white",
+    "composition": "crooked paste-up, tape and staples",
+    "subject": ""
+   },
+   "hint": "harsh black-and-white photocopy grain",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1976–1990s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F1_revolutionary_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-004",
+   "nn_similarity": 0.4699,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-012",
+   "name": "Statistical graphics: 19th-c. charts to minimal data graphics",
+   "kind": "established",
+   "family": 2,
+   "family_name": "Modernist and typographic",
+   "also_family": "",
+   "theme": "Data turned into a single explanatory picture",
+   "use": "reports, data journalism, education, museum panels",
+   "mood": [
+    "technical",
+    "calm",
+    "austere"
+   ],
+   "energy": "low",
+   "avoid_for": "mood-only branding; briefs with no data",
+   "hallmarks": {
+    "palette": "2–3 restrained inks on paper",
+    "type": "",
+    "mark_making": "fine engraved hairlines, flat ink, dotted drop-lines linking the two",
+    "composition": "one flowing band whose width is a quantity, plus a second variable plotted on a shared axis below",
+    "subject": ""
+   },
+   "hint": "one flowing band whose width carries a quantity",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1786 onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F2_modernist_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-018",
+   "nn_similarity": 0.5133,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-013",
+   "name": "Patent and technical drawing (blueprint)",
+   "kind": "established",
+   "family": 2,
+   "family_name": "Modernist and typographic",
+   "also_family": "",
+   "theme": "Technical drawing: how a thing works",
+   "use": "product launches, engineering brands, explainer editorial, merch",
+   "mood": [
+    "technical",
+    "calm",
+    "austere"
+   ],
+   "energy": "low",
+   "avoid_for": "emotional or atmospheric briefs",
+   "hallmarks": {
+    "palette": "black on white",
+    "type": "",
+    "mark_making": "black ink line, hatching for shade, no fills",
+    "composition": "exploded or cutaway views with numbered leaders",
+    "subject": ""
+   },
+   "hint": "numbered leader lines on a clean line drawing",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "19th–20th c.",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F2_modernist_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-029",
+   "nn_similarity": 0.3792,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-014",
+   "name": "Suprematism",
+   "kind": "established",
+   "family": 2,
+   "family_name": "Modernist and typographic",
+   "also_family": "",
+   "theme": "Pure floating geometry on white",
+   "use": "art and music identities, architecture, minimal editorial",
+   "mood": [
+    "calm",
+    "austere",
+    "optimistic"
+   ],
+   "energy": "medium",
+   "avoid_for": "literal or narrative briefs",
+   "hallmarks": {
+    "palette": "mostly black and red on white, small yellow or blue accents",
+    "type": "",
+    "mark_making": "flat painted planes, no outline",
+    "composition": "a few tilted bars and circles drifting diagonally, weightless; no grid",
+    "subject": ""
+   },
+   "hint": "a few tilted flat bars floating on white",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1915–1930s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F2_modernist_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-015",
+   "nn_similarity": 0.8046,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-015",
+   "name": "De Stijl",
+   "kind": "established",
+   "family": 2,
+   "family_name": "Modernist and typographic",
+   "also_family": "",
+   "theme": "Grid of black lines and primary blocks",
+   "use": "architecture, furniture, design schools, toy brands",
+   "mood": [
+    "playful",
+    "austere",
+    "optimistic"
+   ],
+   "energy": "medium",
+   "avoid_for": "organic, romantic or rustic briefs",
+   "hallmarks": {
+    "palette": "red, yellow, blue, black, white",
+    "type": "",
+    "mark_making": "flat colour with heavy black bars",
+    "composition": "strict horizontals and verticals, asymmetric balance",
+    "subject": ""
+   },
+   "hint": "heavy black grid lines with one primary block",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1917–1931",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F2_modernist_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-014",
+   "nn_similarity": 0.8046,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-016",
+   "name": "Bauhaus and New Typography",
+   "kind": "established",
+   "family": 2,
+   "family_name": "Modernist and typographic",
+   "also_family": "",
+   "theme": "Functional geometry: circle, square, triangle",
+   "use": "design schools, furniture, exhibitions, tech brands",
+   "mood": [
+    "austere",
+    "optimistic",
+    "technical"
+   ],
+   "energy": "medium",
+   "avoid_for": "ornate heritage or romantic briefs",
+   "hallmarks": {
+    "palette": "primaries plus black on off-white",
+    "type": "geometric sans, lowercase",
+    "mark_making": "",
+    "composition": "asymmetric layout with bars and rules",
+    "subject": "circle, square and triangle as building blocks"
+   },
+   "hint": "a circle, square and triangle in primaries",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1919–1933",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F2_modernist_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-014",
+   "nn_similarity": 0.7665,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-017",
+   "name": "Isotype (picture statistics)",
+   "kind": "established",
+   "family": 2,
+   "family_name": "Modernist and typographic",
+   "also_family": "",
+   "theme": "Counting with repeated pictograms",
+   "use": "data explainers, public information, annual reports",
+   "mood": [
+    "technical",
+    "calm",
+    "playful"
+   ],
+   "energy": "low",
+   "avoid_for": "mood-led or luxury briefs",
+   "hallmarks": {
+    "palette": "2 flat inks on off-white",
+    "type": "",
+    "mark_making": "solid flat silhouettes, square corners, no outlines, app-icon rounding or shadows",
+    "composition": "rows on a baseline; count shown by repeats, a half symbol for fractions",
+    "subject": "identical flat pictograms; more things means more icons, not bigger icons"
+   },
+   "hint": "a row of identical flat pictograms",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1925–1940s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F2_modernist_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-040",
+   "nn_similarity": 0.5103,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-018",
+   "name": "Transit diagram and wayfinding pictograms",
+   "kind": "established",
+   "family": 2,
+   "family_name": "Modernist and typographic",
+   "also_family": "",
+   "theme": "Network map as straight lines and dots",
+   "use": "wayfinding, maps, systems diagrams, event layouts",
+   "mood": [
+    "technical",
+    "calm",
+    "optimistic"
+   ],
+   "energy": "low",
+   "avoid_for": "atmospheric or narrative briefs",
+   "hallmarks": {
+    "palette": "one saturated colour per line on white",
+    "type": "",
+    "mark_making": "thick strokes, round interchange dots",
+    "composition": "lines only at 0, 45 and 90 degrees, even station spacing",
+    "subject": ""
+   },
+   "hint": "coloured lines bending only at 45 degrees",
+   "out_there": 1,
+   "read_status": "reads",
+   "era": "1931 onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F2_modernist_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-012",
+   "nn_similarity": 0.5133,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-019",
+   "name": "International Typographic Style and corporate modernism",
+   "kind": "established",
+   "family": 2,
+   "family_name": "Modernist and typographic",
+   "also_family": "",
+   "theme": "Grid-led, objective modernist poster",
+   "use": "corporate identity, signage, museums, conferences",
+   "mood": [
+    "austere",
+    "calm",
+    "technical"
+   ],
+   "energy": "low",
+   "avoid_for": "warm, rustic or nostalgic briefs",
+   "hallmarks": {
+    "palette": "black, white and one red",
+    "type": "a flush-left sans text block plus one large headline, on the grid",
+    "mark_making": "",
+    "composition": "strict modular grid, asymmetric balance, lots of white",
+    "subject": ""
+   },
+   "hint": "flush-left sans on a strict grid",
+   "out_there": 1,
+   "read_status": "reads",
+   "era": "1950s–1970s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F2_modernist_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-016",
+   "nn_similarity": 0.5452,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-020",
+   "name": "Op art",
+   "kind": "established",
+   "family": 2,
+   "family_name": "Modernist and typographic",
+   "also_family": "",
+   "theme": "Optical patterns that seem to move",
+   "use": "music, fashion prints, events, motion graphics",
+   "mood": [
+    "bold",
+    "playful",
+    "technical"
+   ],
+   "energy": "high",
+   "avoid_for": "text-heavy or calm briefs",
+   "hallmarks": {
+    "palette": "black and white, or vibrating complementaries",
+    "type": "",
+    "mark_making": "precise hard-edged stripes, checks and dots",
+    "composition": "field of pattern warped to bulge or ripple",
+    "subject": ""
+   },
+   "hint": "black-and-white stripes warped into a bulge",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1960s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F2_modernist_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R03R14",
+   "nn_similarity": 0.5353,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-021",
+   "name": "New Wave to grunge: deconstructed typography",
+   "kind": "established",
+   "family": 2,
+   "family_name": "Modernist and typographic",
+   "also_family": "",
+   "theme": "Layered, broken typography as image",
+   "use": "music, fashion, festival posters, experimental editorial",
+   "mood": [
+    "rebellious",
+    "bold",
+    "mysterious"
+   ],
+   "energy": "high",
+   "avoid_for": "accessibility-critical text, wayfinding",
+   "hallmarks": {
+    "palette": "muted photo tones with one acid colour",
+    "type": "overlapping letter fragments at many sizes",
+    "mark_making": "",
+    "composition": "layers, cropping and grain fighting the grid",
+    "subject": ""
+   },
+   "hint": "one oversized cropped letterform behind the content",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "late 1970s–1990s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F2_modernist_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R01R03",
+   "nn_similarity": 0.5379,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-022",
+   "name": "Flat design and vector illustration",
+   "kind": "established",
+   "family": 2,
+   "family_name": "Modernist and typographic",
+   "also_family": "",
+   "theme": "Friendly flat vector illustration for screens",
+   "use": "apps, websites, onboarding, explainer graphics",
+   "mood": [
+    "calm",
+    "optimistic",
+    "playful"
+   ],
+   "energy": "medium",
+   "avoid_for": "heritage, luxury or gritty briefs",
+   "hallmarks": {
+    "palette": "bright limited palette with soft pastels",
+    "type": "",
+    "mark_making": "flat vector shapes, no outlines, no texture",
+    "composition": "simple objects, generous space, rounded corners",
+    "subject": ""
+   },
+   "hint": "flat shapes with no outline or texture",
+   "out_there": 1,
+   "read_status": "reads",
+   "era": "2010s onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F2_modernist_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-049",
+   "nn_similarity": 0.5793,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-023",
+   "name": "Greek black-figure vase painting",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Profile silhouettes on terracotta",
+   "use": "heritage, wine and food labels, mythology book covers",
+   "mood": [
+    "heroic",
+    "austere",
+    "elegant"
+   ],
+   "energy": "medium",
+   "avoid_for": "tech or futurist briefs",
+   "hallmarks": {
+    "palette": "glossy black on terracotta orange",
+    "type": "",
+    "mark_making": "solid silhouettes with fine lines scratched through the black",
+    "composition": "strict profile figures on one ground line, frieze band",
+    "subject": ""
+   },
+   "hint": "black profile silhouettes on terracotta",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "c. 700–500 BCE",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R02R04",
+   "nn_similarity": 0.573,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-024",
+   "name": "Byzantine mosaic and icon",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Frontal figures on a glittering gold ground",
+   "use": "heritage, sacred-music sleeves, luxury, editorial",
+   "mood": [
+    "sacred",
+    "austere",
+    "ornate"
+   ],
+   "energy": "low",
+   "avoid_for": "casual, playful or tech briefs",
+   "hallmarks": {
+    "palette": "gold ground, deep blues, reds",
+    "type": "",
+    "mark_making": "small square tesserae with visible gaps",
+    "composition": "frontal, symmetrical, large calm eyes",
+    "subject": ""
+   },
+   "hint": "a gold tesserae ground",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "6th–15th c.",
+   "care": "sacred images; don't use for jokes",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R02R02",
+   "nn_similarity": 0.5163,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-025",
+   "name": "Illuminated manuscript",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Hand-made page, ornate initials and borders",
+   "use": "book covers, heritage, wedding stationery, games",
+   "mood": [
+    "sacred",
+    "ornate",
+    "mysterious"
+   ],
+   "energy": "low",
+   "avoid_for": "fast, minimal or tech briefs",
+   "hallmarks": {
+    "palette": "gold, lapis blue, vermilion on vellum",
+    "type": "one huge decorated initial",
+    "mark_making": "interlaced knots and vines, fine pen work",
+    "composition": "",
+    "subject": ""
+   },
+   "hint": "one decorated initial letter",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "c. 600–1500",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-063",
+   "nn_similarity": 0.5709,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-026",
+   "name": "Heraldry",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Coats of arms: flat emblems, strict colour rules",
+   "use": "sports clubs, schools, beer and spirits, family crests",
+   "mood": [
+    "heroic",
+    "austere",
+    "bold"
+   ],
+   "energy": "medium",
+   "avoid_for": "casual, playful, anti-establishment briefs",
+   "hallmarks": {
+    "palette": "flat tinctures: gold, silver, red, blue, green, black",
+    "type": "",
+    "mark_making": "",
+    "composition": "shield, helm, crest and mantling, symmetrical",
+    "subject": "stylised beasts on a shield"
+   },
+   "hint": "a shield with one flat stylised beast",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "12th c. onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-059",
+   "nn_similarity": 0.5001,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-027",
+   "name": "Arts and Crafts pattern and private-press book",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Hand-crafted repeating nature patterns",
+   "use": "textiles, wallpaper, book design, heritage brands",
+   "mood": [
+    "ornate",
+    "warm",
+    "nostalgic"
+   ],
+   "energy": "low",
+   "avoid_for": "tech, speed or industrial briefs",
+   "hallmarks": {
+    "palette": "muted greens, indigo, madder red",
+    "type": "",
+    "mark_making": "flat colour with fine outline, woodblock feel",
+    "composition": "dense, symmetrical repeating pattern of plants and birds",
+    "subject": ""
+   },
+   "hint": "a dense repeating leaf pattern",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "c. 1860–1910",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-059",
+   "nn_similarity": 0.5773,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-028",
+   "name": "Art Nouveau",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Whiplash curves, flowing hair and flowers",
+   "use": "beauty, drinks, theatre, boutique packaging",
+   "mood": [
+    "elegant",
+    "ornate",
+    "sensual"
+   ],
+   "energy": "medium",
+   "avoid_for": "hard-edged tech or brutal briefs",
+   "hallmarks": {
+    "palette": "soft pastels with gold",
+    "type": "",
+    "mark_making": "flowing whiplash outlines",
+    "composition": "figure framed by a halo or arch of ornament",
+    "subject": "women, flowers, flowing hair"
+   },
+   "hint": "one whiplash curve as a frame",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "c. 1890–1910",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-025",
+   "nn_similarity": 0.5685,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-029",
+   "name": "Vienna Secession and Glasgow Style",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Geometric ornament: squares, grids and gold",
+   "use": "architecture, galleries, luxury, editorial",
+   "mood": [
+    "elegant",
+    "austere",
+    "ornate"
+   ],
+   "energy": "low",
+   "avoid_for": "loud pop or casual briefs",
+   "hallmarks": {
+    "palette": "black, white, gold, a touch of rose",
+    "type": "",
+    "mark_making": "fine even black line, flat gold panel, chequer-band border; no organic curls",
+    "composition": "tall narrow panel, long straight vertical stems, lots of white; small squares as inlay, not pixels",
+    "subject": ""
+   },
+   "hint": "a grid of small squares as border",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1897–1914",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-018",
+   "nn_similarity": 0.4503,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-030",
+   "name": "Art Deco and Streamline Moderne",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Streamlined luxury: chevrons and sunbursts",
+   "use": "hotels, cocktails, cinema, travel, jewellery",
+   "mood": [
+    "elegant",
+    "optimistic",
+    "bold"
+   ],
+   "energy": "medium",
+   "avoid_for": "rustic, organic or grungy briefs",
+   "hallmarks": {
+    "palette": "black, gold, cream, jade",
+    "type": "tall thin geometric capitals",
+    "mark_making": "flat colour with smooth airbrushed gradients",
+    "composition": "symmetry, sunbursts, stepped forms",
+    "subject": ""
+   },
+   "hint": "a stepped sunburst",
+   "out_there": 1,
+   "read_status": "reads",
+   "era": "1920s–1930s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R04R06",
+   "nn_similarity": 0.5885,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-031",
+   "name": "Googie and atomic-age graphics",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Atomic-age roadside optimism",
+   "use": "diners, motels, retro events, cocktail bars",
+   "mood": [
+    "optimistic",
+    "playful",
+    "nostalgic"
+   ],
+   "energy": "high",
+   "avoid_for": "serious, institutional briefs",
+   "hallmarks": {
+    "palette": "turquoise, coral, mustard, cream",
+    "type": "",
+    "mark_making": "",
+    "composition": "tilted angles and floating shapes",
+    "subject": "boomerangs, starbursts, atoms, upswept roofs"
+   },
+   "hint": "a starburst or boomerang shape",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1945–1965",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R04R06",
+   "nn_similarity": 0.5976,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-032",
+   "name": "Psychedelic poster",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Melting lettering and vibrating colour",
+   "use": "festivals, music, cannabis and fashion brands",
+   "mood": [
+    "festive",
+    "rebellious",
+    "sensual"
+   ],
+   "energy": "high",
+   "avoid_for": "clarity-critical or corporate briefs",
+   "hallmarks": {
+    "palette": "vibrating complementary colours",
+    "type": "lettering stretched to fill a shape, barely legible",
+    "mark_making": "swirling flowing contours",
+    "composition": "",
+    "subject": ""
+   },
+   "hint": "vibrating complementary colour pair",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1965–1972",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-028",
+   "nn_similarity": 0.5462,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-033",
+   "name": "Postmodern squiggle-and-terrazzo pattern",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Playful postmodern clash of shapes, patterns",
+   "use": "youth brands, events, fashion, packaging",
+   "mood": [
+    "playful",
+    "festive",
+    "humorous"
+   ],
+   "energy": "high",
+   "avoid_for": "heritage or serious institutional briefs",
+   "hallmarks": {
+    "palette": "clashing brights and pastels with black",
+    "type": "",
+    "mark_making": "",
+    "composition": "objects tilted and floating, patterns colliding",
+    "subject": "squiggles, terrazzo, confetti, geometric solids"
+   },
+   "hint": "black squiggles and terrazzo speckle",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1980s–1990s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-016",
+   "nn_similarity": 0.4904,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-034",
+   "name": "Y2K and vaporwave internet aesthetics",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Translucent plastic, chrome, early-web future",
+   "use": "fashion, music, tech nostalgia, youth brands",
+   "mood": [
+    "nostalgic",
+    "playful",
+    "sensual"
+   ],
+   "energy": "medium",
+   "avoid_for": "heritage, earthy or serious briefs",
+   "hallmarks": {
+    "palette": "aqua, translucent blues, silver chrome, pink",
+    "type": "",
+    "mark_making": "glossy blobby 3D, bubbles",
+    "composition": "floating objects on gradient grids",
+    "subject": ""
+   },
+   "hint": "translucent candy-coloured plastic",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "late 1990s–2010s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-033",
+   "nn_similarity": 0.4746,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-035",
+   "name": "Popular prints: chapbook and broadsheet woodcut",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "Cheap printed broadside or chapbook picture",
+   "use": "folk events, beer labels, storytelling, heritage",
+   "mood": [
+    "humorous",
+    "playful",
+    "nostalgic"
+   ],
+   "energy": "medium",
+   "avoid_for": "sleek, premium or tech briefs",
+   "hallmarks": {
+    "palette": "black plus loose hand-stencilled colour",
+    "type": "",
+    "mark_making": "crude black woodcut lines",
+    "composition": "lively crowded scene inside a border",
+    "subject": ""
+   },
+   "hint": "crude black woodcut line",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "17th–19th c.",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-038",
+   "nn_similarity": 0.5713,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-036",
+   "name": "Natural-history plate and cyanotype",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "Specimen plate: one subject, studied, labelled",
+   "use": "botanical brands, gin, cosmetics, education",
+   "mood": [
+    "calm",
+    "elegant",
+    "technical"
+   ],
+   "energy": "low",
+   "avoid_for": "loud, urban or fast briefs",
+   "hallmarks": {
+    "palette": "natural colour on cream",
+    "type": "",
+    "mark_making": "fine engraving or watercolour, accurate detail",
+    "composition": "single specimen centred on white with lots of space",
+    "subject": ""
+   },
+   "hint": "one specimen centred on blank paper",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "18th–19th c.",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-027",
+   "nn_similarity": 0.4549,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-037",
+   "name": "Victorian commercial print: wood type and chromolithograph",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "Ornate colour trade card and wood-type bill",
+   "use": "craft drinks, barbers, circuses, heritage packaging",
+   "mood": [
+    "nostalgic",
+    "bold",
+    "ornate"
+   ],
+   "energy": "medium",
+   "avoid_for": "minimal or tech briefs",
+   "hallmarks": {
+    "palette": "rich chromolithograph colour",
+    "type": "many mixed display faces stacked and centred",
+    "mark_making": "embossed-look ornament, scrolls",
+    "composition": "",
+    "subject": ""
+   },
+   "hint": "stacked mixed display type",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "c. 1830–1900",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-059",
+   "nn_similarity": 0.4686,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-038",
+   "name": "Expressionist woodcut",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "Raw gouged woodcut with emotional distortion",
+   "use": "theatre, literature, music, protest",
+   "mood": [
+    "rebellious",
+    "mysterious",
+    "bold"
+   ],
+   "energy": "high",
+   "avoid_for": "cheerful, polished commercial briefs",
+   "hallmarks": {
+    "palette": "black on raw paper, maybe one colour",
+    "type": "",
+    "mark_making": "jagged gouge marks, visible wood grain",
+    "composition": "",
+    "subject": "angular distorted figures"
+   },
+   "hint": "jagged gouge marks",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "c. 1905–1925",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-035",
+   "nn_similarity": 0.5713,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-039",
+   "name": "Sōsaku-hanga (self-carved creative print)",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "Self-carved, self-printed quiet woodblock",
+   "use": "books, tea and craft brands, calm editorial",
+   "mood": [
+    "calm",
+    "elegant",
+    "nostalgic"
+   ],
+   "energy": "low",
+   "avoid_for": "loud campaign briefs",
+   "hallmarks": {
+    "palette": "few muted inks",
+    "type": "",
+    "mark_making": "each shape one flat plane of printed ink with wood grain showing through; no painterly shading",
+    "composition": "simple calm scene, flat planes",
+    "subject": ""
+   },
+   "hint": "soft wood grain under muted flat colour",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1904 onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R01R03",
+   "nn_similarity": 0.5366,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-040",
+   "name": "Linocut colour print",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "Bold cut-line print with flowing rhythm",
+   "use": "posters, book covers, food and craft labels",
+   "mood": [
+    "warm",
+    "bold",
+    "playful"
+   ],
+   "energy": "medium",
+   "avoid_for": "photographic or luxury-gloss briefs",
+   "hallmarks": {
+    "palette": "2–4 flat inks",
+    "type": "",
+    "mark_making": "bold flowing cut lines, white carved channels",
+    "composition": "rhythmic repeated forms",
+    "subject": ""
+   },
+   "hint": "white carved channels in flat ink",
+   "out_there": 1,
+   "read_status": "reads",
+   "era": "1920s onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-048",
+   "nn_similarity": 0.5277,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-041",
+   "name": "Risograph revival",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "Grainy overprinted spot colours",
+   "use": "zines, gig posters, indie publishing, cafés",
+   "mood": [
+    "playful",
+    "rebellious",
+    "warm"
+   ],
+   "energy": "medium",
+   "avoid_for": "premium-gloss or photographic briefs",
+   "hallmarks": {
+    "palette": "2–3 fluorescent spot inks overprinting",
+    "type": "",
+    "mark_making": "grain, misregistration, halftone",
+    "composition": "flat shapes with overlaps making new colours",
+    "subject": ""
+   },
+   "hint": "fluoro pink and blue overprint",
+   "out_there": 1,
+   "read_status": "reads",
+   "era": "2000s onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R04R06",
+   "nn_similarity": 0.5108,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-065",
+   "name": "Incised black relief silhouette",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "Solid black cut figure, white lines inside",
+   "use": "book covers, nature editorial, labels, gig posters",
+   "mood": [
+    "calm",
+    "bold",
+    "mysterious"
+   ],
+   "energy": "low",
+   "avoid_for": "busy photographic or multi-colour briefs",
+   "hallmarks": {
+    "palette": "one black ink on off-white paper; optional single small red accent mark",
+    "type": "",
+    "mark_making": "one solid flat black mass; fine white incised lines cut inside it (feather chevrons, fur dashes, zigzags); no shading",
+    "composition": "one bold-contoured figure, front-on or in profile, floating on wide empty paper; no ground, no frame",
+    "subject": "one animal figure (a spread-wing owl) or a dense stack of interlocking animals"
+   },
+   "hint": "white incised chevrons inside a solid black silhouette",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "relief printing, stencil and stonecut traditions, 20th c. onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-020",
+   "nn_similarity": 0.5294,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-066",
+   "name": "Relief-ink object inventory",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "Everyday objects as a hand-cut catalogue",
+   "use": "cafés, kitchenware, cookbooks, shop wrapping paper, menus",
+   "mood": [
+    "warm",
+    "playful",
+    "calm"
+   ],
+   "energy": "low",
+   "avoid_for": "dramatic, heroic or high-tech briefs",
+   "hallmarks": {
+    "palette": "one black ink on off-white paper",
+    "type": "",
+    "mark_making": "slightly wobbly hand-cut relief lines; mix of open contour outlines and solid black filled objects; no shading or perspective",
+    "composition": "objects scattered across bare paper in loose catalogue rows with wide gaps",
+    "subject": "kitchenware: kettles, mugs, pans, plates, cutlery, a few with tiny simple flowers"
+   },
+   "hint": "a few solid black objects among open outlines",
+   "out_there": 3,
+   "read_status": "partial",
+   "era": "relief printing (lino and woodcut) and printed specimen-sheet traditions, 20th c. onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-033",
+   "nn_similarity": 0.4903,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-042",
+   "name": "Belle Époque lithographic poster and Japonisme",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Belle Époque litho poster, flat silhouettes",
+   "use": "cabaret, wine, theatre, boutique events",
+   "mood": [
+    "playful",
+    "bold",
+    "elegant"
+   ],
+   "energy": "medium",
+   "avoid_for": "tech or strict-corporate briefs",
+   "hallmarks": {
+    "palette": "few flat lithograph colours, splatter texture",
+    "type": "",
+    "mark_making": "bold curving outline, crayon stipple in one area (not paint splatter)",
+    "composition": "high viewpoint, flat silhouette cropped hard by the frame edge, one diagonal floor line, empty flat areas",
+    "subject": ""
+   },
+   "hint": "a flat silhouette cropped off the edge",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "c. 1880–1900",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R02R02",
+   "nn_similarity": 0.5784,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-043",
+   "name": "Plakatstil / Sachplakat (object poster)",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Object poster: one product, one word",
+   "use": "product launches, retail, packaging",
+   "mood": [
+    "bold",
+    "austere",
+    "optimistic"
+   ],
+   "energy": "medium",
+   "avoid_for": "complex messaging or storytelling",
+   "hallmarks": {
+    "palette": "2–3 flat bold colours",
+    "type": "brand name only, big blocky letters",
+    "mark_making": "",
+    "composition": "one big product on a flat ground",
+    "subject": ""
+   },
+   "hint": "one product on a flat ground",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1906–1920s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R03R11",
+   "nn_similarity": 0.3665,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-044",
+   "name": "Railway and transit travel poster",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Railway and resort poster selling a place",
+   "use": "tourism, events, transit, hospitality",
+   "mood": [
+    "optimistic",
+    "calm",
+    "nostalgic"
+   ],
+   "energy": "low",
+   "avoid_for": "data, tech or grungy briefs",
+   "hallmarks": {
+    "palette": "sunny saturated colour",
+    "type": "",
+    "mark_making": "flat colour areas, simplified landscape",
+    "composition": "landscape with strong perspective, title band",
+    "subject": ""
+   },
+   "hint": "a simplified flat-colour landscape",
+   "out_there": 1,
+   "read_status": "reads",
+   "era": "1910s–1950s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-007",
+   "nn_similarity": 0.4844,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-045",
+   "name": "Pulp magazine and paperback cover",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Lurid painted cover: peril and adventure",
+   "use": "book covers, games, film, fun retro",
+   "mood": [
+    "bold",
+    "humorous",
+    "nostalgic"
+   ],
+   "energy": "high",
+   "avoid_for": "serious or trust-led briefs",
+   "hallmarks": {
+    "palette": "hot reds, yellows, deep shadows",
+    "type": "heavy slab-serif masthead",
+    "mark_making": "smooth opaque poster paint, simplified forms, no visible brushstrokes or impasto",
+    "composition": "full figures mid-action in a peril moment, solid masthead band on top",
+    "subject": ""
+   },
+   "hint": "a lurid saturated painted peril scene",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1920s–1950s",
+   "care": "watch the era's sexism and racial stereotypes",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-006",
+   "nn_similarity": 0.5231,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-046",
+   "name": "Bold-line tattoo flash sheet",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Bold-line tattoo designs on a sheet",
+   "use": "streetwear, barbers, bars, music merch",
+   "mood": [
+    "bold",
+    "rebellious",
+    "nostalgic"
+   ],
+   "energy": "high",
+   "avoid_for": "delicate, minimal or corporate briefs",
+   "hallmarks": {
+    "palette": "red, green, yellow, black",
+    "type": "",
+    "mark_making": "heavy black outline, solid colour fills",
+    "composition": "several small motifs scattered on one sheet",
+    "subject": ""
+   },
+   "hint": "heavy black outline with solid fills",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1900s onward (living trade)",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-027",
+   "nn_similarity": 0.5558,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-047",
+   "name": "Ligne claire comics",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Clear-line comic: even outlines, flat colour",
+   "use": "editorial illustration, children's books, travel, explainers",
+   "mood": [
+    "playful",
+    "calm",
+    "nostalgic"
+   ],
+   "energy": "medium",
+   "avoid_for": "gritty, textured or painterly briefs",
+   "hallmarks": {
+    "palette": "flat clear colours, no shading",
+    "type": "",
+    "mark_making": "even-weight black outlines, no hatching",
+    "composition": "detailed backgrounds equal to figures",
+    "subject": ""
+   },
+   "hint": "even-weight outline with flat colour",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1930s onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-R01R11",
+   "nn_similarity": 0.4388,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-048",
+   "name": "Mid-century modern illustration",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Mid-century ad illustration: playful, stylised",
+   "use": "cafés, kitchenware, retro brands, children's books",
+   "mood": [
+    "playful",
+    "optimistic",
+    "warm"
+   ],
+   "energy": "medium",
+   "avoid_for": "gritty or austere briefs",
+   "hallmarks": {
+    "palette": "mustard, teal, orange, olive",
+    "type": "",
+    "mark_making": "cut-paper colour shapes off-register from a thin black line drawing",
+    "composition": "geometric heads, stick-thin angular limbs, flattened boxy objects, no perspective",
+    "subject": ""
+   },
+   "hint": "off-register flat shapes in mustard and teal",
+   "out_there": 1,
+   "read_status": "reads",
+   "era": "1945–1965",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-040",
+   "nn_similarity": 0.5277,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-049",
+   "name": "Pop art and enlarged halftone dots",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Comic-panel and halftone-dot enlargement",
+   "use": "fashion, events, packaging, ironic editorial",
+   "mood": [
+    "bold",
+    "humorous",
+    "playful"
+   ],
+   "energy": "high",
+   "avoid_for": "quiet, heritage or premium briefs",
+   "hallmarks": {
+    "palette": "primary red, yellow, blue",
+    "type": "",
+    "mark_making": "even halftone dots and thick black outline",
+    "composition": "close-up single comic panel",
+    "subject": ""
+   },
+   "hint": "enlarged halftone dots",
+   "out_there": 1,
+   "read_status": "reads",
+   "era": "1955–1970",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-022",
+   "nn_similarity": 0.5793,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-050",
+   "name": "Retro-eclectic revival illustration",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Eclectic revival: old styles remixed with wit",
+   "use": "book covers, music sleeves, food, editorial",
+   "mood": [
+    "playful",
+    "humorous",
+    "nostalgic"
+   ],
+   "energy": "high",
+   "avoid_for": "strict corporate-modernist briefs",
+   "hallmarks": {
+    "palette": "warm retro colour",
+    "type": "fat revived Victorian display letters, inflated and warped, as the main image",
+    "mark_making": "flat colour with ink outlines, playful distortion",
+    "composition": "asymmetric; the lettering dominates, one cartoon element overlaps it",
+    "subject": ""
+   },
+   "hint": "a revived ornate display face",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1954–1970s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-045",
+   "nn_similarity": 0.4647,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-051",
+   "name": "Hand-painted signwriting",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Hand-lettered shop sign",
+   "use": "cafés, bars, shops, craft brands",
+   "mood": [
+    "warm",
+    "bold",
+    "nostalgic"
+   ],
+   "energy": "medium",
+   "avoid_for": "digital-native or minimal tech briefs",
+   "hallmarks": {
+    "palette": "gold leaf, red, black, cream",
+    "type": "hand-painted script and shaded block letters",
+    "mark_making": "brush strokes, drop shadows, outlines",
+    "composition": "",
+    "subject": ""
+   },
+   "hint": "a shaded drop-shadow letter",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "19th c. onward (living trade)",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-002",
+   "nn_similarity": 0.3981,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-052",
+   "name": "Pixel art and 8-bit graphics",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Low-resolution square-pixel game graphics",
+   "use": "games, tech nostalgia, merch, icons",
+   "mood": [
+    "playful",
+    "nostalgic",
+    "technical"
+   ],
+   "energy": "medium",
+   "avoid_for": "luxury or fine-art heritage briefs",
+   "hallmarks": {
+    "palette": "small fixed palette",
+    "type": "",
+    "mark_making": "visible square pixels, no anti-aliasing",
+    "composition": "side-on game scene or sprite",
+    "subject": ""
+   },
+   "hint": "visible square pixels",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1970s onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R01R22",
+   "nn_similarity": 0.471,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-053",
+   "name": "Cobalt-on-white porcelain painting",
+   "kind": "established",
+   "family": 6,
+   "family_name": "Cultural and regional traditions",
+   "also_family": "",
+   "theme": "Cobalt-blue painting on white porcelain",
+   "use": "tableware, tea, homeware, heritage",
+   "mood": [
+    "calm",
+    "elegant",
+    "ornate"
+   ],
+   "energy": "low",
+   "avoid_for": "loud campaign or tech briefs",
+   "hallmarks": {
+    "palette": "cobalt blue on white only",
+    "type": "",
+    "mark_making": "brush wash and fine line",
+    "composition": "central medallion inside concentric borders",
+    "subject": ""
+   },
+   "hint": "cobalt blue on white",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "14th c. onward",
+   "care": "long export tradition; avoid 'oriental' clichés",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F6_cultural_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-055",
+   "nn_similarity": 0.5783,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-054",
+   "name": "Persian miniature painting",
+   "kind": "established",
+   "family": 6,
+   "family_name": "Cultural and regional traditions",
+   "also_family": "",
+   "theme": "Jewel-coloured court painting, flattened space",
+   "use": "books, perfume, textiles, cultural events",
+   "mood": [
+    "ornate",
+    "elegant",
+    "warm"
+   ],
+   "energy": "medium",
+   "avoid_for": "minimal or tech briefs",
+   "hallmarks": {
+    "palette": "lapis, gold, turquoise, vermilion",
+    "type": "",
+    "mark_making": "fine brush detail, patterned surfaces",
+    "composition": "high viewpoint, stacked flat space, many small figures",
+    "subject": ""
+   },
+   "hint": "stacked flat space seen from above",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "13th–17th c.",
+   "care": "living cultural heritage; borrow structure, not specific works",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F6_cultural_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-063",
+   "nn_similarity": 0.6009,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-055",
+   "name": "New Year woodblock picture print",
+   "kind": "established",
+   "family": 6,
+   "family_name": "Cultural and regional traditions",
+   "also_family": "",
+   "theme": "New Year woodblock print of luck and plenty",
+   "use": "New Year, food, gifting, children",
+   "mood": [
+    "festive",
+    "playful",
+    "warm"
+   ],
+   "energy": "high",
+   "avoid_for": "minimal or austere briefs",
+   "hallmarks": {
+    "palette": "bright red, green, yellow, pink",
+    "type": "",
+    "mark_making": "woodblock outline with hand-coloured fills",
+    "composition": "",
+    "subject": "chubby children, carp, peaches"
+   },
+   "hint": "a chubby child hugging a carp",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "17th c. onward (living tradition)",
+   "care": "living festive tradition; avoid cliché 'oriental' mashups",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F6_cultural_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-053",
+   "nn_similarity": 0.5783,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-056",
+   "name": "Ukiyo-e woodblock print",
+   "kind": "established",
+   "family": 6,
+   "family_name": "Cultural and regional traditions",
+   "also_family": 4,
+   "theme": "Woodblock print of daily life and landscape",
+   "use": "tea, travel, books, restaurants",
+   "mood": [
+    "calm",
+    "elegant",
+    "bold"
+   ],
+   "energy": "low",
+   "avoid_for": "tech or brutalist briefs",
+   "hallmarks": {
+    "palette": "Prussian blue, muted greens and reds",
+    "type": "",
+    "mark_making": "thin even black key-line round every shape, flat fills, one printed gradient band at the top of the sky",
+    "composition": "foreground element cropped by the frame edge, strong diagonal",
+    "subject": ""
+   },
+   "hint": "a soft blue bokashi gradient sky",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "17th–19th c.",
+   "care": "avoid wave/geisha cliché pastiche",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F6_cultural_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R01R03",
+   "nn_similarity": 0.5342,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-057",
+   "name": "Pierced-leather shadow-puppet figure",
+   "kind": "established",
+   "family": 6,
+   "family_name": "Cultural and regional traditions",
+   "also_family": "",
+   "theme": "Perforated leather shadow-puppet figures",
+   "use": "theatre, cultural events, storytelling",
+   "mood": [
+    "mysterious",
+    "ornate",
+    "sacred"
+   ],
+   "energy": "medium",
+   "avoid_for": "casual mascots or jokes",
+   "hallmarks": {
+    "palette": "gold, red, black",
+    "type": "",
+    "mark_making": "lace-like perforated patterns",
+    "composition": "",
+    "subject": "elongated profile figures with long arms"
+   },
+   "hint": "lace-like perforations in a profile silhouette",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "10th c. onward (living tradition)",
+   "care": "living sacred performance tradition; no jokes or mascots",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F6_cultural_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-060",
+   "nn_similarity": 0.5676,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-058",
+   "name": "Blue-painted tin-glaze tile panel",
+   "kind": "established",
+   "family": 6,
+   "family_name": "Cultural and regional traditions",
+   "also_family": "",
+   "theme": "Blue-painted glazed tile panels",
+   "use": "restaurants, homeware, travel, heritage",
+   "mood": [
+    "calm",
+    "ornate",
+    "warm"
+   ],
+   "energy": "low",
+   "avoid_for": "tech or grungy briefs",
+   "hallmarks": {
+    "palette": "cobalt blue on white glaze",
+    "type": "",
+    "mark_making": "brush painting, ornate borders",
+    "composition": "large scene painted across a grid of square tiles",
+    "subject": ""
+   },
+   "hint": "a picture broken across a square tile grid",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "15th c. onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F6_cultural_sheet1.jpg",
+   "panel": "sheet 1 of 2, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-053",
+   "nn_similarity": 0.5363,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-059",
+   "name": "Mirror-folded layered paper-cut",
+   "kind": "established",
+   "family": 6,
+   "family_name": "Cultural and regional traditions",
+   "also_family": 4,
+   "theme": "Symmetrical folk paper-cut",
+   "use": "weddings, folk festivals, food, children's books",
+   "mood": [
+    "festive",
+    "warm",
+    "ornate"
+   ],
+   "energy": "medium",
+   "avoid_for": "tech or hard corporate briefs",
+   "hallmarks": {
+    "palette": "layered bright papers on white",
+    "type": "",
+    "mark_making": "cut paper, crisp edges",
+    "composition": "mirror symmetry around a centre",
+    "subject": "roosters, flowers, trees of life"
+   },
+   "hint": "a mirror-symmetric paper-cut motif",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "19th c. onward (living tradition)",
+   "care": "living folk craft; borrow structure, not specific designs",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F6_cultural_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-063",
+   "nn_similarity": 0.7118,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-060",
+   "name": "Layered reverse-appliqué panel",
+   "kind": "established",
+   "family": 6,
+   "family_name": "Cultural and regional traditions",
+   "also_family": "",
+   "theme": "Layered reverse-appliqué textile panel",
+   "use": "textiles, cultural events, children's books",
+   "mood": [
+    "festive",
+    "bold",
+    "playful"
+   ],
+   "energy": "high",
+   "avoid_for": "mass-market logos copying sacred motifs",
+   "hallmarks": {
+    "palette": "red, orange, black, bright layers",
+    "type": "",
+    "mark_making": "cut-through layered fabric, outline echo bands",
+    "composition": "central animal with maze-like fill",
+    "subject": ""
+   },
+   "hint": "echoing outline bands around a motif",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "19th c. onward (living tradition)",
+   "care": "living community textile craft; borrow the layering, never copy specific designs",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F6_cultural_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-057",
+   "nn_similarity": 0.5676,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-061",
+   "name": "Chisel-cut tissue-paper bunting",
+   "kind": "established",
+   "family": 6,
+   "family_name": "Cultural and regional traditions",
+   "also_family": "",
+   "theme": "Cut tissue-paper banners strung in rows",
+   "use": "parties, food, festivals, remembrance events",
+   "mood": [
+    "festive",
+    "playful",
+    "warm"
+   ],
+   "energy": "high",
+   "avoid_for": "austere or corporate briefs",
+   "hallmarks": {
+    "palette": "bright tissue colours in a row",
+    "type": "",
+    "mark_making": "each flag one flat sheet of thin tissue; the design is only cut-through holes",
+    "composition": "bunting of repeated rectangles",
+    "subject": ""
+   },
+   "hint": "a lacy cut-paper flag",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "19th c. onward (living tradition)",
+   "care": "living festive tradition; avoid costume clichés",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F6_cultural_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-059",
+   "nn_similarity": 0.4861,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-062",
+   "name": "Pamphlet-cover folk woodcut",
+   "kind": "established",
+   "family": 6,
+   "family_name": "Cultural and regional traditions",
+   "also_family": 4,
+   "theme": "Woodcut cover of a street-poetry pamphlet",
+   "use": "music, food, books, folk events",
+   "mood": [
+    "humorous",
+    "warm",
+    "bold"
+   ],
+   "energy": "medium",
+   "avoid_for": "sleek or luxury briefs",
+   "hallmarks": {
+    "palette": "black on coloured pulp paper",
+    "type": "",
+    "mark_making": "bold black woodcut, simple gouges",
+    "composition": "one scene on a small booklet cover",
+    "subject": ""
+   },
+   "hint": "black woodcut on coloured pulp paper",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "late 19th c. onward (living tradition)",
+   "care": "living folk tradition; borrow structure, not specific covers",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F6_cultural_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-001",
+   "nn_similarity": 0.6458,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-063",
+   "name": "Hand-painted cinema hoarding and vehicle ornament",
+   "kind": "established",
+   "family": 6,
+   "family_name": "Cultural and regional traditions",
+   "also_family": "",
+   "theme": "Exuberant hand-painted trucks and hoardings",
+   "use": "restaurants, festivals, fashion, music",
+   "mood": [
+    "festive",
+    "bold",
+    "ornate"
+   ],
+   "energy": "high",
+   "avoid_for": "minimal or austere briefs",
+   "hallmarks": {
+    "palette": "saturated rainbow colour, mirror and chrome",
+    "type": "",
+    "mark_making": "hand-painted motifs, borders, reflective trim",
+    "composition": "",
+    "subject": "peacocks, eyes, flowers, portraits"
+   },
+   "hint": "a dense hand-painted border",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "1950s onward (living trades)",
+   "care": "living trade; hire a painter where possible",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F6_cultural_sheet2.jpg",
+   "panel": "sheet 2 of 2, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-059",
+   "nn_similarity": 0.7118,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-R01R01",
+   "name": "Blue Sun-Print Hush",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Cyanotype moth vigil",
+   "use": "unknown (guess from nearest looks: botanical brands)",
+   "mood": [
+    "hushed",
+    "eerie",
+    "curious"
+   ],
+   "energy": "low",
+   "avoid_for": "loud campaign briefs; fine botanicals vanish small",
+   "hallmarks": {
+    "palette": "prussian blue, white (1 (blue monotone) inks)",
+    "type": "",
+    "mark_making": "cyanotype specimen plate; finish tonal-rendered",
+    "composition": "organic botanical",
+    "subject": "a lighthouse keeper, wildcard: moths spiralling round the lamp"
+   },
+   "hint": "cyanotype specimen plate",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1860s Victorian",
+   "care": "",
+   "themes": [
+    "natural-history",
+    "quiet-austere"
+   ],
+   "type_pairing": [
+    "editorial-serif",
+    "nautical-vintage"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet1.jpg",
+   "panel": "sheet 1 of 12, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R01R06",
+   "nn_similarity": 0.6407,
+   "nearest_looks": [
+    "LB-036"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R01R03",
+   "name": "Black Wedge, Yellow Shout",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Vorticist storm beam",
+   "use": "unknown (guess from nearest looks: magazine covers; posters)",
+   "mood": [
+    "dramatic",
+    "dread",
+    "kinetic"
+   ],
+   "energy": "high",
+   "avoid_for": "gentle or family briefs",
+   "hallmarks": {
+    "palette": "black, cream, cadmium-yellow accent (3 inks)",
+    "type": "",
+    "mark_making": "linocut; finish rough-handmade",
+    "composition": "angular shards, one diagonal wedge",
+    "subject": "a lighthouse keeper"
+   },
+   "hint": "linocut",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1910s Vorticist",
+   "care": "",
+   "themes": [
+    "woodcut-print",
+    "agitprop"
+   ],
+   "type_pairing": [
+    "noir-thriller",
+    "condensed-poster"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet1.jpg",
+   "panel": "sheet 1 of 12, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R01R05",
+   "nn_similarity": 0.733,
+   "nearest_looks": [
+    "LB-003",
+    "LB-040"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R01R05",
+   "name": "Oxblood Diagonal Anthem",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Constructivist beacon labourer",
+   "use": "unknown (guess from nearest looks: protest and campaign posters; tourism)",
+   "mood": [
+    "heroic",
+    "austere",
+    "proud"
+   ],
+   "energy": "high",
+   "avoid_for": "soft lifestyle briefs",
+   "hallmarks": {
+    "palette": "oxblood, ochre-yellow, black (3 inks)",
+    "type": "",
+    "mark_making": "flat lithograph poster; finish flat-graphic",
+    "composition": "hard diagonals, low angle",
+    "subject": "a lighthouse keeper"
+   },
+   "hint": "flat lithograph poster",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1920s",
+   "care": "",
+   "themes": [
+    "agitprop",
+    "deco-machine-age"
+   ],
+   "type_pairing": [
+    "condensed-poster",
+    "geometric-sans"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet1.jpg",
+   "panel": "sheet 1 of 12, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R01R19",
+   "nn_similarity": 0.7521,
+   "nearest_looks": [
+    "LB-005",
+    "LB-044"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R01R06",
+   "name": "Paper-Cut Hearth Bloom",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Folk paper-cut keeper and cat",
+   "use": "unknown (guess from nearest looks: weddings)",
+   "mood": [
+    "cosy",
+    "festive",
+    "warm"
+   ],
+   "energy": "medium",
+   "avoid_for": "tech or corporate briefs",
+   "hallmarks": {
+    "palette": "navy, red, rose, cream (4 inks)",
+    "type": "",
+    "mark_making": "layered paper-cut (folk paper-cut); finish crafted-object",
+    "composition": "symmetrical ornament",
+    "subject": "a lighthouse keeper, wildcard: the keeper's cat as companion"
+   },
+   "hint": "layered paper-cut (folk paper-cut)",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "timeless folk",
+   "care": "draws on a living craft technique (Mirror-folded layered paper-cut): borrow the structure, do not costume it",
+   "themes": [
+    "folk-craft",
+    "naive-joyful"
+   ],
+   "type_pairing": [
+    "childrens-playful",
+    "nautical-vintage"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet1.jpg",
+   "panel": "sheet 1 of 12, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R01R01",
+   "nn_similarity": 0.6407,
+   "nearest_looks": [
+    "LB-059"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R01R11",
+   "name": "Primary-Colour Cutaway",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Bauhaus tower cutaway",
+   "use": "unknown (guess from nearest looks: design schools; product launches)",
+   "mood": [
+    "playful",
+    "informative",
+    "orderly"
+   ],
+   "energy": "medium",
+   "avoid_for": "moody or emotional briefs",
+   "hallmarks": {
+    "palette": "primary red, yellow, blue, black (4 inks)",
+    "type": "",
+    "mark_making": "flat cutaway diagram; finish flat-graphic",
+    "composition": "rectilinear cross-section",
+    "subject": "a lighthouse keeper"
+   },
+   "hint": "flat cutaway diagram",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1920s Bauhaus",
+   "care": "",
+   "themes": [
+    "technical-diagram",
+    "mid-century-modern"
+   ],
+   "type_pairing": [
+    "geometric-sans",
+    "grotesk-neutral"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet1.jpg",
+   "panel": "sheet 1 of 12, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R01R05",
+   "nn_similarity": 0.6556,
+   "nearest_looks": [
+    "LB-016",
+    "LB-013"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R01R12",
+   "name": "Indigo Stencil Brine",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "folk-craft indigo gansey",
+   "use": "unknown (guess from nearest looks: tableware)",
+   "mood": [
+    "stoic",
+    "maritime",
+    "warm"
+   ],
+   "energy": "low",
+   "avoid_for": "clean minimal briefs; the texture is busy",
+   "hallmarks": {
+    "palette": "indigo, bone white (2 inks)",
+    "type": "",
+    "mark_making": "paste-resist stencil dye stencil-dye; finish rough-handmade",
+    "composition": "dense pattern fills",
+    "subject": "a lighthouse keeper, wildcard: the keeper wearing a cabled fisherman's gansey"
+   },
+   "hint": "paste-resist stencil dye stencil-dye",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "timeless",
+   "care": "draws on a living craft technique (Cobalt-on-white porcelain painting): borrow the structure, do not costume it",
+   "themes": [
+    "folk-craft",
+    "woodcut-print"
+   ],
+   "type_pairing": [
+    "nautical-vintage",
+    "editorial-serif"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet1.jpg",
+   "panel": "sheet 1 of 12, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-R01R19",
+   "nn_similarity": 0.7204,
+   "nearest_looks": [
+    "LB-053"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R01R15",
+   "name": "One Dot, Dark Field",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Stonecut goose watcher",
+   "use": "unknown (guess from nearest looks: book covers)",
+   "mood": [
+    "solitude",
+    "vast",
+    "still"
+   ],
+   "energy": "low",
+   "avoid_for": "anything that must read at a glance from a distance",
+   "hallmarks": {
+    "palette": "near-black, one yellow dot (2 inks)",
+    "type": "",
+    "mark_making": "stonecut print; finish rough-handmade",
+    "composition": "tiny figure, huge empty field",
+    "subject": "a lighthouse keeper, wildcard: a skein of migrating geese"
+   },
+   "hint": "stonecut print",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "timeless",
+   "care": "",
+   "themes": [
+    "quiet-austere",
+    "woodcut-print"
+   ],
+   "type_pairing": [
+    "editorial-serif",
+    "grotesk-neutral"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet2.jpg",
+   "panel": "sheet 2 of 12, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R01R03",
+   "nn_similarity": 0.64,
+   "nearest_looks": [
+    "LB-065"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R01R18",
+   "name": "Gouache Flotilla Riot",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Fauvist paper-boat regatta",
+   "use": "unknown",
+   "mood": [
+    "jubilant",
+    "crowded",
+    "sunny"
+   ],
+   "energy": "high",
+   "avoid_for": "sober or premium briefs",
+   "hallmarks": {
+    "palette": "rainbow on toned kraft (5+ inks)",
+    "type": "",
+    "mark_making": "gouache on toned paper; finish rough-handmade",
+    "composition": "long frieze, many small figures",
+    "subject": "a lighthouse keeper, wildcard: a flotilla of paper boats"
+   },
+   "hint": "gouache on toned paper",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "Fauvist 1905",
+   "care": "",
+   "themes": [
+    "naive-joyful",
+    "folk-craft"
+   ],
+   "type_pairing": [
+    "childrens-playful",
+    "handwritten-marker"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet2.jpg",
+   "panel": "sheet 2 of 12, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R01R22",
+   "nn_similarity": 0.6608,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-R01R19",
+   "name": "Two-Ink Night Shift",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Riso zine night-shift",
+   "use": "unknown (guess from nearest looks: gig posters; zines)",
+   "mood": [
+    "wry",
+    "gritty",
+    "DIY"
+   ],
+   "energy": "high",
+   "avoid_for": "luxury or corporate briefs",
+   "hallmarks": {
+    "palette": "fluorescent pink, federal blue (2 inks)",
+    "type": "",
+    "mark_making": "two-colour riso, misregistered; finish rough-handmade",
+    "composition": "torn diagonal fields",
+    "subject": "a lighthouse keeper"
+   },
+   "hint": "two-colour riso, misregistered",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1970s-90s zine",
+   "care": "",
+   "themes": [
+    "pop-zine"
+   ],
+   "type_pairing": [
+    "condensed-poster",
+    "handwritten-marker"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet2.jpg",
+   "panel": "sheet 2 of 12, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R01R05",
+   "nn_similarity": 0.7521,
+   "nearest_looks": [
+    "LB-011",
+    "LB-041"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R01R21",
+   "name": "Pewter Fog Monument",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Precisionist concrete sentinel",
+   "use": "unknown (guess from nearest looks: national parks)",
+   "mood": [
+    "austere",
+    "monumental",
+    "cold"
+   ],
+   "energy": "low",
+   "avoid_for": "warm or playful briefs; close to photo default",
+   "hallmarks": {
+    "palette": "pewter and fog greys (tonal greys inks)",
+    "type": "",
+    "mark_making": "Precisionist painting; finish tonal-rendered",
+    "composition": "clean verticals, low angle",
+    "subject": "a lighthouse keeper"
+   },
+   "hint": "Precisionist painting",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1930s",
+   "care": "",
+   "themes": [
+    "quiet-austere",
+    "deco-machine-age"
+   ],
+   "type_pairing": [
+    "noir-thriller",
+    "grotesk-neutral"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet2.jpg",
+   "panel": "sheet 2 of 12, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R01R05",
+   "nn_similarity": 0.6637,
+   "nearest_looks": [
+    "LB-007"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R01R22",
+   "name": "Pierced Shadow Storm",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Shadow-puppet storm shadow-play",
+   "use": "unknown (guess from nearest looks: theatre)",
+   "mood": [
+    "mythic",
+    "stormy",
+    "theatrical"
+   ],
+   "energy": "high",
+   "avoid_for": "minimal or modern briefs; very busy",
+   "hallmarks": {
+    "palette": "black, red, gold, cream (4 inks)",
+    "type": "",
+    "mark_making": "shadow-puppet shadow-puppet silhouettes; finish flat-graphic",
+    "composition": "pierced profile silhouettes",
+    "subject": "a lighthouse keeper, wildcard: Fresnel-lens prisms repeated as a motif"
+   },
+   "hint": "shadow-puppet shadow-puppet silhouettes",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "shadow-puppet classical",
+   "care": "draws on a living craft technique (Pierced-leather shadow-puppet figure): borrow the structure, do not costume it",
+   "themes": [
+    "sacred-ornament",
+    "folk-craft"
+   ],
+   "type_pairing": [
+    "fantasy-medieval"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet2.jpg",
+   "panel": "sheet 2 of 12, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R01R05",
+   "nn_similarity": 0.7305,
+   "nearest_looks": [
+    "LB-057"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R01",
+   "name": "Red Dot Side-Eye",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Pop halftone side-eye",
+   "use": "unknown (guess from nearest looks: fashion)",
+   "mood": [
+    "deadpan",
+    "bold",
+    "cool"
+   ],
+   "energy": "medium",
+   "avoid_for": "quiet literary briefs",
+   "hallmarks": {
+    "palette": "signal red, black, cream (3 inks)",
+    "type": "",
+    "mark_making": "enlarged halftone print; finish flat-graphic",
+    "composition": "big flat face, dot fields",
+    "subject": "a classical marble head"
+   },
+   "hint": "enlarged halftone print",
+   "out_there": 1,
+   "read_status": "reads",
+   "era": "1960s Pop",
+   "care": "",
+   "themes": [
+    "pop-zine"
+   ],
+   "type_pairing": [
+    "pulp-retro-comic",
+    "condensed-poster"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet2.jpg",
+   "panel": "sheet 2 of 12, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-R03R20",
+   "nn_similarity": 0.8352,
+   "nearest_looks": [
+    "LB-049"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R02",
+   "name": "Shattered Ochre Glare",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Vorticist gaze wedge",
+   "use": "unknown (guess from nearest looks: magazine covers; theatre)",
+   "mood": [
+    "tense",
+    "sharp",
+    "watchful"
+   ],
+   "energy": "medium",
+   "avoid_for": "soft or cosy briefs",
+   "hallmarks": {
+    "palette": "black, cream, ochre-yellow (3 inks)",
+    "type": "",
+    "mark_making": "woodcut; finish flat-graphic",
+    "composition": "shattered angular planes",
+    "subject": "a classical marble head"
+   },
+   "hint": "woodcut",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1910s Vorticist",
+   "care": "",
+   "themes": [
+    "woodcut-print",
+    "agitprop"
+   ],
+   "type_pairing": [
+    "condensed-poster",
+    "noir-thriller"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet3.jpg",
+   "panel": "sheet 3 of 12, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R03R05",
+   "nn_similarity": 0.8323,
+   "nearest_looks": [
+    "LB-003",
+    "LB-038"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R03",
+   "name": "Toner Kiss",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Rave-flyer riso deadpan",
+   "use": "unknown (guess from nearest looks: gig posters; zines)",
+   "mood": [
+    "deadpan",
+    "cheeky",
+    "raw"
+   ],
+   "energy": "high",
+   "avoid_for": "heritage or premium briefs",
+   "hallmarks": {
+    "palette": "black, bubblegum pink, mint, cream (4 inks)",
+    "type": "",
+    "mark_making": "photocopy collage + riso blocks; finish rough-handmade",
+    "composition": "tilted colour slabs behind a cutout",
+    "subject": "a classical marble head"
+   },
+   "hint": "photocopy collage + riso blocks",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1990s rave flyer",
+   "care": "",
+   "themes": [
+    "pop-zine",
+    "postmodern-postmodern squiggle"
+   ],
+   "type_pairing": [
+    "condensed-poster",
+    "geometric-sans"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet3.jpg",
+   "panel": "sheet 3 of 12, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R02R21",
+   "nn_similarity": 0.8265,
+   "nearest_looks": [
+    "LB-011",
+    "LB-041"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R04",
+   "name": "Terracotta Tessera Ring",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Roman mosaic emblema",
+   "use": "unknown (guess from nearest looks: heritage)",
+   "mood": [
+    "dignified",
+    "warm",
+    "ancient"
+   ],
+   "energy": "low",
+   "avoid_for": "modern tech or youth briefs",
+   "hallmarks": {
+    "palette": "terracotta, umber, cream (tonal (earth) inks)",
+    "type": "",
+    "mark_making": "tessera floor mosaic; finish crafted-object",
+    "composition": "head in a round roundel",
+    "subject": "a classical marble head"
+   },
+   "hint": "tessera floor mosaic",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "Imperial Rome",
+   "care": "",
+   "themes": [
+    "classical-heritage"
+   ],
+   "type_pairing": [
+    "fantasy-medieval",
+    "editorial-serif"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet3.jpg",
+   "panel": "sheet 3 of 12, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R03R17",
+   "nn_similarity": 0.8705,
+   "nearest_looks": [
+    "LB-024"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R05",
+   "name": "Gold Wire Stillness",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Cloisonne icon",
+   "use": "unknown (guess from nearest looks: heritage)",
+   "mood": [
+    "serene",
+    "regal",
+    "still"
+   ],
+   "energy": "low",
+   "avoid_for": "irreverent or loud briefs",
+   "hallmarks": {
+    "palette": "gold, lapis blue, cream (3 inks)",
+    "type": "",
+    "mark_making": "cloisonne enamel; finish flat-graphic",
+    "composition": "frontal symmetry, simple planes",
+    "subject": "a classical marble head"
+   },
+   "hint": "cloisonne enamel",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "Byzantine icon",
+   "care": "",
+   "themes": [
+    "sacred-ornament",
+    "classical-heritage"
+   ],
+   "type_pairing": [
+    "fantasy-medieval",
+    "luxury-didone"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet3.jpg",
+   "panel": "sheet 3 of 12, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R03R22",
+   "nn_similarity": 0.8359,
+   "nearest_looks": [
+    "LB-024"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R06",
+   "name": "Laurel Stone Inlay",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Pietra dura laurel roundel",
+   "use": "unknown",
+   "mood": [
+    "austere",
+    "luxurious",
+    "heroic"
+   ],
+   "energy": "medium",
+   "avoid_for": "casual or street briefs",
+   "hallmarks": {
+    "palette": "black ground, stone and olive (tonal (stone) inks)",
+    "type": "",
+    "mark_making": "pietra dura inlay; finish crafted-object",
+    "composition": "roundel with laurel wreath",
+    "subject": "a classical marble head, wildcard: a laurel wreath"
+   },
+   "hint": "pietra dura inlay",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "Florentine Renaissance",
+   "care": "",
+   "themes": [
+    "classical-heritage"
+   ],
+   "type_pairing": [
+    "luxury-didone",
+    "fantasy-medieval"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet3.jpg",
+   "panel": "sheet 3 of 12, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R03R17",
+   "nn_similarity": 0.8613,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R07",
+   "name": "Red-Black Split Cut",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Suprematist split face",
+   "use": "unknown (guess from nearest looks: art and music identities)",
+   "mood": [
+    "defiant",
+    "cool",
+    "sharp"
+   ],
+   "energy": "medium",
+   "avoid_for": "cosy or food briefs",
+   "hallmarks": {
+    "palette": "red, black on cream (2 + paper inks)",
+    "type": "",
+    "mark_making": "cut-paper collage; finish flat-graphic",
+    "composition": "split face, hard polygons",
+    "subject": "a classical marble head"
+   },
+   "hint": "cut-paper collage",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1915-20s Suprematist",
+   "care": "",
+   "themes": [
+    "agitprop"
+   ],
+   "type_pairing": [
+    "condensed-poster",
+    "geometric-sans"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet3.jpg",
+   "panel": "sheet 3 of 12, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-R03R19",
+   "nn_similarity": 0.7376,
+   "nearest_looks": [
+    "LB-014"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R08",
+   "name": "Plotter Ripple Trance",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Op Art eye rings",
+   "use": "unknown (guess from nearest looks: music)",
+   "mood": [
+    "hypnotic",
+    "precise",
+    "cool"
+   ],
+   "energy": "low",
+   "avoid_for": "small sizes; fine lines fill in",
+   "hallmarks": {
+    "palette": "black on white (1 inks)",
+    "type": "",
+    "mark_making": "pen-plotter line; finish fine-line",
+    "composition": "flowing parallel contour lines",
+    "subject": "a classical marble head"
+   },
+   "hint": "pen-plotter line",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1960s Op Art",
+   "care": "",
+   "themes": [
+    "line-engraving"
+   ],
+   "type_pairing": [
+    "grotesk-neutral",
+    "editorial-serif"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet4.jpg",
+   "panel": "sheet 4 of 12, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R03R14",
+   "nn_similarity": 0.8239,
+   "nearest_looks": [
+    "LB-020"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R09",
+   "name": "Orange Grid Silence",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "modernist grid profile",
+   "use": "unknown (guess from nearest looks: corporate identity)",
+   "mood": [
+    "rational",
+    "cool",
+    "calm"
+   ],
+   "energy": "low",
+   "avoid_for": "busy or festive briefs",
+   "hallmarks": {
+    "palette": "safety orange, slate grey, cream (3 inks)",
+    "type": "",
+    "mark_making": "grid modernist poster, flat silhouette; finish flat-graphic",
+    "composition": "profile on a strict grid, big margin",
+    "subject": "a classical marble head"
+   },
+   "hint": "grid modernist poster, flat silhouette",
+   "out_there": 1,
+   "read_status": "reads",
+   "era": "1950s postwar",
+   "care": "",
+   "themes": [
+    "mid-century-modern"
+   ],
+   "type_pairing": [
+    "grotesk-neutral",
+    "geometric-sans"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet4.jpg",
+   "panel": "sheet 4 of 12, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R05R17",
+   "nn_similarity": 0.8138,
+   "nearest_looks": [
+    "LB-019"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R10",
+   "name": "Enamel Blue Wisecrack",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Transit-sign pigeon",
+   "use": "unknown (guess from nearest looks: wayfinding)",
+   "mood": [
+    "wry",
+    "civic",
+    "clean"
+   ],
+   "energy": "low",
+   "avoid_for": "ornate or luxury briefs",
+   "hallmarks": {
+    "palette": "ultramarine, white (2 inks)",
+    "type": "",
+    "mark_making": "vitreous enamel sign; finish flat-graphic",
+    "composition": "rounded-square sign, profile",
+    "subject": "a classical marble head, wildcard: a pigeon perched on the head"
+   },
+   "hint": "vitreous enamel sign",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "mid-century transit",
+   "care": "",
+   "themes": [
+    "mid-century-modern",
+    "pop-zine"
+   ],
+   "type_pairing": [
+    "grotesk-neutral",
+    "humanist-sans"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet4.jpg",
+   "panel": "sheet 4 of 12, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R03R22",
+   "nn_similarity": 0.7595,
+   "nearest_looks": [
+    "LB-018"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R11",
+   "name": "Scaffold Blueprint Calm",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Blueprint restoration",
+   "use": "unknown (guess from nearest looks: product launches)",
+   "mood": [
+    "methodical",
+    "calm",
+    "curious"
+   ],
+   "energy": "low",
+   "avoid_for": "emotional or loud briefs",
+   "hallmarks": {
+    "palette": "white line on blue (1 inks)",
+    "type": "",
+    "mark_making": "diazo blueprint; finish fine-line",
+    "composition": "exploded diagram with scaffolding",
+    "subject": "a classical marble head, wildcard: restorers' scaffolding and ladders against the face"
+   },
+   "hint": "diazo blueprint",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "20th c. drafting",
+   "care": "",
+   "themes": [
+    "technical-diagram"
+   ],
+   "type_pairing": [
+    "monospace-code",
+    "grotesk-neutral"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet4.jpg",
+   "panel": "sheet 4 of 12, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R05R19",
+   "nn_similarity": 0.782,
+   "nearest_looks": [
+    "LB-013"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R12",
+   "name": "Scarlet Wave Surge",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Reverse-appliqué wave curls",
+   "use": "unknown (guess from nearest looks: textiles; tea)",
+   "mood": [
+    "jubilant",
+    "hot",
+    "surging"
+   ],
+   "energy": "high",
+   "avoid_for": "calm or premium briefs",
+   "hallmarks": {
+    "palette": "scarlet, orange, black, rust (4 inks)",
+    "type": "",
+    "mark_making": "reverse-appliqué reverse appliqué, flat; finish flat-graphic",
+    "composition": "wavy bands filling the frame",
+    "subject": "a classical marble head, wildcard: the curls drawn as breaking ocean waves"
+   },
+   "hint": "reverse-appliqué reverse appliqué, flat",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "reverse-appliqué / 1960s",
+   "care": "draws on a living craft technique (Layered reverse-appliqué panel, Ukiyo-e woodblock print): borrow the structure, do not costume it",
+   "themes": [
+    "psychedelic-groovy",
+    "folk-craft"
+   ],
+   "type_pairing": [
+    "pulp-retro-comic",
+    "condensed-poster"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet4.jpg",
+   "panel": "sheet 4 of 12, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R02R01",
+   "nn_similarity": 0.7867,
+   "nearest_looks": [
+    "LB-060",
+    "LB-056"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R13",
+   "name": "Cut-Paper Fiesta Hum",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Cut tissue-paper fiesta",
+   "use": "unknown (guess from nearest looks: parties)",
+   "mood": [
+    "festive",
+    "sweet",
+    "loud"
+   ],
+   "energy": "high",
+   "avoid_for": "sombre briefs",
+   "hallmarks": {
+    "palette": "bubblegum pink, mint, black (3 inks)",
+    "type": "",
+    "mark_making": "cut tissue-paper cut paper; finish flat-graphic",
+    "composition": "symmetrical pierced frame",
+    "subject": "a classical marble head"
+   },
+   "hint": "cut tissue-paper cut paper",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "painted folk craft",
+   "care": "draws on a living craft technique (Chisel-cut tissue-paper bunting): borrow the structure, do not costume it",
+   "themes": [
+    "folk-craft",
+    "naive-joyful"
+   ],
+   "type_pairing": [
+    "pulp-retro-comic",
+    "western-slab"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet4.jpg",
+   "panel": "sheet 4 of 12, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-R03R06",
+   "nn_similarity": 0.7616,
+   "nearest_looks": [
+    "LB-061"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R15",
+   "name": "Acid Tube Brood",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Neon brooder",
+   "use": "unknown (guess from nearest looks: cafés)",
+   "mood": [
+    "brooding",
+    "nocturnal",
+    "lonely"
+   ],
+   "energy": "low",
+   "avoid_for": "daylight or family briefs",
+   "hallmarks": {
+    "palette": "acid green, violet, black (2 lines on black inks)",
+    "type": "",
+    "mark_making": "neon tube; finish crafted-object",
+    "composition": "small line head in a vast dark field",
+    "subject": "a classical marble head"
+   },
+   "hint": "neon tube",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1980s",
+   "care": "",
+   "themes": [
+    "neon-night"
+   ],
+   "type_pairing": [
+    "scifi-tech",
+    "noir-thriller"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet5.jpg",
+   "panel": "sheet 5 of 12, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R05R16",
+   "nn_similarity": 0.76,
+   "nearest_looks": [
+    "LB-051"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R16",
+   "name": "Pastel Stitch Quartet",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Cross-stitch sampler grid",
+   "use": "unknown (guess from nearest looks: games)",
+   "mood": [
+    "wry",
+    "soft",
+    "homely"
+   ],
+   "energy": "low",
+   "avoid_for": "serious or political briefs",
+   "hallmarks": {
+    "palette": "chalky pastels on cream (4 inks)",
+    "type": "",
+    "mark_making": "cross-stitch pixels; finish crafted-object",
+    "composition": "2x2 repeat grid",
+    "subject": "a classical marble head"
+   },
+   "hint": "cross-stitch pixels",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "sampler / 8-bit",
+   "care": "",
+   "themes": [
+    "folk-craft",
+    "pop-zine"
+   ],
+   "type_pairing": [
+    "monospace-code",
+    "childrens-playful"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet5.jpg",
+   "panel": "sheet 5 of 12, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R02R04",
+   "nn_similarity": 0.7598,
+   "nearest_looks": [
+    "LB-052"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R18",
+   "name": "Sugared Glass Planes",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Cubist pastel planes",
+   "use": "unknown",
+   "mood": [
+    "airy",
+    "cool",
+    "gentle"
+   ],
+   "energy": "low",
+   "avoid_for": "loud or aggressive briefs",
+   "hallmarks": {
+    "palette": "lilac, mint, peach on white (3 inks)",
+    "type": "",
+    "mark_making": "screen print planes; finish flat-graphic",
+    "composition": "faceted pastel planes",
+    "subject": "a classical marble head"
+   },
+   "hint": "screen print planes",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "Cubist / mid-century",
+   "care": "",
+   "themes": [
+    "mid-century-modern"
+   ],
+   "type_pairing": [
+    "geometric-sans",
+    "humanist-sans"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet5.jpg",
+   "panel": "sheet 5 of 12, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R02R02",
+   "nn_similarity": 0.7781,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R20",
+   "name": "Furnace Stencil Glare",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Solidarity stencil brow",
+   "use": "unknown (guess from nearest looks: activism)",
+   "mood": [
+    "furious",
+    "intense",
+    "urgent"
+   ],
+   "energy": "high",
+   "avoid_for": "calm or cosy briefs",
+   "hallmarks": {
+    "palette": "scarlet, orange, black (3 inks)",
+    "type": "",
+    "mark_making": "stencil spray / silkscreen; finish flat-graphic",
+    "composition": "extreme crop on eyes and brow",
+    "subject": "a classical marble head"
+   },
+   "hint": "stencil spray / silkscreen",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1960s-70s solidarity silkscreen",
+   "care": "",
+   "themes": [
+    "agitprop"
+   ],
+   "type_pairing": [
+    "condensed-poster"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet5.jpg",
+   "panel": "sheet 5 of 12, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R03R19",
+   "nn_similarity": 0.71,
+   "nearest_looks": [
+    "LB-010"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R21",
+   "name": "Ochre Monument Rise",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Agitprop monument head",
+   "use": "unknown (guess from nearest looks: calls to action)",
+   "mood": [
+    "heroic",
+    "resolute",
+    "monumental"
+   ],
+   "energy": "high",
+   "avoid_for": "playful or soft briefs",
+   "hallmarks": {
+    "palette": "ochre, brown, oxblood, black (4 inks)",
+    "type": "",
+    "mark_making": "agitprop poster, flat; finish flat-graphic",
+    "composition": "extreme low angle, diagonal bands",
+    "subject": "a classical marble head"
+   },
+   "hint": "agitprop poster, flat",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1920s-30s Soviet",
+   "care": "",
+   "themes": [
+    "agitprop"
+   ],
+   "type_pairing": [
+    "condensed-poster",
+    "geometric-sans"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet5.jpg",
+   "panel": "sheet 5 of 12, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R03R16",
+   "nn_similarity": 0.8848,
+   "nearest_looks": [
+    "LB-006"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R23",
+   "name": "Gouged Black Curls",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Pamphlet-woodcut non-finito",
+   "use": "unknown (guess from nearest looks: music; posters)",
+   "mood": [
+    "raw",
+    "bold",
+    "earthy"
+   ],
+   "energy": "high",
+   "avoid_for": "delicate or luxury briefs",
+   "hallmarks": {
+    "palette": "black on white (1 inks)",
+    "type": "",
+    "mark_making": "linocut / pamphlet-woodcut woodcut; finish flat-graphic",
+    "composition": "curls as pattern, uncarved edges",
+    "subject": "a classical marble head, wildcard: the uncarved block shown as one flat plain shape round the edges (non finito)"
+   },
+   "hint": "linocut / pamphlet-woodcut woodcut",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "pamphlet woodcut",
+   "care": "draws on a living craft technique (Pamphlet-cover folk woodcut): borrow the structure, do not costume it",
+   "themes": [
+    "woodcut-print"
+   ],
+   "type_pairing": [
+    "western-slab",
+    "condensed-poster"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet5.jpg",
+   "panel": "sheet 5 of 12, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-R03R20",
+   "nn_similarity": 0.823,
+   "nearest_looks": [
+    "LB-062",
+    "LB-040"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R02R24",
+   "name": "Acid Contour Trip",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "yarn painting contour gaze",
+   "use": "unknown",
+   "mood": [
+    "trippy",
+    "intense",
+    "electric"
+   ],
+   "energy": "high",
+   "avoid_for": "corporate or sober briefs",
+   "hallmarks": {
+    "palette": "acid green, violet, yellow (3 inks)",
+    "type": "",
+    "mark_making": "yarn painting (yarn painting), flat; finish flat-graphic",
+    "composition": "concentric contour lines",
+    "subject": "a classical marble head, wildcard: the brow furrows drawn as map contour lines"
+   },
+   "hint": "yarn painting (yarn painting), flat",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1960s psych / yarn painting",
+   "care": "",
+   "themes": [
+    "psychedelic-groovy"
+   ],
+   "type_pairing": [
+    "pulp-retro-comic",
+    "scifi-tech"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet6.jpg",
+   "panel": "sheet 6 of 12, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R03R05",
+   "nn_similarity": 0.771,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R01",
+   "name": "Veneer Speed Lines",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Futurist wax-resist egg marquetry",
+   "use": "unknown (guess from nearest looks: motorsport)",
+   "mood": [
+    "warm",
+    "crafted",
+    "dynamic"
+   ],
+   "energy": "high",
+   "avoid_for": "bright youth briefs",
+   "hallmarks": {
+    "palette": "oak, walnut, maple (tonal (wood) inks)",
+    "type": "",
+    "mark_making": "wood marquetry; finish crafted-object",
+    "composition": "Futurist sweeping planes",
+    "subject": "a classical marble head, wildcard: the sling strap crossing the frame"
+   },
+   "hint": "wood marquetry",
+   "out_there": 5,
+   "read_status": "reads",
+   "era": "1930s machine age",
+   "care": "",
+   "themes": [
+    "deco-machine-age",
+    "crafted-object"
+   ],
+   "type_pairing": [
+    "art-deco-display",
+    "editorial-serif"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet6.jpg",
+   "panel": "sheet 6 of 12, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R05R11",
+   "nn_similarity": 0.8123,
+   "nearest_looks": [
+    "LB-002"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R03",
+   "name": "Proportion Line Whisper",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Byzantine grid modernist blueprint",
+   "use": "unknown (guess from nearest looks: heritage; corporate identity)",
+   "mood": [
+    "calm",
+    "sparse",
+    "analytical"
+   ],
+   "energy": "low",
+   "avoid_for": "loud or festive briefs",
+   "hallmarks": {
+    "palette": "blue line on white (1 inks)",
+    "type": "",
+    "mark_making": "construction-line drawing; finish fine-line",
+    "composition": "proportion lines, lots of white",
+    "subject": "a classical marble head"
+   },
+   "hint": "construction-line drawing",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "grid modernist / Byzantine",
+   "care": "",
+   "themes": [
+    "technical-diagram",
+    "quiet-austere"
+   ],
+   "type_pairing": [
+    "grotesk-neutral",
+    "monospace-code"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet6.jpg",
+   "panel": "sheet 6 of 12, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R05R19",
+   "nn_similarity": 0.859,
+   "nearest_looks": [
+    "LB-024",
+    "LB-019",
+    "LB-013"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R04",
+   "name": "Perforated Primary Pop",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "De Stijl rave stamp",
+   "use": "unknown (guess from nearest looks: architecture)",
+   "mood": [
+    "playful",
+    "bold",
+    "collectable"
+   ],
+   "energy": "high",
+   "avoid_for": "sombre briefs",
+   "hallmarks": {
+    "palette": "primary blue, yellow, black, cream (4 inks)",
+    "type": "",
+    "mark_making": "postage stamp, De Stijl blocks; finish flat-graphic",
+    "composition": "grid blocks inside a perforated stamp",
+    "subject": "a classical marble head"
+   },
+   "hint": "postage stamp, De Stijl blocks",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1920s De Stijl / 90s",
+   "care": "",
+   "themes": [
+    "postmodern-postmodern squiggle",
+    "mid-century-modern"
+   ],
+   "type_pairing": [
+    "geometric-sans"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet6.jpg",
+   "panel": "sheet 6 of 12, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R03R05",
+   "nn_similarity": 0.7544,
+   "nearest_looks": [
+    "LB-015"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R05",
+   "name": "Zebra Stripe Woodcut",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Pamphlet-woodcut Op Art machine-age",
+   "use": "unknown (guess from nearest looks: music; music)",
+   "mood": [
+    "bold",
+    "graphic",
+    "rhythmic"
+   ],
+   "energy": "high",
+   "avoid_for": "soft or delicate briefs",
+   "hallmarks": {
+    "palette": "black, yellow on cream (2 inks)",
+    "type": "",
+    "mark_making": "pamphlet-woodcut woodcut + Op stripes; finish flat-graphic",
+    "composition": "stripe-modelled face",
+    "subject": "a classical marble head"
+   },
+   "hint": "pamphlet-woodcut woodcut + Op stripes",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "machine age",
+   "care": "draws on a living craft technique (Pamphlet-cover folk woodcut): borrow the structure, do not costume it",
+   "themes": [
+    "woodcut-print",
+    "pop-zine"
+   ],
+   "type_pairing": [
+    "condensed-poster",
+    "western-slab"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet6.jpg",
+   "panel": "sheet 6 of 12, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R03R22",
+   "nn_similarity": 0.8383,
+   "nearest_looks": [
+    "LB-062",
+    "LB-020",
+    "LB-030"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R06",
+   "name": "Mint-Pink Leadline",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Space-age sosaku stained glass",
+   "use": "unknown (guess from nearest looks: books; games)",
+   "mood": [
+    "cheeky",
+    "cool",
+    "crisp"
+   ],
+   "energy": "low",
+   "avoid_for": "heritage or sober briefs",
+   "hallmarks": {
+    "palette": "pink, mint, black, cream (3 inks)",
+    "type": "",
+    "mark_making": "stained-glass leading as flat shapes; finish flat-graphic",
+    "composition": "black-outlined planes on black",
+    "subject": "a classical marble head"
+   },
+   "hint": "stained-glass leading as flat shapes",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "space age",
+   "care": "",
+   "themes": [
+    "pop-zine",
+    "mid-century-modern"
+   ],
+   "type_pairing": [
+    "geometric-sans",
+    "pulp-retro-comic"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet6.jpg",
+   "panel": "sheet 6 of 12, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-R03R20",
+   "nn_similarity": 0.8465,
+   "nearest_looks": [
+    "LB-039",
+    "LB-052",
+    "LB-031"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R07",
+   "name": "Squiggle Quarter Party",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Squiggle appliqué stained glass",
+   "use": "unknown (guess from nearest looks: youth brands; textiles)",
+   "mood": [
+    "playful",
+    "loud",
+    "sunny"
+   ],
+   "energy": "high",
+   "avoid_for": "serious or premium briefs",
+   "hallmarks": {
+    "palette": "pink, violet, teal, orange, cream (5+ inks)",
+    "type": "",
+    "mark_making": "postmodern squiggle + reverse-appliqué offset outlines; finish flat-graphic",
+    "composition": "quartered field, squiggle and dot grid",
+    "subject": "a classical marble head"
+   },
+   "hint": "postmodern squiggle + reverse-appliqué offset outlines",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "1980s postmodern squiggle",
+   "care": "draws on a living craft technique (Layered reverse-appliqué panel): borrow the structure, do not costume it",
+   "themes": [
+    "postmodern-postmodern squiggle"
+   ],
+   "type_pairing": [
+    "geometric-sans",
+    "pulp-retro-comic"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet7.jpg",
+   "panel": "sheet 7 of 12, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R03R08",
+   "nn_similarity": 0.8262,
+   "nearest_looks": [
+    "LB-033",
+    "LB-060"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R08",
+   "name": "Confetti Origami Lite",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "postmodern squiggle tattoo origami",
+   "use": "unknown (guess from nearest looks: youth brands; streetwear)",
+   "mood": [
+    "friendly",
+    "light",
+    "upbeat"
+   ],
+   "energy": "medium",
+   "avoid_for": "briefs needing a specific voice; drifts toward Corporate postmodern squiggle",
+   "hallmarks": {
+    "palette": "tan, pink, teal, yellow on cream (5 inks)",
+    "type": "",
+    "mark_making": "tattoo flash + origami facets; finish flat-graphic",
+    "composition": "faceted bust, floating confetti",
+    "subject": "a classical marble head"
+   },
+   "hint": "tattoo flash + origami facets",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "1980s postmodern squiggle",
+   "care": "",
+   "themes": [
+    "postmodern-postmodern squiggle"
+   ],
+   "type_pairing": [
+    "humanist-sans",
+    "childrens-playful"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet7.jpg",
+   "panel": "sheet 7 of 12, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R03R20",
+   "nn_similarity": 0.8441,
+   "nearest_looks": [
+    "LB-033",
+    "LB-046"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R09",
+   "name": "Sun-Segment Tilework",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Mughal Orphist ballpoint tin-glaze tile",
+   "use": "unknown (guess from nearest looks: books; restaurants)",
+   "mood": [
+    "warm",
+    "rhythmic",
+    "sunny"
+   ],
+   "energy": "high",
+   "avoid_for": "cold tech briefs",
+   "hallmarks": {
+    "palette": "red, orange, black, cream (3 inks)",
+    "type": "",
+    "mark_making": "tin-glaze tile tile panel; finish flat-graphic",
+    "composition": "tile grid, circle segments",
+    "subject": "a classical marble head"
+   },
+   "hint": "tin-glaze tile tile panel",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "Orphist / tin-glaze tile",
+   "care": "draws on a living craft technique (Persian miniature painting, Blue-painted tin-glaze tile panel): borrow the structure, do not costume it",
+   "themes": [
+    "mid-century-modern",
+    "folk-craft"
+   ],
+   "type_pairing": [
+    "editorial-serif",
+    "geometric-sans"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet7.jpg",
+   "panel": "sheet 7 of 12, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R03R10",
+   "nn_similarity": 0.7282,
+   "nearest_looks": [
+    "LB-054",
+    "LB-058"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R10",
+   "name": "Cobalt Triangle Tiles",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Constructivist ballpoint tin-glaze tile",
+   "use": "unknown (guess from nearest looks: protest and campaign posters; restaurants)",
+   "mood": [
+    "crisp",
+    "cool",
+    "Mediterranean"
+   ],
+   "energy": "low",
+   "avoid_for": "warm autumnal briefs",
+   "hallmarks": {
+    "palette": "cobalt on white (1 inks)",
+    "type": "",
+    "mark_making": "tin-glaze tile tile, ballpoint line; finish flat-graphic",
+    "composition": "triangles on a tile grid",
+    "subject": "a classical marble head"
+   },
+   "hint": "tin-glaze tile tile, ballpoint line",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "blue tin-glaze tile",
+   "care": "draws on a living craft technique (Blue-painted tin-glaze tile panel): borrow the structure, do not costume it",
+   "themes": [
+    "folk-craft",
+    "mid-century-modern"
+   ],
+   "type_pairing": [
+    "editorial-serif",
+    "nautical-vintage"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet7.jpg",
+   "panel": "sheet 7 of 12, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R03R22",
+   "nn_similarity": 0.8154,
+   "nearest_looks": [
+    "LB-005",
+    "LB-058"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R11",
+   "name": "Midnight Line Paperback",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Ming Pop blueprint paperback",
+   "use": "unknown (guess from nearest looks: tableware; fashion)",
+   "mood": [
+    "cool",
+    "nocturnal",
+    "cerebral"
+   ],
+   "energy": "low",
+   "avoid_for": "warm cosy briefs",
+   "hallmarks": {
+    "palette": "white line on royal blue (1 + halftone inks)",
+    "type": "",
+    "mark_making": "blueprint line + halftone strip; finish fine-line",
+    "composition": "tight crop, line only",
+    "subject": "a classical marble head, wildcard: the brow furrows drawn as map contour lines"
+   },
+   "hint": "blueprint line + halftone strip",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "paperback 1960s",
+   "care": "draws on a living craft technique (Cobalt-on-white porcelain painting): borrow the structure, do not costume it",
+   "themes": [
+    "technical-diagram",
+    "pop-zine"
+   ],
+   "type_pairing": [
+    "grotesk-neutral",
+    "monospace-code"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet7.jpg",
+   "panel": "sheet 7 of 12, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R05R19",
+   "nn_similarity": 0.8343,
+   "nearest_looks": [
+    "LB-053",
+    "LB-049",
+    "LB-013",
+    "LB-045"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R13",
+   "name": "Hatched Sun Disc",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Orphist solidarity plotter",
+   "use": "unknown (guess from nearest looks: activism; music)",
+   "mood": [
+    "confident",
+    "modern",
+    "warm-cool"
+   ],
+   "energy": "high",
+   "avoid_for": "folk or cosy briefs",
+   "hallmarks": {
+    "palette": "navy, orange-red, cream (3 inks)",
+    "type": "",
+    "mark_making": "plotter hatching + flat disc; finish flat-graphic",
+    "composition": "head over a big sun disc",
+    "subject": "a classical marble head"
+   },
+   "hint": "plotter hatching + flat disc",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "Orphist / solidarity",
+   "care": "",
+   "themes": [
+    "mid-century-modern",
+    "agitprop"
+   ],
+   "type_pairing": [
+    "condensed-poster",
+    "geometric-sans"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet7.jpg",
+   "panel": "sheet 7 of 12, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-R03R16",
+   "nn_similarity": 0.8647,
+   "nearest_looks": [
+    "LB-010",
+    "LB-020"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R14",
+   "name": "Engraved Coil Static",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Mughal Op Art patent halftone",
+   "use": "unknown (guess from nearest looks: books; music)",
+   "mood": [
+    "precise",
+    "cool",
+    "classical"
+   ],
+   "energy": "low",
+   "avoid_for": "small print; dense lines fill in",
+   "hallmarks": {
+    "palette": "black on white (1 inks)",
+    "type": "",
+    "mark_making": "patent line + halftone dots; finish fine-line",
+    "composition": "contour-line curls",
+    "subject": "a classical marble head"
+   },
+   "hint": "patent line + halftone dots",
+   "out_there": 5,
+   "read_status": "reads",
+   "era": "engraving / Op",
+   "care": "draws on a living craft technique (Persian miniature painting): borrow the structure, do not costume it",
+   "themes": [
+    "line-engraving"
+   ],
+   "type_pairing": [
+    "editorial-serif",
+    "luxury-didone"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet8.jpg",
+   "panel": "sheet 8 of 12, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R02R08",
+   "nn_similarity": 0.8239,
+   "nearest_looks": [
+    "LB-054",
+    "LB-020",
+    "LB-013",
+    "LB-049"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R16",
+   "name": "Sand Curve Quiet",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Edo WPA hard-edge collage",
+   "use": "unknown (guess from nearest looks: tea; national parks)",
+   "mood": [
+    "calm",
+    "airy",
+    "nostalgic"
+   ],
+   "energy": "low",
+   "avoid_for": "loud or busy briefs",
+   "hallmarks": {
+    "palette": "sand, coral red, navy, slate (4 inks)",
+    "type": "",
+    "mark_making": "hard-edge collage; finish flat-graphic",
+    "composition": "small bust, big curved fields",
+    "subject": "a classical marble head"
+   },
+   "hint": "hard-edge collage",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "Edo / WPA",
+   "care": "draws on a living craft technique (Ukiyo-e woodblock print): borrow the structure, do not costume it",
+   "themes": [
+    "mid-century-modern",
+    "quiet-austere"
+   ],
+   "type_pairing": [
+    "geometric-sans",
+    "editorial-serif"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet8.jpg",
+   "panel": "sheet 8 of 12, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R02R21",
+   "nn_similarity": 0.8848,
+   "nearest_looks": [
+    "LB-056",
+    "LB-007"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R17",
+   "name": "Banknote Oval Oak",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Gothic psychedelic banknote marquetry",
+   "use": "unknown (guess from nearest looks: book covers; festivals)",
+   "mood": [
+    "stately",
+    "vintage",
+    "formal"
+   ],
+   "energy": "low",
+   "avoid_for": "youth or tech briefs",
+   "hallmarks": {
+    "palette": "olive, rust, umber, parchment (tonal (earth) inks)",
+    "type": "",
+    "mark_making": "banknote marquetry; finish tonal-rendered",
+    "composition": "oval cartouche, ornate frame",
+    "subject": "a classical marble head, wildcard: Goliath's shadow falling across the face"
+   },
+   "hint": "banknote marquetry",
+   "out_there": 5,
+   "read_status": "reads",
+   "era": "Gothic / 19th c. currency",
+   "care": "",
+   "themes": [
+    "classical-heritage",
+    "sacred-ornament"
+   ],
+   "type_pairing": [
+    "luxury-didone",
+    "nautical-vintage"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet8.jpg",
+   "panel": "sheet 8 of 12, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R02R04",
+   "nn_similarity": 0.8705,
+   "nearest_looks": [
+    "LB-025",
+    "LB-032"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R18",
+   "name": "Bottle-Green Upswing",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Space-age agitprop lacquer",
+   "use": "unknown (guess from nearest looks: calls to action; diners)",
+   "mood": [
+    "upbeat",
+    "heroic",
+    "forward"
+   ],
+   "energy": "high",
+   "avoid_for": "quiet literary briefs",
+   "hallmarks": {
+    "palette": "bottle green, red, black, cream (4 inks)",
+    "type": "",
+    "mark_making": "lacquer-flat agitprop; finish flat-graphic",
+    "composition": "upturned head, sweeping bands",
+    "subject": "a classical marble head"
+   },
+   "hint": "lacquer-flat agitprop",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "space age",
+   "care": "",
+   "themes": [
+    "agitprop",
+    "space-age-retro"
+   ],
+   "type_pairing": [
+    "condensed-poster"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet8.jpg",
+   "panel": "sheet 8 of 12, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R02R21",
+   "nn_similarity": 0.8519,
+   "nearest_looks": [
+    "LB-006",
+    "LB-031"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R19",
+   "name": "Interlock Cut Fury",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Ming Bauhaus yarn painting collage",
+   "use": "unknown (guess from nearest looks: design schools; tableware)",
+   "mood": [
+    "fierce",
+    "bold",
+    "punchy"
+   ],
+   "energy": "high",
+   "avoid_for": "calm or premium briefs",
+   "hallmarks": {
+    "palette": "red, orange, black, white (4 inks)",
+    "type": "",
+    "mark_making": "cut-paper collage; finish flat-graphic",
+    "composition": "interlocking cut shapes, one eye",
+    "subject": "a classical marble head"
+   },
+   "hint": "cut-paper collage",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "Bauhaus / yarn painting",
+   "care": "draws on a living craft technique (Cobalt-on-white porcelain painting): borrow the structure, do not costume it",
+   "themes": [
+    "agitprop",
+    "pop-zine"
+   ],
+   "type_pairing": [
+    "condensed-poster",
+    "geometric-sans"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet8.jpg",
+   "panel": "sheet 8 of 12, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R02R02",
+   "nn_similarity": 0.7523,
+   "nearest_looks": [
+    "LB-016",
+    "LB-053"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R20",
+   "name": "Chunky Vinyl Profile",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Heian WPA Pop vinyl",
+   "use": "unknown (guess from nearest looks: national parks; fashion)",
+   "mood": [
+    "characterful",
+    "bold",
+    "stoic"
+   ],
+   "energy": "high",
+   "avoid_for": "delicate or pastel briefs",
+   "hallmarks": {
+    "palette": "maroon, sage, black, cream (4 inks)",
+    "type": "",
+    "mark_making": "cut vinyl, flat; finish flat-graphic",
+    "composition": "bold profile, chunky curls",
+    "subject": "a classical marble head"
+   },
+   "hint": "cut vinyl, flat",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "Heian / WPA / Pop",
+   "care": "",
+   "themes": [
+    "mid-century-modern",
+    "pop-zine"
+   ],
+   "type_pairing": [
+    "condensed-poster",
+    "western-slab"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet8.jpg",
+   "panel": "sheet 8 of 12, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-R03R22",
+   "nn_similarity": 0.862,
+   "nearest_looks": [
+    "LB-007",
+    "LB-049"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R21",
+   "name": "Celadon Fold Silence",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Cubist celadon matchbox",
+   "use": "unknown",
+   "mood": [
+    "calm",
+    "minimal",
+    "soft"
+   ],
+   "energy": "low",
+   "avoid_for": "loud briefs; low contrast, a rendered object",
+   "hallmarks": {
+    "palette": "celadon on white (1 (tonal) inks)",
+    "type": "",
+    "mark_making": "faceted paper/ceramic relief; finish crafted-object",
+    "composition": "small faceted object, empty field",
+    "subject": "a classical marble head"
+   },
+   "hint": "faceted paper/ceramic relief",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "timeless",
+   "care": "",
+   "themes": [
+    "quiet-austere",
+    "crafted-object"
+   ],
+   "type_pairing": [
+    "grotesk-neutral",
+    "humanist-sans"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet9.jpg",
+   "panel": "sheet 9 of 12, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R02R18",
+   "nn_similarity": 0.7227,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-R03R22",
+   "name": "Scalloped Kraft Cut",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Egyptian Cubist cut tissue-paper",
+   "use": "unknown (guess from nearest looks: parties)",
+   "mood": [
+    "warm",
+    "earthy",
+    "festive"
+   ],
+   "energy": "high",
+   "avoid_for": "cold tech briefs",
+   "hallmarks": {
+    "palette": "orange, navy, kraft (3 inks)",
+    "type": "",
+    "mark_making": "cut tissue-paper cut paper; finish flat-graphic",
+    "composition": "scalloped frame, flat planes",
+    "subject": "a classical marble head"
+   },
+   "hint": "cut tissue-paper cut paper",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "Egyptian / painted folk craft",
+   "care": "draws on a living craft technique (Chisel-cut tissue-paper bunting): borrow the structure, do not costume it",
+   "themes": [
+    "folk-craft"
+   ],
+   "type_pairing": [
+    "western-slab",
+    "editorial-serif"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet9.jpg",
+   "panel": "sheet 9 of 12, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R03R20",
+   "nn_similarity": 0.862,
+   "nearest_looks": [
+    "LB-061"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R04R06",
+   "name": "Torn Orange Ascent",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Zine mid-century sgraffito scroll",
+   "use": "unknown (guess from nearest looks: gig posters; cafés)",
+   "mood": [
+    "optimistic",
+    "adventurous",
+    "retro"
+   ],
+   "energy": "high",
+   "avoid_for": "realistic or technical briefs",
+   "hallmarks": {
+    "palette": "orange, teal, black, cream (4 inks)",
+    "type": "",
+    "mark_making": "zine cut + sgraffito scroll; finish flat-graphic",
+    "composition": "rocket on a torn field, stars",
+    "subject": "a space shuttle launch, wildcard: the exhaust ending in a folk-art scroll of leaves"
+   },
+   "hint": "zine cut + sgraffito scroll",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1950s-60s",
+   "care": "",
+   "themes": [
+    "space-age-retro",
+    "mid-century-modern"
+   ],
+   "type_pairing": [
+    "geometric-sans",
+    "scifi-tech"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet9.jpg",
+   "panel": "sheet 9 of 12, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R04R21",
+   "nn_similarity": 0.8449,
+   "nearest_looks": [
+    "LB-011",
+    "LB-048"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R04R10",
+   "name": "Moiré Glass Liftoff",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Egyptian reverse-appliqué moiré glass",
+   "use": "unknown (guess from nearest looks: textiles; music)",
+   "mood": [
+    "monumental",
+    "proud",
+    "warm"
+   ],
+   "energy": "high",
+   "avoid_for": "minimal briefs; busy",
+   "hallmarks": {
+    "palette": "orange, ochre, teal, navy, cream (5+ inks)",
+    "type": "",
+    "mark_making": "stained-glass mosaic + moiré; finish flat-graphic",
+    "composition": "symmetrical launch, mosaic sky",
+    "subject": "a space shuttle launch"
+   },
+   "hint": "stained-glass mosaic + moiré",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "space age / Egyptian",
+   "care": "draws on a living craft technique (Layered reverse-appliqué panel): borrow the structure, do not costume it",
+   "themes": [
+    "space-age-retro",
+    "deco-machine-age"
+   ],
+   "type_pairing": [
+    "art-deco-display",
+    "condensed-poster"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet9.jpg",
+   "panel": "sheet 9 of 12, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R04R20",
+   "nn_similarity": 0.8338,
+   "nearest_looks": [
+    "LB-060",
+    "LB-020"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R04R12",
+   "name": "Hot-Pink Neon Crest",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Heraldic postmodern squiggle neon",
+   "use": "unknown (guess from nearest looks: sports clubs; youth brands)",
+   "mood": [
+    "electric",
+    "nocturnal",
+    "punchy"
+   ],
+   "energy": "high",
+   "avoid_for": "daylight, heritage briefs",
+   "hallmarks": {
+    "palette": "hot pink neon (1 line on black inks)",
+    "type": "",
+    "mark_making": "neon heraldic shield; finish crafted-object",
+    "composition": "shield outline, stepped flame",
+    "subject": "a space shuttle launch"
+   },
+   "hint": "neon heraldic shield",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "1980s",
+   "care": "",
+   "themes": [
+    "neon-night"
+   ],
+   "type_pairing": [
+    "scifi-tech"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet9.jpg",
+   "panel": "sheet 9 of 12, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R04R20",
+   "nn_similarity": 0.6536,
+   "nearest_looks": [
+    "LB-026",
+    "LB-033"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R04R15",
+   "name": "Olive Stitch Badge",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Pamphlet-woodcut minimal patch",
+   "use": "unknown (guess from nearest looks: music)",
+   "mood": [
+    "nostalgic",
+    "earnest",
+    "modest"
+   ],
+   "energy": "low",
+   "avoid_for": "flat print; it reads as an object",
+   "hallmarks": {
+    "palette": "olive, tan, rust, cream (4 inks)",
+    "type": "",
+    "mark_making": "embroidered patch; finish crafted-object",
+    "composition": "rounded square badge",
+    "subject": "a space shuttle launch"
+   },
+   "hint": "embroidered patch",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "1970s-80s mission patch",
+   "care": "draws on a living craft technique (Pamphlet-cover folk woodcut): borrow the structure, do not costume it",
+   "themes": [
+    "space-age-retro",
+    "crafted-object"
+   ],
+   "type_pairing": [
+    "western-slab",
+    "scifi-tech"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet9.jpg",
+   "panel": "sheet 9 of 12, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-R04R10",
+   "nn_similarity": 0.7974,
+   "nearest_looks": [
+    "LB-062"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R04R17",
+   "name": "Patchwork Star Jolly",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Carolingian Googie quilt",
+   "use": "unknown (guess from nearest looks: book covers; diners)",
+   "mood": [
+    "jolly",
+    "homespun",
+    "bright"
+   ],
+   "energy": "high",
+   "avoid_for": "sober or premium briefs",
+   "hallmarks": {
+    "palette": "blue, red, yellow, green, cream (5+ inks)",
+    "type": "",
+    "mark_making": "patchwork quilt; finish crafted-object",
+    "composition": "patch blocks, stars",
+    "subject": "a space shuttle launch, wildcard: the exhaust drawn as a bank of cumulus flowers"
+   },
+   "hint": "patchwork quilt",
+   "out_there": 5,
+   "read_status": "reads",
+   "era": "Carolingian / Googie",
+   "care": "",
+   "themes": [
+    "naive-joyful",
+    "folk-craft"
+   ],
+   "type_pairing": [
+    "childrens-playful"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet10.jpg",
+   "panel": "sheet 10 of 12, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R04R10",
+   "nn_similarity": 0.8028,
+   "nearest_looks": [
+    "LB-025",
+    "LB-031"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R04R20",
+   "name": "Acid Green Scratch",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Black-figure naive scraperboard",
+   "use": "unknown (guess from nearest looks: heritage)",
+   "mood": [
+    "loud",
+    "punky",
+    "electric"
+   ],
+   "energy": "high",
+   "avoid_for": "sober, heritage or technical briefs",
+   "hallmarks": {
+    "palette": "acid green, hot pink, black, white (4 inks)",
+    "type": "",
+    "mark_making": "scraperboard silhouette; finish flat-graphic",
+    "composition": "hard silhouettes, pixel clouds",
+    "subject": "a space shuttle launch"
+   },
+   "hint": "scraperboard silhouette",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "black-figure / naive",
+   "care": "",
+   "themes": [
+    "pop-zine",
+    "neon-night"
+   ],
+   "type_pairing": [
+    "condensed-poster",
+    "pulp-retro-comic"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet10.jpg",
+   "panel": "sheet 10 of 12, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R04R10",
+   "nn_similarity": 0.8338,
+   "nearest_looks": [
+    "LB-023"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R04R21",
+   "name": "Purple Swirl Roar",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Psychedelic cut tissue-paper linocut",
+   "use": "unknown (guess from nearest looks: parties; festivals)",
+   "mood": [
+    "surging",
+    "festive",
+    "loud"
+   ],
+   "energy": "high",
+   "avoid_for": "quiet briefs",
+   "hallmarks": {
+    "palette": "purple, red-orange, cream, white (4 inks)",
+    "type": "",
+    "mark_making": "linocut + cut tissue-paper swirls; finish flat-graphic",
+    "composition": "swirling bands, diagonal launch",
+    "subject": "a space shuttle launch"
+   },
+   "hint": "linocut + cut tissue-paper swirls",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1960s psych",
+   "care": "draws on a living craft technique (Chisel-cut tissue-paper bunting): borrow the structure, do not costume it",
+   "themes": [
+    "psychedelic-groovy"
+   ],
+   "type_pairing": [
+    "pulp-retro-comic"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet10.jpg",
+   "panel": "sheet 10 of 12, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R04R06",
+   "nn_similarity": 0.8449,
+   "nearest_looks": [
+    "LB-061",
+    "LB-032",
+    "LB-040"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R05R01",
+   "name": "Violet Ditto Peek",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Ditto brocade over the wall",
+   "use": "unknown",
+   "mood": [
+    "delicate",
+    "quiet",
+    "wry"
+   ],
+   "energy": "low",
+   "avoid_for": "far-read posters; it whispers",
+   "hallmarks": {
+    "palette": "violet on white (1 inks)",
+    "type": "",
+    "mark_making": "ditto copy line + brocade band; finish fine-line",
+    "composition": "line head over a patterned wall band",
+    "subject": "a classical marble head"
+   },
+   "hint": "ditto copy line + brocade band",
+   "out_there": 5,
+   "read_status": "reads",
+   "era": "1960s duplicator / brocade textile",
+   "care": "",
+   "themes": [
+    "folk-craft",
+    "quiet-austere"
+   ],
+   "type_pairing": [
+    "editorial-serif",
+    "handwritten-marker"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet10.jpg",
+   "panel": "sheet 10 of 12, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R03R08",
+   "nn_similarity": 0.8109,
+   "nearest_looks": [],
+   "status": "live"
+  },
+  {
+   "id": "LB-R05R02",
+   "name": "Knit Chart Cosy",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Etruscan stranded-knit vignette",
+   "use": "unknown (guess from nearest looks: heritage; games)",
+   "mood": [
+    "cosy",
+    "knitted",
+    "homely"
+   ],
+   "energy": "low",
+   "avoid_for": "cold or tech briefs",
+   "hallmarks": {
+    "palette": "rust, orange, cream (3 inks)",
+    "type": "",
+    "mark_making": "stranded-knit knit chart; finish flat-graphic",
+    "composition": "small vignette with border bands",
+    "subject": "a classical marble head, wildcard: clouds drawn as a bank of cumulus flowers"
+   },
+   "hint": "stranded-knit knit chart",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "Etruscan / stranded knit",
+   "care": "",
+   "themes": [
+    "folk-craft"
+   ],
+   "type_pairing": [
+    "nautical-vintage",
+    "editorial-serif"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet10.jpg",
+   "panel": "sheet 10 of 12, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R02R16",
+   "nn_similarity": 0.732,
+   "nearest_looks": [
+    "LB-023",
+    "LB-052"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R05R04",
+   "name": "Serpent Collage Crowd",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Cross-stitch postmodern squiggle tessellation",
+   "use": "unknown (guess from nearest looks: youth brands)",
+   "mood": [
+    "busy",
+    "mythic",
+    "playful"
+   ],
+   "energy": "high",
+   "avoid_for": "minimal briefs; crowded",
+   "hallmarks": {
+    "palette": "terracotta, teal, cream, red, slate (5+ inks)",
+    "type": "",
+    "mark_making": "collage + cross-stitch stitch; finish flat-graphic",
+    "composition": "tessellating heads, sea serpent",
+    "subject": "a classical marble head, wildcard: a coiled sea serpent"
+   },
+   "hint": "collage + cross-stitch stitch",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "postmodern squiggle / cross-stitch",
+   "care": "",
+   "themes": [
+    "postmodern-postmodern squiggle",
+    "folk-craft"
+   ],
+   "type_pairing": [
+    "geometric-sans"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet10.jpg",
+   "panel": "sheet 10 of 12, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-R05R17",
+   "nn_similarity": 0.8188,
+   "nearest_looks": [
+    "LB-033"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R05R05",
+   "name": "Tissue Shard Breeze",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Moche Googie tissue scale",
+   "use": "unknown (guess from nearest looks: diners)",
+   "mood": [
+    "light",
+    "airy",
+    "optimistic"
+   ],
+   "energy": "low",
+   "avoid_for": "heavy or urgent briefs",
+   "hallmarks": {
+    "palette": "orange, yellow, blue, violet + red line (5 translucent inks)",
+    "type": "",
+    "mark_making": "tissue-paper collage + line; finish flat-graphic",
+    "composition": "overlapping translucent shards",
+    "subject": "a classical marble head"
+   },
+   "hint": "tissue-paper collage + line",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "Moche / Googie 1950s",
+   "care": "",
+   "themes": [
+    "mid-century-modern"
+   ],
+   "type_pairing": [
+    "geometric-sans",
+    "editorial-serif"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet11.jpg",
+   "panel": "sheet 11 of 12, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R05R17",
+   "nn_similarity": 0.7942,
+   "nearest_looks": [
+    "LB-031"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R05R09",
+   "name": "Silver Niello Repeat",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "almond-eyed church niello wallpaper",
+   "use": "unknown (guess from nearest looks: textiles)",
+   "mood": [
+    "formal",
+    "ornamental",
+    "rhythmic"
+   ],
+   "energy": "low",
+   "avoid_for": "single-message posters; it's a pattern",
+   "hallmarks": {
+    "palette": "black, silver-grey (2 inks)",
+    "type": "",
+    "mark_making": "niello repeat pattern; finish flat-graphic",
+    "composition": "wallpaper repeat inside a border",
+    "subject": "a classical marble head"
+   },
+   "hint": "niello repeat pattern",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "almond-eyed church / Byzantine",
+   "care": "",
+   "themes": [
+    "sacred-ornament",
+    "line-engraving"
+   ],
+   "type_pairing": [
+    "luxury-didone",
+    "editorial-serif"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet11.jpg",
+   "panel": "sheet 11 of 12, row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R05R12",
+   "nn_similarity": 0.7315,
+   "nearest_looks": [
+    "LB-027"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R05R11",
+   "name": "Wood-Grain Groove Bands",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Gig-poster supergraphic triptych",
+   "use": "unknown (guess from nearest looks: music)",
+   "mood": [
+    "groovy",
+    "warm",
+    "laid-back"
+   ],
+   "energy": "medium",
+   "avoid_for": "cold or minimal briefs",
+   "hallmarks": {
+    "palette": "orange, teal, brown on wood (4 inks)",
+    "type": "",
+    "mark_making": "screen-printed supergraphic; finish flat-graphic",
+    "composition": "flowing bands, triptych",
+    "subject": "a classical marble head"
+   },
+   "hint": "screen-printed supergraphic",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1970s",
+   "care": "",
+   "themes": [
+    "psychedelic-groovy",
+    "mid-century-modern"
+   ],
+   "type_pairing": [
+    "pulp-retro-comic",
+    "condensed-poster"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet11.jpg",
+   "panel": "sheet 11 of 12, row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R03R22",
+   "nn_similarity": 0.8151,
+   "nearest_looks": [
+    "LB-021"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R05R12",
+   "name": "Felt Six-Up",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Blue-green felt specimen riso",
+   "use": "unknown (guess from nearest looks: zines; botanical brands)",
+   "mood": [
+    "playful",
+    "homespun",
+    "repeatable"
+   ],
+   "energy": "medium",
+   "avoid_for": "serious briefs",
+   "hallmarks": {
+    "palette": "orange, teal, kraft (3 inks)",
+    "type": "",
+    "mark_making": "felt appliqué grid; finish crafted-object",
+    "composition": "2x3 repeat grid",
+    "subject": "a classical marble head"
+   },
+   "hint": "felt appliqué grid",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "craft / riso",
+   "care": "",
+   "themes": [
+    "folk-craft",
+    "pop-zine"
+   ],
+   "type_pairing": [
+    "childrens-playful"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet11.jpg",
+   "panel": "sheet 11 of 12, row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R05R09",
+   "nn_similarity": 0.7315,
+   "nearest_looks": [
+    "LB-041",
+    "LB-036"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R05R16",
+   "name": "Amber Line Cartouche",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "grid modernist folk-craft neon cartouche",
+   "use": "unknown (guess from nearest looks: corporate identity)",
+   "mood": [
+    "warm",
+    "nocturnal",
+    "minimal"
+   ],
+   "energy": "low",
+   "avoid_for": "daylight or busy briefs",
+   "hallmarks": {
+    "palette": "amber neon (1 line on black inks)",
+    "type": "",
+    "mark_making": "neon line cartouche; finish crafted-object",
+    "composition": "oval frame, single line",
+    "subject": "a classical marble head"
+   },
+   "hint": "neon line cartouche",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "grid modernist / folk-craft",
+   "care": "",
+   "themes": [
+    "neon-night",
+    "quiet-austere"
+   ],
+   "type_pairing": [
+    "art-deco-display",
+    "scifi-tech"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet11.jpg",
+   "panel": "sheet 11 of 12, row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R02R15",
+   "nn_similarity": 0.76,
+   "nearest_looks": [
+    "LB-019"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R05R17",
+   "name": "Contour Lozenge Drift",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Contour-map Harlem linocut lozenge",
+   "use": "unknown (guess from nearest looks: posters)",
+   "mood": [
+    "thoughtful",
+    "worldly",
+    "calm"
+   ],
+   "energy": "low",
+   "avoid_for": "loud or youth briefs",
+   "hallmarks": {
+    "palette": "sage, navy, rust, ochre, cream (5 inks)",
+    "type": "",
+    "mark_making": "reduction linocut + contour map; finish flat-graphic",
+    "composition": "diamond lozenge, rings, contours",
+    "subject": "a classical marble head"
+   },
+   "hint": "reduction linocut + contour map",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "Harlem Renaissance graphic",
+   "care": "",
+   "themes": [
+    "mid-century-modern",
+    "woodcut-print"
+   ],
+   "type_pairing": [
+    "editorial-serif",
+    "geometric-sans"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet11.jpg",
+   "panel": "sheet 11 of 12, row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-R02R02",
+   "nn_similarity": 0.8195,
+   "nearest_looks": [
+    "LB-040"
+   ],
+   "status": "live"
+  },
+  {
+   "id": "LB-R05R19",
+   "name": "Blueprint Corner Crush",
+   "kind": "keeper",
+   "family": 7,
+   "family_name": "Wildcards (breeder keepers)",
+   "also_family": "",
+   "theme": "Cinema-hoarding blueprint corner",
+   "use": "unknown (guess from nearest looks: restaurants; product launches)",
+   "mood": [
+    "calm",
+    "cerebral",
+    "cool"
+   ],
+   "energy": "low",
+   "avoid_for": "warm or festive briefs",
+   "hallmarks": {
+    "palette": "white line on blue (1 inks)",
+    "type": "",
+    "mark_making": "blueprint construction lines; finish fine-line",
+    "composition": "crammed into the corner, lots of field",
+    "subject": "a classical marble head"
+   },
+   "hint": "blueprint construction lines",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "drafting",
+   "care": "draws on a living craft technique (Hand-painted cinema hoarding and vehicle ornament): borrow the structure, do not costume it",
+   "themes": [
+    "technical-diagram",
+    "quiet-austere"
+   ],
+   "type_pairing": [
+    "monospace-code",
+    "grotesk-neutral"
+   ],
+   "sheet": "sheets/F7_wildcards_sheet12.jpg",
+   "panel": "sheet 12 of 12, row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R03R03",
+   "nn_similarity": 0.859,
+   "nearest_looks": [
+    "LB-063",
+    "LB-013"
+   ],
+   "status": "live"
+  }
+ ],
+ "retired": [
+  {
+   "id": "LB-064",
+   "retired": "2026-11-02",
+   "note": "replaced by LB-065 and LB-066"
+  },
+  {
+   "id": "LB-R02R22",
+   "retired": "2026-11-02",
+   "note": "repeat of LB-R02R21, ID never reused"
+  }
+ ]
+}

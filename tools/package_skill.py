@@ -19,6 +19,7 @@ DESC = ("Judge and improve visual work (generated images, illustrations, technic
         "a piece from scratch (step back, brief from first principles, 2-3 concepts, then build).")
 DIRS = ["core", "modules", "lite", "tools"]
 FILES = ["SOURCES.md", "BIBLIOGRAPHY.md", "LICENSE", "fonts/README.md", "fonts/CATALOGUE.md", "fonts/catalogue.json"]   # font catalogue only; font files stay in the repo
+SKIP_FILES = {"modules/lookbook/looks.csv"}   # the json carries the same rows
 SKIP_EXT = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg", ".blend", ".pyc"}
 SKIP_PARTS = {"__pycache__", ".pytest_cache"}
 
@@ -37,7 +38,8 @@ def main():
     md = skill_md()
     assert len(md.split()) * 1.4 < 5000, "SKILL.md body too long"
     files = [p for d in DIRS for p in sorted((ROOT / d).rglob("*"))
-             if p.is_file() and p.suffix.lower() not in SKIP_EXT and not SKIP_PARTS & set(p.parts)]
+             if p.is_file() and p.suffix.lower() not in SKIP_EXT and not SKIP_PARTS & set(p.parts)
+             and str(p.relative_to(ROOT)) not in SKIP_FILES]
     files += [ROOT / f for f in FILES]
     with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr(f"{NAME}/SKILL.md", md)

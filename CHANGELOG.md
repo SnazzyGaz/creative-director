@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.7.0 (2 November 2026)
+
+**New optional module: `modules/lookbook/`.** A searchable reference of established looks for starting new work, never a rule source. Core rules and modules always win over a look.
+
+- **Batch 1:** 132 live looks: 65 historic and technique-based looks (LB-001 to LB-066) and 67 wildcards (LB-R…). Each has use, mood, energy, avoid-for, hallmarks by layer (palette, type, mark-making, composition, subject), a one-line hint, an out-there score (1-5), read status and any care note. Two IDs are retired (LB-064, LB-R02R22) and are never reused.
+- **Files:** `looks.json` and `looks.csv` (the tag file), `index.png`, and 24 sheets of six looks each in `sheets/` (1200 px JPEGs, about 10 MB in all). Every example is our own render from that look's rules; no look is tied to a real artist, studio, community or specific work.
+- **How it is used** (`README.md`): from-scratch briefs get two or three lookbook directions with IDs, at most one concept in three; work that passes but feels generic borrows one layer at hint strength; a described vibe maps to the nearest look. Never on fixes or edits. A strength dial (hint ~20% by default, leaning ~50%, strong ~80%, full) and guards against habit: a recent-use log, fit before novelty, no partial-read looks as a lead, care flags. Cite as `LB-014 Suprematism at ~20%`.
+- **Tools:** `tools/lookbook_find.py` shortlists looks from the tag file by use, mood and energy. `tools/lookbook_sync.py` folds in a new batch from the breeder folder: copies only shareable files, filters to live looks, keeps retired IDs, runs the name check. `modules/lookbook/UPDATING.md` has the steps.
+- **Wiring:** a row in the `AGENTS.md` module table and in `core/which-modules.md` (README 946 tokens; the tag file is searched, not loaded). The always-on set is unchanged (`AGENTS.md` grows by one table row). The skill zip carries the README, `looks.json` and the tools but no images.
+
 ## v0.6.0 (2 November 2026)
 
 A top-to-bottom tidy: one home per rule, a much smaller always-on load, and an honest grade on every rule. No rule was renumbered; a merged rule leaves a "Moved to" line under its old ID.

@@ -20,7 +20,7 @@ A set of design rules and a critique loop that any AI agent can read. It helps a
 
 **Grok Bot.** One click: [Creative Director bot](https://x.ai/bot/XWBKgRnDOw7uR5SpKx3Af). Or point any bot at [`AGENTS.md`](AGENTS.md).
 
-**Claude.** Download [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip) (about 200 KB: `SKILL.md`, `core/`, `modules/`, `lite/`, `tools/`, the font catalogue; no images, font files or examples; built by [`tools/package_skill.py`](tools/package_skill.py)). The zip has the `creative-director/` folder at its top level, as Claude requires.
+**Claude.** Download [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip) (about 230 KB: `SKILL.md`, `core/`, `modules/`, `lite/`, `tools/`, the font catalogue; no images, font files or examples; built by [`tools/package_skill.py`](tools/package_skill.py)). The zip has the `creative-director/` folder at its top level, as Claude requires.
 - **claude.ai:** first turn on *Code execution and file creation* in Settings > Capabilities (skills need it). Then, as [Anthropic's guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude) describes: go to Customize > Skills, click **+**, then **+ Create skill**, choose **Upload a skill**, and upload the zip. Toggle it on in the skills list. On Team and Enterprise plans an owner may need to allow skills first (see the guide).
 - **Claude Code:** `unzip creative-director-skill.zip -d ~/.claude/skills/` (or `.claude/skills/` inside a project).
 - **Claude Projects:** unzip, then add `creative-director/SKILL.md`, `core/principles.md`, `core/critique-loop.md`, `core/critique-template.md` and the modules you need as project knowledge.
@@ -103,6 +103,7 @@ core/       always: principles, the loop (with sign-off and delivery). On demand
 modules/    technical-drawing · illustration · character · web-ui · ux · 3d
             typography · layout (social, posters, slides, print) · brand · aesthetic-critique
             composition (balance, focus, unity, space, beauty) · colour-value
+            lookbook (optional: 132 established looks and wildcards, tag file and image sheets)
 tools/      look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, 3D intersections, before/after
 examples/   stress tests, round by round, including this README's own critique
 fonts/      61 free font families in 18 themes, catalogue and specimen sheets
