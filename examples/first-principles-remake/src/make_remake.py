@@ -1,5 +1,5 @@
 """The chosen concept (B, Bring / Take) built at A3. Type only; two inks on paper; flush left on the 22 mm margin.
-The weekday is held back: the brief says Saturday, but 14 March 2027 is a Sunday (FP-3)."""
+The date and weekday agree: Saturday 13 March 2027 (checked, FP-3)."""
 import json
 from PIL import Image, ImageDraw
 from fp import *
@@ -31,8 +31,8 @@ d.line((M, M + 160, W - M, M + 160), fill=INK, width=5)
 fb = fit("Bring", MEAS * 0.86, **HEAD)
 put((M - 10, 880), "Bring", fb, INK)
 put((M, 1060), "spare seeds", vfont(BRIC, 172, **SUB), INK)
-# second level: when (weekday held back pending the owner)
-put((M, 1290), "14 March 2027", vfont(BRIC, 172, wght=700, wdth=75, opsz=96), ACC)
+# second level: when
+put((M, 1290), "Sat 13 March 2027", vfont(BRIC, 172, wght=700, wdth=75, opsz=96), ACC)
 put((M, 1376), "10:00 to 13:00, in the hut", vfont(HANK, 60, wght=500), INK)
 # far read, bottom half: the other half, inverted
 put((M - 10, SPLIT + 560), "Take", fb, PAPER)

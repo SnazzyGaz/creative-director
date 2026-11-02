@@ -14,10 +14,11 @@ Neutral and factual. Every point cites a rule ID. No praise padding, no harshnes
 - Answers the brief and audience: <yes / partly / no, with evidence>. Must-keeps intact: <yes / list what changed>.
 - Options considered (CD-3, open briefs only): <chosen, and one line per dropped option>
 
-### Brief from first principles (remake mode only: "from scratch", "redo", "rejig", "reimagine"; FP-1..8). Send this first, then wait.
+### Brief from first principles (remake mode only: "from scratch", "redo", "rejig", "reimagine"; FP-1..9). Send this first, then wait.
 - Trigger (FP-1): <the owner's words>
 - Step back (FP-2), one line each, [brief] or [inferred]: what it is and where it is seen / who it is for / its one job / the feeling / the given facts, word for word / must survive vs incidental / success
-- Fact check (FP-3): <one line per check; conflicts as questions; what is held back until answered>
+- Facts (FP-3): <transcription of the original, word for word, incl. disclaimers> then <one line per check; contradictions and unsourced claims as questions; what is held back until answered>
+- Imagery (FP-9, ILL-12; only if new imagery is made): <subject sheet: what it is, its parts, 2+ real references with sources> · <art direction> · <2-4× crops: structure / no tiling / components / material and light / marks>
 - **Brief (5-8 lines, FP-4):** <what and where> · <for whom> · <one job> · <feeling> · <must survive, incl. official marks (FP-8)> · <free to change> · <judged done when> · <open questions>
 - Concepts (FP-5), each with a thumbnail: A <one-line idea; what leads> / B <...> / C <...>. Structure test: <the one-sentence descriptions differ without naming a font, colour or effect: yes / no>
 - Recommend (FP-6): <concept, reason citing a brief line>. Dropped: <one line each: what it does better, why it lost>. The owner picks.
@@ -29,6 +30,9 @@ Neutral and factual. Every point cites a rule ID. No praise padding, no harshnes
 - Flip/mirror: <deviations observed>
 - Greyscale: <number of value groups; subject/ground separation>
 - Crop/edges: <tangents, frame contacts, empty regions>
+- Whitespace (LAY-10): <largest intended inter-group gap; any band or 2-D dead zone over ~1.5× it (`tools/whitespace.py`), each marked deliberate or fixed; after an image swap: whole layout re-reviewed, what moved>
+- Viewing distance (LAY-7, signage only): <print size; each key line's cap height in mm and "reads to X m" (≈ distance ÷ 250)>
+- Set (BRAND-6, series only): <logo size/position, margins, palette and type logic shared: yes / list differences>
 
 ### Anatomy pass (CHAR-9; required when a person, hand or animal is in frame, else "n/a")
 - Inventory: <people, hands, animals found, incl. partial and background ones>
@@ -74,7 +78,7 @@ Also possible (not needed): <one line, or omit>. OK to go ahead?
 ### Delivery checklist (after the fixes; FLOW-3). Lead with the result, then:
 1. <point> (<RULE-ID>): done / not done, <evidence or reason>.
 2. ...
-QA re-run on the final render: light (TD-LIT-1) <pass/fail> · anatomy (CHAR-9) <pass/fail/n.a.> · type size and contrast (TYPE-3, UI-6) <pass/fail> · marks (BRAND-4, BRAND-8) <official, source / placeholder / none / invented: fail> · additions (AES-10) <none/list>.
+QA re-run on the final render: light (TD-LIT-1) <pass/fail> · anatomy (CHAR-9) <pass/fail/n.a.> · type size and contrast (TYPE-3, UI-6) <pass/fail> · whitespace (LAY-10) <pass / deliberate space named / fail> · marks (BRAND-4, BRAND-8) <official, source, overlay check / plain-text name / placeholder / none / invented: fail> · real-subject crops (ILL-12) <pass/fail/n.a.> · facts (FP-3) <transcribed, questions open: list> · additions (AES-10) <none/list>.
 ```
 
 ## Worked example

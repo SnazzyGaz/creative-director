@@ -22,7 +22,7 @@ Full text: [brief.md](brief.md).
 - **Must survive:** every given fact word for word, type only, no invented copy.
 - **Done when:** "what", "what to do" and "when" read at 10%.
 
-The fact check (FP-3) found a conflict that both earlier versions missed. **The brief's "Saturday 14 March 2027" is a Sunday.** The remake holds the weekday back and asks the owner.
+The fact check (FP-3) transcribed every given fact and checked them against each other: the date and weekday agree (Saturday 13 March 2027), the times and place are consistent, and nothing was added.
 
 ## 3. Three concepts (FP-5, FP-6)
 ![Concepts](concepts/concepts.jpg)
@@ -31,7 +31,7 @@ The fact check (FP-3) found a conflict that both earlier versions missed. **The 
 |---|---|---|---|
 | A | The sheet is the back of a seed packet; the variety label leads, and the details are packet fields | Alfa Slab One + Zilla Slab | Dropped: its far read is the name alone, like the light-touch fix |
 | B | The sheet splits into Bring (above) and Take (below, inverted); the action leads | Bricolage Grotesque + Hanken Grotesk | **Recommended and built** |
-| C | A March calendar with the day marked; the date leads | Jost + Literata | Dropped: 30 of 31 numbers mean nothing, and it leans on the unconfirmed weekday |
+| C | A March calendar with the day marked; the date leads | Jost + Literata | Dropped: 30 of 31 numbers mean nothing, and the date already reads as one line |
 
 ## 4. The remake
 ![Remake](remake.png)
@@ -43,8 +43,8 @@ Far read, each sheet at 10%:
 [Full critique](critique.md) · [look sheet](look-remake.jpg)
 
 ## Delivery checklist (FLOW-3)
-1. **Brief from first principles (FP-4):** **done.** Seven lines; one open question (the weekday).
-2. **Facts, nothing added (FP-3, AES-10, CD-5):** **done.** Every given phrase appears word for word. The weekday is held back on purpose.
+1. **Brief from first principles (FP-4):** **done.** Seven lines; no open fact questions.
+2. **Facts, nothing added (FP-3, AES-10, CD-5):** **done.** Every given phrase appears word for word, including the full date.
 3. **Concepts that differ in structure (FP-5):** **done.** Three concepts, and the structure test passes.
 4. **Recommendation with reasons (FP-6):** **done.** B is built; A and C are dropped, with one line each.
 5. **Contrast (UI-6, TYPE-3):** **done.** Ink on paper and paper on ink both measure 11.63:1. The date is 5.15:1, and it needs 3:1 as large text.
@@ -65,5 +65,4 @@ QA re-run on the final render:
 - If the audience already knows the event, the light touch may have been enough. That is the owner's call.
 
 **Questions for the owner:**
-- Saturday 13 or Sunday 14 March 2027?
 - Is the solid dark lower half acceptable for a home printer?

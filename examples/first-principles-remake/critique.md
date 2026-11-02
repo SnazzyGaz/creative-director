@@ -14,7 +14,7 @@ Self-judged by the agent that made it. No owner reviewed it.
 
 ### Brief from first principles (FP-1..8)
 - **Trigger (FP-1):** "rejig ... from scratch".
-- **Step back and fact check (FP-2, FP-3):** see [brief.md](brief.md). One conflict was found: 14 March 2027 is a Sunday, not a Saturday. The weekday is held back.
+- **Step back and fact check (FP-2, FP-3):** see [brief.md](brief.md). No conflicts: the date and weekday agree (Saturday 13 March 2027).
 - **Concepts (FP-5):** [concepts/concepts.jpg](concepts/concepts.jpg).
   - A: the poster is the back of a seed packet, and the variety label leads.
   - B: the sheet is split in two, Bring above and Take below, inverted. The action leads.
@@ -22,7 +22,7 @@ Self-judged by the agent that made it. No owner reviewed it.
   - Structure test: the three one-sentence descriptions differ without naming a font or colour. **Pass.**
 - **Recommend (FP-6): B.** It puts the poster's one job, what to bring and what you get, in the far read. Those words were small print in both earlier versions.
   - Dropped A: it carries the most charm and the clearest "seeds" signal, but its details sit in a table that only reads up close. Its far read is the name alone, the same as the light-touch fix.
-  - Dropped C: it makes "when" unmissable, but it spends the sheet on 31 numbers, 30 of which mean nothing. It also leans hardest on the unconfirmed weekday.
+  - Dropped C: it makes "when" unmissable, but it spends the sheet on 31 numbers, 30 of which mean nothing. It also repeats the date the other concepts already set in one line.
 
 ### Test results (evidence)
 - **Far read (LAY-7, 10%):** "Bring", "spare seeds", "Take", "some home" and the date all read. "Seed swap" reads as a second-level heading.
@@ -42,7 +42,7 @@ Self-judged by the agent that made it. No owner reviewed it.
 
 ### Meets criteria
 - **CD-1, AES-10:** only the given words. Checked line by line against the brief; nothing added.
-- **CD-5:** every given fact is present. The one exception is the weekday, which is held back on purpose (FP-3) and reported here.
+- **CD-5:** every given fact is present (FP-3).
 - **TYPE-10:** Bricolage Grotesque (`fonts/grotesk-neutral/`) for the display lines. Its 75% width at 800 weight keeps "Bring" and "Take" at one size. Hanken Grotesk for the near read. Not Fraunces, and not the faces of either earlier version.
 - **CORE-5:** one left edge at the 22 mm margin for every line.
 
@@ -69,13 +69,12 @@ Self-judged by the agent that made it. No owner reviewed it.
   - "The light touch was enough" is a fair answer if the owner's audience already knows the event.
 
 ### Needs improvement (ranked)
-1. **[QUESTION, blocks printing]** FP-3: the weekday. Is it Saturday 13 or Sunday 14 March 2027? Once the owner answers, add the day before the date.
-2. **[IMPROVEMENT]** LAY-7: if the owner wants the date to read further, the date line has room to grow to about 200 px (24 mm) without crowding "spare seeds".
-3. **[QUESTION]** Print: the solid lower half on a home printer. Options: keep it, print it at a shop, or use a light-tint version (contrast would need re-checking).
+1. **[IMPROVEMENT]** LAY-7: if the owner wants the date to read further, the date line has room to grow to about 200 px (24 mm) without crowding "spare seeds".
+2. **[QUESTION]** Print: the solid lower half on a home printer. Options: keep it, print it at a shop, or use a light-tint version (contrast would need re-checking).
 
 ### Delivery checklist (FLOW-3)
 1. **Brief from first principles (FP-4):** done. Seven lines, self-approved for the demo.
-2. **Facts word for word, nothing added (FP-3, AES-10):** done. The weekday is held back and asked about.
+2. **Facts word for word, nothing added (FP-3, AES-10):** done.
 3. **2-3 structurally different concepts, with a recommendation (FP-5, FP-6):** done. Three concepts; B recommended; A and C dropped with reasons.
 4. **Full QA (FP-7):** done.
 

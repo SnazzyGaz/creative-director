@@ -21,7 +21,7 @@ put((M - 14, 1010), "SEED", fh, INK)
 put((M - 14, 1700), "SWAP", fh, INK)
 # date block on columns 1-12, accent for the when
 fd = font(A, 210, 700)
-put((M - 4, 1990), "Sat 14 March 2027", fd, RED)
+put((M - 4, 1990), "Sat 13 March 2027", fd, RED)
 put((M, 2090), "10:00 to 13:00, in the hut", font(C, 72, 500), INK)
 # near read: one block, columns 1-8
 fb = font(C, 50, 400)

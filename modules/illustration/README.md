@@ -86,6 +86,18 @@ Format: **What / Why / Check / Fix / Source**. These are strong defaults; a deli
 - **Fix:** Name one light source and where it is. Name a medium (gouache, 35mm still, pencil) instead of "cinematic" or "epic". Cut mood adjectives. Quiet the sky or background, and keep the peak contrast at the focal point [S109]. Light and palette concept belong to the brief (CD-2), so ask before changing them.
 - **Source:** practitioner write-ups, not research [S108, S109, S110]; complexity evidence [S35]. Found in the knight stress test (`examples/illustration-knight/`).
 
+### ILL-12. Real subjects, especially food, must be physically plausible (MUST-BE-RIGHT for food)
+- **What:** Imagery of something real (food, materials, products, plants) is built from what the subject is (FP-9), and every part must look like the real thing up close. Food is the strictest case: people judge whether it looks edible before anything else.
+- **Why:** Generators fill large areas with repeated texture. At full size that reads as a mesh, waffle or tiled pattern instead of the real material, and on food it turns appetising into off-putting. A layout can't rescue an image that looks wrong to eat.
+- **Check:** Crop the subject at 2-4× in at least three places and write one line per crop:
+  1. **Structure:** do the parts behave like the real thing? Strands, grains, leaves and fibres separate, overlap, curl and end; they don't fuse into a grid or a lattice.
+  2. **No tiling or mesh:** no repeated motif, waffle or net pattern, no identical clumps side by side.
+  3. **Each component is right:** count and inspect the named parts (an egg has one yolk, set or runny white with crisp edges; crackers or chips are separate pieces with their own edges and bubbles; sauce sits on and between things, it doesn't print onto them).
+  4. **Material and light:** gloss where wet or oily, matt where dry; steam or shine follows one light (TD-LIT-1).
+  5. **No invented marks** on packaging, plates or garnish (BRAND-8).
+- **Fix:** Regenerate from a subject sheet and real references (FP-9), describing structure ("separate, glossy, curling strands with visible ends") rather than the old picture. Try several candidates and pick the one that passes every crop. Never fix mesh by sharpening or adding grain.
+- **Source:** FP-9; ILL-11; BRAND-8; TD-LIT-1.
+
 ## Myths and weak claims
 - **Rule of thirds as law:** weak evidence; one study even found centring preferred for single subjects [S43, S44]. Neither is a default here (ILL-1); ILL-1 is about unequal *divisions*, not third points.
 - **Golden-ratio spirals:** no reliable preference effect [S38, S39].

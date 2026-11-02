@@ -99,7 +99,7 @@ Note: take-over fires easily on AI-generated images, which often break perspecti
 
 When taking over: keep the brief's intent (subject, mood, purpose), say plainly that it is a rework and which triggers fired, then run the normal loop on the new version. Otherwise, nudge.
 
-**Take-over is not a remake.** A take-over repairs a broken piece and keeps its idea. When the owner asks for it "from scratch", "redo", "rejig", "start over" or "reimagine", step back and rebuild from a new brief instead: `core/first-principles.md` (FP-1..8).
+**Take-over is not a remake.** A take-over repairs a broken piece and keeps its idea. When the owner asks for it "from scratch", "redo", "rejig", "start over" or "reimagine", step back and rebuild from a new brief instead: `core/first-principles.md` (FP-1..9).
 
 ## 5. When to stop
 

@@ -37,7 +37,12 @@ The known failure this module addresses: critique rounds remove errors but canno
   2. the brand's own site, press kit or brand centre;
   3. Wikimedia Commons, checked against the official source for shape and colour.
 
-  Prefer a vector or the largest raster. Use it unaltered: official proportions and colours, the version the guide gives for the background, its clear space (often a unit of the logo, such as the cap height or a symbol width) and its minimum size. Never redraw, trace, retype, restyle, recolour, stretch, rotate, add effects to, or AI-generate a mark, not even to "clean it up" or to match the piece's style. A labelled placeholder (a plain box reading "[Team] crest: official file needed") is the last resort, used only when no faithful source exists. Say so in the hand-off.
+  Prefer a vector or the largest raster. Use it unaltered: official proportions and colours, the version the guide gives for the background, its clear space (often a unit of the logo, such as the cap height or a symbol width) and its minimum size. Never redraw, retype, restyle, recolour, stretch, rotate, add effects to, or AI-generate a mark, not even to "clean it up" or to match the piece's style. The only cleaning allowed:
+  - knocking out the background behind the mark;
+  - a faithful trace of a low-quality file into a vector, verified by the overlay check below;
+  - a one-colour silhouette (all of the mark in one ink) where the guide gives no version for the background. The shapes never change.
+
+  If no file exists, set the trademark name in plain text in the piece's own type; don't draw a mark. A labelled placeholder (a plain box reading "[Team] crest: official file needed") is for symbols with no name to set. Say which you used in the hand-off.
 - **Why:** A logo is a trademark. It identifies who the goods or services come from [S170]. In UK law, using a sign identical with or similar to a registered mark, in the course of trade and in a way likely to confuse, infringes it [S171]. Brand guides are explicit. Spotify says its logo is not to be modified or added to, and its orientation, colour and composition are not to change [S172]. Mastercard says its artwork is to be downloaded and not altered, and its Symbol is used only in full colour [S173]. A file on Commons carries no permission to use the trademark; that stays with the owner of the mark [S174]. Image generators routinely garble marks. A near-miss mark is worse than none, because it looks like a fake.
 - **Check:**
   - The logo's width-to-height ratio matches the source file within 1%.
@@ -45,13 +50,14 @@ The known failure this module addresses: critique rounds remove errors but canno
   - The gap to the nearest element is at least the clear-space unit.
   - Its width at display size is at or above the minimum.
   - Compared side by side with the source at 200%, it has the same letters and the same shapes.
+  - **Overlay check:** lay the placed mark over the source at the same size (50% opacity or a difference blend). The outlines coincide; nothing is added, dropped or moved. Re-run after every trace, knockout or recolour.
   - The hand-off names the source of each mark (owner, brand site, or Commons with its file page).
   - For third-party marks, a line notes that permission to use them is the owner's call.
 - **Fix:**
   - Place the original file.
   - Restore clear space by moving other elements, not by shrinking the logo below its minimum.
   - On dark or busy grounds, use the guide's one-colour or reversed version.
-  - If you can't find a faithful source, use the labelled placeholder and ask the owner for the file.
+  - If you can't find a faithful source, set the name in plain text (or, for a nameless symbol, use the labelled placeholder) and ask the owner for the file.
 - **Source:** Wheeler [S119]; USPTO [S170]; Trade Marks Act 1994 s.10 [S171]; Spotify [S172]; Mastercard [S173]; Wikimedia Commons [S174].
 
 ### BRAND-5. Voice matches, in words and in pictures
@@ -64,8 +70,14 @@ The known failure this module addresses: critique rounds remove errors but canno
 ### BRAND-6. Consistent across pieces
 - **What:** Pieces in one set (a site and its social cards, a deck, a campaign) share the same tokens: colours, type, logo placement, image treatment, corner radius.
 - **Why:** Distinctive assets only build memory when repeated consistently [S120]. Each piece "being a bit different" erodes them.
-- **Check:** Put the pieces side by side as thumbnails. Same palette, type, logo position and image style? List any token that differs and why.
-- **Fix:** Pull every piece from one token sheet; vary layout and content, not the assets.
+- **Check:** Put the pieces side by side as thumbnails. Same palette, type, logo position and image style? List any token that differs and why. **Set-level pass for a series:** after each piece passes on its own, check the set together:
+  - the logo is the same size and in the same position;
+  - the margins and the header/footer device are the same;
+  - the palette logic is shared, e.g. one shared neutral plus one accent per piece;
+  - the type logic is shared, i.e. the same roles map to the same faces.
+
+  Each piece still keeps its own theme and image.
+- **Fix:** Pull every piece from one token sheet; vary layout and content, not the assets. Write the set's shared tokens down once and build every piece from them.
 - **Source:** Romaniuk [S120]; Wheeler [S119].
 
 ### BRAND-7. No brand? Make the defaults visible and owned

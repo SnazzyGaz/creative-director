@@ -68,8 +68,9 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **What:** A poster has two reading distances: the far glance (one image and the headline) and the near read (details). Design the far layer first.
 - **Why:** People decide whether to approach from across the room; small type can't do that job.
 - **Check:** View the poster at about 10% of its size (roughly how a 50 cm-wide poster looks from 5 m). Do the image and headline still read? Is the detail text set together, not scattered?
-- **Fix:** Enlarge the headline and simplify the image; group details into one block on the grid.
-- **Source:** Müller-Brockmann [S60]; CORE-1.
+  **Signage and A-boards (viewing-distance check):** write down the printed size and the distances it is read from (a pavement board: headline and price from 3-5 m, body from about 1-1.5 m). Convert each key line's cap height from pixels to millimetres at print size and compare with the distance. A practical working minimum is cap height ≈ distance ÷ 250 (12-20 mm for 3-5 m). The sign industry's best-case figure, head-on in good light, is about distance ÷ 360; signs seen at an angle or in passing need far more, about distance ÷ 120 [S179, S180]. Report each line as "reads to X m".
+- **Fix:** Enlarge the headline and simplify the image; group details into one block on the grid. On signage, cut words before shrinking the type that must read from the pavement.
+- **Source:** Müller-Brockmann [S60]; CORE-1; United States Sign Council Foundation [S179, S180].
 
 ### LAY-8. Slides: one point each, with signals
 - **What:** One message per slide, stated as the title (a sentence, not a topic label). Remove decoration that doesn't explain. Text a room can read: about 24 pt or more at 1920 × 1080, at most about six short lines. Highlight what the speaker is talking about.
@@ -84,6 +85,17 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Check:** Read the document setup (bleed, trim, margins). Compute ppi: image pixels ÷ printed inches. Check the output intent or profile of the PDF and that fonts are embedded.
 - **Fix:** Extend backgrounds into the bleed; re-source or re-render low-res images (don't upsample and call it 300); export PDF/X with the printer's profile, or ask the printer.
 - **Source:** Adobe InDesign user guide (bleed, slug, printing) [S131]; ask the printer for their spec, which overrides these defaults.
+
+### LAY-10. Whitespace is distributed on purpose (squint for dead zones)
+- **What:** Every empty area is either a margin, a gap between groups, or deliberate focal space (room the subject looks or moves into, a quiet field that frames the one message). Related items sit closer to each other than to anything else, so each group reads as one unit. No empty band or block is much larger than the largest intended gap between groups unless it is deliberate and said so. After any image swap, crop change or regenerate, re-review the **whole** layout, not only the changed element: new imagery changes where the space is.
+- **Why:** People group what is near together (Gestalt proximity) and what shares a region together (common region) [S175, S176]. Spacing is how a layout says which things belong together; consistent gaps read as structure, and a stray large gap reads as a missing element or a mistake [S177, S178]. An empty area is only white space if it was designed; otherwise it is a dead zone that pulls the eye and makes groups float.
+- **Check:**
+  1. **Measure rows:** list the empty horizontal bands between groups. Flag any band larger than about 1.5× the largest intended inter-group gap that isn't marked as deliberate.
+  2. **Squint for 2-D dead zones:** blur the piece (or view it at thumbnail size). Look for empty blocks *inside* a row, e.g. between a small item at the left and a small item at the right of the same row. A row scan alone can't see these. Flag any block whose short side exceeds about 1.5× the largest intended gap, unless it is a symmetric flank of a centred group or declared focal space.
+  3. **After any image change:** re-run 1 and 2 on the full piece and write one line on what moved.
+  `tools/whitespace.py IMAGE [--intended Y0-Y1]` does 1 and 2 and draws a squint sheet; treat its PASS as "review by eye", not as approval.
+- **Fix:** Pull each group together, then share out the space between groups evenly; enlarge or regroup the content that sits next to a dead zone (put small items on one line, align them to a shared centre line, let the main element fill its field); move or re-crop the image so the subject sits one gap from the type; or name the space as deliberate in the critique and keep it.
+- **Source:** Wertheimer [S175]; Palmer [S176]; NN/g on proximity [S177]; White [S178]; LAY-3.
 
 ---
 

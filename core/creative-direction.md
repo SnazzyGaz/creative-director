@@ -34,7 +34,7 @@ Keep it light. These are defaults, not blockers. Only the MUST-BE-RIGHT list in 
 - **Why:** A key art-direction skill is telling real improvement from personal preference [S101]. Agreed criteria make "done" checkable [S88]. The loop's stop rules apply (`critique-loop.md` section 5).
 
 ## When the ask is "from scratch"
-CD-1 to CD-6 assume the brief is given. When the owner asks for a redo, rejig or reimagining, write the brief yourself from first principles, get it signed off, and compare 2-3 structurally different concepts before building: `core/first-principles.md` (FP-1..8).
+CD-1 to CD-6 assume the brief is given. When the owner asks for a redo, rejig or reimagining, write the brief yourself from first principles, get it signed off, and compare 2-3 structurally different concepts before building: `core/first-principles.md` (FP-1..9).
 
 ## Presenting the result
 Lead with the brief and the idea. Show the chosen option, a one-line reason, and what was dropped and why. Answer the concerns people raise rather than selling harder [S105]. Report open questions plainly.

@@ -11,7 +11,7 @@ for y in range(H):
     ImageDraw.Draw(img).line([(0, y), (W, y)], fill=tuple(round(a + (b - a) * t) for a, b in zip(top, bot)))
 B = "condensed-poster/bebasneue/BebasNeue-Regular.ttf"
 lines = [("JOIN US FOR OUR ANNUAL", 96), ("SEED SWAP!", 330), ("HOLLIN LANE ALLOTMENTS", 120),
-         ("SATURDAY 14TH MARCH 2027", 120), ("10AM - 1PM", 120)]
+         ("SATURDAY 13TH MARCH 2027", 120), ("10AM - 1PM", 120)]
 body = ("BRING YOUR SPARE SEEDS AND SWAP WITH FELLOW GARDENERS! ENVELOPES PROVIDED. "
         "TEA & CAKE IN THE HUT. FREE ENTRY. ALL WELCOME! DON'T MISS OUT!")
 shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0)); txt = Image.new("RGBA", (W, H), (0, 0, 0, 0))

@@ -12,7 +12,7 @@ def concept_a():
     d.text((W / 2, M + 120), "HOLLIN LANE ALLOTMENTS", font=font(ZILLA_B, 64), fill=INK, anchor="mm")
     d.text((W / 2, M + 620), "Seed", font=font(ALFA, 400), fill=RED, anchor="mm")
     d.text((W / 2, M + 1000), "Swap", font=font(ALFA, 400), fill=RED, anchor="mm")
-    rows = [("Sow", "14 March 2027, 10:00 to 13:00"), ("Where", "In the hut"), ("Bring", "Spare seeds"),
+    rows = [("Sow", "Sat 13 March 2027, 10:00 to 13:00"), ("Where", "In the hut"), ("Bring", "Spare seeds"),
             ("Take", "Some home"), ("Packets", "Envelopes provided"), ("Price", "Free"), ("Also", "Tea in the hut")]
     y = M + 1330
     for k, v in rows:
@@ -30,7 +30,7 @@ def concept_b():
     d.text((M, M + 50), "Seed swap  ·  Hollin Lane Allotments", font=vfont(HANK, 58, wght=600), fill=INK, anchor="ls")
     d.text((M - 20, 860), "Bring", font=vfont(BRIC, 640, wght=800, wdth=75, opsz=96), fill=INK, anchor="ls")
     d.text((M, 1060), "spare seeds", font=vfont(BRIC, 190, wght=600, wdth=80, opsz=96), fill=INK, anchor="ls")
-    d.text((M, 1320), "14 March 2027 · 10:00 to 13:00", font=vfont(BRIC, 120, wght=700, wdth=75, opsz=96), fill=ACC, anchor="ls")
+    d.text((M, 1320), "Sat 13 March 2027 · 10:00 to 13:00", font=vfont(BRIC, 120, wght=700, wdth=75, opsz=96), fill=ACC, anchor="ls")
     d.text((M - 20, split + 640), "Take", font=vfont(BRIC, 640, wght=800, wdth=75, opsz=96), fill=PAPER, anchor="ls")
     d.text((M, split + 840), "some home", font=vfont(BRIC, 190, wght=600, wdth=80, opsz=96), fill=PAPER, anchor="ls")
     return im
@@ -48,9 +48,9 @@ def concept_c():
         for c, day in enumerate(week):
             if not day: continue
             cx, cy = M + cw * c + cw / 2, y0 + 150 + r * 170
-            if day == 14:
+            if day == 13:
                 d.ellipse((cx - 74, cy - 74, cx + 74, cy + 74), fill=ACC)
-            d.text((cx, cy), str(day), font=vfont(JOST, 84, wght=700 if day == 14 else 400), fill=PAPER if day == 14 else INK, anchor="mm")
+            d.text((cx, cy), str(day), font=vfont(JOST, 84, wght=700 if day == 13 else 400), fill=PAPER if day == 13 else INK, anchor="mm")
     y = 2050
     for s in ["10:00 to 13:00. Bring spare seeds and take some home.", "Envelopes provided. Free. Tea in the hut."]:
         d.text((M, y), s, font=vfont(LIT, 58, wght=400, opsz=24), fill=INK, anchor="ls"); y += 84

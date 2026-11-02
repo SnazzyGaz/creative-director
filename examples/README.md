@@ -26,12 +26,12 @@ Runs of the critique loop (`core/critique-loop.md`) done as a bot would: brief, 
 | [character-hands](character-hands/) | Character / generative image | GenerateImage (AI), zoom audit at 2x | Check only (0 blockers) | CHAR-3, CHAR-4, CHAR-7 all pass; CHAR-3 note (hand about 1.15× face length) | Nothing to fix; the generator passed | 1 |
 | [character-anatomy-pass](character-anatomy-pass/) | Character / generative image | GenerateImage cover, image edits, `anatomy_crops.py` | Fix (3 rounds) | CHAR-9 A1/A2/A3 (orphan hand, armless cuff, fingerless shape) | Clean pass: one hand per arm, digits counted, grips traced | 3 |
 | [aesthetic-across-domains](aesthetic-across-domains/) | Illustration, technical drawing, web UI, UX flow, poster, 3D, data chart | GenerateImage, HTML/CSS + headless Chrome, matplotlib, Pillow, Blender 4.2 | Worked examples (one round each, after sign-off) | CD-1/AES-10 (invented claims in 5 of 7), UI-6/TYPE-3 (contrast 1.1-2.8:1), UX-1, UX-9, TD-PRO-1, LAY-7, 3D-1, 3D-7 | Every signed-off point applied and checked; fonts picked per brief from `fonts/` (TYPE-10); anatomy pass on the figures | 1 each |
-| [first-principles-remake](first-principles-remake/) | Poster | Code (Pillow), from the aesthetic-across-domains poster | **Remake** (asked: "rejig it from scratch") | FP-1..8; FP-3 (brief's "Saturday 14 March 2027" is a Sunday), LAY-7, AES-9 | Step-back brief, 3 structurally different concepts, Bring / Take built; all text 5.15:1 or better; weekday held back for the owner | 1 (self-judged) |
+| [first-principles-remake](first-principles-remake/) | Poster | Code (Pillow), from the aesthetic-across-domains poster | **Remake** (asked: "rejig it from scratch") | FP-1..9; FP-3 (facts transcribed and cross-checked), LAY-7, AES-9 | Step-back brief, 3 structurally different concepts, Bring / Take built; all text 5.15:1 or better | 1 (self-judged) |
 
 ## First-principles remake
 
 ![light-touch vs remake](first-principles-remake/side-by-side.jpg)
-Asked to rejig the seed-swap poster from scratch, the director stepped back first: what the poster is for (people come with seeds), who reads it and from where, and which facts must survive. The fact check found that the brief's Saturday is a Sunday. Three concepts differing in structure (seed packet, Bring / Take, calendar) were compared against the brief, and Bring / Take was built. Next to the light-touch fix it is stronger on what to do and weaker on the date at distance; both are shown. Self-judged. [Index](first-principles-remake/README.md)
+Asked to rejig the seed-swap poster from scratch, the director stepped back first: what the poster is for (people come with seeds), who reads it and from where, and which facts must survive. The fact check transcribed the given facts and checked date against weekday. Three concepts differing in structure (seed packet, Bring / Take, calendar) were compared against the brief, and Bring / Take was built. Next to the light-touch fix it is stronger on what to do and weaker on the date at distance; both are shown. Self-judged. [Index](first-principles-remake/README.md)
 
 ## The aesthetic layer across domains
 
@@ -92,6 +92,7 @@ Kept here on purpose. A critic that never reports its own misses can't be truste
 | [common-failures](common-failures/) stool | model-qa reported the leg poking through the seat only as "asymmetry", not as an intersection | Reading the report against the known plant | Fixed; noted as a tool limit |
 | [baseline-comparison](baseline-comparison/) poster | v0.2 skill version's amber glow read as a blob; the poster without the skill still looks more atmospheric at a glance | Look tests | Glow fixed in v0.3.1 (new art, soft radial light); the atmosphere gap remains |
 | [web-ui-landing](web-ui-landing/) | Still looks generic after the round | Critique | Needs a brand brief, not more rounds |
+| [case-study-may-specials](case-study-may-specials/) | Signage / A-board (third-party sign, teaching example only, no affiliation) | Photo of the sign; GenerateImage food; type set in code; `tools/whitespace.py` | **Take-over** from first principles | FP-2 (real medium), FP-3, FP-9/ILL-12, LAY-7 (cap height ≈ distance/250), LAY-10 (88 px band 1.74×, dead zone 2.0×), BRAND-4 (plain-text names) | One hero item for the 4 m glance, descriptions for the 1 m stop; whitespace fixed and the whole layout re-reviewed. Self-judged | 3 |
 
 ## What the stress tests taught
 

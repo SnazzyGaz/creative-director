@@ -13,5 +13,6 @@
 - [Modules](modules/): technical-drawing, illustration, character, web-ui, ux, 3d, typography, layout, brand
 - [Lite version](lite/CREATIVE-DIRECTOR-LITE.md): loop, core rules and blockers in one short file
 - [Font library](fonts/README.md): theme-grouped free fonts (OFL / Apache) with a catalogue and specimens
-- [Tools](tools/README.md)
+- [Tools](tools/README.md): measuring scripts (contrast, grids, perspective, ellipses, intersections, whitespace)
+- [Case study](examples/case-study-may-specials/README.md): one sign remade from first principles, with every check shown
 - [Sources](SOURCES.md)

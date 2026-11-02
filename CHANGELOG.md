@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.4.3 (2 November 2026)
+
+- **Whitespace is distributed on purpose (new LAY-10).** Every empty area must be a margin, a gap between groups, or named focal space.
+  - The check measures empty horizontal bands, then squints for 2-D dead zones *inside* a row, such as the gap between a small item on the left and a small item on the right. A row scan and a hierarchy check can both miss that.
+  - Anything larger than about 1.5× the largest intended gap is flagged unless it is declared deliberate or is the symmetric flank of a centred group.
+  - After any image swap, re-crop or regenerate, the **whole** layout is re-reviewed, not only the new image. This is also added to the AES-10 re-check, `core/critique-template.md`, the delivery QA line, the MUST-BE-RIGHT list in `lite/`, `AGENTS.md`, `SKILL.md` and the Cursor rule.
+  - New `tools/whitespace.py`: band ratios, the largest empty region against the layout's own gaps and margins, `--intended` ranges, `--axis left|right` for flush layouts, and a squint sheet. Exit 1 on FAIL; a PASS means "look by eye". Tests: `tools/tests/whitespace_cases.py`, 5/5 synthetic and 3/3 example images.
+  - Sources S175-S178: Wertheimer, Palmer, NN/g and White.
+- **Design for the real medium (FP-2).** Line 1 of the step-back names the real medium and how the piece is seen. It must not be the incidental framing of the reference, such as a camera-roll crop, screenshot or chat preview. Constraints are never inferred from how a reference was captured.
+- **Facts (FP-3).** Transcribe every fact word for word before designing. Then check dates against weekdays, sums, spellings, URLs and prices, and flag contradictions and unsourced claims as questions. Disclaimers and small print survive.
+- **Imagery from the subject (new FP-9, new ILL-12).**
+  - New imagery starts from a subject sheet: what the subject physically is, real references, and an art-direction line. It is not a re-description of the old picture.
+  - Real subjects, food above all, must pass 2-4× crops for structure, tiling or mesh, each component, material and light, and invented marks. ILL-12 is MUST-BE-RIGHT for food.
+- **Viewing distance (LAY-7).** Signage and A-boards get a millimetre check: cap height ≈ distance ÷ 250, with the sign-industry legibility index as the basis. Sources S179-S180: United States Sign Council Foundation.
+- **Logo handling (BRAND-4) and series (BRAND-6).**
+  - Only three kinds of cleaning are allowed: a background knockout, a faithful trace or a one-colour silhouette. All three are verified with an overlay check against the source.
+  - When no file exists, the trademark name is set in plain text; it is never drawn.
+  - A series gets a set-level pass: logo size and position, margins, header and footer device, palette logic and type logic.
+- **Date fix in the seed-swap examples.** The weekday is now correct (Saturday 13 March 2027) in the poster and the first-principles remake, and every affected image has been re-rendered. The "known issue" note has been removed.
+- **Case study: `examples/case-study-may-specials/`.** One third-party sidewalk sign, used only as a teaching example with no affiliation. It contains the original, the brief, the concepts, the final and a before-after. The write-up shows the lessons in action: first-principles brief, real medium, viewing-distance table, imagery crops, the LAY-10 failure and fix, plain-text names and fact transcription. It is self-judged. This is the only example that names a real piece. The gallery gains a card.
+- `FP-1 to FP-9` references updated throughout; token counts in `which-modules.md` recounted; `tools/README.md` and `llms.txt` updated.
+
 ## v0.4.2 (2 November 2026)
 
 - **First-principles remake (FP-1 to FP-8).** New `core/first-principles.md`, a mode for when the owner of the work asks for something "from scratch", "redo", "rejig", "start over" or "reimagine".

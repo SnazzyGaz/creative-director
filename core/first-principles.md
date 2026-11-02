@@ -6,7 +6,7 @@ Load with: `core/principles.md`, `core/creative-direction.md`, `core/interaction
 
 ```
 step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 2-3 concepts (FP-5)
-   -> recommend one, owner picks (FP-6) -> build -> normal critique loop and full QA (FP-7)
+   -> recommend one, owner picks (FP-6) -> imagery from the subject (FP-9) -> build -> normal critique loop and full QA (FP-7)
 ```
 
 ---
@@ -18,7 +18,7 @@ step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 2-3 co
 
 ## FP-2. Step back: answer the seven questions before you draw anything
 - **What:** Write one line for each:
-  1. **What it is:** the type of piece, the medium, and where and how it is seen (size, distance, time spent on it).
+  1. **What it is:** the type of piece, the medium, and where and how it is seen (size, distance, time spent on it). Design for that real medium and use: a printed poster, a feed post, a board read from the pavement. Don't design for incidental framing, such as how a camera roll, screenshot or chat preview happened to crop the reference. Don't infer constraints from how a reference image was captured (its crop, angle, glare or resolution).
   2. **Who it is for:** the people who use it, and what they already know.
   3. **Its one job:** what someone should do, know or feel afterwards, in one sentence.
   4. **The feeling:** the tone it should carry, in three words or fewer.
@@ -27,12 +27,12 @@ step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 2-3 co
   7. **Success:** how you'll judge it done, tied to its use (e.g. "the date reads from 3 m").
   Mark each line [brief] or [inferred], as in AES-0.
 - **Why:** Rand describes the designer as starting from careful study rather than a ready-made idea. They break the given material down into its parts and restate the problem, which can mean discarding or revising much of what they were given [S163]. Schön calls this problem setting: naming what to attend to and framing the context [S164]. The d.school's "define" step turns findings into a short point of view that later ideas are judged against [S166].
-- **Check:** Is every line filled, with no line describing the old layout? Are lines 3 and 7 specific enough to rule a concept out?
+- **Check:** Is every line filled, with no line describing the old layout? Are lines 3 and 7 specific enough to rule a concept out? Does line 1 name the real medium, not the way the reference was photographed or cropped?
 
 ## FP-3. Check the given facts against each other; never invent
-- **What:** Read the supplied facts as data. Check that dates match weekdays, sums add up, names are spelled the same each time, and URLs and prices agree. A conflict is a question for the owner. Until it is answered, set only what is not in doubt, and say what you held back. A remake adds no new claims, prices, quotes, characters or slogans (CD-1, AES-10).
+- **What:** First transcribe every fact from the original, word for word, before designing anything: names, items, prices, dates, times, contact details, and small print such as "image for reference only" or terms. Then read them as data. Check that dates match weekdays, sums add up, names are spelled the same each time, and URLs and prices agree. Flag claims that contradict each other (an item labelled both "new" and "best seller", a weekday that doesn't match its date) and claims with no source ("No. 1", "award-winning") as owner questions. Disclaimers and legal lines are given facts: keep them. A conflict is a question for the owner. Until it is answered, set only what is not in doubt, and say what you held back. A remake adds no new claims, prices, quotes, characters or slogans (CD-1, AES-10).
 - **Why:** Rand notes that the given material is often inadequate and that the designer's job includes restating it [S163]. Restating it doesn't make inventing it acceptable. An error in a fact costs the owner more than any styling.
-- **Check:** Is there one line per fact checked, with any conflicts listed? Does the remake contain any word or claim that is not in the given facts?
+- **Check:** Is there a transcription of the original, then one line per fact checked, with conflicts and unsourced claims listed as questions? Did every disclaimer survive? Does the remake contain any word or claim that is not in the given facts?
 
 ## FP-4. Write the brief from first principles and get it signed off
 - **What:** Condense FP-2 and FP-3 into 5-8 lines: what it is and where it is seen; who it is for; the one job; the feeling; what must survive; what is free to change; how it will be judged; open questions. Send it as the first message, and send it before any concepts (FLOW-1). "Just fix it" or "just do it" skips the wait but not the brief: state it at the top of the delivery (FLOW-4). Name it up front as a remake, not a polish (FLOW-5).
@@ -65,6 +65,12 @@ step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 2-3 co
 - **What:** Logos, crests, team badges, sponsor marks and the client's own mark are given facts, not styling. They stay in the remake at their official proportions and colours, sourced and placed as in BRAND-4. They are never redrawn, restyled or generated. When a remake uses generated imagery, check it for invented marks (BRAND-8).
 - **Why:** A mark identifies who something comes from. Changing it changes what the piece claims [S170, S171], and brand guides forbid altering one [S172, S173].
 - **Check:** BRAND-4 and BRAND-8 pass on the final render.
+
+## FP-9. Build imagery from what the subject really is, not by re-describing the reference
+- **What:** When a remake needs new imagery (generated, photographed or drawn), start from the subject, not from the old picture. Write down what the subject physically is: its parts, materials, textures, how it is made or served, and how it behaves in light. Gather real references of the subject (photos with known sources), then art-direct: the angle, light, crop and the space the layout needs. Never prompt by describing the old image ("a bowl like the one in this picture"); that carries its artefacts, odd crops and errors into the new one. For food and other real things, run a plausibility check at 2-4× crops (ILL-12) before the image goes into the layout.
+- **Why:** A reference shows one capture of the subject, with its defects. Rebuilding from the subject is the same move as rebuilding the layout from the brief rather than the old layout [S163, S165]. Image generators reproduce what they are told, including the mistakes in a description of a flawed image.
+- **Check:** Is there a subject sheet (what it is, its parts, 2+ real references with sources) and an art-direction line? Does the prompt or shot list describe the subject and the direction, not the old image? Did the ILL-12 crops pass?
+- **Fix:** Rewrite the prompt or shot list from the subject sheet; regenerate or reshoot; reject any candidate that fails ILL-12, however good the composition.
 
 ---
 
