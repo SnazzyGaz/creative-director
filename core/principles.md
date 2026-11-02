@@ -50,6 +50,7 @@ These apply to every kind of visual work. Check them before any module rule. Eac
 - **Check, in place:** Judge each colour where it sits, not as a swatch. The same colour looks different on different grounds (Albers). A warm or cool note is only warm or cool relative to its neighbours.
 - **Fix:** Pick a restricted gamut; keep one accent for the most important thing; pair colour with a second cue (shape, label, icon). For unity, keep hues close and get separation from lightness. For an accent, use a small area of strong colour against a large muted one (Itten's contrast of extent).
 - **Source:** NN/g, *Visual Hierarchy* (limit colours; don't rely on colour alone) [S1]; Gurney, gamut masking [S11]; Albers, *Interaction of Color* [S47]; Itten's seven contrasts [S48]; Schloss & Palmer on colour pairs [S41].
+- **Deeper:** CV-3 (hue alone doesn't separate), CV-4 (peephole test), CV-5 (harmony), CV-6 (chroma budget) in `modules/colour-value/`.
 
 ## CORE-7. Type that reads
 - **What:** Few sizes with clear steps between them, comfortable line length, enough contrast.
@@ -84,7 +85,8 @@ These apply to every kind of visual work. Check them before any module rule. Eac
 - **Why:** An unexplained heavy side looks like an accident. A centred, symmetrical layout is already balanced; an off-centre one with a counterweight is too. Neither is the default: judge by intent.
 - **Check:** Flip the image horizontally (critique-loop test 3). Does one side suddenly feel heavier? Is a small, intense element off to one side balanced by anything?
 - **Fix:** Move the weight toward the centre or the frame's main axes, or add a counterweight (a smaller, darker or more saturated element on the other side). Keep the placement the work chose (centred or off-centre) unless it fights the intent.
-- **Source:** Arnheim, *Art and Visual Perception* (structural skeleton, visual weight) [S70]; Palmer & Guidi, goodness of fit in rectangles (centre and axes are the "good" positions) [S71]; evidence on centring and thirds is weak either way [S43, S44].
+- **Source:** Arnheim, *Art and Visual Perception* (structural skeleton, visual weight) [S70]; Palmer & Guidi, goodness of fit in rectangles (centre and axes are the "good" positions) [S71]; evidence on centring and thirds is weak either way [S43, S44]; Poore's steelyard and the fulcrum and centre-of-mass studies [S183, S235, S237].
+- **Deeper:** COMP-1 (skeleton), COMP-2 (weighing, with `tools/balance.py`), COMP-3 (faces and text are heavy), COMP-12 (tension on purpose) in `modules/composition/`.
 
 ---
 

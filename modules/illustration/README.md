@@ -11,14 +11,14 @@ Format: **What / Why / Check / Fix / Source**. These are strong defaults; a deli
 - **Why:** Equal halves and kissing edges make a picture static or confusing. This rule is about *divisions*. For a single subject there is no default: centred and off-centre are equally valid, so judge placement by the brief's intent (maintainer decision, 2026-11-01).
 - **Check:** Measure where the horizon and main lines fall. Look for tangents: two contours touching, or a contour touching the frame edge. Do the big areas differ clearly in size?
 - **Fix:** Move a halving line to a clearly unequal position (no specific ratio is required). Overlap or separate tangent shapes decisively. Don't move a single subject on or off centre just to obey a rule; move it only if the placement works against the intent.
-- **Source:** NN/g, *5 Principles of Visual Design* (balance) [S2]; Gurney, *Getting a Fresh Eye* [S7]; Bucci, big-medium-small [S79]; evidence on thirds and centring [S43, S44].
+- **Source:** NN/g, *5 Principles of Visual Design* (balance) [S2]; Gurney, *Getting a Fresh Eye* [S7]; Bucci, big-medium-small [S79]; evidence on thirds and centring [S43, S44]. Deeper: COMP-1, COMP-12, COMP-16.
 
 ### ILL-2. One focal point
 - **What:** One area holds the strongest value contrast, the sharpest edges, the most detail and (often) the most saturated colour.
 - **Why:** Competing focal points split attention.
 - **Check:** Blur test: what leads? List where contrast, edge, detail and saturation peak; are they in the same place?
 - **Fix:** Concentrate the peaks; lower the others. Pyle's advice as Gurney relays it: light against light, dark against dark, and black against white only at the centre of interest.
-- **Source:** Gurney, *How Many Values?* [S5]; NN/g squint test [S1].
+- **Source:** Gurney, *How Many Values?* [S5]; NN/g squint test [S1]. Deeper: COMP-3, COMP-8.
 
 ### ILL-3. Shape: clear, varied silhouettes
 - **What:** Main subjects read as a clear silhouette; shapes vary in size and character (not all the same blob).
@@ -33,7 +33,7 @@ Format: **What / Why / Check / Fix / Source**. These are strong defaults; a deli
 - **Why:** Value carries the read; a restricted gamut gives unity and mood.
 - **Check:** Greyscale and posterise to 3-4 levels. Then sample the palette: does it fit inside one gamut shape on a colour wheel, or is it everything everywhere?
 - **Fix:** Re-group values (pick one of Loomis's tonal plans, see `notes.md`). Compress the shadows into a narrow dark range to keep more steps for the lights (Fowkes). Then use a gamut mask to pick a smaller set of colours.
-- **Source:** Gurney, *How Many Values?* [S5]; Gurney, gamut masking posts [S11]; Loomis, *Creative Illustration*, via Gurney's summary [S76]; Fowkes on value grouping [S80].
+- **Source:** Gurney, *How Many Values?* [S5]; Gurney, gamut masking posts [S11]; Loomis, *Creative Illustration*, via Gurney's summary [S76]; Fowkes on value grouping [S80]. Deeper: CV-1, CV-2, CV-5.
 
 ### ILL-5. Edges: hard where you want attention, soft elsewhere
 - **What:** Sharp edges at the focal point and form turns that matter; softer or lost edges in shadow, distance and at the edges of the frame.
@@ -97,6 +97,38 @@ Format: **What / Why / Check / Fix / Source**. These are strong defaults; a deli
   5. **No invented marks** on packaging, plates or garnish (BRAND-8).
 - **Fix:** Regenerate from a subject sheet and real references (FP-9), describing structure ("separate, glossy, curling strands with visible ends") rather than the old picture. Try several candidates and pick the one that passes every crop. Never fix mesh by sharpening or adding grain.
 - **Source:** FP-9; ILL-11; BRAND-8; TD-LIT-1.
+
+### ILL-13. Thumbnail several structures before committing
+- **What:** Before any finished drawing, make at least three small value thumbnails (2-4 values, a few centimetres wide) that differ in *structure*, not just detail: a different armature (for example a steelyard, an S-curve, a tunnel, an L, a triangle or a radiating design), a different camera, or a different value plan. Pick one by comparing them (AES-9).
+- **Why:** Structure is cheap to change at thumbnail size and expensive later. Loomis, Payne and Mateu-Mestre all teach the small value sketch as the place where composition is decided [S76, S210, S209].
+- **Check:** Are there three or more thumbnails? Do they differ in armature or value plan, or are they three versions of the same idea? Does the chosen one read at 120 px?
+- **Fix:** Make the missing thumbnails; force variety by changing one structural choice per thumbnail.
+- **Grade:** Craft wisdom.
+- **Source:** Loomis [S76]; Payne [S210]; Mateu-Mestre [S209]; COMP-13; AES-9.
+
+### ILL-14. Stage in depth: separate planes by value and edge
+- **What:** Organise a scene into clear planes (foreground, middle ground, background, or more), each with its own value range and edge quality, and let them overlap at the places that matter. The focus usually sits in one plane with the strongest contrast.
+- **Why:** Overlap, contrast falling off with distance and edge softness are strong depth cues [S247, S248]. Planes that share one value range merge into a flat picture.
+- **Check:** Posterise to 3-4 levels. Does each plane fall mostly into its own group? Is there an overlap that shows which is in front at each key contact?
+- **Fix:** Push the far plane lighter and lower in contrast (CV-8); darken or sharpen the near plane; add an overlap where two planes only touch (a tangent, ILL-1).
+- **Grade:** Depth cues: well supported. The staging habit: craft.
+- **Source:** O'Shea et al. [S247]; Held et al. [S248]; Mateu-Mestre [S209]; Gurney [S17]; CV-8.
+
+### ILL-15. Frame the focus from inside the picture
+- **What:** Use the picture's own contents to frame the focus: a darker or busier surround, an opening (a doorway, branches, a window), or a gradual darkening toward the corners. The frame must be quieter than the focus and must not pull the eye out at a corner.
+- **Why:** Enclosure helps a region read as figure [S250] and contrast at the focus draws the eye (CORE-3). Poore discusses vignetting and the isolation of the principal object as balance devices [S183].
+- **Check:** Is there a frame device at all? Measure average lightness of the four corners against the focus: does any corner out-contrast the focus? Does any line in the frame lead out of the picture?
+- **Fix:** Darken or calm a loud corner; break a line that leads out; open the frame toward the focus.
+- **Grade:** Craft wisdom, consistent with figure-ground research.
+- **Source:** Poore [S183]; Mateu-Mestre [S209]; Wagemans et al. [S250]; COMP-4.
+
+### ILL-16. Choose the camera for the story, not by default
+- **What:** Decide camera height (low, eye level, high), distance (close, medium, wide) and lens feel (wide, normal, long) for what the moment needs: low and close for power or threat, high and wide for vulnerability or context, eye level for neutrality. Eye-level medium shot is the generic default; choose it on purpose, not by habit.
+- **Why:** Camera choice changes the viewer's relationship to the subject; film and comics teach it as the first storytelling decision [S78, S209, S81].
+- **Check:** Write one line: camera height, distance, lens, and why. If the line is "eye level, medium, normal" with no reason, try at least one other camera in thumbnail.
+- **Fix:** Thumbnail two other cameras (ILL-13) and compare.
+- **Grade:** Craft wisdom.
+- **Source:** Block [S78]; Mateu-Mestre [S209]; McCloud [S81]; TD-PER rules for the construction.
 
 ## Myths and weak claims
 - **Rule of thirds as law:** weak evidence; one study even found centring preferred for single subjects [S43, S44]. Neither is a default here (ILL-1); ILL-1 is about unequal *divisions*, not third points.

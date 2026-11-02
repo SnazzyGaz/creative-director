@@ -78,6 +78,38 @@ Evidence in one line: typeface choice matters less than most people think (serif
 - **Fix:** Pick from the matching theme; pair with a text face from the catalogue's "pairs with" line; then set it carefully (TYPE-2 to TYPE-6). This is a default, not a blocker; the owner of the work can choose otherwise, and a brand guide (BRAND-3) wins over the catalogue.
 - **Source:** Brumberger [S156]; Shaikh, Chaparro & Fox [S157]; Lupton [S54]; Google Fonts Knowledge [S116].
 
+### TYPE-11. Vertical space in measured intervals
+- **What:** Space between lines, paragraphs, headings and blocks comes from one unit (usually the body leading) and its multiples or simple fractions. Space above a heading is larger than below it, so the heading belongs to what follows.
+- **Why:** Bringhurst: add and delete vertical space in measured intervals [S212]. Consistent spacing reads as order (CORE-9); the heading rule is proximity (CORE-4).
+- **Check:** List the vertical gaps (in px or pt). Are they multiples or simple fractions of the leading? Is each heading closer to its own text than to the previous block?
+- **Fix:** Round gaps to the unit; move space from below headings to above them.
+- **Grade:** Craft wisdom, supported by grouping research for the heading rule.
+- **Source:** Bringhurst, 2.2.2 [S212]; Butterick [S10]; CORE-4; TYPE-5.
+
+### TYPE-12. Paragraphs: one signal, not two
+- **What:** Mark new paragraphs with an indent *or* a space between them, not both. With indents, set the first paragraph after a heading flush left, and indent the rest by at least one en (about half the type size); one em is common.
+- **Why:** Both signals together over-mark the break and waste space. A first-paragraph indent marks a break where none is needed [S212].
+- **Check:** Are paragraphs both indented and spaced? Is the first paragraph after a heading indented?
+- **Fix:** Choose one signal; remove the first-paragraph indent.
+- **Grade:** Craft wisdom (typographic convention).
+- **Source:** Bringhurst, 2.3.1-2.3.2 [S212]; Butterick [S53].
+
+### TYPE-13. Rag and hyphenation: an even edge without holes
+- **What:** On narrow measures, set ragged right; justify only with good hyphenation and spacing, so there are no rivers or wide word gaps. A ragged edge should look like a gentle, uneven ripple, not a staircase or a big notch. Hyphenation: at least two letters before the break and three after, and no more than three hyphenated lines in a row.
+- **Why:** Justified narrow columns force uneven word spaces; Bringhurst gives the hyphenation limits [S212].
+- **Check:** In justified text, squint for white rivers. In ragged text, look at the right edge: any line much shorter than its neighbours, or a regular pattern of short-long? Count consecutive hyphens.
+- **Fix:** Switch to ragged right; turn on hyphenation with sensible limits; rewrite or rebreak the worst lines in display text by hand.
+- **Grade:** Craft wisdom.
+- **Source:** Bringhurst, 2.1.3, 2.4.1, 2.4.3 [S212]; Butterick [S53]; TYPE-8.
+
+### TYPE-14. Optical adjustments in display type
+- **What:** At display sizes, adjust by eye where the geometry is right but the look is wrong: hang quotation marks and bullets into the margin so the text edge stays straight; nudge round or pointed letters (O, A, V) past the line so they look aligned; space capitals and small caps a little wider; use titling (lining) figures with capitals and text (old-style) figures in running text where the font has them.
+- **Why:** Round and pointed shapes look smaller than square ones of the same measured size, which is why typefaces are drawn with overshoot; the same correction applies to alignment when type is set large. Bringhurst gives the conventions for capitals and figures [S212]; Gress covers optical corrections in letter design and spacing for even tone [S205].
+- **Check:** Zoom to the left edge of headlines and pull quotes: does punctuation or an O make the edge look indented? Do caps look cramped?
+- **Fix:** Hang punctuation; nudge round letters; letterspace caps (TYPE-6); switch figure style.
+- **Grade:** Craft wisdom (well established in type design).
+- **Source:** Bringhurst, 2.1.6, 3.2.1 [S212]; Gress [S205]; TYPE-6; TYPE-8.
+
 ---
 
 ## Myths

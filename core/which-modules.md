@@ -4,10 +4,12 @@ Always load `core/`. Then add only what the task needs. Loading everything waste
 
 | Task | Load |
 |---|---|
-| Drawing or painting from imagination, concept art, scene | technical-drawing, illustration |
+| Drawing or painting from imagination, concept art, scene | technical-drawing, illustration, composition (+ colour-value for value and palette) |
+| Any picture, poster or page where balance, focus, unity, space or beauty is the question ("it feels off", "make it more beautiful") | composition (+ colour-value) |
+| Choosing a palette, value plan or colour scheme; colour that looks wrong in place | colour-value |
 | Any human or humanoid figure, face, hand or animal (drawn, 3D or generated), even small or partial | character (anatomy pass CHAR-9 required), technical-drawing (+ illustration) |
 | Checking a drawing for construction errors only | technical-drawing |
-| Poster, cover, header image, social graphic, thumbnail, link preview | layout, typography (+ illustration for the image; brand if it carries a name) |
+| Poster, cover, header image, social graphic, thumbnail, link preview | layout, typography, composition (+ illustration for the image; colour-value for the palette; brand if it carries a name) |
 | Slide deck, print piece (flyer, book cover, packaging) | layout, typography (+ brand) |
 | Anything with words where type is the point (wordmark, editorial page, type-led poster) | typography (+ layout or web-ui) |
 | Work for a named brand or product, or with a brand guide | brand (+ the medium's module). No brand input at all: run `core/brand-intake.md` at step 0 |
@@ -31,43 +33,46 @@ Always load `core/`. Then add only what the task needs. Loading everything waste
 5. Does it show a person, a hand or an animal? -> character, and run the anatomy pass (CHAR-9) before hand-off.
 6. Is it a fixed frame (social post, thumbnail, poster, slide, print)? -> layout. Does it carry words? -> typography.
 7. Does it carry a name or logo? -> brand. No brand input in the brief? -> `core/brand-intake.md` first.
-8. Is it correct but flat, or are you choosing between versions? -> aesthetic-critique.
+8. Is it correct but flat, or are you choosing between versions? -> aesthetic-critique. Does it feel unbalanced, cluttered, scattered or lifeless? -> composition. Is the palette or value plan the problem? -> colour-value.
 9. Did the owner ask for it from scratch, a redo or a rejig? -> `core/first-principles.md` before anything else. Any logo, crest or sponsor mark in it, or generated imagery with jerseys, bottles or signs? -> brand (BRAND-4, BRAND-8).
 
 ## Order of checks when several modules apply
 
 1. Core hierarchy and value (does it read at all?)
 2. Technical errors (perspective, proportion, anatomy pass, light, broken flows, failing contrast) - these are ERRORs.
-3. Composition and layout.
+3. Composition and layout (`composition/` COMP-1 to 18, `colour-value/` CV-1 to 9).
 4. Surface: edges, texture, micro-spacing, polish.
 
 ## Token cost per module
 
-Approximate: counted with tiktoken's `cl100k_base` encoding (OpenAI's GPT-4 tokenizer) on 2 Nov 2026 (v0.4.3; every file recounted after LAY-10, FP-9, ILL-12 and the other v0.4.3 additions). Other models tokenise differently, so expect roughly ±15%.
+Approximate: counted with tiktoken's `cl100k_base` encoding (OpenAI's GPT-4 tokenizer) on 2 Nov 2026 (v0.5.0; every file recounted after the composition and colour-value modules and the other v0.5.0 additions). Other models tokenise differently, so expect roughly ±15%.
 
 | File or set | Tokens |
 |---|---|
-| `AGENTS.md` (entry point) | 1,083 |
-| `core/` (all nine files) | 17,525 |
-| `core/principles.md` | 2,330 |
+| `AGENTS.md` (entry point) | 1,157 |
+| `core/` (all nine files) | 19,229 |
+| `core/principles.md` | 2,457 |
 | `core/critique-loop.md` | 2,741 |
 | `core/interaction-flow.md` | 2,869 |
-| `core/which-modules.md` | 1,572 |
-| `core/evidence.md` | 1,260 |
+| `core/which-modules.md` | 1,767 |
+| `core/evidence.md` | 2,642 |
 | `core/creative-direction.md` | 1,132 |
 | `core/critique-template.md` | 2,141 |
 | `core/brand-intake.md` (only when the brief has no brand input) | 698 |
 | `core/first-principles.md` (only for a remake from scratch) | 2,782 |
+| `modules/composition/` | 5,784 |
+| `modules/colour-value/` | 2,887 |
 | `modules/technical-drawing/` | 3,010 |
 | `modules/web-ui/` (+ notes 437) | 2,658 |
-| `modules/illustration/` (+ notes 484) | 3,058 |
-| `modules/layout/` | 3,229 |
-| `modules/typography/` (+ `fonts/CATALOGUE.md` when picking type, about 7,600) | 2,868 |
+| `modules/illustration/` (+ notes 484) | 4,063 |
+| `modules/layout/` | 4,573 |
+| `modules/typography/` (+ `fonts/CATALOGUE.md` when picking type, about 7,600) | 3,782 |
 | `modules/character/` | 3,512 |
 | `modules/ux/` | 1,828 |
 | `modules/3d/` | 1,815 |
-| `modules/aesthetic-critique/` | 2,466 |
+| `modules/aesthetic-critique/` | 2,925 |
 | `modules/brand/` | 2,798 |
-| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 2,397 |
+| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 2,663 |
+| `BIBLIOGRAPHY.md` (reading list; not needed for a critique) | 3,704 |
 
-Typical loads (core without brand intake or first-principles is about 14,000): core + web-ui + ux is about 18,500 tokens; core + one module about 15,900-17,600; a social card (core + layout + typography) about 20,100; a figure (core + character + technical-drawing + illustration) about 23,600. Adding aesthetic-critique costs about 2,450 more (a poster with it: about 22,600). A poster remake from scratch (core with first-principles + layout + typography + aesthetic-critique) is about 25,400. If that is too much, use the lite file.
+Typical loads (core without brand intake or first-principles is about 15,700): core + web-ui + ux is about 20,200 tokens; core + one module about 17,600-21,500; a social card (core + layout + typography) about 24,100; the same with composition about 29,900; a figure (core + character + technical-drawing + illustration) about 26,300. Adding aesthetic-critique costs about 2,900 more (a poster with it: about 27,000). A poster remake from scratch (core with first-principles + layout + typography + aesthetic-critique) is about 29,800. For a composition question alone, core + composition + colour-value is about 24,400. If that is too much, use the lite file.

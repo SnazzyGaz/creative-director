@@ -56,8 +56,11 @@ Only these block. Everything else is an improvement.
 - **Illustration:** one focal point (ILL-2); clear silhouettes (ILL-3); plan values, then palette (ILL-4); hard edges only where you want attention (ILL-5); avoid the generic AI look: rainbow glow, sparkles, light from everywhere (ILL-11).
 - **Web UI:** one type scale (UI-1); spacing from a scale (UI-3); a grid and one obvious primary action (UI-4); consistent components with visible states (UI-5); avoid generic AI tells such as gradient blobs, emoji icons and three identical cards (UI-7).
 - **UX:** errors prevented, then explained in place with the input kept (UX-3); plain language (UX-6); labels stay visible (UX-7).
+- **Composition:** place things clearly on or clearly off the centre and axes, never just off (COMP-1); weigh it, then mirror-flip (COMP-2); faces and words are heavy (COMP-3); room in front of anything that looks or moves (COMP-5); one dominant per attribute (COMP-8); repeat families, vary members (COMP-9); 3-5 big shapes at thumbnail (COMP-13); full symmetry or clear asymmetry (COMP-17).
+- **Colour and value:** check every important edge in greyscale (CV-3); judge colour in place (CV-4); hold one of hue, lightness or chroma steady (CV-5); strongest colour in the smallest area at the focus (CV-6); survives colour-vision deficiency (CV-9).
+- **Pages:** one axis (LAY-11); text over images checked on the worst pixels (LAY-15); paragraphs marked one way (TYPE-12).
 - **3D:** physically plausible materials (3D-6); a view transform that doesn't clip (AgX in current Blender, not Standard; 3D-7).
 
 ## Myths: don't use as reasons
 
-The golden ratio, the rule of thirds as a law, and fixed colour-emotion claims. Cite a rule, not a myth.
+The golden ratio (as a source of beauty), the rule of thirds as a law, fixed colour-emotion claims, leading lines that "force" the eye, Z/F layout templates, colour-wheel schemes as proof of harmony, and the rule of odds. Cite a rule, not a myth. Taste in art and design is far less shared than taste in faces or landscapes: taste calls go to the owner of the work (AES-12).

@@ -95,7 +95,47 @@ Why it matters: most social images are first seen as a small tile in a moving fe
   3. **After any image change:** re-run 1 and 2 on the full piece and write one line on what moved.
   `tools/whitespace.py IMAGE [--intended Y0-Y1]` does 1 and 2 and draws a squint sheet; treat its PASS as "review by eye", not as approval.
 - **Fix:** Pull each group together, then share out the space between groups evenly; enlarge or regroup the content that sits next to a dead zone (put small items on one line, align them to a shared centre line, let the main element fill its field); move or re-crop the image so the subject sits one gap from the type; or name the space as deliberate in the critique and keep it.
-- **Source:** Wertheimer [S175]; Palmer [S176]; NN/g on proximity [S177]; White [S178]; LAY-3.
+- **Source:** Wertheimer [S175]; Palmer [S176]; NN/g on proximity [S177]; White [S178]; LAY-3. Space as a designed shape: COMP-7.
+
+### LAY-11. Commit to one axis: symmetric or asymmetric
+- **What:** Decide whether the layout is built on a central axis (centred, symmetric, formal) or on edges (flush left or right, asymmetric, active), and keep each group consistent. Mixing centred and flush blocks at random gives many weak alignment lines.
+- **Why:** Tschichold's later work defended the centred classical page; his earlier *New Typography* argued for asymmetry; both are coherent systems [S211]. What fails is the unsystematic mix (CORE-5).
+- **Check:** List the alignment axes in use (left edges, right edges, centre lines). More than three in one group, or a centred heading over a flush-left block with no reason?
+- **Fix:** Pick one axis per group; centre only short, symmetrical material; snap the rest to the grid (LAY-1).
+- **Grade:** Craft wisdom.
+- **Source:** Tschichold [S211]; Müller-Brockmann [S60]; Lupton [S54]; CORE-5; COMP-17.
+
+### LAY-12. Margins from a system, with the optical centre a little high
+- **What:** Derive margins from one rule (a single unit, a ratio, or a classic book canon) and keep them consistent across pages. When a block is centred vertically, place it slightly above the true centre, and make the bottom margin at least as large as the top; equal top and bottom space looks bottom-heavy.
+- **Why:** Book canons (the Van de Graaf construction, Tschichold's 2:3 page with margins of about 2:3:4:6) give consistent, generous margins [S211]. The "optical centre" sitting above the true centre is a long-standing printing rule: Gress (1917) shows a word at the exact centre looking low and puts the main line well above it, about a third of the way down [S205]. Studies of vertical attention bias give the idea only a small perceptual basis [S264]; his pin-and-card "physics" demonstration does not hold up.
+- **Check:** Measure the four margins. Do they follow one rule? For a vertically centred block, is it at the true centre (often reads low) or a little above (a few percent of the page height)?
+- **Fix:** Move the block up slightly; enlarge the bottom margin; set margins from the system, not by eye per page.
+- **Grade:** Canons: traditional craft. Optical centre: craft wisdom with a small perceptual basis. "Margins must follow the golden ratio": myth (COMP-16).
+- **Source:** Tschichold and the page canons [S211]; Gress on the optical centre [S205]; Drain & Reuter-Lorenz [S264]; LAY-2; COMP-16.
+
+### LAY-13. Group with space and alignment first; add boxes and rules last
+- **What:** Make groups with proximity and alignment before reaching for borders, background panels or divider lines. Add a box only where space can't do the job (dense data, mixed content).
+- **Why:** A shared boundary is a strong grouping cue that can override proximity [S176], so unnecessary boxes create false groups and clutter. Proximity alone usually suffices [S177, S250].
+- **Check:** For each box, rule or panel, imagine it removed: does the grouping still read from space? If yes, the box is decoration.
+- **Fix:** Remove the box and widen the gap between groups (LAY-10); keep boxes for real containers.
+- **Grade:** Well supported (grouping principles).
+- **Source:** Palmer [S176]; NN/g [S177]; Wagemans et al. [S250]; CORE-4; LAY-10.
+
+### LAY-14. Reading patterns are effects to design for, not templates
+- **What:** Design for scanning: clear headings, front-loaded words, short groups, and a strong visual hierarchy. Don't place content to fit a "Z-pattern", "F-pattern" or "Gutenberg diagram" template.
+- **Why:** Eye-tracking shows the F-shaped scan is what people do with *unformatted* walls of text, and good formatting prevents it [S259]. The other templates are teaching sketches with little direct test.
+- **Check:** At blur and at thumbnail, do headings and key words stand out in the order you want? Do the first two words of each line or item carry meaning?
+- **Fix:** Add headings, bold key phrases sparingly, front-load words, break text into groups. Use hierarchy (CORE-1), not a template.
+- **Grade:** F-pattern as a symptom: well supported. Z, F and Gutenberg templates as layout laws: contested.
+- **Source:** Pernice, NN/g [S259]; CORE-1; LAY-3.
+
+### LAY-15. Text over images needs a quiet zone and a contrast check on the worst pixels (MUST-BE-RIGHT where the text carries the message)
+- **What:** Place text on an image only over a calm, even area, or add a scrim, overlay or panel. Check contrast against the *worst* part of the background behind the text, not its average.
+- **Why:** Busy, uneven backgrounds make text hard to read and can fail contrast at some letters while passing on average [S260]. W3C lists text over background images that fails contrast as a common failure [S260].
+- **Check:** Crop the region behind each line of text. Sample its lightest and darkest pixels (for light text, the lightest pixel matters most; for dark text, the darkest) and run `tools/contrast.py` against the text colour: ≥ 4.5:1 (≥ 3:1 for large text). Squint: is the area behind the text busy (strong edges, many tones)?
+- **Fix:** Move the text to the calm area, re-crop the image to make one, add a scrim or gradient, or put the text on a solid panel.
+- **Grade:** Well supported (WCAG; usability research).
+- **Source:** NN/g on text over images and W3C failure F83 [S260]; WCAG [S3]; UI-6; LAY-6.
 
 ---
 

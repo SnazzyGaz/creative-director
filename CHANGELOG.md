@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.5.0 (2 November 2026)
+
+A compendium of design taste: composition, balance, colour and beauty, from the classic books, East Asian aesthetics and empirical aesthetics. Every new rule carries an evidence grade.
+
+- **Evidence grades.** A four-level legend in `core/evidence.md`: well supported, partly supported, craft wisdom, contested / myth. Twelve new findings rows and a new myths block (golden ratio in depth, leading lines, Z/F/Gutenberg templates, rule of odds, right-side heaviness, colour-wheel schemes, Goethe area ratios, complementaries as most harmonious, Birkhoff's measure, fractal authentication, golden margins).
+- **New `modules/composition/` (COMP-1 to COMP-18).** Skeleton and the near-miss, steelyard weighing, faces and text as weight, the eye path, lead room, figure and ground, empty space (ma), dominance, unity with variety, transition, rhythm, tension, big masses, detail at three distances, order for complexity, proportion families, symmetry and direction. It also has the studio viewing tests (thumbnail, squint, mirror, upside down, distance, quadrant lines).
+- **New `modules/colour-value/` (CV-1 to CV-9).** Value key and range, notan in two and three values, the equal-lightness trap, the peephole test, harmony by a shared dimension, chroma budget, one colour of light, distance and contrast, colour-vision deficiency. It deepens CORE-6, ILL-4 and ILL-9 rather than repeating them.
+- **Added to existing modules.** ILL-13 to ILL-16 (thumbnail structures, depth planes, inner framing, camera for the story); LAY-11 to LAY-15 (one axis, margins from a system, space before boxes, reading patterns as effects, text over images); TYPE-11 to TYPE-14 (vertical rhythm, paragraphs, rag and hyphenation, optical adjustments); AES-11 (most advanced yet acceptable) and AES-12 (shared taste is low for art, so the owner of the work decides).
+- **New `tools/balance.py`.** It weighs each pixel by its contrast with the background and reports the visual centre of mass against the frame centre, with a heatmap sheet. It never fails, because off-centre can be intended. Tests: `tools/tests/balance_cases.py`, 6/6.
+- **New `BIBLIOGRAPHY.md`.** An annotated reading list with links to public-domain full texts. Sources S181-S264 in `SOURCES.md`: 27 public-domain classics, 9 modern references and 48 empirical papers.
+- Cross-links from CORE-6, CORE-11, ILL-1, ILL-2, ILL-4, LAY-10 and AES-1 to the new rules. `which-modules.md` gains composition and colour-value rows, and the token counts have been recounted. `AGENTS.md`, `SKILL.md`, `README.md`, `llms.txt`, `lite/` and `tools/README.md` are updated.
+
 ## v0.4.3 (2 November 2026)
 
 - **Whitespace is distributed on purpose (new LAY-10).** Every empty area must be a margin, a gap between groups, or named focal space.

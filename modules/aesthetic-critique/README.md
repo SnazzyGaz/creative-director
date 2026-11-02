@@ -33,7 +33,7 @@ A deliberate break that works is recorded as a deliberate exception, not fixed.
 - **What:** How the eye travels: entry point, path, pauses, exit. Repetition with variation in shape, interval and direction gives rhythm; even spacing everywhere gives monotony.
 - **Check:** Trace the first three places the eye lands (blur test). Do intervals between repeated elements vary? Is there a rest area?
 - **Fix:** Vary one interval or size; open one quiet area; point a directional line at the focal area.
-- **See:** ILL-1, LAY-3, CORE-11, ILL-8.
+- **See:** ILL-1, LAY-3, CORE-11, ILL-8; COMP-4 (eye path), COMP-9 (unity with variety), COMP-11 (rhythm).
 
 ### AES-2. Emphasis
 - **What:** What wins attention, and by how much. Too little difference reads as timid; everything emphasised reads as noise.
@@ -97,6 +97,20 @@ A deliberate break that works is recorded as a deliberate exception, not fixed.
 - **Check:** After each change re-run the measured checks: contrast, type size, collisions, safe area, whitespace distribution (LAY-10), anatomy, and the light direction (TD-LIT-1) if the change touched the light. An image swap, re-crop or regenerate is a change to the **whole** layout: re-review every group's position and the space around it, not only the new image. A change that improves mood but breaks a blocker is a regression, not a win. Then compare new against old and list every visible thing that is in the new version but not in the brief or the old version (a bird, sparkles, a beam of light, a sign). Each one either has a brief line or sign-off behind it, or it comes out.
 - **Fix:** Revert what regressed or was added without leave; refine what helped partly; stop when the next change is a coin-flip.
 - **See:** `core/critique-loop.md` (round limits), CD-6.
+
+### AES-11. Novel in one or two dimensions, familiar in the rest
+- **What:** Aim for "most advanced, yet acceptable": make one or two aspects fresh (an unusual palette, crop or shape language) and keep the rest typical for the genre and readable.
+- **Check:** Name what is new. Name what is familiar. If nothing is new, it is generic (AES-6, ILL-11). If everything is new, the viewer has nothing to hold.
+- **Fix:** Pull back the novelty to one or two dimensions; or add one fresh choice to a safe piece.
+- **Grade:** Well supported. Typicality and novelty both raise appeal and work together [S232]; prototypical forms are easier to process and liked more [S233, S37]; repeated exposure raises liking [S257].
+- **See:** Hekkert et al. [S232]; Winkielman et al. [S233]; Bornstein [S257]; AES-6.
+
+### AES-12. Taste in art and design is less shared than you think: ask the owner
+- **What:** Treat preferences about style, mood and beauty in designed and artistic work as personal unless evidence says otherwise. Agreement between people is high for faces and landscapes but low for art and architecture.
+- **Check:** Is a critique point resting on "people like X"? Is it a measured finding (`core/evidence.md`) or a taste call?
+- **Fix:** Keep measured findings and craft defaults; put taste calls to the owner of the work as a choice between options, with the trade-off stated.
+- **Grade:** Well supported. In one large study, shared taste explained about 66% of preference for faces and about 29% for natural landscapes, but only about 11-12% for architecture and 8% for artworks [S251]. Models of aesthetic experience give a large role to the viewer's knowledge and context [S258].
+- **See:** Vessel et al. [S251]; Leder et al.; Leder & Nadal [S258]; AES-0; AES-9.
 
 ---
 

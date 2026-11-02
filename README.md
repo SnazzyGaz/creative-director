@@ -62,7 +62,7 @@ Each rule has an ID (`CORE-2`, `TD-PER-1`, `UI-6`) and the same parts: what, why
 
 ### Correctness and quality
 
-Passing the rules makes work correct, not necessarily good. The [aesthetic layer](modules/aesthetic-critique/) adds an intent model, side-by-side verdicts instead of scores, and one-or-two-change revisions that re-run the measured checks and may restyle but not add story content. Examples: the [reference set](examples/aesthetic-benchmark/reference-set/) (12 pieces, self-made and self-judged, so a showcase, not evidence); and [one worked example per domain](examples/aesthetic-across-domains/): illustration, technical drawing, web page, app flow, poster, 3D product shot and data chart, each with its critique and an after with every point applied.
+Passing the rules makes work correct, not necessarily good. For composition and beauty, [`modules/composition/`](modules/composition/) and [`modules/colour-value/`](modules/colour-value/) gather what the classic design books, East Asian aesthetics and a century of empirical aesthetics agree on, with every rule graded *well supported*, *partly supported*, *craft wisdom* or *myth* ([annotated bibliography](BIBLIOGRAPHY.md)). The [aesthetic layer](modules/aesthetic-critique/) adds an intent model, side-by-side verdicts instead of scores, and one-or-two-change revisions that re-run the measured checks and may restyle but not add story content. Examples: the [reference set](examples/aesthetic-benchmark/reference-set/) (12 pieces, self-made and self-judged, so a showcase, not evidence); and [one worked example per domain](examples/aesthetic-across-domains/): illustration, technical drawing, web page, app flow, poster, 3D product shot and data chart, each with its critique and an after with every point applied.
 
 <details><summary>More on the aesthetic layer</summary>
 
@@ -93,7 +93,7 @@ Always send the actual output (image, screenshot at real size, URL or renders), 
 - **Recommended setup:** Playwright or headless Chrome for UI (`tools/shot.sh` uses Chrome), Blender for 3D (plus [model-qa](https://github.com/SnazzyGaz/model-qa) for build checks), and Python 3 with Pillow and NumPy for the `tools/` scripts (look tests, contrast, vanishing points, ellipses, layout grid, 3D intersections; `pip install -r tools/requirements.txt`).
 - **Without vision** you only get a rules-only review of code or a description. It can still catch contrast, spacing and flow problems in code, but it can't judge how the work looks, and it is much weaker.
 
-Context cost: about 12,600 tokens for `core/` plus 1,700-3,500 per module ([table](core/which-modules.md#token-cost-per-module)). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 1,900 tokens.
+Context cost: about 15,700 tokens for the everyday `core/` files (19,200 with brand intake and first-principles) plus 1,800-5,800 per module ([table](core/which-modules.md#token-cost-per-module)). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 2,700 tokens.
 
 ## What's inside
 
@@ -101,7 +101,8 @@ Context cost: about 12,600 tokens for `core/` plus 1,700-3,500 per module ([tabl
 core/       principles, interaction flow, creative direction, brand intake, evidence, the loop, critique template, module picker
 modules/    technical-drawing · illustration · character · web-ui · ux · 3d
             typography · layout (social, posters, slides, print) · brand · aesthetic-critique
-tools/      look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, 3D intersections, before/after
+            composition (balance, focus, unity, space, beauty) · colour-value
+tools/      look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, 3D intersections, before/after
 examples/   stress tests, round by round, including this README's own critique
 fonts/      62 free font families in 18 themes, catalogue and specimen sheets
 lite/       the loop, core rules and blockers in one short file

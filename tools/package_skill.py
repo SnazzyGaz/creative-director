@@ -18,7 +18,7 @@ DESC = ("Judge and improve visual work (generated images, illustrations, technic
         "\"+ creative director\", \"consult creative director\" or \"creative director: direct this\", or asks to redo, rejig or reimagine "
         "a piece from scratch (step back, brief from first principles, 2-3 concepts, then build).")
 DIRS = ["core", "modules", "lite", "tools"]
-FILES = ["SOURCES.md", "LICENSE", "fonts/README.md", "fonts/CATALOGUE.md", "fonts/catalogue.json"]   # font catalogue only; font files stay in the repo
+FILES = ["SOURCES.md", "BIBLIOGRAPHY.md", "LICENSE", "fonts/README.md", "fonts/CATALOGUE.md", "fonts/catalogue.json"]   # font catalogue only; font files stay in the repo
 SKIP_EXT = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg", ".blend", ".pyc"}
 SKIP_PARTS = {"__pycache__", ".pytest_cache"}
 
@@ -44,7 +44,7 @@ def skill_md():
              "\nAlways work from the actual output (image, screenshot at real size, URL or renders), never a description.\n")
     tail = (f"\n## Files in this skill\n`core/` (always), `modules/<name>/README.md` (as `core/which-modules.md` says), "
             f"`lite/CREATIVE-DIRECTOR-LITE.md` (short version for small contexts), `tools/` (optional Python: Pillow, NumPy), "
-            f"`fonts/CATALOGUE.md` (theme catalogue of free fonts; the font files are in the repo's `fonts/`), `SOURCES.md`. Worked examples and images live in the repo, not here: {REPO}/tree/main/examples\n")
+            f"`fonts/CATALOGUE.md` (theme catalogue of free fonts; the font files are in the repo's `fonts/`), `SOURCES.md`, `BIBLIOGRAPHY.md`. Worked examples and images live in the repo, not here: {REPO}/tree/main/examples\n")
     return f"---\nname: {NAME}\ndescription: '{DESC}'\n---\n\n# Creative director\n\n{body.rstrip()}\n{modes}{tail}"
 
 def main():
