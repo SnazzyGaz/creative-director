@@ -82,6 +82,7 @@ An annotated reading list behind `modules/composition/`, `modules/colour-value/`
 - **Overviews:** Palmer, Schloss & Sammartino 2013 [S217]; Leder et al. 2004 and Leder & Nadal 2014 [S258]; Wagemans et al. 2012 on Gestalt [S250].
 - **Golden ratio:** Green 1995 [S220]; Höge 1997 [S221]; Markowsky 1992 [S222]; Falbo 2005 [S223]; Fischler 1981 [S224]; McManus et al. 2010 [S38].
 - **Balance:** McManus et al. 1985 [S235]; Locher et al. 1996 and 1998 [S236, S263]; Wilson & Chatterjee 2005 and Hübner & Fillinger 2016 [S237]; Gershoni & Hochstein 2011 [S238].
+- **Optical correction:** Material Design icon keylines [S265].
 - **Framing and direction:** Palmer et al. 2008 [S218]; Sammartino & Palmer 2012 [S219]; Chokron & De Agostini 2000 [S254].
 - **Attention and gaze:** Cerf et al. 2009 [S239]; Friesen & Kingstone 1998 [S240]; DeAngelus & Pelz 2009 [S241]; Massaro et al. 2012 [S243].
 - **Complexity, order, novelty:** Nadal et al. 2010 [S230]; Van Geert & Wagemans 2020 [S231]; Hekkert et al. 2003 [S232]; Reber et al. 2004 [S37].

@@ -30,6 +30,7 @@ Neutral and factual. Every point cites a rule ID. No praise padding, no harshnes
 - Flip/mirror: <deviations observed>
 - Greyscale: <number of value groups; subject/ground separation>
 - Crop/edges: <tangents, frame contacts, empty regions>
+- Sitting right (COMP-19..25): <flags from rotate 180°, cover half, edge and alignment sweep: each "intended: keep (why)" or "fix"; nothing centred or symmetrised just to clear a flag>
 - Whitespace (LAY-10): <largest intended inter-group gap; any band or 2-D dead zone over ~1.5× it (`tools/whitespace.py`), each marked deliberate or fixed; after an image swap: whole layout re-reviewed, what moved>
 - Viewing distance (LAY-7, signage only): <print size; each key line's cap height in mm and "reads to X m" (≈ distance ÷ 250)>
 - Set (BRAND-6, series only): <logo size/position, margins, palette and type logic shared: yes / list differences>
@@ -78,7 +79,7 @@ Also possible (not needed): <one line, or omit>. OK to go ahead?
 ### Delivery checklist (after the fixes; FLOW-3). Lead with the result, then:
 1. <point> (<RULE-ID>): done / not done, <evidence or reason>.
 2. ...
-QA re-run on the final render: light (TD-LIT-1) <pass/fail> · anatomy (CHAR-9) <pass/fail/n.a.> · type size and contrast (TYPE-3, UI-6) <pass/fail> · whitespace (LAY-10) <pass / deliberate space named / fail> · marks (BRAND-4, BRAND-8) <official, source, overlay check / plain-text name / placeholder / none / invented: fail> · real-subject crops (ILL-12) <pass/fail/n.a.> · facts (FP-3) <transcribed, questions open: list> · additions (AES-10) <none/list>.
+QA re-run on the final render: light (TD-LIT-1) <pass/fail> · anatomy (CHAR-9) <pass/fail/n.a.> · type size and contrast (TYPE-3, UI-6) <pass/fail> · whitespace (LAY-10) <pass / deliberate space named / fail> · sitting right (COMP-25) <no flags / flags answered / open: list> · marks (BRAND-4, BRAND-8) <official, source, overlay check / plain-text name / placeholder / none / invented: fail> · real-subject crops (ILL-12) <pass/fail/n.a.> · facts (FP-3) <transcribed, questions open: list> · additions (AES-10) <none/list>.
 ```
 
 ## Worked example

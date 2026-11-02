@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.5.1 (2 November 2026)
+
+- **Sitting right: the broken-balance pass (new COMP-19 to COMP-25).** A pre-delivery judgement call that asks "does anything sit weirdly?". It flags only balance and placement that read as accidental, unresolved or lopsided by mistake.
+  - Asymmetric, off-centre, flush-left and tension-driven work is stated to be valid and often better. Balance means equilibrium of weights, not symmetry. Every check is a flag that asks "intended?", never an auto-fix, and each rule says: never centre or symmetrise by default to satisfy this check. Broken balance is fixed with a counterweight or a firmer asymmetry.
+  - COMP-19: broken balance versus asymmetry.
+  - COMP-20: make intent read (commit, avoid near-misses).
+  - COMP-21: weight factors and the lever (Poore, Ross, Dow, Arnheim, McManus, Hübner & Fillinger).
+  - COMP-22: top-heavy and bottom-heavy, the slightly high visual centre, the inward bias and the ecological vertical bias (Palmer et al., Sammartino & Palmer).
+  - COMP-23: active versus dead space (strengthens LAY-10).
+  - COMP-24: the edge and alignment sweep (floating, crammed, tangents, near-alignments, uneven gutters, optical versus mathematical centring, overshoot).
+  - COMP-25: run the pass and let the owner decide.
+  - Tests table: squint, thumbnail at 5%, mirror, rotate 180°, cover half, the gap measure, `balance.py` and the edge sweep.
+- COMP-2 and CORE-11 fixes reordered: a counterweight or a firmer asymmetry first, and moving to the centre is rarely the fix. `balance.py` readings reworded ("weights near equilibrium", "a flag, not a fault").
+- The pass is added to the critique loop, the critique template, the delivery QA line, `lite/`, `AGENTS.md`, `SKILL.md`, `README.md` and `which-modules.md`. LAY-10 now cross-links COMP-23 to COMP-25. There is a new myth line, "balance means symmetry or centring". New source S265 (Material Design icon keylines).
+
 ## v0.5.0 (2 November 2026)
 
 A compendium of design taste: composition, balance, colour and beauty, from the classic books, East Asian aesthetics and empirical aesthetics. Every new rule carries an evidence grade.

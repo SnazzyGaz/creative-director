@@ -12,6 +12,8 @@ Format: **What / Why / Check / Fix / Grade / Source**. Nothing here is MUST-BE-R
 
 The older books cited here are public domain and linked in full in `BIBLIOGRAPHY.md`. Where a modern book is in copyright, the rule paraphrases it from secondary sources.
 
+**Pre-delivery pass:** the section *Sitting right* (COMP-19 to COMP-25) is a short check for *broken* balance and odd placement. It flags what looks accidental and asks "intended?". It never pushes work toward symmetry or centring.
+
 **Viewing tests used below** (all quick, all from the studio tradition; Poore lists most of them in 1903 [S183]):
 - **Thumbnail:** view at about 5 cm wide or 120 px.
 - **Squint / blur:** half-close the eyes or blur until detail goes; only masses remain (`tools/look.py`).
@@ -37,7 +39,7 @@ The older books cited here are public domain and linked in full in `BIBLIOGRAPHY
   1. Run `tools/balance.py IMAGE --sheet out.png`. It reports the weighted centroid's offset and the left/right and top/bottom weight ratios (pixels only).
   2. Mirror-flip the image. Does it still feel settled? If one version feels like it is sliding off the page, weight is lopsided.
   3. Add by eye the weights pixels can't see (COMP-3).
-- **Fix:** Move the heavy thing toward the centre, or add a small counterweight far out on the light side (the steelyard). Darken, saturate or isolate a small accent rather than adding a big object. If the imbalance is the point (COMP-12), keep it and say so.
+- **Fix:** First ask whether the imbalance is the point (COMP-12); if so, keep it and say so. Otherwise add a small counterweight far out on the light side (the steelyard), or commit harder to the asymmetry (COMP-20); darken, saturate or isolate a small accent rather than adding a big object. Move the heavy thing inward only if that is what the piece was meant to be. Equilibrium is the aim, not symmetry: never centre by default (COMP-19).
 - **Grade:** Partly supported. The steelyard/centre-of-mass idea predicts balance ratings for simple pictures; it is much weaker for complex art and for preference.
 - **Source:** Poore [S183]; Ross on balance and the centre of equilibrium [S182]; Arnheim [S70]; McManus et al. [S235]; Hübner & Fillinger [S237]; Locher, Gray & Nodine [S236]; Locher, Stappers & Overbeeke [S263]; Gershoni & Hochstein [S238]; CORE-11.
 
@@ -117,7 +119,7 @@ The older books cited here are public domain and linked in full in `BIBLIOGRAPHY
 - **What:** Tension (an element jammed near an edge, a strong diagonal, a crowded side, an unresolved gap) is a tool for unease, drama and energy. Use it where the brief wants energy; remove it where it isn't wanted. The worst state is the near-miss: almost centred, almost touching, almost level (COMP-1).
 - **Why:** Off-centre and edge positions read as unstable and pulling [S71, S70]; Dondis contrasts deliberate sharpening with unreadable ambiguity [S208].
 - **Check:** List each source of tension (tangents, crowding at an edge, tilted horizon, cut-off subject). For each, is it intended by the brief's mood (AES-0)?
-- **Fix:** Resolve the unintended ones (move away from the edge, level the horizon, overlap or separate tangents, ILL-1). Push the intended ones further so they read as chosen.
+- **Fix:** Resolve the unintended ones (move away from the edge, level the horizon, overlap or separate tangents, ILL-1). Push the intended ones further so they read as chosen (COMP-20). The pre-delivery pass for accidental tension is COMP-19 to COMP-25.
 - **Grade:** Partly supported (position-stability ratings); the use of tension is craft.
 - **Source:** Dondis [S208]; Arnheim [S70]; Palmer & Guidi [S71]; Locher & Stappers on implied dynamics [S262]; ILL-1, ILL-7.
 
@@ -171,11 +173,119 @@ The older books cited here are public domain and linked in full in `BIBLIOGRAPHY
 
 ---
 
+## Sitting right: the broken-balance pass (COMP-19 to COMP-25)
+
+Before delivery, ask one question of the whole piece: **does anything sit weirdly?** This is a judgement call backed by evidence, not another placement rule. The rules above say how to build a composition. This pass looks only for **broken** balance: something that reads as accidental, unresolved or lopsided by mistake.
+
+**What it is not.** Balance means the visual weights are in equilibrium. It does not mean sameness, symmetry or centring. Asymmetric, off-centre, flush-left, tension-driven and dynamic compositions are fully valid and often better: a small dark accent far out can hold a big quiet mass near the middle (the steelyard, COMP-2). Every check below raises a **flag** that asks "does this look intended?". None of them is an auto-fix. When balance really is broken, the fix is usually to **commit harder to the asymmetry** or to **add a counterweight**. Moving things to the centre is rarely the fix.
+
+**Never centre or symmetrise by default to satisfy this pass.** If the owner of the work or the brief chose the off-centre arrangement, record it as intended and move on (AES-0).
+
+**The tests** (each takes under a minute; use at least the first four):
+
+| Test | How | What it reveals |
+|---|---|---|
+| Squint / blur | Half-close the eyes, or blur until detail goes (`tools/look.py`) | Masses only: a heavy corner, a lonely element, a dead block |
+| Thumbnail at 5% | View at about 5% of the real size, or about 60-120 px across | Whether the big masses settle or slide; what pulls first |
+| Mirror flip | Flip left to right | Lopsidedness you had stopped seeing; a piece that only "works" one way |
+| Rotate 180° | Turn it upside down | Subject meaning stops pulling, so raw weight, top-heaviness and floating elements show |
+| Cover half | Cover the left half, then the right; then the top, then the bottom | Whether each half holds something, and whether one half carries all the interest by accident |
+| Gap measure | Measure every empty band and block against the largest intended gap (LAY-10, `tools/whitespace.py`) | Dead space and uneven gutters |
+| Weight centroid | `tools/balance.py IMAGE --sheet out.png` | Where the pixel weight sits; a prompt, not a verdict (pixels can't see faces, words or gaze) |
+| Edge and alignment sweep | Zoom to 200-400% along each edge, each shared edge and each corner | Tangents, near-alignments, crammed edges, overshoot errors |
+
+**Output.** List each flag as one line: what, where, which test found it, and the question "intended?". For each flag, either mark it intended (and keep it) or fix it with the gentlest move that commits (COMP-20). This pass sits in the critique loop's crop/edges and delivery steps (`core/critique-loop.md`), after the blockers.
+
+### COMP-19. Flag broken balance, not asymmetry
+- **What:** Look for weight that seems unresolved by mistake: one side or corner much heavier with nothing answering it, a picture that seems to slide off the frame, or a layout whose quiet side looks unfinished rather than chosen. Don't flag a clear, committed asymmetry, a deliberate tension (COMP-12) or a flush-left page (LAY-11). Dow praised a facade split into "unequal but balanced proportions", and warned that symmetry is often used in design where no regard is paid to beauty of form [S181].
+- **Why:** People do register imbalance. Viewers judged deliberately disrupted versions of paintings less balanced than the originals, experts more sharply than non-experts [S236]. Perceived balance in simple pictures follows weight times distance from the centre, mostly in the horizontal [S235, S237]. Adults who arrange elements themselves tend to balance them [S263]. Preference follows balance only loosely, though. For simple displays a balance score predicts liking modestly [S237]; for complex art, fast balance judgements follow grouping and recognised objects more than a weight sum [S238]. So an off-centre piece in equilibrium is not a problem, and a "balance score" is not a quality score.
+- **Check:** Run the squint, thumbnail, mirror and rotate tests above. Flag only where your eye keeps sliding toward one side or corner with nothing to stop it, or where a half looks unfinished in the cover test. For each flag, write "intended?" and answer from the brief.
+- **Fix:** If unintended, add a counterweight on the light side (small, dark, saturated, isolated or textured; COMP-21), or commit harder so the imbalance reads as tension (COMP-20). Centre only if the piece was meant to be centred and has drifted.
+- **Grade:** That people notice disrupted balance: partly supported (a few studies, mostly with paintings and simple shapes). That balance raises liking: partly supported for simple displays, weak for art. That balance means symmetry or centring: myth.
+- **Source:** Locher, Gray & Nodine [S236]; McManus et al. [S235]; Hübner & Fillinger; Wilson & Chatterjee [S237]; Gershoni & Hochstein [S238]; Locher, Stappers & Overbeeke [S263]; Arnheim [S70]; COMP-2, CORE-11.
+- **Never centre or symmetrise by default to satisfy this check.**
+
+### COMP-20. Make intent read: commit, don't hedge
+- **What:** An off-centre, tilted or crowded arrangement looks chosen when it is decisive and looks like a mistake when it is timid. The giveaways of accident are small: almost centred, almost level, almost aligned, almost symmetric, almost touching.
+- **Why:** The frame's structural lines are where placement reads as stable, and fit falls away from them in a regular way [S71]. Arnheim describes the near-miss as an unresolved tension pulling toward the nearest stable point [S70]; Dondis calls it ambiguity, the one state the viewer can't resolve [S208].
+- **Check:** For each key element and line, measure its offset from the nearest structural line (centre, axis, margin, a neighbour's edge). Flag offsets of roughly 1-6% of the frame width (self-chosen band): too small to read as a decision, big enough to see. Flag a horizon or edge tilted by about 0.5-3°.
+- **Fix:** Snap it exactly onto the line, or move it decisively away (more than about 8-10% of the width, self-chosen). For asymmetry, push it further: a bigger size difference, a clearer empty side, one strong counterweight.
+- **Grade:** Fit ratings: partly supported. The near-miss bands: craft wisdom with self-chosen numbers.
+- **Source:** Palmer & Guidi [S71]; Arnheim [S70]; Dondis [S208]; COMP-1, COMP-12, COMP-17.
+- **Never centre or symmetrise by default to satisfy this check.**
+
+### COMP-21. Know what makes weight, and use the lever
+- **What:** Weight, roughly in order of how reliably it works:
+  - **meaning:** faces, eyes, figures and words (COMP-3);
+  - **position:** distance from the centre (the lever arm), and height in the frame (COMP-22);
+  - **value contrast** with the surround;
+  - **size;**
+  - **saturation and warm hues;**
+  - **isolation:** an element alone in space weighs more than the same one in a crowd;
+  - **direction:** gaze, pointing, arrows and motion add weight on the side they face;
+  - **detail, texture and regular shape.**
+
+  Balance about a fulcrum at the centre: weight times distance on one side should answer weight times distance on the other. A small heavy thing far out balances a large light thing near the middle.
+- **Why:** The lever model is the classic account (Poore's steelyard [S183]; Ross's centre of equilibrium [S182]; Dow's divisions that are "unequal but balanced" [S181]; Arnheim [S70]). In fulcrum experiments, position mattered most and size and colour less [S235]. A centre-of-mass measure tracks rated balance for simple pictures [S237]. Faces, text and gaze pull attention far beyond their area [S239, S240].
+- **Check:** List the five heaviest things and say what makes each heavy. Picture the frame on a fulcrum at the centre (left-right first, then top-bottom). Does any side lack an answer? Compare with `tools/balance.py`, then correct by eye for meaning and gaze.
+- **Fix:** Adjust the cheapest lever: darken, saturate or isolate a small accent on the light side, or move it further out; or lighten, lower the contrast of, or move inward the heavy element. Adding a new object is the last resort, and only with the owner's say-so (AES-0).
+- **Grade:** The lever / centre-of-mass model for simple pictures: partly supported. Faces, text and gaze: well supported. The ordering of the other factors and the warm-hue effect: craft wisdom.
+- **Source:** Poore [S183]; Ross [S182]; Dow [S181]; Arnheim [S70]; McManus et al. [S235]; Hübner & Fillinger [S237]; Cerf et al. [S239]; Friesen & Kingstone [S240]; COMP-2, COMP-3.
+
+### COMP-22. Top-heavy, bottom-heavy, and the centre that sits a little high
+- **What:** Height adds weight. The same element looks heavier high in the frame than low, so a layout with its mass at the top can look ready to tip, and one weighted low looks grounded. The point that *looks* like the vertical middle sits slightly above the measured middle, so content placed at the exact middle of a page or panel tends to look low. Single subjects that face or move one way want room on that side (the inward bias, COMP-5).
+- **Why:** Arnheim describes the upper part of the field as heavier and the lower as able to carry more [S70]. Type designers draw the top halves of B, E, S and 8 smaller for the same reason (TYPE-14), and printers placed the main line above centre [S205]. Attention has a small upward bias [S264], which is at most a weak basis for an exact optical centre. In framing studies, people preferred a single object near the centre but shifted toward the side it faces (the inward bias) [S218]. Vertically, the preferred height depended on where such objects usually sit relative to the eye: bowls lower, lamps and flying birds higher [S219]. So there is no fixed "put it low" rule.
+- **Check:** Rotate 180° and cover the top half, then the bottom: does the piece feel like it will tip? Is a block that should look centred sitting at the exact geometric middle, so it reads low? Does a subject with a facing direction have more room on that side?
+- **Fix:** For an accidental top-heavy look, lighten or shrink the top mass, or give the bottom a darker or larger base. Lift "centred" content slightly above the middle by eye; the 2-5% often quoted is a self-chosen range, not a measured law. Give a facing subject room in front (COMP-5). Leave a deliberately top-heavy, looming piece alone.
+- **Grade:** Inward bias and the centre bias for single objects: well supported (several experiments, one lab). The ecological vertical bias: partly supported. Top-heaviness and the optical centre: craft wisdom with weak perceptual support; any exact position is a myth.
+- **Source:** Arnheim [S70]; Gress [S205]; Drain & Reuter-Lorenz [S264]; Palmer, Gardner & Wickens [S218]; Sammartino & Palmer [S219]; LAY-12, TYPE-14, COMP-5.
+
+### COMP-23. Active space or dead space
+- **What:** Empty space is **active** when it has a job: it frames the focus, gives a subject room to look or move, separates groups, or sets a mood of quiet. It is **dead** when it is just left over: a hole between two small items, a band no larger idea explains, a corner that pulls the eye for no reason. Big empty areas are fine, and often the best part of a design (COMP-7). Only unexplained ones are flags.
+- **Why:** Empty areas are read as shapes in their own right (figure and ground, COMP-6) and spacing is how people group things [S175, S176]. A stray large gap reads as something missing [S177, S178]. Dow and Okakura treat designed emptiness as the source of strength [S181, S199].
+- **Check:** Name the job of each empty area larger than the largest intended gap ("margin", "group gap", "focal field", "room in front", "quiet"). Any area without a name is a flag. Run the LAY-10 gap measure and squint test for the numbers.
+- **Fix:** Give the space a job (make it the field the focus sits in, or the room a subject faces into), or close it by regrouping the content beside it. Don't fill it with decoration.
+- **Grade:** Proximity grouping: well supported. Dead versus active space: craft wisdom.
+- **Source:** Wertheimer [S175]; Palmer [S176]; NN/g [S177]; White [S178]; Dow [S181]; Okakura [S199]; LAY-10, COMP-6, COMP-7.
+
+### COMP-24. Things that sit oddly: the edge and alignment sweep
+- **What:** Look for six small faults that make a piece look unfinished even when the big balance is right:
+  1. **Floating:** an element that relates to nothing (no shared edge, centre line, grid line or ground). It drifts.
+  2. **Crammed:** an element pressed against the frame edge or another element, with less room than its neighbours have, by accident.
+  3. **Tangents:** two contours just touching, or a contour just kissing the frame edge (ILL-1).
+  4. **Near-alignments:** edges or centres that are almost but not quite lined up.
+  5. **Uneven gutters:** gaps that should be equal but differ by a little.
+  6. **Mathematical, not optical, centring:** a circle, triangle, play icon or rounded letter centred by its bounding box looks off. Pointed and round shapes need to be a little larger than square ones to look the same size (overshoot), and a triangle centres by its visual mass, not its box.
+- **Why:** Placements near the frame's edges rate as poor fits [S71]. Small deviations from an alignment or a repeated interval read as errors, because the regular structure is what the eye groups by [S176, S250]. Overshoot is standard practice in type and icon design: icon systems draw circles larger than squares on the same grid so they look equal [S265], and type designers let round letters overshoot the baseline and cap height (TYPE-14).
+- **Check:** At 200-400% zoom, go round every edge and corner, every shared edge and every gutter. Measure where it matters. Flag:
+  - edge offsets of a few pixels between things that look meant to align (about 1-8 px on a 1,000-px-wide piece, self-chosen);
+  - gutters that should be equal but differ by more than about 10%;
+  - any element closer to the frame than the margin system allows;
+  - any contour that touches another or the frame edge without overlapping it.
+
+  Centre round and pointed shapes by eye, not by the numbers.
+- **Fix:** Snap near-alignments exactly, or offset them clearly. Equalise gutters from one spacing scale (CORE-4). Pull crammed elements off the edge to the margin, or crop through them decisively. Overlap or separate tangents. Enlarge round and pointed shapes slightly against square ones. Shift a play triangle toward its point until it looks centred.
+- **Grade:** Edge fit and grouping by regular structure: partly supported. The six faults as a list, and the pixel and percentage bands: craft wisdom with self-chosen numbers. Overshoot: established practice in type and icon design.
+- **Source:** Palmer & Guidi [S71]; Palmer [S176]; Wagemans et al. [S250]; Material Design icon keylines [S265]; Bringhurst [S212]; ILL-1, CORE-4, CORE-5, LAY-1, TYPE-14.
+
+### COMP-25. Run the pass, report flags, let the owner decide
+- **What:** Before delivery, run the tests table above on the real output at its real size, plus one thumbnail. Then write the flags: each one says what, where, which test, and "intended?".
+- **Why:** These are judgement calls. The evidence says people notice broken balance and odd placement. It does not say any particular asymmetric choice is wrong, and taste in art and design is far less shared than in faces or landscapes (AES-12) [S251].
+- **Check:** Is every flag answered either "intended: keep" (with the reason) or "fixed: how"? Was anything centred or made symmetric only to clear a flag? If so, undo it unless the brief asked for centring.
+- **Fix:** Apply only the flagged fixes the owner signs off on (`core/interaction-flow.md`). Re-run the squint and mirror tests after any change, and the LAY-10 whole-layout re-review after any image swap.
+- **Grade:** Procedure (craft); it gathers the graded rules above.
+- **Source:** COMP-19 to COMP-24; LAY-10; AES-0, AES-12; Vessel et al. [S251].
+- **Never centre or symmetrise by default to satisfy this check.**
+
+---
+
 ## Myths and weak claims (details in `core/evidence.md`)
 - **Golden ratio, golden spirals and "divine proportion" as the source of beauty:** myth (COMP-16).
 - **"Leading lines force the eye":** contested; lines connect, content drives (COMP-4).
 - **"Always use an odd number of objects" (rule of odds):** no direct test found; treat as a craft habit for avoiding pairs that split attention, not a rule.
 - **Rule of thirds as law:** weak (ILL-1).
+- **"Balance means symmetry or centring":** myth. Balance is equilibrium of weights; asymmetric and off-centre work balances by the lever (COMP-19, COMP-21).
+- **An exact optical centre ("5% above the middle", "golden" margins):** myth in its exact form; the slight upward placement is craft wisdom (COMP-22).
 - **Birkhoff's aesthetic measure (order ÷ complexity, 1933):** historical; its predictions did not hold up, though order and complexity remain useful dimensions (COMP-15).
 
 Further reading, grouped and annotated: `BIBLIOGRAPHY.md`.

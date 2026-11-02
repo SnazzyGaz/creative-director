@@ -33,46 +33,46 @@ Always load `core/`. Then add only what the task needs. Loading everything waste
 5. Does it show a person, a hand or an animal? -> character, and run the anatomy pass (CHAR-9) before hand-off.
 6. Is it a fixed frame (social post, thumbnail, poster, slide, print)? -> layout. Does it carry words? -> typography.
 7. Does it carry a name or logo? -> brand. No brand input in the brief? -> `core/brand-intake.md` first.
-8. Is it correct but flat, or are you choosing between versions? -> aesthetic-critique. Does it feel unbalanced, cluttered, scattered or lifeless? -> composition. Is the palette or value plan the problem? -> colour-value.
+8. Is it correct but flat, or are you choosing between versions? -> aesthetic-critique. Does it feel unbalanced, cluttered, scattered or lifeless, or does anything sit weirdly? -> composition (the *Sitting right* pass, COMP-19..25, flags accidents only; off-centre and asymmetric work is valid). Is the palette or value plan the problem? -> colour-value.
 9. Did the owner ask for it from scratch, a redo or a rejig? -> `core/first-principles.md` before anything else. Any logo, crest or sponsor mark in it, or generated imagery with jerseys, bottles or signs? -> brand (BRAND-4, BRAND-8).
 
 ## Order of checks when several modules apply
 
 1. Core hierarchy and value (does it read at all?)
 2. Technical errors (perspective, proportion, anatomy pass, light, broken flows, failing contrast) - these are ERRORs.
-3. Composition and layout (`composition/` COMP-1 to 18, `colour-value/` CV-1 to 9).
+3. Composition and layout (`composition/` COMP-1 to 25, with the *Sitting right* pass COMP-19 to 25 last before delivery; `colour-value/` CV-1 to 9).
 4. Surface: edges, texture, micro-spacing, polish.
 
 ## Token cost per module
 
-Approximate: counted with tiktoken's `cl100k_base` encoding (OpenAI's GPT-4 tokenizer) on 2 Nov 2026 (v0.5.0; every file recounted after the composition and colour-value modules and the other v0.5.0 additions). Other models tokenise differently, so expect roughly ±15%.
+Approximate: counted with tiktoken's `cl100k_base` encoding (OpenAI's GPT-4 tokenizer) on 2 Nov 2026 (v0.5.1; every file recounted after the composition and colour-value modules, the *Sitting right* pass and the other v0.5 additions). Other models tokenise differently, so expect roughly ±15%.
 
 | File or set | Tokens |
 |---|---|
 | `AGENTS.md` (entry point) | 1,157 |
-| `core/` (all nine files) | 19,229 |
-| `core/principles.md` | 2,457 |
-| `core/critique-loop.md` | 2,741 |
+| `core/` (all nine files) | 19,652 |
+| `core/principles.md` | 2,511 |
+| `core/critique-loop.md` | 2,852 |
 | `core/interaction-flow.md` | 2,869 |
-| `core/which-modules.md` | 1,767 |
-| `core/evidence.md` | 2,642 |
+| `core/which-modules.md` | 1,860 |
+| `core/evidence.md` | 2,735 |
 | `core/creative-direction.md` | 1,132 |
-| `core/critique-template.md` | 2,141 |
+| `core/critique-template.md` | 2,213 |
 | `core/brand-intake.md` (only when the brief has no brand input) | 698 |
 | `core/first-principles.md` (only for a remake from scratch) | 2,782 |
-| `modules/composition/` | 5,784 |
+| `modules/composition/` | 9,906 |
 | `modules/colour-value/` | 2,887 |
 | `modules/technical-drawing/` | 3,010 |
 | `modules/web-ui/` (+ notes 437) | 2,658 |
 | `modules/illustration/` (+ notes 484) | 4,063 |
-| `modules/layout/` | 4,573 |
+| `modules/layout/` | 4,670 |
 | `modules/typography/` (+ `fonts/CATALOGUE.md` when picking type, about 7,600) | 3,782 |
 | `modules/character/` | 3,512 |
 | `modules/ux/` | 1,828 |
 | `modules/3d/` | 1,815 |
 | `modules/aesthetic-critique/` | 2,925 |
 | `modules/brand/` | 2,798 |
-| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 2,663 |
-| `BIBLIOGRAPHY.md` (reading list; not needed for a critique) | 3,704 |
+| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 2,767 |
+| `BIBLIOGRAPHY.md` (reading list; not needed for a critique) | 3,719 |
 
-Typical loads (core without brand intake or first-principles is about 15,700): core + web-ui + ux is about 20,200 tokens; core + one module about 17,600-21,500; a social card (core + layout + typography) about 24,100; the same with composition about 29,900; a figure (core + character + technical-drawing + illustration) about 26,300. Adding aesthetic-critique costs about 2,900 more (a poster with it: about 27,000). A poster remake from scratch (core with first-principles + layout + typography + aesthetic-critique) is about 29,800. For a composition question alone, core + composition + colour-value is about 24,400. If that is too much, use the lite file.
+Typical loads (core without brand intake or first-principles is about 16,100): core + web-ui + ux is about 20,600 tokens; core + one module about 17,900-26,000; a social card (core + layout + typography) about 24,600; the same with composition about 34,500; a figure (core + character + technical-drawing + illustration) about 26,700. Adding aesthetic-critique costs about 2,900 more (a poster with it: about 27,500). A poster remake from scratch (core with first-principles + layout + typography + aesthetic-critique) is about 30,300. For a composition question alone, core + composition + colour-value is about 28,900. The *Sitting right* section of `composition/` on its own is about 3,900 tokens, so for a pre-delivery check load just that section. If that is too much, use the lite file.

@@ -332,3 +332,7 @@ In copyright; cited through the publisher and secondary sources, paraphrased.
 - **[S262]** Locher, P., & Stappers, P. J. (2002). Factors contributing to the implicit dynamic quality of static abstract designs. *Perception* 31(9), 1093-1107. https://doi.org/10.1068/p3299
 - **[S263]** Locher, P., Stappers, P. J., & Overbeeke, K. (1998). The role of balance as an organizing design principle underlying adults' compositional strategies for creating visual displays. *Acta Psychologica* 99(2), 141-161. https://doi.org/10.1016/S0001-6918(98)00008-0
 - **[S264]** Drain, M., & Reuter-Lorenz, P. A. (1996). Vertical orienting control: evidence for attentional bias and "neglect" in the intact brain. *JEP: General* 125(2), 139-158. https://doi.org/10.1037/0096-3445.125.2.139 (an upward attention bias; a weak basis at most for the optical centre).
+
+## Sitting right: optical correction (COMP-24; v0.5.1)
+
+- **[S265]** Google. *Material Design 3: Designing icons* (icon grid and keyline shapes: on a 24 dp grid the square keyline is 18 dp and the circle 20 dp, so the shapes look the same size; optical corrections). https://m3.material.io/styles/icons/designing-icons ; earlier version https://m2.material.io/design/iconography/system-icons.html

@@ -84,9 +84,9 @@ These apply to every kind of visual work. Check them before any module rule. Eac
 - **What:** The picture or screen feels settled unless the brief wants tension. Weight comes from size, darkness or contrast, saturation, isolation, and distance from the centre.
 - **Why:** An unexplained heavy side looks like an accident. A centred, symmetrical layout is already balanced; an off-centre one with a counterweight is too. Neither is the default: judge by intent.
 - **Check:** Flip the image horizontally (critique-loop test 3). Does one side suddenly feel heavier? Is a small, intense element off to one side balanced by anything?
-- **Fix:** Move the weight toward the centre or the frame's main axes, or add a counterweight (a smaller, darker or more saturated element on the other side). Keep the placement the work chose (centred or off-centre) unless it fights the intent.
+- **Fix:** Add a counterweight (a smaller, darker or more saturated element far out on the other side), or commit harder to the asymmetry so it reads as chosen. Moving the weight toward the centre is rarely the fix. Keep the placement the work chose (centred or off-centre) unless it fights the intent. Balance is equilibrium of weights, not symmetry: never centre or symmetrise by default to satisfy this check.
 - **Source:** Arnheim, *Art and Visual Perception* (structural skeleton, visual weight) [S70]; Palmer & Guidi, goodness of fit in rectangles (centre and axes are the "good" positions) [S71]; evidence on centring and thirds is weak either way [S43, S44]; Poore's steelyard and the fulcrum and centre-of-mass studies [S183, S235, S237].
-- **Deeper:** COMP-1 (skeleton), COMP-2 (weighing, with `tools/balance.py`), COMP-3 (faces and text are heavy), COMP-12 (tension on purpose) in `modules/composition/`.
+- **Deeper:** COMP-1 (skeleton), COMP-2 (weighing, with `tools/balance.py`), COMP-3 (faces and text are heavy), COMP-12 (tension on purpose) and the pre-delivery *Sitting right* pass (COMP-19 to COMP-25) in `modules/composition/`.
 
 ---
 

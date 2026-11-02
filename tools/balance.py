@@ -12,8 +12,10 @@ Prints: centroid offset from centre (dx, dy as % of the half-width and half-heig
 +dx = right, +dy = down), DCM (0 = centred, 100 = at an edge), left/right and top/bottom
 weight ratios, and a reading. Always exits 0: there is no PASS or FAIL, because a
 strongly off-centre picture can be right (tension on purpose, COMP-12).
-Reading bands (self-chosen, not from a study): DCM < 10 centred, 10-25 off-centre,
-> 25 strongly off-centre - say whether that is intended.
+Reading bands (self-chosen, not from a study): DCM < 10 weights near equilibrium (an
+asymmetric layout balanced by the lever lands here too), 10-25 off-centre weight,
+> 25 strongly off-centre: a flag that asks "intended?", never a fault. Never centre a
+piece by default to lower this number (COMP-19).
 """
 import sys, argparse
 import numpy as np
@@ -53,11 +55,13 @@ def analyse(path, bg=None, sheet=None):
     left = w[:, :W // 2].sum(); right = w[:, W - W // 2:].sum()
     top = w[:H // 2].sum(); bot = w[H - H // 2:].sum()
     lr = right / left if left else float('inf'); tb = bot / top if top else float('inf')
-    reading = 'centred' if dcm < 10 else ('off-centre' if dcm <= 25 else 'strongly off-centre - say whether that is intended')
+    reading = ('weights near equilibrium about the centre (symmetric or not)' if dcm < 10 else
+               ('off-centre weight' if dcm <= 25 else 'strongly off-centre weight: a flag, not a fault - does it look intended?'))
     print(f'centroid offset: dx {dx:+.1f}% (+ = right), dy {dy:+.1f}% (+ = down) of the half-frame')
     print(f'DCM: {dcm:.1f}  ->  {reading}')
     print(f'weight right/left: {lr:.2f}   bottom/top: {tb:.2f}')
     print('Next: mirror-flip the image (look.py) and ask if it still feels settled; then weigh faces, text and gaze by eye (COMP-3).')
+    print('Off-centre and asymmetric work is valid: if it is broken, add a counterweight or commit harder (COMP-19/20). Never centre by default.')
     if sheet:
         hm = (w / w.max() * 255).astype('uint8')
         out = Image.merge('RGB', [Image.fromarray(hm)] * 3).convert('RGB')

@@ -44,6 +44,8 @@ Artists use these to get a "fresh eye", because the maker grows used to their ow
 | **Greyscale** | Desaturate by perceived lightness (luminance or OKLCH L, not HSL L) | Value structure; colour doing work that value should do [S5] |
 | **Crop / edges** | Inspect each edge and corner; try a tighter crop | Tangents, frame contacts, dead space, stray bright spots |
 
+Before delivery, add the **Sitting right** pass (`modules/composition/`, COMP-19 to COMP-25). Rotate 180°, cover each half, and sweep the edges and alignments. Flag only what looks accidental: lopsided weight, near-misses, floating or crammed elements, tangents, near-alignments, uneven gutters, mathematical rather than optical centring. Ask "intended?" for each. Asymmetric and off-centre work is valid; never centre or symmetrise by default to clear a flag.
+
 `tools/look.py` makes all five as one contact sheet, with value stats. Record one factual line per test (what was observed), e.g. "Blur: the badge top-right leads; the headline is second."
 
 ## 2b. Anatomy pass: a delivery gate
