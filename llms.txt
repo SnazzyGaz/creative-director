@@ -6,15 +6,16 @@
 - [Core principles](core/principles.md): always loaded
 - [Critique loop](core/critique-loop.md): always loaded; read the ask, brief, render, look, critique, fix, take over, deliver; the blocker list
 - [Critique template](core/critique-template.md): when writing a critique
+- [Commands](core/commands.md): what "bolder", "quieter" and "distill" mean, with checks
 - [Creative direction](core/creative-direction.md): intent, mood and judging between versions
 - [First-principles remake](core/first-principles.md): when asked to redo or reimagine from scratch
 - [Which modules to load](core/which-modules.md): task-to-module table and token costs
 - [Evidence](core/evidence.md): grades and myths, before claiming people prefer something
 - [Modules](modules/): technical-drawing, illustration, character, web-ui, ux, 3d, typography, layout, brand, aesthetic-critique, composition, colour-value
-- [Lookbook](modules/lookbook/README.md): optional; established looks with tags and image sheets, for from-scratch concepts or work that feels generic
+- [Lookbook](modules/lookbook/README.md): optional; established looks with tags and image sheets, for from-scratch concepts or work that feels generic; search by use, mood, colour or "more like this"
 - [Lite version](lite/CREATIVE-DIRECTOR-LITE.md): loop, core rules and blockers in one short file
 - [Font library](fonts/README.md): theme-grouped free fonts (OFL / Apache) with a catalogue and specimens
-- [Tools](tools/README.md): measuring scripts (contrast, grids, perspective, ellipses, intersections, whitespace, balance)
+- [Tools](tools/README.md): `autocheck.py` runs every measurable check in one go (pass, fail or flag per rule ID); measuring scripts (contrast, grids, perspective, ellipses, intersections, whitespace, balance)
 - [Case study](examples/case-study-may-specials/README.md): one sign remade from first principles, with every check shown
 - [Sources](SOURCES.md)
 - [Bibliography](BIBLIOGRAPHY.md): annotated reading list on composition, colour and beauty, with links to public-domain full texts

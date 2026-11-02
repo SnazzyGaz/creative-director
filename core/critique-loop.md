@@ -3,7 +3,7 @@
 **Purpose:** a light touch. The loop nudges output (a drawing, generated image, 3D model, UI or flow) toward what people measurably prefer while keeping its intent and what already works. Smallest changes with the biggest effect; stop once it is clearly better. Always look at a fresh render, never at your own code or prompt.
 
 ```
-read the ask -> brief -> render -> LOOK (5 tests) -> CRITIQUE (ranked, rule IDs) -> [sign-off] -> FIX -> re-render -> compare -> deliver
+read the ask -> brief -> render -> AUTO CHECK -> LOOK (5 tests) -> CRITIQUE (ranked, rule IDs) -> [sign-off] -> FIX -> re-render -> compare -> deliver
                            ^                                                                       |
                            +---------------------- repeat only while clearly improving ------------+
 ```
@@ -43,7 +43,9 @@ Never assume a remake without a from-scratch word. If the ask is unclear, treat 
 
 At the size people see it, plus a thumbnail. UI: phone and desktop widths and 200% zoom (`tools/shot.sh`). 3D: the measured checks first (`modules/3d/`), then a contact sheet. Keep every round (`round-01.png`, ...).
 
-## 3. Look: five tests
+## 3. Look: auto check, then five tests
+
+**Auto check first** (if you can run code): `python3 tools/autocheck.py FILE|URL --out DIR` measures contrast, type, spacing, edges, space and balance against each rule's own number. Fix every FAIL (* = blocker), then judge by eye, quoting its numbers. FLAG asks "intended?"; balance is never a FAIL or a reason to centre. Image text checks are SKIP: do them by eye or pass `--text-box`.
 
 | Test | How | Reveals |
 |---|---|---|

@@ -1,0 +1,465 @@
+{
+ "about": "Search test set for tools/lookbook_find.py. Generic briefs only (no real clients, brands or artists). Each brief gives the words a bot would pass (use, mood, energy, avoid), the looks that should shortlist ('should', scored as recall@k) and looks that must not appear ('should_not': their avoid_for clashes with the brief or the look plainly misses it). Lists are self-judged by reading the tags and sheets; treat a miss as 'look at it', not proof the search is wrong. Run: python3 modules/lookbook/tests/score_find.py",
+ "k": 8,
+ "briefs": [
+  {
+   "id": "b01",
+   "brief": "Poster for a small punk gig in a basement venue",
+   "use": "gig",
+   "mood": "rebellious",
+   "energy": "high",
+   "avoid": "",
+   "should": [
+    "LB-011",
+    "LB-004",
+    "LB-041",
+    "LB-021",
+    "LB-R02R03",
+    "LB-R01R19"
+   ],
+   "should_not": [
+    "LB-019",
+    "LB-029",
+    "LB-024",
+    "LB-039"
+   ]
+  },
+  {
+   "id": "b02",
+   "brief": "Packaging for a loose-leaf tea range, calm and considered",
+   "use": "tea",
+   "mood": "calm",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-056",
+    "LB-039",
+    "LB-053"
+   ],
+   "should_not": [
+    "LB-032",
+    "LB-020",
+    "LB-002",
+    "LB-049"
+   ]
+  },
+  {
+   "id": "b03",
+   "brief": "Annual report spreads built around a few key numbers",
+   "use": "report",
+   "mood": "technical,calm",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-012",
+    "LB-017"
+   ],
+   "should_not": [
+    "LB-032",
+    "LB-049",
+    "LB-021"
+   ]
+  },
+  {
+   "id": "b04",
+   "brief": "Wayfinding signs and maps for a large hospital",
+   "use": "wayfinding,signage",
+   "mood": "calm",
+   "energy": "low",
+   "avoid": "",
+   "should": [
+    "LB-018",
+    "LB-019"
+   ],
+   "should_not": [
+    "LB-021",
+    "LB-004",
+    "LB-032"
+   ]
+  },
+  {
+   "id": "b05",
+   "brief": "Identity for an upmarket cocktail bar",
+   "use": "cocktail",
+   "mood": "elegant",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-030",
+    "LB-031"
+   ],
+   "should_not": [
+    "LB-011",
+    "LB-046",
+    "LB-004"
+   ]
+  },
+  {
+   "id": "b06",
+   "brief": "A picture book for young children about a lost cat",
+   "use": "children",
+   "mood": "playful,warm",
+   "energy": "",
+   "avoid": "children",
+   "should": [
+    "LB-047",
+    "LB-048",
+    "LB-059",
+    "LB-060",
+    "LB-055"
+   ],
+   "should_not": [
+    "LB-003",
+    "LB-038"
+   ]
+  },
+  {
+   "id": "b07",
+   "brief": "Street poster for a local housing protest",
+   "use": "protest,activism",
+   "mood": "bold",
+   "energy": "high",
+   "avoid": "",
+   "should": [
+    "LB-005",
+    "LB-010",
+    "LB-001",
+    "LB-038",
+    "LB-R02R20"
+   ],
+   "should_not": [
+    "LB-028",
+    "LB-029",
+    "LB-030"
+   ]
+  },
+  {
+   "id": "b08",
+   "brief": "Launch visuals for a premium perfume",
+   "use": "perfume,beauty",
+   "mood": "elegant,sensual",
+   "energy": "",
+   "avoid": "premium",
+   "should": [
+    "LB-054",
+    "LB-028"
+   ],
+   "should_not": [
+    "LB-011",
+    "LB-046",
+    "LB-049"
+   ]
+  },
+  {
+   "id": "b09",
+   "brief": "Label for a heritage-style craft beer",
+   "use": "beer,craft drinks,heritage",
+   "mood": "nostalgic",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-035",
+    "LB-026",
+    "LB-037"
+   ],
+   "should_not": [
+    "LB-022",
+    "LB-034"
+   ]
+  },
+  {
+   "id": "b10",
+   "brief": "Onboarding screens for a budgeting app",
+   "use": "apps,onboarding",
+   "mood": "calm,optimistic",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-022"
+   ],
+   "should_not": [
+    "LB-024",
+    "LB-025",
+    "LB-027",
+    "LB-021"
+   ]
+  },
+  {
+   "id": "b11",
+   "brief": "Poster for a three-day outdoor music festival",
+   "use": "festival",
+   "mood": "festive",
+   "energy": "high",
+   "avoid": "",
+   "should": [
+    "LB-032",
+    "LB-061",
+    "LB-063",
+    "LB-002"
+   ],
+   "should_not": [
+    "LB-019",
+    "LB-039",
+    "LB-029"
+   ]
+  },
+  {
+   "id": "b12",
+   "brief": "Exhibition graphics for a design museum show on modernism",
+   "use": "exhibitions,museums",
+   "mood": "austere",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-016",
+    "LB-019"
+   ],
+   "should_not": [
+    "LB-032",
+    "LB-011",
+    "LB-031"
+   ]
+  },
+  {
+   "id": "b13",
+   "brief": "Menu and window graphics for a family restaurant",
+   "use": "restaurants,menus",
+   "mood": "warm",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-058",
+    "LB-066",
+    "LB-063",
+    "LB-056"
+   ],
+   "should_not": [
+    "LB-019",
+    "LB-013"
+   ]
+  },
+  {
+   "id": "b14",
+   "brief": "Crest and kit graphics for an amateur sports club",
+   "use": "sports",
+   "mood": "heroic,bold",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-026",
+    "LB-006",
+    "LB-002"
+   ],
+   "should_not": [
+    "LB-022",
+    "LB-033"
+   ]
+  },
+  {
+   "id": "b15",
+   "brief": "Launch film stills for a precision engineering product",
+   "use": "product launches,engineering",
+   "mood": "technical",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-013",
+    "LB-043"
+   ],
+   "should_not": [
+    "LB-024",
+    "LB-055",
+    "LB-032"
+   ]
+  },
+  {
+   "id": "b16",
+   "brief": "Wedding invitation suite",
+   "use": "wedding",
+   "mood": "elegant,ornate",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-025",
+    "LB-059"
+   ],
+   "should_not": [
+    "LB-011",
+    "LB-046",
+    "LB-020"
+   ]
+  },
+  {
+   "id": "b17",
+   "brief": "Poster for a dark psychological stage play",
+   "use": "theatre",
+   "mood": "mysterious",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-009",
+    "LB-057",
+    "LB-038"
+   ],
+   "should_not": [
+    "LB-022",
+    "LB-018",
+    "LB-048"
+   ]
+  },
+  {
+   "id": "b18",
+   "brief": "Graphics for a streetwear capsule drop",
+   "use": "streetwear",
+   "mood": "rebellious",
+   "energy": "high",
+   "avoid": "",
+   "should": [
+    "LB-011",
+    "LB-046"
+   ],
+   "should_not": [
+    "LB-024",
+    "LB-029",
+    "LB-039"
+   ]
+  },
+  {
+   "id": "b19",
+   "brief": "Tourism poster for a coastal town",
+   "use": "tourism,travel",
+   "mood": "optimistic,calm",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-044",
+    "LB-030",
+    "LB-056"
+   ],
+   "should_not": [
+    "LB-004",
+    "LB-021"
+   ]
+  },
+  {
+   "id": "b20",
+   "brief": "Label for a botanical gin",
+   "use": "gin,botanical",
+   "mood": "elegant",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-036"
+   ],
+   "should_not": [
+    "LB-032",
+    "LB-049",
+    "LB-011"
+   ]
+  },
+  {
+   "id": "b21",
+   "brief": "Campaign for a youth fashion label",
+   "use": "fashion,youth",
+   "mood": "playful",
+   "energy": "high",
+   "avoid": "",
+   "should": [
+    "LB-033",
+    "LB-034",
+    "LB-049"
+   ],
+   "should_not": [
+    "LB-024",
+    "LB-027",
+    "LB-029"
+   ]
+  },
+  {
+   "id": "b22",
+   "brief": "Visitor campaign for a national park",
+   "use": "national parks",
+   "mood": "calm",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-007",
+    "LB-R01R21"
+   ],
+   "should_not": [
+    "LB-021",
+    "LB-032",
+    "LB-020"
+   ]
+  },
+  {
+   "id": "b23",
+   "brief": "Merch for a retro video game",
+   "use": "games",
+   "mood": "nostalgic,playful",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-052",
+    "LB-045"
+   ],
+   "should_not": [
+    "LB-024",
+    "LB-029"
+   ]
+  },
+  {
+   "id": "b24",
+   "brief": "Cover for a quiet, serious literary novel",
+   "use": "book",
+   "mood": "calm,mysterious",
+   "energy": "",
+   "avoid": "serious,literary",
+   "should": [
+    "LB-065",
+    "LB-039",
+    "LB-009"
+   ],
+   "should_not": [
+    "LB-045",
+    "LB-R02R01",
+    "LB-031"
+   ]
+  },
+  {
+   "id": "b25",
+   "brief": "Signage for a neighbourhood café",
+   "use": "cafés,shops",
+   "mood": "warm",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-051",
+    "LB-048",
+    "LB-066",
+    "LB-041"
+   ],
+   "should_not": [
+    "LB-013",
+    "LB-019"
+   ]
+  },
+  {
+   "id": "b26",
+   "brief": "Gift packaging for a New Year food hamper",
+   "use": "new year,gifting,food",
+   "mood": "festive",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-055",
+    "LB-061"
+   ],
+   "should_not": [
+    "LB-019",
+    "LB-029",
+    "LB-014"
+   ]
+  }
+ ]
+}

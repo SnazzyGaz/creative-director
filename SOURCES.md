@@ -336,3 +336,7 @@ In copyright; cited through the publisher and secondary sources, paraphrased.
 ## Sitting right: optical correction (COMP-24; v0.5.1)
 
 - **[S265]** Google. *Material Design 3: Designing icons* (icon grid and keyline shapes: on a 24 dp grid the square keyline is 18 dp and the circle 20 dp, so the shapes look the same size; optical corrections). https://m3.material.io/styles/icons/designing-icons ; earlier version https://m2.material.io/design/iconography/system-icons.html
+
+## Lookbook: era terms (v0.8.0)
+
+- **[S266]** Getty Research Institute. *Art & Architecture Thesaurus (AAT)*, Styles and Periods facet. J. Paul Getty Trust. https://www.getty.edu/research/tools/vocabularies/aat/ ; terms at http://vocab.getty.edu/page/aat/ (the optional `getty_aat` field on 27 established lookbook looks: ID and preferred term, each checked on its page on 2 November 2026). AAT data is released under ODC-By 1.0, https://opendatacommons.org/licenses/by/1-0/ ; this repo uses only IDs and preferred labels, with this attribution.
