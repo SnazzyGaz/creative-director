@@ -1,0 +1,728 @@
+{
+ "images": {
+  "AKLV": {
+   "brief": "B71",
+   "condition": "with",
+   "file": "B71-with.jpg",
+   "sha256": "185fa9646e7be537d9454f05a7c4d77d3f73c8166898b82a4d6df3fa6207bf11"
+  },
+  "ARUQ": {
+   "brief": "B71",
+   "condition": "without",
+   "file": "B71-without.jpg",
+   "sha256": "9bdb726ec9c9f375d958787638446d127dade539c9341fd82ea7e93b487c5e8f"
+  },
+  "BBSF": {
+   "brief": "B81",
+   "condition": "with",
+   "file": "B81-with.jpg",
+   "sha256": "81bd206ebca8eae95f5407e960f822e22e22dd5588bcd5051b1b7cdf4d1cce3f"
+  },
+  "BXWV": {
+   "brief": "B97",
+   "condition": "with",
+   "file": "B97-with.jpg",
+   "sha256": "7a23512af0be83fda96d7225a7cef05a199962977888c934e80f0a225c444235"
+  },
+  "CAAP": {
+   "brief": "B74",
+   "condition": "with",
+   "file": "B74-with.jpg",
+   "sha256": "84366b9233a19eb80aa69c61630d4a56491cdcede5e47ac5973659cac107a0a4"
+  },
+  "CJFT": {
+   "brief": "B79",
+   "condition": "without",
+   "file": "B79-without.jpg",
+   "sha256": "f51f3c400c3199db55c15df6bed0da9d4d25c2f5f42c532cb22f2ccb69eddd67"
+  },
+  "CMYJ": {
+   "brief": "B85",
+   "condition": "with",
+   "file": "B85-with.jpg",
+   "sha256": "8a0b73c2624548ab2d8315973f23e630751e1bd0d18cac71dc752440e808fa83"
+  },
+  "CRTG": {
+   "brief": "B78",
+   "condition": "with",
+   "file": "B78-with.jpg",
+   "sha256": "bf57cf379b723b557f2e25d0d92d640948a38b1e067397cfabebab1abc3e1f84"
+  },
+  "CZCD": {
+   "brief": "B77",
+   "condition": "without",
+   "file": "B77-without.jpg",
+   "sha256": "480341325b54a53abb6e17fc61bdf92318e1865d48dfc90d2cd769a58dd6a39b"
+  },
+  "DKSU": {
+   "brief": "B76",
+   "condition": "without",
+   "file": "B76-without.jpg",
+   "sha256": "00e31fcb81ad5755820952e226a29b45e8c2a882a2e6735057842b7a762ac76a"
+  },
+  "DLQP": {
+   "brief": "B91",
+   "condition": "with",
+   "file": "B91-with.jpg",
+   "sha256": "a10beb30ef46a4311a00971b3925be667d2dd75e12c58d520d2989e220407947"
+  },
+  "DPDB": {
+   "brief": "B92",
+   "condition": "without",
+   "file": "B92-without.jpg",
+   "sha256": "4c174bca865d5977c5c36b020d32092a6fc1b95cfd65737a9f952504050669ff"
+  },
+  "EHKV": {
+   "brief": "B78",
+   "condition": "without",
+   "file": "B78-without.jpg",
+   "sha256": "96349c7ddbdff78fc708cc6849c58ea0ef32c5646bcb784555d5b903cd78f76a"
+  },
+  "FGNV": {
+   "brief": "B84",
+   "condition": "without",
+   "file": "B84-without.jpg",
+   "sha256": "c4dddf11e3f6fa82a197bf4b0965e9f23aae850febbe2c4b35b82762a6b09169"
+  },
+  "FNBT": {
+   "brief": "B88",
+   "condition": "with",
+   "file": "B88-with.jpg",
+   "sha256": "5dd6137ae65d5afbc43700e1fa4b9d2fc27c292c9707918b452d01b9bc385803"
+  },
+  "FQAH": {
+   "brief": "B100",
+   "condition": "with",
+   "file": "B100-with.jpg",
+   "sha256": "9b9a4c2eceadc784a2aebb1303df64d067c4bcd25ac1ac9544a45d61db3061ac"
+  },
+  "GGTT": {
+   "brief": "B80",
+   "condition": "without",
+   "file": "B80-without.jpg",
+   "sha256": "bd7c14e13604fa61365925b3280d35dcb4cc5ae19d637daec8cf2e6a8a8d831f"
+  },
+  "GMCN": {
+   "brief": "B86",
+   "condition": "with",
+   "file": "B86-with.jpg",
+   "sha256": "ffc532b94f5133007bf8305e65b695251f109bf9c2906c396243cfdbcb5636b4"
+  },
+  "GNEA": {
+   "brief": "B98",
+   "condition": "with",
+   "file": "B98-with.jpg",
+   "sha256": "f5915ef097ffc7b61689f8f780c0e33925ec1c49dacf8dca93d84446dacdc390"
+  },
+  "GPAT": {
+   "brief": "B77",
+   "condition": "with",
+   "file": "B77-with.jpg",
+   "sha256": "1f2e22aa7a243e89d9cfa1cf417815dcd432cc0e545257bde17e9d1b6847676e"
+  },
+  "JKJD": {
+   "brief": "B90",
+   "condition": "without",
+   "file": "B90-without.jpg",
+   "sha256": "9167b55600539c885f7602e002b2278f6f25d9333d8af1b1724ce2054711acee"
+  },
+  "JRAZ": {
+   "brief": "B95",
+   "condition": "without",
+   "file": "B95-without.jpg",
+   "sha256": "fcf0af532532c6c51a7ddbbc1114a69cc89c8a729b74494b6391ab67e85fb55f"
+  },
+  "KTGA": {
+   "brief": "B90",
+   "condition": "with",
+   "file": "B90-with.jpg",
+   "sha256": "03270bc6984e63f347402416550539bec8ba04d8df6f37bb1865c1f69e091bf9"
+  },
+  "LCJU": {
+   "brief": "B96",
+   "condition": "without",
+   "file": "B96-without.jpg",
+   "sha256": "866b67c67281dbb80401ac6e0f6290f80714860d5f0cf205835dc7883e43f6c9"
+  },
+  "LDJW": {
+   "brief": "B84",
+   "condition": "with",
+   "file": "B84-with.jpg",
+   "sha256": "389a524d2e917f147c919edcd903a2004c41ed2a411c2c96d9d247bcfcda99ad"
+  },
+  "LGDF": {
+   "brief": "B94",
+   "condition": "with",
+   "file": "B94-with.jpg",
+   "sha256": "0b496f153d18dfbfad8caa870986b87ca12e63439ea66e79356fd88c4c44b904"
+  },
+  "LMJS": {
+   "brief": "B82",
+   "condition": "without",
+   "file": "B82-without.jpg",
+   "sha256": "6e9c528ed3739e6b5adb4d0df19f5555e257b765d2a7355d89fe43cd0be3e64c"
+  },
+  "MFSM": {
+   "brief": "B96",
+   "condition": "with",
+   "file": "B96-with.jpg",
+   "sha256": "e6abbac384069d9a183aac0ca6c3bb12d7380f3a938da897bfbdec2023d437a0"
+  },
+  "MGTU": {
+   "brief": "B93",
+   "condition": "with",
+   "file": "B93-with.jpg",
+   "sha256": "8e530a6cebe50b94bed2cc468a49fe772e641455e77f41efae5c21aff8744c81"
+  },
+  "MVNL": {
+   "brief": "B89",
+   "condition": "with",
+   "file": "B89-with.jpg",
+   "sha256": "0ba1bc219d2c9d6c8d3ee293a2a8a6fb02d355f34a5486ff00389010c080fee9"
+  },
+  "PFKF": {
+   "brief": "B81",
+   "condition": "without",
+   "file": "B81-without.jpg",
+   "sha256": "101bc7b25db40737825eff1cbe2dbc40f821dee347414d147259e4e643c85f41"
+  },
+  "PQLQ": {
+   "brief": "B76",
+   "condition": "with",
+   "file": "B76-with.jpg",
+   "sha256": "2c441451ba74cab3d0215abc002d5999a27bd5406d01e90f1ce9fc8fbcdbeeb7"
+  },
+  "PTRQ": {
+   "brief": "B74",
+   "condition": "without",
+   "file": "B74-without.jpg",
+   "sha256": "fc2768b738491cbc2e4c07344af20c132aec19215a02399eb332150225a845ab"
+  },
+  "QCXV": {
+   "brief": "B100",
+   "condition": "without",
+   "file": "B100-without.jpg",
+   "sha256": "ec13ee276d385f7658b58a303e9227f1d9b2dc89e7ad5772518ee925b54028ed"
+  },
+  "QGVM": {
+   "brief": "B92",
+   "condition": "with",
+   "file": "B92-with.jpg",
+   "sha256": "2b0072a75598e0b28094743ddb50a7d6ba274bba4b9c6a6ca2adb288a4c42b25"
+  },
+  "QHQS": {
+   "brief": "B75",
+   "condition": "with",
+   "file": "B75-with.jpg",
+   "sha256": "420b5bcef10a3689039dc1a699bd24b84b76bca1b9294eb0e6fde6d37ca94ac0"
+  },
+  "QYJE": {
+   "brief": "B72",
+   "condition": "with",
+   "file": "B72-with.jpg",
+   "sha256": "73e9eae11edde079ac86aab13529aead8a6d49d392e55f27fc9242e48141aa7e"
+  },
+  "REAP": {
+   "brief": "B83",
+   "condition": "with",
+   "file": "B83-with.jpg",
+   "sha256": "08ee4ecd39617aaf052f3d83d135fe2f01ad165a6b7740d888843c5ded19064d"
+  },
+  "SFTA": {
+   "brief": "B91",
+   "condition": "without",
+   "file": "B91-without.jpg",
+   "sha256": "7a16d85eab72e54898b4a76f5cc0ee9a75975ef414157fd4c045426c36b8372e"
+  },
+  "SPSP": {
+   "brief": "B73",
+   "condition": "without",
+   "file": "B73-without.jpg",
+   "sha256": "9317ab743c7056dfdab63bc5e8b74a9205d430a34af5d3a5cc91d4cb19f446cf"
+  },
+  "STLU": {
+   "brief": "B85",
+   "condition": "without",
+   "file": "B85-without.jpg",
+   "sha256": "7399b7cc50950186626250d0466bdc07650a9a2ed8958224dabeb6dc23decc6d"
+  },
+  "TAVL": {
+   "brief": "B99",
+   "condition": "without",
+   "file": "B99-without.jpg",
+   "sha256": "0be3bda1284fa4cd59cb8c5a8af63a3185d9719e8bb45dc9b8db0752127d2c1a"
+  },
+  "TBLK": {
+   "brief": "B88",
+   "condition": "without",
+   "file": "B88-without.jpg",
+   "sha256": "d3c45c5c569dc56d0aa9af31225bbc048a7f31c4ce7e6ca0f05a4f1b44f5f98e"
+  },
+  "TQRC": {
+   "brief": "B86",
+   "condition": "without",
+   "file": "B86-without.jpg",
+   "sha256": "e8f29709df1b7e6df12157322b68f3badef3bfee8a2d7d4038cc73ba6ec1d2bd"
+  },
+  "TVBZ": {
+   "brief": "B93",
+   "condition": "without",
+   "file": "B93-without.jpg",
+   "sha256": "ac4004c3f9f2044a45cb4f2c6570b40b2d35d276fb71bce0fe4fea8d1f8e1ec6"
+  },
+  "TWZJ": {
+   "brief": "B75",
+   "condition": "without",
+   "file": "B75-without.jpg",
+   "sha256": "bab26954fe3f698ef37139608b98be262a6ffd02f6fa92983d52fb2bd78097b7"
+  },
+  "TZFA": {
+   "brief": "B83",
+   "condition": "without",
+   "file": "B83-without.jpg",
+   "sha256": "60d861bcb3c0af30ec76b59f6d74cf2b07e16bf67e2f9841a813e7e3b937c246"
+  },
+  "UJHD": {
+   "brief": "B87",
+   "condition": "with",
+   "file": "B87-with.jpg",
+   "sha256": "b36c5ad2ee4cc523c10f49709b394d9797a6e38beb9e1e791aa4b72f4d08f716"
+  },
+  "UMJZ": {
+   "brief": "B89",
+   "condition": "without",
+   "file": "B89-without.jpg",
+   "sha256": "3afb0c7aa8dfd21d2b70fab61356a965b8663311e8e262ffcadceb87df825ad5"
+  },
+  "UZWU": {
+   "brief": "B79",
+   "condition": "with",
+   "file": "B79-with.jpg",
+   "sha256": "52baec86d4b6aadb90b4df4a2515e1ebb5054796cddf8291e086170e14d38af5"
+  },
+  "VBUP": {
+   "brief": "B80",
+   "condition": "with",
+   "file": "B80-with.jpg",
+   "sha256": "1763575706ef1483d86fa513fbe367eaabeb6023887cf7ebb3e0d8ad59083f46"
+  },
+  "VFJN": {
+   "brief": "B72",
+   "condition": "without",
+   "file": "B72-without.jpg",
+   "sha256": "d2907e84e09bb60444406a148068dd6ff7f5ce2cf3276ad7183cb3280e0832b7"
+  },
+  "VYLL": {
+   "brief": "B98",
+   "condition": "without",
+   "file": "B98-without.jpg",
+   "sha256": "4e98c76b3d353fcfaefaf2f56a8243be8ed3141247e26fc80144385f21989942"
+  },
+  "WKNQ": {
+   "brief": "B82",
+   "condition": "with",
+   "file": "B82-with.jpg",
+   "sha256": "a699ade3889ddcaaa6af7505317827daec80d7e716af35e6122a2dbac34ae59e"
+  },
+  "XYSS": {
+   "brief": "B95",
+   "condition": "with",
+   "file": "B95-with.jpg",
+   "sha256": "288c16ef637734e882e2780380c5f0ebed8a3dfffaa25f5a17eda8945f5f06d9"
+  },
+  "YBQN": {
+   "brief": "B73",
+   "condition": "with",
+   "file": "B73-with.jpg",
+   "sha256": "b39a111b651065170f677387092b8a2306bc9b242181bf6f8df069aca9b0aba1"
+  },
+  "ZGED": {
+   "brief": "B94",
+   "condition": "without",
+   "file": "B94-without.jpg",
+   "sha256": "a7833b1352e9cb6d06ca1f0f843410584658bae62b33ccb20387991b57008233"
+  },
+  "ZQPN": {
+   "brief": "B97",
+   "condition": "without",
+   "file": "B97-without.jpg",
+   "sha256": "eb2e66f859c86944ac9353eb01ca4a5b72a29ddaeddf1c1e9ae703744623a171"
+  },
+  "ZSBK": {
+   "brief": "B87",
+   "condition": "without",
+   "file": "B87-without.jpg",
+   "sha256": "8c1d704af21bda26f14dd91b40155db8c50fdb7c19500bcca333fbc39cfc7939"
+  },
+  "ZTCA": {
+   "brief": "B99",
+   "condition": "with",
+   "file": "B99-with.jpg",
+   "sha256": "c1f1a83ca3db2ced18db4f9eb67eca62352875bd02485971573125f955c69631"
+  }
+ },
+ "note": "Hidden key for examples/blind-test. Do not commit or show to judges before judging ends.",
+ "salt": "e4a678d3043c25205cf7f1ca83c7f372",
+ "sheets": [
+  {
+   "brief": "B84",
+   "left": {
+    "condition": "without",
+    "id": "FGNV"
+   },
+   "right": {
+    "condition": "with",
+    "id": "LDJW"
+   },
+   "sheet": "S79"
+  },
+  {
+   "brief": "B73",
+   "left": {
+    "condition": "without",
+    "id": "SPSP"
+   },
+   "right": {
+    "condition": "with",
+    "id": "YBQN"
+   },
+   "sheet": "S80"
+  },
+  {
+   "brief": "B89",
+   "left": {
+    "condition": "without",
+    "id": "UMJZ"
+   },
+   "right": {
+    "condition": "with",
+    "id": "MVNL"
+   },
+   "sheet": "S81"
+  },
+  {
+   "brief": "B94",
+   "left": {
+    "condition": "with",
+    "id": "LGDF"
+   },
+   "right": {
+    "condition": "without",
+    "id": "ZGED"
+   },
+   "sheet": "S82"
+  },
+  {
+   "brief": "B86",
+   "left": {
+    "condition": "with",
+    "id": "GMCN"
+   },
+   "right": {
+    "condition": "without",
+    "id": "TQRC"
+   },
+   "sheet": "S83"
+  },
+  {
+   "brief": "B93",
+   "left": {
+    "condition": "without",
+    "id": "TVBZ"
+   },
+   "right": {
+    "condition": "with",
+    "id": "MGTU"
+   },
+   "sheet": "S84"
+  },
+  {
+   "brief": "B99",
+   "left": {
+    "condition": "with",
+    "id": "ZTCA"
+   },
+   "right": {
+    "condition": "without",
+    "id": "TAVL"
+   },
+   "sheet": "S85"
+  },
+  {
+   "brief": "B82",
+   "left": {
+    "condition": "with",
+    "id": "WKNQ"
+   },
+   "right": {
+    "condition": "without",
+    "id": "LMJS"
+   },
+   "sheet": "S86"
+  },
+  {
+   "brief": "B98",
+   "left": {
+    "condition": "without",
+    "id": "VYLL"
+   },
+   "right": {
+    "condition": "with",
+    "id": "GNEA"
+   },
+   "sheet": "S87"
+  },
+  {
+   "brief": "B83",
+   "left": {
+    "condition": "with",
+    "id": "REAP"
+   },
+   "right": {
+    "condition": "without",
+    "id": "TZFA"
+   },
+   "sheet": "S88"
+  },
+  {
+   "brief": "B78",
+   "left": {
+    "condition": "without",
+    "id": "EHKV"
+   },
+   "right": {
+    "condition": "with",
+    "id": "CRTG"
+   },
+   "sheet": "S89"
+  },
+  {
+   "brief": "B72",
+   "left": {
+    "condition": "with",
+    "id": "QYJE"
+   },
+   "right": {
+    "condition": "without",
+    "id": "VFJN"
+   },
+   "sheet": "S90"
+  },
+  {
+   "brief": "B77",
+   "left": {
+    "condition": "with",
+    "id": "GPAT"
+   },
+   "right": {
+    "condition": "without",
+    "id": "CZCD"
+   },
+   "sheet": "S91"
+  },
+  {
+   "brief": "B91",
+   "left": {
+    "condition": "with",
+    "id": "DLQP"
+   },
+   "right": {
+    "condition": "without",
+    "id": "SFTA"
+   },
+   "sheet": "S92"
+  },
+  {
+   "brief": "B100",
+   "left": {
+    "condition": "with",
+    "id": "FQAH"
+   },
+   "right": {
+    "condition": "without",
+    "id": "QCXV"
+   },
+   "sheet": "S93"
+  },
+  {
+   "brief": "B75",
+   "left": {
+    "condition": "with",
+    "id": "QHQS"
+   },
+   "right": {
+    "condition": "without",
+    "id": "TWZJ"
+   },
+   "sheet": "S94"
+  },
+  {
+   "brief": "B87",
+   "left": {
+    "condition": "with",
+    "id": "UJHD"
+   },
+   "right": {
+    "condition": "without",
+    "id": "ZSBK"
+   },
+   "sheet": "S95"
+  },
+  {
+   "brief": "B74",
+   "left": {
+    "condition": "without",
+    "id": "PTRQ"
+   },
+   "right": {
+    "condition": "with",
+    "id": "CAAP"
+   },
+   "sheet": "S96"
+  },
+  {
+   "brief": "B88",
+   "left": {
+    "condition": "with",
+    "id": "FNBT"
+   },
+   "right": {
+    "condition": "without",
+    "id": "TBLK"
+   },
+   "sheet": "S97"
+  },
+  {
+   "brief": "B95",
+   "left": {
+    "condition": "without",
+    "id": "JRAZ"
+   },
+   "right": {
+    "condition": "with",
+    "id": "XYSS"
+   },
+   "sheet": "S98"
+  },
+  {
+   "brief": "B79",
+   "left": {
+    "condition": "with",
+    "id": "UZWU"
+   },
+   "right": {
+    "condition": "without",
+    "id": "CJFT"
+   },
+   "sheet": "S99"
+  },
+  {
+   "brief": "B85",
+   "left": {
+    "condition": "without",
+    "id": "STLU"
+   },
+   "right": {
+    "condition": "with",
+    "id": "CMYJ"
+   },
+   "sheet": "S100"
+  },
+  {
+   "brief": "B71",
+   "left": {
+    "condition": "without",
+    "id": "ARUQ"
+   },
+   "right": {
+    "condition": "with",
+    "id": "AKLV"
+   },
+   "sheet": "S101"
+  },
+  {
+   "brief": "B76",
+   "left": {
+    "condition": "with",
+    "id": "PQLQ"
+   },
+   "right": {
+    "condition": "without",
+    "id": "DKSU"
+   },
+   "sheet": "S102"
+  },
+  {
+   "brief": "B97",
+   "left": {
+    "condition": "with",
+    "id": "BXWV"
+   },
+   "right": {
+    "condition": "without",
+    "id": "ZQPN"
+   },
+   "sheet": "S103"
+  },
+  {
+   "brief": "B80",
+   "left": {
+    "condition": "without",
+    "id": "GGTT"
+   },
+   "right": {
+    "condition": "with",
+    "id": "VBUP"
+   },
+   "sheet": "S104"
+  },
+  {
+   "brief": "B96",
+   "left": {
+    "condition": "without",
+    "id": "LCJU"
+   },
+   "right": {
+    "condition": "with",
+    "id": "MFSM"
+   },
+   "sheet": "S105"
+  },
+  {
+   "brief": "B92",
+   "left": {
+    "condition": "without",
+    "id": "DPDB"
+   },
+   "right": {
+    "condition": "with",
+    "id": "QGVM"
+   },
+   "sheet": "S106"
+  },
+  {
+   "brief": "B81",
+   "left": {
+    "condition": "without",
+    "id": "PFKF"
+   },
+   "right": {
+    "condition": "with",
+    "id": "BBSF"
+   },
+   "sheet": "S107"
+  },
+  {
+   "brief": "B90",
+   "left": {
+    "condition": "without",
+    "id": "JKJD"
+   },
+   "right": {
+    "condition": "with",
+    "id": "KTGA"
+   },
+   "sheet": "S108"
+  }
+ ]
+}

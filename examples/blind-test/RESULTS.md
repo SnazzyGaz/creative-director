@@ -1,6 +1,6 @@
 # Blind test results: with and without the skill
 
-Judged by the owner of the work, alone, on 3 Nov 2026: 70 briefs in seven batches, one image per arm per brief, sides and IDs hidden. One judge, so this says what the owner of the work prefers, not what people in general prefer. How the images were made and the known biases: [`README.md`](README.md).
+Judged by the owner of the work, alone, on 3 Nov 2026: 100 briefs in eight batches, one image per arm per brief, sides and IDs hidden. One judge, so this says what the owner of the work prefers, not what people in general prefer. How the images were made and the known biases: [`README.md`](README.md).
 
 ## Result
 
@@ -22,24 +22,27 @@ One judgement per brief (batch 1 shows each pair twice; agreeing picks or the on
 | 7 (B61-B70), infographics only, v0.9.5 | 10 | 3 | 7 | 0 | 7 of 10 for without, p = 0.17 | no clear result; a loss on the count |
 | 6 + 7, infographics | 20 | 7 | 13 | 0 | 13 of 20 for without, p = 0.13 | no clear result; behind on infographics |
 | 3 to 7, with the energy pass | 50 | 29 | 20 | 1 | 29 of 49, p = 0.13 | no clear result |
-| **All** | **70** | **39** | **30** | **1** | **39 of 69, p = 0.17** | **no clear result: well short of the 43-of-70 bar set before batch 7** |
+| All of batches 1 to 7 | 70 | 39 | 30 | 1 | 39 of 69, p = 0.17 | no clear result: well short of the 43-of-70 bar set before batch 7 |
+| 8 (B71-B100), six themes, v0.9.6 | 30 | 20 | 10 | 0 | 20 of 30, p = 0.049 | for the skill: met the 20-of-30 bar set before batch 8 |
+| 3 to 8, with the energy pass | 80 | 49 | 30 | 1 | 49 of 79, p = 0.021 | for the skill, with the caveats below |
+| **All** | **100** | **59** | **40** | **1** | **59 of 99, p = 0.035** | **for the skill: met the 59-of-100 bar set before batch 8** |
 
-**The bar set in advance.** Before batch 4 was judged, the kit README said a clear overall result needs 32 of 50 for one side ([`README.md`](README.md), Known biases). The skill got exactly 32, with 17 against and 1 tie: one-sided p = 0.022. That overall count was the main test at 50 briefs. Before batch 6 was judged, the kit README raised the bar to 37 of 60. With batch 6 the skill stands at 36 to 23 with 1 tie (p = 0.059): **one win short, so the 60-brief result is not clear**, and it should be read that way. The 50-brief result still stands as what was tested then; it does not carry over to infographics. Before batch 7 was judged the bar became 43 of 70; batch 7 went 3 to 7, so all 70 stand at 39 to 30 with 1 tie (p = 0.17), **well short**. The per-batch and combined rows are extra looks at the same data (fifteen rows; a strict Bonferroni cut would be 0.05 / 15 ≈ 0.003); by that standard batch 3 alone (0.020) is not clear, batches 3 to 5 together (0.004) just are, batches 3 to 6 (0.027) and 3 to 7 (0.13) are not. Read the rows as a picture of the trend, not as separate proofs.
+**The bar set in advance.** Before batch 4 was judged, the kit README said a clear overall result needs 32 of 50 for one side ([`README.md`](README.md), Known biases). The skill got exactly 32, with 17 against and 1 tie: one-sided p = 0.022. That overall count was the main test at 50 briefs. Before batch 6 was judged, the kit README raised the bar to 37 of 60. With batch 6 the skill stands at 36 to 23 with 1 tie (p = 0.059): **one win short, so the 60-brief result is not clear**, and it should be read that way. The 50-brief result still stands as what was tested then; it does not carry over to infographics. Before batch 7 was judged the bar became 43 of 70; batch 7 went 3 to 7, so all 70 stand at 39 to 30 with 1 tie (p = 0.17), **well short**. Before batch 8 was judged the kit README set the bar at 59 of 100 overall (p = 0.044; 58 would give 0.067) and 20 of 30 for batch 8 alone. Batch 8 went 20 to 10 (p = 0.049), so all 100 stand at 59 to 40 with 1 tie (p = 0.035): **the bar was met, so the 100-brief result is clear for the skill**, with the caveats below, and only just: one fewer win would have missed it. The per-batch and combined rows are extra looks at the same data (eighteen rows; a strict Bonferroni cut would be 0.05 / 18 ≈ 0.003); by that standard batch 3 alone (0.020) and batch 8 alone (0.049) are not clear, batches 3 to 5 together (0.004) just miss, and batches 3 to 6 (0.027), 3 to 7 (0.13) and 3 to 8 (0.021) are not. The pre-set overall count is the main test; the other rows show the trend, not separate proofs.
 
-**What it means.** After the energy pass, the owner preferred the with-skill version in 22 of 29 decided briefs; before it, 10 of 20. The rise lines up with the rule change, but the briefs, the rules and the judge are not independent (see Caveats), so this is internal evidence for one judge's taste, not research. Batch 6, the first test confined to one category, went the other way (4 to 6 on infographics), which brings batches 3 to 6 to 26 of 39 (p = 0.027) and all 60 to just short of the bar. Batch 7, on v0.9.5's answer to batch 6, lost 3 to 7: **v0.9.5 made infographics worse, not better** (its notes below). On infographics the skill is now 7 to 13 behind; on pictures it still leads.
+**What it means.** After the energy pass, the owner preferred the with-skill version in 22 of 29 decided briefs; before it, 10 of 20. The rise lines up with the rule change, but the briefs, the rules and the judge are not independent (see Caveats), so this is internal evidence for one judge's taste, not research. Batch 6, the first test confined to one category, went the other way (4 to 6 on infographics), which brings batches 3 to 6 to 26 of 39 (p = 0.027) and all 60 to just short of the bar. Batch 7, on v0.9.5's answer to batch 6, lost 3 to 7: **v0.9.5 made infographics worse, not better** (its notes below). On infographics the skill is now 7 to 13 behind; on pictures it still leads. Batch 8, on v0.9.6 and away from infographics, won 20 to 10 across six themes; screens were its weak spot (2 to 3).
 
 **Strength** (1 slight, 2 clear, 3 strong; the owner left some blank):
 
 | Winner | Picks | Slight | Clear | Strong | Not rated |
 |---|---|---|---|---|---|
-| With the skill | 39 | 12 | 14 | 6 | 7 |
-| Without | 30 | 12 | 13 | 0 | 5 |
+| With the skill | 59 | 15 | 31 | 6 | 7 |
+| Without | 40 | 16 | 19 | 0 | 5 |
 
-All six strong picks went to the skill (the sixth a batch 7 recycling process, S69), four of them in batches 4 and 5 (S41, S42, S49, S52). In batches 4 and 5 the skill's 14 wins were 3 slight, 6 clear, 4 strong and 1 not rated; the 6 losses were 3 slight and 3 clear. In batch 6 the skill's 4 wins were 2 slight and 2 clear, and its 6 losses 3 slight and 3 clear. In batch 7 its 3 wins were 1 slight, 1 clear and 1 strong, and its 7 losses 1 slight (a forced pick, S74) and 6 clear. Several picks across all batches were called forced, borderline, close, reluctant or a toss-up (S05, S07, S24, S26, S27, S29, S33, S39, S40, S54, S57, and a tough call and a judgement call in batch 6, S64 and S66).
+All six strong picks went to the skill (the sixth a batch 7 recycling process, S69), four of them in batches 4 and 5 (S41, S42, S49, S52). In batches 4 and 5 the skill's 14 wins were 3 slight, 6 clear, 4 strong and 1 not rated; the 6 losses were 3 slight and 3 clear. In batch 6 the skill's 4 wins were 2 slight and 2 clear, and its 6 losses 3 slight and 3 clear. In batch 7 its 3 wins were 1 slight, 1 clear and 1 strong, and its 7 losses 1 slight (a forced pick, S74) and 6 clear. Several picks across all batches were called forced, borderline, close, reluctant or a toss-up (S05, S07, S24, S26, S27, S29, S33, S39, S40, S54, S57, and a tough call and a judgement call in batch 6, S64 and S66). In batch 8 the skill's 20 wins were 3 slight and 17 clear, and its 10 losses 4 slight and 6 clear; nothing was rated strong or left unrated, and two wins were called forced (S89, S95).
 
-**By medium** (all batches): illustration, picture books, characters and covers 16 with, 2 without, 1 tie; posters and flyers 6 with, 5 without; screens and web heroes 3 with, 4 without; packaging, labels, menus, infographics and notices 14 with, 19 without (batches 6 and 7, all infographics, 7 with, 13 without). The skill's lead is almost all in pictures; on posters, screens and practical print it is about even, and on infographics it is behind.
+**By medium** (all batches): illustration, picture books, characters and covers 26 with, 7 without, 1 tie; posters and flyers 6 with, 5 without; screens and web heroes 5 with, 7 without; packaging, labels, menus, infographics and notices 18 with, 20 without (batches 6 and 7, all infographics, 7 with, 13 without); logos (batch 8 only) 4 with, 1 without. The skill leads on pictures, logos and, in batch 8, packaging; on posters it is about even, and on screens and infographics it is behind.
 
-**Position:** across the 71 judged sheets the owner picked the left image 35 times and the right 35 times, with one tie, so there is no side bias overall. In batch 7 the left image won 8 of 10 (two-sided p ≈ 0.11), with the with-skill image on the left in 5 of the 10, so that batch's split did not come from the sides. The with-skill image sat on the left in 5 of the 10 sheets in each of batches 5, 6 and 7.
+**Position:** across the 101 judged sheets the owner picked the left image 50 times and the right 50 times, with one tie, so there is no side bias overall. In batch 7 the left image won 8 of 10 (two-sided p ≈ 0.11), with the with-skill image on the left in 5 of the 10, so that batch's split did not come from the sides. The with-skill image sat on the left in 5 of the 10 sheets in each of batches 5, 6 and 7. In batch 8 the left image won 15 of 30; the with-skill image was on the left in 15 sheets and won 10 of them, and on the right in 15 and won 10 of those.
 
 ## What the notes said
 
@@ -97,16 +100,37 @@ Brief by brief, the with-skill white was lower in 26, higher in 11 and within 1 
 - **Whites.** All ten with-skill images reached pure white; one of the other side's was dim and warm (B67). The owner added that the whites rule "could allow more warmth depending on context" (S78).
 - **What the winners shared, across batches 6 and 7:** accurate information first; compact, balanced, information-dense layouts; one coherent style; simplified icons for secondary facts; a strong flow between steps; each step or period visibly different; punchy type; warmth; some richness, but neither sterile nor over-illustrated.
 
+**Batch 8: six themes, on v0.9.6.** Thirty new briefs (B71-B100), five in each of six themes, written before any image was made and judged on sheets S79-S108. Every image on both sides is untouched model output. The skill won 20 to 10 (p = 0.049), meeting the 20-of-30 bar set in advance.
+
+| Theme | Briefs | With the skill | Without | Its losses |
+|---|---|---|---|---|
+| Covers | 5 | 4 | 1 | S80 (slight) |
+| Packaging | 5 | 4 | 1 | S91 |
+| Logos | 5 | 4 | 1 | S93 (slight) |
+| Characters and creatures | 5 | 3 | 2 | S97, S108 |
+| Picture-book spreads | 5 | 3 | 2 | S92, S98 (slight) |
+| Screens | 5 | 2 | 3 | S79 (slight), S88, S100 |
+
+A single theme has five pairs, so a clear theme would need 5 of 5 (p = 0.031); none got there, so these rows are pointers, not results.
+
+- **Screens are the weak spot.** The with side lost three of five. The Coldwater web hero lost because the other side "has soul" (S88). The Pacer run summary lost slightly: the with side dropped the "km" the brief asked for, though the owner liked its personality, perhaps too striking (S79). The Quillbox pricing section was "too bland and basic" (S100). The Harbourlight hero was a with-skill win (S107), though even there the other side had the better atmosphere; the with side won by showing the class filled. Sprout's app screen (S86) was the other win. The screens rules (grid, targets, exact text) kept the pieces tidy but not alive.
+- **Too literal, or not suited.** A bear spread lost as too literal (S92); the Brightpath logo was "way literal, not creative" against one too abstract but visually preferred (S93); a kangaroo mascot lost to one better suited to the brief and its context (S97).
+- **Craft slips.** The Snorgle was cute, but the other was better and the with side's sock was broken (S108). In the tortoise spread neither side had the right count; the with side was tighter and suited children, but the other's composition won (S98). A hot-sauce label had good brand type but lost on balance, eye pull and flow (S91). A fungi cover lost slightly to the other's central title (S80).
+- **What the wins named.** A character that explains itself without a character sheet (S81); a picture book that tells the story across the pages, with composition on each page (S82); eye pull, composition and text that reads left to right (S84); a simple logo that sells it, against a busy one with mismatched type (S87); a wrapper theme the owner liked, though its florals read as ingredients rather than branding (S89, forced); a creature equal to the other but better as a stand-alone reference (S95, forced).
+- **Wins with fixes.** A cover's author name lost in the grass, needing contrast (S101); a coffee bag that won though its branding was basic (S102).
+- **Found afterwards by the maker, not the judge.** On the with side: the tortoise spread drew 11 guests and lost the full stop after "cups" (B95); the run summary dropped "km" (B84); the Brightpath wordmark used a capital B where lower case was asked (B100); the honey label had a stray comma (B79, a win); the Snorgle holds the sock rather than chewing it (B90). Exact strings and counts still slip.
+
 ## Caveats
 
 - **Not independent.** The energy pass and the batch 3 briefs were written after reading the owner's notes on batches 1 and 2, by the same bot, for the same judge; the v0.9.3 rules and the batch 4 briefs followed the batch 3 notes. A win in batches 3 to 5 tests those rules on new briefs for this judge, not the skill as first written.
 - **Batch 5 is a replication, not a test of v0.9.4.** It was made on the unchanged v0.9.3 skill, after batch 4 was built but before it was judged, so no rule changed between them. Batch 6 then tested v0.9.4, on infographics only.
 - **The maker saw both arms** while making the images and sheets (the judge did not).
 - **Batch 3 was mostly slight.** 5 of its 8 wins were rated slight, and 2 were not rated. Batches 4 and 5 had more clear and strong wins, but also the two picks the owner called forced (S57) or reluctant (S40).
-- **One sample per arm**, first output kept, so the image model's luck counts: S43 was lost to one broken panel. Ten briefs is a small batch, and 70 is a small test.
+- **One sample per arm**, first output kept, so the image model's luck counts: S43 was lost to one broken panel. Ten briefs is a small batch, five a small theme, and 100 is still a small test.
 - **The briefs gave exact copy** from batch 3 on; that helps both arms but especially the with-skill prompt, which earlier had to use placeholders.
 - **Batches 6 and 7 are one category.** They test infographics only, where the skill's lead was already thin, so their losses say the rules were weakest there, not that the skill got worse elsewhere.
 - **Batch 7 changed the method.** Five with-side pieces had code-drawn charts composited in, so it tested the v0.9.5 workflow, and the pasted-on look may have helped the judge spot that side.
+- **Batch 8 met its bars by one win.** 20 of 30 and 59 of 100 are the smallest counts that pass; one pick the other way and neither would.
 - **One judge.** No other person or outside model has judged yet.
 
 ## Gaps found, and what changed
@@ -146,12 +170,14 @@ v0.9.6 answers the batch 7 gaps, as internal evidence (one judge), untested unti
 - **Energy from structure** (EN-4 rewritten): infographics get a structure pass (layout, type, colour and a focal chart), not more pictures.
 - **Warmth as a named choice** (CV-11): neutral white stays the default for notices, UI, data and clinical pieces; a warm paper is allowed where context, brand, era or mood calls for it, named in the plan; `autocheck.py --warm "reason"` passes it (S78).
 
+Open after batch 8, not yet answered by a rule: screens that are correct but lack soul or atmosphere (S88, S100, S107); exact units, strings, case and counts that slip (B84, B95, B100, B79); ideas that are too literal (S92, S93); and props drawn wrong (B90, S108). Any v0.9.7 change would be internal evidence (one judge) until tested.
+
 ## Files
 
-- `blind-test-key.json` and `blind-test-key-2.json` to `-7.json`: the seven keys, each published after its batch was judged. `sha256sum -c KEY-SHA256.txt` passes for all seven; it also warns about the explanation lines in that file, which is expected.
+- `blind-test-key.json` and `blind-test-key-2.json` to `-8.json`: the eight keys, each published after its batch was judged. `sha256sum -c KEY-SHA256.txt` passes for all eight; it also warns about the explanation lines in that file, which is expected.
 - [`scoring-owner.csv`](scoring-owner.csv): the owner's picks and strengths. The reasons are paraphrased in plain language, and "left" and "right" are replaced with "this one" and "the other". Batch 1's repeat sheets (S10-S16) were left blank, as allowed.
 - [`whites.py`](whites.py): the white measurement above (needs the images, which are not in git).
-- Re-run: `python3 examples/blind-test/score.py --key examples/blind-test/blind-test-key.json --key examples/blind-test/blind-test-key-2.json --key examples/blind-test/blind-test-key-3.json --key examples/blind-test/blind-test-key-4.json --key examples/blind-test/blind-test-key-5.json --key examples/blind-test/blind-test-key-6.json --key examples/blind-test/blind-test-key-7.json examples/blind-test/scoring-owner.csv`
+- Re-run: `python3 examples/blind-test/score.py --key examples/blind-test/blind-test-key.json --key examples/blind-test/blind-test-key-2.json --key examples/blind-test/blind-test-key-3.json --key examples/blind-test/blind-test-key-4.json --key examples/blind-test/blind-test-key-5.json --key examples/blind-test/blind-test-key-6.json --key examples/blind-test/blind-test-key-7.json --key examples/blind-test/blind-test-key-8.json examples/blind-test/scoring-owner.csv`
 
 ## Every judgement
 
@@ -230,3 +256,33 @@ Sheet, brief, medium, the arm the owner picked, strength, and the owner's reason
 | S76 | B70 | wildlife fact sheet | without | 2 | Better design, simplified icons for the sub-information. The other is way over-illustrated, with an unbalanced information presentation. |
 | S77 | B65 | comic-strip how-to | without | 2 | More coherent, though slightly more clinical. |
 | S78 | B67 | timeline infographic | without | 2 | Its framing differentiates the times better; the other reads samey. Also: the whites rule is good but could allow more warmth depending on context. |
+| S79 | B84 | mobile app screen | without | 1 | Informational, with the km as asked; the other has more personality, perhaps too striking. |
+| S80 | B73 | book cover | without | 1 | Both good; a slight preference for its central title. |
+| S81 | B89 | character design | with | 2 | Self-evident without needing a character sheet. |
+| S82 | B94 | picture-book spread | with | 2 | Tells the story better: words across the pages, composition on each page. The other is words, half a wheel and children running off. |
+| S83 | B86 | character design | with | 2 | No reason given. |
+| S84 | B93 | picture-book spread | with | 2 | Better eye pull and composition, with the text reading left to right. |
+| S85 | B99 | logo | with | 2 | No reason given. |
+| S86 | B82 | mobile app screen | with | 2 | No reason given. |
+| S87 | B98 | logo | with | 2 | Good and simple, sells it well; the other is too busy, with mismatched type. |
+| S88 | B83 | web hero | without | 2 | Has soul. |
+| S89 | B78 | chocolate bar wrapper | with | 1 | The other's florals read as branding, as they should; this one's read as ingredients, but its overall theme appeals. A forced pick. |
+| S90 | B72 | album cover | with | 2 | No reason given. |
+| S91 | B77 | hot sauce label | without | 2 | Better balanced, pulls the eye, better flow; the other has good brand type. |
+| S92 | B91 | picture-book spread | without | 2 | The other is too literal. |
+| S93 | B100 | logo | without | 1 | Too abstract, but preferred visually; the other is far too literal, not creative. |
+| S94 | B75 | album cover | with | 2 | No reason given. |
+| S95 | B87 | creature design | with | 1 | Both equal; this one works better as a stand-alone character reference, the other brings in the environment. A forced pick. |
+| S96 | B74 | children's book cover | with | 2 | No reason given. |
+| S97 | B88 | mascot design | without | 2 | Better suited to the brief and its context. |
+| S98 | B95 | picture-book spread | without | 1 | Neither has the right count; the other is tighter and fits children, but this one's composition wins. |
+| S99 | B79 | honey jar label | with | 2 | No reason given. |
+| S100 | B85 | web pricing section | without | 2 | The other is too bland and basic. |
+| S101 | B71 | book cover | with | 2 | The other's author name gets a bit lost in the grass; it needs contrast. |
+| S102 | B76 | coffee bag | with | 1 | Preferred, but the branding is basic. |
+| S103 | B97 | logo | with | 2 | No reason given. |
+| S104 | B80 | shampoo bottle label | with | 2 | No reason given. |
+| S105 | B96 | logo | with | 2 | No reason given. |
+| S106 | B92 | picture-book spread | with | 2 | No reason given. |
+| S107 | B81 | web hero | with | 2 | The other has better atmosphere; this one shows the class filled. |
+| S108 | B90 | creature design | without | 2 | The other is cute, but this one is better; the other's sock is broken too. |

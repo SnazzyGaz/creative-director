@@ -18,6 +18,6 @@ after the owner of the work judged batch 6, also on 3 Nov 2026.
 blind-test-key-7.json covers batch 7 (S69-S78, infographics only, against v0.9.5); its hash was
 committed on 3 Nov 2026 before any judging, and the key was published after the owner of the work judged batch 7, the same day.
 blind-test-key-8.json covers batch 8 (S79-S108, six themes, against v0.9.6); its hash was committed
-on 3 Nov 2026 before any judging, and the key stays unpublished until the owner of the work has judged batch 8.
-`sha256sum -c KEY-SHA256.txt` passes for the seven published keys and reports key 8 as missing until it is
-published (it also warns about these explanation lines, which is expected).
+on 3 Nov 2026 before any judging, and the key was published after the owner of the work judged batch 8, the same day.
+`sha256sum -c KEY-SHA256.txt` passes for all eight keys (it also warns about these explanation lines,
+which is expected).
