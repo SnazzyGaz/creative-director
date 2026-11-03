@@ -6,7 +6,7 @@ One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge).
 |---|---|
 | `judge` | Your name, or the model name and version |
 | `judge_type` | `owner`, `person` or `model` |
-| `sheet` | Already filled: S01 to S38 (S01-S16 batch 1, S17-S28 batch 2, S29-S38 batch 3) |
+| `sheet` | Already filled: S01 to S48 (S01-S16 batch 1, S17-S28 batch 2, S29-S38 batch 3, S39-S48 batch 4) |
 | `left_id`, `right_id` | Already filled: the IDs printed under the two images |
 | `preferred_id` | The ID of the piece you'd hand over for that brief, or `SAME` (or `tie`) if you truly can't choose |
 | `strength` | 1 slight, 2 clear, 3 strong |
@@ -56,3 +56,13 @@ One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge).
 | S36 | WLYL | ZTUL | | | |
 | S37 | WUZJ | QFBP | | | |
 | S38 | QCQK | ERGD | | | |
+| S39 | LLFN | UBVA | | | |
+| S40 | EMDV | DWTW | | | |
+| S41 | LFAN | WWAN | | | |
+| S42 | SMPZ | EEJP | | | |
+| S43 | TUWE | VGHH | | | |
+| S44 | KFLD | TPSH | | | |
+| S45 | TDEN | FQXE | | | |
+| S46 | DUXR | KWCP | | | |
+| S47 | QGDN | SMFE | | | |
+| S48 | MSTH | QETR | | | |

@@ -1,6 +1,6 @@
 # Blind test results: with and without the skill
 
-Judged by the owner of the work, alone, on 3 Nov 2026: 30 briefs, one image per arm per brief, sides and IDs hidden. One judge, so this says what the owner of the work prefers, not what people in general prefer. How the images were made and the known biases: [`README.md`](README.md).
+Judged by the owner of the work, alone, on 3 Nov 2026: 30 briefs, one image per arm per brief, sides and IDs hidden. One judge, so this says what the owner of the work prefers, not what people in general prefer. How the images were made and the known biases: [`README.md`](README.md). Batch 4 (S39-S48, made against v0.9.3) is built but not judged; it is not counted here.
 
 ## Result
 
