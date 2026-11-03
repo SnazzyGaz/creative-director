@@ -16,6 +16,10 @@ Exit code 1 if anything is found. Needs: pip install trimesh rtree manifold3d
 """
 import sys, argparse, itertools
 import numpy as np, trimesh
+try:
+    import scipy  # noqa: F401  trimesh needs it for proximity; without it the checks fail silently
+except ImportError:
+    sys.exit("intersect.py needs scipy: pip install scipy (see tools/requirements.txt)")
 
 def parts(path):
     sc = trimesh.load(path, force='scene')
