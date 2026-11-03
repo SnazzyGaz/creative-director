@@ -81,7 +81,7 @@ Take-overs of bad work, nudges, one small case per common agent failure and the 
 
 ## Blind test
 
-The owner of the work judged with-skill and plain-prompt images side by side without knowing which was which: over 60 briefs the skill won 36 to 23 with one tie (one-sided sign test p = 0.059), one short of the 37-of-60 bar set in advance. One judge, and later batches were not independent of the rule-writing, so read it as one person's taste, not research. Batches, keys and caveats: [`examples/blind-test/RESULTS.md`](examples/blind-test/RESULTS.md).
+The owner of the work judged with-skill and plain-prompt images side by side without knowing which was which: over 70 briefs the skill won 39 to 30 with one tie (one-sided sign test p = 0.17), short of the 43-of-70 bar set in advance: it leads on pictures and is behind on infographics (7 to 13). One judge, and later batches were not independent of the rule-writing, so read it as one person's taste, not research. Batches, keys and caveats: [`examples/blind-test/RESULTS.md`](examples/blind-test/RESULTS.md).
 
 ## Requirements
 

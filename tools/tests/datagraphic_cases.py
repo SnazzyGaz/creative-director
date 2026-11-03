@@ -40,4 +40,19 @@ with tempfile.TemporaryDirectory() as t:
     art = os.path.join(t, 'art.png'); Image.new('RGB', (1200, 900), 'white').save(art)
     out = os.path.join(t, 'comp.png'); dg.composite(art, os.path.join(t, 'vertical.png'), [100, 100, 700, 700], out)
     a = Image.open(out).convert('RGB'); case('composite inside the box', a.getpixel((50, 50)) == (255, 255, 255) and a.size == (1200, 900), True)
+    # 9-10: a donut drawn from the data passes check-donut; one with a slice 8 points off fails
+    cs = ['#5B1F4E', '#1C8C8C', '#E58A2E', '#7FA36B']; vals = [38, 22, 28, 12]
+    out = os.path.join(t, 'donut.png'); r = dg.donut({'values': vals, 'colours': cs, 'bg': '#FFFFFF', 'size': 600}, out)
+    rad = (r['radius'] + r['inner']) / 2; C = [dg.rgb(c) for c in cs]
+    case('donut from data passes', dg.check_donut(out, r['centre'], rad, vals, C), 0)
+    case('donut 8 pts off fails', dg.check_donut(out, r['centre'], rad, [30, 22, 36, 12], C), 1)
+    # 11: a route label placed on the line is moved off it
+    spec2 = dict(spec, labels=[{'text': 'Old Mill', 'at': [.35, .55]}])
+    case('label on the line is moved', dg.route(spec2, os.path.join(t, 'route2.png'))['labels_moved'], 1)
+    # 12-13: a flat white panel pasted on a coloured ground flags; a chart drawn straight on the ground does not
+    g = Image.new('RGB', (900, 700), (230, 200, 150)); d = ImageDraw.Draw(g); d.rectangle([200, 150, 700, 550], fill='white')
+    d.rectangle([300, 300, 350, 500], fill=GREEN); p1 = os.path.join(t, 'panel.png'); g.save(p1)
+    case('pasted white panel flags', dg.check_panel(p1, [200, 150, 700, 550]), 'FLAG')
+    g = Image.new('RGB', (900, 700), (230, 200, 150)); ImageDraw.Draw(g).rectangle([300, 300, 350, 500], fill=GREEN); p2 = os.path.join(t, 'nopanel.png'); g.save(p2)
+    case('chart on the ground passes', dg.check_panel(p2, [200, 150, 700, 550]), 'PASS')
 print(f'{ok}/{n} cases as expected'); sys.exit(0 if ok == n else 1)

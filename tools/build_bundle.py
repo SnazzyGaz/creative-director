@@ -20,7 +20,7 @@ REST = ["core/interaction-flow.md", "core/creative-direction.md", "core/first-pr
         "core/evidence.md", "core/which-modules.md"]
 MODULES = ["technical-drawing", "character", "illustration", "composition", "colour-value", "layout", "typography",
            "brand", "web-ui", "ux", "3d", "aesthetic-critique", "film", "lookbook"]
-EXTRA = {"composition": ["sitting-right.md"], "film": ["edit.md", "story.md", "generated.md", "review.md", "crossover.md"]}   # module files beyond README.md
+EXTRA = {"composition": ["sitting-right.md"], "layout": ["infographics.md"], "film": ["edit.md", "story.md", "generated.md", "review.md", "crossover.md"]}   # module files beyond README.md
 
 
 def version():

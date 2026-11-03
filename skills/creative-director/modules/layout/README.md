@@ -172,8 +172,8 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Source:** CHAR-9; FP-3; BRAND-6; `examples/blind-test/RESULTS.md`.
 
 ### LAY-19. Charts, maps and routes are drawn from the data in code (MUST-BE-RIGHT where numbers or a route carry the message)
-- **What:** Never trust an image model for numbers, bar lengths, scales or route geometry. Draw the chart or route from the data in code (`tools/datagraphic.py`, SVG or matplotlib) and composite it into the art, or generate the art around a reserved empty area and place it there. The art decorates; the data layer is code. A loop route visibly closes at start = finish; every crossing of water or a road shows a bridge.
-- **Why:** Distorted bars change how big readers judge a difference (truncated axes, [S336]). In batch 6 neither generated bar chart was to scale: the with-skill one overstated the small bars by up to 12.5 points (B53); a nutrition sheet's bars were up to 4.9 points off (B60); neither fun-run map closed its loop or showed its bridge (S60).
+- **What:** Never trust an image model for numbers, bar lengths, scales or route geometry. Draw the chart or route from the data in code (`tools/datagraphic.py`, SVG or matplotlib), styled as part of the piece, never as a panel pasted on: the integration recipes and checks are INF-1 in [`infographics.md`](infographics.md), which every infographic loads. A loop route visibly closes at start = finish; every crossing of water or a road shows a bridge.
+- **Why:** Distorted bars change how big readers judge a difference [S336]. In batch 6 no generated chart was to scale (small bars overstated by up to 12.5 points) and neither route map closed its loop or showed its bridge; in batch 7 a generated donut was 8 points off.
 - **Check:** `datagraphic.py check-bars` on the final image: every bar within 2% of its data share (`--scale-max` for a visible track). Routes: the tool reports a closed loop and bridges = crossings; labels sit by their places, in order.
 - **Fix:** Redraw from the data; never edit generated bars.
 - **Grade:** Well supported for honest scales [S336]; the generator failures are internal evidence.

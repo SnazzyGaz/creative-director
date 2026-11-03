@@ -91,7 +91,7 @@ An annotated reading list behind `modules/composition/`, `modules/colour-value/`
 - **Whose taste:** Vessel et al. 2018 [S251].
 - **Stopping power (ads, eye-tracking):** Pieters & Wedel 2004 [S333]; Pieters, Wedel & Batra 2010 [S332], structured design versus pixel clutter. Energy pass (`core/energy-pass.md`).
 - **Category cues and contrast on colour:** Piqueras-Fiszman & Spence 2015 [S334], how packaging colour and pictures set taste expectations; Somers [S335], black or white text on orange and red (practitioner). Energy pass items 3 and 8; CV-10.
-- **Honest charts:** Pandey et al. 2015 [S336], how truncated axes and distorted areas change what readers judge. LAY-19, `tools/datagraphic.py`.
+- **Honest charts:** Pandey et al. 2015 [S336], how truncated axes and distorted areas change what readers judge. Cleveland and McGill 1984 [S337] and Spence and Lewandowsky 1991 [S338] on choosing bars or pies. LAY-19, INF-4, `tools/datagraphic.py`.
 
 ## 6a. Film and the moving image (v0.9.0)
 

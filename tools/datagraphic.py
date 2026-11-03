@@ -3,7 +3,10 @@ that bar lengths match the data (LAY-19). Never trust an image model for numbers
 
   python3 tools/datagraphic.py bars SPEC.json OUT.png        # bar chart from data (transparent unless "bg" is set)
   python3 tools/datagraphic.py route SPEC.json OUT.png       # closed loop route; a bridge wherever it crosses the river
+  python3 tools/datagraphic.py donut SPEC.json OUT.png       # part-of-whole donut (at most 6 slices), angles exactly from the data
   python3 tools/datagraphic.py composite ART LAYER --box x0,y0,x1,y1 OUT.png   # fit LAYER into a reserved box
+  python3 tools/datagraphic.py check-donut IMG --centre cx,cy --radius R --values 38,22 --colour R,G,B [--colour ...]
+  python3 tools/datagraphic.py check-panel IMG --box x0,y0,x1,y1   # FLAG a flat panel pasted behind the chart (INF-1)
   python3 tools/datagraphic.py check-bars IMG --box x0,y0,x1,y1 --values 42,58,71 --colour R,G,B [--colour ...]
                                           [--orientation vertical|horizontal] [--scale-max V] [--tol 0.02]
 
@@ -17,6 +20,15 @@ route spec: {"width": 1600, "height": 900, "points": [[0.1, 0.6], ...] (0-1, in 
   "start_label": "Start / Finish", "arrows": 6, "font": ..., "text_size": 28, "river_colour": "#64B5F6" (draws the river)}
   The route is drawn as one smooth closed loop through the points, so start = finish by construction, with a
   chequered start/finish marker and direction arrows. Every place the loop crosses the river gets a bridge.
+donut spec: {"values": [38, 22, 40], "colours": [...], "labels": [...], "value_labels": [...], "size": 900,
+  "inner": 0.55, "gap_colour": null, "start": 0 (degrees clockwise from 12 o'clock), "font": ..., "text_size": 34}
+  Slices run clockwise from "start"; each spans exactly value / total of 360 degrees. Labels sit outside the ring.
+check-donut: samples a circle of --radius round --centre and measures each colour's share of the ring. PASS when
+  every share is within --tol (default 0.02) of value / total.
+check-panel: compares a thin band just inside the box with one just outside. A flat, near-uniform inner band that
+  differs from its surroundings is a panel or white box pasted behind the chart: FLAG (exit 0; it is a design check).
+route: labels that would cross the line are moved off it (reported as "labels clear of the route").
+bars spec also takes "corner" (px, rounds the bar ends) to match the piece's corner style.
 check-bars: in the box, finds bars of the given colour(s) and measures each one's length from its base. PASS when
   every bar's length relative to the longest matches value / largest value within --tol (default 0.02, i.e. 2% of
   the longest bar); with --scale-max, the lengths are also checked against the box length (the box spans 0 to V).
@@ -44,6 +56,10 @@ def rgb(c):
 def text_c(d, xy, s, f, fill, anchor):
     d.text(xy, s, font=f, fill=fill, anchor=anchor)
 
+def bar(d, xy, fill, r):
+    r = min(int(r), int((xy[2] - xy[0]) // 2), int((xy[3] - xy[1]) // 2))
+    d.rounded_rectangle(xy, radius=r, fill=fill) if r > 0 else d.rectangle(xy, fill=fill)
+
 def bars(spec, out):
     v = [float(x) for x in spec["values"]]; n = len(v)
     W, H = spec.get("width", 1200), spec.get("height", 600)
@@ -61,7 +77,7 @@ def bars(spec, out):
         for i, val in enumerate(v):
             cx = x0 + slot * (i + .5); a, b = int(round(cx - bw / 2)), int(round(cx + bw / 2))
             if spec.get("track"): d.rectangle([a, y_top, b, y_base], fill=rgb(spec["track"]))
-            h = int(round(L * val / top)); d.rectangle([a, y_base - h, b, y_base], fill=cols[i % len(cols)])
+            h = int(round(L * val / top)); bar(d, [a, y_base - h, b, y_base], cols[i % len(cols)], spec.get("corner", 0))
             boxes.append([a, y_base - h, b, y_base])
             text_c(d, (cx, y_base - h - ts * .4), vl[i], fb, tc, "ms")
             text_c(d, (cx, y_base + ts * .5), labels[i], f, tc, "mt")
@@ -74,7 +90,7 @@ def bars(spec, out):
         for i, val in enumerate(v):
             cy = y0 + slot * (i + .5); a, b = int(round(cy - bh / 2)), int(round(cy + bh / 2))
             if spec.get("track"): d.rectangle([x_base, a, x_end, b], fill=rgb(spec["track"]))
-            w = int(round(L * val / top)); d.rectangle([x_base, a, x_base + w, b], fill=cols[i % len(cols)])
+            w = int(round(L * val / top)); bar(d, [x_base, a, x_base + w, b], cols[i % len(cols)], spec.get("corner", 0))
             boxes.append([x_base, a, x_base + w, b])
             text_c(d, (0, cy), labels[i], f, tc, "lm")
             text_c(d, (W, cy), vl[i], fb, tc, "rm")
@@ -134,14 +150,85 @@ def route(spec, out):
     f = font(spec.get("font"), ts, bold=True); tc = rgb(spec.get("text", "#1F2A33"))
     labs = list(spec.get("labels", []))
     if spec.get("start_label"): labs.append({"text": spec["start_label"], "at": [spec["points"][0][0], spec["points"][0][1] - 3.2 * lw / H]})
+    moved = 0
+    def hits(x, y, w):   # does the label box (with padding) come within half a line of the route?
+        return any(x - w / 2 - lw <= px <= x + w / 2 + lw and y - ts / 2 - lw <= py <= y + ts / 2 + lw for px, py in path)
     for lab in labs:
         x, y = S(lab["at"]); w = d.textlength(lab["text"], font=f); p = ts * .35
+        if hits(x, y, w):
+            for k in range(1, 12):
+                cand = [(x, y - k * ts * .5), (x, y + k * ts * .5), (x - k * ts * .5, y), (x + k * ts * .5, y)]
+                cand = [c for c in cand if w / 2 + p <= c[0] <= W - w / 2 - p and ts <= c[1] <= H - ts and not hits(c[0], c[1], w)]
+                if cand: x, y = cand[0]; moved += 1; break
+        x = min(max(x, w / 2 + p), W - w / 2 - p)   # keep the whole label inside the layer
         d.rounded_rectangle([x - w / 2 - p, y - ts / 2 - p, x + w / 2 + p, y + ts / 2 + p], radius=int(p), fill=(255, 255, 255))
         text_c(d, (x, y), lab["text"], f, tc, "mm")
     im.save(out)
     closed = math.hypot(path[0][0] - path[-1][0], path[0][1] - path[-1][1]) < 1
-    print(f"route: closed loop {'yes' if closed else 'NO'} (start = finish), {len(crossings)} river crossing(s), {len(crossings)} bridge(s) drawn")
-    return {"closed": closed, "crossings": len(crossings), "bridges": len(crossings)}
+    clear = sum(not hits(*S(l["at"]), d.textlength(l["text"], font=f)) for l in labs)
+    print(f"route: closed loop {'yes' if closed else 'NO'} (start = finish), {len(crossings)} river crossing(s), {len(crossings)} bridge(s) drawn, "
+          f"{moved} label(s) moved off the line")
+    return {"closed": closed, "crossings": len(crossings), "bridges": len(crossings), "labels_moved": moved}
+
+def donut(spec, out):
+    v = [float(x) for x in spec["values"]]; tot = sum(v); n = len(v)
+    if n > 6: print("donut: more than 6 slices; use bars (INF-4)")
+    S_ = spec.get("size", 900); ts = spec.get("text_size", max(14, S_ // 26)); pad = spec.get("pad", ts * 5)
+    W = H = S_ + 2 * pad; cx = cy = W / 2; R_ = S_ / 2; ri = R_ * spec.get("inner", 0.55)
+    cols = [rgb(c) for c in spec.get("colours", ["#2E7D32"])]; tc = rgb(spec.get("text", "#222222"))
+    im = Image.new("RGBA", (int(W), int(H)), rgb(spec["bg"]) + (255,) if spec.get("bg") else (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    f = font(spec.get("font"), ts); fb = font(spec.get("bold_font"), ts, bold=True)
+    labels = spec.get("labels", [""] * n); vl = spec.get("value_labels", [""] * n)
+    a0 = spec.get("start", 0); slices = []
+    for i, val in enumerate(v):
+        a1 = a0 + 360 * val / tot
+        d.pieslice([cx - R_, cy - R_, cx + R_, cy + R_], a0 - 90, a1 - 90, fill=cols[i % len(cols)])
+        mid = math.radians((a0 + a1) / 2); lx, ly = cx + (R_ + ts * 1.6) * math.sin(mid), cy - (R_ + ts * 1.6) * math.cos(mid)
+        anc = "lm" if math.sin(mid) > 0.25 else "rm" if math.sin(mid) < -0.25 else "mm"
+        text_c(d, (lx, ly - ts * .55), vl[i], fb, tc, anc); text_c(d, (lx, ly + ts * .6), labels[i], f, tc, anc)
+        slices.append([a0, a1]); a0 = a1
+    hole = spec.get("hole")   # the ground colour shows through the hole; transparent by default
+    d.ellipse([cx - ri, cy - ri, cx + ri, cy + ri], fill=rgb(hole) + (255,) if hole else (0, 0, 0, 0))
+    if spec.get("gap_colour"):
+        for a, _ in slices:
+            r_ = math.radians(a); d.line([(cx + ri * math.sin(r_), cy - ri * math.cos(r_)), (cx + R_ * math.sin(r_), cy - R_ * math.cos(r_))], fill=rgb(spec["gap_colour"]), width=max(3, ts // 6))
+    im.save(out)
+    rep = {"centre": [cx, cy], "radius": R_, "inner": ri, "slices": slices, "values": v}
+    json.dump(rep, open(out + ".json", "w"), indent=1)
+    print(f"donut: {n} slices, each exactly value / {tot:g} of 360 degrees; geometry in {out}.json"); return rep
+
+def check_donut(img, centre, radius, values, colours, tol=0.02, ctol=60):
+    a = np.asarray(Image.open(img).convert("RGB")).astype(int); cx, cy = centre; cnt = [0] * len(colours); N = 3600
+    for k in range(N):
+        t_ = 2 * math.pi * k / N; x, y = int(round(cx + radius * math.sin(t_))), int(round(cy - radius * math.cos(t_)))
+        if not (0 <= x < a.shape[1] and 0 <= y < a.shape[0]): continue
+        dist = [np.abs(a[y, x] - np.array(c)).sum() for c in colours]; j = int(np.argmin(dist))
+        if dist[j] < ctol: cnt[j] += 1
+    tot, vt = sum(cnt), sum(values)
+    if not tot: print("FAIL  LAY-19  no slice colours found on that circle: check --centre, --radius and --colour"); return 1
+    worst = 0; rows = []
+    for v, c in zip(values, cnt):
+        got, exp = c / tot, v / vt; worst = max(worst, abs(got - exp))
+        rows.append(f"    {v:g}: {got * 100:.1f}% of the ring (data {exp * 100:.1f}%, {(got - exp) * 100:+.1f} pts)")
+    st = "PASS" if worst <= tol else "FAIL"
+    print(f"{st}  LAY-19  slice shares against the data: worst error {worst * 100:.1f} pts (tolerance {tol * 100:g})"); print("\n".join(rows))
+    return 0 if st == "PASS" else 1
+
+def check_panel(img, box, band=8):
+    a = np.asarray(Image.open(img).convert("RGB")).astype(float); x0, y0, x1, y1 = box; H, W = a.shape[:2]
+    def ring(o):   # pixels on a band of width `band` at offset o (negative = inside the box)
+        X0, Y0, X1, Y1 = max(0, x0 + o), max(0, y0 + o), min(W, x1 - o), min(H, y1 - o)
+        m = np.zeros((H, W), bool); m[Y0:Y1, X0:X1] = True
+        X0b, Y0b, X1b, Y1b = X0 + band, Y0 + band, X1 - band, Y1 - band
+        if X1b > X0b and Y1b > Y0b: m[Y0b:Y1b, X0b:X1b] = False
+        return a[m]
+    inner, outer = ring(band // 2), ring(-band * 2)
+    if not len(inner) or not len(outer): print("SKIP  INF-1  box at the image edge"); return 0
+    sd = float(inner.std(0).mean()); diff = float(np.abs(np.median(inner, 0) - np.median(outer, 0)).sum())
+    flat = sd < 6 and diff > 30
+    print(f"{'FLAG' if flat else 'PASS'}  INF-1  chart ground against its surroundings: inner band spread {sd:.1f}, colour step {diff:.0f} "
+          f"({'a flat panel pasted behind the chart: style the chart into the piece' if flat else 'no pasted panel edge'})")
+    return "FLAG" if flat else "PASS"
 
 def composite(art, layer, box, out):
     A = Image.open(art).convert("RGBA"); Lr = Image.open(layer).convert("RGBA"); x0, y0, x1, y1 = box
@@ -191,17 +278,24 @@ def check_bars(img, box, values, colours, orientation="vertical", scale_max=None
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0]); sp = ap.add_subparsers(dest="cmd", required=True)
-    for c in ("bars", "route"):
+    for c in ("bars", "route", "donut"):
         p = sp.add_parser(c); p.add_argument("spec"); p.add_argument("out")
     p = sp.add_parser("composite"); p.add_argument("art"); p.add_argument("layer"); p.add_argument("--box", required=True); p.add_argument("out")
     p = sp.add_parser("check-bars"); p.add_argument("img"); p.add_argument("--box", required=True); p.add_argument("--values", required=True)
     p.add_argument("--colour", action="append", required=True); p.add_argument("--orientation", default="vertical", choices=["vertical", "horizontal"])
     p.add_argument("--scale-max", type=float); p.add_argument("--tol", type=float, default=0.02); p.add_argument("--colour-tol", type=int, default=60)
+    p = sp.add_parser("check-donut"); p.add_argument("img"); p.add_argument("--centre", required=True); p.add_argument("--radius", type=float, required=True)
+    p.add_argument("--values", required=True); p.add_argument("--colour", action="append", required=True); p.add_argument("--tol", type=float, default=0.02)
+    p = sp.add_parser("check-panel"); p.add_argument("img"); p.add_argument("--box", required=True)
     a = ap.parse_args(argv); box = lambda s: [int(float(x)) for x in s.split(",")]
     if a.cmd == "bars": bars(json.load(open(a.spec)), a.out); return 0
     if a.cmd == "route": r = route(json.load(open(a.spec)), a.out); return 0 if r["closed"] else 1
     if a.cmd == "composite": composite(a.art, a.layer, box(a.box), a.out); return 0
+    if a.cmd == "donut": donut(json.load(open(a.spec)), a.out); return 0
+    if a.cmd == "check-panel": check_panel(a.img, box(a.box)); return 0
     cols = [rgb(c) if c.startswith("#") else tuple(int(v) for v in c.split(",")) for c in a.colour]
+    if a.cmd == "check-donut":
+        return check_donut(a.img, [float(v) for v in a.centre.split(",")], a.radius, [float(v) for v in a.values.split(",")], cols, a.tol)
     return check_bars(a.img, box(a.box), [float(v) for v in a.values.split(",")], cols, a.orientation, a.scale_max, a.tol, a.colour_tol)
 
 if __name__ == "__main__":

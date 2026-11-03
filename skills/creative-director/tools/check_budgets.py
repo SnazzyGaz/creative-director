@@ -42,6 +42,8 @@ LOADS = {  # typical loads, as listed in core/which-modules.md
         "modules/technical-drawing/README.md", "modules/illustration/README.md"],
     "poster remake (first-principles + layout + typography + aesthetic)": ["core/first-principles.md",
         "modules/layout/README.md", "modules/typography/README.md", "modules/aesthetic-critique/README.md"],
+    "infographic (layout + infographics + typography + illustration)": ["modules/layout/README.md", "modules/layout/infographics.md",
+        "modules/typography/README.md", "modules/illustration/README.md"],
     "video review (film README + story + review)": ["modules/film/README.md", "modules/film/story.md", "modules/film/review.md"],
     "full video review (+ edit.md + generated.md)": ["modules/film/README.md", "modules/film/story.md",
         "modules/film/review.md", "modules/film/edit.md", "modules/film/generated.md"],

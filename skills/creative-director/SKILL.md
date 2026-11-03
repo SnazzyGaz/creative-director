@@ -4,13 +4,13 @@ description: 'Judge and improve visual work (generated images, illustrations, te
 license: MIT (see LICENSE)
 metadata:
   author: Garyck Arntzen
-  version: "0.9.5"
+  version: "0.9.6"
   repository: https://github.com/SnazzyGaz/creative-director
 ---
 
 # Creative director
 
-Design judgement for any AI agent (Cursor, Claude, Codex, Copilot, Gemini, ChatGPT, Grok Bot and others) that makes or reviews visual work: images, drawings, 3D renders, web and app UI, UX flows, posters, slides, type. Cited, checkable rules plus a light-touch render-critique-fix loop. Taste calls stay with the owner of the work.
+Design judgement for any AI agent that makes or reviews visual work: images, drawings, 3D renders, web and app UI, UX flows, posters, slides, type. Cited, checkable rules plus a light-touch render-critique-fix loop. Taste calls stay with the owner of the work.
 
 ## When to use it
 Whenever you make or review something visual, or the user says `+ creative director` (self-check), `consult creative director` (critique only), `creative director: direct this` (start from the brief), hands over work with no specific ask, says "just fix it", or asks for a redo, rejig or reimagining from scratch.
@@ -28,7 +28,7 @@ Whenever you make or review something visual, or the user says `+ creative direc
 | `illustration` | a picture people look at: focus, shape, edges, story, generated-image look |
 | `composition` | balance, focus, unity, space, beauty; "it feels off"; the pre-delivery *Sitting right* pass (`sitting-right.md`) |
 | `colour-value` | a value plan, palette or colour that looks wrong in place |
-| `layout` | a fixed frame: social card, poster, cover, slide, print |
+| `layout` | a fixed frame: social card, poster, cover, slide, print, infographics |
 | `typography` | words: type choice, scale, measure, leading, setting |
 | `brand` | a name, logo or brand guide (official marks: BRAND-4, BRAND-8) |
 | `web-ui` | a screen: grid, components, contrast, colour roles |
@@ -58,11 +58,11 @@ For small contexts, `lite/CREATIVE-DIRECTOR-LITE.md` holds the loop, core rules 
 - **Tone:** neutral and factual, like a thesis supervisor; no praise padding, no harshness. Label your own verdicts as self-judged. Where no rule settles it, ask the owner.
 
 ## Tools (optional)
-`tools/` has small Python scripts (Pillow, NumPy): the auto check, look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, anatomy crops, 3D intersections. See `tools/README.md`. If you can't run code, do the checks by eye and say so.
+`tools/` has small Python scripts (Pillow, NumPy): the auto check, look tests, contrast, screenshots, vanishing points, ellipses, grid, whitespace, balance, anatomy crops, charts, 3D intersections. See `tools/README.md`. If you can't run code, do the checks by eye and say so.
 
 ## Files in this skill
 `core/` (principles and critique-loop always, the rest as above), `modules/<name>/README.md` (as above and `core/which-modules.md`), `lite/CREATIVE-DIRECTOR-LITE.md` (short version for small contexts), `tools/` (optional Python: Pillow, NumPy; Playwright for page checks; `pip install -r tools/requirements.txt`), `fonts/CATALOGUE.md` (theme catalogue of free fonts; the font files are in `creative-director-fonts.zip` on the repo's assets-v1 release, or on Google Fonts), `SOURCES.md`, `BIBLIOGRAPHY.md`. Worked examples and lookbook image sheets live in the repo, not here: https://github.com/SnazzyGaz/creative-director
 
 **Needs:** a model that can see images, and a way to render or screenshot the work at real size. Without vision, say the review is rules-only.
 
-This folder is generated from the repo root by `tools/package_skill.py` (version 0.9.5). To change a rule, edit the repo's root files, not this copy.
+This folder is generated from the repo root by `tools/package_skill.py` (version 0.9.6). To change a rule, edit the repo's root files, not this copy.

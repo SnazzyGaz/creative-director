@@ -1,6 +1,6 @@
 # AGENTS.md — creative-director
 
-Design judgement for any AI agent (Cursor, Claude, Codex, Copilot, Gemini, ChatGPT, Grok Bot and others) that makes or reviews visual work: images, drawings, 3D renders, web and app UI, UX flows, posters, slides, type. Cited, checkable rules plus a light-touch render-critique-fix loop. Taste calls stay with the owner of the work.
+Design judgement for any AI agent that makes or reviews visual work: images, drawings, 3D renders, web and app UI, UX flows, posters, slides, type. Cited, checkable rules plus a light-touch render-critique-fix loop. Taste calls stay with the owner of the work.
 
 ## When to use it
 Whenever you make or review something visual, or the user says `+ creative director` (self-check), `consult creative director` (critique only), `creative director: direct this` (start from the brief), hands over work with no specific ask, says "just fix it", or asks for a redo, rejig or reimagining from scratch.
@@ -18,7 +18,7 @@ Whenever you make or review something visual, or the user says `+ creative direc
 | `illustration` | a picture people look at: focus, shape, edges, story, generated-image look |
 | `composition` | balance, focus, unity, space, beauty; "it feels off"; the pre-delivery *Sitting right* pass (`sitting-right.md`) |
 | `colour-value` | a value plan, palette or colour that looks wrong in place |
-| `layout` | a fixed frame: social card, poster, cover, slide, print |
+| `layout` | a fixed frame: social card, poster, cover, slide, print, infographics |
 | `typography` | words: type choice, scale, measure, leading, setting |
 | `brand` | a name, logo or brand guide (official marks: BRAND-4, BRAND-8) |
 | `web-ui` | a screen: grid, components, contrast, colour roles |
@@ -48,4 +48,4 @@ For small contexts, `lite/CREATIVE-DIRECTOR-LITE.md` holds the loop, core rules 
 - **Tone:** neutral and factual, like a thesis supervisor; no praise padding, no harshness. Label your own verdicts as self-judged. Where no rule settles it, ask the owner.
 
 ## Tools (optional)
-`tools/` has small Python scripts (Pillow, NumPy): the auto check, look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, anatomy crops, 3D intersections. See `tools/README.md`. If you can't run code, do the checks by eye and say so.
+`tools/` has small Python scripts (Pillow, NumPy): the auto check, look tests, contrast, screenshots, vanishing points, ellipses, grid, whitespace, balance, anatomy crops, charts, 3D intersections. See `tools/README.md`. If you can't run code, do the checks by eye and say so.

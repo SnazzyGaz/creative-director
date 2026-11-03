@@ -28,6 +28,8 @@ CASES = [
     ("cream ground flags CV-11", "whites-cream.png", [], {"whites": "FLAG"}, 0),
     ("white box on neutral white passes", "whites-neutral.png", ["--white-box", "20,600,580,780"], {"whites": "PASS"}, 0),
     ("white box on cream fails", "whites-cream.png", ["--white-box", "20,600,580,780"], {"whites": "FAIL"}, 1),
+    ("cream named as a warm choice passes", "whites-cream.png", ["--warm", "heritage market"], {"whites": "PASS"}, 0),
+    ("grey ground still flags with --warm", "whites-grey.png", ["--warm", "cosy"], {"whites": "FLAG"}, 0),
 ]
 PAGE_CASES = [
     ("good page: no FAIL", "good.html", [], {"contrast": "PASS", "text-size": "PASS", "type-sizes": "PASS", "measure": "PASS", "leading": "PASS", "spacing-scale": "PASS", "targets": "PASS"}, 0),

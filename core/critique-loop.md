@@ -15,7 +15,7 @@ Why bother: appeal is judged in about 50 ms [S36]; high visual complexity is lik
 Only these block delivery; everything else is a default.
 - **Construction:** one horizon and consistent perspective, ellipses, proportion, one key light (TD-PER, TD-ELL, TD-PRO, TD-LIT).
 - **Bodies:** a clean anatomy pass (CHAR-9) when a person, hand or animal is in frame; animal counts (CHAR-10); the MUST-BE-RIGHT lines in CHAR-2 to CHAR-7.
-- **Fixed frames:** safe area (LAY-5), legible at feed size (LAY-6), print bleed and resolution (LAY-9), text over images (LAY-15), type under the size floor (TYPE-3).
+- **Fixed frames:** safe area (LAY-5), legible at feed size (LAY-6), print bleed and resolution (LAY-9), text over images (LAY-15), type under the size floor (TYPE-3), data and routes drawn true (LAY-19), every required line and safe steps (INF-6).
 - **Screens and flows:** contrast (UI-6), text resize (UI-10), the main flow completes (UX-1).
 - **3D:** builds clean, right size and way up (3D-1, 3D-2).
 - **Moving image:** no flashing above the threshold (FILM-ACC-1); one key direction within a continuous scene (FILM-LIT-1); for generated video, identity, anatomy on sampled frames and no invented text (FILM-GEN-2, -3, -8).

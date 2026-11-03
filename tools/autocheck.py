@@ -15,6 +15,8 @@ Balance and placement results are never FAIL and never suggest centring (COMP-19
 Exit 1 if any check FAILs. --out DIR writes report.txt, report.json and the screenshots and sheets.
 
 Whites (CV-11): the lightest 0.5% is checked for a near-neutral white (FLAG only), or --white-box areas are measured (FAIL).
+  --warm "reason" names a planned warm white (bakery, heritage, food, children's): a warm, light paper then passes as that choice;
+  a dim, grey or cool cast still flags.
 Reuses: contrast.py (WCAG ratio), whitespace.py (LAY-10), balance.py (COMP-19). Needs Pillow and numpy;
 page mode needs playwright (`pip install playwright && playwright install chromium`)."""
 import argparse, contextlib, io, json, math, os, pathlib, re, sys, tempfile
@@ -160,6 +162,7 @@ def check_print(path, spec):
                "at least 300 ppi at final printed size (LAY-9)", "Re-render at size; don't upsample." if ppi < 300 else "", blocker=True)
 
 WHITE_MIN, WHITE_SPREAD, TOP_SPREAD = 248, 8, 12   # CV-11, self-chosen from the blind-test images (examples/blind-test/whites.py)
+WARM_MIN, WARM_SPREAD = 228, 45   # CV-11 named warm exception: light paper with a warm (red over blue) cast, self-chosen
 
 def white_point(a):
     """Lightest 0.5% of an RGB array (0-255): luma at the 99.5th percentile (Rec. 601 weights, as PIL 'L'),
@@ -168,7 +171,7 @@ def white_point(a):
     t = float(np.percentile(Y, 99.5)); top = a[Y >= t]
     return t, float(np.median(top.max(1) - top.min(1))), float(np.median(top[:, 2] - top[:, 0]))
 
-def check_whites(path, boxes=()):
+def check_whites(path, boxes=(), warm=None):
     """CV-11: whites mean white. --white-box areas meant to be white: FAIL if dim or tinted; otherwise a FLAG on the lightest 0.5%."""
     a = np.asarray(Image.open(path).convert("RGB")).astype(float)
     if boxes:
@@ -188,6 +191,12 @@ def check_whites(path, boxes=()):
                        "Ask for plain neutral white in the prompt or file (no cream, ivory or warm white unless the brief wants it), or lift and neutralise that area." if bad else "") | {"boxes": res}
     t, spread, br = white_point(a)
     st = "FLAG" if t < WHITE_MIN or spread > TOP_SPREAD else "PASS"
+    if warm and st == "FLAG":
+        ok = t >= WARM_MIN and spread <= WARM_SPREAD and br < 0
+        return chk("whites", "Lightest area: planned warm white?", "CV-11", "PASS" if ok else "FLAG",
+                   f"lightest 0.5%: luma {t:.0f}, channel spread {spread:.0f}, blue minus red {br:+.0f}; warm white named in the plan: {warm}",
+                   f"warm exception: luma >= {WARM_MIN}, spread <= {WARM_SPREAD}, warm cast (blue minus red < 0) (self-chosen)",
+                   "A planned warm paper, light enough." if ok else "FLAG: the warm white came out dim, grey or cool; lift it or choose neutral white.")
     return chk("whites", "Lightest area: neutral white?", "CV-11", st,
                f"lightest 0.5%: luma {t:.0f}, channel spread {spread:.0f}, blue minus red {br:+.0f}",
                f"luma >= {WHITE_MIN}, spread <= {TOP_SPREAD} (self-chosen); only for pieces meant to have a white",
@@ -204,7 +213,7 @@ IMAGE_SKIPS = [
 
 def run_image(path, a, out):
     checks = [check_whitespace(path, a.intended, a.axis, out and str(out / "whitespace.png")),
-              check_balance(path, out and str(out / "balance.png")), check_edges_image(path), check_whites(path, a.white_box)]
+              check_balance(path, out and str(out / "balance.png")), check_edges_image(path), check_whites(path, a.white_box, a.warm)]
     tb = check_text_boxes(path, a.text_box) if a.text_box else None
     if tb: checks.insert(0, tb)
     else: checks.insert(0, chk("contrast", "Text contrast", "UI-6, LAY-15", "SKIP", "", "",
@@ -482,6 +491,7 @@ def main():
     ap.add_argument("--intended", default="", help="y ranges of deliberate space for LAY-10, e.g. 300-520")
     ap.add_argument("--axis", choices=["left", "right"], help="declared flush-left/right layout (LAY-10)")
     ap.add_argument("--white-box", action="append", default=[], help="image mode: x0,y0,x1,y1 around an area meant to be white (CV-11)")
+    ap.add_argument("--warm", help="image mode: the reason a warm white or paper was chosen (CV-11 named exception), e.g. 'heritage market'")
     a = ap.parse_args()
     a.intended = [tuple(int(v) for v in s.split("-")) for s in a.intended.split(",") if s]
     results = []
