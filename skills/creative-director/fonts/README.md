@@ -6,7 +6,7 @@
 
 - **[CATALOGUE.md](CATALOGUE.md):** per family, its themes, licence, axes or weights, what it's good for, what to avoid and what it pairs with. Same data as [`catalogue.json`](catalogue.json) for scripts.
 - **Specimens:** one sheet per theme in [`specimens/`](specimens/) (sample line, weight range, pangram), plus the overview above.
-- **Files:** `fonts/<theme>/<family>/`, each folder with its font files (variable versions where they exist) and its licence. Instrument Sans, used for the README images, stays in `docs/assets/src/fonts/` and is listed in the catalogue too.
+- **Files:** `fonts/<theme>/<family>/`, each folder with its licence in git. The font files themselves (variable versions where they exist) are in `creative-director-fonts.zip` on the [assets-v1 release](https://github.com/SnazzyGaz/creative-director/releases/tag/assets-v1) to keep clones small; `python3 tools/fetch_assets.py` unpacks them into these folders. Every family is also on Google Fonts under the same name. Instrument Sans, used for the README images, stays in `docs/assets/src/fonts/` and is listed in the catalogue too.
 
 ## How to pick
 

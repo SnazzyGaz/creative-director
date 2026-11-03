@@ -29,7 +29,7 @@ DESC = ("Judge and improve visual work (generated images, illustrations, technic
         "\"+ creative director\", \"consult creative director\" or \"creative director: direct this\", or asks to redo, rejig or reimagine "
         "a piece from scratch (step back, brief from first principles, 2-3 concepts, then build).")
 DIRS = ["core", "modules", "lite", "tools"]
-FILES = ["SOURCES.md", "BIBLIOGRAPHY.md", "LICENSE", "fonts/README.md", "fonts/CATALOGUE.md", "fonts/catalogue.json"]   # font catalogue only; font files stay in the repo
+FILES = ["SOURCES.md", "BIBLIOGRAPHY.md", "LICENSE", "fonts/README.md", "fonts/CATALOGUE.md", "fonts/catalogue.json"]   # font catalogue only; font files are a release asset (tools/fetch_assets.py)
 SKIP_FILES = {"modules/lookbook/looks.csv",            # the json carries the same rows
               "tools/lookbook_sync.py", "tools/package_skill.py", "tools/build_bundle.py",
               "modules/lookbook/UPDATING.md"}   # maintainer scripts, repo only
@@ -49,8 +49,8 @@ def skill_md():
     body = (ROOT / "AGENTS.md").read_text().split("\n", 1)[1].lstrip()          # drop the "# AGENTS.md" title
     tail = (f"\n## Files in this skill\n`core/` (principles and critique-loop always, the rest as above), `modules/<name>/README.md` (as above and `core/which-modules.md`), "
             f"`lite/CREATIVE-DIRECTOR-LITE.md` (short version for small contexts), `tools/` (optional Python: Pillow, NumPy; Playwright for page checks; `pip install -r tools/requirements.txt`), "
-            f"`fonts/CATALOGUE.md` (theme catalogue of free fonts; the font files are in the repo's `fonts/`), `SOURCES.md`, `BIBLIOGRAPHY.md`. "
-            f"Worked examples, lookbook image sheets and font files live in the repo, not here: {REPO}\n\n"
+            f"`fonts/CATALOGUE.md` (theme catalogue of free fonts; the font files are in `creative-director-fonts.zip` on the repo's assets-v1 release, or on Google Fonts), `SOURCES.md`, `BIBLIOGRAPHY.md`. "
+            f"Worked examples and lookbook image sheets live in the repo, not here: {REPO}\n\n"
             f"**Needs:** a model that can see images, and a way to render or screenshot the work at real size. Without vision, say the review is rules-only.\n\n"
             f"This folder is generated from the repo root by `tools/package_skill.py` (version {version()}). To change a rule, edit the repo's root files, not this copy.\n")
     front = (f"---\nname: {NAME}\ndescription: '{DESC}'\nlicense: MIT (see LICENSE)\n"

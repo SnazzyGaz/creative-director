@@ -9,6 +9,8 @@ CAT = json.load(open(os.path.join(ROOT, 'fonts', 'catalogue.json'), encoding='ut
 OUT = os.path.join(ROOT, 'fonts', 'specimens')
 INK, PAPER, MUTED, RULE = (28, 27, 31), (247, 244, 238), (110, 106, 100), (214, 208, 198)
 # Labels use one neutral face so the samples are the only thing that varies.
+if not os.path.exists(os.path.join(ROOT, 'fonts/grotesk-neutral/publicsans/PublicSans[wght].ttf')):
+    raise SystemExit('font files missing: run python3 tools/fetch_assets.py first')
 LABEL = os.path.join(ROOT, 'fonts/grotesk-neutral/publicsans/PublicSans[wght].ttf')
 SAMPLE = {
     'editorial-serif': 'The Quiet Season', 'pulp-retro-comic': 'Attack of the Giant Tuna!',

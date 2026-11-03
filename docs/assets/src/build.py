@@ -12,6 +12,9 @@ THEMES = {
 FONTS = "font-family:'Inter',sans-serif;"
 # Banner type: Newsreader (display optical size, from fonts/editorial-serif/) over Instrument Sans (src/fonts/).
 # Both OFL 1.1, loaded from file so the opsz axis applies.
+NEWSREADER = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..', 'fonts', 'editorial-serif', 'newsreader', 'Newsreader[opsz,wght].ttf')
+if not os.path.exists(NEWSREADER):
+    raise SystemExit('Newsreader is missing: run python3 tools/fetch_assets.py first (font files are a release asset)')
 FACES = ("@font-face{font-family:'CD Newsreader';src:url('../../../fonts/editorial-serif/newsreader/Newsreader%5Bopsz,wght%5D.ttf');font-weight:200 800}"
          "@font-face{font-family:'CD Instrument Sans';src:url('fonts/InstrumentSans-VariableFont_wdth,wght.ttf');font-weight:400 700}")
 def shot(html, name, w, h):

@@ -3,7 +3,7 @@
 A visual reference of looks: 122 established looks (historic, technique-based and contemporary figure styles: LB-001 to LB-114 and LB-SD01 to LB-SD09) and 74 wildcards (LB-R…), each with use, mood, energy, what to avoid it for, hallmarks by layer and a one-line hint. It is a source of directions, not rules. Every core rule and module still applies, and wins over a look whenever they disagree.
 
 - `looks.json` (and `looks.csv`): the tag file, one row per live look, plus the `retired` IDs. Search it; don't load it whole.
-- `sheets/`: one image per family, six looks to a sheet, each with its caption. `index.png`: every ID and name on one page.
+- `sheets/`: one image per family, six looks to a sheet, each with its caption. `index.png`: every ID and name on one page. The sheets in git are 1,000 px wide; full-size ones are in `creative-director-lookbook-full.zip` on the [assets-v1 release](https://github.com/SnazzyGaz/creative-director/releases/tag/assets-v1) (`python3 tools/fetch_assets.py --lookbook`). Each look's full text is also in `looks.json`.
 - Every example image is our own render from that look's written rules (captions say "our render from LB-xxx rules"). No look is tied to a real artist, studio, community or specific work, and none should be when you cite it: name looks by technique, structure or broad historic era only.
 
 ## When to reach for it

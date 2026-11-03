@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Build the social cards: X/Twitter (1600x900 + 1200x675) and the GitHub social preview (1280x640).
 Run from repo root: python3 docs/assets/src/social.py [x|github|all]  (default all)"""
-import subprocess, pathlib, sys
+import os, subprocess, pathlib, sys
 from PIL import Image
 ROOT = pathlib.Path(__file__).resolve().parents[3]
 SRC = ROOT / "docs/assets/src"; OUT = ROOT / "docs/assets/social"
 c = dict(bg="#161514", ink="#EEE9DF", mute="#A39C91", faint="#3E3A35", accent="#D9825F")
+NEWSREADER = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..', 'fonts', 'editorial-serif', 'newsreader', 'Newsreader[opsz,wght].ttf')
+if not os.path.exists(NEWSREADER):
+    raise SystemExit('Newsreader is missing: run python3 tools/fetch_assets.py first (font files are a release asset)')
 FACES = ("@font-face{font-family:'CD Newsreader';src:url('../../../fonts/editorial-serif/newsreader/Newsreader%5Bopsz,wght%5D.ttf');font-weight:200 800}"
          "@font-face{font-family:'CD Instrument Sans';src:url('fonts/InstrumentSans-VariableFont_wdth,wght.ttf');font-weight:400 700}")
 W, H = 1600, 900

@@ -5,3 +5,8 @@ Thumbs.db
 *.tgz
 .venv/
 dist/
+# font files come from the assets-v1 release (python3 tools/fetch_assets.py); only licences and the catalogue are in git
+fonts/**/*.ttf
+fonts/**/*.otf
+fonts/**/*.woff
+fonts/**/*.woff2
