@@ -16,6 +16,16 @@ A set of design rules and a critique loop that any AI agent can read. It helps a
 
 Same prompt and image model, one sample each: an illustration, not a benchmark. *Without:* the prompt as is. *With:* the skill's loop, with every word set in code from the brief's facts only. *+ aesthetic layer:* one more round with the [aesthetic module](modules/aesthetic-critique/). [Full write-up](examples/baseline-comparison/) · [aesthetic notes](examples/aesthetic-benchmark/).
 
+## Before and after
+
+| | |
+|---|---|
+| [<img alt="Book cover, baseline and with the skill: invented words and busy backgrounds behind the title, against a lone apple tree in a flood with only the title and author." src="examples/showcase/01-book-cover.jpg" width="100%">](examples/showcase/01-book-cover.jpg)<br>**Book cover:** no invented copy, and the type sits on calm ground. | [<img alt="Honey label, baseline and with the skill: a busy wreath and mixed scripts, against a pine whose hollow is a dripping honeycomb cell." src="examples/showcase/02-packaging-label.jpg" width="100%">](examples/showcase/02-packaging-label.jpg)<br>**Packaging:** the name becomes the mark, and the label reads in a clear order. |
+| [<img alt="Character design, baseline and with the skill: an invented club logo and text, against a striding girl inventor with only the briefed props." src="examples/showcase/04-character-design.jpg" width="100%">](examples/showcase/04-character-design.jpg)<br>**Character:** the invented logo is gone, and her traits show in the pose. | [<img alt="Café logo, baseline and with the skill: three separate icons and an invented tagline, against one kettle that is also a kiln." src="examples/showcase/06-logo.jpg" width="100%">](examples/showcase/06-logo.jpg)<br>**Logo:** one mark a step past the literal, with no tagline. |
+| [<img alt="Jazz poster, baseline and with the skill: a saxophone, against a trumpet whose sound becomes the northern lights." src="examples/showcase/08-event-poster.jpg" width="100%">](examples/showcase/08-event-poster.jpg)<br>**Poster:** the name's idea is used; the baseline was already strong. | [<img alt="Exploded lamp view, baseline and with the skill: invented descriptions and parts off-axis, against five labelled parts on one axis." src="examples/showcase/09-product-illustration.jpg" width="100%">](examples/showcase/09-product-illustration.jpg)<br>**Exploded view:** only the five labels, with the parts on one axis. |
+
+Illustrative, not test evidence: one sample each, with six of ten pairs picked by the owner of the work. Notes and the rules that fired: [examples/showcase/](examples/showcase/). The evidence is the [blind test](examples/blind-test/RESULTS.md).
+
 ## Install
 
 Works with any agent or LLM. [`docs/install.md`](docs/install.md) has the steps, with sources, for each one.

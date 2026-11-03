@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Before and after across domains** (README, gallery, `examples/showcase/`): six labelled pairs, each a plain-brief baseline beside the full v0.9.7 loop: a book cover, a packaging label, a character, a logo, a poster and an exploded view. One sample per side, words by the image model. The owner of the work picked these six from ten pairs. They are illustrative, not test evidence; the blind test remains the evidence. The pairs are 1,400 px web JPEGs (about 80-230 KB). No rule changes.
+
 ## v0.9.7 (3 November 2026)
 
 **Screens need soul; exact copy and counts; batch 8 gaps answered; room made in the budgets; lookbook to 320 looks.** The review list after batch 8, done in full. The new rules answer gaps seen in one judge's batch 8 notes: internal evidence, untested until a new batch is judged. No budget cap was raised.
