@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="13" fill="#222">
+<title>Overhead plans: the 180-degree line and the 30-degree rule</title>
+<desc>Left: two characters A and B face each other; a dashed line runs through them. Cameras 1 and 2 sit on the shaded side of the line and keep A on screen left. Camera 3 sits across the line and would flip A to screen right. Right: a subject S with a first camera at 0 degrees; a second camera less than 30 degrees around gives a jump cut; one 30 degrees or more around reads as a new view.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#555"/></marker></defs>
+<rect width="640" height="300" fill="#fff"/>
+<text x="20" y="26" font-weight="600" font-size="15">180° line (from above)</text>
+<rect x="20" y="150" width="280" height="120" fill="#e8f0e8"/>
+<line x1="20" y1="150" x2="300" y2="150" stroke="#222" stroke-dasharray="6 5" stroke-width="1.5"/>
+<text x="240" y="143">line of action</text>
+<circle cx="100" cy="150" r="14" fill="#fff" stroke="#222" stroke-width="2"/><text x="95" y="155" font-weight="600">A</text>
+<circle cx="220" cy="150" r="14" fill="#fff" stroke="#222" stroke-width="2"/><text x="215" y="155" font-weight="600">B</text>
+<g fill="#2e6b3a"><path d="M150 248l-12 16h24z"/><path d="M70 228l-12 16h24z"/></g>
+<text x="168" y="262">1</text><text x="88" y="242">2</text>
+<line x1="150" y1="246" x2="150" y2="172" stroke="#555" marker-end="url(#a)"/>
+<line x1="72" y1="226" x2="200" y2="164" stroke="#555" marker-end="url(#a)"/>
+<path d="M150 62l-12 -16h24z" fill="#a33"/><text x="168" y="56" fill="#a33">3 crosses: A flips to screen right</text>
+<line x1="150" y1="64" x2="150" y2="128" stroke="#a33" stroke-dasharray="3 3" marker-end="url(#a)"/>
+<text x="26" y="290" font-size="12">Cameras 1 and 2 stay on one side: A stays screen left.</text>
+<text x="340" y="26" font-weight="600" font-size="15">30° rule (same subject)</text>
+<path d="M480 110L480 250A140 140 0 0 1 410 231Z" fill="#f4e0e0"/>
+<line x1="480" y1="110" x2="480" y2="250" stroke="#222"/>
+<line x1="480" y1="110" x2="410" y2="231" stroke="#222" stroke-dasharray="4 4"/>
+<line x1="378" y1="206" x2="470" y2="120" stroke="#2e6b3a" stroke-dasharray="3 3"/>
+<line x1="446" y1="250" x2="476" y2="124" stroke="#a33" stroke-dasharray="3 3"/>
+<text x="488" y="190">30° wedge</text>
+<path d="M480 254l-12 16h24z" fill="#2e6b3a"/><text x="497" y="268">first shot</text>
+<path d="M446 254l-12 16h24z" fill="#a33"/><text x="372" y="290" fill="#a33">under 30°: jump cut</text>
+<path d="M378 206l-12 16h24z" fill="#2e6b3a"/><text x="336" y="240" fill="#2e6b3a">30° or more:</text><text x="336" y="256" fill="#2e6b3a">a new view</text>
+<circle cx="480" cy="110" r="14" fill="#fff" stroke="#222" stroke-width="2"/><text x="475" y="115" font-weight="600">S</text>
+</svg>

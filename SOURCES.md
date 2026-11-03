@@ -340,3 +340,86 @@ In copyright; cited through the publisher and secondary sources, paraphrased.
 ## Lookbook: era terms (v0.8.0)
 
 - **[S266]** Getty Research Institute. *Art & Architecture Thesaurus (AAT)*, Styles and Periods facet. J. Paul Getty Trust. https://www.getty.edu/research/tools/vocabularies/aat/ ; terms at http://vocab.getty.edu/page/aat/ (the optional `getty_aat` field on 27 established lookbook looks: ID and preferred term, each checked on its page on 2 November 2026). AAT data is released under ODC-By 1.0, https://opendatacommons.org/licenses/by/1-0/ ; this repo uses only IDs and preferred labels, with this attribution.
+
+## Film and moving image (modules/film; v0.9.0, pages checked 3 November 2026)
+
+Books (craft):
+- **[S267]** Mascelli, J. V. *The Five C's of Cinematography: Motion Picture Filming Techniques*. Cine/Grafic, 1965; Silman-James, 1998. ISBN 9781879505414 (camera angles, continuity, cutting, close-ups, composition).
+- **[S268]** Brown, B. *Cinematography: Theory and Practice*, 4th ed. Routledge, 2022. https://doi.org/10.4324/9780429353239 (shot types, lenses, lighting ratios, shutter and frame rate, continuity).
+- **[S269]** Murch, W. *In the Blink of an Eye*, 2nd ed. Silman-James, 2001 (the "rule of six" priorities for a cut, cutting on the blink).
+- **[S270]** Bordwell, D., Thompson, K. & Smith, J. *Film Art: An Introduction*, 13th ed. McGraw-Hill, 2023. ISBN 9781264296095 (mise-en-scène, continuity editing, sound, motifs, form).
+- **[S271]** Katz, S. D. *Film Directing Shot by Shot: Visualizing from Concept to Screen*. Michael Wiese, 1991. ISBN 9780941188104 (staging, coverage, camera movement).
+- **[S272]** Arijon, D. *Grammar of the Film Language*. Focal, 1976; Silman-James, 1991. ISBN 9781879505070 (the line of interest, triangle coverage, screen direction).
+- **[S273]** Alton, J. *Painting with Light*. Macmillan, 1949; University of California Press, 1995. ISBN 9780520089495 (low-key and high-key lighting, mood).
+- **[S274]** Landau, D. *Lighting for Cinematography*. Bloomsbury, 2014 (motivated light, key, fill and contrast in practice).
+- **[S275]** Ward, P. *Picture Composition for Film and Television*, 2nd ed. Focal, 2003. ISBN 9780240516813 (headroom, looking room, depth staging, composition across cuts).
+- **[S276]** Mackendrick, A. *On Film-making: An Introduction to the Craft of the Director*, ed. P. Cronin. Faber, 2004. ISBN 9780571211258 (showing instead of telling, the grammar of the cut).
+
+Research (perception, editing, attention):
+- **[S277]** Smith, T. J. (2012). The attentional theory of cinematic continuity. *Projections* 6(1), 1-27. https://doi.org/10.3167/proj.2012.060102
+- **[S278]** Smith, T. J. & Henderson, J. M. (2008). Edit blindness: the relationship between attention and global change blindness in dynamic scenes. *Journal of Eye Movement Research* 2(2). https://doi.org/10.16910/jemr.2.2.6
+- **[S279]** Mital, P. K., Smith, T. J., Hill, R. L. & Henderson, J. M. (2011). Clustering of gaze during dynamic scene viewing is predicted by motion. *Cognitive Computation* 3(1), 5-24. https://doi.org/10.1007/s12559-010-9074-z
+- **[S280]** Smith, T. J. (2013). Watching you watch movies: using eye tracking to inform cognitive film theory. In A. P. Shimamura (ed.), *Psychocinematics*, Oxford University Press, 165-192. https://academic.oup.com/book/4707/chapter/146924370
+- **[S281]** Loschky, L. C., Larson, A. M., Magliano, J. P. & Smith, T. J. (2015). What would Jaws do? The tyranny of film and the relationship between gaze and higher-level narrative film comprehension. *PLOS ONE* 10(11), e0142474. https://doi.org/10.1371/journal.pone.0142474
+- **[S282]** Magliano, J. P. & Zacks, J. M. (2011). The impact of continuity editing in narrative film on event segmentation. *Cognitive Science* 35(8). https://doi.org/10.1111/j.1551-6709.2011.01202.x
+- **[S283]** Cutting, J. E., DeLong, J. E. & Nothelfer, C. E. (2010). Attention and the evolution of Hollywood film. *Psychological Science* 21(3), 432-439. https://pubmed.ncbi.nlm.nih.gov/20424081/
+- **[S284]** Cutting, J. E., Brunick, K. L., DeLong, J. E., Iricinschi, C. & Candan, A. (2011). Quicker, faster, darker: changes in Hollywood film over 75 years. *i-Perception* 2(6). https://doi.org/10.1068/i0441aap
+- **[S285]** Cutting, J. E. & Candan, A. (2015). Shot durations, shot classes, and the increased pace of popular movies. *Projections* 9(2), 40-52. https://doi.org/10.3167/proj.2015.090204
+- **[S286]** Cutting, J. E. (2016). Narrative theory and the dynamics of popular movies. *Psychonomic Bulletin & Review* 23. https://doi.org/10.3758/s13423-016-1051-4
+- **[S287]** Cutting, J. E. & Armstrong, K. L. (2016). Facial expression, size, and clutter: inferences from movie structure to emotion judgments and back. *Attention, Perception, & Psychophysics* 78. https://doi.org/10.3758/s13414-015-1003-5
+- **[S288]** Bordwell, D. (2002). Intensified continuity: visual style in contemporary American film. *Film Quarterly* 55(3), 16-28. https://doi.org/10.1525/fq.2002.55.3.16
+- **[S289]** Rooney, B. & Bálint, K. E. (2018). Watching more closely: shot scale affects film viewers' theory of mind tendency but not ability. *Frontiers in Psychology* 8, 2349. https://doi.org/10.3389/fpsyg.2017.02349
+- **[S290]** Kraft, R. N. (1987). The influence of camera angle on comprehension and retention of pictorial events. *Memory & Cognition* 15(4). https://doi.org/10.3758/BF03197032
+- **[S291]** Meyers-Levy, J. & Peracchio, L. A. (1992). Getting an angle in advertising: the effect of camera angle on product evaluations. *Journal of Marketing Research* 29(4). https://doi.org/10.1177/002224379202900406
+- **[S292]** Heimann, K., Umiltà, M. A., Guerra, M. & Gallese, V. (2014). Moving mirrors: a high-density EEG study investigating the effect of camera movements on motor cortex activation during action observation. *Journal of Cognitive Neuroscience* 26(9). https://doi.org/10.1162/jocn_a_00602 ; and Heimann et al. (2019), Embodying the camera, *PLOS ONE*. https://doi.org/10.1371/journal.pone.0211026
+
+The Kuleshov effect:
+- **[S293]** Prince, S. & Hensley, W. E. (1992). The Kuleshov effect: recreating the classic experiment. *Cinema Journal* 31(2), 59-75. https://doi.org/10.2307/1225144
+- **[S294]** Mobbs, D. et al. (2006). The Kuleshov effect: the influence of contextual framing on emotional attributions. *Social Cognitive and Affective Neuroscience* 1(2), 95-106. https://doi.org/10.1093/scan/nsl014
+- **[S295]** Barratt, D., Rédei, A. C., Innes-Ker, Å. & van de Weijer, J. (2016). Does the Kuleshov effect really exist? Revisiting a classic film experiment on facial expressions and emotional contexts. *Perception* 45(8), 847-874. https://doi.org/10.1177/0301006616638595
+- **[S296]** Ildirar, S. & Ewing, L. (2018). Revisiting the Kuleshov effect with first-time viewers. *Projections* 12(1), 19-38. https://doi.org/10.3167/proj.2018.120103
+- **[S297]** Baranowski, A. M. & Hecht, H. (2017). The auditory Kuleshov effect: multisensory integration in movie editing. *Perception* (2017). https://doi.org/10.1177/0301006616682754
+
+Music and sound:
+- **[S298]** Marshall, S. K. & Cohen, A. J. (1988). Effects of musical soundtracks on attitudes toward animated geometric figures. *Music Perception* 6(1), 95-112. https://doi.org/10.2307/40285417
+- **[S299]** Boltz, M. G. (2001). Musical soundtracks as a schematic influence on the cognitive processing of filmed events. *Music Perception* 18(4), 427-454. https://doi.org/10.1525/mp.2001.18.4.427
+- **[S300]** Hoeckner, B., Wyatt, E. W., Decety, J. & Nusbaum, H. (2011). Film music influences how viewers relate to movie characters. *Psychology of Aesthetics, Creativity, and the Arts* 5(2). https://doi.org/10.1037/a0021544
+- **[S301]** Cohen, A. J. (2010). Music as a source of emotion in film. In P. N. Juslin & J. A. Sloboda (eds), *Handbook of Music and Emotion*, Oxford University Press, 879-908. https://doi.org/10.1093/acprof:oso/9780199230143.003.0031 ; and Cohen (2013), Congruence-Association Model of music and multimedia, in Tan et al. (eds), *The Psychology of Music in Multimedia*, OUP, 17-47. https://doi.org/10.1093/acprof:oso/9780199608157.003.0002
+- **[S302]** Chion, M. *Audio-Vision: Sound on Screen*, 2nd ed. Columbia University Press, 2019 (synchresis; empathetic and anempathetic music; added value). https://cup.columbia.edu/book/audio-vision-sound-on-screen/9780231185899/
+- **[S303]** Truffaut, F. *Hitchcock/Truffaut* (1967; rev. 1984), the "bomb under the table" passage on suspense and surprise; discussed in Bordwell, D. (2013), Hitchcock, Lessing, and the bomb under the table. https://www.davidbordwell.net/blog/2013/11/29/hitchcock-lessing-and-the-bomb-under-the-table/ ; summary: https://nofilmschool.com/alfred-hitchcock-and-francois-truffaut-explain-surprise-vs-suspense
+
+Colour and grading:
+- **[S304]** Jonauskaite, D. et al. (2020). Universal patterns in color-emotion associations are further shaped by linguistic and geographic proximity. *Psychological Science* 31(10), 1245-1260. https://doi.org/10.1177/0956797620948810
+- **[S305]** Bellantoni, P. *If It's Purple, Someone's Gonna Die: The Power of Color in Visual Storytelling*. Focal Press, 2005. ISBN 9780240806884 (practitioner; colour tied to character and arc).
+- **[S306]** Amidi, A. *The Art of Pixar: The Complete Colorscripts and Select Art from 25 Years of Animation*. Chronicle, 2011 (colour scripts: one small frame per scene, read as an emotional arc). Interview: https://animatedviews.com/2011/the-art-of-pixar-the-complete-color-scripts-and-select-art-from-25-years-of-animation-an-interview-with-author-amid-amidi/
+- **[S307]** Van Hurkman, A. *Color Correction Handbook*, 2nd ed. Peachpit, 2014 (ch. 8, memory colours: skin tone, skies and foliage; shot matching).
+- **[S308]** Bartleson, C. J. (1960). Memory colors of familiar objects. *Journal of the Optical Society of America* 50(1), 73. https://doi.org/10.1364/JOSA.50.000073
+- **[S309]** Kelly, C. (colourist), grading philosophy: build the look first, then balance shots against it with few shot-level fixes. Portrait Displays blog: https://www.portrait.com/blog/cullen-kellys-color-grading-philosophy/ (single practitioner).
+- **[S310]** Miro, T. (2010). Teal and orange: Hollywood, please stop the madness. http://theabyssgazes.blogspot.com/2010/03/teal-and-orange-hollywood-please-stop.html (practitioner critique).
+- **[S331]** Academy Color Encoding System documentation (ACES) and the ASC Color Decision List (slope, offset, power, saturation). https://docs.acescentral.com/glossary/
+
+Frame rate, optics and standards:
+- **[S311]** Wilcox, L. M., Allison, R. S., Helliker, J., Dunk, B. & Anthony, R. C. (2015). Evidence that viewers prefer higher frame-rate film. *ACM Transactions on Applied Perception* 12(4), Art. 15. https://doi.org/10.1145/2810039
+- **[S312]** Wikipedia, *Frame rate* and *Sound film* (24 fps settled as the sound-era standard, a compromise of cost and sound quality). https://en.wikipedia.org/wiki/Frame_rate ; SMPE Standards Committee report (1929), https://doi.org/10.5594/j10196
+- **[S313]** Wikipedia, *Perspective distortion* (perspective depends on camera distance; focal length sets the crop). https://en.wikipedia.org/wiki/Perspective_distortion
+- **[S314]** W3C. *Understanding SC 2.3.1: Three Flashes or Below Threshold* (WCAG 2.2). https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html ; and SC 1.2.2 Captions and 1.2.5 Audio Description: https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded.html , https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded.html
+- **[S315]** Ofcom. *Guidance Note on flashing images and regular patterns in television* (with ITU-R BT.1702). https://www.ofcom.org.uk/siteassets/resources/documents/tv-radio-and-on-demand/broadcast-guidance/gn_flash.pdf
+- **[S316]** Netflix Partner Help. *Timed Text Style Guide: General Requirements* and *English (USA)*. https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617 , https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977
+- **[S317]** BBC. *Subtitle Guidelines*, v1.2.5 (March 2026). https://www.bbc.co.uk/accessibility/forproducts/guides/subtitles/
+- **[S318]** EBU. *R 95: Safe areas for 16:9 television production*. https://tech.ebu.ch/docs/r/r095.pdf
+- **[S319]** EBU. *R 128: Loudness normalisation and permitted maximum level of audio signals*. https://tech.ebu.ch/docs/r/r128.pdf
+
+Generated video:
+- **[S320]** Huang, Z. et al. (2024). VBench: comprehensive benchmark suite for video generative models. CVPR 2024 (subject consistency, background consistency, temporal flickering, motion smoothness and more). https://openaccess.thecvf.com/content/CVPR2024/html/Huang_VBench_Comprehensive_Benchmark_Suite_for_Video_Generative_Models_CVPR_2024_paper.html
+- **[S321]** Motamed, S. et al. (2025). Do generative video models understand physical principles? (Physics-IQ). arXiv:2501.09038. https://arxiv.org/abs/2501.09038
+
+Trade press and practitioners:
+- **[S322]** Deakins, R. and J., forums archive (questions answered by a working DP; simple, motivated setups). https://www.rogerdeakins.com/forums/
+- **[S323]** American Society of Cinematographers. *Shot Craft: Fresh Perspectives* (practicals and changing light to set mood). https://theasc.com/article/shot-craft-fresh-perspectives/
+- **[S324]** British Cinematographer. Interview on lighting a long-form series: motivated sources and keeping light continuous across scenes shot over several days. https://britishcinematographer.co.uk/oli-russell-and-catherine-goldschmidt-bsc-renegade-nell/ ; and *Set to Post* (LUT pipeline from set to grade), Jan-Feb 2024: https://britishcinematographer.co.uk/set-to-post-january-february-2024/
+- **[S325]** Filmmaker Magazine. A DP on handheld cinematography (handheld as a response to the actor, not shake for its own sake). https://filmmakermagazine.com/82902-sean-bobbitt-on-handheld-cinematography/
+- **[S326]** No Film School. When to break the 180-degree rule; actor gaze and the line. https://nofilmschool.com/2017/05/when-to-break-180-degree-rule , https://nofilmschool.com/actor-gaze-180-degree-rule
+- **[S327]** StudioBinder. Shot sizes and camera shots guide. https://www.studiobinder.com/camera-shots/shot-size/ , https://www.studiobinder.com/blog/ultimate-guide-to-camera-shots/
+- **[S328]** IndieWire Craft. Interview on colour planned as a story arc across a feature. https://www.indiewire.com/features/craft/i-saw-the-tv-glow-cinematography-color-1235004017/
+- **[S329]** Workman, M. *Cinematography Database*: key, fill and negative fill; contrast ratios in stops. https://cinematographydb.artstation.com/projects/Aoa4m
+- **[S330]** Wikipedia articles (text only, no images): *180-degree rule*, *30-degree rule*, *Shot reverse shot*, *Match cut*, *J cut* and *L cut*, *Kuleshov effect*, *Leitmotif*, *Diegesis*. https://en.wikipedia.org/wiki/180-degree_rule , https://en.wikipedia.org/wiki/30-degree_rule , https://en.wikipedia.org/wiki/Shot_reverse_shot , https://en.wikipedia.org/wiki/Match_cut , https://en.wikipedia.org/wiki/J_cut , https://en.wikipedia.org/wiki/L_cut , https://en.wikipedia.org/wiki/Kuleshov_effect , https://en.wikipedia.org/wiki/Leitmotif , https://en.wikipedia.org/wiki/Diegesis

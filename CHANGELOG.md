@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.9.0 (3 November 2026)
+
+New optional module: **film** (`modules/film/`), for a cinematographer or editor bot, or any agent that makes or judges video, generated clips, animation, storyboards, shot lists or edits.
+
+- **Story first.** `story.md` (FILM-STORY-0 to 11) is the core: name the beat, then check every choice (size, angle, lens, light, colour, movement, cut, sound, music, text) against it. It covers framing as emotional distance and power, colour scripts and palette arcs, light changes as beats, movement as subjectivity, score and source music, counterpoint, leitmotif, silence and sound bridges, suspense and withholding (the bomb under the table), reaction shots and point of view, motifs and rhymes, and contrast and affinity.
+- **Craft rules.** `README.md` (42 rules): shot grammar (size, angle, perspective from distance, focus, aspect ratio and safe areas, headroom), continuity (180° line, 30° rule, eyelines, screen direction, match on action, physical continuity) as conventions with deliberate breaks recorded, camera movement and shutter, motivated light with one key direction across a scene (links TD-LIT-1), ratios and latitude, grading (one look, shot matching, skin, colour pipeline; links CV rules), editing (Murch's priorities, eye-trace across cuts, shot length, J and L cuts, an honest Kuleshov, transitions), composition in motion (balance is only a flag, never a push to centre), sound sync and loudness, titles and subtitles, flashing and captions.
+- **Generated video.** `generated.md` (FILM-GEN-1 to 10): frame-sampling QC with contact sheets (ffmpeg commands, no new tool), identity drift, anatomy on sampled frames, morphing objects, physics, flicker, light across shots, invented text, camera geometry and the generic generated look, plus a 12-step checklist.
+- **Review and template.** `review.md`: watch in motion at delivered size with sound before judging frames (FILM-REV-1), shot lists, storyboards reviewed as plans, and a film critique template.
+- **Crossover map.** `crossover.md`: rules that apply as they are, rules that change in motion, and film-only rules.
+- **Myths.** Thirds as law, the golden ratio, 24 fps as sacred, shallow focus as "cinematic", teal and orange always, "film look" as grain and bars, the strong Kuleshov legend, wide lenses distort, fixed colour meanings, never cross the line, faster cutting is better, Murch's percentages as measured.
+- **New blockers** (critique loop): flashing above the WCAG 2.3.1 threshold (FILM-ACC-1); key direction within a continuous scene (FILM-LIT-1); identity, anatomy and invented text in generated video (FILM-GEN-2, -3, -8).
+- **Sources** S267 to S331: craft books, attention and editing research, film-style corpus studies, Kuleshov replications, music-and-film psychology, colour-emotion work with its cultural caveats, subtitle, flashing, safe-area and loudness standards, video-model benchmarks, and trade press and practitioner pages (graded as such). Bibliography section 6a; five silent-era films added to the reference library.
+- One small hand-written SVG (`modules/film/diagrams/axis-180-30.svg`, 3 KB) shows the 180° line and the 30° rule from above; the text stands without it, and the skill folder leaves it out. No generated images or clips.
+- Wiring: `AGENTS.md` module table, `core/which-modules.md` task rows and token counts, lite file, README, `llms.txt`, the full prompt bundle (now includes the film module's extra files) and the skill description.
+
 ## v0.8.2 (3 November 2026)
 
 Install support for any agent. No rule changes.

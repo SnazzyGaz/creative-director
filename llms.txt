@@ -11,7 +11,8 @@
 - [First-principles remake](core/first-principles.md): when asked to redo or reimagine from scratch
 - [Which modules to load](core/which-modules.md): task-to-module table and token costs
 - [Evidence](core/evidence.md): grades and myths, before claiming people prefer something
-- [Modules](modules/): technical-drawing, illustration, character, web-ui, ux, 3d, typography, layout, brand, aesthetic-critique, composition, colour-value
+- [Modules](modules/): technical-drawing, illustration, character, web-ui, ux, 3d, typography, layout, brand, aesthetic-critique, composition, colour-value, film
+- [Film](modules/film/README.md): cinematography and the moving image, story first (`story.md`): shots, continuity, camera, light, colour, editing, sound, subtitles, flashing, generated-video QC, crossover map and myths
 - [Lookbook](modules/lookbook/README.md): optional; established looks with tags and image sheets, for from-scratch concepts or work that feels generic; search by use, mood, colour or "more like this"
 - [Install guide](docs/install.md): steps for Hermes Agent, Claude, Codex, Cursor, Gemini CLI, Copilot, Devin, Cline, Aider, Grok Bot and any chat LLM
 - [Skill folder](skills/creative-director/SKILL.md): the same rules as an installable Agent Skill (generated; edit the root files)

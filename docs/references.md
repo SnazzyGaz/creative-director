@@ -37,3 +37,15 @@ All links were checked on 1 November 2026: Met entries through the Met's open co
 | 27 | Kyle Chayka, "Welcome to AirSpace" (The Verge, 2016). [The Verge](https://www.theverge.com/2016/8/3/12325104/airbnb-aesthetic-global-minimalism-startup-gentrification) | Polished but generic (critique) | An essay on the look-alike café and app aesthetic: tasteful choices that add up to no place in particular. |
 
 **Gap noted:** we found no stable, reputable public archive of exemplary photoreal *product renders*. For that category, judge against the lighting and material rules in `modules/3d/` (3D-5 onward) and the owner's own references, and add a source here if one turns up.
+
+## Film (for `modules/film/`; added v0.9.0, links checked 3 November 2026)
+
+Silent-era films, old enough that their makers' styles are history, not templates. Watch them in motion; the notes are this repo's reading, and the rules are named by technique, not by these titles.
+
+| # | Work | Category | What works (or doesn't) |
+|---|---|---|---|
+| F1 | *Battleship Potemkin* (1925), Odessa Steps sequence. [Wikipedia](https://en.wikipedia.org/wiki/Battleship_Potemkin) | Editing for intensity | Shots shorten and directions collide as the massacre builds: pace and contrast as the intensity curve (FILM-EDIT-3, FILM-STORY-5). Space is deliberately hard to map. |
+| F2 | *The Passion of Joan of Arc* (1928). [Wikipedia](https://en.wikipedia.org/wiki/The_Passion_of_Joan_of_Arc) | Shot size as emotional distance | Built almost entirely from close-ups against bare backgrounds, with unsettled framing; closeness and isolation carry the trial (FILM-STORY-2). A deliberate break from easy spatial continuity. |
+| F3 | *Sunrise: A Song of Two Humans* (1927). [Wikipedia](https://en.wikipedia.org/wiki/Sunrise:_A_Song_of_Two_Humans) | Motivated camera movement | Long travelling shots that follow a character's journey and state of mind (FILM-STORY-6, FILM-CAM-1). |
+| F4 | *Nosferatu* (1922). [Wikipedia](https://en.wikipedia.org/wiki/Nosferatu) | Low key; shadow as withholding | Threat carried by shadow and what is not shown (FILM-STORY-4, FILM-STORY-9). |
+| F5 | *Man with a Movie Camera* (1929). [Wikipedia](https://en.wikipedia.org/wiki/Man_with_a_Movie_Camera) | Rhythm; rule-breaking on purpose | Editing rhythm, split screens, speed changes and jump cuts as the subject itself; a showcase of breaks that serve an idea (FILM-EDIT-6, FILM-CON-2). |

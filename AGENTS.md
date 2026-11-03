@@ -25,6 +25,7 @@ Whenever you make or review something visual, or the user says `+ creative direc
 | `ux` | a task people complete: flows, errors, defaults |
 | `3d` | a 3D file or render (build checks via [model-qa](https://github.com/SnazzyGaz/model-qa)) |
 | `aesthetic-critique` | mood, energy or distinctiveness; choosing between versions |
+| `film` | anything that moves: footage, generated video, animation, storyboards, shot lists, edits (story first: `story.md`; review in motion) |
 | `lookbook` | from-scratch concepts, or a design that passes but feels generic: optional `modules/lookbook/` |
 
 For small contexts, `lite/CREATIVE-DIRECTOR-LITE.md` holds the loop, core rules and blockers in one file.

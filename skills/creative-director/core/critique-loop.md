@@ -18,6 +18,7 @@ Only these block delivery; everything else is a default.
 - **Fixed frames:** safe area (LAY-5), legible at feed size (LAY-6), print bleed and resolution (LAY-9), text over images (LAY-15), type under the size floor (TYPE-3).
 - **Screens and flows:** contrast (UI-6), text resize (UI-10), the main flow completes (UX-1).
 - **3D:** builds clean, right size and way up (3D-1, 3D-2).
+- **Moving image:** no flashing above the threshold (FILM-ACC-1); one key direction within a continuous scene (FILM-LIT-1); for generated video, identity, anatomy on sampled frames and no invented text (FILM-GEN-2, -3, -8).
 - **Marks and subjects:** official marks unaltered (BRAND-4), no invented marks (BRAND-8), food physically plausible (ILL-12).
 
 ## 0. Read the ask

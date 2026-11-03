@@ -24,7 +24,7 @@ SKILL_DIR = ROOT / "skills" / NAME
 ZIP = ROOT / "dist/creative-director-skill.zip"
 REPO = "https://github.com/SnazzyGaz/creative-director"
 DESC = ("Judge and improve visual work (generated images, illustrations, technical drawings, 3D renders, web and app UI, "
-        "UX flows, typography, layout, brand) against cited, checkable design rules, with a light-touch "
+        "UX flows, typography, layout, brand, film and video: shots, edits, generated clips) against cited, checkable design rules, with a light-touch "
         "render-critique-fix loop and a comparative aesthetic layer (intent, side-by-side judgement, revision checks). Use when making or reviewing anything visual, or when the user says "
         "\"+ creative director\", \"consult creative director\" or \"creative director: direct this\", or asks to redo, rejig or reimagine "
         "a piece from scratch (step back, brief from first principles, 2-3 concepts, then build).")

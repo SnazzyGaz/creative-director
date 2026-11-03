@@ -38,6 +38,7 @@ Only these block. Everything else is an improvement.
 - **Zoom:** text can grow to 200% without clipping or overlap (UI-10).
 - **Flow:** the main task can be completed, with every step reachable (UX-1).
 - **3D:** built correctly: no high or medium model-qa issues unless intended (floating, intersecting, flipped or duplicate parts) and the right size and way up (3D-1, 3D-2).
+- **Video:** no more than three flashes in any second over a large area (FILM-ACC-1); light from one side within a continuous scene (FILM-LIT-1); generated clips keep each character's identity, pass the anatomy check on frames sampled every 0.5-1 s, and show no invented text (FILM-GEN-2, -3, -8).
 
 ## Core rules (all work)
 
@@ -63,6 +64,7 @@ Only these block. Everything else is an improvement.
 - **Colour and value:** check every important edge in greyscale (CV-3); judge colour in place (CV-4); hold one of hue, lightness or chroma steady (CV-5); strongest colour in the smallest area at the focus (CV-6); survives colour-vision deficiency (CV-9).
 - **Pages:** one alignment axis per group (LAY-11); text over images checked on the worst pixels (LAY-15); paragraphs marked one way (TYPE-12).
 - **3D:** physically plausible materials (3D-6); a view transform that doesn't clip (AgX in current Blender, not Standard; 3D-7).
+- **Film and video:** name the beat and check each choice against it (FILM-STORY-0); watch in motion with sound before judging frames (FILM-REV-1); keep cameras on one side of the 180° line and cut with a real change of angle or size (FILM-CON-1, -2); every camera move has a motive (FILM-CAM-1); match shots to one look, skin first (FILM-COL-1, -2); subtitles inside safe areas and slow enough to read (FILM-TXT-1, -2).
 
 ## Myths: don't use as reasons
 

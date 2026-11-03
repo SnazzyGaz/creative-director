@@ -1,10 +1,10 @@
 ---
 name: creative-director
-description: 'Judge and improve visual work (generated images, illustrations, technical drawings, 3D renders, web and app UI, UX flows, typography, layout, brand) against cited, checkable design rules, with a light-touch render-critique-fix loop and a comparative aesthetic layer (intent, side-by-side judgement, revision checks). Use when making or reviewing anything visual, or when the user says "+ creative director", "consult creative director" or "creative director: direct this", or asks to redo, rejig or reimagine a piece from scratch (step back, brief from first principles, 2-3 concepts, then build).'
+description: 'Judge and improve visual work (generated images, illustrations, technical drawings, 3D renders, web and app UI, UX flows, typography, layout, brand, film and video: shots, edits, generated clips) against cited, checkable design rules, with a light-touch render-critique-fix loop and a comparative aesthetic layer (intent, side-by-side judgement, revision checks). Use when making or reviewing anything visual, or when the user says "+ creative director", "consult creative director" or "creative director: direct this", or asks to redo, rejig or reimagine a piece from scratch (step back, brief from first principles, 2-3 concepts, then build).'
 license: MIT (see LICENSE)
 metadata:
   author: Garyck Arntzen
-  version: "0.8.2"
+  version: "0.9.0"
   repository: https://github.com/SnazzyGaz/creative-director
 ---
 
@@ -35,6 +35,7 @@ Whenever you make or review something visual, or the user says `+ creative direc
 | `ux` | a task people complete: flows, errors, defaults |
 | `3d` | a 3D file or render (build checks via [model-qa](https://github.com/SnazzyGaz/model-qa)) |
 | `aesthetic-critique` | mood, energy or distinctiveness; choosing between versions |
+| `film` | anything that moves: footage, generated video, animation, storyboards, shot lists, edits (story first: `story.md`; review in motion) |
 | `lookbook` | from-scratch concepts, or a design that passes but feels generic: optional `modules/lookbook/` |
 
 For small contexts, `lite/CREATIVE-DIRECTOR-LITE.md` holds the loop, core rules and blockers in one file.
@@ -64,4 +65,4 @@ For small contexts, `lite/CREATIVE-DIRECTOR-LITE.md` holds the loop, core rules 
 
 **Needs:** a model that can see images, and a way to render or screenshot the work at real size. Without vision, say the review is rules-only.
 
-This folder is generated from the repo root by `tools/package_skill.py` (version 0.8.2). To change a rule, edit the repo's root files, not this copy.
+This folder is generated from the repo root by `tools/package_skill.py` (version 0.9.0). To change a rule, edit the repo's root files, not this copy.

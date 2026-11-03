@@ -19,7 +19,9 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 | 3D model, prop, asset, scene for render, game or print | 3d (+ illustration for a final beauty render or composed shot) |
 | 3D used as reference for a drawing or painting | 3d, technical-drawing |
 | Logo, icon set | brand, illustration (shape, value), web-ui (size and contrast rules) |
-| Storyboard, comic page, carousel or any image sequence | illustration (ILL-7 for intensity across frames; `notes.md` for panel transitions) |
+| Storyboard, comic page, carousel or any image sequence | illustration (ILL-7 for intensity across frames; `notes.md` for panel transitions); + film (`story.md`, `review.md` FILM-REV-3) when it plans shots for video |
+| Video, film, animation, trailer, social clip, edit, shot list, animatic; cinematography questions | film (`README.md` + `story.md` + `review.md`; `crossover.md` when unsure what carries over) + composition and colour-value for key frames (+ typography for titles; + character when people are in frame) |
+| Clip made or altered by a video model | film (+ `generated.md`: identity, anatomy on sampled frames, invented text are blockers), character, brand for any surface with lettering |
 | Brief asks for a mood, energy, character or a distinctive feel; work that is correct but flat or generic; choosing between versions | aesthetic-critique (+ the medium's modules, which still decide blockers) |
 | From-scratch concepts (2-3 directions); work that passes every check but feels generic; naming a described vibe | lookbook, optional (at most one concept in three from it; hint strength by default; never on fixes or edits) |
 | The owner says just "bolder", "quieter" or "distill" | `core/commands.md` (CMD-1 to 3) + the medium's modules |
@@ -35,20 +37,20 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 
 ## Token cost per module
 
-Approximate: counted with tiktoken's `cl100k_base` encoding on 2 Nov 2026 (v0.8.0). Other models tokenise differently, so expect roughly ±15%.
+Approximate: counted with tiktoken's `cl100k_base` encoding on 2 Nov 2026 (v0.8.0); files changed in v0.9.0 recounted on 3 Nov 2026. Other models tokenise differently, so expect roughly ±15%.
 
 | File or set | Tokens |
 |---|---|
-| `AGENTS.md` (entry point, always) | 1,335 |
+| `AGENTS.md` (entry point, always) | 1,371 |
 | `core/principles.md` (always) | 1,930 |
-| `core/critique-loop.md` (always) | 3,037 |
+| `core/critique-loop.md` (always) | 3,101 |
 | `core/critique-template.md` (when writing a critique) | 1,430 |
 | `core/commands.md` (bolder, quieter, distill) | 1,166 |
 | `core/creative-direction.md` (direct mode, open briefs) | 1,150 |
 | `core/first-principles.md` (remake from scratch) | 3,210 |
 | `core/brand-intake.md` (no brand input) | 698 |
-| `core/evidence.md` (before claiming people prefer something) | 2,802 |
-| `core/which-modules.md` (this file) | 1,643 |
+| `core/evidence.md` (before claiming people prefer something) | 2,880 |
+| `core/which-modules.md` (this file) | 1,780 |
 | `core/interaction-flow.md` (pointer and diagram only) | 724 |
 | `modules/3d/` | 1,878 |
 | `modules/aesthetic-critique/` | 3,101 |
@@ -56,6 +58,7 @@ Approximate: counted with tiktoken's `cl100k_base` encoding on 2 Nov 2026 (v0.8.
 | `modules/character/` | 3,657 |
 | `modules/colour-value/` | 2,928 |
 | `modules/composition/` | 8,787 |
+| `modules/film/` (README 9,998 + `story.md` 3,065 + `review.md` 1,416; `generated.md` 2,242 for generated clips; `crossover.md` 1,372 when unsure) | 14,479 |
 | `modules/illustration/` (+ notes 484) | 3,791 |
 | `modules/lookbook/` (README only; search `looks.json` with `tools/lookbook_find.py`, never load it whole) | 1,177 |
 | `modules/layout/` | 4,660 |
@@ -63,7 +66,7 @@ Approximate: counted with tiktoken's `cl100k_base` encoding on 2 Nov 2026 (v0.8.
 | `modules/typography/` (+ `fonts/CATALOGUE.md` when picking type, about 7,400) | 3,986 |
 | `modules/ux/` | 1,895 |
 | `modules/web-ui/` (+ notes 437) | 2,029 |
-| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 2,884 |
-| `BIBLIOGRAPHY.md` (reading list; not needed for a critique) | 3,719 |
+| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 3,100 |
+| `BIBLIOGRAPHY.md` (reading list; not needed for a critique) | 4,394 |
 
-Typical loads: the always-on set (AGENTS + principles + loop) is about 6,300, or 7,700 with the critique template. Add the modules: a screen (web-ui + ux) about 11,700; a social card (layout + typography) about 16,400, with composition about 25,200; a figure (character + technical-drawing + illustration) about 18,200; a poster remake (first-principles + layout + typography + aesthetic-critique) about 22,700. For a pre-delivery check alone, load just the *Sitting right* section of `composition/` (COMP-19 to 25). If that is too much, use the lite file.
+Typical loads: the always-on set (AGENTS + principles + loop) is about 6,400, or 7,800 with the critique template. Add the modules: a screen (web-ui + ux) about 11,700; a social card (layout + typography) about 16,400, with composition about 25,200; a figure (character + technical-drawing + illustration) about 18,200; a poster remake (first-principles + layout + typography + aesthetic-critique) about 22,700; a video review (film README, `story.md` and `review.md`) about 14,500, or 16,700 with `generated.md`. For a pre-delivery check alone, load just the *Sitting right* section of `composition/` (COMP-19 to 25). If that is too much, use the lite file.

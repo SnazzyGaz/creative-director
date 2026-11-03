@@ -71,7 +71,9 @@ In the [baseline](examples/baseline-comparison/) the with-skill poster won on ac
 | **Remake from scratch**<br>"redo", "rejig", "start over", "reimagine" | Steps back first: what the piece is, who it is for, its one job, the feeling, the given facts (checked against each other) and what must survive. Sends a 5-8 line brief for sign-off, then 2-3 concepts that differ in structure, recommends one, builds it and runs the full checks ([FP-1..9](core/first-principles.md), [example](examples/first-principles-remake/)). Without these words the light touch stays the default. |
 | **Nudge**<br>"bolder", "quieter", "distill" | Bolder adds contrast, scale difference and commitment; quieter lowers whatever competes with the main thing; with a lookbook look applied, each moves its strength one step. Distill removes until the one job still works, and no further ([commands](core/commands.md)). The *Sitting right* guard still applies, so none of them centres things by default. |
 
-Always send the actual output (image, screenshot at real size, URL or renders), never a description. Interactive and 3D work is reviewed hands-on: clicked, panned, zoomed and recorded, then judged on how it feels to use, not from stills alone.
+Always send the actual output (image, screenshot at real size, URL or renders), never a description. Interactive and 3D work is reviewed hands-on: clicked, panned, zoomed and recorded, then judged on how it feels to use, not from stills alone. Video is watched in motion at its delivered size with sound, then scrubbed and sampled frame by frame ([film module](modules/film/review.md)).
+
+**Film (optional module):** rules for a cinematographer or editor bot, or any agent making or judging video, generated clips, storyboards or edits. It starts from story: every shot size, angle, light, colour, move, cut and music cue is checked against the beat it serves ([`story.md`](modules/film/story.md)). Then the craft: shot grammar, the 180° and 30° rules (and when to break them), motivated light held across cuts, shot matching and skin, Murch's priorities, J and L cuts, shot length, subtitles, loudness and flashing limits, a QC checklist for generated video (identity drift, morphing, physics, flicker, invented text), a [crossover map](modules/film/crossover.md) of which still-image rules carry over, and the film myths (24 fps is sacred, shallow focus is cinematic, teal and orange always works, the strong Kuleshov legend). Research-backed, craft and single-practitioner claims are graded apart.
 
 **Lookbook (optional):** a swatch book of 196 visual looks, each tagged by use, mood, energy, what it should be avoided for, and palette, with image sheets ([module](modules/lookbook/)). For new work the agent can offer two or three directions with look IDs as thumbnails, at most one concept in three from the lookbook. A design that passes but feels generic can borrow one layer of a look at hint strength (about 20%). Never used on fixes or edits. Search by brief, by colour, or with "more like this" (`tools/lookbook_find.py`). Looks are named by technique, structure or broad era only, never by living artists, studios or specific works.
 
@@ -88,7 +90,7 @@ Always send the actual output (image, screenshot at real size, URL or renders), 
 - **Recommended setup:** Playwright or headless Chrome for UI (`tools/shot.sh` uses Chrome; `tools/autocheck.py` uses Playwright for pages), Blender for 3D (plus [model-qa](https://github.com/SnazzyGaz/model-qa) for build checks), and Python 3 with Pillow and NumPy for the `tools/` scripts (the auto check, look tests, contrast, vanishing points, ellipses, layout grid, 3D intersections; `pip install -r tools/requirements.txt`).
 - **Without vision** you only get a rules-only review of code or a description. It can still catch contrast, spacing and flow problems in code, but it can't judge how the work looks, and it is much weaker.
 
-Context cost: about 6,300 tokens always loaded (`AGENTS.md`, principles and the loop; 7,700 with the critique template), plus 1,900-8,800 per module ([table](core/which-modules.md#token-cost-per-module)). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 2,900 tokens.
+Context cost: about 6,400 tokens always loaded (`AGENTS.md`, principles and the loop; 7,800 with the critique template), plus 1,900-10,000 per module (film: about 14,500 for its three core files) ([table](core/which-modules.md#token-cost-per-module)). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 3,100 tokens.
 
 ## What's inside
 
@@ -98,6 +100,7 @@ core/       always: principles, the loop (with sign-off and delivery). On demand
 modules/    technical-drawing · illustration · character · web-ui · ux · 3d
             typography · layout (social, posters, slides, print) · brand · aesthetic-critique
             composition (balance, focus, unity, space, beauty) · colour-value
+            film (cinematography and video, story first: shots, continuity, light, grading, editing, sound, generated-video QC)
             lookbook (optional: 196 established looks and wildcards, tag file and image sheets)
 tools/      auto check (one command, every measurable rule), look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, 3D intersections, before/after
 examples/   stress tests, round by round, including this README's own critique

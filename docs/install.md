@@ -134,8 +134,8 @@ For ChatGPT custom GPTs or projects, Gemini Gems, Claude Projects, Le Chat, loca
 | File | What it holds | Size |
 |---|---|---|
 | [`creative-director-prompt.md`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt.md) | `AGENTS.md`, principles, critique loop, critique template, commands | about 9,000 tokens |
-| [`creative-director-prompt-full.md`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt-full.md) | the above, the rest of `core/`, and every module | about 63,000 tokens |
-| [`lite/CREATIVE-DIRECTOR-LITE.md`](../lite/CREATIVE-DIRECTOR-LITE.md) | the loop, core rules and blockers, hand-written short version | about 2,900 tokens |
+| [`creative-director-prompt-full.md`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt-full.md) | the above, the rest of `core/`, and every module | about 81,000 tokens |
+| [`lite/CREATIVE-DIRECTOR-LITE.md`](../lite/CREATIVE-DIRECTOR-LITE.md) | the loop, core rules and blockers, hand-written short version | about 3,100 tokens |
 
 Paste one into the system prompt or custom instructions, or upload it as knowledge. Each bundle keeps the repo's file paths as section headings, so "load `core/critique-loop.md`" points at a section in the same file. The bundle tells the model that the Python checks can't run in a plain chat, so it does them by eye and says so. Rebuild the bundles yourself with `python3 tools/build_bundle.py`; the output has no dates, so unchanged sources give identical files.
 

@@ -19,7 +19,8 @@ CORE = ["AGENTS.md", "core/principles.md", "core/critique-loop.md", "core/critiq
 REST = ["core/interaction-flow.md", "core/creative-direction.md", "core/first-principles.md", "core/brand-intake.md",
         "core/evidence.md", "core/which-modules.md"]
 MODULES = ["technical-drawing", "character", "illustration", "composition", "colour-value", "layout", "typography",
-           "brand", "web-ui", "ux", "3d", "aesthetic-critique", "lookbook"]
+           "brand", "web-ui", "ux", "3d", "aesthetic-critique", "film", "lookbook"]
+EXTRA = {"film": ["story.md", "generated.md", "review.md", "crossover.md"]}   # module files beyond README.md
 
 
 def version():
@@ -44,7 +45,7 @@ def preface(full: bool, files: list[str]):
 
 
 def bundle(full: bool):
-    files = CORE + (REST + [f"modules/{m}/README.md" for m in MODULES] if full else [])
+    files = CORE + (REST + [f"modules/{m}/{f}" for m in MODULES for f in ["README.md"] + EXTRA.get(m, [])] if full else [])
     parts = [preface(full, files)]
     for f in files:
         text = (ROOT / f).read_text().strip()

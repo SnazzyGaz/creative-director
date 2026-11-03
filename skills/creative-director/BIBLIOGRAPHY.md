@@ -90,6 +90,23 @@ An annotated reading list behind `modules/composition/`, `modules/colour-value/`
 - **Colour:** Schloss & Palmer [S41]; Ou & Luo 2006 [S245]; Birch 2012 [S252].
 - **Whose taste:** Vessel et al. 2018 [S251].
 
+## 6a. Film and the moving image (v0.9.0)
+
+The film module's reading list, by kind. Full entries in `SOURCES.md` (S267 to S331).
+
+| Kind | Works | Used for |
+|---|---|---|
+| Craft books | Mascelli [S267]; Brown [S268]; Murch [S269]; Bordwell, Thompson & Smith [S270]; Katz [S271]; Arijon [S272]; Alton [S273]; Landau [S274]; Ward [S275]; Mackendrick [S276]; Block [S78] | Shot grammar, continuity, light, cutting, story structure |
+| Attention and editing research | Smith [S277, S278, S280]; Mital et al. [S279]; Loschky et al. [S281]; Magliano & Zacks [S282] | Why continuity works, gaze after cuts, motion leads attention |
+| Film-style corpus studies | Cutting and colleagues [S283 to S287]; Bordwell, intensified continuity [S288] | Shot length, pace, climaxes (descriptive, not prescriptive) |
+| Shot scale, angle, movement | Rooney & Bálint [S289]; Kraft [S290]; Meyers-Levy & Peracchio [S291]; Heimann et al. [S292] | Distance and power: small, conditional effects |
+| Kuleshov effect | Prince & Hensley [S293]; Mobbs et al. [S294]; Barratt et al. [S295]; Ildirar & Ewing [S296]; Baranowski & Hecht [S297] | Real but modest; the legend overclaims |
+| Music and sound | Marshall & Cohen [S298]; Boltz [S299]; Hoeckner et al. [S300]; Cohen [S301]; Chion [S302]; Hitchcock on suspense [S303] | Music changes interpretation; sound design; suspense |
+| Colour | Jonauskaite et al. [S304]; Bellantoni [S305]; Amidi on colour scripts [S306]; Van Hurkman [S307]; Bartleson [S308]; Kelly [S309]; Miro [S310]; ACES and CDL [S331] | Colour arcs, skin, matching, pipelines; colour-emotion caveats |
+| Standards | WCAG 2.3.1 and captions [S314]; Ofcom flashing [S315]; Netflix and BBC subtitles [S316, S317]; EBU R 95, R 128 [S318, S319] | Flashing, subtitles, safe areas, loudness |
+| Generated video | VBench [S320]; Physics-IQ [S321] | Failure families: consistency, flicker, physics |
+| Trade press and practitioners | Deakins forums [S322]; ASC [S323]; British Cinematographer [S324]; Filmmaker [S325]; No Film School [S326]; StudioBinder [S327]; IndieWire [S328]; Cinematography Database [S329]; Wikipedia technique pages [S330] | Working practice; single-practitioner claims are graded as such |
+
 ## 7. Not reached, or not used
 
 - **Kandinsky, *Point and Line to Plane* (1926).** No public-domain English copy online; the 1947 translation is probably still in copyright. The German original (*Punkt und Linie zu Fläche*) is public domain in life-plus-70 countries, but no verified scan was found. Not used for any rule.
