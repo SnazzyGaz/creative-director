@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.9.1 (3 November 2026)
+
+**Content freeze.** No new rules or modules until the blind test below has been judged; until then only fixes (broken links, wrong facts, failing checks).
+
+- **Blind test kit.** New `examples/blind-test/`: 8 earlier briefs (3 posters, 3 illustrations, 2 UI screens), each made with and without the skill by the same image model (GenerateImage, one call each, first output kept). `blind.py` shuffles them into 16 judging sheets (each pair twice, sides swapped, random IDs); the key stays out of the repo, with its salted SHA-256 committed first. A scoring form (`SCORING.md`, `scoring.csv`), a prompt for outside models, and `score.py`, which reports each judge separately, the owner of the work first, with a sign test. Images and sheets are not in git. **Not judged yet: no results.**
+- **Hero poster fix (r4).** In the aesthetic poster the double bass sat almost against the lamp post; one image edit slid it left (gap about 10 px to about 33 px at 864 px wide), still inside the lamp's light and lit from the lamp side (TD-LIT-1). Everything outside the edited area, type included, is unchanged pixel for pixel. Hero, side-by-side, look sheet and README baseline images rebuilt; before and after in `examples/anatomy-sweep/`.
+- **Token budgets in CI.** New `tools/check_budgets.py`: always-on set at most 6,500 tokens, lite 2,500, each module README 6,000, every other rule file 4,500 (tiktoken `cl100k_base`). The GitHub Action fails if one is over.
+  - `modules/composition/`: Sitting right (COMP-19 to 25) moved to `sitting-right.md`; README 8,787 → 5,662 tokens.
+  - `modules/film/`: colour and grading, editing, composition in motion, sound, on-screen text, look vocabulary and myths moved to `edit.md`; README 9,998 → 5,801 tokens. No rule removed; every ID kept.
+  - `lite/`: tightened, 3,100 → 2,340 tokens, every rule ID kept. Reworded throughout for length; some asides and examples were dropped (for example "list the rule IDs in scope first"). The full rules in `core/` and `modules/` are unchanged.
+- **CI runs every test suite** (autocheck, balance, ellipse, grid, intersect, whitespace, lookbook search) on each push.
+- **intersect.py needed scipy.** Without it, trimesh's proximity calls failed and every check passed silently. scipy is now in `tools/requirements.txt` and the tool exits with a message if it's missing.
+- **Smaller repo.** A fresh clone went from about 279 MB to about 103 MB (`.git` 144 MB → 48 MB). Example images over 150 KB are now smaller copies (at most 1,000 px) at the same paths, lookbook sheets 1,000 px wide, and the font files left git. Full-size originals, the fonts and a git bundle of the old history are on the [assets-v1 release](https://github.com/SnazzyGaz/creative-director/releases/tag/assets-v1); `tools/fetch_assets.py` puts them back. History was rewritten to drop the old large files, so **commit hashes changed: re-clone** rather than pull. Releases and their downloads are unchanged. Images the tests read stay at full size.
+
 ## v0.9.0 (3 November 2026)
 
 New optional module: **film** (`modules/film/`), for a cinematographer or editor bot, or any agent that makes or judges video, generated clips, animation, storyboards, shot lists or edits.

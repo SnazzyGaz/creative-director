@@ -6,6 +6,8 @@ Runs of the critique loop (`core/critique-loop.md`) done as a bot would: brief, 
 
 **Image sizes.** To keep clones small, most images here are smaller copies (at most 1,000 px on the long side) at the same paths. The full-size originals are in `creative-director-examples-full.zip` on the [assets-v1 release](https://github.com/SnazzyGaz/creative-director/releases/tag/assets-v1); `python3 tools/fetch_assets.py --examples` puts them back in place. Images the test suites read are kept at full size. Measurements quoted in the logs were taken on the full-size files.
 
+**Blind test (not yet judged):** [`blind-test/`](blind-test/) is a kit for judging 8 briefs made with and without the skill by the same image model, one call each. Its images stay out of git; no results exist yet.
+
 ## What was detected and what was fixed
 
 | Example | Domain | Made with | Nudge or take-over | Key rule IDs detected | What was fixed | Rounds |

@@ -1,0 +1,6 @@
+SHA-256 of the hidden key, committed before any judging:
+1b8a3874fa7f5c524fed2d1ba4752e462368e8672f446f001d54bc3fb7b8f882  blind-test-key.json
+
+The key is not in the repo. It holds a random salt, so the 16 left/right placements can't be guessed from this
+hash. After judging closes, publish the key next to this file; `sha256sum blind-test-key.json` must give the
+line above.
