@@ -60,7 +60,7 @@ At the size people see it, plus a thumbnail. UI: phone and desktop widths and 20
 
 **Anatomy pass (delivery gate):** with any person, hand or animal in frame, crop each hand, limb join, face and animal head at 2-4x and write one pass/fail line per crop (CHAR-9, `tools/anatomy_crops.py`). A whole-image look doesn't count; any fail blocks.
 
-**Before delivery, the Sitting right pass** (COMP-19 to COMP-25): rotate 180°, cover each half, gap measure (LAY-10), `tools/balance.py`, edge and alignment sweep. Flag only what looks accidental and ask "intended?". Asymmetric and off-centre work is valid: fix broken balance with a counterweight or by committing harder to the asymmetry. Never centre or symmetrise by default.
+**Before delivery, the Sitting right pass** (COMP-19 to COMP-25, `modules/composition/sitting-right.md`): rotate 180°, cover each half, gap measure (LAY-10), `tools/balance.py`, edge and alignment sweep. Flag only what looks accidental and ask "intended?". Asymmetric and off-centre work is valid: fix broken balance with a counterweight or by committing harder to the asymmetry. Never centre or symmetrise by default.
 
 ## 4. Critique (`critique-template.md`)
 

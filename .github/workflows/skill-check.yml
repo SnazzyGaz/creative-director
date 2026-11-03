@@ -16,3 +16,27 @@ jobs:
         run: python3 tools/package_skill.py --check
       - name: Prompt bundles build
         run: python3 tools/build_bundle.py --check
+      - name: Token budgets
+        run: |
+          pip install tiktoken
+          python3 tools/check_budgets.py --loads
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install tool requirements
+        run: |
+          sed 's/^opencv-python$/opencv-python-headless/' tools/requirements.txt > /tmp/req.txt
+          pip install -r /tmp/req.txt
+          python3 -m playwright install --with-deps chromium
+      - name: Test suites
+        run: |
+          set -e
+          for t in tools/tests/autocheck_cases.py tools/tests/balance_cases.py tools/tests/ellipse_cases.py \
+                   tools/tests/grid_cases.py tools/tests/intersect_cases.py tools/tests/whitespace_cases.py \
+                   modules/lookbook/tests/score_find.py; do
+            echo "== $t"; python3 "$t"
+          done

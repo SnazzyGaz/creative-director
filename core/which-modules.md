@@ -20,7 +20,7 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 | 3D used as reference for a drawing or painting | 3d, technical-drawing |
 | Logo, icon set | brand, illustration (shape, value), web-ui (size and contrast rules) |
 | Storyboard, comic page, carousel or any image sequence | illustration (ILL-7 for intensity across frames; `notes.md` for panel transitions); + film (`story.md`, `review.md` FILM-REV-3) when it plans shots for video |
-| Video, film, animation, trailer, social clip, edit, shot list, animatic; cinematography questions | film (`README.md` + `story.md` + `review.md`; `crossover.md` when unsure what carries over) + composition and colour-value for key frames (+ typography for titles; + character when people are in frame) |
+| Video, film, animation, trailer, social clip, edit, shot list, animatic; cinematography questions | film (`README.md` + `story.md` + `review.md`; `edit.md` for grading, cutting, sound and titles; `crossover.md` when unsure what carries over) + composition and colour-value for key frames (+ typography for titles; + character when people are in frame) |
 | Clip made or altered by a video model | film (+ `generated.md`: identity, anatomy on sampled frames, invented text are blockers), character, brand for any surface with lettering |
 | Brief asks for a mood, energy, character or a distinctive feel; work that is correct but flat or generic; choosing between versions | aesthetic-critique (+ the medium's modules, which still decide blockers) |
 | From-scratch concepts (2-3 directions); work that passes every check but feels generic; naming a described vibe | lookbook, optional (at most one concept in three from it; hint strength by default; never on fixes or edits) |
@@ -32,12 +32,12 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 
 1. Core hierarchy and value (does it read at all?)
 2. Blockers (perspective, proportion, anatomy pass, light, broken flows, failing contrast): the MUST-BE-RIGHT list in `core/critique-loop.md`.
-3. Composition and layout (`composition/` COMP-1 to 25, with the *Sitting right* pass COMP-19 to 25 last before delivery; `colour-value/` CV-1 to 9).
+3. Composition and layout (`composition/` COMP-1 to 18, with the *Sitting right* pass COMP-19 to 25 in `sitting-right.md` last before delivery; `colour-value/` CV-1 to 9).
 4. Surface: edges, texture, micro-spacing, polish.
 
 ## Token cost per module
 
-Approximate: counted with tiktoken's `cl100k_base` encoding on 2 Nov 2026 (v0.8.0); files changed in v0.9.0 recounted on 3 Nov 2026. Other models tokenise differently, so expect roughly ±15%.
+Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.9.1, 3 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
 
 | File or set | Tokens |
 |---|---|
@@ -50,23 +50,23 @@ Approximate: counted with tiktoken's `cl100k_base` encoding on 2 Nov 2026 (v0.8.
 | `core/first-principles.md` (remake from scratch) | 3,210 |
 | `core/brand-intake.md` (no brand input) | 698 |
 | `core/evidence.md` (before claiming people prefer something) | 2,880 |
-| `core/which-modules.md` (this file) | 1,780 |
+| `core/which-modules.md` (this file) | 1,950 |
 | `core/interaction-flow.md` (pointer and diagram only) | 724 |
 | `modules/3d/` | 1,878 |
 | `modules/aesthetic-critique/` | 3,101 |
 | `modules/brand/` | 2,890 |
 | `modules/character/` | 3,657 |
 | `modules/colour-value/` | 2,928 |
-| `modules/composition/` | 8,787 |
-| `modules/film/` (README 9,998 + `story.md` 3,065 + `review.md` 1,416; `generated.md` 2,242 for generated clips; `crossover.md` 1,372 when unsure) | 14,479 |
+| `modules/composition/` (README 5,662, COMP-1 to 18; `sitting-right.md` 3,403, COMP-19 to 25, before delivery) | 9,065 |
+| `modules/film/` (README 5,801 + `story.md` 3,067 + `review.md` 1,416; `edit.md` 4,450 for grading, cutting, sound and titles; `generated.md` 2,246 for generated clips; `crossover.md` 1,373 when unsure) | 10,284 |
 | `modules/illustration/` (+ notes 484) | 3,791 |
-| `modules/lookbook/` (README only; search `looks.json` with `tools/lookbook_find.py`, never load it whole) | 1,177 |
+| `modules/lookbook/` (README only; search `looks.json` with `tools/lookbook_find.py`, never load it whole) | 1,192 |
 | `modules/layout/` | 4,660 |
 | `modules/technical-drawing/` | 3,038 |
 | `modules/typography/` (+ `fonts/CATALOGUE.md` when picking type, about 7,400) | 3,986 |
 | `modules/ux/` | 1,895 |
 | `modules/web-ui/` (+ notes 437) | 2,029 |
-| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 3,100 |
+| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 2,340 |
 | `BIBLIOGRAPHY.md` (reading list; not needed for a critique) | 4,394 |
 
-Typical loads: the always-on set (AGENTS + principles + loop) is about 6,400, or 7,800 with the critique template. Add the modules: a screen (web-ui + ux) about 11,700; a social card (layout + typography) about 16,400, with composition about 25,200; a figure (character + technical-drawing + illustration) about 18,200; a poster remake (first-principles + layout + typography + aesthetic-critique) about 22,700; a video review (film README, `story.md` and `review.md`) about 14,500, or 16,700 with `generated.md`. For a pre-delivery check alone, load just the *Sitting right* section of `composition/` (COMP-19 to 25). If that is too much, use the lite file.
+Typical loads, with the always-on set and the critique template (about 7,800): a screen (web-ui + ux) about 11,800; a social card (layout + typography) about 16,500, plus about 5,700 for the composition README and 3,400 for `sitting-right.md`; a figure (character + technical-drawing + illustration) about 18,300; a poster remake (first-principles + layout + typography + aesthetic-critique) about 22,800; a video review (film README, `story.md` and `review.md`) about 18,100, or 24,800 with `edit.md` and `generated.md`. For a pre-delivery check alone, load just `composition/sitting-right.md` (COMP-19 to 25). If that is too much, use the lite file.

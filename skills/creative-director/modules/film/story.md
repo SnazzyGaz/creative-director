@@ -49,7 +49,7 @@ Format: **What / Why / Check / Fix / Grade / Source**. Evidence is thinner here 
 - **Why:** Seen at a glance, a colour script shows whether colour follows the emotional arc or sits in one grade throughout. Colour-emotion associations are broadly shared across cultures (a common core with real differences by language and place), but they are weak and context-bound, so meaning comes mostly from how the film itself pairs a colour with a character or event.
 - **Check:** Build the strip (one frame per scene) and read it without the film: can you see the turns? Does each palette change happen at a story change, and is it motivated by the light or the world?
 - **Fix:** Re-plan the palette per section; grade or relight to the plan; take mood words from the brief, not from a colour-meaning table.
-- **Grade:** Colour scripting: craft wisdom [S306, S305, S328]; colour-emotion associations: Partly supported, culture- and context-dependent [S304, S46]. Fixed colour meanings are a myth (README).
+- **Grade:** Colour scripting: craft wisdom [S306, S305, S328]; colour-emotion associations: Partly supported, culture- and context-dependent [S304, S46]. Fixed colour meanings are a myth (`edit.md`).
 - **Source:** [S306, S305, S328, S304, S46].
 
 ### FILM-STORY-4. Light sets mood, and a change of light is a beat

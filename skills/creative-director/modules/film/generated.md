@@ -1,6 +1,6 @@
 # Film: generated video
 
-For clips made or altered by a video model (text-to-video, image-to-video, extensions, inpainting, frame interpolation). The rules in `README.md` and `story.md` still apply; these are the faults models add. Judge in motion first (FILM-REV-1), then sample frames. Benchmarks confirm these failure families: subject and background consistency, temporal flicker and motion smoothness are separate measured dimensions [S320], and on a physics benchmark the best models scored low, with visual realism not predicting physical understanding [S321].
+For clips made or altered by a video model (text-to-video, image-to-video, extensions, inpainting, frame interpolation). The rules in `README.md`, `edit.md` and `story.md` still apply; these are the faults models add. Judge in motion first (FILM-REV-1), then sample frames. Benchmarks confirm these failure families: subject and background consistency, temporal flicker and motion smoothness are separate measured dimensions [S320], and on a physics benchmark the best models scored low, with visual realism not predicting physical understanding [S321].
 
 Format: **What / Why / Check / Fix / Grade / Source**. MUST-BE-RIGHT rules block delivery.
 

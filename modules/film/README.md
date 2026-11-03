@@ -4,12 +4,13 @@ Cinematography and the moving image: live-action footage, generated video clips,
 
 | File | What it holds | Load when |
 |---|---|---|
-| `README.md` (this file) | Craft rules: shots, continuity, camera, light, colour, editing, composition in motion, sound, on-screen text, flashing; film myths | any moving-image work |
+| `README.md` (this file) | Craft rules: shots, continuity, camera, light, flashing and captions | any moving-image work |
+| `edit.md` | Colour and grading, editing and pacing, composition in motion, sound, on-screen text, look vocabulary, film myths | grading, cutting, titles, subtitles or sound; any full review |
 | `story.md` | Story first: the beat check (FILM-STORY-0), framing, colour, light, movement, music, editing and motifs as storytelling | always with this module; it is the core of it |
 | `generated.md` | Generated video: failures (identity drift, morphing, physics, flicker, invented text) and the frame-sampling QC checklist | AI or generated clips, or any clip a model touched |
 | `review.md` | How to review moving work (in motion, hands-on, then frames) and the film critique template | every critique of a clip, sequence, edit or storyboard |
 | `crossover.md` | Which repo rules apply to film as they are, which change in motion, and which are film-only | when unsure whether a still-image rule applies |
-| `diagrams/axis-180-30.svg` | One small overhead diagram of the 180° line and the 30° rule (not in the skill folder; the text below stands alone) | if a picture helps |
+| `diagrams/axis-180-30.svg` | Overhead diagram of the 180° line and 30° rule (not in the skill folder; the text stands alone) | if a picture helps |
 
 Format: **What / Why / Check / Fix / Auto / Grade / Source**, as in the other modules. Grades follow `core/evidence.md`. "Craft wisdom" here means long agreement among teachers and working crews; where a claim rests on one practitioner it says so. Sources are `[S267]` to `[S331]` in `SOURCES.md`.
 
@@ -220,187 +221,6 @@ Event-segmentation work shows breaks in *action* move viewers' sense of a new ev
 - **Grade:** Standard (sensor and display range); exposure for practicals: craft wisdom [S323, S268].
 - **Source:** [S323, S268].
 
-## Colour and grading
-
-### FILM-COL-1. One look per scene, and shots matched to it
-- **What:** Build the look first (overall contrast, colour of light and shadow, saturation), then balance every shot of the scene to it: black and white points first, then skin, then neutrals.
-- **Why:** Shots that differ in colour or contrast make the cut visible and break the scene into pieces.
-- **Check:** Contact sheet of all shots in the scene side by side, plus the waveform and vectorscope. Do skin, blacks and neutrals match? Match to the widest representative shot first.
-- **Fix:** Regrade with few shot-level fixes; regenerate the outlier.
-- **Auto:** partly (mean and spread of L*, a*, b* per shot, and on face regions).
-- **Grade:** Procedure; the look-first order is one practitioner's method, widely used [S309]; matching order: craft wisdom [S307].
-- **Source:** [S307, S309].
-
-### FILM-COL-2. Skin reads as healthy and as itself
-- **What:** Under neutral light, skin sits near one narrow hue band (the "skin line" on a vectorscope), whatever the person's complexion; lightness and saturation differ by person. Keep each person's own tone; push it only when the light or story asks.
-- **Why:** Viewers remember skin, sky and foliage as more saturated than they are and judge them against memory, so off skin is caught before anything else.
-- **Check:** Vectorscope on a face region per shot; compare faces across shots and with each other.
-- **Fix:** Isolate and correct skin; don't drag every complexion to one hue.
-- **Auto:** yes (hue angle of face regions).
-- **Grade:** Partly supported (memory colours [S308]); the skin line as a guide, not a rule: craft wisdom [S307].
-- **Source:** [S308, S307].
-
-### FILM-COL-3. One colour pipeline from source to delivery
-- **What:** Know the colour space each source is in (camera log, generated sRGB, renders), transform it once into the working space, apply the look there, and output for each delivery (SDR, HDR). A LUT made for one input is used only on that input.
-- **Why:** A LUT on the wrong input gives crunchy, clipped or muddy pictures that no later tweak fixes cleanly.
-- **Check:** Write down the chain: input space, transform, look, output. Is any step guessed?
-- **Fix:** Rebuild the chain with a colour-managed pipeline (for example ACES) and exchange grades as CDLs or the project's LUTs.
-- **Auto:** no.
-- **Grade:** Standard (colour-management specs) [S331]; pipeline practice: craft wisdom [S324].
-- **Source:** [S331, S324].
-
-### FILM-COL-4. Colour guides the eye and the arc
-- **What:** The strongest chroma sits at the focus of the beat, the palette plans change over time (`story.md`, FILM-STORY-3), and the meaning survives colour-vision deficiency.
-- **Why:** The CV rules apply to every frame, and a whole film needs a plan, not one grade dragged everywhere.
-- **Check:** CV-6 and CV-9 on sampled frames; a one-frame-per-scene strip for the arc.
-- **Fix:** See CV-6, CV-9 and FILM-STORY-3.
-- **Auto:** partly.
-- **Grade:** See CV-6, CV-9.
-- **Source:** CV-6, CV-9; [S306].
-
-## Editing and pacing
-
-### FILM-EDIT-1. Cut for emotion first (the rule of six)
-- **What:** Judge a cut in this order: emotion, story, rhythm, eye-trace, the flat picture plane, then 3D space continuity. When a cut can't satisfy all, give up from the bottom of the list.
-- **Why:** A cut that keeps the feeling and the story right is forgiven a small spatial slip; the reverse isn't true.
-- **Check:** For each doubtful cut, which of the six does it serve and which does it break?
-- **Fix:** Prefer the take or cut point that keeps the higher priorities.
-- **Auto:** no.
-- **Grade:** Craft wisdom (one editor's framework, widely taught; the percentages he gives are deliberately playful, not measured) [S269].
-- **Source:** [S269].
-
-### FILM-EDIT-2. Cut where the eye already is, or lead it
-- **What:** After a cut, the next thing to look at appears near where the viewer was looking, or a strong cue (motion, a face, contrast, sound) leads the eye to it fast.
-- **Why:** Viewers' gaze clusters on the same few places at the same time, led by motion and faces; a cut that puts the subject far away makes them search and miss the start of the shot.
-- **Check:** Scrub across each cut: where is the focus in the last frame of A and the first frame of B? If it jumps across the frame with no cue, flag it.
-- **Fix:** Re-frame, flop (FILM-CON-4 permitting), move the cut point, or add a cue.
-- **Auto:** partly (saliency or face position at both sides of each cut).
-- **Grade:** Partly supported [S279, S280, S281, S277].
-- **Source:** [S279, S280, S281, S277, S269].
-
-### FILM-EDIT-3. Shot length follows information and intensity
-- **What:** Hold each shot until its information is read, no longer than its interest lasts. Wide, cluttered or emotional shots need more time; close, simple ones less. Shots usually shorten toward a climax and lengthen as it resolves.
-- **Why:** In popular films, shot length tracks how hard a shot is to read, and shots get shorter around climaxes; uniform lengths feel mechanical.
-- **Check:** List shots with durations per scene. Does pace rise toward the peaks? Is any shot cut before its information can be read (try a fresh viewer)? Are lengths all the same?
-- **Fix:** Extend shots that are too short to read; trim lingering ones; vary lengths in a pattern that follows intensity.
-- **Auto:** yes for durations (shot-boundary detection); judgement for readability.
-- **Grade:** Partly supported. The corpus studies describe what popular films do, not what is best [S283, S285, S286, S287]; average shot length has fallen over decades [S284, S288].
-- **Source:** [S283, S284, S285, S286, S287, S288].
-
-### FILM-EDIT-4. Let sound lead or trail the picture (J and L cuts)
-- **What:** In dialogue and scene changes, let the next shot's sound start early (J cut) or the last shot's sound run on (L cut), instead of switching picture and sound together every time.
-- **Why:** Overlapping sound smooths cuts, keeps listeners on the listener, and pulls the viewer into the next scene.
-- **Check:** Are most dialogue cuts straight cuts on both tracks at once? Any scene change that jolts without reason?
-- **Fix:** Offset sound edits; use a sound bridge into a new scene (FILM-STORY-8).
-- **Auto:** no.
-- **Grade:** Craft wisdom [S270, S330].
-- **Source:** [S270, S330].
-
-### FILM-EDIT-5. Juxtaposition shifts meaning, but only so far (the Kuleshov effect)
-- **What:** A neutral face can read slightly differently depending on what is cut next to it, and music can do the same. Use it to steer a reaction shot; don't rely on it to rescue a performance or picture that says something else.
-- **Why:** Modern replications find a real but modest and uneven effect (some emotions more than others, for experienced viewers more than first-time viewers). The legend of a dramatic, universal effect goes beyond the evidence; the original footage is lost.
-- **Check:** Does the meaning of a reaction shot depend wholly on context? Does it still hold if the context shot were removed?
-- **Fix:** Get a performance that supports the beat; use context to sharpen it, not invent it.
-- **Auto:** no.
-- **Grade:** Partly supported [S293, S294, S295, S296, S297].
-- **Source:** [S293, S294, S295, S296, S297, S330].
-
-### FILM-EDIT-6. Few kinds of transition, each with a meaning
-- **What:** The cut is neutral. A dissolve suggests passing time or a link; a fade suggests an ending; wipes, whips and match cuts are stylised. Use one small set consistently.
-- **Why:** A different transition at every change reads as decoration and blurs what each one means.
-- **Check:** List the transitions used. Does each kind mean one thing in this piece?
-- **Fix:** Replace decorative transitions with cuts.
-- **Auto:** partly (transition detection).
-- **Grade:** Craft wisdom [S270, S267].
-- **Source:** [S270, S267].
-
-## Composition in motion
-
-### FILM-COMP-1. Compose the key frames, not every frame
-- **What:** A moving shot is composed at its moments: where it starts, where it rests, the frame on the beat, and where it ends. Run the composition rules (COMP-1 to COMP-18, ILL-2) on those frames.
-- **Why:** Frames in passing don't need to compose; the ones the viewer rests on do.
-- **Check:** Pull the rest frames and the beat frame of each shot; run the five look tests on them.
-- **Fix:** Re-block, re-frame, or re-time the move so it rests on a composed frame.
-- **Auto:** partly (`tools/look.py` on extracted frames).
-- **Grade:** Craft wisdom [S275, S271].
-- **Source:** [S275, S271].
-
-### FILM-COMP-2. Motion beats everything for attention, so control stray motion
-- **What:** In moving images, motion and flicker predict where people look better than anything else, then faces. A moving or flickering background element steals the eye from the subject.
-- **Why:** Attention clusters tightly on motion; stray motion drags it there.
-- **Check:** Watch the shot with eyes soft: what moves besides the subject (extras, leaves, screens, blinking lights, generated texture "boiling")?
-- **Fix:** Still it, blur it, darken it, or let the subject move more.
-- **Auto:** partly (motion energy maps outside the subject).
-- **Grade:** Well supported for gaze [S279, S280]; the fix is craft.
-- **Source:** [S279, S280].
-
-### FILM-COMP-3. Stage in depth and move people, not only the camera
-- **What:** Use foreground, middle ground and background; let actors move to new positions to change the composition and power within a shot (blocking), instead of cutting each time.
-- **Why:** Depth staging gives the viewer a readable space and lets one shot do the work of several.
-- **Check:** Does the scene use more than one plane? Do the actors' moves change the frame meaningfully?
-- **Fix:** Re-block; separate planes by value and edge (ILL-14).
-- **Auto:** no.
-- **Grade:** Craft wisdom [S270, S271, S275].
-- **Source:** [S270, S271, S275]; ILL-14.
-
-### FILM-COMP-4. Balance in motion is a flag, never a push to centre
-- **What:** Balance is judged across time. An off-centre single is answered by its reverse shot; empty space may wait for an entrance; a frame may be lopsided on purpose to unsettle. Run Sitting right (COMP-19 to COMP-25) on key frames, flag only what looks accidental, and ask "intended?".
-- **Why:** Centring every subject kills looking room, eyeline geometry and tension.
-- **Check:** Flags from key frames, each answered "intended: keep (why)" or "fix".
-- **Fix:** A counterweight, a firmer asymmetry, or the matching reverse; never centre or symmetrise by default.
-- **Auto:** partly (`tools/balance.py` on key frames: FLAG only).
-- **Grade:** Craft wisdom; balance and liking are only loosely linked [S235, S237].
-- **Source:** COMP-19 to COMP-25; [S235, S237, S275].
-
-## Sound (short; story uses are in `story.md`)
-
-### FILM-SND-1. Dialogue is intelligible, and loudness meets the delivery spec
-- **What:** Speech sits clearly above music and effects, on small speakers as well as good ones. The mix is normalised to the delivery's loudness target (for broadcast in Europe, EBU R 128: −23 LUFS integrated, true peak no higher than −1 dBTP; streaming platforms publish their own).
-- **Why:** Lost dialogue is the commonest audience complaint about sound; wrong loudness gets rejected or turned down by the platform.
-- **Check:** Listen on a phone speaker and on headphones; measure integrated loudness and true peak.
-- **Fix:** Duck music under speech; re-mix; normalise.
-- **Auto:** yes for loudness; no for intelligibility.
-- **Grade:** Standard for loudness [S319]; intelligibility: craft wisdom.
-- **Source:** [S319].
-
-### FILM-SND-2. Sound and picture are in sync, and visible events have sound
-- **What:** Lips, footsteps and impacts land on the frame. Visible actions that would make a sound have one (or their silence is a choice).
-- **Why:** Viewers fuse a sound with whatever moves at the same moment, so a well-timed sound sells an image, and a late one breaks it.
-- **Check:** Step through impacts and plosives frame by frame; list silent actions in generated clips.
-- **Fix:** Slip sync; add effects; or make silence a clear choice (FILM-STORY-8).
-- **Auto:** partly (audio-onset against motion-onset).
-- **Grade:** Craft wisdom with a perceptual account (synchresis) [S302].
-- **Source:** [S302].
-
-## On-screen text
-
-### FILM-TXT-1. Titles and lower thirds read at size, on the worst frame behind them
-- **What:** On-screen text stays inside graphics-safe, meets the size floor at the delivered size (TYPE-3), and keeps contrast against the brightest or busiest frame it passes over (LAY-15, UI-6), not the frame it was designed on. It doesn't cover mouths, faces or the action.
-- **Why:** Footage changes under fixed text; a title legible on frame one can vanish on frame forty.
-- **Check:** Sample every frame the text is on; measure contrast against the worst background pixels; overlay safe areas.
-- **Fix:** Add a soft shadow, a box or a darker grade under the text, or move it.
-- **Auto:** yes (contrast per frame within the text box, `tools/contrast.py` on samples).
-- **Grade:** Standard (WCAG contrast, safe areas) [S3, S318]; placement: craft wisdom [S317].
-- **Source:** [S3, S318, S317]; TYPE-3, LAY-15.
-
-### FILM-TXT-2. Subtitles and titles stay up long enough to read
-- **What:** Follow the delivery's subtitle spec. Typical published values: at most 2 lines in landscape; about 37 to 42 characters a line; reading speed up to about 160 to 180 words a minute (BBC) or 17 to 20 characters a second (Netflix, children and adults); each subtitle up between about 5/6 s and 7 s; line breaks at natural phrase boundaries; avoid hanging a subtitle across a shot change. Titles need at least time to read twice.
-- **Why:** Text that leaves before it is read is worse than none; text across cuts flashes.
-- **Check:** Characters per line and per second for every event; minimum and maximum durations; events crossing shot changes.
-- **Fix:** Condense, split or re-time.
-- **Auto:** yes (parse the subtitle file).
-- **Grade:** Standard within each spec [S316, S317].
-- **Source:** [S316, S317].
-
-### FILM-TXT-3. One title system
-- **What:** One or two type families, fixed positions, sizes and in/out timing for each kind of text (titles, lower thirds, captions).
-- **Why:** Consistent text recedes so the picture leads.
-- **Check:** Compare every instance of each kind.
-- **Fix:** Rebuild from one template. See TYPE-1, TYPE-2, TYPE-10.
-- **Auto:** partly.
-- **Grade:** Craft wisdom; see CORE-9.
-- **Source:** CORE-9, TYPE-1, TYPE-2.
-
 ## Accessibility
 
 ### FILM-ACC-1. No flashing above the threshold (MUST-BE-RIGHT)
@@ -423,22 +243,6 @@ Event-segmentation work shows breaks in *action* move viewers' sense of a new ev
 
 ---
 
-## Look vocabulary (by technique, not by title)
+## Colour, editing, motion, sound, text and myths
 
-When a brief asks for "a film look", name the technique, not a title: high-key studio light; low-key chiaroscuro; available-light naturalism; day-for-night; bleach-bypass (silver retained: low saturation, high contrast); saturated dye-transfer primaries; cross-processed colour shifts; push-processed grain; black-and-white with filters; halation and bloom around highlights; diffusion filtering; anamorphic flares and oval bokeh. The `lookbook` module has no film entries yet; adding them would need example plates, which this version does not include.
-
-## Myths and weak claims
-
-- **The rule of thirds is the law of framing.** It is a rough guide for some shots. Eyelines, looking room and the matching reverse shot decide placement (FILM-SHOT-6, FILM-COMP-4). See `core/evidence.md`.
-- **The golden ratio or spiral is how great shots are framed.** Overlays fitted after the fact prove nothing; preference studies don't support it [S220, S38].
-- **24 fps is sacred.** It became the standard in the sound era as a compromise of cost and sound quality [S312]; viewers preferred higher rates in stereoscopic tests [S311]. It is a strong convention with a familiar feel, not a property of "cinema".
-- **Shallow depth of field makes it cinematic.** It is one tool. Deep staging is as old and as cinematic, and shallow focus on every shot flattens the beats (FILM-SHOT-4).
-- **Teal and orange always looks good.** It separates warm skin from cool shadows, but applied by default it is a cliché and fights many stories [S310]. The palette comes from the story (FILM-STORY-3).
-- **"Film look" means grain, letterbox bars and a LUT.** The look comes from light, lens, staging, movement and grade working together; bars on a 16:9 frame just crop it.
-- **The Kuleshov effect proves editing can make any face mean anything.** The effect is real but modest and uneven, and the original experiment can't be checked [S293 to S296].
-- **Wide lenses distort and long lenses compress.** Camera distance does; the lens only crops (FILM-SHOT-3) [S313].
-- **Colours carry fixed meanings (red is danger, blue is sad).** Shared associations exist across cultures but vary with language and place, and context and the film's own pairings decide meaning [S304, S46].
-- **Never cross the line.** It is a convention for readable space, broken well when the beat wants it (FILM-CON-1).
-- **Faster cutting is more exciting.** Corpus studies show pace has risen, not that faster is better; shots cut before they are read lose the viewer (FILM-EDIT-3) [S284, S286].
-- **Murch's percentages are measured.** They are a deliberately playful ranking (FILM-EDIT-1) [S269].
-- **Handheld means realism; low angle means power.** Each can, depending on context and use [S290, S291, S325].
+In [`edit.md`](edit.md): grading (FILM-COL-1 to 4: one look per scene, skin, one pipeline, colour leads the eye), editing (FILM-EDIT-1 to 6: emotion first, cut where the eye is, shot length, J and L cuts, juxtaposition, transitions), composition in motion (FILM-COMP-1 to 4: key frames, stray motion, staging in depth, balance as a flag), sound (FILM-SND-1, 2), on-screen text (FILM-TXT-1 to 3: worst-frame contrast, reading time, one title system), look vocabulary and film myths.

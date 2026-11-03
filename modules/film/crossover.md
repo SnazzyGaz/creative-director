@@ -48,4 +48,4 @@ Which rules from the rest of the repo carry into moving images. Three kinds: rul
 
 ## Myths that carry over
 
-The same myths as for stills (`core/evidence.md`): thirds as a law, the golden ratio, fixed colour meanings, lines that force the eye. Film adds its own (README, "Myths and weak claims").
+The same myths as for stills (`core/evidence.md`): thirds as a law, the golden ratio, fixed colour meanings, lines that force the eye. Film adds its own (`edit.md`, "Myths and weak claims").

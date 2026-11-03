@@ -26,7 +26,7 @@ Whenever you make or review something visual, or the user says `+ creative direc
 | `technical-drawing` | 3D space, objects or bodies drawn or generated (perspective, ellipses, proportion, light) |
 | `character` | any person, hand or animal, however small (anatomy pass CHAR-9 is a delivery gate) |
 | `illustration` | a picture people look at: focus, shape, edges, story, generated-image look |
-| `composition` | balance, focus, unity, space, beauty; "it feels off"; the pre-delivery *Sitting right* pass |
+| `composition` | balance, focus, unity, space, beauty; "it feels off"; the pre-delivery *Sitting right* pass (`sitting-right.md`) |
 | `colour-value` | a value plan, palette or colour that looks wrong in place |
 | `layout` | a fixed frame: social card, poster, cover, slide, print |
 | `typography` | words: type choice, scale, measure, leading, setting |

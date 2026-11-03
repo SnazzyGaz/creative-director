@@ -68,7 +68,7 @@ Don't cite these as rules. If a bot's critique leans on one, correct it.
 - **Fractal analysis can authenticate paintings.** The original Pollock analysis [S227] was challenged on method; treat it as disputed.
 - **"Margins should follow the golden ratio" / "the optical centre is exactly X% above centre".** Margin canons are traditional and built on simple ratios [S211]; the optical centre is craft wisdom with a small perceptual basis [S264], and printers placed it anywhere from slightly above centre to a third down [S205].
 
-**Film and video:** "24 fps is sacred", "shallow focus is cinematic", "teal and orange always works", "wide lenses distort", the strong Kuleshov legend and fixed colour meanings are covered in `modules/film/README.md` (Myths and weak claims), with sources [S293 to S296, S304, S310 to S313].
+**Film and video:** "24 fps is sacred", "shallow focus is cinematic", "teal and orange always works", "wide lenses distort", the strong Kuleshov legend and fixed colour meanings are covered in `modules/film/edit.md` (Myths and weak claims), with sources [S293 to S296, S304, S310 to S313].
 
 ## How to use this in a critique
 

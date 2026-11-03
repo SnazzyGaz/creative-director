@@ -1,71 +1,62 @@
 # Creative director, lite
 
-A short version of this repo for tools with a small context window. It keeps the loop, the core rules and the blockers. The full rules, checks and sources are in `core/` and `modules/`. Use the full version when you can.
+The short version for small context windows: the loop, the core rules and the blockers. Full rules, checks and sources are in `core/` and `modules/`; use them when you can.
 
 ## The loop
 
-Always judge a fresh render or screenshot, never your own code or prompt.
+Judge a fresh render or screenshot, never your own code or prompt.
 
-**Read the ask first.** Work handed over with no specific request: analyse it, reply with a short ranked list of only the imperative changes (rule ID, what will change, [edit] or [regenerate]) and wait for sign-off; change nothing yet. After sign-off apply every signed-off point (regenerate if an edit can't do it), re-check each one and the light, anatomy and type blockers, and deliver the result with one done / not done line per point. "Just fix it" skips the sign-off, not the checks. Never hand over an unapplied critique as the result.
+**Read the ask first.** Work handed over with no specific request: reply with a short ranked list of only the imperative changes (rule ID, the change, [edit] or [regenerate]) and wait for sign-off. Then apply every signed-off point, re-check each one and the light, anatomy and type blockers, and deliver with one done / not done line per point. "Just fix it" skips the sign-off, not the checks. Never hand over an unapplied critique as the result.
 
-0. **Brief.** Before making anything, write down: purpose, audience, where it will be seen, must-keeps, and what "done" means. Don't invent facts the brief doesn't give (names, prices, addresses, slogans), and don't add story content (characters, creatures, objects) to make a piece prettier unless the brief leaves room or the owner agrees. No brand input? Ask the owner for name, audience, colours, type, three voice words, likes and dislikes; if no answer, label your choices as assumed. Add the intended mood, style and degree of polish, marked [brief] or [inferred]. Before calling a choice a flaw, ask whether it looks deliberate and whether it works.
-1. **Render** at the real viewing size plus a thumbnail. UI: phone (390 px), desktop (1280 px) and 200% zoom. Keep every round (`round-01.png`, ...).
-2. **Look** with five tests, one factual line each: blur (what leads?), thumbnail (does the idea survive?), flip (lopsided or tilted?), greyscale (is the value structure there?), edges and corners (tangents, stray spots).
-3. **Critique.** List the rule IDs in scope first. Every point names a rule, the evidence and one fix. No rule, no point: it becomes a question for the owner. Record what already meets the criteria, so it is kept. Rank by effect, structure before surface, five points at most. Neutral and factual: no praise, no harshness. Measure at 2x zoom or with a tool before calling a failure. Keep measured findings (tool-checked; only these can block) apart from interpreted ones (aesthetic: name the visible feature, its effect and the trade-off, and label it as interpretation).
-4. **Fix** at most 3 things per round, blockers first. Smallest change that works; keep the subject, style, mood and layout idea. Re-render, compare side by side, and **check each fix actually applied**. Revert anything that made it worse. For mood or energy, change one or two things, then judge old and new side by side for the brief (which is stronger, why, at what cost, strong or marginal; "neither" is allowed), not by score.
-5. **Stop** when no blockers remain and the top points are done, when a round is not clearly better, when what is left is taste, or at round 3 (5 at most). Hand off: latest and previous render, what changed with rule IDs, what was left and why, and questions for the owner. The owner decides when it is finished.
+0. **Brief.** Purpose, audience, where it is seen, must-keeps, what "done" means, and the intended mood, style and polish, each marked [brief] or [inferred]. Never invent facts (names, prices, addresses, slogans) or add story content (characters, objects) unless the brief leaves room or the owner agrees. No brand input: ask for name, audience, colours, type, three voice words, likes and dislikes; otherwise label choices as assumed. Before calling a choice a flaw, ask whether it looks deliberate and works.
+1. **Render** at real viewing size plus a thumbnail; UI at 390 px, 1280 px and 200% zoom. Keep every round.
+2. **Look:** blur (what leads?), thumbnail (does the idea survive?), flip (lopsided?), greyscale (value structure?), edges and corners (tangents, stray spots). One factual line each.
+3. **Critique.** Every point names a rule, the evidence and one fix; no rule, no point (ask the owner instead). Note what already works, so it is kept. Rank by effect, structure before surface, five points at most. Neutral: no praise, no harshness. Measure at 2x or with a tool before calling a failure. Keep measured findings (only these block) apart from interpreted ones (name the feature, its effect and the trade-off; label it).
+4. **Fix** at most 3 per round, blockers first, smallest change that works; keep subject, style, mood and layout idea. Re-render, compare side by side, check each fix applied, revert what got worse. For mood or energy, change one or two things and judge old against new for the brief (which is stronger, why, at what cost; "neither" is allowed), not by score.
+5. **Stop** when no blockers remain and the top points are done, a round is not clearly better, what is left is taste, or at round 3 (5 at most). Hand off both renders, changes with rule IDs, what was left and why, and questions. The owner decides when it is finished.
 
-**Remake from scratch** (only when asked: "from scratch", "redo", "rejig", "start over", "reimagine"): step back first. Write what it is and where it is seen, who it is for, its one job, the feeling, the given facts word for word (check them against each other; never invent), what must survive and what was incidental, and how done is judged. Send that as a 5-8 line brief for sign-off. Then make 2-3 concepts that differ in structure (what leads, how the space is divided), not just in font or colour, recommend one against the brief, build it, run every blocker check below, and compare it side by side with the original (FP-1..9). Design for the piece's real medium and use (printed poster, feed post, pavement board), not for how a reference happened to be photographed or cropped. Transcribe the original's facts first, including disclaimers; flag contradictory or unsourced claims as questions. New imagery is built from what the subject really is (its parts, real references, art direction), never by re-describing the old picture; crop food and real subjects at 2-4x for plausibility: separate strands or grains, no tiling or mesh, each component right (FP-9, ILL-12).
+**Remake from scratch** (only when asked: "redo", "rejig", "start over", "reimagine"): write a 5-8 line brief for sign-off (what and where, who for, one job, feeling, the given facts word for word and checked, what must survive). Make 2-3 concepts that differ in structure, not just font or colour; recommend one, build it, run every blocker, compare with the original (FP-1..9). Design for the real medium. Build new imagery from what the subject really is, never by re-describing the old picture; crop food and real subjects at 2-4x for plausibility (FP-9, ILL-12).
 
-**Take over** (rework, no 3-fix cap) when: 3+ blockers at once, or one that breaks the whole piece; it fails blur and thumbnail outright; it would need more than 3 rounds; or it is unusable for its purpose. Say it is a rework and why. Re-read the brief first, keep its idea and must-keeps, then run the normal loop on the new version.
+**Take over** (rework, no 3-fix cap) when 3+ blockers, one that breaks the piece, a failed blur and thumbnail, more than 3 rounds needed, or unusable. Say so and why, keep the brief's idea and must-keeps, then run the loop.
 
 ## Blockers (MUST-BE-RIGHT)
 
-Only these block. Everything else is an improvement.
+Only these block; everything else is an improvement.
 
-- **Perspective:** one horizon per picture; objects on one ground plane share it; verticals vertical unless 3-point is intended; foreshortening matches distance (TD-PER-1..5).
-- **Ellipses:** the minor axis follows the cylinder's axis; ellipses get fuller further from eye level; smooth and symmetrical, no lemons or footballs (TD-ELL-1..3).
-- **Proportion and anatomy:** measured, not guessed; left and right agree (TD-PRO-1..2).
-- **Light:** one key light direction; lit and shadow sides stay separate; cast shadows sit on the ground (TD-LIT-1..3).
-- **Figures, hands, animals (delivery gate):** crop each hand, limb join, face and animal head at 2x-4x and check one by one: hand count and five digits per hand; each hand traced along its forearm to the shoulder on the correct side (a figure facing you has its right arm on the image's left); thumb opposes the fingers on anything held; joints bend the right way; nothing merged or extra; eyes match; animal eyes, legs or fins match the species. Any fail blocks delivery; re-check everything after each edit (CHAR-3, CHAR-4, CHAR-7, CHAR-9, CHAR-10).
-- **Fixed frames (social, thumbnails, print):** key content inside the platform's safe area; main message readable at feed size (about 400 px wide); print has 3 mm bleed and 300 ppi at final size (LAY-5, LAY-6, LAY-9). Signage: key lines' cap height about distance ÷ 250 (LAY-7).
-- **Whitespace (LAY-10):** every empty area is a margin, a gap between groups, or named focal space. Squint: no empty band or block (including inside a row, between a small left item and a small right item) larger than about 1.5x the largest intended gap between groups. After any image swap or re-crop, re-review the whole layout. A series also gets a set pass: same logo size and position, margins, palette and type logic (BRAND-6).
-- **Type size:** no reading text under 14 px, nothing meaningful under 12 px (TYPE-3).
-- **Text over images:** a quiet zone, and contrast checked on the worst pixels behind the text (LAY-15).
-- **Food and real subjects:** physically plausible at 2-4x crops (ILL-12).
-- **Logos and marks:** include the official mark (own, team, sponsor, crest) from the official file (owner, brand site, or Wikimedia Commons checked against the brand), at good quality, unaltered, with its clear space and minimum size; never redrawn, restyled or AI-generated; the only cleaning allowed is a background knockout, a faithful trace or a one-colour silhouette, with the shapes unchanged and checked by overlaying the source; with no file, set the name in plain text (or a labelled placeholder for a nameless symbol). Generated images: no invented logos or garbled lettering on jerseys, bottles, packaging or signs (BRAND-4, BRAND-8).
-- **Contrast:** text at least 4.5:1; 3:1 for large text (about 24 px) and for UI boundaries; never colour as the only signal (UI-6).
-- **Zoom:** text can grow to 200% without clipping or overlap (UI-10).
-- **Flow:** the main task can be completed, with every step reachable (UX-1).
-- **3D:** built correctly: no high or medium model-qa issues unless intended (floating, intersecting, flipped or duplicate parts) and the right size and way up (3D-1, 3D-2).
-- **Video:** no more than three flashes in any second over a large area (FILM-ACC-1); light from one side within a continuous scene (FILM-LIT-1); generated clips keep each character's identity, pass the anatomy check on frames sampled every 0.5-1 s, and show no invented text (FILM-GEN-2, -3, -8).
+- **Perspective:** one horizon; objects on one ground share it; verticals vertical unless 3-point is meant; foreshortening matches distance (TD-PER-1..5).
+- **Ellipses:** minor axis on the cylinder's axis; fuller away from eye level; smooth, no lemons (TD-ELL-1..3).
+- **Proportion and anatomy:** measured, left and right agree (TD-PRO-1..2).
+- **Light:** one key direction; lit and shadow sides separate; cast shadows on the ground (TD-LIT-1..3).
+- **Figures, hands, animals (delivery gate):** crop each hand, limb join, face and animal head at 2-4x: five digits per hand, each hand traced to the shoulder on the correct side, thumb opposing on anything held, joints bend right, nothing merged or extra, eyes match, animals true to species. Re-check after every edit (CHAR-3, CHAR-4, CHAR-7, CHAR-9, CHAR-10).
+- **Fixed frames:** key content in the safe area; main message readable at about 400 px wide; print 3 mm bleed, 300 ppi (LAY-5, LAY-6, LAY-9). Signage cap height about distance ÷ 250 (LAY-7).
+- **Whitespace (LAY-10):** every empty area is a margin, a gap between groups or named focal space; no empty band or block over about 1.5x the largest intended gap. Re-review after any image swap. A series keeps logo, margins, palette and type logic (BRAND-6).
+- **Type size:** reading text 14 px or more, nothing meaningful under 12 px (TYPE-3).
+- **Text over images:** a quiet zone; contrast on the worst pixels (LAY-15).
+- **Food and real subjects:** plausible at 2-4x crops (ILL-12).
+- **Logos and marks:** the official file, unaltered, with clear space and minimum size; never redrawn, restyled or generated (only a knockout, faithful trace or one-colour silhouette, checked by overlay); no file, set the name in plain text. No invented logos or garbled lettering in generated images (BRAND-4, BRAND-8).
+- **Contrast:** text 4.5:1; 3:1 for large text (about 24 px) and UI boundaries; never colour alone (UI-6).
+- **Zoom:** text grows to 200% without clipping (UI-10). **Flow:** the main task completes (UX-1).
+- **3D:** no high or medium model-qa issues unless intended; right size and way up (3D-1, 3D-2).
+- **Video:** at most three flashes a second over a large area (FILM-ACC-1); one light side in a continuous scene (FILM-LIT-1); generated clips keep identity, pass anatomy on frames every 0.5-1 s, no invented text (FILM-GEN-2, -3, -8).
 
 ## Core rules (all work)
 
-- **CORE-1 One hierarchy.** One thing leads, then a clear second and third. Check with blur.
-- **CORE-2 Value before colour.** The greyscale version must still read.
-- **CORE-3 Contrast where it matters.** Strongest contrast at the focal point, nowhere else.
-- **CORE-4 Spacing groups things.** Related items closer; every gap from one small scale (4/8/16/24/32).
-- **CORE-5 Align to something.** Shared edges and a grid.
-- **CORE-6 Colour with a job.** Each colour has a role; few accents.
-- **CORE-7 Type that reads.** Three to five sizes on one scale; body 45-90 characters a line, leading about 1.3-1.5; contrast 4.5:1.
-- **CORE-8 Restraint.** Remove before adding; every element has a reason.
-- **CORE-9 Consistency.** Same thing, same look (icons, buttons, radii, strokes).
-- **CORE-10 Reads at its real size.** Check at the size people will see it.
-- **CORE-11 Balance by visual weight.** Settled unless tension is wanted; fix with a counterweight or a firmer asymmetry, never by centring by default.
+- **CORE-1** One hierarchy: one lead, a clear second and third (blur). **CORE-2** Value before colour: greyscale still reads. **CORE-3** Strongest contrast at the focal point only.
+- **CORE-4** Spacing groups things, gaps from one scale (4/8/16/24/32). **CORE-5** Align to shared edges and a grid. **CORE-6** Every colour has a role; few accents.
+- **CORE-7** Three to five type sizes on one scale; 45-90 characters a line; leading 1.3-1.5. **CORE-8** Remove before adding. **CORE-9** Same thing, same look.
+- **CORE-10** Check at the real viewing size. **CORE-11** Balance by visual weight; fix with a counterweight or firmer asymmetry, never by centring by default.
 
 ## Common module checks
 
-- **Illustration:** one focal point (ILL-2); clear silhouettes (ILL-3); plan values, then palette (CV-1, CV-2); hard edges only where you want attention (ILL-5); avoid the generic AI look: rainbow glow, sparkles, light from everywhere (ILL-11).
-- **Web UI:** one type scale (TYPE-2); spacing from a scale (CORE-4); a grid and one obvious primary action (UI-4); consistent components with visible states (UI-5); avoid generic AI tells such as gradient blobs, emoji icons and three identical cards (UI-7).
-- **UX:** errors prevented, then explained in place with the input kept (UX-3); plain language (UX-6); labels stay visible (UX-7).
-- **Composition:** place things clearly on or clearly off the centre and axes, never just off (COMP-1); weigh it, then mirror-flip (COMP-2); faces and words are heavy (COMP-3); room in front of anything that looks or moves (COMP-5); one dominant per attribute (COMP-8); repeat families, vary members (COMP-9); 3-5 big shapes at thumbnail (COMP-13); full symmetry or clear asymmetry (COMP-17).
-- **Sitting right (before delivery):** squint, thumbnail, mirror, rotate 180°, cover each half, sweep edges. Flag only what looks accidental: lopsided weight, near-misses, floating or crammed elements, tangents, near-alignments, uneven gutters, box-centred round shapes. Ask "intended?". Fix broken balance with a counterweight or a firmer asymmetry; never centre or symmetrise by default (COMP-19 to COMP-25).
-- **Colour and value:** check every important edge in greyscale (CV-3); judge colour in place (CV-4); hold one of hue, lightness or chroma steady (CV-5); strongest colour in the smallest area at the focus (CV-6); survives colour-vision deficiency (CV-9).
-- **Pages:** one alignment axis per group (LAY-11); text over images checked on the worst pixels (LAY-15); paragraphs marked one way (TYPE-12).
-- **3D:** physically plausible materials (3D-6); a view transform that doesn't clip (AgX in current Blender, not Standard; 3D-7).
-- **Film and video:** name the beat and check each choice against it (FILM-STORY-0); watch in motion with sound before judging frames (FILM-REV-1); keep cameras on one side of the 180° line and cut with a real change of angle or size (FILM-CON-1, -2); every camera move has a motive (FILM-CAM-1); match shots to one look, skin first (FILM-COL-1, -2); subtitles inside safe areas and slow enough to read (FILM-TXT-1, -2).
+- **Illustration:** one focal point (ILL-2); clear silhouettes (ILL-3); values, then palette (CV-1, CV-2); hard edges only where attention goes (ILL-5); no generic AI look: rainbow glow, sparkles, light from everywhere (ILL-11).
+- **Web UI:** one type scale (TYPE-2); a grid and one obvious primary action (UI-4); consistent components with states (UI-5); no gradient blobs, emoji icons or three identical cards (UI-7).
+- **UX:** prevent errors, then explain in place with input kept (UX-3); plain language (UX-6); visible labels (UX-7).
+- **Composition:** clearly on or clearly off centre and axes (COMP-1); weigh, then mirror (COMP-2); faces and words are heavy (COMP-3); room in front (COMP-5); one dominant per attribute (COMP-8); repeat families, vary members (COMP-9); 3-5 big shapes (COMP-13); full symmetry or clear asymmetry (COMP-17).
+- **Sitting right (before delivery):** squint, thumbnail, mirror, rotate 180°, cover each half, sweep edges. Flag only the accidental (lopsided weight, near-misses, crammed or floating elements, tangents, near-alignments, uneven gutters) and ask "intended?". Never centre or symmetrise by default (COMP-19 to COMP-25).
+- **Colour and value:** important edges in greyscale (CV-3); judge in place (CV-4); hold one of hue, lightness or chroma (CV-5); strongest colour smallest, at the focus (CV-6); survives colour-vision deficiency (CV-9).
+- **Pages:** one alignment axis per group (LAY-11); paragraphs marked one way (TYPE-12). **3D:** plausible materials (3D-6); AgX, not Standard (3D-7).
+- **Film:** name the beat and check each choice against it (FILM-STORY-0); watch in motion with sound first (FILM-REV-1); one side of the 180° line, cuts with a real change (FILM-CON-1, -2); motivated moves (FILM-CAM-1); one look, skin first (FILM-COL-1, -2); subtitles in safe areas, slow enough to read (FILM-TXT-1, -2).
 
 ## Myths: don't use as reasons
 
-The golden ratio (as a source of beauty), the rule of thirds as a law, fixed colour-emotion claims, leading lines that "force" the eye, Z/F layout templates, colour-wheel schemes as proof of harmony, and the rule of odds. Cite a rule, not a myth. Taste in art and design is far less shared than taste in faces or landscapes: taste calls go to the owner of the work (AES-12).
+Golden ratio as beauty, thirds as law, fixed colour emotions, lines that "force" the eye, Z/F templates, colour-wheel schemes as proof, the rule of odds. Taste in design is far less shared than in faces or landscapes: taste calls go to the owner of the work (AES-12).
