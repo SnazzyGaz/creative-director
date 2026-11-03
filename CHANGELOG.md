@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.9.5 (3 November 2026)
+
+**Infographics: richer, never a slide, never chaos; charts drawn from the data.** Batch 6, ten infographic briefs on v0.9.4, went 4 to 6 against the skill (p = 0.38 for the other side, no clear result). The losses were called sterile, "like a PowerPoint slide" or too basic (four), repetitive (one) and busy and chaotic (one); the wins were cleaner and punchier, with stable characters. All 60 briefs: 36 to 23 with 1 tie (one-sided p = 0.059), one win short of the 37-of-60 bar set in advance, so the overall result is no longer clear. The new rules are graded as internal evidence from one judge, untested until batch 7 is judged. No budget was raised.
+
+- **Infographics get the full energy pass** (`core/energy-pass.md`, new EN-4; EN-1 widened). Judge as the commissioner would: information right first, then appeal. Write a one-sentence art direction with a style with personality and an emotional register that fits the issuer. "Clean" means easy to read, not bare. The line between rich and chaotic is a check: one illustration style, one reading path, one hero and at most two secondary focal points, no filler or repeated pictures, text on calm ground, then a slide-template test and a chaos test.
+- **Every panel shows something different** (LAY-18): the detail its step is about, with the same people, objects and setting throughout (S64 lost for one picture repeated in every panel).
+- **Charts, maps and routes are drawn in code** (new LAY-19, MUST-BE-RIGHT where numbers or a route carry the message). New `tools/datagraphic.py`: `bars` and `route` draw from a JSON spec (bars exactly to scale; a loop that closes at start = finish, with a bridge drawn at every river crossing), `composite` fits the layer into a box reserved in generated art, and `check-bars` measures bar lengths in any image against the data, failing beyond 2%. Tests: `tools/tests/datagraphic_cases.py` (8/8), added to CI. In batch 6, neither generated bar chart was to scale (the skill's overstated small bars by up to 12.5 points), and neither fun-run map closed its loop or showed its bridge.
+- **Routing.** `core/which-modules.md` gains an infographics row; the energy-pass row covers infographics of every kind.
+- **Source** S336 (Pandey et al. 2015: truncated axes and other distortions change what readers judge). Bibliography: "Honest charts".
+- **Blind test write-up.** Key 6 published (`sha256sum -c` passes for all six); `scoring-owner.csv` adds S59-S68; RESULTS.md covers batch 6, its notes, the chart finding and the honest overall count. README, `llms.txt` and the kit README carry it.
+- **Budgets after.** Always-on 6,497 of 6,500 (unchanged); with the template 7,987 of 8,000; template 1,490 of 1,500; lite 2,497 of 2,500; layout 5,939 of 6,000; energy pass 3,181 of 4,500. The new rules went into on-demand files only.
+
 ## v0.9.4 (3 November 2026)
 
 **Blind test finished; rules from the owner's batch 4 and 5 notes, and white means white.** Batch 4 went 6 to 4 for the skill and batch 5, a replication on the unchanged v0.9.3 skill, 8 to 2 (p = 0.055). Batches 3 to 5, after the energy pass: 22 to 7 with 1 tie (p ≈ 0.004). All 50 briefs: 32 to 17 with 1 tie (p = 0.022), which meets the 32-of-50 bar set in advance. One judge, and the later batches aren't independent of the rule-writing, so the new rules are graded as the owner's taste and internal blind-test evidence, not research. No budget was raised.

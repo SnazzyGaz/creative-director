@@ -164,12 +164,20 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Source:** LAY-7; LAY-14; United States Sign Council Foundation [S179, S180].
 
 ### LAY-18. Multi-panel pieces fail as a whole when one panel fails
-- **What:** In a step-by-step infographic, a comic strip, a storyboard or a set of icons, every panel is checked on its own (anatomy, objects, text, step order). One broken panel (a wrong hand, a missing step, garbled text) fails the whole piece, however clean the rest.
-- **Why:** Readers follow steps in order; one wrong step breaks the instruction. In batch 4 a less dense, readable with-skill hand-washing infographic lost because its third panel failed badly (S43). Internal evidence, one judge.
-- **Check:** Crop and check each panel at 2-4x, one line per panel (CHAR-9 for any hands).
+- **What:** In a step-by-step infographic, a comic strip, a storyboard or a set of icons, every panel is checked on its own (anatomy, objects, text, step order). One broken panel (a wrong hand, a missing step, garbled text) fails the whole piece, however clean the rest. Each panel shows something specific and different: the action or detail its step is about (where the cuff sits, what the dial reads), never the same picture repeated. People, objects and setting stay the same across panels.
+- **Why:** Readers follow steps in order; one wrong step breaks the instruction. A broken third panel sank a readable hand-washing sheet (S43); repeating one image in every panel lost to specific diagrams, "repetitive, wasteful" (S64); stable characters won (S59). Internal evidence, one judge.
+- **Check:** Crop and check each panel at 2-4x, one line per panel (CHAR-9 for any hands): what does it show that the others don't? Same person, same object?
 - **Fix:** Regenerate or redraw the failed panel only, then re-check the set for consistency (BRAND-6).
 - **Grade:** Procedure.
 - **Source:** CHAR-9; FP-3; BRAND-6; `examples/blind-test/RESULTS.md`.
+
+### LAY-19. Charts, maps and routes are drawn from the data in code (MUST-BE-RIGHT where numbers or a route carry the message)
+- **What:** Never trust an image model for numbers, bar lengths, scales or route geometry. Draw the chart or route from the data in code (`tools/datagraphic.py`, SVG or matplotlib) and composite it into the art, or generate the art around a reserved empty area and place it there. The art decorates; the data layer is code. A loop route visibly closes at start = finish; every crossing of water or a road shows a bridge.
+- **Why:** Distorted bars change how big readers judge a difference (truncated axes, [S336]). In batch 6 neither generated bar chart was to scale: the with-skill one overstated the small bars by up to 12.5 points (B53); a nutrition sheet's bars were up to 4.9 points off (B60); neither fun-run map closed its loop or showed its bridge (S60).
+- **Check:** `datagraphic.py check-bars` on the final image: every bar within 2% of its data share (`--scale-max` for a visible track). Routes: the tool reports a closed loop and bridges = crossings; labels sit by their places, in order.
+- **Fix:** Redraw from the data; never edit generated bars.
+- **Grade:** Well supported for honest scales [S336]; the generator failures are internal evidence.
+- **Source:** Pandey et al. [S336]; LAY-18; `examples/blind-test/RESULTS.md`.
 
 ---
 

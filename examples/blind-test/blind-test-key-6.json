@@ -1,0 +1,248 @@
+{
+ "images": {
+  "ABTN": {
+   "brief": "B60",
+   "condition": "with",
+   "file": "B60-with.jpg",
+   "sha256": "7e409f04c7d63e5d4fc4b359d2bd9ea5c7b39305d7cd516e9eb327fe08b7e7d7"
+  },
+  "CDNS": {
+   "brief": "B54",
+   "condition": "without",
+   "file": "B54-without.jpg",
+   "sha256": "736751904104cc12a36baf6234f4e554e37bd48e10cfdc94ed2c9ab2922fc2d8"
+  },
+  "DFWH": {
+   "brief": "B55",
+   "condition": "with",
+   "file": "B55-with.jpg",
+   "sha256": "9af14aab1918eab13a77e40497a96c678622861d19b8ecc123a025f03eda7082"
+  },
+  "EHUA": {
+   "brief": "B57",
+   "condition": "with",
+   "file": "B57-with.jpg",
+   "sha256": "591592c7d45f3a04224b30327b28e161b8558f42cf74c38536a6ec446f2a9f1c"
+  },
+  "EKMS": {
+   "brief": "B52",
+   "condition": "with",
+   "file": "B52-with.jpg",
+   "sha256": "850ad72aa24fc9638600e51e0c740737fefd691d72ef1fb2435f1447e59b9ef9"
+  },
+  "FUBS": {
+   "brief": "B56",
+   "condition": "with",
+   "file": "B56-with.jpg",
+   "sha256": "02c6c07fa26be844c7e67fdc0b05665ccf6e784fea084e7f57932f9426c312ed"
+  },
+  "FWYN": {
+   "brief": "B60",
+   "condition": "without",
+   "file": "B60-without.jpg",
+   "sha256": "3eff2d2ac2313d08bdb7c0ac46e08b1e860ddc36da1b0cd9c4a06cf5079dc856"
+  },
+  "JLWS": {
+   "brief": "B58",
+   "condition": "without",
+   "file": "B58-without.jpg",
+   "sha256": "43152aa1460fd22ce009d57e39e7acb881b0fba805aa7a35ed9ab20f2021e320"
+  },
+  "JWHC": {
+   "brief": "B59",
+   "condition": "with",
+   "file": "B59-with.jpg",
+   "sha256": "48c2411bed72c5eef66b9b3cf7934db8cb98f695b7c5360c4c181470bef7379a"
+  },
+  "LGTP": {
+   "brief": "B55",
+   "condition": "without",
+   "file": "B55-without.jpg",
+   "sha256": "ae0a21a3b9ef36599384c60db9e489c3a07f9039b96db36827254221cfce4aa1"
+  },
+  "RJET": {
+   "brief": "B57",
+   "condition": "without",
+   "file": "B57-without.jpg",
+   "sha256": "2b7aec940c1f64f2fd52f924c4a8149edf09217677223a20cc84a5018a20c3e7"
+  },
+  "TUNM": {
+   "brief": "B53",
+   "condition": "without",
+   "file": "B53-without.jpg",
+   "sha256": "fc2e9c52e428482f27dec78fdbdb6b088aaede00f5c57f2a3edbcc8c5107cc54"
+  },
+  "VMSV": {
+   "brief": "B53",
+   "condition": "with",
+   "file": "B53-with.jpg",
+   "sha256": "61bb3e9fe27c39c8566f37d9a5f37cd826c5db9122b10d15a62c13db59b1923e"
+  },
+  "VRXN": {
+   "brief": "B59",
+   "condition": "without",
+   "file": "B59-without.jpg",
+   "sha256": "145200381e9b280c6d6dfda800af49923856374628f8d67f3edecb687a08334f"
+  },
+  "XTBX": {
+   "brief": "B54",
+   "condition": "with",
+   "file": "B54-with.jpg",
+   "sha256": "2653aa5186258629af60ec18b50d8117c3c7153ff362b4e97d70889dd657298f"
+  },
+  "XTZX": {
+   "brief": "B51",
+   "condition": "with",
+   "file": "B51-with.jpg",
+   "sha256": "19b4b5dc8730deff39a2d0f41a4faa6becf8bab1dfe499676aa551e04d130189"
+  },
+  "YHQW": {
+   "brief": "B51",
+   "condition": "without",
+   "file": "B51-without.jpg",
+   "sha256": "d2b52bf2c424df5d93eb0ccd0c4a26222cc479fea169c2043cb9b56ed398d564"
+  },
+  "YLDC": {
+   "brief": "B58",
+   "condition": "with",
+   "file": "B58-with.jpg",
+   "sha256": "b0b0a9255100dcb92111db16bf2b21c824e8a9bfdbab3a2136da69e07c463f73"
+  },
+  "YRSX": {
+   "brief": "B52",
+   "condition": "without",
+   "file": "B52-without.jpg",
+   "sha256": "8c96e7b70cbd2b6502f638f17dbcc4beeb0a04660f9af9601265b88972242673"
+  },
+  "YWSZ": {
+   "brief": "B56",
+   "condition": "without",
+   "file": "B56-without.jpg",
+   "sha256": "55c300ab3dfcb0a742eeed2fe4bc7e71525e4907a50051a569b97e45cde1e141"
+  }
+ },
+ "note": "Hidden key for examples/blind-test. Do not commit or show to judges before judging ends.",
+ "salt": "5ae2aee4a0bf39779887537c71894cfa",
+ "sheets": [
+  {
+   "brief": "B59",
+   "left": {
+    "condition": "without",
+    "id": "VRXN"
+   },
+   "right": {
+    "condition": "with",
+    "id": "JWHC"
+   },
+   "sheet": "S59"
+  },
+  {
+   "brief": "B58",
+   "left": {
+    "condition": "with",
+    "id": "YLDC"
+   },
+   "right": {
+    "condition": "without",
+    "id": "JLWS"
+   },
+   "sheet": "S60"
+  },
+  {
+   "brief": "B55",
+   "left": {
+    "condition": "with",
+    "id": "DFWH"
+   },
+   "right": {
+    "condition": "without",
+    "id": "LGTP"
+   },
+   "sheet": "S61"
+  },
+  {
+   "brief": "B56",
+   "left": {
+    "condition": "without",
+    "id": "YWSZ"
+   },
+   "right": {
+    "condition": "with",
+    "id": "FUBS"
+   },
+   "sheet": "S62"
+  },
+  {
+   "brief": "B53",
+   "left": {
+    "condition": "without",
+    "id": "TUNM"
+   },
+   "right": {
+    "condition": "with",
+    "id": "VMSV"
+   },
+   "sheet": "S63"
+  },
+  {
+   "brief": "B52",
+   "left": {
+    "condition": "with",
+    "id": "EKMS"
+   },
+   "right": {
+    "condition": "without",
+    "id": "YRSX"
+   },
+   "sheet": "S64"
+  },
+  {
+   "brief": "B54",
+   "left": {
+    "condition": "without",
+    "id": "CDNS"
+   },
+   "right": {
+    "condition": "with",
+    "id": "XTBX"
+   },
+   "sheet": "S65"
+  },
+  {
+   "brief": "B60",
+   "left": {
+    "condition": "without",
+    "id": "FWYN"
+   },
+   "right": {
+    "condition": "with",
+    "id": "ABTN"
+   },
+   "sheet": "S66"
+  },
+  {
+   "brief": "B57",
+   "left": {
+    "condition": "with",
+    "id": "EHUA"
+   },
+   "right": {
+    "condition": "without",
+    "id": "RJET"
+   },
+   "sheet": "S67"
+  },
+  {
+   "brief": "B51",
+   "left": {
+    "condition": "with",
+    "id": "XTZX"
+   },
+   "right": {
+    "condition": "without",
+    "id": "YHQW"
+   },
+   "sheet": "S68"
+  }
+ ]
+}

@@ -36,7 +36,7 @@ jobs:
         run: |
           set -e
           for t in tools/tests/autocheck_cases.py tools/tests/balance_cases.py tools/tests/ellipse_cases.py \
-                   tools/tests/grid_cases.py tools/tests/intersect_cases.py tools/tests/whitespace_cases.py \
+                   tools/tests/grid_cases.py tools/tests/intersect_cases.py tools/tests/whitespace_cases.py tools/tests/datagraphic_cases.py \
                    modules/lookbook/tests/score_find.py; do
             echo "== $t"; python3 "$t"
           done

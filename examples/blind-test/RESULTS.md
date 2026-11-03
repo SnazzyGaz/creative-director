@@ -1,6 +1,6 @@
 # Blind test results: with and without the skill
 
-Judged by the owner of the work, alone, on 3 Nov 2026: 50 briefs in five batches, one image per arm per brief, sides and IDs hidden. One judge, so this says what the owner of the work prefers, not what people in general prefer. How the images were made and the known biases: [`README.md`](README.md).
+Judged by the owner of the work, alone, on 3 Nov 2026: 60 briefs in six batches, one image per arm per brief, sides and IDs hidden. One judge, so this says what the owner of the work prefers, not what people in general prefer. How the images were made and the known biases: [`README.md`](README.md).
 
 ## Result
 
@@ -15,24 +15,27 @@ One judgement per brief (batch 1 shows each pair twice; agreeing picks or the on
 | 4 (B31-B40), v0.9.3 | 10 | 6 | 4 | 0 | 6 of 10, p = 0.38 | no clear result |
 | 5 (B41-B50), v0.9.3 unchanged, a replication | 10 | 8 | 2 | 0 | 8 of 10, p = 0.055 | just short of clear |
 | 3 to 5, with the energy pass | 30 | 22 | 7 | 1 | 22 of 29, p = 0.004 | for the skill, with the caveats below |
-| **All** | **50** | **32** | **17** | **1** | **32 of 49, p = 0.022** | **for the skill: meets the bar set in advance** |
+| All of batches 1 to 5 | 50 | 32 | 17 | 1 | 32 of 49, p = 0.022 | for the skill: met the 32-of-50 bar set in advance |
+| 6 (B51-B60), infographics only, v0.9.4 | 10 | 4 | 6 | 0 | 6 of 10 for without, p = 0.38 | no clear result; a loss on the count |
+| 3 to 6, with the energy pass | 40 | 26 | 13 | 1 | 26 of 39, p = 0.027 | for the skill, with the caveats below |
+| **All** | **60** | **36** | **23** | **1** | **36 of 59, p = 0.059** | **no clear result: one short of the 37-of-60 bar set before batch 6** |
 
-**The bar set in advance.** Before batch 4 was judged, the kit README said a clear overall result needs 32 of 50 for one side ([`README.md`](README.md), Known biases). The skill got exactly 32, with 17 against and 1 tie: one-sided p = 0.022. That overall count is the main test. The per-batch and batch 3 to 5 rows are extra looks at the same data (eight rows, so a strict Bonferroni cut would be 0.05 / 8 ≈ 0.006); by that standard batch 3 alone (0.020) is not clear, and batches 3 to 5 together (0.004) just are. Read the rows as a picture of the trend, not as separate proofs.
+**The bar set in advance.** Before batch 4 was judged, the kit README said a clear overall result needs 32 of 50 for one side ([`README.md`](README.md), Known biases). The skill got exactly 32, with 17 against and 1 tie: one-sided p = 0.022. That overall count was the main test at 50 briefs. Before batch 6 was judged, the kit README raised the bar to 37 of 60. With batch 6 the skill stands at 36 to 23 with 1 tie (p = 0.059): **one win short, so the 60-brief result is not clear**, and it should be read that way. The 50-brief result still stands as what was tested then; it does not carry over to infographics. The per-batch and combined rows are extra looks at the same data (eleven rows, so a strict Bonferroni cut would be 0.05 / 8 ≈ 0.006); by that standard (0.05 / 11 ≈ 0.005) batch 3 alone (0.020) is not clear, batches 3 to 5 together (0.004) just are, and batches 3 to 6 (0.027) are not. Read the rows as a picture of the trend, not as separate proofs.
 
-**What it means.** After the energy pass, the owner preferred the with-skill version in 22 of 29 decided briefs; before it, 10 of 20. The rise lines up with the rule change, but the briefs, the rules and the judge are not independent (see Caveats), so this is internal evidence for one judge's taste, not research.
+**What it means.** After the energy pass, the owner preferred the with-skill version in 22 of 29 decided briefs; before it, 10 of 20. The rise lines up with the rule change, but the briefs, the rules and the judge are not independent (see Caveats), so this is internal evidence for one judge's taste, not research. Batch 6, the first test confined to one category, went the other way (4 to 6 on infographics), which brings batches 3 to 6 to 26 of 39 (p = 0.027) and all 60 to just short of the bar.
 
 **Strength** (1 slight, 2 clear, 3 strong; the owner left some blank):
 
 | Winner | Picks | Slight | Clear | Strong | Not rated |
 |---|---|---|---|---|---|
-| With the skill | 32 | 9 | 11 | 5 | 7 |
-| Without | 17 | 8 | 4 | 0 | 5 |
+| With the skill | 36 | 11 | 13 | 5 | 7 |
+| Without | 23 | 11 | 7 | 0 | 5 |
 
-All five strong picks went to the skill, four of them in batches 4 and 5 (S41, S42, S49, S52). In batches 4 and 5 the skill's 14 wins were 3 slight, 6 clear, 4 strong and 1 not rated; the 6 losses were 3 slight and 3 clear. Several picks across all batches were called forced, borderline, close, reluctant or a toss-up (S05, S07, S24, S26, S27, S29, S33, S39, S40, S54, S57).
+All five strong picks went to the skill, four of them in batches 4 and 5 (S41, S42, S49, S52). In batches 4 and 5 the skill's 14 wins were 3 slight, 6 clear, 4 strong and 1 not rated; the 6 losses were 3 slight and 3 clear. In batch 6 the skill's 4 wins were 2 slight and 2 clear, and its 6 losses 3 slight and 3 clear. Several picks across all batches were called forced, borderline, close, reluctant or a toss-up (S05, S07, S24, S26, S27, S29, S33, S39, S40, S54, S57, and a tough call and a judgement call in batch 6, S64 and S66).
 
-**By medium** (all batches): illustration, picture books, characters and covers 16 with, 2 without, 1 tie; posters and flyers 6 with, 5 without; screens and web heroes 3 with, 4 without; packaging, labels, menus, infographics and notices 7 with, 6 without. The skill's lead is almost all in pictures; on posters, screens and practical print it is about even.
+**By medium** (all batches): illustration, picture books, characters and covers 16 with, 2 without, 1 tie; posters and flyers 6 with, 5 without; screens and web heroes 3 with, 4 without; packaging, labels, menus, infographics and notices 11 with, 12 without (batch 6, all infographics, 4 with, 6 without). The skill's lead is almost all in pictures; on posters, screens and practical print it is about even, and on infographics it is slightly behind.
 
-**Position:** across the 51 judged sheets the owner picked the left image 22 times and the right 28 times, with one tie (sign test p ≈ 0.48), so there is no clear side bias. The with-skill image sat on the left in 5 of batch 5's 10 sheets.
+**Position:** across the 61 judged sheets the owner picked the left image 27 times and the right 33 times, with one tie (two-sided sign test p ≈ 0.52), so there is no clear side bias. The with-skill image sat on the left in 5 of the 10 sheets in each of batches 5 and 6.
 
 ## What the notes said
 
@@ -71,14 +74,23 @@ Its six losses:
 
 Brief by brief, the with-skill white was lower in 26, higher in 11 and within 1 in 13. The cause is in the prompts: 25 of the 50 with-skill prompts asked for cream, off-white or a warm white, and none of the plain briefs did. Those 25 images had a median white of 243.3 and a spread of 20; the other 25 had 250.2 and 4, about the same as the plain briefs. Some low whites are right (night scenes, dark covers, aged paper), so this is a tendency, not a fault in every image. v0.9.4 adds CV-11 (white means white) and an autocheck for it.
 
+**Batch 6: infographics only, on v0.9.4.** Ten new infographic briefs, written before any image was made, to test the category batches 3 to 5 left "clear but plain". The skill lost 4 to 6, half the picks slight. The owner judged as a commissioner would: the information right first, then appeal.
+- **Too plain.** A bar chart "accurate but sterile like a PowerPoint slide" against a dynamic, eye-catching one (S63); a sourdough timeline "too basic" against one with vibes, a stylish layout and a good amount of visual busyness, despite sloppy generated illustrations and an overused bakery name (S65); a nutrition sheet "matter of fact and sterile" against one with emotional direction, like real packaging (S66); a water-safety sheet practical but not eye-pleasing against one with better balance and density (S61).
+- **Repetition.** A blood-pressure how-to repeated the same picture in every panel, "repetitive, wasteful"; the other side's specific diagrams served a reader who came for the information (S64).
+- **Too busy, the other way.** The skill's voter-registration piece lost as "busy and visually chaotic" against a clean, direct one (S68). So the fix is not just "more": it is richer art direction with a checkable limit.
+- **Wins.** A comic-strip how-to for cleanness, information economy, stable characters and clear warnings (S59); a fun-run map for punchier type and an unbroken trail (S60); a water cycle that better fitted the age range (S62); a bin guide with punchier illustrations (S67).
+- **Charts and routes (found afterwards, not by the judge).** Neither generated bar chart was to scale. Measured with `tools/datagraphic.py check-bars`, the with-skill chart overstated the small bars by up to 12.5 points of the longest bar, and the other by up to about 10 (B53). The with-skill nutrition bars were up to 4.9 points off and about 17% short against their own 0-10% track (B60); the other side drew no bars. Neither fun-run map closed its loop at start = finish or showed a bridge where the route crossed the river (S60). An image model can't be trusted with numbers or geometry.
+- **Whites.** All ten with-skill images had pure neutral whites (lightest 0.5%: luma 255, spread 0), so CV-11 held; three of the other side's had cream or warm grounds (B54, B58, B60).
+
 ## Caveats
 
 - **Not independent.** The energy pass and the batch 3 briefs were written after reading the owner's notes on batches 1 and 2, by the same bot, for the same judge; the v0.9.3 rules and the batch 4 briefs followed the batch 3 notes. A win in batches 3 to 5 tests those rules on new briefs for this judge, not the skill as first written.
-- **Batch 5 is a replication, not a test of v0.9.4.** It was made on the unchanged v0.9.3 skill, after batch 4 was built but before it was judged, so no rule changed between them. Nothing in v0.9.4 has been blind-tested yet.
+- **Batch 5 is a replication, not a test of v0.9.4.** It was made on the unchanged v0.9.3 skill, after batch 4 was built but before it was judged, so no rule changed between them. Batch 6 then tested v0.9.4, on infographics only.
 - **The maker saw both arms** while making the images and sheets (the judge did not).
 - **Batch 3 was mostly slight.** 5 of its 8 wins were rated slight, and 2 were not rated. Batches 4 and 5 had more clear and strong wins, but also the two picks the owner called forced (S57) or reluctant (S40).
-- **One sample per arm**, first output kept, so the image model's luck counts: S43 was lost to one broken panel. Ten briefs is a small batch, and 50 is a small test.
+- **One sample per arm**, first output kept, so the image model's luck counts: S43 was lost to one broken panel. Ten briefs is a small batch, and 60 is a small test.
 - **The briefs gave exact copy** from batch 3 on; that helps both arms but especially the with-skill prompt, which earlier had to use placeholders.
+- **Batch 6 is one category.** It tests infographics only, where the skill's lead was already thin, so its loss says the rules were weakest there, not that the skill got worse elsewhere.
 - **One judge.** No other person or outside model has judged yet.
 
 ## Gaps found, and what changed
@@ -102,14 +114,19 @@ v0.9.4 adds rules for the batch 4 and 5 gaps, with the owner's notes as internal
 - **No chocolate-box over-render** and an honest sterile check (EN-3, S50, S56, S58).
 - **White means white** (CV-11, `autocheck.py` whites check): neutral white unless the brief asks for cream.
 
-Still open: notices and infographics that are clear but plain (S37, S38, S57), and the sterile edge on sparse pieces (S56, S58). v0.9.4 itself has not been blind-tested.
+Still open after v0.9.4: notices and infographics that are clear but plain (S37, S38, S57), and the sterile edge on sparse pieces (S56, S58). Batch 6 tested v0.9.4 on infographics and confirmed the first.
+
+v0.9.5 adds rules for the batch 6 gaps, as internal evidence (one judge), untested until batch 7 is judged:
+- **Infographics get the full energy pass** (EN-1, new EN-4): a one-sentence art direction with personality and an emotional register that fits the issuer; visual richness that carries information; "clean" is not a slide template. The busy-versus-chaotic line is checkable: one illustration style, one reading path, one hero and at most two secondary focal points, no filler pictures (S61, S63, S65, S66, S68).
+- **Panels show something specific and different** (LAY-18): the detail each step is about, never one picture repeated, with people and objects kept the same (S64, S59).
+- **Charts, maps and routes are drawn from the data in code** (new LAY-19, `tools/datagraphic.py`): bars composited into the art, or the art generated around a reserved area; bars checked within 2% of the data; a loop closes at start = finish and a crossing shows a bridge (B53, B60, S60). Graded well supported for honest scales (Pandey et al. 2015, S336) and internal evidence for the generator failures.
 
 ## Files
 
-- `blind-test-key.json` and `blind-test-key-2.json` to `-5.json`: the five keys, each published after its batch was judged. `sha256sum -c KEY-SHA256.txt` passes for all five; it also warns about the explanation lines in that file, which is expected.
+- `blind-test-key.json` and `blind-test-key-2.json` to `-6.json`: the six keys, each published after its batch was judged. `sha256sum -c KEY-SHA256.txt` passes for all six (batch 7's key is not published until it is judged); it also warns about the explanation lines in that file, which is expected.
 - [`scoring-owner.csv`](scoring-owner.csv): the owner's picks and strengths. The reasons are paraphrased in plain language, and "left" and "right" are replaced with "this one" and "the other". Batch 1's repeat sheets (S10-S16) were left blank, as allowed.
 - [`whites.py`](whites.py): the white measurement above (needs the images, which are not in git).
-- Re-run: `python3 examples/blind-test/score.py --key examples/blind-test/blind-test-key.json --key examples/blind-test/blind-test-key-2.json --key examples/blind-test/blind-test-key-3.json --key examples/blind-test/blind-test-key-4.json --key examples/blind-test/blind-test-key-5.json examples/blind-test/scoring-owner.csv`
+- Re-run: `python3 examples/blind-test/score.py --key examples/blind-test/blind-test-key.json --key examples/blind-test/blind-test-key-2.json --key examples/blind-test/blind-test-key-3.json --key examples/blind-test/blind-test-key-4.json --key examples/blind-test/blind-test-key-5.json --key examples/blind-test/blind-test-key-6.json examples/blind-test/scoring-owner.csv`
 
 ## Every judgement
 
@@ -168,3 +185,13 @@ Sheet, brief, medium, the arm the owner picked, strength, and the owner's reason
 | S56 | B44 | library infographic | with | 2 | The other is very busy; this one perhaps a bit too sparse. |
 | S57 | B45 | park notice | without | 1 | Forced: basic text with an ugly yellow call to action; the other's centre block and lopsided graphic look like a printer's misalignment. |
 | S58 | B41 | poster | with | 1 | Academically tight but bland and sterile; the other is busy but fantastical and cosy. |
+| S59 | B59 | comic-strip how-to | with | 2 | Cleaner to the eye: information economy, stable characters, clear warnings, fit for purpose. |
+| S60 | B58 | route map infographic | with | 2 | Punchier type and an unbroken, cohesive trail; more fun. Neither is true to the loop and the bridge (start = finish should read as a loop, and a river crossing should show a bridge). The other has a nice centred, official park-leaflet look. |
+| S61 | B55 | safety infographic | without | 2 | Better balance, an appropriate amount of information, more pleasing. The other suits short, practical water-safety notes but is not pleasing to the eye. |
+| S62 | B56 | children's infographic | with | 1 | Both decent; this one fits the age range better. The title is not lost, but not as punchy as it could be. |
+| S63 | B53 | data infographic | without | 2 | Dynamic and eye-catching. The other is accurate but sterile, like a PowerPoint slide. |
+| S64 | B52 | public how-to infographic | without | 1 | Tough call. Its specific diagrams are more useful to a reader who came for the information. The other is easier to read but repeats the same image in every panel: repetitive and wasteful. |
+| S65 | B54 | process infographic | without | 1 | On vibes: stylish, a nice layout, a good amount of visual busyness, though it overuses the bakery's name and the illustrations look sloppy. The other is too basic. |
+| S66 | B60 | nutrition fact sheet | without | 1 | A judgement call, for its emotional direction: it reads like real nutrition information on a bar's packaging, personal. The other is matter-of-fact and sterile, though a fact sheet may want that. |
+| S67 | B57 | public infographic | with | 1 | Both good; this one is cleaner, with punchier illustrations. |
+| S68 | B51 | public how-to infographic | without | 2 | Clean and direct. The other's art direction is busy and visually chaotic. |
