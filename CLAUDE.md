@@ -1,3 +1,3 @@
-# CLAUDE.md
+@AGENTS.md
 
-This repo is a creative-director skill. Follow `AGENTS.md`; it is the single source of instructions for every agent. A Claude Agent Skill version is in `SKILL.md`.
+<!-- Claude Code imports AGENTS.md above, so there is one source of instructions for every agent. Add nothing here that should apply to other agents too; put it in AGENTS.md. The portable skill is in skills/creative-director/ (install steps: docs/install.md). -->

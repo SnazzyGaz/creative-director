@@ -1,0 +1,8 @@
+pillow
+numpy
+opencv-python
+trimesh      # intersect.py
+rtree        # intersect.py (proximity queries)
+manifold3d   # intersect.py (exact overlap volumes)
+playwright   # autocheck.py page mode (then: playwright install chromium)
+# shot.sh needs a headless Chromium (e.g. playwright install chromium)

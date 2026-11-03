@@ -18,24 +18,19 @@ A set of design rules and a critique loop that any AI agent can read. It helps a
 
 ## Install
 
-**Grok Bot.** One click: [Creative Director bot](https://x.ai/bot/XWBKgRnDOw7uR5SpKx3Af). Or point any bot at [`AGENTS.md`](AGENTS.md).
+Works with any agent or LLM. [`docs/install.md`](docs/install.md) has the steps, with sources, for each one.
 
-**Claude.** Download [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip) (about 270 KB: `SKILL.md`, `core/`, `modules/`, `lite/`, `tools/`, the font catalogue; no images, font files or examples; built by [`tools/package_skill.py`](tools/package_skill.py)). The zip has the `creative-director/` folder at its top level, as Claude requires.
-- **claude.ai:** first turn on *Code execution and file creation* in Settings > Capabilities (skills need it). Then, as [Anthropic's guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude) describes: go to Customize > Skills, click **+**, then **+ Create skill**, choose **Upload a skill**, and upload the zip. Toggle it on in the skills list. On Team and Enterprise plans an owner may need to allow skills first (see the guide).
-- **Claude Code:** `unzip creative-director-skill.zip -d ~/.claude/skills/` (or `.claude/skills/` inside a project).
-- **Claude Projects:** unzip, then add `creative-director/SKILL.md`, `core/principles.md`, `core/critique-loop.md`, `core/critique-template.md` and the modules you need as project knowledge.
-
-**Other tools.**
-
-| Tool | Entry point |
+| Agent | Install |
 |---|---|
-| Cursor | [`.cursor/rules/creative-director.mdc`](.cursor/rules/creative-director.mdc), [`AGENTS.md`](AGENTS.md) |
-| Claude Code, Claude Skills | Skill zip (above), [`CLAUDE.md`](CLAUDE.md), [`SKILL.md`](SKILL.md) |
-| Codex, Gemini CLI, Jules | [`AGENTS.md`](AGENTS.md) |
-| GitHub Copilot | [`.github/copilot-instructions.md`](.github/copilot-instructions.md) |
-| ChatGPT, Gemini Gems, Claude Projects | Upload `AGENTS.md`, `core/principles.md`, `core/critique-loop.md`, `core/critique-template.md` and the modules you need as knowledge |
+| Grok Bot | One click: [Creative Director bot](https://x.ai/bot/XWBKgRnDOw7uR5SpKx3Af) |
+| Hermes Agent | `hermes skills install SnazzyGaz/creative-director/skills/creative-director` |
+| Claude Code, Codex, Cursor, Copilot, Devin, Cline | `gh skill install SnazzyGaz/creative-director creative-director --agent <agent>` (or `npx skills add SnazzyGaz/creative-director`) |
+| Gemini CLI | `gemini skills install https://github.com/SnazzyGaz/creative-director.git --path skills/creative-director` |
+| claude.ai, Claude desktop | Upload [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip) in Customize > Skills ([steps](docs/install.md#claude)) |
+| ChatGPT, Gemini Gems, Claude Projects, any chat LLM | Paste or upload [`creative-director-prompt.md`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt.md) (about 9k tokens) or the [full bundle](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt-full.md) (about 63k) |
+| Aider | `aider --read AGENTS.md` |
 
-Every entry point leads back to `AGENTS.md`, and [`llms.txt`](llms.txt) is there for tools that read it.
+The skill is the [`skills/creative-director/`](skills/creative-director/) folder, in the open [Agent Skills](https://agentskills.io/specification) format. Inside a clone of this repo, agents read [`AGENTS.md`](AGENTS.md) directly or through a pointer file ([`CLAUDE.md`](CLAUDE.md), [`GEMINI.md`](GEMINI.md), [`.github/copilot-instructions.md`](.github/copilot-instructions.md), [`.cursor/rules/`](.cursor/rules/creative-director.mdc)). Every route leads back to `AGENTS.md`, and [`llms.txt`](llms.txt) is there for tools that read it.
 
 ## Examples
 
@@ -111,6 +106,7 @@ tools/      auto check (one command, every measurable rule), look tests, WCAG co
 examples/   stress tests, round by round, including this README's own critique
 fonts/      61 free font families in 18 themes, catalogue and specimen sheets
 lite/       the loop, core rules and blockers in one short file
+skills/     the installable skill folder, generated from the files above
 docs/       gallery, README images, reference library, design notes (DECISIONS.md, PROPOSED-REPO.md)
 ```
 

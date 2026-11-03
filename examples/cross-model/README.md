@@ -16,7 +16,7 @@ All three inputs are deliberately bad, with known faults (planted or measured), 
 
 ## How to give the model the skill
 
-- **Claude (claude.ai Projects or Claude Code):** add `SKILL.md`, `AGENTS.md`, `core/` and the module named in the task as project knowledge, or run in a checkout of this repo (Claude Code reads `CLAUDE.md`).
+- **Claude (claude.ai Projects or Claude Code):** install the skill (see [`docs/install.md`](../../docs/install.md#claude)) or add the prompt bundle and the module named in the task as project knowledge, or run in a checkout of this repo (Claude Code reads `CLAUDE.md`).
 - **ChatGPT:** attach `lite/CREATIVE-DIRECTOR-LITE.md` and the module file named in the task (or paste them at the top of the chat).
 - **Gemini:** same as ChatGPT: attach or paste the lite file and the module.
 - **Any agent with file access (Cursor, Codex, Jules, Copilot):** run in a checkout of the repo; the entry points lead to `AGENTS.md`.

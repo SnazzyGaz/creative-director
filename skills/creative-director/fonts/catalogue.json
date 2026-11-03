@@ -1,0 +1,1829 @@
+{
+ "about": "Theme-grouped library of free fonts (SIL OFL 1.1 or Apache 2.0) for the creative-director skill. Files and licences from github.com/google/fonts; notes written for this repo.",
+ "themes": [
+  {
+   "id": "editorial-serif",
+   "name": "Editorial / literary serif",
+   "use": "Novels, essays, magazines, serious non-fiction."
+  },
+  {
+   "id": "pulp-retro-comic",
+   "name": "Pulp / retro / comic",
+   "use": "Comic books, pulp paperbacks, comedy, loud retro."
+  },
+  {
+   "id": "noir-thriller",
+   "name": "Noir / thriller",
+   "use": "Crime, spy, hard-boiled, case files."
+  },
+  {
+   "id": "horror",
+   "name": "Horror",
+   "use": "B-movie, gothic, slasher, folk horror."
+  },
+  {
+   "id": "scifi-tech",
+   "name": "Sci-fi / tech",
+   "use": "Space, cyberpunk, games, tech products."
+  },
+  {
+   "id": "fantasy-medieval",
+   "name": "Fantasy / medieval",
+   "use": "Epic fantasy, myth, pirates, blackletter."
+  },
+  {
+   "id": "childrens-playful",
+   "name": "Children's / playful",
+   "use": "Picture books, kids' apps, friendly brands."
+  },
+  {
+   "id": "romance-script",
+   "name": "Romance / script",
+   "use": "Romance, weddings, formal invitations."
+  },
+  {
+   "id": "western-slab",
+   "name": "Western / slab",
+   "use": "Wild West, Americana, wanted posters."
+  },
+  {
+   "id": "art-deco-display",
+   "name": "Art Deco / display",
+   "use": "1920s-30s, jazz age, cinema marquees."
+  },
+  {
+   "id": "grotesk-neutral",
+   "name": "Grotesk / neutral UI",
+   "use": "Interfaces, docs, quiet subtitles."
+  },
+  {
+   "id": "geometric-sans",
+   "name": "Geometric sans",
+   "use": "Modernist, Bauhaus, brand headings."
+  },
+  {
+   "id": "humanist-sans",
+   "name": "Humanist sans",
+   "use": "Warm, readable text and UI; accessibility."
+  },
+  {
+   "id": "monospace-code",
+   "name": "Monospace / code",
+   "use": "Code, terminals, data labels, typewriter."
+  },
+  {
+   "id": "condensed-poster",
+   "name": "Condensed poster",
+   "use": "Film and gig posters, impact headlines."
+  },
+  {
+   "id": "handwritten-marker",
+   "name": "Handwritten / marker",
+   "use": "Notes, DIY, street, personal tone."
+  },
+  {
+   "id": "nautical-vintage",
+   "name": "Nautical / vintage",
+   "use": "Seafaring tales, old print, harbour signs, labels."
+  },
+  {
+   "id": "luxury-didone",
+   "name": "Luxury / high-contrast didone",
+   "use": "Fashion, perfume, classical, premium."
+  }
+ ],
+ "families": [
+  {
+   "family": "Josefin Sans",
+   "themes": [
+    "art-deco-display",
+    "geometric-sans"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/art-deco-display/josefinsans/OFL.txt",
+   "designer": "Santiago Orozco",
+   "source": "https://github.com/google/fonts/tree/main/ofl/josefinsans",
+   "specimen": "https://fonts.google.com/specimen/Josefin+Sans",
+   "path": "fonts/art-deco-display/josefinsans/",
+   "files": [
+    "JosefinSans-Italic[wght].ttf",
+    "JosefinSans[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     700.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Vintage geometric sans with a 1920s feel; elegant subtitles and labels.",
+   "avoid": "Dense UI (low x-height).",
+   "pairs_with": [
+    "Limelight",
+    "Playfair Display"
+   ]
+  },
+  {
+   "family": "Limelight",
+   "themes": [
+    "art-deco-display",
+    "luxury-didone"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/art-deco-display/limelight/OFL.txt",
+   "designer": "Nicole Fally, Sorkin Type",
+   "source": "https://github.com/google/fonts/tree/main/ofl/limelight",
+   "specimen": "https://fonts.google.com/specimen/Limelight",
+   "path": "fonts/art-deco-display/limelight/",
+   "files": [
+    "Limelight-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Deco cinema marquees, jazz-age posters, cocktail menus.",
+   "avoid": "Long text; modern tech.",
+   "pairs_with": [
+    "Josefin Sans",
+    "Poiret One"
+   ]
+  },
+  {
+   "family": "Poiret One",
+   "themes": [
+    "art-deco-display"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/art-deco-display/poiretone/OFL.txt",
+   "designer": "Denis Masharov",
+   "source": "https://github.com/google/fonts/tree/main/ofl/poiretone",
+   "specimen": "https://fonts.google.com/specimen/Poiret+One",
+   "path": "fonts/art-deco-display/poiretone/",
+   "files": [
+    "PoiretOne-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "1920s and Art Deco titles, Gatsby parties, light elegant headings.",
+   "avoid": "Small sizes and body text (very thin strokes).",
+   "pairs_with": [
+    "Playfair Display",
+    "Josefin Sans"
+   ]
+  },
+  {
+   "family": "Baloo 2",
+   "themes": [
+    "childrens-playful",
+    "humanist-sans"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/childrens-playful/baloo2/OFL.txt",
+   "designer": "Ek Type",
+   "source": "https://github.com/google/fonts/tree/main/ofl/baloo2",
+   "specimen": "https://fonts.google.com/specimen/Baloo+2",
+   "path": "fonts/childrens-playful/baloo2/",
+   "files": [
+    "Baloo2[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     800.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Playful UI and headings, education, warm community brands.",
+   "avoid": "Formal or luxury work.",
+   "pairs_with": [
+    "Fredoka",
+    "Atkinson Hyperlegible Next"
+   ]
+  },
+  {
+   "family": "Chewy",
+   "themes": [
+    "childrens-playful"
+   ],
+   "licence": "Apache-2.0",
+   "licence_file": "fonts/childrens-playful/chewy/LICENSE.txt",
+   "designer": "Sideshow",
+   "source": "https://github.com/google/fonts/tree/main/apache/chewy",
+   "specimen": "https://fonts.google.com/specimen/Chewy",
+   "path": "fonts/childrens-playful/chewy/",
+   "files": [
+    "Chewy-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Cartoon titles, sweets and toys, comedy for younger readers.",
+   "avoid": "Long text; adult fiction.",
+   "pairs_with": [
+    "Patrick Hand",
+    "Cabin"
+   ]
+  },
+  {
+   "family": "Fredoka",
+   "themes": [
+    "childrens-playful"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/childrens-playful/fredoka/OFL.txt",
+   "designer": "Milena Brandão, Hafontia",
+   "source": "https://github.com/google/fonts/tree/main/ofl/fredoka",
+   "specimen": "https://fonts.google.com/specimen/Fredoka",
+   "path": "fonts/childrens-playful/fredoka/",
+   "files": [
+    "Fredoka[wdth,wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     300.0,
+     700.0
+    ],
+    "wdth": [
+     75.0,
+     125.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Picture books, kids' apps, friendly brands; rounded with a width axis.",
+   "avoid": "Serious or premium briefs.",
+   "pairs_with": [
+    "Patrick Hand",
+    "Baloo 2"
+   ]
+  },
+  {
+   "family": "Anton",
+   "themes": [
+    "condensed-poster",
+    "noir-thriller"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/condensed-poster/anton/OFL.txt",
+   "designer": "Vernon Adams",
+   "source": "https://github.com/google/fonts/tree/main/ofl/anton",
+   "specimen": "https://fonts.google.com/specimen/Anton",
+   "path": "fonts/condensed-poster/anton/",
+   "files": [
+    "Anton-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Heavy condensed impact headlines, protest and sport posters.",
+   "avoid": "Small sizes; quiet briefs.",
+   "pairs_with": [
+    "Courier Prime",
+    "Public Sans"
+   ]
+  },
+  {
+   "family": "Antonio",
+   "themes": [
+    "condensed-poster"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/condensed-poster/antonio/OFL.txt",
+   "designer": "Vernon Adams",
+   "source": "https://github.com/google/fonts/tree/main/ofl/antonio",
+   "specimen": "https://fonts.google.com/specimen/Antonio",
+   "path": "fonts/condensed-poster/antonio/",
+   "files": [
+    "Antonio[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     700.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Tall, narrow display with a weight axis; refined condensed headings.",
+   "avoid": "Long reading.",
+   "pairs_with": [
+    "Literata",
+    "Cabin"
+   ]
+  },
+  {
+   "family": "Bebas Neue",
+   "themes": [
+    "condensed-poster"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/condensed-poster/bebasneue/OFL.txt",
+   "designer": "Ryoichi Tsunekawa",
+   "source": "https://github.com/google/fonts/tree/main/ofl/bebasneue",
+   "specimen": "https://fonts.google.com/specimen/Bebas+Neue",
+   "path": "fonts/condensed-poster/bebasneue/",
+   "files": [
+    "BebasNeue-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "All-caps condensed headlines, film posters, thrillers; huge type in tight space.",
+   "avoid": "Lower-case (caps only); body text. Very common, so pair it thoughtfully.",
+   "pairs_with": [
+    "Special Elite",
+    "Source Sans 3"
+   ]
+  },
+  {
+   "family": "Oswald",
+   "themes": [
+    "condensed-poster"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/condensed-poster/oswald/OFL.txt",
+   "designer": "Vernon Adams, Kalapi Gajjar, Cyreal",
+   "source": "https://github.com/google/fonts/tree/main/ofl/oswald",
+   "specimen": "https://fonts.google.com/specimen/Oswald",
+   "path": "fonts/condensed-poster/oswald/",
+   "files": [
+    "Oswald[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     200.0,
+     700.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Condensed headlines and labels with a weight axis; news and sport.",
+   "avoid": "Body text.",
+   "pairs_with": [
+    "Source Sans 3",
+    "Bangers"
+   ]
+  },
+  {
+   "family": "EB Garamond",
+   "themes": [
+    "editorial-serif",
+    "fantasy-medieval"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/editorial-serif/ebgaramond/OFL.txt",
+   "designer": "Georg Duffner, Octavio Pardo",
+   "source": "https://github.com/google/fonts/tree/main/ofl/ebgaramond",
+   "specimen": "https://fonts.google.com/specimen/EB+Garamond",
+   "path": "fonts/editorial-serif/ebgaramond/",
+   "files": [
+    "EBGaramond-Italic[wght].ttf",
+    "EBGaramond[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     800.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Classic literary fiction, history, poetry, anything old-world and bookish.",
+   "avoid": "UI text at small sizes on screen; tech or sci-fi.",
+   "pairs_with": [
+    "Cabin",
+    "Source Sans 3"
+   ]
+  },
+  {
+   "family": "Libre Caslon Text",
+   "themes": [
+    "editorial-serif",
+    "nautical-vintage"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/editorial-serif/librecaslontext/OFL.txt",
+   "designer": "Pablo Impallari",
+   "source": "https://github.com/google/fonts/tree/main/ofl/librecaslontext",
+   "specimen": "https://fonts.google.com/specimen/Libre+Caslon+Text",
+   "path": "fonts/editorial-serif/librecaslontext/",
+   "files": [
+    "LibreCaslonText-Italic[wght].ttf",
+    "LibreCaslonText[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     700.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Eighteenth-century and colonial flavour, period drama, sturdy book text.",
+   "avoid": "Big display titles (it is cut for text sizes).",
+   "pairs_with": [
+    "Public Sans"
+   ]
+  },
+  {
+   "family": "Literata",
+   "themes": [
+    "editorial-serif"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/editorial-serif/literata/OFL.txt",
+   "designer": "TypeTogether",
+   "source": "https://github.com/google/fonts/tree/main/ofl/literata",
+   "specimen": "https://fonts.google.com/specimen/Literata",
+   "path": "fonts/editorial-serif/literata/",
+   "files": [
+    "Literata-Italic[opsz,wght].ttf",
+    "Literata[opsz,wght].ttf"
+   ],
+   "axes": {
+    "opsz": [
+     7.0,
+     72.0
+    ],
+    "wght": [
+     200.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Long reading: novels, essays, book interiors, literary covers; optical sizes keep it sturdy small and refined large.",
+   "avoid": "Loud genre covers; it whispers.",
+   "pairs_with": [
+    "Source Sans 3",
+    "Inter"
+   ]
+  },
+  {
+   "family": "Newsreader",
+   "themes": [
+    "editorial-serif"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/editorial-serif/newsreader/OFL.txt",
+   "designer": "Production Type",
+   "source": "https://github.com/google/fonts/tree/main/ofl/newsreader",
+   "specimen": "https://fonts.google.com/specimen/Newsreader",
+   "path": "fonts/editorial-serif/newsreader/",
+   "files": [
+    "Newsreader-Italic[opsz,wght].ttf",
+    "Newsreader[opsz,wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     200.0,
+     800.0
+    ],
+    "opsz": [
+     6.0,
+     72.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Editorial headlines and body, magazine features, serious non-fiction covers; opsz axis gives a crisp display cut.",
+   "avoid": "Playful or children's briefs.",
+   "pairs_with": [
+    "Public Sans",
+    "Hanken Grotesk"
+   ]
+  },
+  {
+   "family": "Cinzel",
+   "themes": [
+    "fantasy-medieval",
+    "luxury-didone"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/fantasy-medieval/cinzel/OFL.txt",
+   "designer": "Natanael Gama",
+   "source": "https://github.com/google/fonts/tree/main/ofl/cinzel",
+   "specimen": "https://fonts.google.com/specimen/Cinzel",
+   "path": "fonts/fantasy-medieval/cinzel/",
+   "files": [
+    "Cinzel[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Epic fantasy, classical and Roman themes, film-poster capitals.",
+   "avoid": "Lower-case text (it is caps only); casual briefs. Very common on fantasy covers, so check it is chosen, not defaulted.",
+   "pairs_with": [
+    "EB Garamond",
+    "Literata"
+   ]
+  },
+  {
+   "family": "Pirata One",
+   "themes": [
+    "fantasy-medieval",
+    "nautical-vintage"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/fantasy-medieval/pirataone/OFL.txt",
+   "designer": "Rodrigo Fuenzalida, Nicolas Massi",
+   "source": "https://github.com/google/fonts/tree/main/ofl/pirataone",
+   "specimen": "https://fonts.google.com/specimen/Pirata+One",
+   "path": "fonts/fantasy-medieval/pirataone/",
+   "files": [
+    "PirataOne-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Pirate and swashbuckling titles, tavern signs, gritty fantasy.",
+   "avoid": "Body text; polished modern briefs.",
+   "pairs_with": [
+    "IM Fell English",
+    "Libre Caslon Text"
+   ]
+  },
+  {
+   "family": "UnifrakturMaguntia",
+   "themes": [
+    "fantasy-medieval",
+    "horror"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/fantasy-medieval/unifrakturmaguntia/OFL.txt",
+   "designer": "j. \\'mach\\' wust",
+   "source": "https://github.com/google/fonts/tree/main/ofl/unifrakturmaguntia",
+   "specimen": "https://fonts.google.com/specimen/UnifrakturMaguntia",
+   "path": "fonts/fantasy-medieval/unifrakturmaguntia/",
+   "files": [
+    "UnifrakturMaguntia-Book.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Blackletter for medieval, metal, gothic and old-newspaper mastheads.",
+   "avoid": "More than a few words; it is hard to read for most audiences. Check cultural associations of blackletter before use.",
+   "pairs_with": [
+    "EB Garamond",
+    "IM Fell English"
+   ]
+  },
+  {
+   "family": "Jost",
+   "themes": [
+    "geometric-sans",
+    "art-deco-display"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/geometric-sans/jost/OFL.txt",
+   "designer": "Owen Earl",
+   "source": "https://github.com/google/fonts/tree/main/ofl/jost",
+   "specimen": "https://fonts.google.com/specimen/Jost",
+   "path": "fonts/geometric-sans/jost/",
+   "files": [
+    "Jost-Italic[wght].ttf",
+    "Jost[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Futura-like geometric sans: modernist posters, mid-century and Bauhaus briefs.",
+   "avoid": "Long dense reading at small sizes.",
+   "pairs_with": [
+    "Shrikhand",
+    "Playfair Display"
+   ]
+  },
+  {
+   "family": "League Spartan",
+   "themes": [
+    "geometric-sans",
+    "condensed-poster"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/geometric-sans/leaguespartan/OFL.txt",
+   "designer": "Matt Bailey, Tyler Finck",
+   "source": "https://github.com/google/fonts/tree/main/ofl/leaguespartan",
+   "specimen": "https://fonts.google.com/specimen/League+Spartan",
+   "path": "fonts/geometric-sans/leaguespartan/",
+   "files": [
+    "LeagueSpartan[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Bold geometric headlines, sport, bold campaign posters.",
+   "avoid": "Light, delicate briefs.",
+   "pairs_with": [
+    "Libre Caslon Text",
+    "Source Sans 3"
+   ]
+  },
+  {
+   "family": "Outfit",
+   "themes": [
+    "geometric-sans"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/geometric-sans/outfit/OFL.txt",
+   "designer": "Smartsheet Inc, Rodrigo Fuenzalida",
+   "source": "https://github.com/google/fonts/tree/main/ofl/outfit",
+   "specimen": "https://fonts.google.com/specimen/Outfit",
+   "path": "fonts/geometric-sans/outfit/",
+   "files": [
+    "Outfit[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Modern brand and product headings, friendly geometric UI.",
+   "avoid": "Period or historical briefs.",
+   "pairs_with": [
+    "Literata",
+    "JetBrains Mono"
+   ]
+  },
+  {
+   "family": "Bricolage Grotesque",
+   "themes": [
+    "grotesk-neutral",
+    "condensed-poster"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/grotesk-neutral/bricolagegrotesque/OFL.txt",
+   "designer": "Mathieu Triay",
+   "source": "https://github.com/google/fonts/tree/main/ofl/bricolagegrotesque",
+   "specimen": "https://fonts.google.com/specimen/Bricolage+Grotesque",
+   "path": "fonts/grotesk-neutral/bricolagegrotesque/",
+   "files": [
+    "BricolageGrotesque[opsz,wdth,wght].ttf"
+   ],
+   "axes": {
+    "opsz": [
+     12.0,
+     96.0
+    ],
+    "wght": [
+     200.0,
+     800.0
+    ],
+    "wdth": [
+     75.0,
+     100.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Characterful grotesk headlines with width and optical axes; modern posters and brands.",
+   "avoid": "Long body text in its quirky display optical size.",
+   "pairs_with": [
+    "Literata",
+    "Inter"
+   ]
+  },
+  {
+   "family": "Hanken Grotesk",
+   "themes": [
+    "grotesk-neutral"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/grotesk-neutral/hankengrotesk/OFL.txt",
+   "designer": "Alfredo Marco Pradil, Hanken Design Co.",
+   "source": "https://github.com/google/fonts/tree/main/ofl/hankengrotesk",
+   "specimen": "https://fonts.google.com/specimen/Hanken+Grotesk",
+   "path": "fonts/grotesk-neutral/hankengrotesk/",
+   "files": [
+    "HankenGrotesk-Italic[wght].ttf",
+    "HankenGrotesk[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Clean product UI and editorial subheads with slightly warmer shapes than Inter.",
+   "avoid": "Display work that needs character.",
+   "pairs_with": [
+    "Newsreader",
+    "Literata"
+   ]
+  },
+  {
+   "family": "Instrument Sans",
+   "themes": [
+    "grotesk-neutral"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "docs/assets/src/fonts/OFL-InstrumentSans.txt",
+   "designer": "Rodrigo Fuenzalida",
+   "source": "https://github.com/google/fonts/tree/main/ofl/instrumentsans",
+   "specimen": "https://fonts.google.com/specimen/Instrument+Sans",
+   "path": "docs/assets/src/fonts/",
+   "files": [
+    "InstrumentSans-VariableFont_wdth,wght.ttf"
+   ],
+   "axes": {
+    "wdth": [
+     75,
+     100
+    ],
+    "wght": [
+     400,
+     700
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Neat neutral grotesk with a width axis for labels and subtitles.",
+   "avoid": "Being the default partner for every display face.",
+   "pairs_with": [
+    "Newsreader"
+   ],
+   "note": "Vendored earlier for the README images; not duplicated under fonts/."
+  },
+  {
+   "family": "Inter",
+   "themes": [
+    "grotesk-neutral"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/grotesk-neutral/inter/OFL.txt",
+   "designer": "Rasmus Andersson",
+   "source": "https://github.com/google/fonts/tree/main/ofl/inter",
+   "specimen": "https://fonts.google.com/specimen/Inter",
+   "path": "fonts/grotesk-neutral/inter/",
+   "files": [
+    "Inter[opsz,wght].ttf"
+   ],
+   "axes": {
+    "opsz": [
+     14.0,
+     32.0
+    ],
+    "wght": [
+     100.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "UI text, dashboards, docs; very legible at small sizes.",
+   "avoid": "Defaulting to it everywhere (TYPE-9 names it as a generic tell); covers that need a voice.",
+   "pairs_with": [
+    "Newsreader",
+    "JetBrains Mono"
+   ]
+  },
+  {
+   "family": "Public Sans",
+   "themes": [
+    "grotesk-neutral"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/grotesk-neutral/publicsans/OFL.txt",
+   "designer": "USWDS, Dan Williams, Pablo Impallari, Rodrigo Fuenzalida",
+   "source": "https://github.com/google/fonts/tree/main/ofl/publicsans",
+   "specimen": "https://fonts.google.com/specimen/Public+Sans",
+   "path": "fonts/grotesk-neutral/publicsans/",
+   "files": [
+    "PublicSans-Italic[wght].ttf",
+    "PublicSans[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Neutral, government-grade UI and forms; dependable text.",
+   "avoid": "Expressive covers.",
+   "pairs_with": [
+    "Newsreader",
+    "Libre Caslon Text"
+   ]
+  },
+  {
+   "family": "Caveat",
+   "themes": [
+    "handwritten-marker",
+    "romance-script"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/handwritten-marker/caveat/OFL.txt",
+   "designer": "Impallari Type",
+   "source": "https://github.com/google/fonts/tree/main/ofl/caveat",
+   "specimen": "https://fonts.google.com/specimen/Caveat",
+   "path": "fonts/handwritten-marker/caveat/",
+   "files": [
+    "Caveat[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     700.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Quick handwritten notes, annotations, casual personal tone.",
+   "avoid": "Being the only face; small UI.",
+   "pairs_with": [
+    "Literata",
+    "Source Sans 3"
+   ]
+  },
+  {
+   "family": "Patrick Hand",
+   "themes": [
+    "handwritten-marker",
+    "childrens-playful"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/handwritten-marker/patrickhand/OFL.txt",
+   "designer": "Patrick Wagesreiter",
+   "source": "https://github.com/google/fonts/tree/main/ofl/patrickhand",
+   "specimen": "https://fonts.google.com/specimen/Patrick+Hand",
+   "path": "fonts/handwritten-marker/patrickhand/",
+   "files": [
+    "PatrickHand-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Readable hand-lettered body for comics, kids' books, friendly notes.",
+   "avoid": "Formal or premium work.",
+   "pairs_with": [
+    "Bangers",
+    "Fredoka"
+   ]
+  },
+  {
+   "family": "Permanent Marker",
+   "themes": [
+    "handwritten-marker",
+    "pulp-retro-comic"
+   ],
+   "licence": "Apache-2.0",
+   "licence_file": "fonts/handwritten-marker/permanentmarker/LICENSE.txt",
+   "designer": "Font Diner",
+   "source": "https://github.com/google/fonts/tree/main/apache/permanentmarker",
+   "specimen": "https://fonts.google.com/specimen/Permanent+Marker",
+   "path": "fonts/handwritten-marker/permanentmarker/",
+   "files": [
+    "PermanentMarker-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Marker-pen notes, street and DIY posters, punk.",
+   "avoid": "Long text; formal briefs.",
+   "pairs_with": [
+    "Anton",
+    "Courier Prime"
+   ]
+  },
+  {
+   "family": "Rock Salt",
+   "themes": [
+    "handwritten-marker",
+    "horror"
+   ],
+   "licence": "Apache-2.0",
+   "licence_file": "fonts/handwritten-marker/rocksalt/LICENSE.txt",
+   "designer": "Sideshow",
+   "source": "https://github.com/google/fonts/tree/main/apache/rocksalt",
+   "specimen": "https://fonts.google.com/specimen/Rock+Salt",
+   "path": "fonts/handwritten-marker/rocksalt/",
+   "files": [
+    "RockSalt-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Rough scrawled titles, road trips, rock and grunge, unsettling notes.",
+   "avoid": "More than a short line; it is dense and hard to read.",
+   "pairs_with": [
+    "Oswald",
+    "Special Elite"
+   ]
+  },
+  {
+   "family": "Butcherman",
+   "themes": [
+    "horror"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/horror/butcherman/OFL.txt",
+   "designer": "Typomondo",
+   "source": "https://github.com/google/fonts/tree/main/ofl/butcherman",
+   "specimen": "https://fonts.google.com/specimen/Butcherman",
+   "path": "fonts/horror/butcherman/",
+   "files": [
+    "Butcherman-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Pulp slasher and zombie titles with a dripping, hand-cut edge.",
+   "avoid": "Small sizes; mixing with another novelty face.",
+   "pairs_with": [
+    "Anton",
+    "Courier Prime"
+   ]
+  },
+  {
+   "family": "Creepster",
+   "themes": [
+    "horror"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/horror/creepster/OFL.txt",
+   "designer": "Sideshow",
+   "source": "https://github.com/google/fonts/tree/main/ofl/creepster",
+   "specimen": "https://fonts.google.com/specimen/Creepster",
+   "path": "fonts/horror/creepster/",
+   "files": [
+    "Creepster-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "B-movie horror, Halloween, comedy horror titles.",
+   "avoid": "Anything beyond a short title; serious literary horror (it reads as camp).",
+   "pairs_with": [
+    "Oswald",
+    "Special Elite"
+   ]
+  },
+  {
+   "family": "Jim Nightshade",
+   "themes": [
+    "horror",
+    "fantasy-medieval",
+    "romance-script"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/horror/jimnightshade/OFL.txt",
+   "designer": "Astigmatic",
+   "source": "https://github.com/google/fonts/tree/main/ofl/jimnightshade",
+   "specimen": "https://fonts.google.com/specimen/Jim+Nightshade",
+   "path": "fonts/horror/jimnightshade/",
+   "files": [
+    "JimNightshade-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Gothic romance, witchy and folk-horror titles, Victorian ghost stories.",
+   "avoid": "UI or body text; bright modern briefs.",
+   "pairs_with": [
+    "EB Garamond",
+    "IM Fell English"
+   ]
+  },
+  {
+   "family": "Atkinson Hyperlegible Next",
+   "themes": [
+    "humanist-sans"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/humanist-sans/atkinsonhyperlegiblenext/OFL.txt",
+   "designer": "Braille Institute, Applied Design Works, Elliott Scott, Megan Eiswerth, Letters From Sweden",
+   "source": "https://github.com/google/fonts/tree/main/ofl/atkinsonhyperlegiblenext",
+   "specimen": "https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next",
+   "path": "fonts/humanist-sans/atkinsonhyperlegiblenext/",
+   "files": [
+    "AtkinsonHyperlegibleNext-Italic[wght].ttf",
+    "AtkinsonHyperlegibleNext[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     200.0,
+     800.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Accessibility-first text: clearly different letterforms for low-vision readers.",
+   "avoid": "Display titles that need mood.",
+   "pairs_with": [
+    "Literata",
+    "Baloo 2"
+   ]
+  },
+  {
+   "family": "Cabin",
+   "themes": [
+    "humanist-sans"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/humanist-sans/cabin/OFL.txt",
+   "designer": "Impallari Type, Rodrigo Fuenzalida",
+   "source": "https://github.com/google/fonts/tree/main/ofl/cabin",
+   "specimen": "https://fonts.google.com/specimen/Cabin",
+   "path": "fonts/humanist-sans/cabin/",
+   "files": [
+    "Cabin-Italic[wdth,wght].ttf",
+    "Cabin[wdth,wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     700.0
+    ],
+    "wdth": [
+     75.0,
+     100.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Warm humanist sans for subtitles, outdoorsy and craft brands; width axis.",
+   "avoid": "Luxury or high-fashion briefs.",
+   "pairs_with": [
+    "EB Garamond",
+    "Fredoka"
+   ]
+  },
+  {
+   "family": "Source Sans 3",
+   "themes": [
+    "humanist-sans"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/humanist-sans/sourcesans3/OFL.txt",
+   "designer": "Paul D. Hunt",
+   "source": "https://github.com/google/fonts/tree/main/ofl/sourcesans3",
+   "specimen": "https://fonts.google.com/specimen/Source+Sans+3",
+   "path": "fonts/humanist-sans/sourcesans3/",
+   "files": [
+    "SourceSans3-Italic[wght].ttf",
+    "SourceSans3[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     200.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Humanist text and UI; long-form screen reading.",
+   "avoid": "Characterful display.",
+   "pairs_with": [
+    "Literata",
+    "EB Garamond"
+   ]
+  },
+  {
+   "family": "Abril Fatface",
+   "themes": [
+    "luxury-didone",
+    "pulp-retro-comic",
+    "nautical-vintage"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/luxury-didone/abrilfatface/OFL.txt",
+   "designer": "TypeTogether",
+   "source": "https://github.com/google/fonts/tree/main/ofl/abrilfatface",
+   "specimen": "https://fonts.google.com/specimen/Abril+Fatface",
+   "path": "fonts/luxury-didone/abrilfatface/",
+   "files": [
+    "AbrilFatface-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Fat-face poster headlines, Victorian bills, bold editorial.",
+   "avoid": "Body text; overuse, as it is a common default.",
+   "pairs_with": [
+    "Cabin",
+    "Source Sans 3"
+   ]
+  },
+  {
+   "family": "Bodoni Moda",
+   "themes": [
+    "luxury-didone"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/luxury-didone/bodonimoda/OFL.txt",
+   "designer": "Owen Earl",
+   "source": "https://github.com/google/fonts/tree/main/ofl/bodonimoda",
+   "specimen": "https://fonts.google.com/specimen/Bodoni+Moda",
+   "path": "fonts/luxury-didone/bodonimoda/",
+   "files": [
+    "BodoniModa-Italic[opsz,wght].ttf",
+    "BodoniModa[opsz,wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     900.0
+    ],
+    "opsz": [
+     6.0,
+     96.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "True didone with an optical-size axis: fashion, luxury, perfume, classical music.",
+   "avoid": "Small sizes at the display optical size; rough or casual briefs.",
+   "pairs_with": [
+    "Josefin Sans",
+    "Inter"
+   ]
+  },
+  {
+   "family": "DM Serif Display",
+   "themes": [
+    "luxury-didone",
+    "editorial-serif"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/luxury-didone/dmserifdisplay/OFL.txt",
+   "designer": "Colophon Foundry",
+   "source": "https://github.com/google/fonts/tree/main/ofl/dmserifdisplay",
+   "specimen": "https://fonts.google.com/specimen/DM+Serif+Display",
+   "path": "fonts/luxury-didone/dmserifdisplay/",
+   "files": [
+    "DMSerifDisplay-Italic.ttf",
+    "DMSerifDisplay-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Chunky contemporary didone for headlines and pull quotes.",
+   "avoid": "Body text.",
+   "pairs_with": [
+    "Outfit",
+    "Public Sans"
+   ]
+  },
+  {
+   "family": "Playfair Display",
+   "themes": [
+    "luxury-didone",
+    "romance-script"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/luxury-didone/playfairdisplay/OFL.txt",
+   "designer": "Claus Eggers Sørensen",
+   "source": "https://github.com/google/fonts/tree/main/ofl/playfairdisplay",
+   "specimen": "https://fonts.google.com/specimen/Playfair+Display",
+   "path": "fonts/luxury-didone/playfairdisplay/",
+   "files": [
+    "PlayfairDisplay-Italic[wght].ttf",
+    "PlayfairDisplay[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "High-contrast display serif for magazine, fashion and romance titles.",
+   "avoid": "Small text (hairlines vanish); overuse as a default 'elegant' face.",
+   "pairs_with": [
+    "Source Sans 3",
+    "Josefin Sans"
+   ]
+  },
+  {
+   "family": "JetBrains Mono",
+   "themes": [
+    "monospace-code"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/monospace-code/jetbrainsmono/OFL.txt",
+   "designer": "JetBrains, Philipp Nurullin, Konstantin Bulenkov",
+   "source": "https://github.com/google/fonts/tree/main/ofl/jetbrainsmono",
+   "specimen": "https://fonts.google.com/specimen/JetBrains+Mono",
+   "path": "fonts/monospace-code/jetbrainsmono/",
+   "files": [
+    "JetBrainsMono-Italic[wght].ttf",
+    "JetBrainsMono[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     800.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Code, terminals, technical labels; code ligatures.",
+   "avoid": "Body prose.",
+   "pairs_with": [
+    "Inter",
+    "Outfit"
+   ]
+  },
+  {
+   "family": "Martian Mono",
+   "themes": [
+    "monospace-code",
+    "scifi-tech"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/monospace-code/martianmono/OFL.txt",
+   "designer": "Roman Shamin, Evil Martians",
+   "source": "https://github.com/google/fonts/tree/main/ofl/martianmono",
+   "specimen": "https://fonts.google.com/specimen/Martian+Mono",
+   "path": "fonts/monospace-code/martianmono/",
+   "files": [
+    "MartianMono[wdth,wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     800.0
+    ],
+    "wdth": [
+     75.0,
+     112.5
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Wide-to-condensed mono for tech brands, data labels, sci-fi interfaces.",
+   "avoid": "Literary briefs.",
+   "pairs_with": [
+    "Exo 2",
+    "Inter"
+   ]
+  },
+  {
+   "family": "Space Mono",
+   "themes": [
+    "monospace-code",
+    "scifi-tech",
+    "pulp-retro-comic"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/monospace-code/spacemono/OFL.txt",
+   "designer": "Colophon Foundry",
+   "source": "https://github.com/google/fonts/tree/main/ofl/spacemono",
+   "specimen": "https://fonts.google.com/specimen/Space+Mono",
+   "path": "fonts/monospace-code/spacemono/",
+   "files": [
+    "SpaceMono-Bold.ttf",
+    "SpaceMono-BoldItalic.ttf",
+    "SpaceMono-Italic.ttf",
+    "SpaceMono-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400,
+    700
+   ],
+   "good_for": "Retro-futurist mono for headings, zines, tech editorial.",
+   "avoid": "Long code listings (quirky shapes).",
+   "pairs_with": [
+    "Hanken Grotesk"
+   ]
+  },
+  {
+   "family": "Alfa Slab One",
+   "themes": [
+    "nautical-vintage",
+    "western-slab"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/nautical-vintage/alfaslabone/OFL.txt",
+   "designer": "JM Solé",
+   "source": "https://github.com/google/fonts/tree/main/ofl/alfaslabone",
+   "specimen": "https://fonts.google.com/specimen/Alfa+Slab+One",
+   "path": "fonts/nautical-vintage/alfaslabone/",
+   "files": [
+    "AlfaSlabOne-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Heavy vintage slab: harbour signs, old labels, posters, Americana.",
+   "avoid": "Text sizes.",
+   "pairs_with": [
+    "IM Fell English",
+    "Cabin"
+   ]
+  },
+  {
+   "family": "IM Fell English",
+   "themes": [
+    "nautical-vintage",
+    "editorial-serif",
+    "fantasy-medieval"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/nautical-vintage/imfellenglish/OFL.txt",
+   "designer": "Igino Marini",
+   "source": "https://github.com/google/fonts/tree/main/ofl/imfellenglish",
+   "specimen": "https://fonts.google.com/specimen/IM+Fell+English",
+   "path": "fonts/nautical-vintage/imfellenglish/",
+   "files": [
+    "IMFeENit28P.ttf",
+    "IMFeENrm28P.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Old printed-book texture: seafaring tales, folklore, historical fiction.",
+   "avoid": "Clean modern work; the rough edges are part of the design, so don't add fake wear on top.",
+   "pairs_with": [
+    "Pirata One",
+    "Libre Caslon Text"
+   ]
+  },
+  {
+   "family": "Sail",
+   "themes": [
+    "nautical-vintage",
+    "romance-script"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/nautical-vintage/sail/OFL.txt",
+   "designer": "Miguel Hernandez",
+   "source": "https://github.com/google/fonts/tree/main/ofl/sail",
+   "specimen": "https://fonts.google.com/specimen/Sail",
+   "path": "fonts/nautical-vintage/sail/",
+   "files": [
+    "Sail-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Ornate nautical-flavoured display for short titles, seaside and boat names.",
+   "avoid": "More than a few words; small sizes.",
+   "pairs_with": [
+    "Libre Caslon Text",
+    "Josefin Sans"
+   ]
+  },
+  {
+   "family": "Vast Shadow",
+   "themes": [
+    "nautical-vintage",
+    "western-slab",
+    "art-deco-display"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/nautical-vintage/vastshadow/OFL.txt",
+   "designer": "Nicole Fally",
+   "source": "https://github.com/google/fonts/tree/main/ofl/vastshadow",
+   "specimen": "https://fonts.google.com/specimen/Vast+Shadow",
+   "path": "fonts/nautical-vintage/vastshadow/",
+   "files": [
+    "VastShadow-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Shadowed slab caps for vintage posters, circus and fairground titles.",
+   "avoid": "Small sizes; busy backgrounds (the shadow muddies).",
+   "pairs_with": [
+    "Zilla Slab",
+    "Josefin Sans"
+   ]
+  },
+  {
+   "family": "Big Shoulders",
+   "themes": [
+    "noir-thriller",
+    "condensed-poster"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/noir-thriller/bigshoulders/OFL.txt",
+   "designer": "Patric King",
+   "source": "https://github.com/google/fonts/tree/main/ofl/bigshoulders",
+   "specimen": "https://fonts.google.com/specimen/Big+Shoulders",
+   "path": "fonts/noir-thriller/bigshoulders/",
+   "files": [
+    "BigShoulders[opsz,wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     900.0
+    ],
+    "opsz": [
+     10.0,
+     72.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Hard-boiled titles, city noir, industrial posters; opsz from text to display.",
+   "avoid": "Soft or whimsical briefs.",
+   "pairs_with": [
+    "Courier Prime",
+    "Special Elite"
+   ]
+  },
+  {
+   "family": "Courier Prime",
+   "themes": [
+    "noir-thriller",
+    "monospace-code"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/noir-thriller/courierprime/OFL.txt",
+   "designer": "Alan Dague-Greene",
+   "source": "https://github.com/google/fonts/tree/main/ofl/courierprime",
+   "specimen": "https://fonts.google.com/specimen/Courier+Prime",
+   "path": "fonts/noir-thriller/courierprime/",
+   "files": [
+    "CourierPrime-Bold.ttf",
+    "CourierPrime-BoldItalic.ttf",
+    "CourierPrime-Italic.ttf",
+    "CourierPrime-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400,
+    700
+   ],
+   "good_for": "Screenplays, typewriter notes, crime dossiers; a cleaner Courier for reading.",
+   "avoid": "Being the only face on a cover; it needs a display partner.",
+   "pairs_with": [
+    "Big Shoulders",
+    "Anton"
+   ]
+  },
+  {
+   "family": "Special Elite",
+   "themes": [
+    "noir-thriller",
+    "horror"
+   ],
+   "licence": "Apache-2.0",
+   "licence_file": "fonts/noir-thriller/specialelite/LICENSE.txt",
+   "designer": "Astigmatic",
+   "source": "https://github.com/google/fonts/tree/main/apache/specialelite",
+   "specimen": "https://fonts.google.com/specimen/Special+Elite",
+   "path": "fonts/noir-thriller/specialelite/",
+   "files": [
+    "SpecialElite-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Typewritten case files, noir, spy stories, found-document looks.",
+   "avoid": "Long passages (the distressed texture tires the eye); clean modern briefs.",
+   "pairs_with": [
+    "Bebas Neue",
+    "Big Shoulders"
+   ]
+  },
+  {
+   "family": "Bangers",
+   "themes": [
+    "pulp-retro-comic",
+    "condensed-poster"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/pulp-retro-comic/bangers/OFL.txt",
+   "designer": "Vernon Adams",
+   "source": "https://github.com/google/fonts/tree/main/ofl/bangers",
+   "specimen": "https://fonts.google.com/specimen/Bangers",
+   "path": "fonts/pulp-retro-comic/bangers/",
+   "files": [
+    "Bangers-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Comic-book titles, pulp action, sound effects, superhero parody.",
+   "avoid": "Anything that needs to read as serious; body text.",
+   "pairs_with": [
+    "Patrick Hand",
+    "Oswald"
+   ]
+  },
+  {
+   "family": "Luckiest Guy",
+   "themes": [
+    "pulp-retro-comic",
+    "childrens-playful"
+   ],
+   "licence": "Apache-2.0",
+   "licence_file": "fonts/pulp-retro-comic/luckiestguy/LICENSE.txt",
+   "designer": "Astigmatic",
+   "source": "https://github.com/google/fonts/tree/main/apache/luckiestguy",
+   "specimen": "https://fonts.google.com/specimen/Luckiest+Guy",
+   "path": "fonts/pulp-retro-comic/luckiestguy/",
+   "files": [
+    "LuckiestGuy-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Cartoon titles, comedy, kids' games, bold sticker-style headlines.",
+   "avoid": "More than a few words; formal or sad subjects.",
+   "pairs_with": [
+    "Fredoka",
+    "Patrick Hand"
+   ]
+  },
+  {
+   "family": "Shrikhand",
+   "themes": [
+    "pulp-retro-comic",
+    "romance-script"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/pulp-retro-comic/shrikhand/OFL.txt",
+   "designer": "Jonny Pinhorn",
+   "source": "https://github.com/google/fonts/tree/main/ofl/shrikhand",
+   "specimen": "https://fonts.google.com/specimen/Shrikhand",
+   "path": "fonts/pulp-retro-comic/shrikhand/",
+   "files": [
+    "Shrikhand-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Retro 1970s pulp and comedy titles, food packaging, warm loud headlines.",
+   "avoid": "Small sizes; quiet literary work.",
+   "pairs_with": [
+    "Jost",
+    "Cabin"
+   ]
+  },
+  {
+   "family": "Dancing Script",
+   "themes": [
+    "romance-script",
+    "handwritten-marker"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/romance-script/dancingscript/OFL.txt",
+   "designer": "Impallari Type",
+   "source": "https://github.com/google/fonts/tree/main/ofl/dancingscript",
+   "specimen": "https://fonts.google.com/specimen/Dancing+Script",
+   "path": "fonts/romance-script/dancingscript/",
+   "files": [
+    "DancingScript[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     700.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Casual romance, cafes, greeting cards; bouncy and readable.",
+   "avoid": "Formal luxury (looks too casual); overuse, as it is very common.",
+   "pairs_with": [
+    "Josefin Sans",
+    "Cabin"
+   ]
+  },
+  {
+   "family": "Great Vibes",
+   "themes": [
+    "romance-script"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/romance-script/greatvibes/OFL.txt",
+   "designer": "Robert Leuschke",
+   "source": "https://github.com/google/fonts/tree/main/ofl/greatvibes",
+   "specimen": "https://fonts.google.com/specimen/Great+Vibes",
+   "path": "fonts/romance-script/greatvibes/",
+   "files": [
+    "GreatVibes-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Wedding invitations, romance titles, elegant one- or two-word accents.",
+   "avoid": "All caps (script capitals collide); any text under about 24 px; long lines.",
+   "pairs_with": [
+    "Playfair Display",
+    "Josefin Sans"
+   ]
+  },
+  {
+   "family": "Pinyon Script",
+   "themes": [
+    "romance-script",
+    "luxury-didone"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/romance-script/pinyonscript/OFL.txt",
+   "designer": "Nicole Fally",
+   "source": "https://github.com/google/fonts/tree/main/ofl/pinyonscript",
+   "specimen": "https://fonts.google.com/specimen/Pinyon+Script",
+   "path": "fonts/romance-script/pinyonscript/",
+   "files": [
+    "PinyonScript-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Formal copperplate: certificates, period romance, luxury labels.",
+   "avoid": "Small sizes; casual or modern briefs.",
+   "pairs_with": [
+    "Bodoni Moda",
+    "EB Garamond"
+   ]
+  },
+  {
+   "family": "Exo 2",
+   "themes": [
+    "scifi-tech"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/scifi-tech/exo2/OFL.txt",
+   "designer": "Natanael Gama",
+   "source": "https://github.com/google/fonts/tree/main/ofl/exo2",
+   "specimen": "https://fonts.google.com/specimen/Exo+2",
+   "path": "fonts/scifi-tech/exo2/",
+   "files": [
+    "Exo2[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Sci-fi and tech subtitles and body, game UI, sport tech.",
+   "avoid": "Literary or traditional briefs.",
+   "pairs_with": [
+    "Orbitron",
+    "Martian Mono"
+   ]
+  },
+  {
+   "family": "Orbitron",
+   "themes": [
+    "scifi-tech"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/scifi-tech/orbitron/OFL.txt",
+   "designer": "Matt McInerney",
+   "source": "https://github.com/google/fonts/tree/main/ofl/orbitron",
+   "specimen": "https://fonts.google.com/specimen/Orbitron",
+   "path": "fonts/scifi-tech/orbitron/",
+   "files": [
+    "Orbitron[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Space, games, sci-fi titles and HUD-style labels, short words in caps.",
+   "avoid": "Body text; anything warm or historical. Heavily used, so set it with care.",
+   "pairs_with": [
+    "Exo 2",
+    "Space Mono"
+   ]
+  },
+  {
+   "family": "Oxanium",
+   "themes": [
+    "scifi-tech",
+    "monospace-code"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/scifi-tech/oxanium/OFL.txt",
+   "designer": "Severin Meyer",
+   "source": "https://github.com/google/fonts/tree/main/ofl/oxanium",
+   "specimen": "https://fonts.google.com/specimen/Oxanium",
+   "path": "fonts/scifi-tech/oxanium/",
+   "files": [
+    "Oxanium[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     200.0,
+     800.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Cyberpunk, esports, tech product labels; squared and sturdy.",
+   "avoid": "Long reading.",
+   "pairs_with": [
+    "JetBrains Mono",
+    "Inter"
+   ]
+  },
+  {
+   "family": "Rye",
+   "themes": [
+    "western-slab",
+    "nautical-vintage"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/western-slab/rye/OFL.txt",
+   "designer": "Nicole Fally",
+   "source": "https://github.com/google/fonts/tree/main/ofl/rye",
+   "specimen": "https://fonts.google.com/specimen/Rye",
+   "path": "fonts/western-slab/rye/",
+   "files": [
+    "Rye-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Wild West, saloon posters, circus and Americana titles.",
+   "avoid": "Body text; anything not period.",
+   "pairs_with": [
+    "Zilla Slab",
+    "Courier Prime"
+   ]
+  },
+  {
+   "family": "Ultra",
+   "themes": [
+    "western-slab",
+    "pulp-retro-comic"
+   ],
+   "licence": "Apache-2.0",
+   "licence_file": "fonts/western-slab/ultra/LICENSE.txt",
+   "designer": "Astigmatic",
+   "source": "https://github.com/google/fonts/tree/main/apache/ultra",
+   "specimen": "https://fonts.google.com/specimen/Ultra",
+   "path": "fonts/western-slab/ultra/",
+   "files": [
+    "Ultra-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Heavy slab headlines, wanted posters, retro sport and food.",
+   "avoid": "Text sizes; delicate briefs.",
+   "pairs_with": [
+    "Zilla Slab",
+    "Oswald"
+   ]
+  },
+  {
+   "family": "Zilla Slab",
+   "themes": [
+    "western-slab",
+    "editorial-serif"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/western-slab/zillaslab/OFL.txt",
+   "designer": "Typotheque",
+   "source": "https://github.com/google/fonts/tree/main/ofl/zillaslab",
+   "specimen": "https://fonts.google.com/specimen/Zilla+Slab",
+   "path": "fonts/western-slab/zillaslab/",
+   "files": [
+    "ZillaSlab-Bold.ttf",
+    "ZillaSlab-Italic.ttf",
+    "ZillaSlab-Regular.ttf",
+    "ZillaSlab-SemiBold.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400,
+    600,
+    700
+   ],
+   "good_for": "Slab body and subheads, Western and journalistic tone, sturdy UI.",
+   "avoid": "Elegant or luxury work.",
+   "pairs_with": [
+    "Rye",
+    "Ultra"
+   ]
+  }
+ ]
+}
