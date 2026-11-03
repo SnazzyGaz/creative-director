@@ -6,13 +6,13 @@ One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge).
 |---|---|
 | `judge` | Your name, or the model name and version |
 | `judge_type` | `owner`, `person` or `model` |
-| `sheet` | Already filled: S01 to S58 (S01-S16 batch 1, S17-S28 batch 2, S29-S38 batch 3, S39-S48 batch 4, S49-S58 batch 5) |
+| `sheet` | Already filled: S01 to S68 (S01-S16 batch 1, S17-S28 batch 2, S29-S38 batch 3, S39-S48 batch 4, S49-S58 batch 5, S59-S68 batch 6) |
 | `left_id`, `right_id` | Already filled: the IDs printed under the two images |
 | `preferred_id` | The ID of the piece you'd hand over for that brief, or `SAME` (or `tie`) if you truly can't choose |
 | `strength` | 1 slight, 2 clear, 3 strong |
 | `reason` | A few words: what decided it |
 
-**How to judge.** Look at the sheet as a whole, the way a client would: does it do what the brief asks, is the information right and readable, is it well made, would its audience respond to it. Go with your first reaction; don't zoom in hunting for flaws, and don't go back to change earlier answers. In batch 1 (S01-S16) each pair appears twice with the sides swapped; if you recognise a repeat you can leave it blank, and it counts as one judgement either way. Batches 2 and 3 (S17-S38) have one sheet per pair.
+**How to judge.** Look at the sheet as a whole, the way a client would: does it do what the brief asks, is the information right and readable, is it well made, would its audience respond to it. Go with your first reaction; don't zoom in hunting for flaws, and don't go back to change earlier answers. In batch 1 (S01-S16) each pair appears twice with the sides swapped; if you recognise a repeat you can leave it blank, and it counts as one judgement either way. Batches 2 to 6 (S17-S68) have one sheet per pair.
 
 **Paper version.** If you'd rather not use the CSV, write `S01 ABCD 2 calmer, easier to read` style lines in any text file; it can be typed into the CSV later.
 
@@ -76,3 +76,13 @@ One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge).
 | S56 | JXPE | ZWNS | | | |
 | S57 | ZTRS | MQWZ | | | |
 | S58 | ZLPZ | XPFM | | | |
+| S59 | VRXN | JWHC | | | |
+| S60 | YLDC | JLWS | | | |
+| S61 | DFWH | LGTP | | | |
+| S62 | YWSZ | FUBS | | | |
+| S63 | TUNM | VMSV | | | |
+| S64 | EKMS | YRSX | | | |
+| S65 | CDNS | XTBX | | | |
+| S66 | FWYN | ABTN | | | |
+| S67 | EHUA | RJET | | | |
+| S68 | XTZX | YHQW | | | |
