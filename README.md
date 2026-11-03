@@ -50,7 +50,7 @@ Always send the actual output (image, screenshot at real size, URL or renders), 
 | [typography](modules/typography/) · [layout](modules/layout/) · [brand](modules/brand/) | type, social cards, posters, slides, print, infographics with charts drawn from the data in code; official logos only, never redrawn |
 | [composition](modules/composition/) · [colour-value](modules/colour-value/) · [aesthetic-critique](modules/aesthetic-critique/) | balance, focus, beauty and palette, graded from *well supported* to *myth*; intent model and side-by-side verdicts |
 | [film](modules/film/) (optional) | story first: shots, continuity, light, grading, editing, sound, generated-video QC |
-| [lookbook](modules/lookbook/) (optional) | 196 visual looks to offer as directions, named by technique or era, never by living artists |
+| [lookbook](modules/lookbook/) (optional) | 320 visual looks to offer as directions, named by technique or era, never by living artists |
 
 Also: a [font library](fonts/) of 61 free families in 18 themes, and [`tools/`](tools/) for every measurable check (one-command auto check, contrast, vanishing points, ellipses, layout grid, chart and route drawing).
 
@@ -101,7 +101,7 @@ modules/    technical-drawing · illustration · character · web-ui · ux · 3d
             typography · layout (social, posters, slides, print) · brand · aesthetic-critique
             composition (balance, focus, unity, space, beauty) · colour-value
             film (cinematography and video, story first: shots, continuity, light, grading, editing, sound, generated-video QC)
-            lookbook (optional: 196 established looks and wildcards, tag file and image sheets)
+            lookbook (optional: 320 established looks and wildcards, tag file and image sheets)
 tools/      auto check (one command, every measurable rule), look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, 3D intersections, before/after
 examples/   stress tests, round by round, including this README's own critique
 fonts/      61 free font families in 18 themes, catalogue and specimen sheets

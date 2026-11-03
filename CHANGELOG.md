@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+Lookbook batches 7 to 12, synced from the breeder with `tools/lookbook_sync.py`. No rule changes; not yet released.
+
+- **Looks:** 320 live, up from 196. 124 added, all established: LB-115 to LB-234 (116; LB-139, LB-144, LB-149 and LB-162 were rejected at draft review in the breeder and never compiled, so those IDs are unused) and LB-SD10 to LB-SD17 (8 contemporary figure-illustration looks). A new family, F9 fine-art movements (62 looks), plus more ornamental, print, pop, digital and technique looks. Nothing retired; the two retired IDs (LB-064, LB-R02R22) stay retired.
+- **Tags:** every new look has `nearest_looks` and `colours`; existing looks' neighbours were re-derived (98 changed). `getty_aat` stays on the same looks; new established looks are blank until each ID is checked on vocab.getty.edu. LB-102's hallmark wording was tidied in the breeder. Dedup in the breeder: one flag, LB-232 against LB-SD12 on dHash only (CLIP 0.18), a round dish against a splash portrait, kept as distinct.
+- **Sheets:** 81 sheets (up from 45). The 36 new ones are 1,000 px JPEGs like the rest (about 13 MB of sheets in git); the 45 existing sheets are unchanged.
+- **Search** (`tests/score_find.py`): violations 0. Recall@8 on the 32 existing briefs fell from 0.979 to 0.958: in five briefs (b01, b13, b25, b29, b31) one expected look was pushed out of the top 8 by new looks. New brief b33 (calm smart-home app screens) for the new interface looks; recall@8 over all 33 is 0.949.
+
 ## v0.9.6 (3 November 2026)
 
 **Infographics: layout first, charts designed in, an illustration budget; warmth by choice.** Batch 7, ten infographic briefs on v0.9.5, went 3 to 7 against the skill (p = 0.17 for the other side, no clear result). v0.9.5 overcorrected batch 6's "sterile": the losses were called way over-illustrated and unbalanced, a graphic that doesn't belong, charts that look cheap and pasted on, samey steps, an amateurish hero title, too demonstrative (photoreal), with two missing lines and an inhaler shown without its spacer. Its code charts were the accurate ones; the layouts around them lost. All 70 briefs: 39 to 30 with 1 tie (one-sided p = 0.17), short of the 43-of-70 bar set in advance; infographics over batches 6 and 7, 7 to 13. The new rules are internal evidence from one judge, untested. No budget was raised.

@@ -561,6 +561,23 @@
     "LB-SD08",
     "LB-109"
    ]
+  },
+  {
+   "id": "b33",
+   "brief": "Home and settings screens for a calm smart-home app",
+   "use": "apps",
+   "mood": "calm",
+   "energy": "low",
+   "avoid": "",
+   "should": [
+    "LB-135",
+    "LB-228",
+    "LB-158"
+   ],
+   "should_not": [
+    "LB-SD12",
+    "LB-SD08"
+   ]
   }
  ]
 }
