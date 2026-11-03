@@ -3,7 +3,8 @@ SHA-256 of the hidden keys, each committed before any judging of its batch:
 d1e52e08f9ab769cb7ab958d4ec3536c5cd34b5314497db1b87bbc97f37cc998  blind-test-key-2.json
 0396fb6c1db559fee593def6295b15c637938946974ed3b4e40ffe6cc1ce1c5f  blind-test-key-3.json
 
-The keys are not in the repo. Each holds a random salt, so the left/right placements can't be guessed from its
-hash. blind-test-key.json covers batch 1 (S01-S16); blind-test-key-2.json covers batch 2 (S17-S28);
-blind-test-key-3.json covers batch 3 (S29-S38). After judging closes, publish the keys next to this file;
-`sha256sum -c KEY-SHA256.txt` must pass for every line.
+Each key holds a random salt, so the left/right placements could not be guessed from its hash.
+blind-test-key.json covers batch 1 (S01-S16); blind-test-key-2.json covers batch 2 (S17-S28);
+blind-test-key-3.json covers batch 3 (S29-S38). All three were published next to this file on 3 Nov 2026,
+after the owner of the work finished judging, and `sha256sum -c KEY-SHA256.txt` passes for every key
+(it also warns about these explanation lines, which is expected).

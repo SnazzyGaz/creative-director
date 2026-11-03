@@ -1,0 +1,296 @@
+{
+ "images": {
+  "GJEU": {
+   "brief": "B20",
+   "condition": "with",
+   "file": "B20-with.jpg",
+   "sha256": "9fb226a071d14bfeca02d0d32faa6b3fefd694bf39c4fbf446f9651e00bae4ce"
+  },
+  "HZXM": {
+   "brief": "B9",
+   "condition": "without",
+   "file": "B9-without.jpg",
+   "sha256": "ca5e7e521d27f777effe2fa6419847e67609e9ddfe91e2dc907af5cd0ccc857d"
+  },
+  "KLBX": {
+   "brief": "B15",
+   "condition": "with",
+   "file": "B15-with.jpg",
+   "sha256": "b9ff989b34d5e04d9a7e53438feb989d8912eb03bf409655a24844b30a99a3e9"
+  },
+  "KNBX": {
+   "brief": "B17",
+   "condition": "without",
+   "file": "B17-without.jpg",
+   "sha256": "0b1d7e08be1b904bfffe7c3b4989696689b6ad19bf468b9d496c9a6bf464d3f5"
+  },
+  "KUBG": {
+   "brief": "B10",
+   "condition": "without",
+   "file": "B10-without.jpg",
+   "sha256": "a5e80109d25de88a2315fa321760959287c29dcefd76d2355a3f1ab88864707a"
+  },
+  "KZLX": {
+   "brief": "B9",
+   "condition": "with",
+   "file": "B9-with.jpg",
+   "sha256": "c2ed57e07863240b67e83d06013dad4e05d74db0c95b809ddb39902f0de4a66d"
+  },
+  "LNPZ": {
+   "brief": "B18",
+   "condition": "without",
+   "file": "B18-without.jpg",
+   "sha256": "162fd3a6b30f7ee4f142990b98b31576c246e8196ecd1e3ef212a4467edeb5a4"
+  },
+  "MWPG": {
+   "brief": "B17",
+   "condition": "with",
+   "file": "B17-with.jpg",
+   "sha256": "f14d5bcae24c543e8e4aac81382e4fd1fb8fe412edc8ca6f9cd9511d706c2d29"
+  },
+  "NVCH": {
+   "brief": "B10",
+   "condition": "with",
+   "file": "B10-with.jpg",
+   "sha256": "8aa37f3a84f3433954def58150c037199335c03a1c8f21361f2f3628a02f5d42"
+  },
+  "PTKX": {
+   "brief": "B18",
+   "condition": "with",
+   "file": "B18-with.jpg",
+   "sha256": "b9f9cbb4bbf9b69e3ef81ebf3b30ed444c9dc0b580916356263846e2f8895eef"
+  },
+  "RGTE": {
+   "brief": "B13",
+   "condition": "with",
+   "file": "B13-with.jpg",
+   "sha256": "2dd6a5c01437f75596aa53e0438ea0f5da416c6c005dc67a68c505c87abbacdd"
+  },
+  "SCQE": {
+   "brief": "B16",
+   "condition": "with",
+   "file": "B16-with.jpg",
+   "sha256": "9f90c44cd3c37341f10b0e8399cae22568f0be465df39708f5a2901aa22c0ed9"
+  },
+  "SSFS": {
+   "brief": "B19",
+   "condition": "without",
+   "file": "B19-without.jpg",
+   "sha256": "be22a0401ca6fe3ba063485dd3537fe4a35ec97a83d07a45f9db90a24a8914fb"
+  },
+  "SWWP": {
+   "brief": "B12",
+   "condition": "without",
+   "file": "B12-without.jpg",
+   "sha256": "519d7497bef61f72fc7e31edf9817acaf44727ad85f08413adedb65ec216c142"
+  },
+  "TAPL": {
+   "brief": "B20",
+   "condition": "without",
+   "file": "B20-without.jpg",
+   "sha256": "729eaa981b2391a1c73184d7c629a2da1c34bfc31838b06366300c0de65599e9"
+  },
+  "ULKG": {
+   "brief": "B13",
+   "condition": "without",
+   "file": "B13-without.jpg",
+   "sha256": "2d8071be9588444f2dde259745c2fff14c0474bace2e83129386b3afe6085bdc"
+  },
+  "UYHN": {
+   "brief": "B14",
+   "condition": "with",
+   "file": "B14-with.jpg",
+   "sha256": "2172408d8ad8dcc8e543fab5495434fbe3b09530ce3c9ce2db0e9b5a095e108d"
+  },
+  "VCPR": {
+   "brief": "B15",
+   "condition": "without",
+   "file": "B15-without.jpg",
+   "sha256": "321baaa9470d0cf7eb4efe4128b5102825790d4968ced31c28b406b49f07b1a4"
+  },
+  "VVJR": {
+   "brief": "B12",
+   "condition": "with",
+   "file": "B12-with.jpg",
+   "sha256": "fd3546ce6c3f0e9fcfab02d17176f410d69aebcde42c8b2ce5f6df05423f4588"
+  },
+  "VYZW": {
+   "brief": "B19",
+   "condition": "with",
+   "file": "B19-with.jpg",
+   "sha256": "4e66d2394c612107781efecdeeb76e566e58174d1f1c00ef0d5dc48602389f8e"
+  },
+  "WAKG": {
+   "brief": "B16",
+   "condition": "without",
+   "file": "B16-without.jpg",
+   "sha256": "fbe36bd340efb523a34d74acab967a65fb1bcbcf065d1a395d760b6166a3b4ff"
+  },
+  "ZDDB": {
+   "brief": "B11",
+   "condition": "without",
+   "file": "B11-without.jpg",
+   "sha256": "dc4d34fc1fdf70e81170c9173a3311eb271f2ce610b719c5205ff15d0a642491"
+  },
+  "ZGKQ": {
+   "brief": "B14",
+   "condition": "without",
+   "file": "B14-without.jpg",
+   "sha256": "8a69642ff82335acc6478aeb22a7b4d80add54c8f2d508a2dba7eb382456b340"
+  },
+  "ZPJF": {
+   "brief": "B11",
+   "condition": "with",
+   "file": "B11-with.jpg",
+   "sha256": "dbbbc646700c5de3cb52ea0d70fb480929d0144a6ec8d6edba4c674fd1902154"
+  }
+ },
+ "note": "Hidden key for examples/blind-test. Do not commit or show to judges before judging ends.",
+ "salt": "83238b4002be7f7123618d8aa408e32b",
+ "sheets": [
+  {
+   "brief": "B15",
+   "left": {
+    "condition": "with",
+    "id": "KLBX"
+   },
+   "right": {
+    "condition": "without",
+    "id": "VCPR"
+   },
+   "sheet": "S17"
+  },
+  {
+   "brief": "B9",
+   "left": {
+    "condition": "without",
+    "id": "HZXM"
+   },
+   "right": {
+    "condition": "with",
+    "id": "KZLX"
+   },
+   "sheet": "S18"
+  },
+  {
+   "brief": "B20",
+   "left": {
+    "condition": "with",
+    "id": "GJEU"
+   },
+   "right": {
+    "condition": "without",
+    "id": "TAPL"
+   },
+   "sheet": "S19"
+  },
+  {
+   "brief": "B12",
+   "left": {
+    "condition": "without",
+    "id": "SWWP"
+   },
+   "right": {
+    "condition": "with",
+    "id": "VVJR"
+   },
+   "sheet": "S20"
+  },
+  {
+   "brief": "B17",
+   "left": {
+    "condition": "with",
+    "id": "MWPG"
+   },
+   "right": {
+    "condition": "without",
+    "id": "KNBX"
+   },
+   "sheet": "S21"
+  },
+  {
+   "brief": "B13",
+   "left": {
+    "condition": "without",
+    "id": "ULKG"
+   },
+   "right": {
+    "condition": "with",
+    "id": "RGTE"
+   },
+   "sheet": "S22"
+  },
+  {
+   "brief": "B19",
+   "left": {
+    "condition": "with",
+    "id": "VYZW"
+   },
+   "right": {
+    "condition": "without",
+    "id": "SSFS"
+   },
+   "sheet": "S23"
+  },
+  {
+   "brief": "B10",
+   "left": {
+    "condition": "without",
+    "id": "KUBG"
+   },
+   "right": {
+    "condition": "with",
+    "id": "NVCH"
+   },
+   "sheet": "S24"
+  },
+  {
+   "brief": "B14",
+   "left": {
+    "condition": "with",
+    "id": "UYHN"
+   },
+   "right": {
+    "condition": "without",
+    "id": "ZGKQ"
+   },
+   "sheet": "S25"
+  },
+  {
+   "brief": "B11",
+   "left": {
+    "condition": "without",
+    "id": "ZDDB"
+   },
+   "right": {
+    "condition": "with",
+    "id": "ZPJF"
+   },
+   "sheet": "S26"
+  },
+  {
+   "brief": "B16",
+   "left": {
+    "condition": "with",
+    "id": "SCQE"
+   },
+   "right": {
+    "condition": "without",
+    "id": "WAKG"
+   },
+   "sheet": "S27"
+  },
+  {
+   "brief": "B18",
+   "left": {
+    "condition": "with",
+    "id": "PTKX"
+   },
+   "right": {
+    "condition": "without",
+    "id": "LNPZ"
+   },
+   "sheet": "S28"
+  }
+ ]
+}

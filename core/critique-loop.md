@@ -60,7 +60,7 @@ At the size people see it, plus a thumbnail. UI: phone and desktop widths and 20
 
 **Anatomy pass (delivery gate):** with any person, hand or animal in frame, crop each hand, limb join, face and animal head at 2-4x and write one pass/fail line per crop (CHAR-9, `tools/anatomy_crops.py`). A whole-image look doesn't count; any fail blocks.
 
-**Energy pass** (after the checks, where it applies; `energy-pass.md`): a focal hook at thumbnail, display type with real hierarchy, purposeful colour, movement, an obvious call to action, the issuer on official pieces. From structure, not texture: no clutter, grain or additions.
+**Energy pass** (after the checks, where it applies; `energy-pass.md`): a focal hook at thumbnail that stands off its ground in value, display type with real hierarchy, purposeful colour, movement, an obvious call to action, an idea that fits the category; on official pieces the issuer's real mark or a flagged slot. From structure, not texture: no clutter, grain or additions.
 
 **Before delivery, the Sitting right pass** (COMP-19 to COMP-25, `modules/composition/sitting-right.md`): rotate 180°, cover each half, gap measure (LAY-10), `tools/balance.py`, edge and alignment sweep. Flag only what looks accidental and ask "intended?". Asymmetric and off-centre work is valid: fix broken balance with a counterweight or by committing harder to the asymmetry. Never centre or symmetrise by default.
 
@@ -76,7 +76,7 @@ At the size people see it, plus a thumbnail. UI: phone and desktop widths and 20
 
 ### FLOW-1. An unprompted hand-off gets a sign-off blurb, not a redo
 - **What:** After the full analysis, reply with only the **imperative** changes (blockers, and what the piece fails its brief without): ranked, five at most, each with its rule ID, what visibly changes, and **[edit]** (keep the art) or **[regenerate]** (new art or redo). Optional ideas go on one "also possible" line or nowhere. Ask for sign-off; apply nothing before it.
-- **Why:** Notes are suggestions until the owner accepts them (CD-4). Asking costs one message; a wrong guess costs a redo. An edit sent with a paragraph of critique leaves the owner unsure which is the answer.
+- **Why:** Notes are suggestions until the owner accepts them (CD-4). Asking costs one message; a wrong guess costs a redo.
 - **Check:** Ranked, cited, concrete, tagged, five lines at most, nothing changed yet?
 - **Format:**
   ```
@@ -118,7 +118,7 @@ Stop when: no blockers remain (including a clean anatomy pass on the latest rend
 
 ### FLOW-3. Re-check before delivery; never pass off an unapplied critique as the result
 - **What:** On the final render, check each signed-off point, then the QA gates: light (TD-LIT-1), anatomy (CHAR-9), type size and contrast (TYPE-3, UI-6), whitespace (LAY-10), Sitting right (COMP-25), marks (BRAND-4 overlay check, BRAND-8), real-subject crops (ILL-12), transcribed facts (FP-3), no additions (AES-10), energy (EN-2, where it applies); signage adds viewing distance (LAY-7), a series adds the set pass (BRAND-6). Deliver the result first, then one line per point, **done** or **not done** with the reason. A critique alone is never the deliverable.
-- **Why:** Edits silently skip instructions, and an anatomy fault once passed light, edge and type checks because nobody cropped the hands (`examples/character-anatomy-pass/`).
+- **Why:** Edits silently skip instructions; an anatomy fault once passed every other check because nobody cropped the hands (`examples/character-anatomy-pass/`).
 - **Check:** A line for every point? Does each "done" match the render?
 - **Format:**
   ```

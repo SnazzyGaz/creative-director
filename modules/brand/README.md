@@ -46,6 +46,8 @@ The known failure this module addresses: critique rounds remove errors but canno
   - a one-colour silhouette (all of the mark in one ink) where the guide gives no version for the background. The shapes never change.
 
   If no file exists, set the trademark name in plain text in the piece's own type; don't draw a mark. A labelled placeholder (a plain box reading "[Team] crest: official file needed") is for symbols with no name to set. Say which you used in the hand-off.
+
+  **Official pieces** (a notice, sign, leaflet or public-information sheet from a council, service, school or venue): the issuer's mark is part of the message, so the default is the real mark, with the name, at the top, where it reads as the official say-so rather than as advertising. If no file was supplied, ask for it before delivery; if the piece must go out first, leave a labelled slot at the mark's size ("[Issuer] logo: official file needed") and flag it in the critique as open. Never invent a crest or emblem (BRAND-8), and don't settle for a bare, characterless text header in its place: in the repo's blind test, the owner of the work called official pieces without their real marks amateurish, like a children's project (`examples/blind-test/RESULTS.md`; one judge, internal evidence).
 - **Why:** A logo is a trademark. It identifies who the goods or services come from [S170]. In UK law, using a sign identical with or similar to a registered mark, in the course of trade and in a way likely to confuse, infringes it [S171]. Brand guides are explicit. Spotify says its logo is not to be modified or added to, and its orientation, colour and composition are not to change [S172]. Mastercard says its artwork is to be downloaded and not altered, and its Symbol is used only in full colour [S173]. A file on Commons carries no permission to use the trademark; that stays with the owner of the mark [S174]. Image generators routinely garble marks. A near-miss mark is worse than none, because it looks like a fake.
 - **Check:**
   - The logo's width-to-height ratio matches the source file within 1%.
@@ -56,11 +58,12 @@ The known failure this module addresses: critique rounds remove errors but canno
   - **Overlay check:** lay the placed mark over the source at the same size (50% opacity or a difference blend). The outlines coincide; nothing is added, dropped or moved. Re-run after every trace, knockout or recolour.
   - The hand-off names the source of each mark (owner, brand site, or Commons with its file page).
   - For third-party marks, a line notes that permission to use them is the owner's call.
+  - On an official piece: the issuer's real mark sits with its name at the top, or a labelled slot does and the critique lists it as open.
 - **Fix:**
   - Place the original file.
   - Restore clear space by moving other elements, not by shrinking the logo below its minimum.
   - On dark or busy grounds, use the guide's one-colour or reversed version.
-  - If you can't find a faithful source, set the name in plain text (or, for a nameless symbol, use the labelled placeholder) and ask the owner for the file.
+  - If you can't find a faithful source, set the name in plain text (or, for a nameless symbol, use the labelled placeholder) and ask the owner for the file. On an official piece, use the labelled slot as well as the name, and list it as open in the critique.
 - **Grade:** Standard (trade-mark law and brand guidelines).
 - **Source:** Wheeler [S119]; USPTO [S170]; Trade Marks Act 1994 s.10 [S171]; Spotify [S172]; Mastercard [S173]; Wikimedia Commons [S174].
 

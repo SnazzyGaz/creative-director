@@ -80,6 +80,16 @@ Measuring: `tools/look.py` gives a greyscale copy and L* statistics; `tools/cont
 - **Grade:** Well supported.
 - **Source:** Birch [S252]; WCAG [S3]; CORE-6; UI-6.
 
+### CV-10. The subject reads from across the room; text on strong colour gets the better of black and white
+- **What:** Two checks at viewing distance (LAY-7), where most posters, notices and covers are first seen.
+  - **Figure against ground:** the main subject separates from what is behind it by a clear value step, not only by hue or detail. A dark figure on a wall of the same tone vanishes at a few metres even when it reads up close.
+  - **Text on saturated colour:** on a strong red, orange, green or magenta, check both black and white text and use the higher-contrast one. On mid reds and oranges the two come out close on the WCAG 2 ratio, and readers and perceptual models often favour white [S335].
+- **Why:** Edges that carry meaning need a lightness step (CV-3), and distance lowers contrast (CV-8). Which region reads as the figure depends on several image cues, among them lower region [S249]; see the review [S250]. In the repo's blind test the owner of the work marked down a climber lost against a same-tone wall and black text lost on a red header; that header measured 4.43:1 in black and 4.74:1 in white (`examples/blind-test/RESULTS.md`).
+- **Check:** View the thumbnail (150-200 px wide) in greyscale: is the subject's outline a clear light-dark edge along most of its length? For text on a saturated colour, run `tools/contrast.py` for both black and white on the sampled ground.
+- **Fix:** Lighten the ground behind the figure or the figure itself, add a rim of light or a lighter backdrop shape; switch the text to whichever of black or white measures higher, or deepen the colour so white clears 4.5:1 (UI-6).
+- **Grade:** Well supported for the value step (CV-3, CV-8); the black-versus-white comparison is partly supported (one practitioner source and the WCAG formula); the two blind-test cases are internal evidence, one judge.
+- **Source:** CV-3; CV-8; Vecera et al. [S249]; Wagemans et al. [S250]; Somers [S335]; WCAG [S3]; LAY-7; EN-2.
+
 ---
 
 ## Myths and weak claims (details in `core/evidence.md`)

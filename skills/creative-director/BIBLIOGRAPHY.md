@@ -90,6 +90,7 @@ An annotated reading list behind `modules/composition/`, `modules/colour-value/`
 - **Colour:** Schloss & Palmer [S41]; Ou & Luo 2006 [S245]; Birch 2012 [S252].
 - **Whose taste:** Vessel et al. 2018 [S251].
 - **Stopping power (ads, eye-tracking):** Pieters & Wedel 2004 [S333]; Pieters, Wedel & Batra 2010 [S332], structured design versus pixel clutter. Energy pass (`core/energy-pass.md`).
+- **Category cues and contrast on colour:** Piqueras-Fiszman & Spence 2015 [S334], how packaging colour and pictures set taste expectations; Somers [S335], black or white text on orange and red (practitioner). Energy pass items 3 and 8; CV-10.
 
 ## 6a. Film and the moving image (v0.9.0)
 

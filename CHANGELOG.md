@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.9.3 (3 November 2026)
+
+**Blind test judged; rules tightened from the owner's batch 3 notes.** Batch 3 went 8 to 1 for the skill with 1 tie (p = 0.020), but it isn't independent of batches 1 and 2, its maker saw both arms, and most picks were slight. Overall: 18 to 11 with 1 tie over 30 briefs (p = 0.13, no clear result). The notes moved from "sterile versus slop" to concept, figure-ground, issuer marks and plain notices; this release adds rules for those, graded as internal evidence from one judge. No budget was raised.
+
+- **Issuer mark on official pieces** (`modules/brand/` BRAND-4, energy pass item 6). Use the issuer's real mark from its file, with the name at the top as the official say-so, not as advertising. If there's no file, ask for it or leave a labelled slot ("[Issuer] logo: official file needed") and flag it as open in the critique. Never invent a crest (BRAND-8), and don't use a characterless text-only header: without the mark a notice reads as amateur.
+- **Subject on ground, text on colour.** New CV-10 in `modules/colour-value/`, plus energy pass items 1 and 3: the subject must separate from its ground in value at a distance, and text on saturated colour gets both black and white checked, keeping the higher contrast. On batch 3's red header, white measures 4.74:1 and black 4.43:1.
+- **Concept fit.** New energy pass item 8 and a CD-3 bullet in `core/creative-direction.md`: the idea fits the category and its sensory cues, not just the brand name, and gets checked for unwanted readings. Item 7 adds that a fun event shows the activity and the people, not an empty place.
+- **Hooks.** The critique loop's energy line, the critique template's QA line (CV-10, BRAND-4) and the lite file carry short versions. The loop trimmed two phrases (in FLOW-1 and FLOW-3's Why) to stay inside the always-on budget (6,492 of 6,500); the template is 1,492 of 1,500 and the lite file 2,488 of 2,500.
+- **Sources** S334 (Piqueras-Fiszman and Spence 2015: a review finding that packaging colour, pictures and labels set taste expectations) and S335 (Somers, a practitioner note on how the WCAG 2 ratio can favour black text on orange and red where many readers find white easier). Bibliography: "Category cues and contrast on colour".
+- **Blind test results.** New `examples/blind-test/RESULTS.md`: all three batches, sign tests per batch and overall, strengths, the sterile-versus-slop finding, the energy pass, batch 3's caveats, the gaps found and every judgement. The owner's picks are in `scoring-owner.csv`, with the reasons paraphrased. The three keys are now published next to `KEY-SHA256.txt`, and `sha256sum -c` passes for all three. README, `llms.txt` and the kit README carry the result.
+- **score.py** handles ties explicitly: `SAME` or `tie` counts as a tie, and an ID not in the keys warns on stderr and counts as a tie.
+
 ## v0.9.2 (3 November 2026)
 
 **Content freeze, one exception.** Batches 1 and 2 of the blind test are judged by the owner of the work: a tie, 10 to 10 over 20 briefs (5 to 3 for the skill in batch 1, 7 to 5 against it in batch 2; no clear result). Where the version without the skill won, the owner's notes mostly named its eye-catch, energy or obvious call to action. This release adds one rule in response and a third batch to test it; other new content still waits.

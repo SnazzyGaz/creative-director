@@ -8,7 +8,8 @@ their own, the owner of the work first; nothing is pooled across judges.
 
 One judgement per brief. Batch 1's two sheets for a brief are read as one judgement: if both were filled and
 agree, that is the pick; if only one was filled (a judge who recognises the repeat may skip it), that one is
-the pick; if they disagree, or the pick is "same", it is a tie. A one-sided sign test runs over the briefs that
+the pick; if they disagree, or the pick is "same" or "tie", it is a tie. Any other value that is not an ID
+on that sheet is also counted as a tie, with a warning. A one-sided sign test runs over the briefs that
 were not ties, for all briefs together and for each key's batch. With no ties, p < 0.05 needs 7 of 8,
 10 of 12, 9 of 10, 15 of 20 or 20 of 30 for one condition; anything less is reported as no clear result.
 """
@@ -59,7 +60,13 @@ def main():
         for r in judges[j]:
             pid = r["preferred_id"].strip().upper()
             brief = sheets[r["sheet"]]["brief"]
-            picks[brief].append(img[pid]["condition"] if pid in img and img[pid]["brief"] == brief else "same")
+            if pid in ("SAME", "TIE"):
+                picks[brief].append("same")
+            elif pid in img and img[pid]["brief"] == brief:
+                picks[brief].append(img[pid]["condition"])
+            else:
+                print(f"warning: {j[0]} {r['sheet']}: '{r['preferred_id']}' is not an ID on that sheet; counted as a tie", file=sys.stderr)
+                picks[brief].append("same")
         res = {b: judgement(p) for b, p in sorted(picks.items(), key=lambda x: int(x[0][1:]))}
         print(f"\n{j[0]} ({j[1] or 'judge'})")
         print("  per brief: " + ", ".join(f"{b} {v}" for b, v in res.items()))

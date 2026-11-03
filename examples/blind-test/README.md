@@ -1,6 +1,6 @@
 # Blind test kit: with and without the skill
 
-**Status: batches 1 and 2 judged by the owner of the work: a tie, 10 to 10 over 20 briefs (sign test p = 0.59, no clear result).** Batch 1 went 5 to 3 for the skill, batch 2 went 7 to 5 against it. Where the version without the skill won, the owner's notes mostly named its eye-catch, energy or obvious call to action, so v0.9.2 added one rule in response, the energy pass ([`core/energy-pass.md`](../../core/energy-pass.md)). **Batch 3 (S29-S38) tests it and is not judged yet.** The keys for batches 1 and 2 stay unpublished until batch 3 is judged, so that sides can't be learned from them. Nothing here has been shown to outside models, and none of this shows that the skill wins or loses.
+**Status: all three batches judged by the owner of the work: 18 to 11 for the skill with 1 tie over 30 briefs (sign test p = 0.13, no clear result).** Batches 1 and 2 tied 10 to 10. Where the version without the skill won, the owner's notes mostly named its eye-catch, energy or obvious call to action, so v0.9.2 added the energy pass ([`core/energy-pass.md`](../../core/energy-pass.md)). Batch 3, made after it, went 8 to 1 with 1 tie (p = 0.020), but it is not independent of the first two batches, its maker saw both arms, and most picks were slight. Full write-up, the owner's reasons and the gaps found: [`RESULTS.md`](RESULTS.md). The three keys are now published here. Nothing has been shown to outside models yet.
 
 This tests one narrow question: given the same brief and the same image model, does a prompt written by following this skill give a piece that people would rather hand to a client than the plain brief does? It does **not** test the critique loop, type set in code, or any of the Python checks.
 
@@ -31,15 +31,18 @@ This tests one narrow question: given the same brief and the same image model, d
 |---|---|
 | [`briefs.json`](briefs.json) | The 30 briefs (batches 1 to 3) and both prompts, word for word |
 | [`blind.py`](blind.py) | Shuffles a batch's images into judging sheets (random sides, random 4-letter IDs; `--repeat` for each pair twice with sides swapped, as in batch 1) and writes that batch's hidden key |
-| [`KEY-SHA256.txt`](KEY-SHA256.txt) | Hashes of the three hidden keys (one per batch), each committed before its batch was judged |
+| [`KEY-SHA256.txt`](KEY-SHA256.txt) | Hashes of the three keys (one per batch), each committed before its batch was judged |
+| `blind-test-key.json`, `-2`, `-3` | The keys, published after judging; `sha256sum -c KEY-SHA256.txt` passes for all three |
+| [`RESULTS.md`](RESULTS.md) | The result, per batch and overall, with the owner's reasons and the gaps found |
+| [`scoring-owner.csv`](scoring-owner.csv) | The owner's picks and strengths, with the reasons paraphrased |
 | [`SCORING.md`](SCORING.md), [`scoring.csv`](scoring.csv) | The scoring form, for the owner of the work and any other judge |
 | [`OUTSIDE-MODEL-PROMPT.md`](OUTSIDE-MODEL-PROMPT.md) | The prompt for outside models, to use only after the owner has scored |
 | [`score.py`](score.py) | Tallies filled-in forms against the key once judging is over |
 
-**Not in git:** the 60 generated images and the 38 sheets (16 in batch 1, 12 in batch 2, 10 in batch 3; kept out to keep the repo small and the test blind), and the three keys. Whoever runs the test gets the sheets directly.
+**Not in git:** the 60 generated images and the 38 sheets (16 in batch 1, 12 in batch 2, 10 in batch 3; kept out to keep the repo small). Whoever runs the test gets the sheets directly.
 
 ## Running it
 
-1. The owner of the work scores the sheets alone, first (batches 1 and 2 are done; batch 3's 10 sheets are next), in `scoring.csv` (or the table in `SCORING.md`). **The owner's picks weigh most**: the skill exists to make work its owner would sign off.
+1. The owner of the work scores the sheets alone, first (done for all three batches), in `scoring.csv` (or the table in `SCORING.md`). **The owner's picks weigh most**: the skill exists to make work its owner would sign off.
 2. Optional: other people, then outside models with [`OUTSIDE-MODEL-PROMPT.md`](OUTSIDE-MODEL-PROMPT.md). Every judge is reported separately; model picks never outweigh the owner's.
-3. Publish the keys next to `KEY-SHA256.txt`, check their hashes (`sha256sum -c`), run `python3 examples/blind-test/score.py --key blind-test-key.json --key blind-test-key-2.json --key blind-test-key-3.json scoring-*.csv`, and write up the result here, whatever it is, with the sheets.
+3. Publish the keys next to `KEY-SHA256.txt`, check their hashes (`sha256sum -c`), run `python3 examples/blind-test/score.py --key blind-test-key.json --key blind-test-key-2.json --key blind-test-key-3.json scoring-*.csv`, and write up the result, whatever it is (done: [`RESULTS.md`](RESULTS.md)).

@@ -18,6 +18,7 @@ Keep it light. These are defaults, not blockers; only the MUST-BE-RIGHT list in 
 - **What:** For an open brief, make 2-3 clearly different rough options (thumbnails, quick renders) before polishing one. Pick against the brief and give a one-line reason for each option you drop.
 - **Why:** In a controlled study, making designs in parallel gave better results and more variety than refining one at a time [S95]. Diverge, then converge [S96]. Rough work keeps attention on the idea, not the finish [S91]. Being wrong early is cheap [S94]. Go for one strong idea [S92].
 - **Check:** Were options compared before polishing? Is the chosen one the best answer to CD-1, not just the first one made?
+- **Concept fit:** test each option against the product's category and senses, not only its name: a coffee named after a harbour still has to look like something to drink, not a cleaning product. Look for readings nobody meant (a lone object can suggest an accident). An event sold on fun shows the activity and the people. Details: EN-2 items 7 and 8 (`energy-pass.md`).
 
 ## CD-4. Feedback says what and why, not how
 - **What:** Name the problem, where it is, and why it matters for the brief or audience. A fix is offered as an example; the maker decides how to solve it. Talk about the work, never the maker.

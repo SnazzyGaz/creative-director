@@ -1,0 +1,296 @@
+{
+ "images": {
+  "ADXC": {
+   "brief": "B5",
+   "condition": "without",
+   "file": "B5-without.jpg",
+   "sha256": "99b58ff43143c74c9d3dffdd1a4f798eb3402d1c7060acc9f3c30c181ad23c1a"
+  },
+  "CLUL": {
+   "brief": "B2",
+   "condition": "with",
+   "file": "B2-with.jpg",
+   "sha256": "e84d1bf2f04d4f26b6a623ae03662a78a82e8867eccdfe94d78ff91d6da00f96"
+  },
+  "EDBV": {
+   "brief": "B3",
+   "condition": "without",
+   "file": "B3-without.jpg",
+   "sha256": "7eadaed543a400540fea5ccea3e9b95daee3b1c139fad1b4fb544422db2f056c"
+  },
+  "HPNL": {
+   "brief": "B1",
+   "condition": "with",
+   "file": "B1-with.jpg",
+   "sha256": "be0a6dfcec8991793373a19ad02a70d8181512c5341ab5434ca19ae2e92bb756"
+  },
+  "JPLY": {
+   "brief": "B6",
+   "condition": "without",
+   "file": "B6-without.jpg",
+   "sha256": "d4222b7812d3fb9e42fedbdeecee770a6eda571ee5e862f4ebdb6eae9b0564ad"
+  },
+  "KSAD": {
+   "brief": "B4",
+   "condition": "with",
+   "file": "B4-with.jpg",
+   "sha256": "bed061ceae40cc23bf4235cf9a94cab6d1b46333707d8ee311e7b04ac225627e"
+  },
+  "LFLR": {
+   "brief": "B7",
+   "condition": "with",
+   "file": "B7-with.jpg",
+   "sha256": "6f6896f18c605b6ce3e621a7b0fba9dafcce4e9938cd8a7206c0a410d600c7cc"
+  },
+  "LFPD": {
+   "brief": "B1",
+   "condition": "without",
+   "file": "B1-without.jpg",
+   "sha256": "d997b236d326cbbab53bab68d4279e0373737ae70931a2b2c45b35cd146d384b"
+  },
+  "MNUL": {
+   "brief": "B3",
+   "condition": "with",
+   "file": "B3-with.jpg",
+   "sha256": "68538f6539fc6d1214ab6bc6da9b64bdbdde7ff480d78c017c268fe4240ddceb"
+  },
+  "NPGZ": {
+   "brief": "B8",
+   "condition": "with",
+   "file": "B8-with.jpg",
+   "sha256": "e734a6399958cdf650af82c390aac648f224d892eaa96f5a2ec325e751e9d191"
+  },
+  "NTTF": {
+   "brief": "B2",
+   "condition": "without",
+   "file": "B2-without.jpg",
+   "sha256": "b08af0483c26579c0f4714731c840a4fdbc7f2c46df3bac4e9b6f71e88d3a344"
+  },
+  "TWXR": {
+   "brief": "B8",
+   "condition": "without",
+   "file": "B8-without.jpg",
+   "sha256": "05989500b4d7b25dc83521ab861a34f22a28b54197d66fff6baf0c77562f4d51"
+  },
+  "WYGF": {
+   "brief": "B5",
+   "condition": "with",
+   "file": "B5-with.jpg",
+   "sha256": "ddc490c37991a602f18e9f11d266d3b1f2aa21804cb163926de907a4f6b8d915"
+  },
+  "YKRF": {
+   "brief": "B6",
+   "condition": "with",
+   "file": "B6-with.jpg",
+   "sha256": "5ac7c1791b0fe86d2c1157245155ffa9daaa6d23ad6a1e46abe901a9c14a7b16"
+  },
+  "ZNCU": {
+   "brief": "B4",
+   "condition": "without",
+   "file": "B4-without.jpg",
+   "sha256": "98211cdea9416073a429a90459c1df21ea3af781baa56313d5a2d21d712a25cc"
+  },
+  "ZZNG": {
+   "brief": "B7",
+   "condition": "without",
+   "file": "B7-without.jpg",
+   "sha256": "04b43990e5188d398948932d5642606f81687ac267caee66f7fec26c7fc3ace4"
+  }
+ },
+ "note": "Hidden key for examples/blind-test. Do not commit or show to judges before judging ends.",
+ "salt": "bb25abe21c62331a20f67c2e3b9f4def",
+ "sheets": [
+  {
+   "brief": "B3",
+   "left": {
+    "condition": "with",
+    "id": "MNUL"
+   },
+   "right": {
+    "condition": "without",
+    "id": "EDBV"
+   },
+   "sheet": "S01"
+  },
+  {
+   "brief": "B5",
+   "left": {
+    "condition": "with",
+    "id": "WYGF"
+   },
+   "right": {
+    "condition": "without",
+    "id": "ADXC"
+   },
+   "sheet": "S02"
+  },
+  {
+   "brief": "B6",
+   "left": {
+    "condition": "with",
+    "id": "YKRF"
+   },
+   "right": {
+    "condition": "without",
+    "id": "JPLY"
+   },
+   "sheet": "S03"
+  },
+  {
+   "brief": "B8",
+   "left": {
+    "condition": "without",
+    "id": "TWXR"
+   },
+   "right": {
+    "condition": "with",
+    "id": "NPGZ"
+   },
+   "sheet": "S04"
+  },
+  {
+   "brief": "B7",
+   "left": {
+    "condition": "with",
+    "id": "LFLR"
+   },
+   "right": {
+    "condition": "without",
+    "id": "ZZNG"
+   },
+   "sheet": "S05"
+  },
+  {
+   "brief": "B4",
+   "left": {
+    "condition": "with",
+    "id": "KSAD"
+   },
+   "right": {
+    "condition": "without",
+    "id": "ZNCU"
+   },
+   "sheet": "S06"
+  },
+  {
+   "brief": "B1",
+   "left": {
+    "condition": "with",
+    "id": "HPNL"
+   },
+   "right": {
+    "condition": "without",
+    "id": "LFPD"
+   },
+   "sheet": "S07"
+  },
+  {
+   "brief": "B4",
+   "left": {
+    "condition": "without",
+    "id": "ZNCU"
+   },
+   "right": {
+    "condition": "with",
+    "id": "KSAD"
+   },
+   "sheet": "S08"
+  },
+  {
+   "brief": "B2",
+   "left": {
+    "condition": "without",
+    "id": "NTTF"
+   },
+   "right": {
+    "condition": "with",
+    "id": "CLUL"
+   },
+   "sheet": "S09"
+  },
+  {
+   "brief": "B7",
+   "left": {
+    "condition": "without",
+    "id": "ZZNG"
+   },
+   "right": {
+    "condition": "with",
+    "id": "LFLR"
+   },
+   "sheet": "S10"
+  },
+  {
+   "brief": "B1",
+   "left": {
+    "condition": "without",
+    "id": "LFPD"
+   },
+   "right": {
+    "condition": "with",
+    "id": "HPNL"
+   },
+   "sheet": "S11"
+  },
+  {
+   "brief": "B3",
+   "left": {
+    "condition": "without",
+    "id": "EDBV"
+   },
+   "right": {
+    "condition": "with",
+    "id": "MNUL"
+   },
+   "sheet": "S12"
+  },
+  {
+   "brief": "B6",
+   "left": {
+    "condition": "without",
+    "id": "JPLY"
+   },
+   "right": {
+    "condition": "with",
+    "id": "YKRF"
+   },
+   "sheet": "S13"
+  },
+  {
+   "brief": "B2",
+   "left": {
+    "condition": "with",
+    "id": "CLUL"
+   },
+   "right": {
+    "condition": "without",
+    "id": "NTTF"
+   },
+   "sheet": "S14"
+  },
+  {
+   "brief": "B5",
+   "left": {
+    "condition": "without",
+    "id": "ADXC"
+   },
+   "right": {
+    "condition": "with",
+    "id": "WYGF"
+   },
+   "sheet": "S15"
+  },
+  {
+   "brief": "B8",
+   "left": {
+    "condition": "with",
+    "id": "NPGZ"
+   },
+   "right": {
+    "condition": "without",
+    "id": "TWXR"
+   },
+   "sheet": "S16"
+  }
+ ]
+}

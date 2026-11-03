@@ -10,7 +10,11 @@ fonts/**/*.ttf
 fonts/**/*.otf
 fonts/**/*.woff
 fonts/**/*.woff2
-# blind test: generated images, sheets and the key stay out of git
+# blind test: generated images, sheets and unpublished keys stay out of git
 examples/blind-test/images/
 examples/blind-test/sheets/
 *blind-test-key*.json
+# published after judging (v0.9.3)
+!examples/blind-test/blind-test-key.json
+!examples/blind-test/blind-test-key-2.json
+!examples/blind-test/blind-test-key-3.json

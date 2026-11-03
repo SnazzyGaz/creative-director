@@ -8,7 +8,7 @@ One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge).
 | `judge_type` | `owner`, `person` or `model` |
 | `sheet` | Already filled: S01 to S38 (S01-S16 batch 1, S17-S28 batch 2, S29-S38 batch 3) |
 | `left_id`, `right_id` | Already filled: the IDs printed under the two images |
-| `preferred_id` | The ID of the piece you'd hand over for that brief, or `SAME` if you truly can't choose |
+| `preferred_id` | The ID of the piece you'd hand over for that brief, or `SAME` (or `tie`) if you truly can't choose |
 | `strength` | 1 slight, 2 clear, 3 strong |
 | `reason` | A few words: what decided it |
 
