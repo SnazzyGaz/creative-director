@@ -1,7 +1,0 @@
-New rules in v0.4.3:
-- LAY-10: whitespace is distributed on purpose. Measure empty bands and squint for 2-D dead zones inside rows; flag anything above about 1.5x the largest intended gap unless declared. After any image swap, re-crop or regenerate, re-review the whole layout. Tool: tools/whitespace.py (PASS = review by eye).
-- FP-2: design for the real medium and how it is seen, not for how a reference happened to be captured or cropped.
-- FP-3: transcribe facts word for word first; check contradictions and unsourced claims; keep disclaimers.
-- FP-9 / ILL-12: build imagery from the subject itself; real subjects, food above all, pass 2-4x crop checks.
-- LAY-7: signage cap height about distance / 250, checked in mm at print size.
-- BRAND-4: cleaning limited to knockout, faithful trace or one-colour silhouette, with an overlay check; plain-text name when no file exists. BRAND-6: set-level pass for a series.
