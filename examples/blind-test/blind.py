@@ -1,14 +1,18 @@
 """blind.py: shuffle the blind-test images into judging sheets and write the hidden key.
 
 Run from the repo root once the 16 images exist (they are not in git):
-  python3 examples/blind-test/blind.py --images DIR --sheets OUT_DIR --key KEY.json
+  python3 examples/blind-test/blind.py --repeat --images DIR --sheets OUT_DIR --key KEY.json   (batch 1)
 
 DIR holds B1-with.jpg, B1-without.jpg ... B8-without.jpg (made from briefs.json, one GenerateImage call each).
-Each brief gives two sheets: the pair side by side, then the same pair with sides swapped, so position bias
-shows up. Every image gets a random 4-letter ID; judges record the ID they prefer, never "left" or "right".
-Sheets are shuffled and numbered S01.. so that a brief's two sheets are not next to each other.
+With --repeat (batch 1) each brief gives two sheets: the pair side by side, then the same pair with sides
+swapped, so position bias shows up. Without it (batch 2) each brief gives one sheet, sides picked at random:
+a human judge recognises the repeat, so it adds nothing for them; it still helps with model judges. Every image gets a random 4-letter ID; judges record the ID they prefer, never "left" or "right".
+Sheets are shuffled and numbered S01.. (or from --start) so that a brief's two sheets are not next to each other.
 The key (which ID is which condition, plus a random salt) goes to KEY.json, outside the repo. Its SHA-256 is
 printed: commit that hash (KEY-SHA256.txt) before anyone judges, and publish the key only after.
+
+A later batch gets its own key and continues the sheet numbers, without touching earlier sheets or keys:
+  python3 blind.py --batch 2 --start 17 --avoid-key KEY.json --images DIR --sheets OUT_DIR --key KEY-2.json
 """
 import argparse, hashlib, json, os, secrets, string, textwrap
 from PIL import Image, ImageDraw, ImageFont
@@ -46,14 +50,25 @@ def sheet(num, brief, left, right, out, H=1000, pad=40):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--images", required=True); ap.add_argument("--sheets", required=True)
-    ap.add_argument("--key", required=True); a = ap.parse_args()
-    briefs = json.load(open(os.path.join(HERE, "briefs.json"), encoding="utf-8"))
-    os.makedirs(a.sheets, exist_ok=True); used = set(); pairs = []
+    ap.add_argument("--key", required=True)
+    ap.add_argument("--batch", type=int, default=1, help="which batch of briefs.json to build (briefs with no 'batch' are batch 1)")
+    ap.add_argument("--start", type=int, default=1, help="number of the first sheet, e.g. 17 for batch 2")
+    ap.add_argument("--repeat", action="store_true", help="two sheets per brief, sides swapped (batch 1 used this; useful for model judges)")
+    ap.add_argument("--avoid-key", action="append", default=[], help="earlier key file(s) whose IDs must not be reused")
+    a = ap.parse_args()
+    briefs = [b for b in json.load(open(os.path.join(HERE, "briefs.json"), encoding="utf-8")) if b.get("batch", 1) == a.batch]
+    used = set()
+    for k in a.avoid_key:
+        used |= set(json.load(open(k))["images"])
+    per = 2 if a.repeat else 1
+    if os.path.exists(a.key) or any(os.path.exists(os.path.join(a.sheets, f"S{a.start + i:02d}.jpg")) for i in range(per * len(briefs))):
+        raise SystemExit("refusing to overwrite an existing key or sheet")
+    os.makedirs(a.sheets, exist_ok=True); pairs = []
     for b in briefs:
         ids = {c: new_id(used) for c in ("with", "without")}
         paths = {c: os.path.join(a.images, f"{b['id']}-{c}.jpg") for c in ids}
         first = RNG.choice([("with", "without"), ("without", "with")])
-        for order in (first, first[::-1]):
+        for order in ((first, first[::-1]) if a.repeat else (first,)):
             pairs.append((b, order, ids, paths))
     # shuffle until no brief has its two sheets next to each other
     while True:
@@ -61,7 +76,7 @@ def main():
         if all(pairs[i][0]["id"] != pairs[i + 1][0]["id"] for i in range(len(pairs) - 1)): break
     key = {"salt": secrets.token_hex(16), "note": "Hidden key for examples/blind-test. Do not commit or show to judges before judging ends.",
            "images": {}, "sheets": []}
-    for n, (b, order, ids, paths) in enumerate(pairs, 1):
+    for n, (b, order, ids, paths) in enumerate(pairs, a.start):
         l, r = order
         sheet(n, b, (paths[l], ids[l]), (paths[r], ids[r]), os.path.join(a.sheets, f"S{n:02d}.jpg"))
         key["sheets"].append({"sheet": f"S{n:02d}", "brief": b["id"], "left": {"id": ids[l], "condition": l}, "right": {"id": ids[r], "condition": r}})
