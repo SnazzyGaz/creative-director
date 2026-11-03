@@ -6,7 +6,7 @@ One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge).
 |---|---|
 | `judge` | Your name, or the model name and version |
 | `judge_type` | `owner`, `person` or `model` |
-| `sheet` | Already filled: S01 to S48 (S01-S16 batch 1, S17-S28 batch 2, S29-S38 batch 3, S39-S48 batch 4) |
+| `sheet` | Already filled: S01 to S58 (S01-S16 batch 1, S17-S28 batch 2, S29-S38 batch 3, S39-S48 batch 4, S49-S58 batch 5) |
 | `left_id`, `right_id` | Already filled: the IDs printed under the two images |
 | `preferred_id` | The ID of the piece you'd hand over for that brief, or `SAME` (or `tie`) if you truly can't choose |
 | `strength` | 1 slight, 2 clear, 3 strong |
@@ -66,3 +66,13 @@ One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge).
 | S46 | DUXR | KWCP | | | |
 | S47 | QGDN | SMFE | | | |
 | S48 | MSTH | QETR | | | |
+| S49 | GECJ | RYWC | | | |
+| S50 | LYQK | SNNB | | | |
+| S51 | HNQL | BCKT | | | |
+| S52 | CQTC | EDNN | | | |
+| S53 | CBFE | SZLC | | | |
+| S54 | AASE | ACLW | | | |
+| S55 | MYSZ | TDQK | | | |
+| S56 | BDGN | LQDF | | | |
+| S57 | EPND | UYAK | | | |
+| S58 | MSWR | AVNQ | | | |
