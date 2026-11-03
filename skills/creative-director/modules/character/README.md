@@ -50,9 +50,10 @@ Why it matters: people are expert face and body readers. Small errors that would
 
 ### CHAR-6. Weight and gesture
 - **What:** The figure has a line of action (ILL-10) and stands where it can balance: in a standing pose, a plumb line from the pit of the neck lands on or between the supporting feet. With weight on one leg, the hips tilt up on that side and the shoulders tilt the other way (contrapposto).
-- **Why:** Off-balance figures look like they're falling or floating, even when every part is correct.
-- **Check:** Drop the plumb line. Is it over the support? If weight is on one leg, do hips and shoulders tilt in opposite directions? Are both feet on the ground plane (TD-PER-1)?
-- **Fix:** Shift the hips over the support, or add the movement that explains the imbalance (a step, a lean on something).
+  **Trait through pose:** a character's defining trait (gruff but gentle, scared of the dark, too eager to help) reads from gesture and pose first, with one or two supporting cues at most. Not hyper-literal props, labels or explanatory text.
+- **Why:** Off-balance figures look like they're falling or floating, even when every part is correct. In the blind test the owner of the work preferred the version that "sells the concept in gesture alone" over ones that were "overdone and hyper-literal" or "textually explanatory" (S48, S53); internal evidence, one judge.
+- **Check:** Cover the props and text: does the trait still read? Drop the plumb line. Is it over the support? If weight is on one leg, do hips and shoulders tilt in opposite directions? Are both feet on the ground plane (TD-PER-1)?
+- **Fix:** Shift the hips over the support, or add the movement that explains the imbalance (a step, a lean on something). For a trait, act it out in the pose (shoulders, hands, lean, eyes) and cut props and text that explain it.
 - **Grade:** Craft wisdom.
 - **Source:** Hampton [S135]; Loomis [S134]; ILL-10.
 

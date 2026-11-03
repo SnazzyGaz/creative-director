@@ -8,6 +8,8 @@ Keep it light. These are defaults, not blockers; only the MUST-BE-RIGHT list in 
 - **What:** Six short lines: the problem or purpose; the audience; the one idea (a single sentence); where and how big it is seen; must-keeps and constraints (brand, subject, format); how you'll judge it done.
 - **Why:** Weak briefs waste work. In a 2022 survey most agency staff called client briefs inadequate, and few marketers had agreed criteria for judging the work [S88]. A good brief is a platform that opens up ideas, not a box that closes them [S89, S90, S107].
 - **Check:** Can you fill all six lines? If not, ask the owner, or write your assumptions down and flag them.
+- **Read it exactly:** count what the brief fixes ("it" means one; a named number is that number), and keep background facts as mood rather than forcing each into the picture or the copy (ILL-6).
+- **Production cost:** note how it will be made and paid for. Full-colour print, 3D renders or special finishes may be wasteful on a council or charity budget; ask, or offer a cheaper version that keeps the idea (owner's note on a batch 4 council notice, S44).
 
 ## CD-2. Set the direction once, then hold it
 - **What:** Before styling, write 3-5 mood words or "pillars", a do/don't list, and the tokens that follow from them (palette roles, type, shape, light). Use your own or generated references; describe, don't copy.

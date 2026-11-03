@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.9.4 (3 November 2026)
+
+**Blind test finished; rules from the owner's batch 4 and 5 notes, and white means white.** Batch 4 went 6 to 4 for the skill and batch 5, a replication on the unchanged v0.9.3 skill, 8 to 2 (p = 0.055). Batches 3 to 5, after the energy pass: 22 to 7 with 1 tie (p ≈ 0.004). All 50 briefs: 32 to 17 with 1 tie (p = 0.022), which meets the 32-of-50 bar set in advance. One judge, and the later batches aren't independent of the rule-writing, so the new rules are graded as the owner's taste and internal blind-test evidence, not research. No budget was raised.
+
+- **Read the brief exactly.** CD-1 (`core/creative-direction.md`), ILL-6 and the loop's intent model: count what the brief fixes ("it" is one); background facts set the mood and need not be drawn or printed; think about print cost. New UI-11: no invented product screens in finished work.
+- **Genre, mood and gesture.** Energy pass items 7 and 8, AES-11, TYPE-10 (a title as loud as the mood), CHAR-6 (traits through pose, not props or text), new ILL-17 (picture books need life, not clinical polish), new LAY-16 (covers: title zone, author name on the axis, styling that signals the genre).
+- **Plain where plain works.** EN-1 gives menus, signage and timetables a light pass at most; new LAY-17 covers them. Item 5: an instruction the art implies also goes in the text.
+- **Things that look broken.** New LAY-18 (one broken panel fails a multi-panel piece) and COMP-24 item 7 (blocks that look misprinted). CV-10 adds small text at a distance, and no outline stroke or text glow to rescue a value clash.
+- **Slop and sterile.** EN-3 names the glowing, over-detailed chocolate-box look and adds an honest check for sterile results.
+- **White means white.** New CV-11: paper, grounds and white type default to neutral white; cream or warm white only when the brief asks. `tools/autocheck.py` gains a `whites` check: the lightest 0.5% of an image FLAGs below luma 248 or above a channel spread of 12, and `--white-box` areas meant to be white FAIL below 248 or above a spread of 8. Four new test cases (autocheck 10/10). The critique template and lite file carry the check. A scan of the prompt guidance found no default cream wording to change; the historical example prompts are records and stay as written.
+- **Blind test write-up.** Keys 4 and 5 published (`sha256sum -c` passes for all five); `scoring-owner.csv` adds S39-S58; RESULTS.md covers all five batches, the losses, the sterile notes and the off-white finding. New `examples/blind-test/whites.py`: with-skill whites had a median luma of 248.3 against 251.9, lower in 26 of 50 pairs, and 25 with-skill prompts had asked for cream or off-white.
+- **Budgets after.** Always-on 6,497 of 6,500; with the template 7,987 of 8,000; template 1,490 of 1,500; lite 2,497 of 2,500. Small trims in the loop and lite file made the room.
+
 ## v0.9.3 (3 November 2026)
 
 **Blind test judged; rules tightened from the owner's batch 3 notes.** Batch 3 went 8 to 1 for the skill with 1 tie (p = 0.020), but it isn't independent of batches 1 and 2, its maker saw both arms, and most picks were slight. Overall: 18 to 11 with 1 tie over 30 briefs (p = 0.13, no clear result). The notes moved from "sterile versus slop" to concept, figure-ground, issuer marks and plain notices; this release adds rules for those, graded as internal evidence from one judge. No budget was raised.

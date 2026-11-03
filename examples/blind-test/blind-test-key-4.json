@@ -1,0 +1,248 @@
+{
+ "images": {
+  "DUXR": {
+   "brief": "B32",
+   "condition": "without",
+   "file": "B32-without.jpg",
+   "sha256": "da940472b5bf8280dbf354e8ec3f27c7cbe018bd5fca07302fd4e71175979142"
+  },
+  "DWTW": {
+   "brief": "B31",
+   "condition": "without",
+   "file": "B31-without.jpg",
+   "sha256": "cbe1c3a5c442b3b451b8b2f60825b938f0a9c8e4b38bb8ee8b9eb4883b42243e"
+  },
+  "EEJP": {
+   "brief": "B40",
+   "condition": "with",
+   "file": "B40-with.jpg",
+   "sha256": "a4accf17953310643cb14440aedc62f2b7ee6098147167cff24dac46349eeb58"
+  },
+  "EMDV": {
+   "brief": "B31",
+   "condition": "with",
+   "file": "B31-with.jpg",
+   "sha256": "adfd50e3a4b2e74ae537b8376b87fdd699df738c6634914b263ace33b643094c"
+  },
+  "FQXE": {
+   "brief": "B33",
+   "condition": "without",
+   "file": "B33-without.jpg",
+   "sha256": "7a9b17f413847cc119e1200cfe844a421fa46a457dad49ef25071b28360b8524"
+  },
+  "KFLD": {
+   "brief": "B35",
+   "condition": "without",
+   "file": "B35-without.jpg",
+   "sha256": "e1f474089666b5710da2326a2d08d50a4b3ca6cf6690597b1e402dd5fe72b5e4"
+  },
+  "KWCP": {
+   "brief": "B32",
+   "condition": "with",
+   "file": "B32-with.jpg",
+   "sha256": "b3af2e2730cfa257c380d229be99a527a08662bf886c4476e66d267eadd28ab4"
+  },
+  "LFAN": {
+   "brief": "B37",
+   "condition": "with",
+   "file": "B37-with.jpg",
+   "sha256": "30a4b62c07b720c8f073e0e61514a53675bc1dfa0ef409589ff6cf05d4591c8b"
+  },
+  "LLFN": {
+   "brief": "B39",
+   "condition": "with",
+   "file": "B39-with.jpg",
+   "sha256": "0bf130c3e6929c3dbe04af686b99edcc3b4d7b18cd3f4b2ea75b6af3e9fb8ab7"
+  },
+  "MSTH": {
+   "brief": "B34",
+   "condition": "without",
+   "file": "B34-without.jpg",
+   "sha256": "b6a7f28fc25f34164dca341c92aaf8369952eccbdf197bc9a1e879eecde31901"
+  },
+  "QETR": {
+   "brief": "B34",
+   "condition": "with",
+   "file": "B34-with.jpg",
+   "sha256": "8db68df2dad5f9a04f4fc85d0bd9a7bbf0c9e42d78533f2124dc56902c0a062c"
+  },
+  "QGDN": {
+   "brief": "B38",
+   "condition": "with",
+   "file": "B38-with.jpg",
+   "sha256": "09ed127d9f01497461fbb5b542931f0bb6bf6a1163fa06a11b25b4e24f3b1ed0"
+  },
+  "SMFE": {
+   "brief": "B38",
+   "condition": "without",
+   "file": "B38-without.jpg",
+   "sha256": "9615c2cd96e744392ec5bfaed20c831b76782e0c738b6130fb6123090ab10cc9"
+  },
+  "SMPZ": {
+   "brief": "B40",
+   "condition": "without",
+   "file": "B40-without.jpg",
+   "sha256": "3f40c860ab704999b18e2402507d031ce5192c15a8b3ce79af86cc183d39c9a8"
+  },
+  "TDEN": {
+   "brief": "B33",
+   "condition": "with",
+   "file": "B33-with.jpg",
+   "sha256": "a11efa392821d61e4bf15a7e455bebd24d82c3fdebda7da3ddeccfdeb6066ff3"
+  },
+  "TPSH": {
+   "brief": "B35",
+   "condition": "with",
+   "file": "B35-with.jpg",
+   "sha256": "b43d2a29ca2f8f9da4b328f236ef328a12a7cdb9782f8e3bd028790ad7927c02"
+  },
+  "TUWE": {
+   "brief": "B36",
+   "condition": "without",
+   "file": "B36-without.jpg",
+   "sha256": "a24935b6f04bc42e6e762284f27b9a385a5dc8a63efc870f8d764f7165661306"
+  },
+  "UBVA": {
+   "brief": "B39",
+   "condition": "without",
+   "file": "B39-without.jpg",
+   "sha256": "b6f72dd267209002749879de28eeecf03d8b35ab4dbde31711f0d5a6783cdc09"
+  },
+  "VGHH": {
+   "brief": "B36",
+   "condition": "with",
+   "file": "B36-with.jpg",
+   "sha256": "9e13d343cc374b63298e44c7319824d494168dd696f8f11bfc5151d5f2c7c1f5"
+  },
+  "WWAN": {
+   "brief": "B37",
+   "condition": "without",
+   "file": "B37-without.jpg",
+   "sha256": "faec24b656490f95a66b6218ec13d3f910b903c86371ab5d1e0adeed8a688dfc"
+  }
+ },
+ "note": "Hidden key for examples/blind-test. Do not commit or show to judges before judging ends.",
+ "salt": "82770d7c0c943b544c1eb03bf364ade9",
+ "sheets": [
+  {
+   "brief": "B39",
+   "left": {
+    "condition": "with",
+    "id": "LLFN"
+   },
+   "right": {
+    "condition": "without",
+    "id": "UBVA"
+   },
+   "sheet": "S39"
+  },
+  {
+   "brief": "B31",
+   "left": {
+    "condition": "with",
+    "id": "EMDV"
+   },
+   "right": {
+    "condition": "without",
+    "id": "DWTW"
+   },
+   "sheet": "S40"
+  },
+  {
+   "brief": "B37",
+   "left": {
+    "condition": "with",
+    "id": "LFAN"
+   },
+   "right": {
+    "condition": "without",
+    "id": "WWAN"
+   },
+   "sheet": "S41"
+  },
+  {
+   "brief": "B40",
+   "left": {
+    "condition": "without",
+    "id": "SMPZ"
+   },
+   "right": {
+    "condition": "with",
+    "id": "EEJP"
+   },
+   "sheet": "S42"
+  },
+  {
+   "brief": "B36",
+   "left": {
+    "condition": "without",
+    "id": "TUWE"
+   },
+   "right": {
+    "condition": "with",
+    "id": "VGHH"
+   },
+   "sheet": "S43"
+  },
+  {
+   "brief": "B35",
+   "left": {
+    "condition": "without",
+    "id": "KFLD"
+   },
+   "right": {
+    "condition": "with",
+    "id": "TPSH"
+   },
+   "sheet": "S44"
+  },
+  {
+   "brief": "B33",
+   "left": {
+    "condition": "with",
+    "id": "TDEN"
+   },
+   "right": {
+    "condition": "without",
+    "id": "FQXE"
+   },
+   "sheet": "S45"
+  },
+  {
+   "brief": "B32",
+   "left": {
+    "condition": "without",
+    "id": "DUXR"
+   },
+   "right": {
+    "condition": "with",
+    "id": "KWCP"
+   },
+   "sheet": "S46"
+  },
+  {
+   "brief": "B38",
+   "left": {
+    "condition": "with",
+    "id": "QGDN"
+   },
+   "right": {
+    "condition": "without",
+    "id": "SMFE"
+   },
+   "sheet": "S47"
+  },
+  {
+   "brief": "B34",
+   "left": {
+    "condition": "without",
+    "id": "MSTH"
+   },
+   "right": {
+    "condition": "with",
+    "id": "QETR"
+   },
+   "sheet": "S48"
+  }
+ ]
+}

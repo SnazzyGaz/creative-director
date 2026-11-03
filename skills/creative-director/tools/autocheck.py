@@ -3,6 +3,7 @@
 
     python3 tools/autocheck.py TARGET [TARGET ...] [--out DIR] [--json FILE] [--width 1280] [--height 800]
                                [--text-box x0,y0,x1,y1[:large] ...] [--print 420x594mm] [--intended Y0-Y1,...] [--axis left|right]
+                               [--white-box x0,y0,x1,y1 ...]
 
 TARGET is an image (PNG/JPG), an HTML file or an http(s) URL. Pages are opened in headless Chromium (playwright)
 and measured from the DOM (computed styles, text boxes) plus screenshots; images are measured from pixels only.
@@ -13,6 +14,7 @@ FLAG = measured, but the rule asks for a decision ("intended?"); PASS; SKIP = ca
 Balance and placement results are never FAIL and never suggest centring (COMP-19, COMP-20).
 Exit 1 if any check FAILs. --out DIR writes report.txt, report.json and the screenshots and sheets.
 
+Whites (CV-11): the lightest 0.5% is checked for a near-neutral white (FLAG only), or --white-box areas are measured (FAIL).
 Reuses: contrast.py (WCAG ratio), whitespace.py (LAY-10), balance.py (COMP-19). Needs Pillow and numpy;
 page mode needs playwright (`pip install playwright && playwright install chromium`)."""
 import argparse, contextlib, io, json, math, os, pathlib, re, sys, tempfile
@@ -157,6 +159,41 @@ def check_print(path, spec):
     return chk("print-ppi", "Print resolution", "LAY-9", "PASS" if ppi >= 300 else "FAIL", f"{ppi:.0f} ppi at {spec}",
                "at least 300 ppi at final printed size (LAY-9)", "Re-render at size; don't upsample." if ppi < 300 else "", blocker=True)
 
+WHITE_MIN, WHITE_SPREAD, TOP_SPREAD = 248, 8, 12   # CV-11, self-chosen from the blind-test images (examples/blind-test/whites.py)
+
+def white_point(a):
+    """Lightest 0.5% of an RGB array (0-255): luma at the 99.5th percentile (Rec. 601 weights, as PIL 'L'),
+    and the median channel spread (max - min) and blue minus red of the pixels at or above it."""
+    Y = 0.299 * a[..., 0] + 0.587 * a[..., 1] + 0.114 * a[..., 2]
+    t = float(np.percentile(Y, 99.5)); top = a[Y >= t]
+    return t, float(np.median(top.max(1) - top.min(1))), float(np.median(top[:, 2] - top[:, 0]))
+
+def check_whites(path, boxes=()):
+    """CV-11: whites mean white. --white-box areas meant to be white: FAIL if dim or tinted; otherwise a FLAG on the lightest 0.5%."""
+    a = np.asarray(Image.open(path).convert("RGB")).astype(float)
+    if boxes:
+        res = []
+        for spec in boxes:
+            x0, y0, x1, y1 = [int(v) for v in spec.split(",")]
+            px = a[y0:y1, x0:x1].reshape(-1, 3)
+            if len(px) < 4: continue
+            lum = float(np.median(0.299 * px[:, 0] + 0.587 * px[:, 1] + 0.114 * px[:, 2]))
+            spread = float(np.median(px.max(1) - px.min(1)))
+            res.append(dict(box=spec, luma=round(lum, 1), spread=round(spread, 1), ok=bool(lum >= WHITE_MIN and spread <= WHITE_SPREAD)))
+        if res:
+            bad = [r for r in res if not r["ok"]]
+            return chk("whites", "Intended white is white", "CV-11", "FAIL" if bad else "PASS",
+                       "; ".join(f"{r['box']}: luma {r['luma']}, channel spread {r['spread']}" for r in res),
+                       f"median luma >= {WHITE_MIN} and channel spread <= {WHITE_SPREAD} (0-255) in each --white-box (CV-11, self-chosen)",
+                       "Ask for plain neutral white in the prompt or file (no cream, ivory or warm white unless the brief wants it), or lift and neutralise that area." if bad else "") | {"boxes": res}
+    t, spread, br = white_point(a)
+    st = "FLAG" if t < WHITE_MIN or spread > TOP_SPREAD else "PASS"
+    return chk("whites", "Lightest area: neutral white?", "CV-11", st,
+               f"lightest 0.5%: luma {t:.0f}, channel spread {spread:.0f}, blue minus red {br:+.0f}",
+               f"luma >= {WHITE_MIN}, spread <= {TOP_SPREAD} (self-chosen); only for pieces meant to have a white",
+               ("FLAG: intended? Cream, aged paper or a night scene can be right; a white page, type or ground that came out dim or yellow is not. "
+                "Pass --white-box around an area meant to be white to measure it.") if st == "FLAG" else "The lightest area reaches a near-neutral white.")
+
 IMAGE_SKIPS = [
     ("text-size", "TYPE-3, LAY-6", "no DOM: x-height can't be read from pixels reliably. Scale to 400 px wide (thumb-400.png) and measure the main message's x-height by eye (about 6 px or more)."),
     ("type-sizes", "TYPE-2", "no DOM: list the sizes by eye."),
@@ -167,7 +204,7 @@ IMAGE_SKIPS = [
 
 def run_image(path, a, out):
     checks = [check_whitespace(path, a.intended, a.axis, out and str(out / "whitespace.png")),
-              check_balance(path, out and str(out / "balance.png")), check_edges_image(path)]
+              check_balance(path, out and str(out / "balance.png")), check_edges_image(path), check_whites(path, a.white_box)]
     tb = check_text_boxes(path, a.text_box) if a.text_box else None
     if tb: checks.insert(0, tb)
     else: checks.insert(0, chk("contrast", "Text contrast", "UI-6, LAY-15", "SKIP", "", "",
@@ -444,6 +481,7 @@ def main():
     ap.add_argument("--print", help="image mode: printed size, e.g. 420x594mm, for the LAY-9 ppi check")
     ap.add_argument("--intended", default="", help="y ranges of deliberate space for LAY-10, e.g. 300-520")
     ap.add_argument("--axis", choices=["left", "right"], help="declared flush-left/right layout (LAY-10)")
+    ap.add_argument("--white-box", action="append", default=[], help="image mode: x0,y0,x1,y1 around an area meant to be white (CV-11)")
     a = ap.parse_args()
     a.intended = [tuple(int(v) for v in s.split("-")) for s in a.intended.split(",") if s]
     results = []

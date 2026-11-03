@@ -111,7 +111,7 @@ A deliberate break that works is recorded as a deliberate exception, not fixed.
 
 ### AES-11. Novel in one or two dimensions, familiar in the rest
 - **What:** Aim for "most advanced, yet acceptable": make one or two aspects fresh (an unusual palette, crop or shape language) and keep the rest typical for the genre and readable.
-- **Check:** Name what is new. Name what is familiar. If nothing is new, it is generic (AES-6, ILL-11). If everything is new, the viewer has nothing to hold.
+- **Check:** Name the genre and its tradition first (a farm jam, a literary classic, a crime novel). Name what is new. Name what is familiar. A traditional product made to look contemporary reads as out of place (owner's note on a jam label, S47). If nothing is new, it is generic (AES-6, ILL-11). If everything is new, the viewer has nothing to hold.
 - **Fix:** Pull back the novelty to one or two dimensions; or add one fresh choice to a safe piece.
 - **Grade:** Well supported. Typicality and novelty both raise appeal and work together [S232]; prototypical forms are easier to process and liked more [S233, S37]; repeated exposure raises liking [S257].
 - **See:** Hekkert et al. [S232]; Winkielman et al. [S233]; Bornstein [S257]; AES-6.

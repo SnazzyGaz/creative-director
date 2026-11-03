@@ -44,6 +44,7 @@ Format: **What / Why / Check / Fix / Grade / Source**. These are strong defaults
 - **What:** The picture shows one clear moment: who, doing what, where, and what it means. Every element supports it.
 - **Why:** A viewer gives an illustration a second or two; ambiguity loses them.
 - **Check:** Show the thumbnail and write the story in one sentence. Does it match the brief? What did the eye go to first (Gurney's "what strikes them first" test)?
+  **Read the brief exactly where it fixes the picture:** count what it names ("a paper aeroplane ... and away it flew" means one plane; two broke a batch 5 spread, S49). Background facts (a walk to school, a small family farm) set the mood; they don't all have to be drawn or written. If forcing one in hurts the moment, leave it out or hint at it, and say so (S42, S47).
 - **Fix:** Cut props that don't support the moment; point gesture, gaze and light toward the story point.
 - **Grade:** Craft wisdom.
 - **Source:** Gurney, *Getting a Fresh Eye* (ask what strikes a viewer first) [S7]; NN/g heuristic #8 (minimalism applies to content too) [S4].
@@ -76,7 +77,7 @@ Format: **What / Why / Check / Fix / Grade / Source**. These are strong defaults
 - **Note:** formerly TD-CON-2 (moved 2026-11-01).
 
 ### ILL-11. Avoid the generic AI image look
-- **What:** Don't let the generator's defaults make the decisions. Common tells: contrast and detail everywhere at once, a glaring sunset or golden-hour sky, HDR glow and rim light on every edge, saturated orange-teal grading, and an "epic cinematic" finish on any subject. The image counterpart of UI-7.
+- **What:** Don't let the generator's defaults make the decisions. Common tells: contrast and detail everywhere at once (the glowing, over-detailed chocolate-box painting the owner of the work called "too busy for the eye", S50), a glaring sunset or golden-hour sky, HDR glow and rim light on every edge, saturated orange-teal grading, and an "epic cinematic" finish on any subject. The image counterpart of UI-7.
 - **Why:** None is wrong alone. Together they flatten hierarchy (CORE-3, ILL-2), raise visual complexity, which predicts lower first-impression appeal [S35], and make the image read as unauthored [S108, S110].
 - **Check:** Count the tells. Two or more: flag it. In `tools/look.py`, does the blur grid show contrast spread evenly, or peaking away from the focal point? Which light and palette choices come from the brief, and which are defaults?
 - **Fix:** Name one light source and where it is. Name a medium (gouache, 35mm still, pencil) instead of "cinematic" or "epic". Cut mood adjectives. Quiet the sky or background, and keep the peak contrast at the focal point [S109]. Light and palette concept belong to the brief (CD-2), so ask before changing them.
@@ -127,6 +128,14 @@ Format: **What / Why / Check / Fix / Grade / Source**. These are strong defaults
 - **Fix:** Thumbnail two other cameras (ILL-13) and compare.
 - **Grade:** Craft wisdom.
 - **Source:** Block [S78]; Mateu-Mestre [S209]; McCloud [S81]; TD-PER rules for the construction.
+
+### ILL-17. Picture books and children's media: life, not clinical polish
+- **What:** Art for young children has energy and warmth: lively shapes, gesture, a bit of mess and play. Clean is good; clinical, refined or sterile is not. Aim for clean, concise and dynamic, the middle between sterile and busy (EN-3). Few, big, simple shapes still apply (EN-2 item 7).
+- **Why:** In batches 4 and 5 the owner of the work called a winning picture-book cover "too clean, refined and clinical for a kids' book" and noted that children's media tends to be livelier (S46), and preferred "very clean, concise yet dynamic" art over a busy one (S50). Internal evidence (owner taste), one judge.
+- **Check:** At thumbnail, is there movement (a gesture, a diagonal, weather, play)? Would a child point at something? Does any part look like a diagram?
+- **Fix:** Give the figures a stronger line of action (ILL-10), add one moving element from the brief (wind, rain, a kite pulling), warm the light; don't add clutter.
+- **Grade:** Craft wisdom; the examples are internal evidence (owner taste).
+- **Source:** ILL-10; EN-2; EN-3; `examples/blind-test/RESULTS.md`.
 
 ## Myths and weak claims
 - **Rule of thirds as law:** weak evidence; one study even found centring preferred for single subjects [S43, S44]. Neither is a default here (ILL-1); ILL-1 is about unequal *divisions*, not third points.

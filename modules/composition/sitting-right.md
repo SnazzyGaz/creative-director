@@ -60,13 +60,14 @@ Before delivery, ask one question of the whole piece: **does anything sit weirdl
 - **Source:** Wertheimer [S175]; Palmer [S176]; NN/g [S177]; White [S178]; Dow [S181]; Okakura [S199]; Isozaki [S213]; LAY-10, COMP-6. Former COMP-7 merged here.
 
 ### COMP-24. Things that sit oddly: the edge and alignment sweep
-- **What:** Look for six small faults that make a piece look unfinished even when the big balance is right:
+- **What:** Look for seven small faults that make a piece look unfinished even when the big balance is right:
   1. **Floating:** an element that relates to nothing (no shared edge, centre line, grid line or ground). It drifts.
   2. **Crammed:** an element pressed against the frame edge or another element, with less room than its neighbours have, by accident.
   3. **Tangents:** two contours just touching, or a contour just kissing the frame edge (ILL-1).
   4. **Near-alignments:** edges or centres that are almost but not quite lined up.
   5. **Uneven gutters:** gaps that should be equal but differ by a little.
   6. **Mathematical, not optical, centring:** a circle, triangle, play icon or rounded letter centred by its bounding box looks off. Pointed and round shapes need to be a little larger than square ones to look the same size (overshoot), and a triangle centres by its visual mass, not its box.
+  7. **Blocks that look misprinted:** a solid panel or band dropped into the middle of a layout, or a graphic hanging lopsided off the bottom, that reads as a printer's misregistration rather than a choice. A block needs a job and a clear relation to the grid; on official notices this reads as amateur straight away (owner's note on a batch 5 notice, S57).
 - **Why:** Placements near the frame's edges rate as poor fits [S71]. Small deviations from an alignment or a repeated interval read as errors, because the regular structure is what the eye groups by [S176, S250]. Overshoot is standard practice in type and icon design: icon systems draw circles larger than squares on the same grid so they look equal [S265], and type designers let round letters overshoot the baseline and cap height (TYPE-14).
 - **Check:** At 200-400% zoom, go round every edge and corner, every shared edge and every gutter. Measure where it matters. Flag:
   - edge offsets of a few pixels between things that look meant to align (about 1-8 px on a 1,000-px-wide piece, self-chosen);
@@ -76,7 +77,7 @@ Before delivery, ask one question of the whole piece: **does anything sit weirdl
 
   Centre round and pointed shapes by eye, not by the numbers.
 - **Fix:** Snap near-alignments exactly, or offset them clearly. Equalise gutters from one spacing scale (CORE-4). Pull crammed elements off the edge to the margin, or crop through them decisively. Overlap or separate tangents. Enlarge round and pointed shapes slightly against square ones. Shift a play triangle toward its point until it looks centred.
-- **Grade:** Edge fit and grouping by regular structure: partly supported. The six faults as a list, and the pixel and percentage bands: craft wisdom with self-chosen numbers. Overshoot: established practice in type and icon design.
+- **Grade:** Edge fit and grouping by regular structure: partly supported. The seven faults as a list, and the pixel and percentage bands: craft wisdom with self-chosen numbers. Overshoot: established practice in type and icon design.
 - **Source:** Palmer & Guidi [S71]; Palmer [S176]; Wagemans et al. [S250]; Material Design icon keylines [S265]; Bringhurst [S212]; ILL-1, CORE-4, CORE-5, LAY-1, TYPE-14.
 
 ### COMP-25. Run the pass, report flags, let the owner decide

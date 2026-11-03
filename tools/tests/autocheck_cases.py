@@ -24,6 +24,10 @@ CASES = [
     ("dead band fails LAY-10", "deadband.png", [], {"dead-space": "FAIL"}, 1),
     ("crowded edge and lopsided weight flag", "crowded.png", [], {"edges": "FLAG", "balance": "FLAG"}, 0),
     ("text boxes: grey fails, black passes", "textboxes.png", ["--text-box", "50,50,710,110", "--text-box", "50,250,710,310"], {"contrast": "FAIL"}, 1),
+    ("neutral white ground passes CV-11", "whites-neutral.png", [], {"whites": "PASS"}, 0),
+    ("cream ground flags CV-11", "whites-cream.png", [], {"whites": "FLAG"}, 0),
+    ("white box on neutral white passes", "whites-neutral.png", ["--white-box", "20,600,580,780"], {"whites": "PASS"}, 0),
+    ("white box on cream fails", "whites-cream.png", ["--white-box", "20,600,580,780"], {"whites": "FAIL"}, 1),
 ]
 PAGE_CASES = [
     ("good page: no FAIL", "good.html", [], {"contrast": "PASS", "text-size": "PASS", "type-sizes": "PASS", "measure": "PASS", "leading": "PASS", "spacing-scale": "PASS", "targets": "PASS"}, 0),

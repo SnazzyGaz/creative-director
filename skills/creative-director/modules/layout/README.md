@@ -147,6 +147,30 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Grade:** Well supported (WCAG; usability research).
 - **Source:** NN/g on text over images and W3C failure F83 [S260]; WCAG [S3]; UI-6; LAY-6.
 
+### LAY-16. Covers: title, image and author name each get their place
+- **What:** On a book or album cover, the title has its own clear zone that doesn't fight the focal image, and the author name sits in a balanced position, usually centred on a centred cover, in a colour that reads (often white on a dark picture). A name tucked into a bottom corner of an otherwise centred cover looks like an afterthought. The styling signals the genre: a literary classic and a pulpy young-adult novel are set differently, so check which one the cover says (EN-2 item 8).
+- **Why:** In the repo's blind test the owner of the work marked down a cover whose title fought the moon (S35) and a picture-book author name set bottom-left (S46), and read one novel cover as "pulpy YA" and the other as "a true classic" (S40). Internal evidence, one judge.
+- **Check:** At thumbnail, does the title read without competing with the main image? Is the author name on the cover's axis (LAY-11) and legible? Name the genre the cover signals in two words: does it match the book?
+- **Fix:** Give the title a calm band; move the author name onto the axis, usually centred, and switch it to the better of black or white (CV-10); change type and colour to match the genre (TYPE-10).
+- **Grade:** Craft wisdom; the examples are internal evidence (owner taste).
+- **Source:** LAY-11; TYPE-10; CV-10; `examples/blind-test/RESULTS.md`.
+
+### LAY-17. Menus, signage and timetables: plain, high contrast, easy to scan
+- **What:** Information people scan at a distance and in passing (menu boards, wayfinding, opening times, price lists) works best plain: a clear grid, high contrast, items and prices that line up, sizes that read from where people stand (LAY-7). Plain here is the aim, not "slop" and not a lack of nerve. Energy is a light pass at most (EN-1).
+- **Why:** Reading distance sets the type size [S179, S180]; scanning favours clear headings and lined-up items (LAY-14). In batch 5 a balanced, high-contrast menu board without the skill beat the with-skill version, and the owner called it "effective for its job" (S55). Internal evidence, one judge.
+- **Check:** From the expected distance (LAY-7), can each item and its price be found in a few seconds? Do prices align? Is any decoration costing legibility?
+- **Fix:** Simplify to one grid, raise contrast, align prices, cut decoration before shrinking type.
+- **Grade:** Standard for the size rule (LAY-7); the rest is craft wisdom with one internal case.
+- **Source:** LAY-7; LAY-14; United States Sign Council Foundation [S179, S180].
+
+### LAY-18. Multi-panel pieces fail as a whole when one panel fails
+- **What:** In a step-by-step infographic, a comic strip, a storyboard or a set of icons, every panel is checked on its own (anatomy, objects, text, step order). One broken panel (a wrong hand, a missing step, garbled text) fails the whole piece, however clean the rest.
+- **Why:** Readers follow steps in order; one wrong step breaks the instruction. In batch 4 a less dense, readable with-skill hand-washing infographic lost because its third panel failed badly (S43). Internal evidence, one judge.
+- **Check:** Crop and check each panel at 2-4x, one line per panel (CHAR-9 for any hands).
+- **Fix:** Regenerate or redraw the failed panel only, then re-check the set for consistency (BRAND-6).
+- **Grade:** Procedure.
+- **Source:** CHAR-9; FP-3; BRAND-6; `examples/blind-test/RESULTS.md`.
+
 ---
 
 ## Myths

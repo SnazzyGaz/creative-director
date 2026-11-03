@@ -1,0 +1,248 @@
+{
+ "images": {
+  "BVYL": {
+   "brief": "B49",
+   "condition": "with",
+   "file": "B49-with.jpg",
+   "sha256": "28a28586f1d95d4c6cba0beaf365801dec52b182fbd0d372f6d0b5390e46faca"
+  },
+  "CFYG": {
+   "brief": "B43",
+   "condition": "without",
+   "file": "B43-without.jpg",
+   "sha256": "70d01b50b51814c94c54671f5a068d2c2630e33d495bb0e02f72ee3fff0e2275"
+  },
+  "CMJJ": {
+   "brief": "B49",
+   "condition": "without",
+   "file": "B49-without.jpg",
+   "sha256": "c7471b69f8f89a05c6af0f2ff5fbf8acba2128b299ef3e2360438cf308b89b43"
+  },
+  "DKGH": {
+   "brief": "B47",
+   "condition": "without",
+   "file": "B47-without.jpg",
+   "sha256": "21a3a83c4ccd1a26e92cbf9cbe22fdb04721c36196a144731cce825d27c325fd"
+  },
+  "DXYZ": {
+   "brief": "B48",
+   "condition": "with",
+   "file": "B48-with.jpg",
+   "sha256": "3a2b9e8b471b594b579ed8c1315faea50e0eec07eb465b841fb75a3a1127563b"
+  },
+  "FAUM": {
+   "brief": "B43",
+   "condition": "with",
+   "file": "B43-with.jpg",
+   "sha256": "2a309d2071fcae9f65d0e3963647c46ec8c8cf3cd43f999a08b207a7d204564b"
+  },
+  "GEXH": {
+   "brief": "B50",
+   "condition": "with",
+   "file": "B50-with.jpg",
+   "sha256": "c9cc2af283314b23fa8b0536ff552b3661780a4df9667b938d4ec098d00ffccc"
+  },
+  "JXPE": {
+   "brief": "B44",
+   "condition": "with",
+   "file": "B44-with.jpg",
+   "sha256": "1993c969899b9c81562873a495c93a6d9defacf8ecfb8780aa7bd2b7e1f2acaf"
+  },
+  "LVBP": {
+   "brief": "B46",
+   "condition": "with",
+   "file": "B46-with.jpg",
+   "sha256": "2abf7a076c3bb30d6512d2ca094de46fffd8fb8bfe3d5c704617718fa41d5b0c"
+  },
+  "LVEA": {
+   "brief": "B46",
+   "condition": "without",
+   "file": "B46-without.jpg",
+   "sha256": "4967c9a4242810d83d5b29629a2687b05e6565abd23ee946ce45af1edec2fe22"
+  },
+  "MQWZ": {
+   "brief": "B45",
+   "condition": "without",
+   "file": "B45-without.jpg",
+   "sha256": "fdd893e74faa2a01ec2f18f4a2bae952f52466b0612603dbbba16eeb7a37e96f"
+  },
+  "RFZE": {
+   "brief": "B48",
+   "condition": "without",
+   "file": "B48-without.jpg",
+   "sha256": "8f759a01ccf31db47f61cbeb3f036b63a8db5baa1a6a41dad8170f1764d516e3"
+  },
+  "WGHM": {
+   "brief": "B42",
+   "condition": "without",
+   "file": "B42-without.jpg",
+   "sha256": "8cd5b73fccefc303b31e01f279bb70a1669e66452dda037f7e3db99ff34ba05e"
+  },
+  "XBLT": {
+   "brief": "B42",
+   "condition": "with",
+   "file": "B42-with.jpg",
+   "sha256": "e2a3af11897a32796a0c7a0bd2a1f8e5963be51ad5e6ce0ad3f28674244cd4d4"
+  },
+  "XPFM": {
+   "brief": "B41",
+   "condition": "with",
+   "file": "B41-with.jpg",
+   "sha256": "0074f1df45c98d26867d242e12ce9e462aec3f0955de19b2941fd7302f5f08e7"
+  },
+  "YFSW": {
+   "brief": "B50",
+   "condition": "without",
+   "file": "B50-without.jpg",
+   "sha256": "5208624abb695e77becf2172411a012f425c48e7610d336731716dbb18ea07a6"
+  },
+  "YWRL": {
+   "brief": "B47",
+   "condition": "with",
+   "file": "B47-with.jpg",
+   "sha256": "b15ef86273bc9e1e0371e44ac52964b9954cdd41a5ff554b8b5501cdaf42d3c4"
+  },
+  "ZLPZ": {
+   "brief": "B41",
+   "condition": "without",
+   "file": "B41-without.jpg",
+   "sha256": "5c90a23b6e16a213a7c0651f83da7466b30766c1fd910670e019c32c2605ce90"
+  },
+  "ZTRS": {
+   "brief": "B45",
+   "condition": "with",
+   "file": "B45-with.jpg",
+   "sha256": "ee15dcc29afddbbc8b7649300dbf1a3c65a01babb90b62695671a7775757ce29"
+  },
+  "ZWNS": {
+   "brief": "B44",
+   "condition": "without",
+   "file": "B44-without.jpg",
+   "sha256": "0d944794c7688f6ee173b74cd16386c29f0491107739f94fa0fe23554781c0ca"
+  }
+ },
+ "note": "Hidden key for examples/blind-test. Do not commit or show to judges before judging ends.",
+ "salt": "a9f2f86b176a23e7e72e6c2f872c33c5",
+ "sheets": [
+  {
+   "brief": "B50",
+   "left": {
+    "condition": "with",
+    "id": "GEXH"
+   },
+   "right": {
+    "condition": "without",
+    "id": "YFSW"
+   },
+   "sheet": "S49"
+  },
+  {
+   "brief": "B46",
+   "left": {
+    "condition": "with",
+    "id": "LVBP"
+   },
+   "right": {
+    "condition": "without",
+    "id": "LVEA"
+   },
+   "sheet": "S50"
+  },
+  {
+   "brief": "B49",
+   "left": {
+    "condition": "without",
+    "id": "CMJJ"
+   },
+   "right": {
+    "condition": "with",
+    "id": "BVYL"
+   },
+   "sheet": "S51"
+  },
+  {
+   "brief": "B43",
+   "left": {
+    "condition": "without",
+    "id": "CFYG"
+   },
+   "right": {
+    "condition": "with",
+    "id": "FAUM"
+   },
+   "sheet": "S52"
+  },
+  {
+   "brief": "B47",
+   "left": {
+    "condition": "without",
+    "id": "DKGH"
+   },
+   "right": {
+    "condition": "with",
+    "id": "YWRL"
+   },
+   "sheet": "S53"
+  },
+  {
+   "brief": "B42",
+   "left": {
+    "condition": "with",
+    "id": "XBLT"
+   },
+   "right": {
+    "condition": "without",
+    "id": "WGHM"
+   },
+   "sheet": "S54"
+  },
+  {
+   "brief": "B48",
+   "left": {
+    "condition": "without",
+    "id": "RFZE"
+   },
+   "right": {
+    "condition": "with",
+    "id": "DXYZ"
+   },
+   "sheet": "S55"
+  },
+  {
+   "brief": "B44",
+   "left": {
+    "condition": "with",
+    "id": "JXPE"
+   },
+   "right": {
+    "condition": "without",
+    "id": "ZWNS"
+   },
+   "sheet": "S56"
+  },
+  {
+   "brief": "B45",
+   "left": {
+    "condition": "with",
+    "id": "ZTRS"
+   },
+   "right": {
+    "condition": "without",
+    "id": "MQWZ"
+   },
+   "sheet": "S57"
+  },
+  {
+   "brief": "B41",
+   "left": {
+    "condition": "without",
+    "id": "ZLPZ"
+   },
+   "right": {
+    "condition": "with",
+    "id": "XPFM"
+   },
+   "sheet": "S58"
+  }
+ ]
+}

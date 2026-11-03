@@ -70,6 +70,14 @@ Format: **What / Why / Check / Fix / Grade / Source**. Rules marked **MUST-BE-RI
 - **Grade:** Standard (WCAG).
 - **Source:** WCAG 2.1 SC 1.4.4 [S86]; Apple HIG typography and larger-text criteria [S58].
 
+### UI-11. No invented product screens in finished work
+- **What:** A hero, ad or poster for an app shows only screens, features and UI the owner supplied. Don't generate phone screens, dashboards or app UI with made-up content for finished work: they promise features nobody agreed and fill with garbled text. Invented UI belongs only in a mock-up the brief asks for, labelled as a mock.
+- **Why:** Invented screens are additions (AES-10) and invented facts (FP-3), and generators garble small UI text (BRAND-8). In batch 4 the owner of the work preferred a hero with a big generated phone screen on looks, but noted that the with-skill version, which followed the brief, would win if the brief meant finished work (S39). Internal evidence, one judge.
+- **Check:** List every screen or UI element in the piece. Is each one supplied, or a labelled mock?
+- **Fix:** Use the supplied screenshot; or show the product's effect (the person, the outcome) instead of its screen; or label the mock and ask the owner.
+- **Grade:** Procedure, from AES-10 and FP-3.
+- **Source:** AES-10; FP-3; BRAND-8; `examples/blind-test/RESULTS.md`.
+
 ## Myths and weak claims
 - **Golden-ratio type scales are "more harmonious":** no evidence for a special ratio [S38]. Pick the ratio for density (TYPE-2).
 - **"HSL lightness 50% means equal brightness":** false. Yellow and blue at the same HSL L differ a lot. Use OKLCH L or luminance [S50].

@@ -32,12 +32,12 @@ Only these block delivery; everything else is a default.
 | "Redo / rejig / start over / reimagine / from scratch" | **Remake** | `first-principles.md` (FP-1 to FP-9): brief signed off, 2-3 concepts, build, full QA. |
 | The agent's own output (`+ creative director`) | **Self-check** | Run the loop silently; ask only taste calls; deliver with the FLOW-3 checklist. |
 
-Never assume a remake without a from-scratch word. If the ask is unclear, treat it as an unprompted hand-off: a blurb costs one message, a wrong redo costs the piece. Flow diagram: `interaction-flow.md`.
+Never assume a remake without a from-scratch word. Unclear ask: treat it as an unprompted hand-off; a blurb costs one message, a wrong redo the piece. Flow diagram: `interaction-flow.md`.
 
 ## 1. Brief
 
 - Have the brief (CD-1) and direction (CD-2). No brand input (colours, type, voice, logo)? Run `brand-intake.md` first. Open brief: 2-3 rough options first (CD-3).
-- **Intent model (AES-0):** purpose, audience, mood, style, focal experience, polish, must-keeps, each marked [brief] or [inferred]. Before calling a choice a flaw, ask whether it is deliberate and whether it works.
+- **Intent model (AES-0):** purpose, audience, mood, style, focal experience, polish, must-keeps, each marked [brief] or [inferred]. Count what the brief fixes ("it" is one). Before calling a choice a flaw, ask if it is deliberate and works.
 - The first critique point every round: does it answer the brief, are the must-keeps intact (CD-1, CD-5)?
 
 ## 2. Render
@@ -46,7 +46,7 @@ At the size people see it, plus a thumbnail. UI: phone and desktop widths and 20
 
 ## 3. Look: auto check, then five tests
 
-**Auto check first** (if you can run code): `python3 tools/autocheck.py FILE|URL --out DIR` measures contrast, type, spacing, edges, space and balance against each rule's own number. Fix every FAIL (* = blocker), then judge by eye, quoting its numbers. FLAG asks "intended?"; balance is never a FAIL or a reason to centre. Image text checks are SKIP: do them by eye or pass `--text-box`.
+**Auto check first** (if you can run code): `python3 tools/autocheck.py FILE|URL --out DIR` measures contrast, type, spacing, edges, space, balance and whites against each rule's own number. Fix every FAIL (* = blocker), then judge by eye, quoting its numbers. FLAG asks "intended?"; balance is never a FAIL or a reason to centre. Image text checks are SKIP without `--text-box`: check by eye.
 
 | Test | How | Reveals |
 |---|---|---|
@@ -72,7 +72,7 @@ At the size people see it, plus a thumbnail. UI: phone and desktop widths and 20
 - **Needs improvement:** ranked by effect on the whole, structure before surface, five at most. Blockers marked.
 - **Measure at zoom** (2x+, or `tools/vp.py`, `ellipse.py`, `contrast.py`) before calling a failure.
 - **MEASURED vs INTERPRETED:** measured findings (tool or count) can block; interpreted ones (AES-1 to AES-8) name a visible feature, its effect and the trade-off, labelled as interpretation. When they conflict, state the trade-off; don't settle it toward the neater option.
-- **Register:** neutral and factual, like a thesis supervisor. Not "the face feels weak", but "CORE-3 not met: highest contrast is the top-right sky, not the face. Fix: lower the sky one value step."
+- **Register:** factual. Not "the face feels weak", but "CORE-3 not met: highest contrast is the top-right sky, not the face. Fix: lower the sky one value step."
 
 ### FLOW-1. An unprompted hand-off gets a sign-off blurb, not a redo
 - **What:** After the full analysis, reply with only the **imperative** changes (blockers, and what the piece fails its brief without): ranked, five at most, each with its rule ID, what visibly changes, and **[edit]** (keep the art) or **[regenerate]** (new art or redo). Optional ideas go on one "also possible" line or nowhere. Ask for sign-off; apply nothing before it.
@@ -117,7 +117,7 @@ A take-over repairs a broken piece and keeps its idea. A **remake** ("from scrat
 Stop when: no blockers remain (including a clean anatomy pass on the latest render) and the top improvements are done; or the latest round isn't clearly better; or what is left are questions no rule settles; or the next fix would change the brief or something the owner approved; or round 3 for routine work (5 at most). Report rather than polish.
 
 ### FLOW-3. Re-check before delivery; never pass off an unapplied critique as the result
-- **What:** On the final render, check each signed-off point, then the QA gates: light (TD-LIT-1), anatomy (CHAR-9), type size and contrast (TYPE-3, UI-6), whitespace (LAY-10), Sitting right (COMP-25), marks (BRAND-4 overlay check, BRAND-8), real-subject crops (ILL-12), transcribed facts (FP-3), no additions (AES-10), energy (EN-2, where it applies); signage adds viewing distance (LAY-7), a series adds the set pass (BRAND-6). Deliver the result first, then one line per point, **done** or **not done** with the reason. A critique alone is never the deliverable.
+- **What:** On the final render, check each signed-off point, then the QA gates: light (TD-LIT-1), anatomy (CHAR-9), type size and contrast (TYPE-3, UI-6), whitespace (LAY-10), Sitting right (COMP-25), marks (BRAND-4 overlay check, BRAND-8), real-subject crops (ILL-12), transcribed facts (FP-3), no additions (AES-10), whites (CV-11), energy (EN-2, where it applies); signage adds viewing distance (LAY-7), a series adds the set pass (BRAND-6). Deliver the result first, then one line per point, **done** or **not done** with the reason. A critique alone is never the deliverable.
 - **Why:** Edits silently skip instructions; an anatomy fault once passed every other check because nobody cropped the hands (`examples/character-anatomy-pass/`).
 - **Check:** A line for every point? Does each "done" match the render?
 - **Format:**
