@@ -460,6 +460,107 @@
     "LB-029",
     "LB-014"
    ]
+  },
+  {
+   "id": "b27",
+   "brief": "Gallery poster for a quiet, dreamlike painting show",
+   "use": "gallery",
+   "mood": "dreamy",
+   "energy": "low",
+   "avoid": "",
+   "should": [
+    "LB-084",
+    "LB-083",
+    "LB-R07R22"
+   ],
+   "should_not": [
+    "LB-086",
+    "LB-087"
+   ]
+  },
+  {
+   "id": "b28",
+   "brief": "Landing page for a bold tech start-up app",
+   "use": "apps",
+   "mood": "bold",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-086",
+    "LB-111",
+    "LB-022"
+   ],
+   "should_not": [
+    "LB-088",
+    "LB-085"
+   ]
+  },
+  {
+   "id": "b29",
+   "brief": "Key art for a playful indie game",
+   "use": "games",
+   "mood": "playful",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-087",
+    "LB-052",
+    "LB-111"
+   ],
+   "should_not": [
+    "LB-084",
+    "LB-113"
+   ]
+  },
+  {
+   "id": "b30",
+   "brief": "Premium packaging for a jewellery gift line",
+   "use": "jewellery",
+   "mood": "elegant",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-114",
+    "LB-030",
+    "LB-028"
+   ],
+   "should_not": [
+    "LB-090",
+    "LB-087"
+   ]
+  },
+  {
+   "id": "b31",
+   "brief": "Calm feature wall art for a hotel interior",
+   "use": "interiors",
+   "mood": "calm",
+   "energy": "low",
+   "avoid": "",
+   "should": [
+    "LB-113",
+    "LB-089",
+    "LB-073"
+   ],
+   "should_not": [
+    "LB-086",
+    "LB-090"
+   ]
+  },
+  {
+   "id": "b32",
+   "brief": "Explainer prints for a science and tech brand",
+   "use": "tech",
+   "mood": "precise",
+   "energy": "",
+   "avoid": "",
+   "should": [
+    "LB-110",
+    "LB-013"
+   ],
+   "should_not": [
+    "LB-SD08",
+    "LB-109"
+   ]
   }
  ]
 }

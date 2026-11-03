@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.8.1 (3 November 2026)
+
+Lookbook batches 2 to 6, synced from the breeder with `tools/lookbook_sync.py`. No rule changes.
+
+- **Looks:** 196 live, up from 132. 64 added: LB-067 to LB-114 (48 established looks), LB-SD01 to LB-SD09 (9 contemporary figure-illustration looks), and 7 new wildcards (LB-R07R22 to LB-R07R24, LB-R08R01, LB-R08R13, LB-R08R14, LB-R08R18). Nothing retired this time; the two retired IDs (LB-064, LB-R02R22) are unchanged. New families: contemporary figure illustration, fine-art movements, digital and internet, and technique and medium.
+- **Tags:** every new look has `nearest_looks` and `colours`. `getty_aat` stays on the same 27 looks; new established looks are blank until each ID is checked on vocab.getty.edu. LB-103 is marked partial (its offset colour barely shows). LB-102's hallmarks now note that its raised, photographed-patch 3D quality is kept on purpose: dimensionality is a separate trait that can be borrowed on its own.
+- **Sheets:** 45 sheets (up from 24), 1200 px JPEGs; the module is about 16 MB, well under the 50 MB point where sheets move to release assets.
+- **Search test:** 6 briefs added for the new families (32 in all). recall@8 0.974 on the old 26 briefs before and after the sync, 0.979 on all 32; violations 0.
+- The share check and the name check were clean.
+
 ## v0.8.0 (2 November 2026)
 
 Five additions: a one-command auto check, a scored lookbook search, "more like this" and colour search, era terms for established looks, and three one-word commands.

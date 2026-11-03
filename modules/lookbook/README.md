@@ -1,6 +1,6 @@
 # Module: lookbook (optional)
 
-A visual reference of established looks: 65 historic and technique-based looks (LB-001 to LB-066) and 67 wildcards (LB-R…), each with use, mood, energy, what to avoid it for, hallmarks by layer and a one-line hint. It is a source of directions, not rules. Every core rule and module still applies, and wins over a look whenever they disagree.
+A visual reference of looks: 122 established looks (historic, technique-based and contemporary figure styles: LB-001 to LB-114 and LB-SD01 to LB-SD09) and 74 wildcards (LB-R…), each with use, mood, energy, what to avoid it for, hallmarks by layer and a one-line hint. It is a source of directions, not rules. Every core rule and module still applies, and wins over a look whenever they disagree.
 
 - `looks.json` (and `looks.csv`): the tag file, one row per live look, plus the `retired` IDs. Search it; don't load it whole.
 - `sheets/`: one image per family, six looks to a sheet, each with its caption. `index.png`: every ID and name on one page.

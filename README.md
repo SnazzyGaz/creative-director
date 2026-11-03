@@ -103,7 +103,7 @@ core/       always: principles, the loop (with sign-off and delivery). On demand
 modules/    technical-drawing · illustration · character · web-ui · ux · 3d
             typography · layout (social, posters, slides, print) · brand · aesthetic-critique
             composition (balance, focus, unity, space, beauty) · colour-value
-            lookbook (optional: 132 established looks and wildcards, tag file and image sheets)
+            lookbook (optional: 196 established looks and wildcards, tag file and image sheets)
 tools/      auto check (one command, every measurable rule), look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, 3D intersections, before/after
 examples/   stress tests, round by round, including this README's own critique
 fonts/      61 free font families in 18 themes, catalogue and specimen sheets
