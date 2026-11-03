@@ -10,6 +10,8 @@
 - **Routing.** `core/which-modules.md` gains an infographics row; the energy-pass row covers infographics of every kind.
 - **Source** S336 (Pandey et al. 2015: truncated axes and other distortions change what readers judge). Bibliography: "Honest charts".
 - **Blind test write-up.** Key 6 published (`sha256sum -c` passes for all six); `scoring-owner.csv` adds S59-S68; RESULTS.md covers batch 6, its notes, the chart finding and the honest overall count. README, `llms.txt` and the kit README carry it.
+- **After the tag: README tidied.** The opening now says what the skill is, how to install and use it, and lists the modules in a table. Blind-test detail moved to a short *Blind test* section lower down that gives the headline result and links to `examples/blind-test/RESULTS.md`.
+- **After the tag: blind-test batch 7 drawn.** Ten more infographic briefs (B61-B70) against v0.9.5, sheets S69-S78. The key is hashed in `KEY-SHA256.txt` and not published. On the with side, charts and routes were drawn in code and composited (see the kit README). Waiting to be judged.
 - **Budgets after.** Always-on 6,497 of 6,500 (unchanged); with the template 7,987 of 8,000; template 1,490 of 1,500; lite 2,497 of 2,500; layout 5,939 of 6,000; energy pass 3,181 of 4,500. The new rules went into on-demand files only.
 
 ## v0.9.4 (3 November 2026)

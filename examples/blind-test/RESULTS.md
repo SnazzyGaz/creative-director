@@ -37,6 +37,8 @@ All five strong picks went to the skill, four of them in batches 4 and 5 (S41, S
 
 **Position:** across the 61 judged sheets the owner picked the left image 27 times and the right 33 times, with one tie (two-sided sign test p ≈ 0.52), so there is no clear side bias. The with-skill image sat on the left in 5 of the 10 sheets in each of batches 5 and 6.
 
+**Batch 7 (S69-S78, B61-B70, infographics against v0.9.5) is drawn and waiting to be judged.** Its key is hashed in `KEY-SHA256.txt` and stays private. One method change on the with side: for the five briefs with numbers or a route, the art was generated with an area left clear and `tools/datagraphic.py` composited the code-drawn chart or route into it (wiping that area to white where the model drew in it). So it tests the v0.9.5 workflow, not the prompt alone ([kit README](README.md#how-the-images-were-made)). With 70 briefs, the bar becomes 43 of 70.
+
 ## What the notes said
 
 **Batches 1 and 2: sterile versus slop.** The owner's notes described the two arms in almost opposite terms. The with-skill versions were called academic, sterile, clinical, basic or "too clean" in 10 of the 18 notes written on those sheets, and once "like word-processor clip art". The versions without the skill were called eye-catching, lively or dynamic, and in the same breath busy, generic or obviously machine-made, in 8 notes. Where the skill won, the notes mostly named clarity, a single idea, lean information, simplicity that suited the audience, or truth to the brief. Where it lost, they named the other side's energy, boldness, colour coding, official branding or obvious call to action. Neither end was what the owner wanted: several picks were the lesser of two failures.

@@ -6,7 +6,7 @@ Runs of the critique loop (`core/critique-loop.md`) done as a bot would: brief, 
 
 **Image sizes.** To keep clones small, most images here are smaller copies (at most 1,000 px on the long side) at the same paths. The full-size originals are in `creative-director-examples-full.zip` on the [assets-v1 release](https://github.com/SnazzyGaz/creative-director/releases/tag/assets-v1); `python3 tools/fetch_assets.py --examples` puts them back in place. Images the test suites read are kept at full size. Measurements quoted in the logs were taken on the full-size files.
 
-**Blind test (judged):** [`blind-test/`](blind-test/) holds 60 briefs made with and without the skill by the same image model, one call each, judged blind by the owner of the work: 36 to 23 for the skill with one tie (p = 0.059, one short of the 37-of-60 bar set in advance; 32 to 17 at 50 briefs, p = 0.022), with caveats. Its images stay out of git; the results, keys and reasons are in [`blind-test/RESULTS.md`](blind-test/RESULTS.md).
+**Blind test (judged):** [`blind-test/`](blind-test/) holds 60 briefs made with and without the skill by the same image model, one call each, judged blind by the owner of the work: 36 to 23 for the skill with one tie (p = 0.059, one short of the 37-of-60 bar set in advance; 32 to 17 at 50 briefs, p = 0.022), with caveats. Batch 7 (B61-B70, infographics against v0.9.5) is drawn and waiting to be judged. Its images stay out of git; the results, keys and reasons are in [`blind-test/RESULTS.md`](blind-test/RESULTS.md).
 
 ## What was detected and what was fixed
 
