@@ -1,6 +1,6 @@
 # Data chart: Mauna Loa carbon dioxide, 1959-2025
 
-**Made with:** code only (matplotlib): [src/chart.py](src/chart.py) `before|after OUT.png`. The data is [src/co2_annmean_mlo.csv](src/co2_annmean_mlo.csv), NOAA Global Monitoring Laboratory annual means (public domain), retrieved 1 Nov 2026 (file dated 9 Oct 2026) [S162]. [src/make_fonts.py](src/make_fonts.py) makes static instances of the variable fonts, because matplotlib only uses a variable font's default instance. Self-judged by the agent that made it.
+**Made with:** code only (matplotlib): [src/chart.py](src/chart.py) `before|after OUT.png`. The data is [src/co2_annmean_mlo.csv](src/co2_annmean_mlo.csv), NOAA Global Monitoring Laboratory annual means (public domain), retrieved 1 Nov 2026 (file dated 9 Oct 2026) [SRC-162]. [src/make_fonts.py](src/make_fonts.py) makes static instances of the variable fonts, because matplotlib only uses a variable font's default instance. Self-judged by the agent that made it.
 **Type:** before **DejaVu Sans** (matplotlib's default). After **Newsreader** 560 at optical size 36 for the title (`fonts/editorial-serif/newsreader/`, an editorial serif made for screen reading) and **Source Sans 3** 400/600 for everything else (`fonts/humanist-sans/sourcesans3/`, clear figures at small sizes) (TYPE-10).
 
 ![Before and after](side-by-side.jpg)

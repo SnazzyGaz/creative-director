@@ -8,7 +8,7 @@ How to review a clip, sequence, edit, animatic or storyboard, and the template t
 - **Check:** The critique says what was watched, how (size, device, sound on), how many times, and which timecodes were scrubbed. A critique made from stills alone says so and is marked partial.
 - **Fix:** If you can't play the file, ask for it; don't judge motion from stills. For storyboards and animatics, play the animatic at its timing or read the board with the shot durations in hand.
 - **Grade:** Procedure.
-- **Source:** [S269, S280]; critique loop.
+- **Source:** [SRC-269, SRC-280]; critique loop.
 
 ### FILM-REV-2. Make a shot list as you watch (Procedure)
 - **What:** One line per shot: number, in and out timecode, duration, size, angle, movement, the beat it serves, and anything flagged. This is the evidence for FILM-EDIT-3, FILM-STORY-0 and FILM-STORY-5.
@@ -16,7 +16,7 @@ How to review a clip, sequence, edit, animatic or storyboard, and the template t
 - **Check:** Every shot has a line. Durations add up to the running time.
 - **Fix:** Use shot-boundary detection to start the list (for example the ffmpeg scene filter in `generated.md`), then correct by eye.
 - **Grade:** Procedure.
-- **Source:** [S283, S285].
+- **Source:** [SRC-283, SRC-285].
 
 ### FILM-REV-3. Storyboards and shot lists are reviewed as plans (Procedure)
 - **What:** For a board or shot list, check what can be checked before anything is shot or generated: the beat per panel, coverage and the 180° plan (an overhead sketch), screen direction across panels, shot sizes against the beats, intended movement and durations, and where the cuts fall. Panel transitions follow ILL-7 and the illustration notes.
@@ -24,7 +24,7 @@ How to review a clip, sequence, edit, animatic or storyboard, and the template t
 - **Check:** Each panel has a beat, a size, a duration and a camera position on the overhead plan.
 - **Fix:** Add, remove or re-order panels; re-plan coverage.
 - **Grade:** Procedure.
-- **Source:** [S271, S272].
+- **Source:** [SRC-271, SRC-272].
 
 ---
 

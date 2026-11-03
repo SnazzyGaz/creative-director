@@ -34,7 +34,7 @@ ON_DEMAND = 4500         # each other .md in core/ and modules/ (detail files lo
 SKIP = {"modules/lookbook/UPDATING.md"}   # maintainer notes, never loaded for a critique
 
 LOADS = {  # typical loads, as listed in core/which-modules.md
-    "screen (web-ui + ux)": ["modules/web-ui/README.md", "modules/ux/README.md"],
+    "screen (web-ui + ux + energy-pass)": ["modules/web-ui/README.md", "modules/ux/README.md", "core/energy-pass.md"],
     "social card (layout + typography)": ["modules/layout/README.md", "modules/typography/README.md"],
     "social card + composition (with Sitting right)": ["modules/layout/README.md", "modules/typography/README.md",
         "modules/composition/README.md", "modules/composition/sitting-right.md"],

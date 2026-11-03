@@ -20,7 +20,7 @@ Copy, fill in, keep it short; drop sections that don't apply. Rules for writing 
 - Flip/mirror: <deviations observed>
 - Greyscale: <number of value groups; subject/ground separation>
 - Crop/edges: <tangents, frame contacts, empty regions>
-- Sitting right (COMP-19..25): <flags from rotate 180°, cover half, edge and alignment sweep: each "intended: keep (why)" or "fix"; nothing centred or symmetrised just to clear a flag>
+- Sitting right (COMP-19..25): <flags from rotate 180°, cover half, edge sweep: each "intended: keep (why)" or "fix"; nothing centred just to clear a flag>
 - Whitespace (LAY-10): <largest intended inter-group gap; any band or 2-D dead zone over ~1.5× it (`tools/whitespace.py`), each marked deliberate or fixed; after an image swap: whole layout re-reviewed, what moved>
 - Viewing distance (LAY-7, signage only): <print size; each key line's cap height in mm and "reads to X m" (≈ distance ÷ 250)>
 - Set (BRAND-6, series only): <logo size/position, margins, palette and type logic shared: yes / list differences>
@@ -38,7 +38,7 @@ Copy, fill in, keep it short; drop sections that don't apply. Rules for writing 
 
 ### Findings: INTERPRETED (aesthetic reading; labelled as interpretation)
 - <AES-ID>: feature <what is visible, where> -> effect <what it does to the viewer> -> trade-off <what changing it would cost>. Confidence: <high / low>.
-- If a measured and an interpreted finding pull in opposite directions, write both and the trade-off. Don't settle it toward the neater option; it's the owner's call.
+- If measured and interpreted findings pull apart, write both and the trade-off; the owner decides, not the neater option.
 
 ### Needs improvement (ranked, biggest first, max 5)
 1. [BLOCKER|IMPROVEMENT] <RULE-ID> not met. <where>: <observed evidence>.
@@ -67,5 +67,5 @@ Also possible (not needed): <one line, or omit>. OK to go ahead?
 ### Delivery checklist (after the fixes; FLOW-3). Lead with the result, then:
 1. <point> (<RULE-ID>): done / not done, <evidence or reason>.
 2. ...
-QA re-run on the final render: light (TD-LIT-1) <pass/fail> · anatomy (CHAR-9) <pass/fail/n.a.> · type size and contrast (TYPE-3, UI-6) <pass/fail> · whitespace (LAY-10) <pass / deliberate space named / fail> · sitting right (COMP-25) <no flags / flags answered / open: list> · marks (BRAND-4, BRAND-8) <official, source, overlay check / plain-text name / slot, open / none / invented: fail> · real-subject crops (ILL-12) <pass/fail/n.a.> · facts (FP-3) <transcribed, questions open: list> · additions (AES-10) <none/list> · energy (EN-2) <full / light / skip, why; items not met> · subject on ground, text on colour, small text (CV-10) <pass/fail> · whites neutral (CV-11) <pass / cream by brief / fail>.
+QA re-run on the final render: light (TD-LIT-1) <pass/fail> · anatomy (CHAR-9) <pass/fail/n.a.> · type size and contrast (TYPE-3, UI-6) <pass/fail> · whitespace (LAY-10) <pass / deliberate space named / fail> · sitting right (COMP-25) <no flags / flags answered / open: list> · marks (BRAND-4, BRAND-8) <official, source, overlay check / plain-text name / slot, open / none / invented: fail> · real-subject crops (ILL-12) <pass/fail/n.a.> · copy, counts, facts (CD-7, FP-3) <letter for letter, counted, questions: list> · additions (AES-10) <none/list> · energy (EN-2) <full / light / skip, why; items not met> · subject on ground, text on colour, small text (CV-10) <pass/fail> · whites neutral (CV-11) <pass / cream by brief / fail>.
 ```

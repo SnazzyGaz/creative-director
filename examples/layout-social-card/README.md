@@ -8,7 +8,7 @@ Brief: an X post image announcing the repo; seen in a phone feed; one idea: "des
 
 | Rule | Measurement |
 |---|---|
-| LAY-4 size and ratio | 1600 × 900, 16:9: X's single-image ratio, shown uncropped [S124, S130]. |
+| LAY-4 size and ratio | 1600 × 900, 16:9: X's single-image ratio, shown uncropped [SRC-124, SRC-130]. |
 | LAY-3 one focal point | Blur and thumbnail: title first, sketch second, footer last. Three text levels. |
 | LAY-6 main message | Title x-height about 78 px, so about 19 px at 400 px wide. Subtitle x-height about 30 px, so 7.5 px at 400 wide (floor about 6). Both read at feed size. |
 | UI-6 contrast | Ink #EEE9DF 15.1:1, muted #A39C91 6.7:1, accent #D9825F 6.4:1 on #161514. All pass 4.5:1. |

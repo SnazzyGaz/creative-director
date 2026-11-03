@@ -2,7 +2,7 @@
  "about": "Hand-verified mapping from established lookbook looks to Getty Art & Architecture Thesaurus (AAT) Styles and Periods terms (movement and period terms only, never people or works). tools/lookbook_sync.py copies these into looks.json as getty_aat. Each ID was checked on its vocab.getty.edu page: record type concept, facet F.FL (Styles and Periods), preferred term as given. Keepers never get one. Looks named by technique, by a deliberately generic name, or with no close AAT term are left blank rather than guessed.",
  "source": "Getty Art & Architecture Thesaurus (AAT), J. Paul Getty Trust, https://www.getty.edu/research/tools/vocabularies/aat/",
  "licence": "ODC-By 1.0 (the Open Data attribution licence), https://opendatacommons.org/licenses/by/1-0/",
- "verified": "2026-11-02",
+ "verified": "2026-11-03",
  "looks": {
   "LB-002": {
    "id": "300021374",
@@ -111,6 +111,150 @@
   "LB-056": {
    "id": "300106769",
    "label": "Ukiyo-e"
+  },
+  "LB-119": {
+   "id": "300018124",
+   "label": "Aesthetic Movement"
+  },
+  "LB-145": {
+   "id": "300021477",
+   "label": "Neoclassical"
+  },
+  "LB-163": {
+   "id": "300172863",
+   "label": "Romantic"
+  },
+  "LB-165": {
+   "id": "300021503",
+   "label": "Impressionist"
+  },
+  "LB-166": {
+   "id": "300021505",
+   "label": "Neo-Impressionist"
+  },
+  "LB-167": {
+   "id": "300021508",
+   "label": "Post-Impressionist"
+  },
+  "LB-168": {
+   "id": "300021297",
+   "label": "Cloisonnist"
+  },
+  "LB-169": {
+   "id": "300021423",
+   "label": "Intimist"
+  },
+  "LB-170": {
+   "id": "300021514",
+   "label": "Symbolist"
+  },
+  "LB-171": {
+   "id": "300021300",
+   "label": "Fauve"
+  },
+  "LB-172": {
+   "id": "300021502",
+   "label": "Expressionist"
+  },
+  "LB-173": {
+   "id": "300438588",
+   "label": "German Expressionist"
+  },
+  "LB-174": {
+   "id": "300021502",
+   "label": "Expressionist"
+  },
+  "LB-175": {
+   "id": "300133798",
+   "label": "Analytical Cubist"
+  },
+  "LB-176": {
+   "id": "300021499",
+   "label": "Synthetic Cubist"
+  },
+  "LB-177": {
+   "id": "300021374",
+   "label": "Futurist"
+  },
+  "LB-178": {
+   "id": "300021397",
+   "label": "Rayonist"
+  },
+  "LB-180": {
+   "id": "300109010",
+   "label": "Precisionist"
+  },
+  "LB-181": {
+   "id": "300021512",
+   "label": "Surrealist"
+  },
+  "LB-183": {
+   "id": "300056541",
+   "label": "Neue Sachlichkeit"
+  },
+  "LB-184": {
+   "id": "300021351",
+   "label": "Magic Realist"
+  },
+  "LB-185": {
+   "id": "300022099",
+   "label": "Abstract Expressionist"
+  },
+  "LB-186": {
+   "id": "300022175",
+   "label": "Hard-edge"
+  },
+  "LB-189": {
+   "id": "300020775",
+   "label": "Gothic"
+  },
+  "LB-190": {
+   "id": "300021142",
+   "label": "High Renaissance"
+  },
+  "LB-191": {
+   "id": "300252246",
+   "label": "Northern Renaissance"
+  },
+  "LB-192": {
+   "id": "300021147",
+   "label": "Baroque"
+  },
+  "LB-193": {
+   "id": "300021155",
+   "label": "Rococo"
+  },
+  "LB-196": {
+   "id": "300021477",
+   "label": "Neoclassical"
+  },
+  "LB-197": {
+   "id": "300021434",
+   "label": "Biedermeier"
+  },
+  "LB-199": {
+   "id": "300108215",
+   "label": "Luminist"
+  },
+  "LB-200": {
+   "id": "300172861",
+   "label": "Realist"
+  },
+  "LB-204": {
+   "id": "300021394",
+   "label": "Cubo-Futurist"
+  },
+  "LB-206": {
+   "id": "300458737",
+   "label": "return to order"
+  },
+  "LB-215": {
+   "id": "300021434",
+   "label": "Biedermeier"
+  },
+  "LB-234": {
+   "id": "300021426",
+   "label": "Art Deco"
   }
  },
  "blank": [
@@ -132,6 +276,8 @@
   "LB-036",
   "LB-040",
   "LB-041",
+  "LB-065",
+  "LB-066",
   "LB-043",
   "LB-044",
   "LB-045",
@@ -150,7 +296,150 @@
   "LB-061",
   "LB-062",
   "LB-063",
-  "LB-065",
-  "LB-066"
+  "LB-SD01",
+  "LB-SD02",
+  "LB-SD03",
+  "LB-SD04",
+  "LB-SD05",
+  "LB-SD06",
+  "LB-SD07",
+  "LB-SD08",
+  "LB-SD09",
+  "LB-067",
+  "LB-068",
+  "LB-069",
+  "LB-070",
+  "LB-071",
+  "LB-072",
+  "LB-073",
+  "LB-074",
+  "LB-075",
+  "LB-076",
+  "LB-077",
+  "LB-078",
+  "LB-079",
+  "LB-080",
+  "LB-081",
+  "LB-082",
+  "LB-083",
+  "LB-084",
+  "LB-085",
+  "LB-086",
+  "LB-087",
+  "LB-088",
+  "LB-089",
+  "LB-090",
+  "LB-091",
+  "LB-092",
+  "LB-093",
+  "LB-094",
+  "LB-095",
+  "LB-096",
+  "LB-097",
+  "LB-098",
+  "LB-099",
+  "LB-100",
+  "LB-101",
+  "LB-102",
+  "LB-103",
+  "LB-104",
+  "LB-105",
+  "LB-106",
+  "LB-107",
+  "LB-108",
+  "LB-109",
+  "LB-110",
+  "LB-111",
+  "LB-112",
+  "LB-113",
+  "LB-114",
+  "LB-SD10",
+  "LB-SD11",
+  "LB-SD12",
+  "LB-SD13",
+  "LB-SD14",
+  "LB-SD15",
+  "LB-SD16",
+  "LB-SD17",
+  "LB-115",
+  "LB-116",
+  "LB-117",
+  "LB-118",
+  "LB-120",
+  "LB-121",
+  "LB-122",
+  "LB-123",
+  "LB-124",
+  "LB-125",
+  "LB-126",
+  "LB-127",
+  "LB-128",
+  "LB-129",
+  "LB-130",
+  "LB-131",
+  "LB-132",
+  "LB-133",
+  "LB-134",
+  "LB-135",
+  "LB-136",
+  "LB-137",
+  "LB-138",
+  "LB-140",
+  "LB-141",
+  "LB-142",
+  "LB-143",
+  "LB-146",
+  "LB-147",
+  "LB-148",
+  "LB-150",
+  "LB-151",
+  "LB-152",
+  "LB-153",
+  "LB-154",
+  "LB-155",
+  "LB-156",
+  "LB-157",
+  "LB-158",
+  "LB-159",
+  "LB-160",
+  "LB-161",
+  "LB-164",
+  "LB-179",
+  "LB-182",
+  "LB-187",
+  "LB-188",
+  "LB-194",
+  "LB-195",
+  "LB-198",
+  "LB-201",
+  "LB-202",
+  "LB-203",
+  "LB-205",
+  "LB-207",
+  "LB-208",
+  "LB-209",
+  "LB-210",
+  "LB-211",
+  "LB-212",
+  "LB-213",
+  "LB-214",
+  "LB-216",
+  "LB-217",
+  "LB-218",
+  "LB-219",
+  "LB-220",
+  "LB-221",
+  "LB-222",
+  "LB-223",
+  "LB-224",
+  "LB-225",
+  "LB-226",
+  "LB-227",
+  "LB-228",
+  "LB-229",
+  "LB-230",
+  "LB-231",
+  "LB-232",
+  "LB-233"
  ]
 }

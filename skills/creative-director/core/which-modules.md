@@ -1,35 +1,35 @@
 # Which modules to load
 
-Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus `core/critique-template.md` when writing a critique). Then add only what the task needs: loading everything wastes attention. A module's `notes.md` is optional depth. Not sure? Use the module table in `AGENTS.md`.
+Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus `core/critique-template.md` when writing a critique). Then add only what the task needs: loading everything wastes attention. A module's `notes.md` is optional depth. Not sure? Use the module table in `AGENTS.md`. Merged or retired rule IDs: `docs/RETIRED-IDS.md`.
 
 | Task | Load |
 |---|---|
-| Drawing or painting from imagination, concept art, scene | technical-drawing, illustration, composition (+ colour-value for value and palette) |
-| Any picture, poster or page where balance, focus, unity, space or beauty is the question ("it feels off", "make it more beautiful") | composition (+ colour-value) |
-| Choosing a palette, value plan or colour scheme; colour that looks wrong in place | colour-value |
-| Any human or humanoid figure, face, hand or animal (drawn, 3D or generated), even small or partial | character (anatomy pass CHAR-9 required), technical-drawing (+ illustration) |
-| Checking a drawing for construction errors only | technical-drawing |
-| Poster, cover, header image, social graphic, thumbnail, link preview | layout, typography, composition (+ illustration for the image; colour-value for the palette; brand if it carries a name) |
-| Slide deck, print piece (flyer, book cover, packaging) | layout, typography (+ brand; LAY-16 for covers) |
-| Infographic of any kind (how-to, process, data, map or route, safety, children's, fact sheet) | layout + `layout/infographics.md` (INF-1 to 6: layout first, chart designed in, illustration budget, distinct steps and flow, chart type fit, title, every line and safe steps; LAY-18 panels, LAY-19 data in code with `tools/datagraphic.py`), typography, illustration (+ character for people; brand for the issuer's mark); structure pass (EN-4: energy from layout, type and colour, not more pictures) |
-| Menu board, signage, timetable, price list | layout (LAY-7, LAY-17), typography; energy is a light pass at most |
-| Anything with words where type is the point (wordmark, editorial page, type-led poster) | typography (+ layout or web-ui) |
-| Work for a named brand or product, or with a brand guide | brand (+ the medium's module). No brand input at all: run `core/brand-intake.md` at step 0 |
-| Web page, landing page, app screen, dashboard (how it looks) | web-ui (+ typography for text-heavy pages; brand when there's a brand) |
-| Sign-up, checkout, settings, any multi-step task (how it works) | ux (+ web-ui for the screens) |
-| Reviewing a whole product or prototype | web-ui, ux |
-| 3D model, prop, asset, scene for render, game or print | 3d (+ illustration for a final beauty render or composed shot) |
-| 3D used as reference for a drawing or painting | 3d, technical-drawing |
-| Logo, icon set | brand, illustration (shape, value), web-ui (size and contrast rules) |
-| Storyboard, comic page, carousel or any image sequence | illustration (ILL-7 for intensity across frames; `notes.md` for panel transitions); + film (`story.md`, `review.md` FILM-REV-3) when it plans shots for video |
-| Video, film, animation, trailer, social clip, edit, shot list, animatic; cinematography questions | film (`README.md` + `story.md` + `review.md`; `edit.md` for grading, cutting, sound and titles; `crossover.md` when unsure what carries over) + composition and colour-value for key frames (+ typography for titles; + character when people are in frame) |
-| Clip made or altered by a video model | film (+ `generated.md`: identity, anatomy on sampled frames, invented text are blockers), character, brand for any surface with lettering |
-| Brief asks for a mood, energy, character or a distinctive feel; work that is correct but flat or generic; choosing between versions | aesthetic-critique (+ the medium's modules, which still decide blockers) |
-| From-scratch concepts (2-3 directions); work that passes every check but feels generic; naming a described vibe | lookbook, optional (at most one concept in three from it; hint strength by default; never on fixes or edits) |
-| Poster, flyer, cover, packaging, web hero or landing page, social card, picture book, character art, once the checks pass; infographics get the structure pass (EN-4); light pass for notices, dashboards and menus; skip for forms and dense data | `core/energy-pass.md` (EN-1 to 4): focal hook that stands off its ground, display type as loud as the mood, colour, movement, call to action in the text, the issuer's real mark, concept and genre fit, traits by gesture, without slop |
-| The owner says just "bolder", "quieter" or "distill" | `core/commands.md` (CMD-1 to 3) + the medium's modules |
-| Remake from scratch ("redo", "rejig", "start over", "reimagine") | `core/first-principles.md` (FP-1..9) + the medium's modules + aesthetic-critique (AES-9 for comparing with the original); brand if the piece carries any logo or mark |
-| Image generated by an AI image model | illustration, technical-drawing (AI images often break perspective and light); brand for any logo-bearing surface (BRAND-8); + character if it shows people, hands or animals (anatomy pass CHAR-9 is a delivery gate) |
+| Drawing or painting from imagination, concept art, scene | technical-drawing, illustration, composition (+ colour-value) |
+| "It feels off", "make it more beautiful": balance, focus, unity, space | composition (+ colour-value) |
+| Palette, value plan, colour that looks wrong in place | colour-value |
+| Any person, face, hand or animal, even small or partial (drawn, 3D or generated) | character (anatomy pass CHAR-9 required; props CHAR-11), technical-drawing (+ illustration) |
+| Construction errors only | technical-drawing |
+| Poster, cover, header, social graphic, thumbnail, link preview | layout, typography, composition (+ illustration, colour-value; brand if it carries a name; LAY-16 for covers) |
+| Slide deck, print piece (flyer, packaging) | layout, typography (+ brand; BRAND-10 for packaging) |
+| Infographic of any kind | layout + `layout/infographics.md` (INF rules; LAY-18 panels; LAY-19 data in code), typography, illustration (+ character, brand); structure pass (EN-4) |
+| Menu board, signage, timetable, price list | layout (LAY-7, LAY-17), typography; light energy pass at most |
+| Type is the point (wordmark, editorial page, type-led poster) | typography (+ layout or web-ui) |
+| A named brand or product, or a brand guide | brand (+ the medium's module); no brand input: `core/brand-intake.md` at step 0 |
+| Web page, landing page, pricing, app screen, dashboard (how it looks) | web-ui (UI-12 for mood) + `core/energy-pass.md` (full for heroes, pricing, app home; light for dashboards) (+ typography; brand; lookbook, optional, for the direction) |
+| Sign-up, checkout, settings, multi-step task (how it works) | ux (+ web-ui); energy pass skipped |
+| A whole product or prototype | web-ui, ux |
+| 3D model, prop, asset, scene | 3d (+ illustration for a beauty render) |
+| 3D as reference for a drawing | 3d, technical-drawing |
+| Logo, mascot, icon set | brand (BRAND-9: one step past the literal), illustration, web-ui (size and contrast) |
+| Storyboard, comic, carousel, image sequence | illustration (ILL-7; `notes.md` for transitions), LAY-18 (+ film `story.md`, `review.md` when it plans video shots) |
+| Video, film, animation, trailer, clip, shot list | film (README + `story.md` + `review.md`; `edit.md` for grading, cutting, sound, titles; `crossover.md` when unsure) + composition, colour-value for key frames (+ typography, character) |
+| Clip made or altered by a video model | film (+ `generated.md`), character, brand for any lettering |
+| Mood, energy or a distinctive feel; correct but flat; choosing between versions | aesthetic-critique (+ the medium's modules, which still decide blockers) |
+| From-scratch concepts; correct but generic; naming a described vibe, screens included | lookbook, optional (at most one concept in three; hint strength; never on fixes or edits) |
+| Any piece that sells or greets, once the checks pass | `core/energy-pass.md`: full pass for posters, covers, packaging, logos, social cards, picture books, character art, heroes and app home screens; structure pass for infographics; light for notices, dashboards, menus; skip for forms and dense data |
+| Just "bolder", "quieter" or "distill" | `core/commands.md` + the medium's modules |
+| Remake from scratch ("redo", "rejig", "start over", "reimagine") | `core/first-principles.md` + the medium's modules + aesthetic-critique (AES-9); brand if it carries a mark |
+| Image from an AI image model | illustration, technical-drawing; brand for any lettering (BRAND-8); character for people or animals (CHAR-9 gate); exact copy and counts (CD-7) |
 
 ## Order of checks when several modules apply
 
@@ -41,37 +41,37 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 
 ## Token cost per module
 
-Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.9.6, 3 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
+Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.9.7, 3 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
 
 | File or set | Tokens |
 |---|---|
-| `AGENTS.md` (entry point, always) | 1,373 |
-| `core/principles.md` (always) | 1,930 |
-| `core/critique-loop.md` (always) | 3,194 |
-| `core/critique-template.md` (when writing a critique) | 1,490 |
-| `core/energy-pass.md` (eye-catch after the checks pass) | 3,347 |
+| `AGENTS.md` (entry point, always) | 1,364 |
+| `core/principles.md` (always) | 1,929 |
+| `core/critique-loop.md` (always) | 3,160 |
+| `core/critique-template.md` (when writing a critique) | 1,482 |
+| `core/energy-pass.md` (eye-catch after the checks pass) | 2,761 |
 | `core/commands.md` (bolder, quieter, distill) | 1,185 |
-| `core/creative-direction.md` (direct mode, open briefs) | 1,343 |
-| `core/first-principles.md` (remake from scratch) | 3,210 |
-| `core/brand-intake.md` (no brand input) | 698 |
-| `core/evidence.md` (before claiming people prefer something) | 2,879 |
-| `core/which-modules.md` (this file) | 2,377 |
+| `core/creative-direction.md` (direct mode, open briefs) | 1,706 |
+| `core/first-principles.md` (remake from scratch) | 3,233 |
+| `core/brand-intake.md` (no brand input) | 701 |
+| `core/evidence.md` (before claiming people prefer something) | 2,961 |
+| `core/which-modules.md` (this file) | 2,170 |
 | `core/interaction-flow.md` (pointer and diagram only) | 724 |
-| `modules/3d/` | 1,878 |
-| `modules/aesthetic-critique/` | 3,145 |
-| `modules/brand/` | 3,131 |
-| `modules/character/` | 3,805 |
-| `modules/colour-value/` | 4,160 |
-| `modules/composition/` (README 5,662, COMP-1 to 18; `sitting-right.md` 3,487, COMP-19 to 25, before delivery) | 9,149 |
-| `modules/film/` (README 5,801 + `story.md` 3,067 + `review.md` 1,416; `edit.md` 4,450 for grading, cutting, sound and titles; `generated.md` 2,246 for generated clips; `crossover.md` 1,373 when unsure) | 10,284 |
-| `modules/illustration/` (+ notes 484) | 4,201 |
-| `modules/lookbook/` (README only; search `looks.json` with `tools/lookbook_find.py`, never load it whole) | 1,288 |
-| `modules/layout/` (README 5,924; `infographics.md` 1,739, INF-1 to 6, for any infographic) | 7,663 |
+| `modules/3d/` | 1,896 |
+| `modules/aesthetic-critique/` | 3,160 |
+| `modules/brand/` | 3,900 |
+| `modules/character/` | 4,211 |
+| `modules/colour-value/` | 4,205 |
+| `modules/composition/` (README 5,730, COMP-1 to 18; `sitting-right.md` 3,505, COMP-19 to 25, before delivery) | 9,235 |
+| `modules/film/` (README 5,887 + `story.md` 3,156 + `review.md` 1,422; `edit.md` 3,863 for grading, cutting, sound and titles; `generated.md` 2,262 for generated clips; `crossover.md` 1,375 when unsure; `notes.md` 799, optional film references) | 10,465 |
+| `modules/illustration/` (+ notes 493) | 4,296 |
+| `modules/lookbook/` (README only; search `looks.json` with `tools/lookbook_find.py`, never load it whole) | 1,289 |
+| `modules/layout/` (README 5,974; `infographics.md` 1,611, INF-1, INF-2, INF-4 to INF-6, for any infographic) | 7,585 |
 | `modules/technical-drawing/` | 3,038 |
-| `modules/typography/` (+ `fonts/CATALOGUE.md` when picking type, about 7,400) | 4,028 |
-| `modules/ux/` | 1,895 |
-| `modules/web-ui/` (+ notes 437) | 2,304 |
-| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 2,497 |
-| `BIBLIOGRAPHY.md` (reading list; not needed for a critique) | 4,394 |
+| `modules/typography/` (+ `fonts/CATALOGUE.md` when picking type, about 7,400) | 4,063 |
+| `modules/ux/` | 1,917 |
+| `modules/web-ui/` (+ notes 447) | 2,755 |
+| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 2,498 |
+| `BIBLIOGRAPHY.md` (reading list; not needed for a critique) | 4,736 |
 
-Typical loads, with the always-on set and the critique template (about 8,000): a screen (web-ui + ux) about 12,200; a social card (layout + typography) about 18,000, plus about 5,700 for the composition README and 3,500 for `sitting-right.md`; a figure (character + technical-drawing + illustration) about 19,000; a poster remake (first-principles + layout + typography + aesthetic-critique) about 24,300; an infographic (layout with `infographics.md`, typography, illustration) about 23,900; a video review (film README, `story.md` and `review.md`) about 18,300, or 25,000 with `edit.md` and `generated.md`. For a pre-delivery check alone, load just `composition/sitting-right.md` (COMP-19 to 25). If that is too much, use the lite file.
+Typical loads, with the always-on set and the critique template (about 8,000): a screen (web-ui + ux + energy pass) about 15,400; a social card (layout + typography) about 18,000, plus about 5,700 for the composition README and 3,500 for `sitting-right.md`; a figure (character + technical-drawing + illustration) about 19,500; a poster remake (first-principles + layout + typography + aesthetic-critique) about 24,400; an infographic (layout with `infographics.md`, typography, illustration) about 23,900; a video review (film README, `story.md` and `review.md`) about 18,400, or 24,500 with `edit.md` and `generated.md`. For a pre-delivery check alone, load just `composition/sitting-right.md` (COMP-19 to 25). If that is too much, use the lite file.

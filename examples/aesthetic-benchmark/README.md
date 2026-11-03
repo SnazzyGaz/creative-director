@@ -20,20 +20,20 @@ Does the aesthetic layer (`modules/aesthetic-critique/`) help produce work peopl
 
 **No added story.** B may restyle what the brief gives but may not add characters, creatures, objects, text or claims without room in the brief or owner sign-off ([AES-10](../../modules/aesthetic-critique/README.md#aes-10-revision-with-regression-check)). Judges should be told to mark any addition they notice.
 
-**Judges.** At least 5 people who did not make the work; ideally a mix of designers and the target audience. Agreement among independent judges is the standard check for creative quality [S145]. A model judge may be added as an extra rater but is reported separately, because model judges show position and self-preference bias [S146].
+**Judges.** At least 5 people who did not make the work; ideally a mix of designers and the target audience. Agreement among independent judges is the standard check for creative quality [SRC-145]. A model judge may be added as an extra rater but is reported separately, because model judges show position and self-preference bias [SRC-146].
 
 **Measures.**
 
 | Measure | How |
 |---|---|
-| Pairwise preference | Per pair: A, B or "neither is good enough"; then strong or marginal. Report the win rate with a confidence interval. Pairwise comparison is more reliable than rating scales [S143, S144]. |
+| Pairwise preference | Per pair: A, B or "neither is good enough"; then strong or marginal. Report the win rate with a confidence interval. Pairwise comparison is more reliable than rating scales [SRC-143, SRC-144]. |
 | Brief fidelity | Per image: does it meet the frozen brief and must-keeps? yes / partly / no |
 | Distinctiveness | Per pair: which is more specific to this brief and less interchangeable? |
 | Coherence | Per pair: which reads as one art direction? |
 | Revision success | Original vs revised, judged blind (below): share of revisions preferred |
 | Regression rate | Share of revisions that break a measured check (contrast, type size, collision, anatomy, safe area) that the previous round passed |
 | Technical compliance | Measured blockers per image, from the repo's tools (not judged) |
-| Inter-rater agreement | Krippendorff's alpha on the pairwise choices [S148]; report it, and treat preferences with low agreement as taste, not quality |
+| Inter-rater agreement | Krippendorff's alpha on the pairwise choices [SRC-148]; report it, and treat preferences with low agreement as taste, not quality |
 
 **Blind revision test.** For each B piece, show judges the original and the revised version (sides randomised), without the critique. If judges can't tell or prefer the original, the revision loop isn't helping, however good the critique reads.
 

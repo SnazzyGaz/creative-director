@@ -7,7 +7,7 @@ Usage:
 Coordinates are pixels in IMG. Writes OUTDIR/<label>.png for each region (enlarged
 --zoom times, Lanczos), OUTDIR/sheet.png (all crops labelled, plus a small overview
 with the boxes drawn), and OUTDIR/anatomy-pass.md: one blank line per crop and check
-(A1-A11) to fill with PASS/FAIL and what was seen. The tool does not judge anatomy;
+(A1-A12) to fill with PASS/FAIL and what was seen. The tool does not judge anatomy;
 it makes sure every region is looked at up close and recorded.
 """
 import os, sys
@@ -57,9 +57,9 @@ def main(a):
     lines = [f"# Anatomy pass: {os.path.basename(img)}", "", "A1 hand count per person: ___ (PASS/FAIL)", ""]
     for label, b in boxes:
         k = kind(label)
-        for chk in CHECKS.get(k, ["A1-A11 (name the checks that apply)"]):
+        for chk in CHECKS.get(k, ["A1-A12 (name the checks that apply)"]):
             lines.append(f"- {label}.png {b} | {chk} | PASS/FAIL | ")
-    lines += ["", "A10 clothing symmetry: ___", "A11 ground and shadow: ___", "", "Any FAIL = blocker. Re-run every line after each image edit."]
+    lines += ["", "A10 clothing symmetry: ___", "A11 ground and shadow: ___", "A12 props whole and used as briefed: ___", "", "Any FAIL = blocker. Re-run every line after each image edit."]
     open(os.path.join(out, "anatomy-pass.md"), "w").write("\n".join(lines) + "\n")
     print(f"{len(crops)} crops -> {out}/ (sheet.png, anatomy-pass.md)")
 

@@ -8,7 +8,7 @@ Which rules from the rest of the repo carry into moving images. Three kinds: rul
 |---|---|
 | TD-PER-1 to TD-PER-3, TD-ELL, TD-PRO | Per frame. Horizons and verticals that bend over time are a generated-video fault (FILM-GEN-9). |
 | TD-LIT-1 to TD-LIT-3, CV-7 | Per frame, and now across the cuts of a scene too (FILM-LIT-1). |
-| CHAR-1 to CHAR-10 (anatomy pass CHAR-9) | On sampled frames, weighted to mid-gesture (FILM-GEN-3). |
+| CHAR-1 to CHAR-11 (anatomy pass CHAR-9) | On sampled frames, weighted to mid-gesture (FILM-GEN-3). |
 | CV-1 to CV-3, CV-9 | Value plan, notan, not hue alone, colour-vision deficiency: on key frames. |
 | CORE-2, CORE-3, ILL-2, ILL-5 | One focus per beat, read at blur and thumbnail, on key frames. |
 | ILL-11 | Generic AI look; FILM-GEN-10 adds its motion defaults. |
@@ -23,7 +23,7 @@ Which rules from the rest of the repo carry into moving images. Three kinds: rul
 
 | Rule | What changes |
 |---|---|
-| COMP-1 to COMP-18 (placement, weight, eye path) | Motion and faces lead attention more than any static line [S279, S280]; placement is judged across the cut, not only within the frame (FILM-EDIT-2, FILM-COMP-2). |
+| COMP-1 to COMP-18 (placement, weight, eye path) | Motion and faces lead attention more than any static line [SRC-279, SRC-280]; placement is judged across the cut, not only within the frame (FILM-EDIT-2, FILM-COMP-2). |
 | COMP-5 (room in front) | Becomes looking room and lead room, matched across shot/reverse-shot (FILM-SHOT-6, FILM-CON-3). |
 | COMP-19 to COMP-25 (Sitting right) | Run on key frames only; balance resolves over time (a single is answered by its reverse). A flag, never a push to centre (FILM-COMP-4). |
 | ILL-6 (one readable moment) | Becomes one readable beat per shot, and a chain of beats (FILM-STORY-0). |
@@ -48,4 +48,4 @@ Which rules from the rest of the repo carry into moving images. Three kinds: rul
 
 ## Myths that carry over
 
-The same myths as for stills (`core/evidence.md`): thirds as a law, the golden ratio, fixed colour meanings, lines that force the eye. Film adds its own (`edit.md`, "Myths and weak claims").
+The same myths as for stills (`core/evidence.md`): thirds as a law, the golden ratio, fixed colour meanings, lines that force the eye. Film adds its own (`notes.md`, "Myths and weak claims").

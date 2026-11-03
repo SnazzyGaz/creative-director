@@ -4,7 +4,7 @@ description: 'Judge and improve visual work (generated images, illustrations, te
 license: MIT (see LICENSE)
 metadata:
   author: Garyck Arntzen
-  version: "0.9.6"
+  version: "0.9.7"
   repository: https://github.com/SnazzyGaz/creative-director
 ---
 
@@ -30,8 +30,8 @@ Whenever you make or review something visual, or the user says `+ creative direc
 | `colour-value` | a value plan, palette or colour that looks wrong in place |
 | `layout` | a fixed frame: social card, poster, cover, slide, print, infographics |
 | `typography` | words: type choice, scale, measure, leading, setting |
-| `brand` | a name, logo or brand guide (official marks: BRAND-4, BRAND-8) |
-| `web-ui` | a screen: grid, components, contrast, colour roles |
+| `brand` | a name, logo, mascot, packaging or brand guide (official marks: BRAND-4, BRAND-8) |
+| `web-ui` | a screen: mood, grid, components, contrast, colour roles |
 | `ux` | a task people complete: flows, errors, defaults |
 | `3d` | a 3D file or render (build checks via [model-qa](https://github.com/SnazzyGaz/model-qa)) |
 | `aesthetic-critique` | mood, energy or distinctiveness; choosing between versions |
@@ -43,11 +43,11 @@ For small contexts, `lite/CREATIVE-DIRECTOR-LITE.md` holds the loop, core rules 
 ## The job in seven steps
 0. **Read the ask** (`critique-loop.md` section 0). Unprompted hand-off: ranked sign-off blurb, apply nothing until the owner agrees (FLOW-1). "Just fix it": no blurb, same checks (FLOW-4). From-scratch words only: remake (`first-principles.md`). "Bolder", "quieter", "distill": `core/commands.md`.
 1. **Brief:** six lines (CD-1) and an intent model, each line [brief] or [inferred]. No brand input: `brand-intake.md`.
-2. **Render** the real output at its real size, plus a thumbnail. Never critique from code or a prompt.
-3. **Look:** `tools/autocheck.py` first (fix its FAILs, quote its numbers), then five tests (`tools/look.py`); the anatomy pass if a person, hand or animal is in frame; then the energy pass.
+2. **Render** at real size, plus a thumbnail. Never critique from code or a prompt.
+3. **Look:** `tools/autocheck.py` first, then five tests (`tools/look.py`); re-read every fixed string and count (CD-7); the anatomy pass if a person, hand or animal is in frame; then the energy pass.
 4. **Critique** with the template: a rule ID on every point, measured findings apart from interpreted ones, blockers first.
-5. **Fix:** at most 3 a round (a signed-off list is applied in full), each checked as applied; re-render and compare.
-6. **Stop and deliver:** when clearly better (round 3 routine, 5 max), or take over if broken (loop section 6). Deliver the result first with one done / not done line per point and the QA gates re-run (FLOW-3).
+5. **Fix:** at most 3 a round (a signed-off list in full), each checked as applied; re-render and compare.
+6. **Stop and deliver:** when clearly better (round 3 routine, 5 max), or take over if broken (loop section 6). The result first, then one done / not done line per point, QA gates re-run (FLOW-3).
 
 ## Always true
 - **Blockers are only the MUST-BE-RIGHT list** in `critique-loop.md`; everything else is a default.
@@ -55,14 +55,14 @@ For small contexts, `lite/CREATIVE-DIRECTOR-LITE.md` holds the loop, core rules 
 - **Official marks** go in from the official file, unaltered, never redrawn or generated; check generated images for invented marks (BRAND-4, BRAND-8).
 - **Balance is not symmetry.** The *Sitting right* pass (COMP-19 to 25) flags only what looks accidental and asks "intended?". Fix with a counterweight or by committing harder to the asymmetry. Never centre or symmetrise by default.
 - **Evidence grades are honest:** state only well-supported findings and standards as facts; no golden ratio, thirds-as-law or colour-emotion tables as reasons (`evidence.md`).
-- **Tone:** neutral and factual, like a thesis supervisor; no praise padding, no harshness. Label your own verdicts as self-judged. Where no rule settles it, ask the owner.
+- **Tone:** neutral and factual; no praise padding, no harshness. Label your own verdicts as self-judged. Where no rule settles it, ask the owner.
 
 ## Tools (optional)
-`tools/` has small Python scripts (Pillow, NumPy): the auto check, look tests, contrast, screenshots, vanishing points, ellipses, grid, whitespace, balance, anatomy crops, charts, 3D intersections. See `tools/README.md`. If you can't run code, do the checks by eye and say so.
+`tools/` has small Python scripts (Pillow, NumPy): the auto check, look tests, contrast, screenshots, perspective, ellipses, grid, whitespace, balance, anatomy crops, charts, 3D intersections (`tools/README.md`). If you can't run code, check by eye and say so.
 
 ## Files in this skill
 `core/` (principles and critique-loop always, the rest as above), `modules/<name>/README.md` (as above and `core/which-modules.md`), `lite/CREATIVE-DIRECTOR-LITE.md` (short version for small contexts), `tools/` (optional Python: Pillow, NumPy; Playwright for page checks; `pip install -r tools/requirements.txt`), `fonts/CATALOGUE.md` (theme catalogue of free fonts; the font files are in `creative-director-fonts.zip` on the repo's assets-v1 release, or on Google Fonts), `SOURCES.md`, `BIBLIOGRAPHY.md`. Worked examples and lookbook image sheets live in the repo, not here: https://github.com/SnazzyGaz/creative-director
 
 **Needs:** a model that can see images, and a way to render or screenshot the work at real size. Without vision, say the review is rules-only.
 
-This folder is generated from the repo root by `tools/package_skill.py` (version 0.9.6). To change a rule, edit the repo's root files, not this copy.
+This folder is generated from the repo root by `tools/package_skill.py` (version 0.9.7). To change a rule, edit the repo's root files, not this copy.

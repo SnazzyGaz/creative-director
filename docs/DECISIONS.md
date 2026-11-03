@@ -2,7 +2,7 @@
 
 ## Decided by the maintainer (2026-11-01)
 1. **Single-subject framing:** no default. Centred and off-centre are equally valid; judge each case by intent (ILL-1, CORE-11, `core/evidence.md`). Myth notes on thirds and the golden ratio stay.
-2. **ILL-8 mood conventions:** stay as a default, not a blocker. Only curved-vs-sharp has lab support [S42].
+2. **ILL-8 mood conventions:** stay as a default, not a blocker. Only curved-vs-sharp has lab support [SRC-42].
 3. **UI-10 (text to 200% without breaking):** MUST-BE-RIGHT on every project.
 4. **Gesture before structure:** moved from TD-CON-2 to illustration as **ILL-10**, a default, not a blocker. TD-CON-2 is left as a pointer.
 5. **Taste-overrides list:** not created for now.

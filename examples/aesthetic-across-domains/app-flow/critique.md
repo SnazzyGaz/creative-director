@@ -24,7 +24,7 @@
 
 ### Findings: MEASURED
 - UI-6 (MUST-BE-RIGHT): descriptions #c4c4cc on white **1.73:1**; prices #a78bfa **2.72:1**; status bar and labels #a1a1aa 2.56:1; terms #d4d4d8 1.48:1 at 10 px; button label white on the teal end **1.86:1**; on the ticket, "Valid until" (white at 80% on teal) **1.62:1**. **Blocker.**
-- UX-9, UI-5, WCAG 2.5.8: Adult/Child toggle about 25 px tall; back chevron an 18 px glyph with no padding; payment radios 14 px on 36 px rows. All are under the UI-5 target of 44-48 px, and the chevron and radios also fail the WCAG 2.5.8 minimum of 24 x 24 px [S160]. **Blocker** for one-handed use at a stop.
+- UX-9, UI-5, WCAG 2.5.8: Adult/Child toggle about 25 px tall; back chevron an 18 px glyph with no padding; payment radios 14 px on 36 px rows. All are under the UI-5 target of 44-48 px, and the chevron and radios also fail the WCAG 2.5.8 minimum of 24 x 24 px [SRC-160]. **Blocker** for one-handed use at a stop.
 - CD-1 (MUST-BE-RIGHT): "Service fee £0.00" and a promo-code field are not in the brief; the fee line suggests charges that do not exist. **Blocker.**
 - UX-1, CD-1: the ticket shows no date; the brief's moving band is missing. A driver cannot tell today's Day ticket from a screenshot of an old one. **Blocker.**
 - UX-2, UX-7: the price is not on either button ("Continue", "Pay now"); the rider confirms an amount they cannot see at the moment of tapping.

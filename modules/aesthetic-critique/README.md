@@ -96,7 +96,7 @@ A deliberate break that works is recorded as a deliberate exception, not fixed.
   3. what the preferred one costs (what it gives up);
   4. strength of preference: **strong** or **marginal**;
   5. "none is good enough" when that is the honest answer.
-- **Check:** Compare at the real viewing size and as thumbnails. Swap left and right and judge again: if the choice flips, the preference is marginal (judges, human or model, favour position [S146]). Don't average dimension notes into a score; people are more consistent comparing than rating [S143, S144], which is why preference data for generated images is collected as pairs [S147].
+- **Check:** Compare at the real viewing size and as thumbnails. Swap left and right and judge again: if the choice flips, the preference is marginal (judges, human or model, favour position [SRC-146]). Don't average dimension notes into a score; people are more consistent comparing than rating [SRC-143, SRC-144], which is why preference data for generated images is collected as pairs [SRC-147].
 - **Fix:** If marginal, keep the version that breaks fewer rules and preserves more of the intent, and say it was close.
 - **See:** CD-3, `core/critique-template.md`.
 - **Grade:** Procedure.
@@ -113,15 +113,15 @@ A deliberate break that works is recorded as a deliberate exception, not fixed.
 - **What:** Aim for "most advanced, yet acceptable": make one or two aspects fresh (an unusual palette, crop or shape language) and keep the rest typical for the genre and readable.
 - **Check:** Name the genre and its tradition first (a farm jam, a literary classic, a crime novel). Name what is new. Name what is familiar. A traditional product made to look contemporary reads as out of place (owner's note on a jam label, S47). If nothing is new, it is generic (AES-6, ILL-11). If everything is new, the viewer has nothing to hold.
 - **Fix:** Pull back the novelty to one or two dimensions; or add one fresh choice to a safe piece.
-- **Grade:** Well supported. Typicality and novelty both raise appeal and work together [S232]; prototypical forms are easier to process and liked more [S233, S37]; repeated exposure raises liking [S257].
-- **See:** Hekkert et al. [S232]; Winkielman et al. [S233]; Bornstein [S257]; AES-6.
+- **Grade:** Well supported. Typicality and novelty both raise appeal and work together [SRC-232]; prototypical forms are easier to process and liked more [SRC-233, SRC-37]; repeated exposure raises liking [SRC-257].
+- **See:** Hekkert et al. [SRC-232]; Winkielman et al. [SRC-233]; Bornstein [SRC-257]; AES-6.
 
 ### AES-12. Taste in art and design is less shared than you think: ask the owner
 - **What:** Treat preferences about style, mood and beauty in designed and artistic work as personal unless evidence says otherwise. Agreement between people is high for faces and landscapes but low for art and architecture.
 - **Check:** Is a critique point resting on "people like X"? Is it a measured finding (`core/evidence.md`) or a taste call?
 - **Fix:** Keep measured findings and craft defaults; put taste calls to the owner of the work as a choice between options, with the trade-off stated.
-- **Grade:** Well supported. In one large study, shared taste explained about 66% of preference for faces and about 29% for natural landscapes, but only about 11-12% for architecture and 8% for artworks [S251]. Models of aesthetic experience give a large role to the viewer's knowledge and context [S258].
-- **See:** Vessel et al. [S251]; Leder et al.; Leder & Nadal [S258]; AES-0; AES-9.
+- **Grade:** Well supported. In one large study, shared taste explained about 66% of preference for faces and about 29% for natural landscapes, but only about 11-12% for architecture and 8% for artworks [SRC-251]. Models of aesthetic experience give a large role to the viewer's knowledge and context [SRC-258].
+- **See:** Vessel et al. [SRC-251]; Leder et al.; Leder & Nadal [SRC-258]; AES-0; AES-9.
 
 ---
 

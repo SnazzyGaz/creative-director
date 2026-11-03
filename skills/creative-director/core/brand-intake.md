@@ -45,4 +45,4 @@ Logo: <file, clear space, min size> | Must / must not: <...>
 Status: given | partly assumed | assumed
 ```
 
-Sources: Wheeler, *Designing Brand Identity* (brand standards and assets) [S119]; Moran, NN/g, *The Four Dimensions of Tone of Voice* [S121]; BetterBriefs/IPA briefing guide [S88]; CD-1.
+Sources: Wheeler, *Designing Brand Identity* (brand standards and assets) [SRC-119]; Moran, NN/g, *The Four Dimensions of Tone of Voice* [SRC-121]; BetterBriefs/IPA briefing guide [SRC-88]; CD-1.

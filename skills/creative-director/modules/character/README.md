@@ -4,7 +4,7 @@ Figures, faces, hands and animals in drawings, paintings, 3D characters and AI-g
 
 Format: **What / Why / Check / Fix / Grade / Source**. Rules marked **MUST-BE-RIGHT** are blockers; the rest are defaults. Every check is something you can count, measure or compare on the image, at 200% zoom where small. Choices of style (how cartoony, how idealised, how cute) are taste calls for the owner of the work; the rules only ask that the choice is made and kept.
 
-Why it matters: people are expert face and body readers. Small errors that would pass in a chair or a tree read as wrong, sick or eerie in a person, and broken hands and eyes are among the most noticed signs that an image is AI-generated [S110, S141].
+Why it matters: people are expert face and body readers. Small errors that would pass in a chair or a tree read as wrong, sick or eerie in a person, and broken hands and eyes are among the most noticed signs that an image is AI-generated [SRC-110, SRC-141].
 
 ---
 
@@ -14,7 +14,7 @@ Why it matters: people are expert face and body readers. Small errors that would
 - **Check:** Measure the head (chin to crown) and count it into the full height. Do figures of the same age and type in one piece or series agree within about half a head?
 - **Fix:** Adjust the drifting figure to the chosen system; record the system on a character sheet for sets.
 - **Grade:** Craft wisdom.
-- **Source:** Loomis, *Figure Drawing for All It's Worth* [S134]; TD-PRO-1.
+- **Source:** Loomis, *Figure Drawing for All It's Worth* [SRC-134]; TD-PRO-1.
 
 ### CHAR-2. Landmarks line up (MUST-BE-RIGHT for realistic figures)
 - **What:** In a standing realistic adult: crotch near the halfway mark of the height; with arms hanging, wrists near crotch level and fingertips around mid-thigh; elbows near the navel or waist; knee about midway between hip joint and sole; shoulder width about 2 heads (often less in women). Upper arm and forearm about the same length.
@@ -22,31 +22,31 @@ Why it matters: people are expert face and body readers. Small errors that would
 - **Check:** Draw horizontal lines through the landmarks and compare. On a bent or foreshortened limb, compare segment lengths along the limb, allowing for perspective (TD-PER-3).
 - **Fix:** Correct the one or two landmarks that are off; lengthen or shorten at the joints, not mid-bone.
 - **Grade:** Craft wisdom (artistic anatomy).
-- **Source:** Loomis [S134]; Goldfinger, *Human Anatomy for Artists* [S142]; Hampton, *Figure Drawing: Design and Invention* [S135].
+- **Source:** Loomis [SRC-134]; Goldfinger, *Human Anatomy for Artists* [SRC-142]; Hampton, *Figure Drawing: Design and Invention* [SRC-135].
 
 ### CHAR-3. Hands are countable and built right (MUST-BE-RIGHT)
 - **What:** Each visible hand has the right number of digits for the design (five for realistic; a consistent four is a valid cartoon convention), the thumb on the correct side for a left or right hand, fingers bending only at their joints and only towards the palm, and lengths in order (middle longest; index and ring similar; little finger ending near the ring finger's last joint). Hand length is about the face from chin to hairline.
-- **Why:** Hands are the most frequent and most noticed anatomy error in generated images [S141, S110].
-- **Check:** At 200%, count digits per hand, including hidden ones that should be implied. For each hand, say which arm it belongs to and whether the thumb is on the right side. Check for extra joints, merged fingers, or fingers passing through held objects. Compare hand length with the face. For a hand that holds something, name the grip: in a power grip the fingers curl round the object and the thumb presses back from the other side; in a precision grip the object is pinched between fingertips and thumb pad [S149]. A hand that "holds" with flat, straight fingers, or with the thumb on the same side as the fingers, isn't holding.
+- **Why:** Hands are the most frequent and most noticed anatomy error in generated images [SRC-141, SRC-110].
+- **Check:** At 200%, count digits per hand, including hidden ones that should be implied. For each hand, say which arm it belongs to and whether the thumb is on the right side. Check for extra joints, merged fingers, or fingers passing through held objects. Compare hand length with the face. For a hand that holds something, name the grip: in a power grip the fingers curl round the object and the thumb presses back from the other side; in a precision grip the object is pinched between fingertips and thumb pad [SRC-149]. A hand that "holds" with flat, straight fingers, or with the thumb on the same side as the fingers, isn't holding.
 - **Fix:** Repaint or regenerate the hand alone (inpaint) with a simpler pose: a fist, a hand partly hidden, or an object held. Use a photo or a 3D hand as reference rather than guessing.
-- **Grade:** Partly supported (viewers notice hand errors [S110]); construction is craft.
-- **Source:** Narasimhaswamy et al., *HanDiffuser* [S141]; Kellogg Insight / Groh [S110]; Hampton [S135]; Napier [S149].
+- **Grade:** Partly supported (viewers notice hand errors [SRC-110]); construction is craft.
+- **Source:** Narasimhaswamy et al., *HanDiffuser* [SRC-141]; Kellogg Insight / Groh [SRC-110]; Hampton [SRC-135]; Napier [SRC-149].
 
 ### CHAR-4. Faces: placement and matched eyes (MUST-BE-RIGHT for the eyes)
 - **What:** In an adult head seen front-on, the eyes sit near the halfway line of the head; the gap between the eyes is about one eye width; the ears lie between brow and nose base; the mouth's corners fall roughly under the pupils. Both eyes match in size, shape and highlight direction, and look at the same point.
-- **Why:** Mismatched eyes are a common AI-image tell and a main trigger of eeriness in realistic faces: abnormal eyes in a realistic face were rated far more unpleasant than the same change in a less realistic face [S136].
+- **Why:** Mismatched eyes are a common AI-image tell and a main trigger of eeriness in realistic faces: abnormal eyes in a realistic face were rated far more unpleasant than the same change in a less realistic face [SRC-136].
 - **Check:** Draw the centre line through the face and the eye line across. Compare the two eyes (mirror one over the other in perspective). Do the catchlights point the same way as the key light? Do the irises point at one target? Count teeth only if the mouth is open: a row of uniform, too-many teeth is a tell.
 - **Fix:** Correct the odd eye to match the other in perspective; align gaze; simplify teeth.
-- **Grade:** Partly supported (face perception research [S136]); placement is craft.
-- **Source:** Loomis [S134]; Seyama & Nagayama [S136]; Kellogg Insight / Groh [S110].
+- **Grade:** Partly supported (face perception research [SRC-136]); placement is craft.
+- **Source:** Loomis [SRC-134]; Seyama & Nagayama [SRC-136]; Kellogg Insight / Groh [SRC-110].
 
 ### CHAR-5. Keep one level of realism
 - **What:** Skin, eyes, hair and proportion share one level of realism. Stylised proportions (big eyes, big head) belong with stylised rendering; photo-real rendering needs realistic proportions.
-- **Why:** The uncanny effect is strongest when cues disagree, such as realistic skin with doll-sized or enlarged eyes [S136]. Reviews find the most consistent support for this mismatch explanation, not for one universal curve [S138].
+- **Why:** The uncanny effect is strongest when cues disagree, such as realistic skin with doll-sized or enlarged eyes [SRC-136]. Reviews find the most consistent support for this mismatch explanation, not for one universal curve [SRC-138].
 - **Check:** List the realism level of skin, eyes, hair, hands and proportion. Do any two disagree clearly?
 - **Fix:** Move the outlier towards the rest (usually: make the eyes and proportions realistic, or simplify the rendering).
-- **Grade:** Partly supported (mismatched realism cues [S138]).
-- **Source:** Seyama & Nagayama [S136]; Mori, MacDorman & Kageki [S137]; Kätsyri et al. [S138].
+- **Grade:** Partly supported (mismatched realism cues [SRC-138]).
+- **Source:** Seyama & Nagayama [SRC-136]; Mori, MacDorman & Kageki [SRC-137]; Kätsyri et al. [SRC-138].
 
 ### CHAR-6. Weight and gesture
 - **What:** The figure has a line of action (ILL-10) and stands where it can balance: in a standing pose, a plumb line from the pit of the neck lands on or between the supporting feet. With weight on one leg, the hips tilt up on that side and the shoulders tilt the other way (contrapposto).
@@ -55,31 +55,31 @@ Why it matters: people are expert face and body readers. Small errors that would
 - **Check:** Cover the props and text: does the trait still read? Drop the plumb line. Is it over the support? If weight is on one leg, do hips and shoulders tilt in opposite directions? Are both feet on the ground plane (TD-PER-1)?
 - **Fix:** Shift the hips over the support, or add the movement that explains the imbalance (a step, a lean on something). For a trait, act it out in the pose (shoulders, hands, lean, eyes) and cut props and text that explain it.
 - **Grade:** Craft wisdom.
-- **Source:** Hampton [S135]; Loomis [S134]; ILL-10.
+- **Source:** Hampton [SRC-135]; Loomis [SRC-134]; ILL-10.
 
 ### CHAR-7. Every limb starts and ends somewhere (MUST-BE-RIGHT)
 - **What:** Count limbs and follow each from shoulder or hip to hand or foot. No extra, missing, fused or swapped limbs; no limb merging into another person, clothing or furniture; held objects are gripped by a hand you can trace.
 - **Why:** Fused and extra limbs are classic generated-image failures and make the image unusable for most purposes.
 - **Check:** For each person: 2 arms, 2 legs (or reasons why not). Trace each one. At overlaps between people, which body does each limb belong to?
 - **Fix:** Inpaint the region with a clearer pose (separate the figures, reduce overlaps); if more than one limb is wrong, regenerate or rework the figure (`core/critique-loop.md` section 6).
-- **Grade:** Partly supported (viewers notice limb errors [S110]).
-- **Source:** Kellogg Insight / Groh [S110]; [S141].
+- **Grade:** Partly supported (viewers notice limb errors [SRC-110]).
+- **Source:** Kellogg Insight / Groh [SRC-110]; [SRC-141].
 
 ### CHAR-8. Stylisation is deliberate and consistent
 - **What:** Stylised choices (big heads and eyes, tiny feet, elongated limbs) follow the brief and stay the same across every image of the same character: proportions, colours, costume details, marks.
-- **Why:** Bigger heads, larger eyes and rounder faces measurably raise cuteness ratings (the baby schema) [S140], so they're a valid tool, but only when they're the intended effect. In a series, any drift reads as a different character.
+- **Why:** Bigger heads, larger eyes and rounder faces measurably raise cuteness ratings (the baby schema) [SRC-140], so they're a valid tool, but only when they're the intended effect. In a series, any drift reads as a different character.
 - **Check:** Put all images of the character side by side: same head count, eye size relative to head, colours (sample them), costume details? List the differences.
 - **Fix:** Make a one-page character sheet (front, side, colours, head count) and correct each image to it. How stylised to go is the owner's call.
-- **Grade:** Cuteness cues: well supported [S140]. Consistency: craft.
-- **Source:** Glocker et al. [S140]; CHAR-1.
+- **Grade:** Cuteness cues: well supported [SRC-140]. Consistency: craft.
+- **Source:** Glocker et al. [SRC-140]; CHAR-1.
 
 ### CHAR-9. Anatomy pass: crop, trace, count (MUST-BE-RIGHT, delivery gate)
 - **What:** Whenever a person, a hand or an animal is in the frame, run the anatomy pass below before any hand-off. Each check is done on a zoomed crop of one region, never on the whole image at a glance. Any failed line is a blocker: the work can't be delivered as it is, whatever else is right.
-- **Why:** Generators still produce wrong finger counts, merged body parts and limbs that belong to no one [S150, S151], and people spot these faults readily [S150, S110]. They are small in the frame, so a whole-image look misses them; a check of light, edges and type passes them straight through.
+- **Why:** Generators still produce wrong finger counts, merged body parts and limbs that belong to no one [SRC-150, SRC-151], and people spot these faults readily [SRC-150, SRC-110]. They are small in the frame, so a whole-image look misses them; a check of light, edges and type passes them straight through.
 - **Check:** The table below, one line per crop, each line pass or fail with what was seen.
-- **Fix:** Edit or inpaint the failing region only, with the anatomy spelled out (which arm, which side, how many fingers, what the hand holds and how) [S151]. Then run the **whole** pass again, not only the fixed line: an edit can move, add or remove another hand. If three edits fail, regenerate the figure (`core/critique-loop.md` section 6) or report the failure; don't deliver it.
+- **Fix:** Edit or inpaint the failing region only, with the anatomy spelled out (which arm, which side, how many fingers, what the hand holds and how) [SRC-151]. Then run the **whole** pass again, not only the fixed line: an edit can move, add or remove another hand. If three edits fail, regenerate the figure (`core/critique-loop.md` section 6) or report the failure; don't deliver it.
 - **Grade:** Procedure.
-- **Source:** Kamali et al. [S150]; Lu et al., *HandRefiner* [S151]; Napier [S149]; Bridgman [S153]; Goldfinger [S142, S152].
+- **Source:** Kamali et al. [SRC-150]; Lu et al., *HandRefiner* [SRC-151]; Napier [SRC-149]; Bridgman [SRC-153]; Goldfinger [SRC-142, SRC-152].
 
 ### CHAR-10. Animals: count and match the species (MUST-BE-RIGHT for counts)
 - **What:** Each animal has the right number of eyes, legs, wings or fins for its species, in the right places; parts connect to the body; eyes match each other and catch the same light; teeth, claws and beaks are the right kind and number for the animal. Stylised animals may simplify, but consistently.
@@ -87,7 +87,15 @@ Why it matters: people are expert face and body readers. Small errors that would
 - **Check:** Name the species. Count eyes, limbs or fins against a photo or anatomy reference of that species. Trace each limb or fin to where it joins the body. Zoom on the eye: one pupil, round or slit as the species has it, highlight on the key-light side. If the mouth is open, look at the teeth.
 - **Fix:** Edit the region with the species and the count stated; use a reference photo.
 - **Grade:** Craft wisdom (animal anatomy).
-- **Source:** Goldfinger, *Animal Anatomy for Artists* [S152]; Kamali et al. [S150].
+- **Source:** Goldfinger, *Animal Anatomy for Artists* [SRC-152]; Kamali et al. [SRC-150].
+
+### CHAR-11. Props: built whole, used as the brief says (MUST-BE-RIGHT where the brief names the prop or the action)
+- **What:** A prop a character holds, wears or uses is complete and plausible as an object (a sock is one whole sock, a cup has its handle), and the character does with it what the brief says: eats, chews, reads, throws, not merely holds. A defining action is the story; a held prop is a pose.
+- **Why:** Generators make objects that break apart and default to "holding" whatever the verb. In batch 8 a creature brief said it eats lost socks: the with-skill side's sock was broken (S108) and the creature held its sock rather than chewing it (B90). Internal evidence, one judge.
+- **Check:** Name each prop and the verb the brief gives it. Crop the prop at 2-4x: is it one whole, believable object? Does the pose show the verb, or only possession?
+- **Fix:** Edit the region with the object and the action stated ("chewing the end of one whole striped sock"); regenerate if the object stays broken. Then rerun the anatomy pass (grip, A5).
+- **Grade:** Procedure (a check of the brief against the render); the cases are internal evidence.
+- **Source:** CHAR-9; CD-7; `examples/blind-test/RESULTS.md`.
 
 ## The anatomy pass (CHAR-9)
 
@@ -101,21 +109,22 @@ Why it matters: people are expert face and body readers. Small errors that would
 | A2 | Finger count | Each visible hand: five digits for realistic work (four is a valid, consistent cartoon convention); hidden digits are plausibly hidden, not missing | CHAR-3 |
 | A3 | Trace | Each hand follows back along a wrist and forearm, through an elbow, to a shoulder on the correct side of the same person; no hand without an arm, no arm ending without a hand or an occluder | CHAR-7 |
 | A4 | Thumb and side | Thumb on the correct side for a left or right hand seen palm-in or palm-out | CHAR-3 |
-| A5 | Grip | A held object is wrapped by curled fingers with the thumb opposing (power grip), or pinched between fingertips and thumb pad (precision grip); fingers sit on the surface, not through it [S149] | CHAR-3 |
+| A5 | Grip | A held object is wrapped by curled fingers with the thumb opposing (power grip), or pinched between fingertips and thumb pad (precision grip); fingers sit on the surface, not through it [SRC-149] | CHAR-3 |
 | A6 | Joints | Elbows, knees, wrists and finger joints bend only the way they can; no extra joints; upper arm and forearm similar length | CHAR-2, CHAR-3 |
 | A7 | Merges and extras | No extra or missing limbs, no limb fused with another person, clothing or object, no sleeve that changes arm partway | CHAR-7 |
 | A8 | Face | Eyes match in size, shape and highlight; gaze converges (or both lids closed alike); teeth, if shown, are a believable row, not a strip | CHAR-4 |
 | A9 | Animals | Eye count and pupil, limb or fin count and placement match the species; each joins the body | CHAR-10 |
 | A10 | Clothing symmetry | Collars, cuffs, sleeves, earrings and glasses match left to right | TD-PRO-2 |
 | A11 | Ground and shadow | Feet on the ground plane; shadows agree with the key light | CHAR-6, TD-LIT-3 |
+| A12 | Props | Each prop is one whole object, and the character does with it what the brief says (chews, reads, throws), not only holds it | CHAR-11 |
 
-Record it in the critique (template section *Anatomy pass*): crop file, line number, pass or fail, what was seen. A1-A9 failures are blockers; A10-A11 follow their own rules.
+Record it in the critique (template section *Anatomy pass*): crop file, line number, pass or fail, what was seen. A1-A9 failures are blockers, and A12 where the brief names the prop or action; A10-A11 follow their own rules.
 
 ---
 
 ## Myths
 
-- **"Eight heads is the correct human."** It's an idealised standard; average adults are nearer 7-7.5 [S134]. See TD-PRO-1.
-- **"Beautiful faces follow the golden ratio" (the "phi mask").** There's no good evidence; tests of golden-ratio preference are weak in general [S38]. Averageness and symmetry have modest effects on attractiveness, and that's what the research supports [S139].
-- **"Perfect symmetry looks best."** Preference for symmetry is modest, and mirror-perfect faces can look artificial [S139]. Check that features *match*; don't mirror whole faces.
-- **"The uncanny valley is one universal curve."** The evidence for a single curve is mixed; mismatched realism cues are the best-supported trigger [S138]. Use CHAR-5 rather than "make it less realistic".
+- **"Eight heads is the correct human."** It's an idealised standard; average adults are nearer 7-7.5 [SRC-134]. See TD-PRO-1.
+- **"Beautiful faces follow the golden ratio" (the "phi mask").** There's no good evidence; tests of golden-ratio preference are weak in general [SRC-38]. Averageness and symmetry have modest effects on attractiveness, and that's what the research supports [SRC-139].
+- **"Perfect symmetry looks best."** Preference for symmetry is modest, and mirror-perfect faces can look artificial [SRC-139]. Check that features *match*; don't mirror whole faces.
+- **"The uncanny valley is one universal curve."** The evidence for a single curve is mixed; mismatched realism cues are the best-supported trigger [SRC-138]. Use CHAR-5 rather than "make it less realistic".

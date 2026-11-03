@@ -1,6 +1,6 @@
 # Proposed GitHub repo (original plan)
 
-The plan the repo was set up from. Kept for reference.
+> **Historical.** This is the plan the repo was set up from, kept for reference only. It is not kept up to date: for the current layout see the [README](../README.md) and [`core/which-modules.md`](../core/which-modules.md).
 
 ## Name and home
 - Suggested: `SnazzyGaz/creative-director` (matches the folder name and the existing `model-qa` / `bot-creative-toolkit` naming: short, lower-case, hyphenated).

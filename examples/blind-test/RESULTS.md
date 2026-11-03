@@ -159,18 +159,18 @@ Still open after v0.9.4: notices and infographics that are clear but plain (S37,
 v0.9.5 adds rules for the batch 6 gaps, as internal evidence (one judge), untested until batch 7 is judged:
 - **Infographics get the full energy pass** (EN-1, new EN-4): a one-sentence art direction with personality and an emotional register that fits the issuer; visual richness that carries information; "clean" is not a slide template. The busy-versus-chaotic line is checkable: one illustration style, one reading path, one hero and at most two secondary focal points, no filler pictures (S61, S63, S65, S66, S68).
 - **Panels show something specific and different** (LAY-18): the detail each step is about, never one picture repeated, with people and objects kept the same (S64, S59).
-- **Charts, maps and routes are drawn from the data in code** (new LAY-19, `tools/datagraphic.py`): bars composited into the art, or the art generated around a reserved area; bars checked within 2% of the data; a loop closes at start = finish and a crossing shows a bridge (B53, B60, S60). Graded well supported for honest scales (Pandey et al. 2015, S336) and internal evidence for the generator failures.
+- **Charts, maps and routes are drawn from the data in code** (new LAY-19, `tools/datagraphic.py`): bars composited into the art, or the art generated around a reserved area; bars checked within 2% of the data; a loop closes at start = finish and a crossing shows a bridge (B53, B60, S60). Graded well supported for honest scales (Pandey et al. 2015, SRC-336) and internal evidence for the generator failures.
 
 v0.9.6 answers the batch 7 gaps, as internal evidence (one judge), untested until another infographic batch is judged. New [`modules/layout/infographics.md`](../../modules/layout/infographics.md):
 - **Layout first; the chart designed in** (INF-1): plan the hierarchy, grid and reading path first; the chart is the hero, in the piece's own colours, line weight, corners and type. Build it in code with spot art, or generate the full design with the chart area styled in and replace only the data marks. No white box behind it, no labels cut by strokes (`datagraphic.py check-panel`; `route` moves labels off the line) (S71, S73, S74).
 - **An illustration budget** (INF-2): one spot illustration or one icon set, no bigger than the information; simplified icons for secondary facts; no photoreal unless asked (S70, S76).
-- **Distinct steps, visible flow** (INF-3): each step or period its own frame, colour or icon, with connectors (S75, S78).
+- **Distinct steps, visible flow** (INF-3, now in LAY-18): each step or period its own frame, colour or icon, with connectors (S75, S78).
 - **Chart type fits the data** (INF-4): part of a whole as a pie or donut of six slices at most, drawn from the data (`datagraphic.py donut`, `check-donut`); comparisons as bars (S72; Cleveland and McGill 1984, Spence and Lewandowsky 1991).
 - **A hero title with hierarchy logic** (INF-5, S75), and **every required line with safety and medical steps checked** (INF-6, a blocker; S70, S77).
 - **Energy from structure** (EN-4 rewritten): infographics get a structure pass (layout, type, colour and a focal chart), not more pictures.
 - **Warmth as a named choice** (CV-11): neutral white stays the default for notices, UI, data and clinical pieces; a warm paper is allowed where context, brand, era or mood calls for it, named in the plan; `autocheck.py --warm "reason"` passes it (S78).
 
-Open after batch 8, not yet answered by a rule: screens that are correct but lack soul or atmosphere (S88, S100, S107); exact units, strings, case and counts that slip (B84, B95, B100, B79); ideas that are too literal (S92, S93); and props drawn wrong (B90, S108). Any v0.9.7 change would be internal evidence (one judge) until tested.
+Batch 8 gaps, answered by rules in v0.9.7: screens that are correct but lack soul or atmosphere (S88, S100, S107: UI-12, and screens join the energy pass); exact units, strings, case and counts that slip (B84, B95, B100, B79: CD-7, a blocker); ideas that are too literal (S92, S93, S97: BRAND-9, ILL-17); props drawn wrong (B90, S108: CHAR-11); the author name lost on a cover (S101: LAY-16); and basic packaging branding (S102, S89, S91: BRAND-10). These are internal evidence (one judge) and untested until another batch is judged.
 
 ## Files
 

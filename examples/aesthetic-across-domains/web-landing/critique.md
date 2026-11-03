@@ -23,7 +23,7 @@
 - Nav links and button are real links with a visible focus ring from the browser.
 
 ### Findings: MEASURED
-- CD-1, AES-10 (MUST-BE-RIGHT): invented reviews, names, ratings and a "10,000+" customer figure on a real business's page. **Blocker**: these are claims the studio did not make. (UK consumer law bans fake consumer reviews outright under the Digital Markets, Competition and Consumers Act 2024 [S161]; reason enough not to ship invented ones.)
+- CD-1, AES-10 (MUST-BE-RIGHT): invented reviews, names, ratings and a "10,000+" customer figure on a real business's page. **Blocker**: these are claims the studio did not make. (UK consumer law bans fake consumer reviews outright under the Digital Markets, Competition and Consumers Act 2024 [SRC-161]; reason enough not to ship invented ones.)
 - UX-1, CD-6: 0 of 6 booking facts on the page. **Blocker** for a page whose job is booking.
 - UI-6 (MUST-BE-RIGHT): section subtitles, card text, nav links and footer in #9ca3af on white = **2.54:1** (needs 4.5:1). The hero paragraph (white at 85% on the pink end, #ec4899) = **2.75:1**. White button label on the pink end of the last button = 3.53:1, under 4.5:1 for 16 px text. **Blocker.**
 - TYPE-9: Inter for everything, all centred; listed as a generic tell.

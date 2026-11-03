@@ -7,13 +7,14 @@
 - [Critique loop](core/critique-loop.md): always loaded; read the ask, brief, render, look, critique, fix, take over, deliver; the blocker list
 - [Critique template](core/critique-template.md): when writing a critique
 - [Commands](core/commands.md): what "bolder", "quieter" and "distill" mean, with checks
-- [Energy pass](core/energy-pass.md): eye-catch after the checks pass (focal hook, display type, colour, movement, call to action, issuer mark, concept fit) without slop
+- [Energy pass](core/energy-pass.md): eye-catch after the checks pass (focal hook, display type, colour, movement, call to action, issuer mark, concept fit), screens with a named mood included, without slop
 - [Creative direction](core/creative-direction.md): intent, mood and judging between versions
 - [First-principles remake](core/first-principles.md): when asked to redo or reimagine from scratch
 - [Which modules to load](core/which-modules.md): task-to-module table and token costs
 - [Evidence](core/evidence.md): grades and myths, before claiming people prefer something
+- [Retired IDs](docs/RETIRED-IDS.md): rule IDs that moved or merged, kept reserved
 - [Modules](modules/): technical-drawing, illustration, character, web-ui, ux, 3d, typography, layout, brand, aesthetic-critique, composition, colour-value, film
-- [Film](modules/film/README.md): cinematography and the moving image, story first (`story.md`): shots, continuity, camera, light, flashing; colour, editing, sound, subtitles and myths in `edit.md`; generated-video QC, crossover map
+- [Film](modules/film/README.md): cinematography and the moving image, story first (`story.md`): shots, continuity, camera, light, flashing; colour, editing, sound and subtitles in `edit.md`; look vocabulary and myths in `notes.md`; generated-video QC, crossover map
 - [Lookbook](modules/lookbook/README.md): optional; 320 established looks and wildcards with tags and image sheets, for from-scratch concepts or work that feels generic; search by use, mood, colour or "more like this"
 - [Install guide](docs/install.md): steps for Hermes Agent, Claude, Codex, Cursor, Gemini CLI, Copilot, Devin, Cline, Aider, Grok Bot and any chat LLM
 - [Skill folder](skills/creative-director/SKILL.md): the same rules as an installable Agent Skill (generated; edit the root files)
@@ -22,6 +23,6 @@
 - [Font library](fonts/README.md): theme-grouped free fonts (OFL / Apache) with a catalogue and specimens
 - [Tools](tools/README.md): `autocheck.py` runs every measurable check in one go (pass, fail or flag per rule ID); measuring scripts (contrast, grids, perspective, ellipses, intersections, whitespace, balance)
 - [Case study](examples/case-study-may-specials/README.md): one sign remade from first principles, with every check shown
-- [Blind test kit](examples/blind-test/README.md): 100 briefs made with and without the skill by the same image model, judged blind by the owner of the work; batches 1 and 2 tied 10 to 10, batches 3 to 5 (after the energy pass) went 22 to 7 with one tie, batches 6 and 7 (infographics only, v0.9.4 and v0.9.5) 4 to 6 and 3 to 7, batch 8 (30 briefs over six themes, v0.9.6) 20 to 10; 59 to 40 with one tie overall (p = 0.035, meeting the 59-of-100 bar set in advance, a clear result); screens are the weak spot; results, keys and caveats in RESULTS.md
+- [Blind test kit](examples/blind-test/README.md): 100 briefs made with and without the skill by the same image model, judged blind by the owner of the work; batches 1 and 2 tied 10 to 10, batches 3 to 5 (after the energy pass) went 22 to 7 with one tie, batches 6 and 7 (infographics only, v0.9.4 and v0.9.5) 4 to 6 and 3 to 7, batch 8 (30 briefs over six themes, v0.9.6) 20 to 10; 59 to 40 with one tie overall (p = 0.035, meeting the 59-of-100 bar set in advance, a clear result); screens were the weak spot, and v0.9.7 adds rules for the batch 8 gaps (untested); results, keys and caveats in RESULTS.md
 - [Sources](SOURCES.md)
 - [Bibliography](BIBLIOGRAPHY.md): annotated reading list on composition, colour and beauty, with links to public-domain full texts

@@ -26,7 +26,7 @@
 - TD-PRO-1 (MUST-BE-RIGHT): matplotlib's default box aspect is 4:4:3 while the limits are 450:450:500 mm, so one millimetre of height is drawn at **0.675** of one millimetre of width. The back panel (150 x 235 mm) reads nearly square. **Blocker**: a pupil cutting from this would doubt the sizes.
 - CD-6 (done means the brief is met): screws are 8 scattered points (`ax.scatter`) with no shaft, no direction and no line to a part; four float in the middle of the base footprint where no panel sits. The sheet does not say where any screw goes. **Blocker** for an assembly sheet.
 - CORE-5 / TYPE-3: 4 of 6 part labels sit on top of another part or an edge ("Part 2" crosses the front and the base, "Part 6" lies on the roof over the back, "Part 4" crosses the left side's edge, "Part 1" sits on blue at 50% alpha). Black 9 pt text on the blue base at 50% alpha measures about 4.3:1, below 4.5:1 for small text.
-- CORE-1, AES-5: one line weight (1 pt) for edges, grid, axes and hole alike; ISO 128-2 (which replaced ISO 128-20) asks for at least two widths in a 2:1 ratio so outlines read above detail [S158].
+- CORE-1, AES-5: one line weight (1 pt) for edges, grid, axes and hole alike; ISO 128-2 (which replaced ISO 128-20) asks for at least two widths in a 2:1 ratio so outlines read above detail [SRC-158].
 - Brief gaps: no parts list with sizes, no assembly order.
 
 ### Findings: INTERPRETED
@@ -38,7 +38,7 @@
 1. [BLOCKER] TD-PRO-1. True proportions: an isometric projection at equal scale on all three axes, so 235 mm looks taller than 150 mm by the right amount.
 2. [BLOCKER] CD-6. Every screw drawn as a screw, aimed at its hole, with a thin chain line showing the path; one balloon (7) and a quantity in the list.
 3. [IMPROVEMENT] CORE-1, AES-5, AES-4. Solid opaque faces with three flat tones (lit top, front, side), thick outer outline, thin inner edges, extra-thin chain lines (4:2:1); remove axes, grid, panes and legend.
-4. [IMPROVEMENT] CORE-5, TYPE-3, ISO 6433 [S159]. Numbers in circles (balloons) outside the drawing, in two aligned columns, with leader lines ending on a dot inside each part; no text on the parts.
+4. [IMPROVEMENT] CORE-5, TYPE-3, ISO 6433 [SRC-159]. Numbers in circles (balloons) outside the drawing, in two aligned columns, with leader lines ending on a dot inside each part; no text on the parts.
 5. [IMPROVEMENT] AES-3, CORE-6, CD-6 brief gaps. One neutral palette plus one accent kept for the screws (the only bought parts); add the parts list with sizes and a three-step order.
 Text type: [edit] TYPE-10, Public Sans for the notes (catalogued as neutral and legible for UI and documents) and Martian Mono for numbers and sizes, so figures line up in the list.
 

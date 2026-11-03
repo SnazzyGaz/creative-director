@@ -2,6 +2,11 @@
 
 A set of design rules and a critique loop that any AI agent can read. It helps an agent judge and improve its own visual work (drawings, illustrations, 3D renders, web and app UI, UX flows, infographics, video): render it, look at it the way a designer would, cite a rule for every problem, make up to three small fixes, and stop when the work is clearly better. It stops agents inventing details nobody asked for (addresses, slogans, facts), breaking contrast and accessibility, and drifting from the brief, then an [energy pass](core/energy-pass.md) gives the work a focal hook, confident type and purposeful colour. Rules are grounded in perception research where it exists and in craft practice where it doesn't, and taste calls stay with the person who owns the work.
 
+**Start here**
+1. What it is: a rule set and critique loop an agent reads to judge and improve its own visual work.
+2. Always load [`AGENTS.md`](AGENTS.md), [`core/principles.md`](core/principles.md) and [`core/critique-loop.md`](core/critique-loop.md).
+3. Then add only the modules the task needs, from [`core/which-modules.md`](core/which-modules.md).
+
 **[Gallery](https://snazzygaz.github.io/creative-director/gallery/)** · **[Install as Grok Bot](https://x.ai/bot/XWBKgRnDOw7uR5SpKx3Af)** · **[Claude Skill zip](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip)** · **[Lite version](lite/CREATIVE-DIRECTOR-LITE.md)**
 
 <p><picture>
@@ -22,7 +27,7 @@ Works with any agent or LLM. [`docs/install.md`](docs/install.md) has the steps,
 | Claude Code, Codex, Cursor, Copilot, Devin, Cline | `gh skill install SnazzyGaz/creative-director creative-director --agent <agent>` (or `npx skills add SnazzyGaz/creative-director`) |
 | Gemini CLI | `gemini skills install https://github.com/SnazzyGaz/creative-director.git --path skills/creative-director` |
 | claude.ai, Claude desktop | Upload [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip) in Customize > Skills ([steps](docs/install.md#claude)) |
-| ChatGPT, Gemini Gems, Claude Projects, any chat LLM | Paste or upload [`creative-director-prompt.md`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt.md) (about 9k tokens) or the [full bundle](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt-full.md) (about 63k) |
+| ChatGPT, Gemini Gems, Claude Projects, any chat LLM | Paste or upload [`creative-director-prompt.md`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt.md) (about 12k tokens) or the [full bundle](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt-full.md) (about 93k) |
 | Aider | `aider --read AGENTS.md` |
 
 The skill is the [`skills/creative-director/`](skills/creative-director/) folder, in the open [Agent Skills](https://agentskills.io/specification) format. Inside a clone of this repo, agents read [`AGENTS.md`](AGENTS.md) directly or through a pointer file ([`CLAUDE.md`](CLAUDE.md), [`GEMINI.md`](GEMINI.md), [`.github/copilot-instructions.md`](.github/copilot-instructions.md), [`.cursor/rules/`](.cursor/rules/creative-director.mdc)). Every route leads back to `AGENTS.md`, and [`llms.txt`](llms.txt) is there for tools that read it.
@@ -33,7 +38,7 @@ The skill is the [`skills/creative-director/`](skills/creative-director/) folder
 |---|---|
 | **Self-check**<br>`+ creative director` | The agent runs the loop on its own output. Cheapest. |
 | **Consult**<br>`consult creative director` | Send the brief and the real output; get back a neutral critique with ranked fixes ([template](core/critique-template.md)). |
-| **Direct**<br>`creative director: direct this` | Joins at the start: writes the brief, sets direction, picks from rough options, reviews at checkpoints ([CD-1..6](core/creative-direction.md)). |
+| **Direct**<br>`creative director: direct this` | Joins at the start: writes the brief, sets direction, picks from rough options, reviews at checkpoints ([CD-1..7](core/creative-direction.md)). |
 | **Remake from scratch**<br>"redo", "rejig", "start over", "reimagine" | Steps back first: what the piece is, who it is for, its one job, the feeling, the given facts (checked against each other) and what must survive. Sends a 5-8 line brief for sign-off, then 2-3 concepts that differ in structure, recommends one, builds it and runs the full checks ([FP-1..9](core/first-principles.md), [example](examples/first-principles-remake/)). Without these words the light touch stays the default. |
 | **Nudge**<br>"bolder", "quieter", "distill" | Bolder adds contrast, scale difference and commitment; quieter lowers whatever competes with the main thing; with a lookbook look applied, each moves its strength one step. Distill removes until the one job still works, and no further ([commands](core/commands.md)). The *Sitting right* guard still applies, so none of them centres things by default. |
 
@@ -107,7 +112,7 @@ examples/   stress tests, round by round, including this README's own critique
 fonts/      61 free font families in 18 themes, catalogue and specimen sheets
 lite/       the loop, core rules and blockers in one short file
 skills/     the installable skill folder, generated from the files above
-docs/       gallery, README images, reference library, design notes (DECISIONS.md, PROPOSED-REPO.md)
+docs/       gallery, README images, reference library, design notes (DECISIONS.md, RETIRED-IDS.md; PROPOSED-REPO.md is historical)
 ```
 
 ## Principles of the critique
@@ -125,4 +130,4 @@ Every rule cites its sources in [SOURCES.md](SOURCES.md); what the research supp
 
 ## Licence
 
-MIT, see [LICENSE](LICENSE). Cited works stay with their authors; this repo paraphrases and links to them. The lookbook's `getty_aat` era terms come from the Getty Art & Architecture Thesaurus (AAT), J. Paul Getty Trust, under ODC-By 1.0 ([S266](SOURCES.md)).
+MIT, see [LICENSE](LICENSE). Cited works stay with their authors; this repo paraphrases and links to them. The lookbook's `getty_aat` era terms come from the Getty Art & Architecture Thesaurus (AAT), J. Paul Getty Trust, under ODC-By 1.0 ([SRC-266](SOURCES.md)).

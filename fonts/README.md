@@ -16,7 +16,7 @@
 4. Set it properly: one scale, real sizes, tracking, contrast (TYPE-2 to TYPE-6, UI-6).
 5. Check you haven't used the same family in your last few unrelated pieces. Vary it.
 
-A brand guide always wins over the catalogue (BRAND-3), and the face is a taste call for the owner of the work. The catalogue's notes are craft guidance written for this repo, not research findings; the research only says that readers do read personality into type (S156, S157 in [SOURCES.md](../SOURCES.md)).
+A brand guide always wins over the catalogue (BRAND-3), and the face is a taste call for the owner of the work. The catalogue's notes are craft guidance written for this repo, not research findings; the research only says that readers do read personality into type (SRC-156, SRC-157 in [SOURCES.md](../SOURCES.md)).
 
 ## Themes
 
@@ -43,7 +43,7 @@ A brand guide always wins over the catalogue (BRAND-3), and the face is a taste 
 
 ## Licences
 
-Every family is under the [SIL Open Font License 1.1](https://openfontlicense.org) or the Apache License 2.0. Both allow use in commercial work, embedding, and redistribution with the licence included; OFL fonts may not be sold on their own, and modified versions may not use a reserved font name [S154]. Each family's licence file sits next to its fonts. The files come unmodified from [github.com/google/fonts](https://github.com/google/fonts) (fetched 1 November 2026) [S155]. Skipped on purpose: large CJK families, and static weight sets where a variable font exists. Zilla Slab has no variable version, so only Regular, Italic, SemiBold and Bold are kept. Inter and Exo 2 are upright only.
+Every family is under the [SIL Open Font License 1.1](https://openfontlicense.org) or the Apache License 2.0. Both allow use in commercial work, embedding, and redistribution with the licence included; OFL fonts may not be sold on their own, and modified versions may not use a reserved font name [SRC-154]. Each family's licence file sits next to its fonts. The files come unmodified from [github.com/google/fonts](https://github.com/google/fonts) (fetched 1 November 2026) [SRC-155]. Skipped on purpose: large CJK families, and static weight sets where a variable font exists. Zilla Slab has no variable version, so only Regular, Italic, SemiBold and Bold are kept. Inter and Exo 2 are upright only.
 
 ## Rebuild
 

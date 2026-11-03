@@ -20,7 +20,7 @@ Format: **What / Why / Check / Fix / Auto / Grade / Source**. Tools are in `tool
 - **Fix:** Draw the horizon first; redraw the edges that miss it.
 - **Auto:** partly. Line detection (e.g. Hough/LSD) plus vanishing-point fitting can find the horizon and flag edges whose VPs fall off it: `tools/vp.py` (detect segments, group them by eye, then fit). Organic shapes give few straight edges, so a bot confirms.
 - **Grade:** Standard (projective geometry).
-- **Source:** Gurney, *Eye Level* series [S22]; Robertson & Bertling, *How to Draw* [S24].
+- **Source:** Gurney, *Eye Level* series [SRC-22]; Robertson & Bertling, *How to Draw* [SRC-24].
 
 ### TD-PER-2. Figures on the same ground plane share the eye-level line
 - **What:** If the viewer stands on the same flat ground as standing people of similar height, their heads (eyes) line up near the horizon regardless of distance.
@@ -29,7 +29,7 @@ Format: **What / Why / Check / Fix / Auto / Grade / Source**. Tools are in `tool
 - **Fix:** Rescale the figure so the horizon crosses it at the same body point as the others.
 - **Auto:** partly. A pose/keypoint detector can find eyes and feet; compare their heights to the horizon. Seated, sloped or child figures need a human eye.
 - **Grade:** Standard (projective geometry).
-- **Source:** Gurney, *Eye Level* series [S22].
+- **Source:** Gurney, *Eye Level* series [SRC-22].
 
 ### TD-PER-3. Verticals stay vertical unless three-point perspective is intended
 - **What:** In one- and two-point perspective, vertical edges are truly vertical. If they converge, they converge to one third vanishing point, consistently.
@@ -38,7 +38,7 @@ Format: **What / Why / Check / Fix / Auto / Grade / Source**. Tools are in `tool
 - **Fix:** Pick one system and redraw the outliers.
 - **Auto:** yes for buildings and objects with straight edges (angle measurement; `tools/vp.py`, group `v`); partly elsewhere.
 - **Grade:** Standard (projective geometry).
-- **Source:** Robertson & Bertling, *How to Draw* [S24].
+- **Source:** Robertson & Bertling, *How to Draw* [SRC-24].
 
 ### TD-PER-4. Foreshortening matches distance
 - **What:** Equal real lengths get shorter as they recede, and the spacing of repeated items (fence posts, tiles, windows) shrinks steadily toward the vanishing point.
@@ -47,7 +47,7 @@ Format: **What / Why / Check / Fix / Auto / Grade / Source**. Tools are in `tool
 - **Fix:** Space repeats with diagonals (or measuring lines), not by eye.
 - **Auto:** partly. With a detected VP, spacing ratios of repeated elements can be tested.
 - **Grade:** Standard (projective geometry).
-- **Source:** Robertson & Bertling, *How to Draw* [S24].
+- **Source:** Robertson & Bertling, *How to Draw* [SRC-24].
 
 ### TD-PER-5. Keep the subject inside the cone of vision
 - **What:** The important forms sit within about a 60° cone around the centre of vision (roughly 30° each side of the line of sight). Vanishing points for a box are far enough apart that its near corner is not sharper than 90°.
@@ -56,7 +56,7 @@ Format: **What / Why / Check / Fix / Auto / Grade / Source**. Tools are in `tool
 - **Fix:** Move the vanishing points further apart (step the viewer back), or crop so the subject stays near the centre.
 - **Auto:** partly. With detected VPs, VP spacing relative to the frame can be measured.
 - **Grade:** Craft wisdom (a drawing convention; the 60° figure varies by source).
-- **Source:** Vandruff, perspective course (cone of vision, station point) [S75]; Robertson & Bertling, *How to Draw* [S24].
+- **Source:** Vandruff, perspective course (cone of vision, station point) [SRC-75]; Robertson & Bertling, *How to Draw* [SRC-24].
 
 ## Proportion
 
@@ -67,7 +67,7 @@ Format: **What / Why / Check / Fix / Auto / Grade / Source**. Tools are in `tool
 - **Fix:** Re-block the figure with a head-unit scale before detailing.
 - **Auto:** partly. Keypoint detectors can estimate limb ratios on clear poses; foreshortened limbs and stylised characters need a bot or human.
 - **Grade:** Craft wisdom.
-- **Source:** Proko, *Human Proportions* (Loomis-based) [S25]; Loomis, *Figure Drawing for All It's Worth* [S26].
+- **Source:** Proko, *Human Proportions* (Loomis-based) [SRC-25]; Loomis, *Figure Drawing for All It's Worth* [SRC-26].
 - **Note:** Stylised work (chibi, heroic, cartoon) sets its own proportion. The rule is then *consistency with the chosen canon*, not realism. Ask the owner which canon applies.
 
 ### TD-PRO-2. Left and right agree
@@ -77,7 +77,7 @@ Format: **What / Why / Check / Fix / Auto / Grade / Source**. Tools are in `tool
 - **Fix:** Construct a centre line and the pair's alignment line, then redraw.
 - **Auto:** partly (landmark detection on faces works well; elsewhere confirm by eye).
 - **Grade:** Standard for symmetric objects (geometry); judging it by eye is craft.
-- **Source:** Gurney, *Getting a Fresh Eye* (flip/mirror) [S7]; Robertson & Bertling [S24].
+- **Source:** Gurney, *Getting a Fresh Eye* (flip/mirror) [SRC-7]; Robertson & Bertling [SRC-24].
 
 ## Light and shadow
 
@@ -88,7 +88,7 @@ Format: **What / Why / Check / Fix / Auto / Grade / Source**. Tools are in `tool
 - **Fix:** Pick the light position; repaint the outliers.
 - **Auto:** partly. Shadow-direction lines can be traced and tested for convergence; soft or multiple lights need a human eye.
 - **Grade:** Standard (optics) for one source; one key light as the default is craft wisdom.
-- **Source:** Gurney, *Light and Form* parts 1-2 [S20, S21].
+- **Source:** Gurney, *Light and Form* parts 1-2 [SRC-20, SRC-21].
 
 ### TD-LIT-2. Light family and shadow family stay separate
 - **What:** The darkest light area is lighter than the lightest shadow area (except highlights and occlusion accents). Reflected light lifts a shadow but keeps it in the shadow family.
@@ -97,7 +97,7 @@ Format: **What / Why / Check / Fix / Auto / Grade / Source**. Tools are in `tool
 - **Fix:** Pull reflected light down; keep the core shadow just past the terminator; darken occlusion where forms touch.
 - **Auto:** yes for the two-value split itself (posterise and compare with a mask); deciding which side *should* be lit needs the light direction.
 - **Grade:** Craft wisdom, consistent with optics.
-- **Source:** Gurney, *Light and Form* part 2 (core shadow, reflected light, occlusion) [S21]; Gurney, *How Many Values?* [S5].
+- **Source:** Gurney, *Light and Form* part 2 (core shadow, reflected light, occlusion) [SRC-21]; Gurney, *How Many Values?* [SRC-5].
 
 ### TD-LIT-3. Cast shadows sit on the ground
 - **What:** Objects touching a surface have a dark contact (occlusion) shadow at the touch point; cast shadows start at the object's base.
@@ -106,7 +106,7 @@ Format: **What / Why / Check / Fix / Auto / Grade / Source**. Tools are in `tool
 - **Fix:** Add the darkest small accent at the contact and connect the cast shadow to the base.
 - **Auto:** partly.
 - **Grade:** Standard (optics).
-- **Source:** Gurney, *Light and Form* part 2 [S21]; Robertson & Bertling, *How to Render* (constructing cast shadows in perspective) [S72].
+- **Source:** Gurney, *Light and Form* part 2 [SRC-21]; Robertson & Bertling, *How to Render* (constructing cast shadows in perspective) [SRC-72].
 
 ## Ellipses and construction
 
@@ -117,7 +117,7 @@ Format: **What / Why / Check / Fix / Auto / Grade / Source**. Tools are in `tool
 - **Fix:** Draw the axis first, then the ellipse square to it.
 - **Auto:** yes. Ellipse fitting (e.g. OpenCV `fitEllipse`) gives the minor-axis angle; compare it with the detected axis line (`tools/ellipse.py --axis`).
 - **Grade:** Standard (geometry).
-- **Source:** Drawabox Lesson 1, *Ellipses* [S23]; Robertson & Bertling, ch. 5 *Ellipses and Rotations* [S24]; Bartlett, *The Bad Ellipse* [S31].
+- **Source:** Drawabox Lesson 1, *Ellipses* [SRC-23]; Robertson & Bertling, ch. 5 *Ellipses and Rotations* [SRC-24]; Bartlett, *The Bad Ellipse* [SRC-31].
 
 ### TD-ELL-2. Ellipse degree changes with position
 - **What:** The further a circle is from eye level (or from the centre of vision), the more open its ellipse. Along a horizontal cylinder or a stack of rings, the degree changes steadily.
@@ -126,7 +126,7 @@ Format: **What / Why / Check / Fix / Auto / Grade / Source**. Tools are in `tool
 - **Fix:** Open ellipses progressively away from the eye level.
 - **Auto:** yes (fit and compare ratios; `tools/ellipse.py`; half-visible ellipses give an approximate degree).
 - **Grade:** Standard (geometry).
-- **Source:** Drawabox Lesson 1 (the "same degree on every cross-section" mistake is shown explicitly) [S23].
+- **Source:** Drawabox Lesson 1 (the "same degree on every cross-section" mistake is shown explicitly) [SRC-23].
 
 ### TD-ELL-3. Ellipses are smooth and symmetrical
 - **What:** No points at the ends of the major axis, no flat sides; both halves mirror across both axes.
@@ -135,7 +135,7 @@ Format: **What / Why / Check / Fix / Auto / Grade / Source**. Tools are in `tool
 - **Fix:** Redraw with the whole arm, ghosting the motion first.
 - **Auto:** yes (residual from fitted ellipse; `tools/ellipse.py` end check, tested only on synthetic shapes so far).
 - **Grade:** Standard (geometry).
-- **Source:** Drawabox Lesson 1 [S23]; Bartlett [S31].
+- **Source:** Drawabox Lesson 1 [SRC-23]; Bartlett [SRC-31].
 
 ### TD-CON-1. Build from simple forms before detail
 - **What:** Boxes, cylinders, spheres first; detail last.
@@ -144,11 +144,9 @@ Format: **What / Why / Check / Fix / Auto / Grade / Source**. Tools are in `tool
 - **Fix:** Redraw the construction layer, then re-apply detail.
 - **Auto:** no.
 - **Grade:** Craft wisdom.
-- **Source:** Robertson & Bertling [S24]; Loomis [S26].
-
-### TD-CON-2. Moved to illustration as ILL-10 (gesture before structure), 2026-11-01.
+- **Source:** Robertson & Bertling [SRC-24]; Loomis [SRC-26].
 
 ## Myths and weak claims
-- **"Eight heads tall is correct":** eight heads is an idealised or heroic proportion. Average adults are about 7.5 heads (TD-PRO-1) [S25]. Use whichever the brief calls for, consistently.
-- **"Stretched edges are just how perspective looks":** they usually mean the subject is outside the cone of vision (TD-PER-5) [S75].
-- **"Ellipses have pointed ends":** they never do, at any degree [S31].
+- **"Eight heads tall is correct":** eight heads is an idealised or heroic proportion. Average adults are about 7.5 heads (TD-PRO-1) [SRC-25]. Use whichever the brief calls for, consistently.
+- **"Stretched edges are just how perspective looks":** they usually mean the subject is outside the cone of vision (TD-PER-5) [SRC-75].
+- **"Ellipses have pointed ends":** they never do, at any degree [SRC-31].

@@ -6859,7 +6859,11 @@
     "#d2cab0",
     "#a6a993"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300018124",
+    "label": "Aesthetic Movement",
+    "url": "http://vocab.getty.edu/page/aat/300018124"
+   },
    "status": "live"
   },
   {
@@ -8045,7 +8049,11 @@
     "#2f4824",
     "#9f893b"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021477",
+    "label": "Neoclassical",
+    "url": "http://vocab.getty.edu/page/aat/300021477"
+   },
    "status": "live"
   },
   {
@@ -8843,7 +8851,11 @@
     "#2b363f",
     "#f1e4cd"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300172863",
+    "label": "Romantic",
+    "url": "http://vocab.getty.edu/page/aat/300172863"
+   },
    "status": "live"
   },
   {
@@ -8943,7 +8955,11 @@
     "#81a33b",
     "#dac583"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021503",
+    "label": "Impressionist",
+    "url": "http://vocab.getty.edu/page/aat/300021503"
+   },
    "status": "live"
   },
   {
@@ -8993,7 +9009,11 @@
     "#9ab0e1",
     "#efcb8d"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021505",
+    "label": "Neo-Impressionist",
+    "url": "http://vocab.getty.edu/page/aat/300021505"
+   },
    "status": "live"
   },
   {
@@ -9043,7 +9063,11 @@
     "#ef6b09",
     "#1a3849"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021508",
+    "label": "Post-Impressionist",
+    "url": "http://vocab.getty.edu/page/aat/300021508"
+   },
    "status": "live"
   },
   {
@@ -9093,7 +9117,11 @@
     "#053b8f",
     "#bfb49b"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021297",
+    "label": "Cloisonnist",
+    "url": "http://vocab.getty.edu/page/aat/300021297"
+   },
    "status": "live"
   },
   {
@@ -9143,7 +9171,11 @@
     "#979170",
     "#c1924d"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021423",
+    "label": "Intimist",
+    "url": "http://vocab.getty.edu/page/aat/300021423"
+   },
    "status": "live"
   },
   {
@@ -9193,7 +9225,11 @@
     "#30414c",
     "#bfafa1"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021514",
+    "label": "Symbolist",
+    "url": "http://vocab.getty.edu/page/aat/300021514"
+   },
    "status": "live"
   },
   {
@@ -9243,7 +9279,11 @@
     "#348658",
     "#cc856b"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021300",
+    "label": "Fauve",
+    "url": "http://vocab.getty.edu/page/aat/300021300"
+   },
    "status": "live"
   },
   {
@@ -9293,7 +9333,11 @@
     "#012e99",
     "#66821d"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021502",
+    "label": "Expressionist",
+    "url": "http://vocab.getty.edu/page/aat/300021502"
+   },
    "status": "live"
   },
   {
@@ -9343,7 +9387,11 @@
     "#458e33",
     "#792234"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300438588",
+    "label": "German Expressionist",
+    "url": "http://vocab.getty.edu/page/aat/300438588"
+   },
    "status": "live"
   },
   {
@@ -9393,7 +9441,11 @@
     "#258d51",
     "#d1171a"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021502",
+    "label": "Expressionist",
+    "url": "http://vocab.getty.edu/page/aat/300021502"
+   },
    "status": "live"
   },
   {
@@ -9443,7 +9495,11 @@
     "#d5bea0",
     "#8a8278"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300133798",
+    "label": "Analytical Cubist",
+    "url": "http://vocab.getty.edu/page/aat/300133798"
+   },
    "status": "live"
   },
   {
@@ -9493,7 +9549,11 @@
     "#cb502f",
     "#0c0c0f"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021499",
+    "label": "Synthetic Cubist",
+    "url": "http://vocab.getty.edu/page/aat/300021499"
+   },
    "status": "live"
   },
   {
@@ -9543,7 +9603,11 @@
     "#8c8664",
     "#d87c4f"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021374",
+    "label": "Futurist",
+    "url": "http://vocab.getty.edu/page/aat/300021374"
+   },
    "status": "live"
   },
   {
@@ -9592,7 +9656,11 @@
     "#0359e9",
     "#7a9bd5"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021397",
+    "label": "Rayonist",
+    "url": "http://vocab.getty.edu/page/aat/300021397"
+   },
    "status": "live"
   },
   {
@@ -9692,7 +9760,11 @@
     "#425d7a",
     "#9b3c34"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300109010",
+    "label": "Precisionist",
+    "url": "http://vocab.getty.edu/page/aat/300109010"
+   },
    "status": "live"
   },
   {
@@ -9742,7 +9814,11 @@
     "#ede7cb",
     "#b6d1d8"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021512",
+    "label": "Surrealist",
+    "url": "http://vocab.getty.edu/page/aat/300021512"
+   },
    "status": "live"
   },
   {
@@ -9842,7 +9918,11 @@
     "#38414a",
     "#090e11"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300056541",
+    "label": "Neue Sachlichkeit",
+    "url": "http://vocab.getty.edu/page/aat/300056541"
+   },
    "status": "live"
   },
   {
@@ -9892,7 +9972,11 @@
     "#737d84",
     "#b1765b"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021351",
+    "label": "Magic Realist",
+    "url": "http://vocab.getty.edu/page/aat/300021351"
+   },
    "status": "live"
   },
   {
@@ -9941,7 +10025,11 @@
     "#faf2e3",
     "#ca8b2b"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300022099",
+    "label": "Abstract Expressionist",
+    "url": "http://vocab.getty.edu/page/aat/300022099"
+   },
    "status": "live"
   },
   {
@@ -9989,7 +10077,11 @@
     "#003bc7",
     "#01bf71"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300022175",
+    "label": "Hard-edge",
+    "url": "http://vocab.getty.edu/page/aat/300022175"
+   },
    "status": "live"
   },
   {
@@ -10139,7 +10231,11 @@
     "#234d88",
     "#706b61"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300020775",
+    "label": "Gothic",
+    "url": "http://vocab.getty.edu/page/aat/300020775"
+   },
    "status": "live"
   },
   {
@@ -10189,7 +10285,11 @@
     "#c8e0f1",
     "#a5634e"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021142",
+    "label": "High Renaissance",
+    "url": "http://vocab.getty.edu/page/aat/300021142"
+   },
    "status": "live"
   },
   {
@@ -10239,7 +10339,11 @@
     "#bb9d7b",
     "#cbcfca"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300252246",
+    "label": "Northern Renaissance",
+    "url": "http://vocab.getty.edu/page/aat/300252246"
+   },
    "status": "live"
   },
   {
@@ -10288,7 +10392,11 @@
     "#603617",
     "#97632f"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021147",
+    "label": "Baroque",
+    "url": "http://vocab.getty.edu/page/aat/300021147"
+   },
    "status": "live"
   },
   {
@@ -10338,7 +10446,11 @@
     "#b2b78b",
     "#afb8c9"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021155",
+    "label": "Rococo",
+    "url": "http://vocab.getty.edu/page/aat/300021155"
+   },
    "status": "live"
   },
   {
@@ -10488,7 +10600,11 @@
     "#2f353b",
     "#c9c4c0"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021477",
+    "label": "Neoclassical",
+    "url": "http://vocab.getty.edu/page/aat/300021477"
+   },
    "status": "live"
   },
   {
@@ -10538,7 +10654,11 @@
     "#88b7e4",
     "#bbaa94"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021434",
+    "label": "Biedermeier",
+    "url": "http://vocab.getty.edu/page/aat/300021434"
+   },
    "status": "live"
   },
   {
@@ -10637,7 +10757,11 @@
     "#eabd99",
     "#d4bfb3"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300108215",
+    "label": "Luminist",
+    "url": "http://vocab.getty.edu/page/aat/300108215"
+   },
    "status": "live"
   },
   {
@@ -10687,7 +10811,11 @@
     "#484a4c",
     "#604b34"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300172861",
+    "label": "Realist",
+    "url": "http://vocab.getty.edu/page/aat/300172861"
+   },
    "status": "live"
   },
   {
@@ -10886,7 +11014,11 @@
     "#354451",
     "#8e4422"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021394",
+    "label": "Cubo-Futurist",
+    "url": "http://vocab.getty.edu/page/aat/300021394"
+   },
    "status": "live"
   },
   {
@@ -10984,7 +11116,11 @@
     "#c4bdb1",
     "#a18e78"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300458737",
+    "label": "return to order",
+    "url": "http://vocab.getty.edu/page/aat/300458737"
+   },
    "status": "live"
   },
   {
@@ -11431,7 +11567,11 @@
     "#f3cccb",
     "#dea6a8"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021434",
+    "label": "Biedermeier",
+    "url": "http://vocab.getty.edu/page/aat/300021434"
+   },
    "status": "live"
   },
   {
@@ -12365,7 +12505,11 @@
     "#eb7b0e",
     "#8a887f"
    ],
-   "getty_aat": null,
+   "getty_aat": {
+    "id": "300021426",
+    "label": "Art Deco",
+    "url": "http://vocab.getty.edu/page/aat/300021426"
+   },
    "status": "live"
   },
   {

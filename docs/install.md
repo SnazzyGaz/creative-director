@@ -166,7 +166,7 @@ Checked 3 November 2026.
 - [H1] Hermes Agent, *Skills System*: https://hermes-agent.nousresearch.com/docs/user-guide/features/skills
 - [H2] Hermes Agent, *Context Files*: https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files
 - [H3] Hermes Agent source, `tools/skills_hub_github.py` (GitHub installs download the full skill directory) and `tools/skills_guard.py` (install policy): https://github.com/NousResearch/hermes-agent
-- [S1] Agent Skills specification: https://agentskills.io/specification
+- [SRC-1] Agent Skills specification: https://agentskills.io/specification
 - [C1] Claude Code, *Extend Claude with skills*: https://code.claude.com/docs/en/skills
 - [C2] Claude Code, *How Claude remembers your project* (CLAUDE.md, AGENTS.md, `@` imports): https://code.claude.com/docs/en/memory
 - [C3] Anthropic, *Use skills in Claude*: https://support.claude.com/en/articles/12512180-use-skills-in-claude

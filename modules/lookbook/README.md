@@ -43,7 +43,7 @@ It matches `use`/`theme`, `mood` and `energy`, drops looks whose `avoid_for` mat
 
 - **More like this:** `--like LB-010` lists that look's `nearest_looks` (the three most similar renders) and the looks that list it back.
 - **By colour:** `--colour "#c5040f,#ed6322"` ranks looks by how close their dominant `colours` (3-5 hex values from the render) come to the given ones; combine with `--use`/`--mood`.
-- **Era term:** established looks with a clear movement or period carry `getty_aat` (Getty AAT Styles and Periods ID and preferred term, [S266](../../SOURCES.md), ODC-By). It is a pointer for further reading, not a claim that the look copies any work. Technique-named and generic looks are left blank on purpose.
+- **Era term:** established looks with a clear movement or period carry `getty_aat` (Getty AAT Styles and Periods ID and preferred term, [SRC-266](../../SOURCES.md), ODC-By). It is a pointer for further reading, not a claim that the look copies any work. Technique-named and generic looks are left blank on purpose.
 - **Search quality:** `python3 modules/lookbook/tests/score_find.py` scores the search on 26 generic briefs (`tests/briefs.json`): recall@8 and avoid-for violations.
 
 ## Cite
