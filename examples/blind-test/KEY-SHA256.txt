@@ -3,7 +3,7 @@ SHA-256 of the hidden keys, each committed before any judging of its batch:
 d1e52e08f9ab769cb7ab958d4ec3536c5cd34b5314497db1b87bbc97f37cc998  blind-test-key-2.json
 0396fb6c1db559fee593def6295b15c637938946974ed3b4e40ffe6cc1ce1c5f  blind-test-key-3.json
 fd10557425b1869e5912bc9fdbf4d88a3572e02f59a76dbaf340dbc35facb0db  blind-test-key-4.json
-f9fabf9263fa10eb270e68020f70a884e148d4d54705092d8e4729d8d8d2a71d  blind-test-key-5.json
+d6f15ed72a8e2c8722c23a269bde69b7c0c0b8112bbcf753b676f64df504c713  blind-test-key-5.json
 
 Each key holds a random salt, so the left/right placements could not be guessed from its hash.
 blind-test-key.json covers batch 1 (S01-S16); blind-test-key-2.json covers batch 2 (S17-S28);
