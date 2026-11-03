@@ -89,6 +89,7 @@ An annotated reading list behind `modules/composition/`, `modules/colour-value/`
 - **Curvature, symmetry, fractals:** Chuquichambi et al. 2022 [S225]; Jacobsen & Höfel 2002 [S234]; Spehar et al. 2003 and 2016 [S228].
 - **Colour:** Schloss & Palmer [S41]; Ou & Luo 2006 [S245]; Birch 2012 [S252].
 - **Whose taste:** Vessel et al. 2018 [S251].
+- **Stopping power (ads, eye-tracking):** Pieters & Wedel 2004 [S333]; Pieters, Wedel & Batra 2010 [S332], structured design versus pixel clutter. Energy pass (`core/energy-pass.md`).
 
 ## 6a. Film and the moving image (v0.9.0)
 

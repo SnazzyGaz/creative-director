@@ -3,14 +3,14 @@
   python3 examples/blind-test/score.py --key KEY.json [--key KEY-2.json ...] scoring-owner.csv [scoring-other.csv ...]
 
 Each batch has its own key (batch 1: S01-S16, briefs B1-B8, two sheets per brief with sides swapped; batch 2:
-S17-S28, briefs B9-B20, one sheet per brief). Pass every key whose sheets were judged. Each judge is reported on
+S17-S28, briefs B9-B20, one sheet per brief; batch 3: S29-S38, briefs B21-B30, one sheet per brief). Pass every key whose sheets were judged. Each judge is reported on
 their own, the owner of the work first; nothing is pooled across judges.
 
 One judgement per brief. Batch 1's two sheets for a brief are read as one judgement: if both were filled and
 agree, that is the pick; if only one was filled (a judge who recognises the repeat may skip it), that one is
 the pick; if they disagree, or the pick is "same", it is a tie. A one-sided sign test runs over the briefs that
 were not ties, for all briefs together and for each key's batch. With no ties, p < 0.05 needs 7 of 8,
-10 of 12, or 15 of 20 for one condition; anything less is reported as no clear result.
+10 of 12, 9 of 10, 15 of 20 or 20 of 30 for one condition; anything less is reported as no clear result.
 """
 import argparse, csv, json, math, collections, sys
 

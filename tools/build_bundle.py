@@ -15,7 +15,7 @@ import pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 REPO = "https://github.com/SnazzyGaz/creative-director"
-CORE = ["AGENTS.md", "core/principles.md", "core/critique-loop.md", "core/critique-template.md", "core/commands.md"]
+CORE = ["AGENTS.md", "core/principles.md", "core/critique-loop.md", "core/critique-template.md", "core/commands.md", "core/energy-pass.md"]
 REST = ["core/interaction-flow.md", "core/creative-direction.md", "core/first-principles.md", "core/brand-intake.md",
         "core/evidence.md", "core/which-modules.md"]
 MODULES = ["technical-drawing", "character", "illustration", "composition", "colour-value", "layout", "typography",

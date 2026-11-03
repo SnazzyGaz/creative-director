@@ -1,10 +1,10 @@
 <p><img alt="creative director: design judgement for AI agents. A construction drawing of a box and a cylinder in perspective." src="docs/assets/banner-dark.png" width="100%"></p>
 
-**What it gives an agent is restraint and accuracy, not flair.** It stops agents inventing details nobody asked for (addresses, slogans, facts), breaking contrast and accessibility, and drifting from the brief, and it makes them render and measure their own work before calling it done. It won't make work more exciting by itself: in the test below, the versions made without it are more vivid at a glance. They are also the ones with invented facts.
+**What it gives an agent is restraint and accuracy, not flair.** It stops agents inventing details nobody asked for (addresses, slogans, facts), breaking contrast and accessibility, and drifting from the brief, and it makes them render and measure their own work before calling it done. Restraint alone can overcorrect: in a [blind test](examples/blind-test/) judged by the owner of the work (20 briefs, one sample each) it tied 10 to 10 with the plain prompt, and the notes called the with-skill versions clean but often sterile, while the plain versions caught the eye but looked busy and generated. v0.9.2 adds an [energy pass](core/energy-pass.md) that runs once the checks pass: a focal hook, confident type, purposeful colour, movement and an obvious call to action, from structure rather than texture. A third batch tests it.
 
 **[Gallery](https://snazzygaz.github.io/creative-director/gallery/)** · **[Install as Grok Bot](https://x.ai/bot/XWBKgRnDOw7uR5SpKx3Af)** · **[Claude Skill zip](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip)** · **[Lite version](lite/CREATIVE-DIRECTOR-LITE.md)**
 
-> **Content freeze (since v0.9.1).** No new rules or modules until the [blind test](examples/blind-test/) (8 briefs, with and without the skill, same image model) has been judged. Until then only fixes go in: broken links, wrong facts, failing checks. The test has no results yet.
+> **Blind test.** Batches 1 and 2 (20 briefs) are judged: a tie, 10 to 10, no clear result. The energy pass (v0.9.2) is the one rule added in response; batch 3 (10 new briefs) tests it. Other new content waits for that result.
 
 <p><picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/baseline-dark.jpg">

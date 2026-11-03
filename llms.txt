@@ -7,6 +7,7 @@
 - [Critique loop](core/critique-loop.md): always loaded; read the ask, brief, render, look, critique, fix, take over, deliver; the blocker list
 - [Critique template](core/critique-template.md): when writing a critique
 - [Commands](core/commands.md): what "bolder", "quieter" and "distill" mean, with checks
+- [Energy pass](core/energy-pass.md): eye-catch after the checks pass (focal hook, display type, colour, movement, call to action) without slop
 - [Creative direction](core/creative-direction.md): intent, mood and judging between versions
 - [First-principles remake](core/first-principles.md): when asked to redo or reimagine from scratch
 - [Which modules to load](core/which-modules.md): task-to-module table and token costs
@@ -21,6 +22,6 @@
 - [Font library](fonts/README.md): theme-grouped free fonts (OFL / Apache) with a catalogue and specimens
 - [Tools](tools/README.md): `autocheck.py` runs every measurable check in one go (pass, fail or flag per rule ID); measuring scripts (contrast, grids, perspective, ellipses, intersections, whitespace, balance)
 - [Case study](examples/case-study-may-specials/README.md): one sign remade from first principles, with every check shown
-- [Blind test kit](examples/blind-test/README.md): 8 briefs made with and without the skill by the same image model, for blind judging; content is frozen until it is judged (no results yet)
+- [Blind test kit](examples/blind-test/README.md): 30 briefs made with and without the skill by the same image model, judged blind; batches 1 and 2 tied 10 to 10; batch 3 tests the energy pass
 - [Sources](SOURCES.md)
 - [Bibliography](BIBLIOGRAPHY.md): annotated reading list on composition, colour and beauty, with links to public-domain full texts

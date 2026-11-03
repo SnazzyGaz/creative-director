@@ -8,7 +8,7 @@ Whenever you make or review something visual, or the user says `+ creative direc
 ## What to load
 1. **Always:** this file, `core/principles.md` (CORE-1 to 11) and `core/critique-loop.md` (the ask, the loop, the blockers, sign-off and delivery: FLOW-1 to 5).
 2. **To write a critique:** `core/critique-template.md`.
-3. **Only when needed:** `core/creative-direction.md` (direct mode, open briefs), `core/brand-intake.md` (no brand input), `core/first-principles.md` (remake from scratch), `core/evidence.md` (before saying "people prefer X").
+3. **Only when needed:** `core/creative-direction.md` (direct mode, open briefs), `core/brand-intake.md` (no brand input), `core/first-principles.md` (remake from scratch), `core/energy-pass.md` (eye-catch), `core/evidence.md` (before saying "people prefer X").
 4. **Modules** (`modules/<name>/README.md`), only those the job needs. Combinations and token costs: `core/which-modules.md`.
 
 | Module | Load when the work has... |
@@ -34,7 +34,7 @@ For small contexts, `lite/CREATIVE-DIRECTOR-LITE.md` holds the loop, core rules 
 0. **Read the ask** (`critique-loop.md` section 0). Unprompted hand-off: ranked sign-off blurb, apply nothing until the owner agrees (FLOW-1). "Just fix it": no blurb, same checks (FLOW-4). From-scratch words only: remake (`first-principles.md`). "Bolder", "quieter", "distill": `core/commands.md`.
 1. **Brief:** six lines (CD-1) and an intent model, each line [brief] or [inferred]. No brand input: `brand-intake.md`.
 2. **Render** the real output at its real size, plus a thumbnail. Never critique from code or a prompt.
-3. **Look:** `tools/autocheck.py` first (fix its FAILs, quote its numbers), then five tests (`tools/look.py`); the anatomy pass if a person, hand or animal is in frame.
+3. **Look:** `tools/autocheck.py` first (fix its FAILs, quote its numbers), then five tests (`tools/look.py`); the anatomy pass if a person, hand or animal is in frame; then the energy pass.
 4. **Critique** with the template: a rule ID on every point, measured findings apart from interpreted ones, blockers first.
 5. **Fix:** at most 3 a round (a signed-off list is applied in full), each checked as applied; re-render and compare.
 6. **Stop and deliver:** when clearly better (round 3 routine, 5 max), or take over if broken (loop section 6). Deliver the result first with one done / not done line per point and the QA gates re-run (FLOW-3).

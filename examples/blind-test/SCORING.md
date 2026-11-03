@@ -6,13 +6,13 @@ One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge).
 |---|---|
 | `judge` | Your name, or the model name and version |
 | `judge_type` | `owner`, `person` or `model` |
-| `sheet` | Already filled: S01 to S28 (S01-S16 batch 1, S17-S28 batch 2) |
+| `sheet` | Already filled: S01 to S38 (S01-S16 batch 1, S17-S28 batch 2, S29-S38 batch 3) |
 | `left_id`, `right_id` | Already filled: the IDs printed under the two images |
 | `preferred_id` | The ID of the piece you'd hand over for that brief, or `SAME` if you truly can't choose |
 | `strength` | 1 slight, 2 clear, 3 strong |
 | `reason` | A few words: what decided it |
 
-**How to judge.** Look at the sheet as a whole, the way a client would: does it do what the brief asks, is the information right and readable, is it well made, would its audience respond to it. Go with your first reaction; don't zoom in hunting for flaws, and don't go back to change earlier answers. In batch 1 (S01-S16) each pair appears twice with the sides swapped; if you recognise a repeat you can leave it blank, and it counts as one judgement either way. Batch 2 (S17-S28) has one sheet per pair.
+**How to judge.** Look at the sheet as a whole, the way a client would: does it do what the brief asks, is the information right and readable, is it well made, would its audience respond to it. Go with your first reaction; don't zoom in hunting for flaws, and don't go back to change earlier answers. In batch 1 (S01-S16) each pair appears twice with the sides swapped; if you recognise a repeat you can leave it blank, and it counts as one judgement either way. Batches 2 and 3 (S17-S38) have one sheet per pair.
 
 **Paper version.** If you'd rather not use the CSV, write `S01 ABCD 2 calmer, easier to read` style lines in any text file; it can be typed into the CSV later.
 
@@ -46,3 +46,13 @@ One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge).
 | S26 | ZDDB | ZPJF | | | |
 | S27 | SCQE | WAKG | | | |
 | S28 | PTKX | LNPZ | | | |
+| S29 | LFFU | YWEX | | | |
+| S30 | ARWW | EPZQ | | | |
+| S31 | JAUM | HPYR | | | |
+| S32 | ASPT | XVXL | | | |
+| S33 | DAMF | UGHJ | | | |
+| S34 | KXNW | ATAK | | | |
+| S35 | DTHG | FHZG | | | |
+| S36 | WLYL | ZTUL | | | |
+| S37 | WUZJ | QFBP | | | |
+| S38 | QCQK | ERGD | | | |

@@ -3,7 +3,7 @@
 **Purpose:** a light touch. The loop nudges output (a drawing, generated image, 3D model, UI or flow) toward what people measurably prefer while keeping its intent and what already works. Smallest changes with the biggest effect; stop once it is clearly better. Always look at a fresh render, never at your own code or prompt.
 
 ```
-read the ask -> brief -> render -> AUTO CHECK -> LOOK (5 tests) -> CRITIQUE (ranked, rule IDs) -> [sign-off] -> FIX -> re-render -> compare -> deliver
+read the ask -> brief -> render -> AUTO CHECK -> LOOK (5 tests, energy) -> CRITIQUE (ranked, rule IDs) -> [sign-off] -> FIX -> re-render -> compare -> deliver
                            ^                                                                       |
                            +---------------------- repeat only while clearly improving ------------+
 ```
@@ -42,7 +42,7 @@ Never assume a remake without a from-scratch word. If the ask is unclear, treat 
 
 ## 2. Render
 
-At the size people see it, plus a thumbnail. UI: phone and desktop widths and 200% zoom (`tools/shot.sh`). 3D: the measured checks first (`modules/3d/`), then a contact sheet. Keep every round (`round-01.png`, ...).
+At the size people see it, plus a thumbnail. UI: phone and desktop widths and 200% zoom (`tools/shot.sh`). 3D: the measured checks first (`modules/3d/`), then a contact sheet. Keep every round.
 
 ## 3. Look: auto check, then five tests
 
@@ -59,6 +59,8 @@ At the size people see it, plus a thumbnail. UI: phone and desktop widths and 20
 `tools/look.py` makes all five as one sheet. Write one factual line per test ("Blur: the badge leads; the headline is second").
 
 **Anatomy pass (delivery gate):** with any person, hand or animal in frame, crop each hand, limb join, face and animal head at 2-4x and write one pass/fail line per crop (CHAR-9, `tools/anatomy_crops.py`). A whole-image look doesn't count; any fail blocks.
+
+**Energy pass** (after the checks, where it applies; `energy-pass.md`): a focal hook at thumbnail, display type with real hierarchy, purposeful colour, movement, an obvious call to action, the issuer on official pieces. From structure, not texture: no clutter, grain or additions.
 
 **Before delivery, the Sitting right pass** (COMP-19 to COMP-25, `modules/composition/sitting-right.md`): rotate 180°, cover each half, gap measure (LAY-10), `tools/balance.py`, edge and alignment sweep. Flag only what looks accidental and ask "intended?". Asymmetric and off-centre work is valid: fix broken balance with a counterweight or by committing harder to the asymmetry. Never centre or symmetrise by default.
 
@@ -103,7 +105,7 @@ At the size people see it, plus a thumbnail. UI: phone and desktop widths and 20
 
 ## 6. Take over or nudge
 
-Take over (full rework) when any is true: three or more blockers at once, or one that breaks the whole piece (no consistent horizon, broken anatomy, a main flow that can't complete, a failed 3D build); it fails the thumbnail and blur tests outright; three-change rounds would need more than three rounds; it is unusable for its purpose. Keep the brief's idea and must-keeps (CD-5) and re-read the brief before regenerating; regeneration is where the subject drifts. Generated images trip this often; that is expected.
+Take over (full rework) when any is true: three or more blockers at once, or one that breaks the whole piece (no consistent horizon, broken anatomy, a main flow that can't complete, a failed 3D build); it fails the thumbnail and blur tests outright; three-change rounds would need more than three rounds; it is unusable for its purpose. Keep the brief's idea and must-keeps (CD-5) and re-read the brief before regenerating; regeneration is where the subject drifts.
 
 A take-over repairs a broken piece and keeps its idea. A **remake** ("from scratch") rebuilds from a new brief: `first-principles.md`.
 
@@ -115,7 +117,7 @@ A take-over repairs a broken piece and keeps its idea. A **remake** ("from scrat
 Stop when: no blockers remain (including a clean anatomy pass on the latest render) and the top improvements are done; or the latest round isn't clearly better; or what is left are questions no rule settles; or the next fix would change the brief or something the owner approved; or round 3 for routine work (5 at most). Report rather than polish.
 
 ### FLOW-3. Re-check before delivery; never pass off an unapplied critique as the result
-- **What:** On the final render, check each signed-off point, then the QA gates: light (TD-LIT-1), anatomy (CHAR-9), type size and contrast (TYPE-3, UI-6), whitespace (LAY-10), Sitting right (COMP-25), marks (BRAND-4 overlay check, BRAND-8), real-subject crops (ILL-12), transcribed facts (FP-3), no additions (AES-10); signage adds viewing distance (LAY-7), a series adds the set pass (BRAND-6). Deliver the result first, then one line per point, **done** or **not done** with the reason. A critique alone is never the deliverable.
+- **What:** On the final render, check each signed-off point, then the QA gates: light (TD-LIT-1), anatomy (CHAR-9), type size and contrast (TYPE-3, UI-6), whitespace (LAY-10), Sitting right (COMP-25), marks (BRAND-4 overlay check, BRAND-8), real-subject crops (ILL-12), transcribed facts (FP-3), no additions (AES-10), energy (EN-2, where it applies); signage adds viewing distance (LAY-7), a series adds the set pass (BRAND-6). Deliver the result first, then one line per point, **done** or **not done** with the reason. A critique alone is never the deliverable.
 - **Why:** Edits silently skip instructions, and an anatomy fault once passed light, edge and type checks because nobody cropped the hands (`examples/character-anatomy-pass/`).
 - **Check:** A line for every point? Does each "done" match the render?
 - **Format:**
