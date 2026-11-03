@@ -22,6 +22,6 @@
 - [Font library](fonts/README.md): theme-grouped free fonts (OFL / Apache) with a catalogue and specimens
 - [Tools](tools/README.md): `autocheck.py` runs every measurable check in one go (pass, fail or flag per rule ID); measuring scripts (contrast, grids, perspective, ellipses, intersections, whitespace, balance)
 - [Case study](examples/case-study-may-specials/README.md): one sign remade from first principles, with every check shown
-- [Blind test kit](examples/blind-test/README.md): 70 briefs made with and without the skill by the same image model, judged blind by the owner of the work; batches 1 and 2 tied 10 to 10, batches 3 to 5 (after the energy pass) went 22 to 7 with one tie, batches 6 and 7 (infographics only, v0.9.4 and v0.9.5) 4 to 6 and 3 to 7, 39 to 30 with one tie overall (p = 0.17, short of the bar set in advance); results, keys and caveats in RESULTS.md
+- [Blind test kit](examples/blind-test/README.md): 70 briefs made with and without the skill by the same image model, judged blind by the owner of the work; batches 1 and 2 tied 10 to 10, batches 3 to 5 (after the energy pass) went 22 to 7 with one tie, batches 6 and 7 (infographics only, v0.9.4 and v0.9.5) 4 to 6 and 3 to 7, 39 to 30 with one tie overall (p = 0.17, short of the bar set in advance); batch 8 (30 briefs over six themes, v0.9.6) awaits judging; results, keys and caveats in RESULTS.md
 - [Sources](SOURCES.md)
 - [Bibliography](BIBLIOGRAPHY.md): annotated reading list on composition, colour and beauty, with links to public-domain full texts

@@ -6,13 +6,13 @@ One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge).
 |---|---|
 | `judge` | Your name, or the model name and version |
 | `judge_type` | `owner`, `person` or `model` |
-| `sheet` | Already filled: S01 to S78 (S01-S16 batch 1, S17-S28 batch 2, S29-S38 batch 3, S39-S48 batch 4, S49-S58 batch 5, S59-S68 batch 6, S69-S78 batch 7) |
+| `sheet` | Already filled: S01 to S108 (S01-S16 batch 1, S17-S28 batch 2, S29-S38 batch 3, S39-S48 batch 4, S49-S58 batch 5, S59-S68 batch 6, S69-S78 batch 7, S79-S108 batch 8) |
 | `left_id`, `right_id` | Already filled: the IDs printed under the two images |
 | `preferred_id` | The ID of the piece you'd hand over for that brief, or `SAME` (or `tie`) if you truly can't choose |
 | `strength` | 1 slight, 2 clear, 3 strong |
 | `reason` | A few words: what decided it |
 
-**How to judge.** Look at the sheet as a whole, the way a client would: does it do what the brief asks, is the information right and readable, is it well made, would its audience respond to it. Go with your first reaction; don't zoom in hunting for flaws, and don't go back to change earlier answers. In batch 1 (S01-S16) each pair appears twice with the sides swapped; if you recognise a repeat you can leave it blank, and it counts as one judgement either way. Batches 2 to 7 (S17-S78) have one sheet per pair.
+**How to judge.** Look at the sheet as a whole, the way a client would: does it do what the brief asks, is the information right and readable, is it well made, would its audience respond to it. Go with your first reaction; don't zoom in hunting for flaws, and don't go back to change earlier answers. In batch 1 (S01-S16) each pair appears twice with the sides swapped; if you recognise a repeat you can leave it blank, and it counts as one judgement either way. Batches 2 to 8 (S17-S108) have one sheet per pair.
 
 **Paper version.** If you'd rather not use the CSV, write `S01 ABCD 2 calmer, easier to read` style lines in any text file; it can be typed into the CSV later.
 
@@ -96,3 +96,33 @@ One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge).
 | S76 | DSVF | ZGLM | | | |
 | S77 | SRVJ | MLEX | | | |
 | S78 | QQLG | YGCH | | | |
+| S79 | FGNV | LDJW | | | |
+| S80 | SPSP | YBQN | | | |
+| S81 | UMJZ | MVNL | | | |
+| S82 | LGDF | ZGED | | | |
+| S83 | GMCN | TQRC | | | |
+| S84 | TVBZ | MGTU | | | |
+| S85 | ZTCA | TAVL | | | |
+| S86 | WKNQ | LMJS | | | |
+| S87 | VYLL | GNEA | | | |
+| S88 | REAP | TZFA | | | |
+| S89 | EHKV | CRTG | | | |
+| S90 | QYJE | VFJN | | | |
+| S91 | GPAT | CZCD | | | |
+| S92 | DLQP | SFTA | | | |
+| S93 | FQAH | QCXV | | | |
+| S94 | QHQS | TWZJ | | | |
+| S95 | UJHD | ZSBK | | | |
+| S96 | PTRQ | CAAP | | | |
+| S97 | FNBT | TBLK | | | |
+| S98 | JRAZ | XYSS | | | |
+| S99 | UZWU | CJFT | | | |
+| S100 | STLU | CMYJ | | | |
+| S101 | ARUQ | AKLV | | | |
+| S102 | PQLQ | DKSU | | | |
+| S103 | BXWV | ZQPN | | | |
+| S104 | GGTT | VBUP | | | |
+| S105 | LCJU | MFSM | | | |
+| S106 | DPDB | QGVM | | | |
+| S107 | PFKF | BBSF | | | |
+| S108 | JKJD | KTGA | | | |
