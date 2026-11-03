@@ -4,7 +4,7 @@ description: 'Judge and improve visual work (generated images, illustrations, te
 license: MIT (see LICENSE)
 metadata:
   author: Garyck Arntzen
-  version: "0.9.7"
+  version: "0.9.8"
   repository: https://github.com/SnazzyGaz/creative-director
 ---
 
@@ -65,4 +65,4 @@ For small contexts, `lite/CREATIVE-DIRECTOR-LITE.md` holds the loop, core rules 
 
 **Needs:** a model that can see images, and a way to render or screenshot the work at real size. Without vision, say the review is rules-only.
 
-This folder is generated from the repo root by `tools/package_skill.py` (version 0.9.7). To change a rule, edit the repo's root files, not this copy.
+This folder is generated from the repo root by `tools/package_skill.py` (version 0.9.8). To change a rule, edit the repo's root files, not this copy.

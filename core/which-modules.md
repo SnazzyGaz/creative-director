@@ -25,7 +25,7 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 | Video, film, animation, trailer, clip, shot list | film (README + `story.md` + `review.md`; `edit.md` for grading, cutting, sound, titles; `crossover.md` when unsure) + composition, colour-value for key frames (+ typography, character) |
 | Clip made or altered by a video model | film (+ `generated.md`), character, brand for any lettering |
 | Mood, energy or a distinctive feel; correct but flat; choosing between versions | aesthetic-critique (+ the medium's modules, which still decide blockers) |
-| From-scratch concepts; correct but generic; naming a described vibe, screens included | lookbook, optional (at most one concept in three; hint strength; never on fixes or edits) |
+| From-scratch concepts; correct but generic; naming a described vibe, screens included | lookbook, optional (at most one concept in three; 20-50%, LOOK-1; never on fixes or edits) |
 | Any piece that sells or greets, once the checks pass | `core/energy-pass.md`: full pass for posters, covers, packaging, logos, social cards, picture books, character art, heroes and app home screens; structure pass for infographics; light for notices, dashboards, menus; skip for forms and dense data |
 | Just "bolder", "quieter" or "distill" | `core/commands.md` + the medium's modules |
 | Remake from scratch ("redo", "rejig", "start over", "reimagine") | `core/first-principles.md` + the medium's modules + aesthetic-critique (AES-9); brand if it carries a mark |
@@ -41,7 +41,7 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 
 ## Token cost per module
 
-Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.9.7, 3 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
+Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.9.8, 3 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
 
 | File or set | Tokens |
 |---|---|
@@ -50,12 +50,12 @@ Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/chec
 | `core/critique-loop.md` (always) | 3,160 |
 | `core/critique-template.md` (when writing a critique) | 1,482 |
 | `core/energy-pass.md` (eye-catch after the checks pass) | 2,761 |
-| `core/commands.md` (bolder, quieter, distill) | 1,185 |
+| `core/commands.md` (bolder, quieter, distill) | 1,192 |
 | `core/creative-direction.md` (direct mode, open briefs) | 1,706 |
 | `core/first-principles.md` (remake from scratch) | 3,233 |
 | `core/brand-intake.md` (no brand input) | 701 |
 | `core/evidence.md` (before claiming people prefer something) | 2,961 |
-| `core/which-modules.md` (this file) | 2,170 |
+| `core/which-modules.md` (this file) | 2,183 |
 | `core/interaction-flow.md` (pointer and diagram only) | 724 |
 | `modules/3d/` | 1,896 |
 | `modules/aesthetic-critique/` | 3,160 |
@@ -65,7 +65,7 @@ Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/chec
 | `modules/composition/` (README 5,730, COMP-1 to 18; `sitting-right.md` 3,505, COMP-19 to 25, before delivery) | 9,235 |
 | `modules/film/` (README 5,887 + `story.md` 3,156 + `review.md` 1,422; `edit.md` 3,863 for grading, cutting, sound and titles; `generated.md` 2,262 for generated clips; `crossover.md` 1,375 when unsure; `notes.md` 799, optional film references) | 10,465 |
 | `modules/illustration/` (+ notes 493) | 4,296 |
-| `modules/lookbook/` (README only; search `looks.json` with `tools/lookbook_find.py`, never load it whole) | 1,289 |
+| `modules/lookbook/` (README only; search `looks.json` with `tools/lookbook_find.py`, never load it whole; LOOK-1 to 3) | 1,821 |
 | `modules/layout/` (README 5,974; `infographics.md` 1,611, INF-1, INF-2, INF-4 to INF-6, for any infographic) | 7,585 |
 | `modules/technical-drawing/` | 3,038 |
 | `modules/typography/` (+ `fonts/CATALOGUE.md` when picking type, about 7,400) | 4,063 |

@@ -1,8 +1,16 @@
 # Changelog
 
-## Unreleased
+## v0.9.8 (3 November 2026)
 
-- **Before and after across domains** (README, gallery, `examples/showcase/`): six labelled pairs, each a plain-brief baseline beside the full v0.9.7 loop: a book cover, a packaging label, a character, a logo, a poster and an exploded view. One sample per side, words by the image model. The owner of the work picked these six from ten pairs. They are illustrative, not test evidence; the blind test remains the evidence. The pairs are 1,400 px web JPEGs (about 80-230 KB). No rule changes.
+**Lookbook strength: 20-50% by default, strong only on purpose, and people keep who they are.** Three new rules in `modules/lookbook/README.md`, from the showcase 3 strength test: 21 briefs, each a base render beside one look at 20, 50 and 80%. The new rules are internal evidence: owner-judged, a small sample (one render per level), not blind. No budget was raised.
+
+- **LOOK-1, default 20-50%** (craft wisdom): hint to leaning is the default range, for looks drawn at random too. This replaces "start at hint" and folds in the earlier proposal to cap random looks at medium. In showcase 3, 20-50% was best on 15 of 21 (50% on 14, 20% on 1), 80% on 5, the base on 1; the owner of the work judged 20-50% the sweet spot.
+- **LOOK-2, strong only on purpose** (craft wisdom): ~80% only when the look's structure carries the brief's own idea (a red poster block as a redaction bar), or on request; first check for subject creep (the look's subject replacing the brief's, 9 of 15 random pulls) and prop stripping (the brief's props and twists dropped).
+- **LOOK-3, keep an invented person's skin tone and identity** (procedure, care rule): portrait and figure looks never flatten a person into the look's palette (seen with LB-SD15 at 80%). The care flags line points to it, and LB-SD15's `care` field carries it (repo only; the breeder's row and sheet caption are unchanged, so a later sync needs the same line in the breeder).
+- **Pointers.** The dial table drops "(default)" from hint; `core/which-modules.md` (lookbook row: "20-50%, LOOK-1"; token table refreshed) and `core/commands.md` (bolder: strong only per LOOK-2) follow. README's lookbook row notes the default range.
+- **Evidence note.** New `examples/lookbook-strength/README.md`: a text summary of the test and its tally. No showcase 3 images are in the repo.
+- **Before and after across domains** (README, gallery, `examples/showcase/`, released here): six labelled pairs, each a plain-brief baseline beside the full v0.9.7 loop: a book cover, a packaging label, a character, a logo, a poster and an exploded view. One sample per side, words by the image model. The owner of the work picked these six from ten pairs. They are illustrative, not test evidence; the blind test remains the evidence. The pairs are 1,400 px web JPEGs (about 80-230 KB).
+- **Budgets after.** Always-on 6,453 of 6,500 (unchanged); with the template 7,935 of 8,000; lookbook README 1,821 of 6,000 (up from 1,289); commands 1,192; which-modules 2,183.
 
 ## v0.9.7 (3 November 2026)
 

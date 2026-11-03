@@ -65,7 +65,7 @@ Always send the actual output (image, screenshot at real size, URL or renders), 
 | [typography](modules/typography/) · [layout](modules/layout/) · [brand](modules/brand/) | type, social cards, posters, slides, print, infographics with charts drawn from the data in code; official logos only, never redrawn |
 | [composition](modules/composition/) · [colour-value](modules/colour-value/) · [aesthetic-critique](modules/aesthetic-critique/) | balance, focus, beauty and palette, graded from *well supported* to *myth*; intent model and side-by-side verdicts |
 | [film](modules/film/) (optional) | story first: shots, continuity, light, grading, editing, sound, generated-video QC |
-| [lookbook](modules/lookbook/) (optional) | 320 visual looks to offer as directions, named by technique or era, never by living artists |
+| [lookbook](modules/lookbook/) (optional) | 320 visual looks to offer as directions, named by technique or era, never by living artists; used at 20-50% by default, stronger only on purpose |
 
 Also: a [font library](fonts/) of 61 free families in 18 themes, and [`tools/`](tools/) for every measurable check (one-command auto check, contrast, vanishing points, ellipses, layout grid, chart and route drawing).
 

@@ -5,7 +5,7 @@
 Format: **What / Check**. The checks are written so a second reader can confirm them on the before and after renders side by side (`tools/beforeafter.py`).
 
 ### CMD-1. Bolder: more contrast, more scale difference, more commitment
-- **What:** Widen the gap between the main thing and the rest (CORE-1, CORE-3): a bigger step in size between the hero and the next level, a deeper value range at the focus (CV-1), one accent pushed further while the rest stays put (CV-6), and any hedged placement pushed to read as chosen (COMP-20). With a lookbook look applied, raise its strength one notch on the dial (hint -> leaning -> strong; full only on request; `modules/lookbook/README.md`). Turn the rest down rather than adding new loud elements (CORE-8). For a piece that is correct but plain, run the energy pass (`energy-pass.md`).
+- **What:** Widen the gap between the main thing and the rest (CORE-1, CORE-3): a bigger step in size between the hero and the next level, a deeper value range at the focus (CV-1), one accent pushed further while the rest stays put (CV-6), and any hedged placement pushed to read as chosen (COMP-20). With a lookbook look applied, raise its strength one notch on the dial (hint -> leaning -> strong; strong only per LOOK-2, full only on request; `modules/lookbook/README.md`). Turn the rest down rather than adding new loud elements (CORE-8). For a piece that is correct but plain, run the energy pass (`energy-pass.md`).
 - **Check:**
   1. The size ratio between the largest and the next type or shape level is larger than before (TYPE-2).
   2. The focus holds the highest contrast, and the gap to the next-highest is larger than before (CORE-3; squint test).
