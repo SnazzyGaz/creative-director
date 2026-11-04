@@ -2,6 +2,8 @@
 
 **Purpose:** the critique loop checks craft. This file adds the step a creative director takes before that: does the work answer the brief, for its audience? A bot acts as its own first-pass director. The yardstick is the brief, not taste. Where the brief is silent, the question goes to the owner of the work (the person who commissioned it).
 
+**Guidance, not a rule:** start from the idea: what the piece says and how it should feel. Use the rules afterwards to edit and sharpen it, not to generate it. Work built outward from the rules tends to come out correct but lifeless.
+
 Keep it light. These are defaults, not blockers, except CD-7, which is on the MUST-BE-RIGHT list in `critique-loop.md`. Grade: every CD rule is a Procedure, built on the practice and studies cited (`evidence.md`).
 
 ## CD-1. Have a brief before making anything
