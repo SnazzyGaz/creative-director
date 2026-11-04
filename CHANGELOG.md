@@ -6,7 +6,7 @@ Lookbook batches 13 and 14, synced from the breeder with `tools/lookbook_sync.py
 
 - **Looks:** 368 live, up from 320. 48 added, all established: LB-235 to LB-282, including modern genre looks such as brass-gear steampunk (LB-259), rain-alley cyberpunk (LB-263) and kitchen-garden cottagecore (LB-273). Nothing retired.
 - **Interpreted tags:** 88 wildcard and rarely picked looks carry a new `interpreted` block (mood, themes, domains, best layer in a mix, partner looks, confidence). These are readings, marked interpreted and unreviewed; 8 were test-driven with one small image each and corrected where they failed. The sync script now keeps optional per-look blocks (it took its field list from the first look only).
-- **Clusters:** new `modules/lookbook/clusters.md`, a catalogue of 24 named clusters for mixing several looks in one bleed (8 alike, 16 unlike), 14 tested in small self-judged proofs, the rest predictions. Proof images stay in the breeder.
+- **Clusters:** new `modules/lookbook/data/clusters.md`, a catalogue of 24 named clusters for mixing several looks in one bleed (8 alike, 16 unlike), 14 tested in small self-judged proofs, the rest predictions. Proof images stay in the breeder.
 - **Sheets:** 93 (up from 81), 1,000 px JPEGs like the rest. The breeder's rebuild re-laid some families, so 50 existing sheets changed too.
 
 ## v0.9.11 (4 November 2026)
