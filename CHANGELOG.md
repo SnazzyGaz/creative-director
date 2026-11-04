@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.9.11 (4 November 2026)
+
+**Photography, screen states and accessibility; idea first; a font finder; and more headroom in the always-on set.** A new `photo` module, six new screen and UX rules, a search tool for the font library, and the always-on files trimmed so future rules have room.
+
+- **Idea first (guidance, not a rule).** `AGENTS.md` step 1 and `critique-loop.md` section 1 now start from the one idea and the feeling; the rules are the edit pass. No new ID, checklist or autocheck item.
+- **Photo module** (`modules/photo/README.md`, 2,519 tokens): PHOTO-1 distance first, lens follows (well supported for the geometry, partly for the effect on judgements); PHOTO-2 camera height has a job (partly supported); PHOTO-3 name the light (well supported optics; the setup choice is craft); PHOTO-4 cast specific people (partly supported); PHOTO-5 styling, props and set tell one story (craft wisdom); PHOTO-6 retouch within the context's limits, unclear limits flagged to the owner (standard: news and advertising codes); PHOTO-7 a generated-photo tells pass in five families (partly supported). No new blockers. Routed from `core/which-modules.md`.
+- **Screens.** web-ui UI-13 every state designed (empty, loading, error, success; status messages announced), UI-14 dark mode designed, not inverted, UI-15 responsive and reflows at 320 px, UI-16 motion with a job and `prefers-reduced-motion` honoured. ux UX-10 keyboard, focus order and visible focus, UX-11 alt text by purpose. Mostly Standard (WCAG 2.2) with NN/g and platform guidance.
+- **Font finder.** `tools/font_find.py --mood ... --genre ... [--use] [--avoid] [--pairs] [--list]` shortlists families from `fonts/catalogue.json` (tested by `tools/tests/font_find_cases.py`, in CI). which-modules, TYPE-10, `logo-notes.md` and the fonts README point to it instead of reading `CATALOGUE.md` (about 15,300 tokens).
+- **Lookbook whites.** LOOK-1 notes that a look's cream, ivory or off-white is kept only when the medium needs it (paper, newsprint); otherwise whites stay neutral.
+- **Owner summary.** `critique-template.md` opens with a three-line owner summary: verdict, top three fixes as now -> after, and the taste questions.
+- **Headroom.** The module table moved from `AGENTS.md` into `core/which-modules.md` (module index); the template's QA re-run line is shorter; loop section 6 (take over or nudge, FLOW-5) moved to the on-demand `core/take-over.md`. Caps unchanged.
+- **Fixes.** LOGO-11 is a flag to the owner, not a blocker; brand README size for `logo.md` and the install guide's bundle sizes refreshed; a duplicated famous-marks sentence kept in `clever-marks.md` only; new `CONTRIBUTING.md` (example images as JPG or WebP at 1280 px or less); README module table and `llms.txt` list the photo module.
+- **Sources.** SRC-413 to SRC-433 (21 new): two face-distortion studies, a camera-angle study, a lighting text, two synthetic-image studies, NN/g articles, AP, ASA/CAP and C2PA, Apple HIG, MDN and WCAG 2.2 Understanding pages.
+- **Budgets after.** Always-on 6,042 of 6,500 (was 6,460); with the template 7,416 of 8,000 (was 7,942); `AGENTS.md` 1,077 of 1,500; loop 3,036 of 3,300; template 1,374 of 1,500; web-ui 4,117 and ux 2,496 of 6,000.
+
 ## v0.9.10 (4 November 2026)
 
 **Mark making: how a logo represents an idea, and double readings in depth.** Two new optional notes in `modules/brand/` and two rules, from designers' own write-ups and process accounts, museum and archive pages, Wikimedia Commons, design press, logo galleries, Reddit and X threads, and four studies.

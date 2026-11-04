@@ -78,6 +78,22 @@ Format: **What / Why / Check / Fix / Grade / Source**. **MUST-BE-RIGHT** marks b
 - **Grade:** Well supported (Fitts's law).
 - **Source:** NN/g, *Fitts's Law* and *Touch Targets* [SRC-67]; *Laws of UX* [SRC-61].
 
+### UX-10. Everything works by keyboard, in a sensible order, with focus visible
+- **What:** Every action can be done with the keyboard alone. Tab order follows the reading and task order. The focused element always shows a clear focus indicator and is never hidden under a sticky header, banner or chat widget. Opening a dialog moves focus into it, and closing it returns focus to where it was.
+- **Why:** WCAG requires keyboard operation, a meaningful focus order, a visible focus indicator, and that the focused item isn't fully hidden by other content [SRC-432]. Keyboard and switch users, and many screen-reader users, can't use what they can't reach.
+- **Check:** Unplug the mouse: tab through the main flow (UX-1). Write the order down; does it match the visual order? Is focus visible on every stop, including on dark and image backgrounds? Does a dialog trap and return focus?
+- **Fix:** Use native controls; fix the source order rather than forcing the tab order; give focus a high-contrast outline (at least 3:1 against its ground, as for other non-text contrast [SRC-32]); add scroll padding under sticky bars.
+- **Grade:** Standard (WCAG 2.1.1, 2.4.3, 2.4.7, 2.4.11).
+- **Source:** WCAG 2.2 keyboard and focus criteria [SRC-432]; UI-5.
+
+### UX-11. Every meaningful image has a text alternative that says its purpose
+- **What:** Images that carry information get alt text saying what the image tells you here, not what it looks like in general; links and buttons that are images describe the action; decorative images get empty alt so screen readers skip them; charts and infographics get the data or a summary in text near them; text is not set inside images where real text would do.
+- **Why:** WCAG requires a text alternative for non-text content that serves the same purpose [SRC-433]. The W3C alt decision tree sorts images by role (informative, functional, decorative, complex) and gives the treatment for each [SRC-433].
+- **Check:** List every image with its role and its alt. Would someone who can't see it get the same information and actions? Is any alt "image", a file name, or a repeat of the caption?
+- **Fix:** Rewrite alt by role, in a sentence or less; mark decoration as decorative; add a text summary or table for complex graphics (LAY-19).
+- **Grade:** Standard (WCAG 1.1.1).
+- **Source:** WCAG 2.2 SC 1.1.1 and the W3C alt decision tree [SRC-433].
+
 ## Myths and weak claims
 - **"Max 7 ± 2 menu items" (Miller):** Miller studied memory, not choosing from visible options. Menus are recognition tasks. Broad, well-grouped menus are usually fine [SRC-64]. Use chunking and clear labels instead.
 - **"Three clicks or they leave":** no supporting evidence. Clear next steps (information scent) matter more than click count [SRC-66].

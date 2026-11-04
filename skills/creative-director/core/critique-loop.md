@@ -37,6 +37,7 @@ Never assume a remake without a from-scratch word. Unclear ask: treat it as an u
 
 ## 1. Brief
 
+- **Idea first (guidance, not a rule):** say the one idea and the feeling before anything else. The rules come after, as the edit pass that sharpens it, not the place the piece starts from.
 - Have the brief (CD-1) and direction (CD-2). No brand input (colours, type, voice, logo)? Run `brand-intake.md` first. Open brief: 2-3 rough options first (CD-3).
 - **Intent model (AES-0):** purpose, audience, mood, style, focal experience, polish, must-keeps, each marked [brief] or [inferred]. Count what the brief fixes ("it" is one). Before calling a choice a flaw, ask if it is deliberate and works.
 - The first critique point every round: does it answer the brief, are the must-keeps intact (CD-1, CD-5)?
@@ -106,12 +107,7 @@ At the size people see it, plus a thumbnail. UI: phone and desktop widths and 20
 
 ## 6. Take over or nudge
 
-Take over (full rework) when any is true: three or more blockers, or one that breaks the whole piece (no consistent horizon, broken anatomy, a flow that can't complete, a failed 3D build); it fails the thumbnail and blur tests outright; it would need more than three rounds; it is unusable for its purpose. Keep the idea and must-keeps (CD-5); re-read the brief before regenerating, where the subject drifts.
-
-A take-over repairs a broken piece and keeps its idea. A **remake** ("from scratch") rebuilds from a new brief: `first-principles.md`.
-
-### FLOW-5. Egregious work: take over, but say so first
-- **What:** Put "this needs a redo, not an edit, because ..." in the first line. In an unprompted hand-off the redo is point 1 [regenerate] and still waits for sign-off; under "just fix it", do it and say so up front.
+Three or more blockers, one that breaks the whole piece, or work unusable for its purpose: take over, and say so in the first line (FLOW-5, `take-over.md`).
 
 ## 7. Stop and deliver
 

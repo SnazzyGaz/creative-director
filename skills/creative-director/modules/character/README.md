@@ -61,7 +61,7 @@ Why it matters: people are expert face and body readers. Small errors that would
 - **What:** Count limbs and follow each from shoulder or hip to hand or foot. No extra, missing, fused or swapped limbs; no limb merging into another person, clothing or furniture; held objects are gripped by a hand you can trace.
 - **Why:** Fused and extra limbs are classic generated-image failures and make the image unusable for most purposes.
 - **Check:** For each person: 2 arms, 2 legs (or reasons why not). Trace each one. At overlaps between people, which body does each limb belong to?
-- **Fix:** Inpaint the region with a clearer pose (separate the figures, reduce overlaps); if more than one limb is wrong, regenerate or rework the figure (`core/critique-loop.md` section 6).
+- **Fix:** Inpaint the region with a clearer pose (separate the figures, reduce overlaps); if more than one limb is wrong, regenerate or rework the figure (`core/take-over.md`).
 - **Grade:** Partly supported (viewers notice limb errors [SRC-110]).
 - **Source:** Kellogg Insight / Groh [SRC-110]; [SRC-141].
 
@@ -77,7 +77,7 @@ Why it matters: people are expert face and body readers. Small errors that would
 - **What:** Whenever a person, a hand or an animal is in the frame, run the anatomy pass below before any hand-off. Each check is done on a zoomed crop of one region, never on the whole image at a glance. Any failed line is a blocker: the work can't be delivered as it is, whatever else is right.
 - **Why:** Generators still produce wrong finger counts, merged body parts and limbs that belong to no one [SRC-150, SRC-151], and people spot these faults readily [SRC-150, SRC-110]. They are small in the frame, so a whole-image look misses them; a check of light, edges and type passes them straight through.
 - **Check:** The table below, one line per crop, each line pass or fail with what was seen.
-- **Fix:** Edit or inpaint the failing region only, with the anatomy spelled out (which arm, which side, how many fingers, what the hand holds and how) [SRC-151]. Then run the **whole** pass again, not only the fixed line: an edit can move, add or remove another hand. If three edits fail, regenerate the figure (`core/critique-loop.md` section 6) or report the failure; don't deliver it.
+- **Fix:** Edit or inpaint the failing region only, with the anatomy spelled out (which arm, which side, how many fingers, what the hand holds and how) [SRC-151]. Then run the **whole** pass again, not only the fixed line: an edit can move, add or remove another hand. If three edits fail, regenerate the figure (`core/take-over.md`) or report the failure; don't deliver it.
 - **Grade:** Procedure.
 - **Source:** Kamali et al. [SRC-150]; Lu et al., *HandRefiner* [SRC-151]; Napier [SRC-149]; Bridgman [SRC-153]; Goldfinger [SRC-142, SRC-152].
 

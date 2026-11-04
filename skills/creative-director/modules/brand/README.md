@@ -132,7 +132,7 @@ The known failure this module addresses: critique rounds remove errors but canno
 
 ## Making a logo (LOGO-1 to LOGO-16)
 
-To make or change a mark, also load `logo.md` (the rules, about 3,800 tokens) and, when choosing a type, mood or clever move, `logo-notes.md`; for what to show and how to reduce and build it, `mark-making.md`; for double readings, `clever-marks.md`. The idea comes first; the rules are the edit pass. One line each:
+To make or change a mark, also load `logo.md` (the rules, about 4,300 tokens) and, when choosing a type, mood or clever move, `logo-notes.md`; for what to show and how to reduce and build it, `mark-making.md`; for double readings, `clever-marks.md`. The idea comes first; the rules are the edit pass. One line each:
 
 - **LOGO-1** Idea first: brief, word map, 20+ thumbnails over four routes, then pick.
 - **LOGO-2** Simple enough to remember, distinctive enough to own.
@@ -144,7 +144,7 @@ To make or change a mark, also load `logo.md` (the rules, about 3,800 tokens) an
 - **LOGO-8** Clever reads second, never instead; check unintended readings.
 - **LOGO-9** Pick the logo type for the name, the budget and the life.
 - **LOGO-10** Trends are seasoning; the mark stands without them.
-- **LOGO-11** Not confusable, and registrable (MUST-BE-RIGHT).
+- **LOGO-11** Not confusable, and registrable (flag to the owner).
 - **LOGO-12** Redesigns keep the equity.
 - **LOGO-13** Test in the world: size ladder, blur, one colour, five mockups.
 - **LOGO-14** Dynamic identities keep one constant.

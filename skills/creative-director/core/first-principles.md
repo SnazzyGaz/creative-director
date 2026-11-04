@@ -14,7 +14,7 @@ step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 2-3 co
 ---
 
 ## FP-1. Use this mode only when asked
-- **What:** The triggers are "from scratch", "redo", "rejig", "start over", "reimagine" and "rethink", or an explicit "don't just polish it". Without one of these, the light touch stays the default (`critique-loop.md` section 5). A take-over (section 6) is not this mode: a take-over repairs a broken piece and keeps its idea. This mode questions the idea itself.
+- **What:** The triggers are "from scratch", "redo", "rejig", "start over", "reimagine" and "rethink", or an explicit "don't just polish it". Without one of these, the light touch stays the default (`critique-loop.md` section 5). A take-over (`take-over.md`) is not this mode: a take-over repairs a broken piece and keeps its idea. This mode questions the idea itself.
 - **Why:** Reframing is how designers handle a problem the first framing can't solve [SRC-164, SRC-165]. But redoing work that only needed a nudge throws away what the owner made and approved (CD-5, AES-10).
 - **Check:** Can you quote the words that put you in this mode? If you can't, use the light touch, or ask.
 
@@ -60,7 +60,7 @@ step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 2-3 co
   - marks (BRAND-4, BRAND-8);
   - additions (AES-10).
   Then compare side by side with both the original and a light-touch fix, if one exists (AES-9): which is stronger for the brief, why, and at what cost. "The light touch was enough" is an allowed answer. Report it and offer the polish.
-- **Why:** A remake drops the light-touch cap, not the checks. The MUST-BE-RIGHT list still blocks (`critique-loop.md`), and regenerating is exactly where subjects drift and hands break (section 6).
+- **Why:** A remake drops the light-touch cap, not the checks. The MUST-BE-RIGHT list still blocks (`critique-loop.md`), and regenerating is exactly where subjects drift and hands break (`take-over.md`).
 - **Check:** Is there a delivery checklist (FLOW-3) with the brief at the top, the three-way comparison, and the QA line?
 
 ## FP-8. Official marks survive the remake unaltered

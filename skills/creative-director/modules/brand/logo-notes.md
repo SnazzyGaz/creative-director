@@ -21,7 +21,7 @@ Mollerup sorts marks into name marks, abbreviation (letter) marks and picture ma
 
 **Evidence first.** Round vs angular: round reads soft and comfortable, angular hard and durable; the effect needs people to picture the product and fades under distraction (partly supported) [SRC-360]. Sound and shape: most people match spiky shapes to sharp sounds and rounded shapes to soft ones (well supported as a sound-shape match; using it for name and mark fit is craft) [SRC-367]. Symmetry: asymmetric marks are more arousing and suit exciting brands (partly supported) [SRC-362]. Implied motion: a still mark that suggests movement raises engagement, more when the motion fits the brand (partly supported) [SRC-365]. Broken or incomplete letters: more innovative, less trustworthy (partly supported) [SRC-363]. Natural, harmonious, moderately elaborate marks are recognised and liked best (partly supported) [SRC-359]. Colour: warm saturated hues read exciting and blue competent in one set of studies (partly supported) [SRC-366], but colour-emotion claims are weak overall: choose colour for distinctiveness first (`core/evidence.md`, BRAND myths).
 
-**Craft map** (practitioner consensus, not tested as a table). Font picks: the mood tags in `fonts/CATALOGUE.md`.
+**Craft map** (practitioner consensus, not tested as a table). Font picks: `tools/font_find.py --mood ...` (the mood tags in `fonts/CATALOGUE.md`).
 
 | Quality | Shape and line | Angle, rhythm, weight | Type and colour |
 |---|---|---|---|

@@ -5,6 +5,11 @@ Copy, fill in, keep it short; drop sections that don't apply. Rules for writing 
 ```markdown
 ## Critique: <piece name>, round <n>
 
+**Owner summary** (for the person deciding; the detail below backs it):
+- Verdict: <one line: what works, what holds it back>
+- Top fixes: 1. <now> -> <after> (<RULE-ID>) 2. ... 3. ...
+- Questions: <taste calls only you can make>
+
 **Brief:** <purpose, audience, the one idea, where and how big it is seen, must-keeps, how done is judged (CD-1)>
 **Intent (AES-0):** purpose [brief] / audience [brief] / mood [inferred?] / style / focal experience / polish / must-keeps. Mark each [brief] or [inferred].
 **Criteria judged against:** <rule IDs, e.g. CORE-1, CORE-2, CORE-3, CORE-10, ILL-1, TD-PER-1>
@@ -67,5 +72,5 @@ Also possible (not needed): <one line, or omit>. OK to go ahead?
 ### Delivery checklist (after the fixes; FLOW-3). Lead with the result, then:
 1. <point> (<RULE-ID>): done / not done, <evidence or reason>.
 2. ...
-QA re-run on the final render: light (TD-LIT-1) <pass/fail> · anatomy (CHAR-9) <pass/fail/n.a.> · type size and contrast (TYPE-3, UI-6) <pass/fail> · whitespace (LAY-10) <pass / deliberate space named / fail> · sitting right (COMP-25) <no flags / flags answered / open: list> · marks (BRAND-4, BRAND-8) <official, source, overlay check / plain-text name / slot, open / none / invented: fail> · real-subject crops (ILL-12) <pass/fail/n.a.> · copy, counts, facts (CD-7, FP-3) <letter for letter, counted, questions: list> · additions (AES-10) <none/list> · energy (EN-2) <full / light / skip, why; items not met> · subject on ground, text on colour, small text (CV-10) <pass/fail> · whites neutral (CV-11) <pass / cream by brief / fail>.
+QA re-run on the final render (FLOW-3 gates, one word each: pass / fail / n.a.): light · anatomy · type and contrast · whitespace · sitting right · marks · real-subject crops · copy and counts · additions · energy · text on colour · whites.
 ```

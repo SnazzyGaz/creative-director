@@ -28,6 +28,7 @@ Default range: hint to leaning (LOOK-1). Strong only on purpose (LOOK-2); full o
 ### LOOK-1. Default to 20-50%, random pulls included
 - **What:** Use a look at hint to leaning (~20-50%). Pick hint for a rescue (one layer) and leaning when the look is the direction. This holds for looks drawn at random too: no random pull goes past leaning without a LOOK-2 reason.
 - **Why:** Showcase 3, 21 briefs, each a base render beside one look at 20, 50 and 80%: 20-50% was best on 15 (50% on 14, 20% on 1), 80% on 5, the base on 1. The owner of the work also judged 20-50% the sweet spot (`examples/lookbook-strength/`).
+- **Whites:** a look whose palette names cream, ivory or off-white keeps it only when the medium needs it (paper stock, newsprint, an aged print, a printed card in frame). Otherwise the whites stay neutral, as elsewhere in the rules; the look's character comes from its hallmarks, not a warm cast.
 - **Grade:** Craft wisdom. Internal evidence: owner-judged, small sample (one render per level), not blind.
 
 ### LOOK-2. Strong (~80%) only on purpose, after a creep check

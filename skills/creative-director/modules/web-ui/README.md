@@ -80,6 +80,38 @@ Format: **What / Why / Check / Fix / Grade / Source**. Rules marked **MUST-BE-RI
 - **Grade:** Craft wisdom. Internal evidence, one judge, one batch; untested as a rule. The cited studies only partly support it.
 - **Source:** Lindgaard et al. [SRC-36]; NN/g, aesthetic-usability effect [SRC-34]; CD-2; EN-1; `examples/blind-test/RESULTS.md`.
 
+### UI-13. Design every screen state, not only the full one
+- **What:** Each screen has its empty, loading, error, partial and success states designed, not left to defaults. Empty says what will appear and offers the first action; loading for a whole page shows the page's shape (a skeleton), for a single part a spinner, and over about 10 s a progress bar; errors say what happened and how to recover (UX-3); a status change that appears without moving focus is announced to screen readers.
+- **Why:** A totally empty area leaves people unsure whether it is loading, broken or genuinely empty; a designed empty state reports the status, teaches what goes there and links to the first step, and a "no records" message shown while still loading is worse than none [SRC-423]. Skeletons suit full-page loads under about 10 seconds, spinners suit one module, and longer waits need a progress bar; under a second, no indicator is needed [SRC-424, SRC-65]. WCAG asks for status messages to reach assistive technology without taking focus [SRC-425].
+- **Check:** List the states for each screen and render each one (empty account, slow network, failed request, one item, a thousand items). Is any state a blank area or a raw error code?
+- **Fix:** Write and design the missing states; reuse the page's layout for its skeleton; add a live region for status text.
+- **Grade:** Partly supported (usability guidance); status messages are Standard (WCAG 4.1.3).
+- **Source:** NN/g, empty states [SRC-423]; NN/g, skeleton screens [SRC-424]; Nielsen, response times [SRC-65]; WCAG 2.2 SC 4.1.3 [SRC-425]; UX-2; UX-3.
+
+### UI-14. Dark mode is designed, not inverted
+- **What:** When there is a dark theme, build it from the colour roles (UI-8): dark grey surfaces rather than pure black for large areas, lighter surfaces for raised layers, accent colours re-tuned so they don't glow, and every text and control pair re-checked for contrast (UI-6). Images and illustrations get dark-ready versions where white boxes would flash. Offer the theme where people read for long or at night, and follow the system setting; light stays the default unless the brief says otherwise.
+- **Why:** Platform guidance builds dark themes from separate colour roles and asks for contrast in both [SRC-426, SRC-59]. For people with normal vision, reading tends to be better in light mode, especially for small text, while some people with low vision do better in dark mode, which is why it should be a choice [SRC-427].
+- **Check:** Switch the theme: does every pair still pass UI-6? Any pure-white image box, invisible divider, or saturated colour that vibrates on the dark ground? Does it follow the system setting?
+- **Fix:** Map each role to a dark value; desaturate and lighten accents; give images transparent or dark-ready versions.
+- **Grade:** Standard for contrast (WCAG) and platform guidance; partly supported for which mode reads better.
+- **Source:** Apple HIG, Dark Mode [SRC-426]; Material 3 colour roles [SRC-59]; NN/g, *Dark Mode vs. Light Mode* [SRC-427]; WCAG [SRC-3].
+
+### UI-15. Responsive: reflows at 320 px wide, designed at every width
+- **What:** Content reflows into one column at 320 CSS px wide (or 400% zoom) without sideways scrolling, except for things that need two dimensions (maps, data tables, wide charts). Breakpoints come from where the content breaks, not from device names. Check at least phone, tablet and desktop widths, and the in-between width where things first collide.
+- **Why:** WCAG requires reflow at 320 CSS px so that people who zoom don't scroll in two directions [SRC-428]; intrinsic layouts let the content decide the breakpoints [SRC-56].
+- **Check:** Screenshot at 320, 768, 1024 and 1440 px, then drag slowly between them (`tools/shot.sh`): any overlap, horizontal scroll, orphaned single word in a heading, or primary action pushed below a wall of content on the phone?
+- **Fix:** Use wrapping and stacking layouts; set breakpoints where it breaks; reorder so the primary action stays near the top on narrow screens.
+- **Grade:** Standard (WCAG 1.4.10); the breakpoint advice is craft.
+- **Source:** WCAG 2.2 SC 1.4.10 [SRC-428]; *Every Layout* [SRC-56]; UI-10.
+
+### UI-16. Motion has a job, and respects reduced motion
+- **What:** Every animation explains something: where an element came from or went, what changed, what is loading. Keep it short (most interface transitions are well under half a second) and never block the task. Anything that moves for more than 5 seconds on its own can be paused. When the system asks for reduced motion, swap movement and zooms for fades or no animation, and turn off parallax and auto-play.
+- **Why:** WCAG asks that motion started by interaction can be turned off and that moving content lasting over 5 seconds can be paused, stopped or hidden [SRC-429]; movement can make people with vestibular disorders unwell. Browsers expose the setting as `prefers-reduced-motion` [SRC-430], and platform guidance says motion should be purposeful and optional [SRC-431]. Flashing is a separate blocker (FILM-ACC-1).
+- **Check:** For each animation, name its job. Turn on reduced motion in the system: does large movement, parallax or auto-play stop? Can a carousel or background video be paused?
+- **Fix:** Cut decorative motion; add a `prefers-reduced-motion` branch; add a pause control.
+- **Grade:** Standard (WCAG 2.2.2; 2.3.3 is AAA, applied here as the default); purposeful motion is craft.
+- **Source:** WCAG 2.2 SC 2.2.2 and 2.3.3 [SRC-429]; MDN, `prefers-reduced-motion` [SRC-430]; Apple HIG, Motion [SRC-431].
+
 ## Myths and weak claims
 - **Golden-ratio type scales are "more harmonious":** no evidence for a special ratio [SRC-38]. Pick the ratio for density (TYPE-2).
 - **"HSL lightness 50% means equal brightness":** false. Yellow and blue at the same HSL L differ a lot. Use OKLCH L or luminance [SRC-50].

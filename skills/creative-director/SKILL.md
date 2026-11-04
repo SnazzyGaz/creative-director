@@ -4,7 +4,7 @@ description: 'Judge and improve visual work (generated images, illustrations, te
 license: MIT (see LICENSE)
 metadata:
   author: the owner of the work
-  version: "0.9.10"
+  version: "0.9.11"
   repository: https://github.com/SnazzyGaz/creative-director
 ---
 
@@ -19,35 +19,18 @@ Whenever you make or review something visual, or the user says `+ creative direc
 1. **Always:** this file, `core/principles.md` (CORE-1 to 11) and `core/critique-loop.md` (the ask, the loop, the blockers, sign-off and delivery: FLOW-1 to 5).
 2. **To write a critique:** `core/critique-template.md`.
 3. **Only when needed:** `core/creative-direction.md` (direct mode, open briefs), `core/brand-intake.md` (no brand input), `core/first-principles.md` (remake from scratch), `core/energy-pass.md` (eye-catch), `core/evidence.md` (before saying "people prefer X").
-4. **Modules** (`modules/<name>/README.md`), only those the job needs. Combinations and token costs: `core/which-modules.md`.
-
-| Module | Load when the work has... |
-|---|---|
-| `technical-drawing` | 3D space, objects or bodies drawn or generated (perspective, ellipses, proportion, light) |
-| `character` | any person, hand or animal, however small (anatomy pass CHAR-9 is a delivery gate) |
-| `illustration` | a picture people look at: focus, shape, edges, story, generated-image look |
-| `composition` | balance, focus, unity, space, beauty; "it feels off"; the pre-delivery *Sitting right* pass (`sitting-right.md`) |
-| `colour-value` | a value plan, palette or colour that looks wrong in place |
-| `layout` | a fixed frame: social card, poster, cover, slide, print, infographics |
-| `typography` | words: type choice, scale, measure, leading, setting |
-| `brand` | a name, logo, mascot, packaging or brand guide (official marks: BRAND-4, BRAND-8; new marks: `logo.md`) |
-| `web-ui` | a screen: mood, grid, components, contrast, colour roles |
-| `ux` | a task people complete: flows, errors, defaults |
-| `3d` | a 3D file or render (build checks via [model-qa](https://github.com/SnazzyGaz/model-qa)) |
-| `aesthetic-critique` | mood, energy or distinctiveness; choosing between versions |
-| `film` | anything that moves: footage, generated video, animation, storyboards, shot lists, edits (story first: `story.md`; review in motion) |
-| `lookbook` | from-scratch concepts, or a design that passes but feels generic: optional `modules/lookbook/` |
+4. **Modules** (`modules/<name>/README.md`), only those the job needs: technical-drawing, character, illustration, composition, colour-value, layout, typography, brand, photo, web-ui, ux, 3d, aesthetic-critique, film, lookbook (optional). What each covers, combinations and token costs: `core/which-modules.md`. Any person, hand or animal in frame: `character` (the CHAR-9 anatomy pass is a delivery gate).
 
 For small contexts, `lite/CREATIVE-DIRECTOR-LITE.md` holds the loop, core rules and blockers in one file.
 
 ## The job in seven steps
 0. **Read the ask** (`critique-loop.md` section 0). Unprompted hand-off: ranked sign-off blurb, apply nothing until the owner agrees (FLOW-1). "Just fix it": no blurb, same checks (FLOW-4). From-scratch words only: remake (`first-principles.md`). "Bolder", "quieter", "distill": `core/commands.md`.
-1. **Brief:** six lines (CD-1) and an intent model, each line [brief] or [inferred]. No brand input: `brand-intake.md`.
+1. **Brief:** start from the idea and the feeling; the rules are the edit pass, not the starting point (guidance). Then six lines (CD-1) and an intent model, each line [brief] or [inferred]. No brand input: `brand-intake.md`.
 2. **Render** at real size, plus a thumbnail. Never critique from code or a prompt.
 3. **Look:** `tools/autocheck.py` first, then five tests (`tools/look.py`); re-read every fixed string and count (CD-7); the anatomy pass if a person, hand or animal is in frame; then the energy pass.
 4. **Critique** with the template: a rule ID on every point, measured findings apart from interpreted ones, blockers first.
 5. **Fix:** at most 3 a round (a signed-off list in full), each checked as applied; re-render and compare.
-6. **Stop and deliver:** when clearly better (round 3 routine, 5 max), or take over if broken (loop section 6). The result first, then one done / not done line per point, QA gates re-run (FLOW-3).
+6. **Stop and deliver:** when clearly better (round 3 routine, 5 max), or take over if broken (`core/take-over.md`). The result first, then one done / not done line per point, QA gates re-run (FLOW-3).
 
 ## Always true
 - **Blockers are only the MUST-BE-RIGHT list** in `critique-loop.md`; everything else is a default.
@@ -65,4 +48,4 @@ For small contexts, `lite/CREATIVE-DIRECTOR-LITE.md` holds the loop, core rules 
 
 **Needs:** a model that can see images, and a way to render or screenshot the work at real size. Without vision, say the review is rules-only.
 
-This folder is generated from the repo root by `tools/package_skill.py` (version 0.9.10). To change a rule, edit the repo's root files, not this copy.
+This folder is generated from the repo root by `tools/package_skill.py` (version 0.9.11). To change a rule, edit the repo's root files, not this copy.

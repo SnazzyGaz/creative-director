@@ -44,6 +44,8 @@ LOADS = {  # typical loads, as listed in core/which-modules.md
         "modules/layout/README.md", "modules/typography/README.md", "modules/aesthetic-critique/README.md"],
     "infographic (layout + infographics + typography + illustration)": ["modules/layout/README.md", "modules/layout/infographics.md",
         "modules/typography/README.md", "modules/illustration/README.md"],
+    "photo (photo + character + illustration)": ["modules/photo/README.md", "modules/character/README.md",
+        "modules/illustration/README.md"],
     "video review (film README + story + review)": ["modules/film/README.md", "modules/film/story.md", "modules/film/review.md"],
     "full video review (+ edit.md + generated.md)": ["modules/film/README.md", "modules/film/story.md",
         "modules/film/review.md", "modules/film/edit.md", "modules/film/generated.md"],

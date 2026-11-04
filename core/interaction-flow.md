@@ -25,7 +25,7 @@ flowchart TD
     P1 --> P2[2-3 concepts that differ in structure,<br>recommend one, owner picks FP-5, FP-6]
     P2 --> H
     D --> C2
-    C --> E{Egregious?<br>take-over triggers, loop section 6}
+    C --> E{Egregious?<br>take-over triggers, take-over.md}
     E -->|Yes| E1[Say up front: this is a redo, and why]
     E -->|No| F
     E1 --> F[Sign-off blurb: imperative changes only,<br>ranked, rule ID, what changes,<br>keep-the-art edit or regenerate]

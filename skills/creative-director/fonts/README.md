@@ -4,6 +4,7 @@
 
 <p><img alt="Every family in the library, set in its own face, grouped by theme from editorial serif to luxury didone." src="specimens/overview.png" width="100%"></p>
 
+- **Search, don't read:** `python3 tools/font_find.py --mood warmth,craft --genre heritage` shortlists families by mood, genre and use (about 15,000 tokens saved against reading the catalogue).
 - **[CATALOGUE.md](CATALOGUE.md):** per family, its themes, licence, axes or weights, mood tags, what it's good for, what to avoid and what it pairs with, plus a "By mood" index (trust, calm, warmth, play, speed, power, precision, luxury, elegance, heritage, craft, rebellion, menace, nostalgia, tech, romance, authority). Same data as [`catalogue.json`](catalogue.json) for scripts.
 - **Specimens:** one sheet per theme in [`specimens/`](specimens/) (sample line, weight range, pangram), plus the overview above.
 - **Files:** `fonts/<theme>/<family>/`, each folder with its licence in git. The font files themselves (variable versions where they exist) are in `creative-director-fonts.zip` on the [assets-v1 release](https://github.com/SnazzyGaz/creative-director/releases/tag/assets-v1) to keep clones small; `python3 tools/fetch_assets.py` unpacks them into these folders. Every family is also on Google Fonts under the same name. Instrument Sans, used for the README images, stays in `docs/assets/src/fonts/` and is listed in the catalogue too.

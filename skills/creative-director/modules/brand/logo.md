@@ -86,11 +86,11 @@ Load with the brand README when the job is to make or change a logo, symbol, mon
 - **Grade:** Craft wisdom.
 - **Source:** LogoLounge [SRC-356, SRC-357, SRC-358]; Airey [SRC-339]; Müller [SRC-346].
 
-### LOGO-11. Not confusable, and registrable (MUST-BE-RIGHT for confusion)
+### LOGO-11. Not confusable, and registrable (flag to the owner)
 - **What:** The mark must not look like an existing mark in the same or a nearby field. Its distinctive part should not be only a generic picture of the product or a plain descriptive word.
 - **Why:** A trademark exists to tell one trader's goods from another's; generic and merely descriptive signs are weak or unregistrable [SRC-369], and a confusingly similar sign infringes [SRC-171].
 - **Check:** Reverse-image search the finalists and look at the category's marks; list the closest three and how this differs. Is the core more than a picture of the product?
-- **Fix:** Change the silhouette, not a detail. Say in the hand-off that a legal search is the owner's call.
+- **Fix:** Change the silhouette, not a detail. A close likeness is flagged to the owner of the work in the hand-off, with the three nearest marks, rather than treated as a blocker: whether it is too close, and any legal search, is their call.
 - **Grade:** Standard (trade-mark law).
 - **Source:** WIPO [SRC-369]; Trade Marks Act 1994 s.10 [SRC-171]; BRAND-8.
 

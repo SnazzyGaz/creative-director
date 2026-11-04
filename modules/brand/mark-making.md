@@ -1,6 +1,6 @@
 # Mark making: how a logo represents an idea
 
-Reference for `logo.md` (LOGO-1 to LOGO-16). Load when choosing what a mark should show and how far to abstract it, when reducing a drawing to a mark, or when building and correcting one. Double readings and mashups: `clever-marks.md`. Famous marks are cited examples only: describe them, never draw or reproduce them (BRAND-4, BRAND-8). To look a mark up, Wikimedia Commons keeps logo categories with dates and sources [SRC-410]; link to it, don't copy from it. Grades follow `core/evidence.md`.
+Reference for `logo.md` (LOGO-1 to LOGO-16). Load when choosing what a mark should show and how far to abstract it, when reducing a drawing to a mark, or when building and correcting one. Double readings and mashups: `clever-marks.md`. To look a mark up, Wikimedia Commons keeps logo categories with dates and sources [SRC-410]; link to it, don't copy from it; famous marks are described, never drawn (`clever-marks.md`, BRAND-4, BRAND-8). Grades follow `core/evidence.md`.
 
 ## 1. What to show: the abstraction ladder
 
