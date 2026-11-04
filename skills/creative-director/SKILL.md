@@ -4,7 +4,7 @@ description: 'Judge and improve visual work (generated images, illustrations, te
 license: MIT (see LICENSE)
 metadata:
   author: Garyck Arntzen
-  version: "0.9.8"
+  version: "0.9.9"
   repository: https://github.com/SnazzyGaz/creative-director
 ---
 
@@ -30,7 +30,7 @@ Whenever you make or review something visual, or the user says `+ creative direc
 | `colour-value` | a value plan, palette or colour that looks wrong in place |
 | `layout` | a fixed frame: social card, poster, cover, slide, print, infographics |
 | `typography` | words: type choice, scale, measure, leading, setting |
-| `brand` | a name, logo, mascot, packaging or brand guide (official marks: BRAND-4, BRAND-8) |
+| `brand` | a name, logo, mascot, packaging or brand guide (official marks: BRAND-4, BRAND-8; new marks: `logo.md`) |
 | `web-ui` | a screen: mood, grid, components, contrast, colour roles |
 | `ux` | a task people complete: flows, errors, defaults |
 | `3d` | a 3D file or render (build checks via [model-qa](https://github.com/SnazzyGaz/model-qa)) |
@@ -65,4 +65,4 @@ For small contexts, `lite/CREATIVE-DIRECTOR-LITE.md` holds the loop, core rules 
 
 **Needs:** a model that can see images, and a way to render or screenshot the work at real size. Without vision, say the review is rules-only.
 
-This folder is generated from the repo root by `tools/package_skill.py` (version 0.9.8). To change a rule, edit the repo's root files, not this copy.
+This folder is generated from the repo root by `tools/package_skill.py` (version 0.9.9). To change a rule, edit the repo's root files, not this copy.

@@ -20,7 +20,7 @@ Whenever you make or review something visual, or the user says `+ creative direc
 | `colour-value` | a value plan, palette or colour that looks wrong in place |
 | `layout` | a fixed frame: social card, poster, cover, slide, print, infographics |
 | `typography` | words: type choice, scale, measure, leading, setting |
-| `brand` | a name, logo, mascot, packaging or brand guide (official marks: BRAND-4, BRAND-8) |
+| `brand` | a name, logo, mascot, packaging or brand guide (official marks: BRAND-4, BRAND-8; new marks: `logo.md`) |
 | `web-ui` | a screen: mood, grid, components, contrast, colour roles |
 | `ux` | a task people complete: flows, errors, defaults |
 | `3d` | a 3D file or render (build checks via [model-qa](https://github.com/SnazzyGaz/model-qa)) |

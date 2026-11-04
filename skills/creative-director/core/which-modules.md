@@ -20,7 +20,7 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 | A whole product or prototype | web-ui, ux |
 | 3D model, prop, asset, scene | 3d (+ illustration for a beauty render) |
 | 3D as reference for a drawing | 3d, technical-drawing |
-| Logo, mascot, icon set | brand (BRAND-9: one step past the literal), illustration, web-ui (size and contrast) |
+| Logo, mascot, icon set | brand (BRAND-9: one step past the literal; new or changed marks: `brand/logo.md`, LOGO-1 to 14, and `logo-notes.md` for types, moods, clever marks and trends), illustration, web-ui (size and contrast) |
 | Storyboard, comic, carousel, image sequence | illustration (ILL-7; `notes.md` for transitions), LAY-18 (+ film `story.md`, `review.md` when it plans video shots) |
 | Video, film, animation, trailer, clip, shot list | film (README + `story.md` + `review.md`; `edit.md` for grading, cutting, sound, titles; `crossover.md` when unsure) + composition, colour-value for key frames (+ typography, character) |
 | Clip made or altered by a video model | film (+ `generated.md`), character, brand for any lettering |
@@ -41,7 +41,7 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 
 ## Token cost per module
 
-Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.9.8, 3 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
+Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.9.9, 4 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
 
 | File or set | Tokens |
 |---|---|
@@ -51,15 +51,15 @@ Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/chec
 | `core/critique-template.md` (when writing a critique) | 1,482 |
 | `core/energy-pass.md` (eye-catch after the checks pass) | 2,761 |
 | `core/commands.md` (bolder, quieter, distill) | 1,192 |
-| `core/creative-direction.md` (direct mode, open briefs) | 1,706 |
+| `core/creative-direction.md` (direct mode, open briefs) | 1,759 |
 | `core/first-principles.md` (remake from scratch) | 3,233 |
-| `core/brand-intake.md` (no brand input) | 701 |
+| `core/brand-intake.md` (no brand input) | 775 |
 | `core/evidence.md` (before claiming people prefer something) | 2,961 |
-| `core/which-modules.md` (this file) | 2,183 |
+| `core/which-modules.md` (this file) | 2,296 |
 | `core/interaction-flow.md` (pointer and diagram only) | 724 |
 | `modules/3d/` | 1,896 |
 | `modules/aesthetic-critique/` | 3,160 |
-| `modules/brand/` | 3,900 |
+| `modules/brand/` (README 4,442; `logo.md` 3,752, LOGO-1 to 14, to make or change a mark; `logo-notes.md` 2,267, optional types, moods, clever marks, trends) | 8,194 |
 | `modules/character/` | 4,211 |
 | `modules/colour-value/` | 4,205 |
 | `modules/composition/` (README 5,730, COMP-1 to 18; `sitting-right.md` 3,505, COMP-19 to 25, before delivery) | 9,235 |
@@ -68,7 +68,7 @@ Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/chec
 | `modules/lookbook/` (README only; search `looks.json` with `tools/lookbook_find.py`, never load it whole; LOOK-1 to 3) | 1,821 |
 | `modules/layout/` (README 5,974; `infographics.md` 1,611, INF-1, INF-2, INF-4 to INF-6, for any infographic) | 7,585 |
 | `modules/technical-drawing/` | 3,038 |
-| `modules/typography/` (+ `fonts/CATALOGUE.md` when picking type, about 7,400) | 4,063 |
+| `modules/typography/` (+ `fonts/CATALOGUE.md` when picking type, about 15,300 in full since the v0.9.9 font additions: read the By mood index and the one or two theme tables needed) | 4,077 |
 | `modules/ux/` | 1,917 |
 | `modules/web-ui/` (+ notes 447) | 2,755 |
 | `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 2,498 |

@@ -22,6 +22,7 @@ Ask the owner of the work. Ask all at once, keep each answer short, and accept "
 5. **Something you like, and something you don't.** One example each (a site, a poster, a brand), and what about it.
 6. **Fixed points.** Anything that must appear or must not (legal lines, a mascot, a colour a competitor owns).
 7. **Where will it be seen?** Platforms and sizes (LAY-4), print or screen, light or dark context.
+8. **If the job is a logo:** the one or two qualities it must carry; the smallest place it must work (favicon, app icon, stamp, embroidery); whether it must work in one colour; the lockups needed (symbol, wordmark, horizontal, stacked); a known mark being replaced and what must survive (`modules/brand/logo.md`).
 
 ## If there are no answers
 
