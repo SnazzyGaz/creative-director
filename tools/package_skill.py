@@ -54,7 +54,7 @@ def skill_md():
             f"**Needs:** a model that can see images, and a way to render or screenshot the work at real size. Without vision, say the review is rules-only.\n\n"
             f"This folder is generated from the repo root by `tools/package_skill.py` (version {version()}). To change a rule, edit the repo's root files, not this copy.\n")
     front = (f"---\nname: {NAME}\ndescription: '{DESC}'\nlicense: MIT (see LICENSE)\n"
-             f"metadata:\n  author: Garyck Arntzen\n  version: \"{version()}\"\n  repository: {REPO}\n---\n")
+             f"metadata:\n  author: the owner of the work\n  version: \"{version()}\"\n  repository: {REPO}\n---\n")
     return f"{front}\n# Creative director\n\n{body.rstrip()}\n{tail}"
 
 

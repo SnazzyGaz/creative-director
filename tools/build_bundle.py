@@ -32,7 +32,7 @@ def preface(full: bool, files: list[str]):
     scope = ("the full rule set: core and every module" if full else
              "the always-on core, the critique template and the commands; modules are in the full bundle or the repo")
     return (f"# creative-director: single-file prompt bundle ({'full' if full else 'core'}, {version()})\n\n"
-            f"This is a generated copy of the creative-director rules ({REPO}, MIT licence, Garyck Arntzen), for chat "
+            f"This is a generated copy of the creative-director rules ({REPO}, MIT licence), for chat "
             f"assistants that can't open files. It holds {scope}.\n\n"
             "How to use it:\n"
             "- Follow the AGENTS.md section first. When it says to load a file, use the section below headed with that path. "
