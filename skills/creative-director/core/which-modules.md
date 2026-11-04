@@ -89,7 +89,7 @@ Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/chec
 | `modules/composition/` (README 5,730, COMP-1 to 18; `sitting-right.md` 3,505, COMP-19 to 25, before delivery) | 9,235 |
 | `modules/film/` (README 5,887 + `story.md` 3,156 + `review.md` 1,422; `edit.md` 3,863 for grading, cutting, sound and titles; `generated.md` 2,262 for generated clips; `crossover.md` 1,375 when unsure; `notes.md` 799, optional film references) | 10,465 |
 | `modules/illustration/` (+ notes 493) | 4,296 |
-| `modules/lookbook/` (README only; search `looks.json` with `tools/lookbook_find.py`, never load it whole; LOOK-1 to 3) | 1,889 |
+| `modules/lookbook/` (README only; search `looks.json` with `tools/lookbook_find.py`, never load it whole; LOOK-1 to 3) | 1,993 |
 | `modules/layout/` (README 5,974; `infographics.md` 1,611, INF-1, INF-2, INF-4 to INF-6, for any infographic) | 7,585 |
 | `modules/technical-drawing/` | 3,038 |
 | `modules/typography/` (picking type: `tools/font_find.py --mood ... --genre ...`, a few hundred tokens of output; never read `fonts/CATALOGUE.md` whole, about 15,300) | 4,102

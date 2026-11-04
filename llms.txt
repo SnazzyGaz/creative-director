@@ -17,7 +17,7 @@
 - [Modules](modules/): technical-drawing, illustration, character, web-ui, ux, 3d, typography, layout, brand, aesthetic-critique, composition, colour-value, photo, film
 - [Photo](modules/photo/README.md): photographs and photoreal images, shot or generated: distance and lens, camera height, light, casting, styling and set, retouch limits, generated-photo tells
 - [Film](modules/film/README.md): cinematography and the moving image, story first (`story.md`): shots, continuity, camera, light, flashing; colour, editing, sound and subtitles in `edit.md`; look vocabulary and myths in `notes.md`; generated-video QC, crossover map
-- [Lookbook](modules/lookbook/README.md): optional; 320 established looks and wildcards with tags and image sheets, for from-scratch concepts or work that feels generic; search by use, mood, colour or "more like this"
+- [Lookbook](modules/lookbook/README.md): optional; 368 established looks and wildcards with tags and image sheets, for from-scratch concepts or work that feels generic; search by use, mood, colour or "more like this"
 - [Install guide](docs/install.md): steps for Hermes Agent, Claude, Codex, Cursor, Gemini CLI, Copilot, Devin, Cline, Aider, Grok Bot and any chat LLM
 - [Skill folder](skills/creative-director/SKILL.md): the same rules as an installable Agent Skill (generated; edit the root files)
 - [Prompt bundle](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt.md): AGENTS.md and the always-loaded core in one file; [full bundle](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt-full.md) adds every module

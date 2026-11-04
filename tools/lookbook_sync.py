@@ -176,8 +176,9 @@ def build(breeder, scan_extra, dry):
         row["sheet"] = sheets.get(l["sheet"], "")
         live.append(row)
     enrich(live, breeder, src["looks"])
-    order = [k for k in live[0] if k not in NEW_FIELDS and k != "status"] + NEW_FIELDS + ["status"] if live else []
-    live = [{k: r.get(k) for k in order} for r in live]
+    keys = list(dict.fromkeys(k for r in live for k in r))          # union: optional blocks like `interpreted` survive
+    order = [k for k in keys if k not in NEW_FIELDS and k != "status"] + NEW_FIELDS + ["status"] if live else []
+    live = [{k: r[k] for k in order if k in r} for r in live]
     ids = [r["id"] for r in live]
     if len(ids) != len(set(ids)): problems.append("duplicate live IDs")
     clash = set(ids) & set(retired)

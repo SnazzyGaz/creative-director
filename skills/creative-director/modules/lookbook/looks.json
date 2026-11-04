@@ -1,11 +1,11 @@
 {
  "about": "Lookbook tag file: one row per live look. Filter here (tools/lookbook_find.py), then open only the listed sheet. Every example image is our own render from that look's rules. Optional reference, never a rule source.",
- "batch": 12,
+ "batch": 14,
  "generated_by": "tools/lookbook_sync.py from the breeder export (see modules/lookbook/UPDATING.md)",
  "paths_relative_to": "modules/lookbook/",
  "counts": {
-  "live": 320,
-  "established": 246,
+  "live": 368,
+  "established": 294,
   "keepers": 74,
   "partial": [
    "LB-066",
@@ -20,7 +20,8 @@
    "LB-210",
    "LB-217",
    "LB-226",
-   "LB-227"
+   "LB-227",
+   "LB-241"
   ],
   "retired": 2
  },
@@ -316,7 +317,7 @@
    "nearest_looks": [
     "LB-R04R21",
     "LB-R04R06",
-    "LB-R04R10"
+    "LB-281"
    ],
    "bred_from": [],
    "colours": [
@@ -421,8 +422,8 @@
    "nn_similarity": 0.5787,
    "nearest_looks": [
     "LB-062",
-    "LB-201",
-    "LB-198"
+    "LB-281",
+    "LB-201"
    ],
    "bred_from": [],
    "colours": [
@@ -931,8 +932,8 @@
    "nn_similarity": 0.5834,
    "nearest_looks": [
     "LB-094",
-    "LB-098",
-    "LB-106"
+    "LB-236",
+    "LB-098"
    ],
    "bred_from": [],
    "colours": [
@@ -1125,12 +1126,12 @@
    "type_pairing": [],
    "sheet": "sheets/F2_modernist_sheet2.jpg",
    "panel": "sheet 2 of 2, row 2 col 1 (panel 4 of 6)",
-   "nearest_neighbour": "LB-R01R03",
-   "nn_similarity": 0.5379,
+   "nearest_neighbour": "LB-246",
+   "nn_similarity": 0.5404,
    "nearest_looks": [
+    "LB-246",
     "LB-R01R03",
-    "LB-005",
-    "LB-041"
+    "LB-005"
    ],
    "bred_from": [],
    "colours": [
@@ -1387,12 +1388,12 @@
    "type_pairing": [],
    "sheet": "sheets/F3_ornamental_sheet1.jpg",
    "panel": "sheet 1 of 2, row 2 col 1 (panel 4 of 6)",
-   "nearest_neighbour": "LB-078",
-   "nn_similarity": 0.5519,
+   "nearest_neighbour": "LB-239",
+   "nn_similarity": 0.5859,
    "nearest_looks": [
+    "LB-239",
     "LB-078",
-    "LB-161",
-    "LB-160"
+    "LB-161"
    ],
    "bred_from": [],
    "colours": [
@@ -1651,12 +1652,12 @@
    "type_pairing": [],
    "sheet": "sheets/F3_ornamental_sheet2.jpg",
    "panel": "sheet 2 of 2, row 1 col 3 (panel 3 of 6)",
-   "nearest_neighbour": "LB-R04R06",
-   "nn_similarity": 0.5976,
+   "nearest_neighbour": "LB-261",
+   "nn_similarity": 0.6579,
    "nearest_looks": [
+    "LB-261",
     "LB-R04R06",
-    "LB-R04R10",
-    "LB-R04R21"
+    "LB-245"
    ],
    "bred_from": [],
    "colours": [
@@ -1764,7 +1765,7 @@
    "nearest_looks": [
     "LB-152",
     "LB-169",
-    "LB-182"
+    "LB-268"
    ],
    "bred_from": [],
    "colours": [
@@ -1913,12 +1914,12 @@
    "type_pairing": [],
    "sheet": "sheets/F4_print_sheet1.jpg",
    "panel": "sheet 1 of 2, row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-145",
-   "nn_similarity": 0.5554,
+   "nearest_neighbour": "LB-252",
+   "nn_similarity": 0.5947,
    "nearest_looks": [
+    "LB-252",
     "LB-145",
-    "LB-067",
-    "LB-SD16"
+    "LB-067"
    ],
    "bred_from": [],
    "colours": [
@@ -2174,12 +2175,12 @@
    "type_pairing": [],
    "sheet": "sheets/F4_print_sheet2.jpg",
    "panel": "sheet 2 of 2, row 1 col 1 (panel 1 of 6)",
-   "nearest_neighbour": "LB-148",
-   "nn_similarity": 0.5727,
+   "nearest_neighbour": "LB-264",
+   "nn_similarity": 0.5834,
    "nearest_looks": [
-    "LB-148",
-    "LB-081",
-    "LB-234"
+    "LB-264",
+    "LB-271",
+    "LB-148"
    ],
    "bred_from": [],
    "colours": [
@@ -2228,8 +2229,8 @@
    "nn_similarity": 0.5688,
    "nearest_looks": [
     "LB-SD16",
-    "LB-140",
-    "LB-SD08"
+    "LB-256",
+    "LB-140"
    ],
    "bred_from": [],
    "colours": [
@@ -2272,12 +2273,47 @@
    "type_pairing": [],
    "sheet": "sheets/F4_print_sheet2.jpg",
    "panel": "sheet 2 of 2, row 1 col 3 (panel 3 of 6)",
-   "nearest_neighbour": "LB-234",
-   "nn_similarity": 0.5645,
+   "nearest_neighbour": "LB-257",
+   "nn_similarity": 0.6209,
+   "interpreted": {
+    "mood": [
+     "warm",
+     "playful",
+     "calm"
+    ],
+    "themes": [
+     "slightly wobbly hand-cut relief lines"
+    ],
+    "domains": [
+     "food",
+     "hospitality",
+     "kids",
+     "events",
+     "packaging",
+     "wellness",
+     "books",
+     "stationery"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-133",
+      "name": "Box-house fresco scene",
+      "role": "palette"
+     },
+     {
+      "id": "LB-240",
+      "name": "Rope-and-sphere maritime stone ornament",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "low"
+   },
    "nearest_looks": [
+    "LB-257",
     "LB-234",
-    "LB-081",
-    "LB-169"
+    "LB-081"
    ],
    "bred_from": [],
    "colours": [
@@ -2422,12 +2458,12 @@
    "type_pairing": [],
    "sheet": "sheets/F5_pop_sheet1.jpg",
    "panel": "sheet 1 of 2, row 1 col 3 (panel 3 of 6)",
-   "nearest_neighbour": "LB-084",
-   "nn_similarity": 0.5368,
+   "nearest_neighbour": "LB-260",
+   "nn_similarity": 0.5703,
    "nearest_looks": [
+    "LB-260",
     "LB-084",
-    "LB-171",
-    "LB-085"
+    "LB-171"
    ],
    "bred_from": [],
    "colours": [
@@ -2576,8 +2612,8 @@
    "nn_similarity": 0.5188,
    "nearest_looks": [
     "LB-195",
-    "LB-173",
-    "LB-108"
+    "LB-254",
+    "LB-248"
    ],
    "bred_from": [],
    "colours": [
@@ -2734,8 +2770,8 @@
    "nn_similarity": 0.583,
    "nearest_looks": [
     "LB-119",
-    "LB-067",
-    "LB-099"
+    "LB-281",
+    "LB-067"
    ],
    "bred_from": [],
    "colours": [
@@ -2783,8 +2819,8 @@
    "nn_similarity": 0.435,
    "nearest_looks": [
     "LB-067",
-    "LB-002",
-    "LB-105"
+    "LB-273",
+    "LB-002"
    ],
    "bred_from": [],
    "colours": [
@@ -3029,12 +3065,12 @@
    "type_pairing": [],
    "sheet": "sheets/F6_cultural_sheet1.jpg",
    "panel": "sheet 1 of 2, row 2 col 1 (panel 4 of 6)",
-   "nearest_neighbour": "LB-201",
-   "nn_similarity": 0.5399,
+   "nearest_neighbour": "LB-236",
+   "nn_similarity": 0.5551,
    "nearest_looks": [
+    "LB-236",
     "LB-201",
-    "LB-085",
-    "LB-194"
+    "LB-085"
    ],
    "bred_from": [],
    "colours": [
@@ -3283,12 +3319,12 @@
    "type_pairing": [],
    "sheet": "sheets/F6_cultural_sheet2.jpg",
    "panel": "sheet 2 of 2, row 1 col 3 (panel 3 of 6)",
-   "nearest_neighbour": "LB-143",
-   "nn_similarity": 0.5008,
+   "nearest_neighbour": "LB-242",
+   "nn_similarity": 0.572,
    "nearest_looks": [
+    "LB-242",
     "LB-143",
-    "LB-137",
-    "LB-059"
+    "LB-137"
    ],
    "bred_from": [],
    "colours": [
@@ -3883,7 +3919,7 @@
    "nearest_looks": [
     "LB-145",
     "LB-076",
-    "LB-099"
+    "LB-255"
    ],
    "bred_from": [],
    "colours": [
@@ -3982,7 +4018,7 @@
    "nearest_looks": [
     "LB-015",
     "LB-014",
-    "LB-186"
+    "LB-250"
    ],
    "bred_from": [],
    "colours": [
@@ -4421,8 +4457,8 @@
    "nn_similarity": 0.5598,
    "nearest_looks": [
     "LB-160",
-    "LB-026",
-    "LB-090"
+    "LB-239",
+    "LB-026"
    ],
    "bred_from": [],
    "colours": [
@@ -4471,8 +4507,8 @@
    "nn_similarity": 0.6397,
    "nearest_looks": [
     "LB-020",
-    "LB-186",
-    "LB-R05R19"
+    "LB-250",
+    "LB-186"
    ],
    "bred_from": [],
    "colours": [
@@ -4567,10 +4603,38 @@
    "panel": "sheet 3 (added batch 5), row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-136",
    "nn_similarity": 0.6367,
+   "interpreted": {
+    "mood": [
+     "scholarly",
+     "orderly",
+     "warm"
+    ],
+    "themes": [
+     "fine even outline with flat fills"
+    ],
+    "domains": [
+     "food",
+     "hospitality"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-181",
+      "name": "Surrealist dream plain",
+      "role": "palette"
+     }
+    ],
+    "tag_source": "interpreted, test-driven 2026-11-04 (cluster_04)",
+    "confidence": "low",
+    "test_drive": {
+     "verdict": "corrected",
+     "note": "Fine outline and flat fill held, but the reverse-perspective shelves were lost, and the partner LB-SD08 comic burst took over the image."
+    }
+   },
    "nearest_looks": [
     "LB-136",
-    "LB-083",
-    "LB-169"
+    "LB-271",
+    "LB-274"
    ],
    "bred_from": [],
    "colours": [
@@ -4668,7 +4732,7 @@
    "nearest_looks": [
     "LB-176",
     "LB-156",
-    "LB-234"
+    "LB-271"
    ],
    "bred_from": [],
    "colours": [
@@ -4915,10 +4979,45 @@
    "panel": "sheet 1 (added batch 5), row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-R02R10",
    "nn_similarity": 0.546,
+   "interpreted": {
+    "mood": [
+     "elegant",
+     "cool",
+     "classical"
+    ],
+    "themes": [
+     "white low-relief figures with soft flat edge shading"
+    ],
+    "domains": [
+     "institutions",
+     "museums",
+     "heritage brands",
+     "awards"
+    ],
+    "best_layer": "shape",
+    "partners": [
+     {
+      "id": "LB-020",
+      "name": "Op art",
+      "role": "palette"
+     },
+     {
+      "id": "LB-157",
+      "name": "Window-lit tiled interior",
+      "role": "making method"
+     }
+    ],
+    "tag_source": "interpreted, test-driven 2026-11-04 (cluster_04)",
+    "confidence": "medium",
+    "test_drive": {
+     "verdict": "corrected",
+     "note": "Medallion-and-laurel shape held strongly, but on a tech gadget it reads as heritage pastiche: domain tech/science is wrong."
+    }
+   },
    "nearest_looks": [
     "LB-R02R10",
-    "LB-R02R06",
-    "LB-196"
+    "LB-253",
+    "LB-R02R06"
    ],
    "bred_from": [],
    "colours": [
@@ -5016,7 +5115,7 @@
    "nearest_looks": [
     "LB-015",
     "LB-016",
-    "LB-014"
+    "LB-249"
    ],
    "bred_from": [],
    "colours": [
@@ -5508,8 +5607,8 @@
    "nn_similarity": 0.4803,
    "nearest_looks": [
     "LB-089",
-    "LB-119",
-    "LB-145"
+    "LB-256",
+    "LB-119"
    ],
    "bred_from": [],
    "colours": [
@@ -5654,10 +5753,43 @@
    "panel": "sheet 4 (added batch 6), row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-091",
    "nn_similarity": 0.5471,
+   "interpreted": {
+    "mood": [
+     "witty",
+     "jaunty",
+     "modern"
+    ],
+    "themes": [
+     "thin black drawn line with flat colour shapes printed slightly offset from it, so colour and line do not meet"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-204",
+      "name": "Metallic cone-and-cylinder figure painting",
+      "role": "palette"
+     },
+     {
+      "id": "LB-240",
+      "name": "Rope-and-sphere maritime stone ornament",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, test-driven 2026-11-04 (cluster_04)",
+    "confidence": "low",
+    "test_drive": {
+     "verdict": "corrected",
+     "note": "The offset line/colour did not show as a making method; the colours sat in register. Not usable as a method layer; better as a palette donor."
+    }
+   },
    "nearest_looks": [
     "LB-091",
     "LB-147",
-    "LB-219"
+    "LB-281"
    ],
    "bred_from": [],
    "colours": [
@@ -5807,7 +5939,7 @@
    "nearest_looks": [
     "LB-168",
     "LB-124",
-    "LB-141"
+    "LB-243"
    ],
    "bred_from": [],
    "colours": [
@@ -5850,12 +5982,12 @@
    "type_pairing": [],
    "sheet": "sheets/F9_fine-art_sheet2.jpg",
    "panel": "sheet 2 (added batch 6), row 1 col 1 (panel 1 of 6)",
-   "nearest_neighbour": "LB-203",
-   "nn_similarity": 0.5665,
+   "nearest_neighbour": "LB-280",
+   "nn_similarity": 0.5818,
    "nearest_looks": [
+    "LB-280",
     "LB-203",
-    "LB-112",
-    "LB-040"
+    "LB-268"
    ],
    "bred_from": [],
    "colours": [
@@ -6049,12 +6181,12 @@
    "type_pairing": [],
    "sheet": "sheets/F10_digital_sheet2.jpg",
    "panel": "sheet 2 (added batch 6), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-225",
-   "nn_similarity": 0.524,
+   "nearest_neighbour": "LB-268",
+   "nn_similarity": 0.5377,
    "nearest_looks": [
+    "LB-268",
     "LB-225",
-    "LB-126",
-    "LB-R04R10"
+    "LB-245"
    ],
    "bred_from": [],
    "colours": [
@@ -6103,8 +6235,8 @@
    "nn_similarity": 0.5475,
    "nearest_looks": [
     "LB-107",
-    "LB-115",
-    "LB-R01R15"
+    "LB-281",
+    "LB-115"
    ],
    "bred_from": [],
    "colours": [
@@ -6503,7 +6635,7 @@
    "nearest_looks": [
     "LB-183",
     "LB-R02R24",
-    "LB-R02R20"
+    "LB-235"
    ],
    "bred_from": [],
    "colours": [
@@ -6750,8 +6882,8 @@
    "nn_similarity": 0.6014,
    "nearest_looks": [
     "LB-205",
-    "LB-090",
-    "LB-018"
+    "LB-257",
+    "LB-090"
    ],
    "bred_from": [],
    "colours": [
@@ -6848,8 +6980,8 @@
    "nn_similarity": 0.6928,
    "nearest_looks": [
     "LB-096",
-    "LB-121",
-    "LB-215"
+    "LB-242",
+    "LB-121"
    ],
    "bred_from": [],
    "colours": [
@@ -7395,12 +7527,12 @@
    "type_pairing": [],
    "sheet": "sheets/F6_cultural_sheet5.jpg",
    "panel": "sheet 5 (added batch 8), row 1 col 3 (panel 3 of 6)",
-   "nearest_neighbour": "LB-222",
-   "nn_similarity": 0.6513,
+   "nearest_neighbour": "LB-256",
+   "nn_similarity": 0.6952,
    "nearest_looks": [
+    "LB-256",
     "LB-222",
-    "LB-119",
-    "LB-027"
+    "LB-119"
    ],
    "bred_from": [],
    "colours": [
@@ -7548,7 +7680,7 @@
    "nearest_looks": [
     "LB-179",
     "LB-168",
-    "LB-190"
+    "LB-273"
    ],
    "bred_from": [],
    "colours": [
@@ -7689,12 +7821,12 @@
    "type_pairing": [],
    "sheet": "sheets/F11_technique_sheet3.jpg",
    "panel": "sheet 3 (added batch 8), row 1 col 1 (panel 1 of 6)",
-   "nearest_neighbour": "LB-081",
-   "nn_similarity": 0.6367,
+   "nearest_neighbour": "LB-274",
+   "nn_similarity": 0.648,
    "nearest_looks": [
+    "LB-274",
     "LB-081",
-    "LB-128",
-    "LB-175"
+    "LB-128"
    ],
    "bred_from": [],
    "colours": [
@@ -7739,12 +7871,45 @@
    "type_pairing": [],
    "sheet": "sheets/F11_technique_sheet3.jpg",
    "panel": "sheet 3 (added batch 8), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-073",
-   "nn_similarity": 0.5909,
+   "nearest_neighbour": "LB-240",
+   "nn_similarity": 0.6156,
+   "interpreted": {
+    "mood": [
+     "crafted",
+     "orderly",
+     "rustic"
+    ],
+    "themes": [
+     "every mark a small triangular chip cut with crisp flat facets, the facet in shadow darker"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-057",
+      "name": "Pierced-leather shadow-puppet figure",
+      "role": "palette"
+     },
+     {
+      "id": "LB-058",
+      "name": "Blue-painted tin-glaze tile panel",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, test-driven 2026-11-04 (cluster_04)",
+    "confidence": "high",
+    "test_drive": {
+     "verdict": "confirmed",
+     "note": "Chip-cut facets carried the whole sun; works as a making method for posters."
+    }
+   },
    "nearest_looks": [
+    "LB-240",
     "LB-073",
-    "LB-233",
-    "LB-227"
+    "LB-233"
    ],
    "bred_from": [],
    "colours": [
@@ -8237,12 +8402,12 @@
    "type_pairing": [],
    "sheet": "sheets/F5_pop_sheet6.jpg",
    "panel": "sheet 6 (added batch 9), row 1 col 1 (panel 1 of 6)",
-   "nearest_neighbour": "LB-083",
-   "nn_similarity": 0.4812,
+   "nearest_neighbour": "LB-257",
+   "nn_similarity": 0.5308,
    "nearest_looks": [
+    "LB-257",
     "LB-083",
-    "LB-R02R07",
-    "LB-049"
+    "LB-R02R07"
    ],
    "bred_from": [],
    "colours": [
@@ -8439,6 +8604,39 @@
    "panel": "sheet 6 (added batch 9), row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-161",
    "nn_similarity": 0.6825,
+   "interpreted": {
+    "mood": [
+     "homely",
+     "warm",
+     "festive"
+    ],
+    "themes": [
+     "flat brushed C- and S-scrolls and stylised flowers with clean edges"
+    ],
+    "domains": [
+     "food",
+     "hospitality"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-SD10",
+      "name": "Three-Ink Block Poster",
+      "role": "palette"
+     },
+     {
+      "id": "LB-SD04",
+      "name": "Splattered Flat-Field Figure",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, test-driven 2026-11-04 (cluster_04)",
+    "confidence": "high",
+    "test_drive": {
+     "verdict": "confirmed",
+     "note": "Flat scroll-flowers held and suit food and hospitality."
+    }
+   },
    "nearest_looks": [
     "LB-161",
     "LB-063",
@@ -8690,8 +8888,8 @@
    "nn_similarity": 0.5932,
    "nearest_looks": [
     "LB-034",
-    "LB-182",
-    "LB-158"
+    "LB-277",
+    "LB-245"
    ],
    "bred_from": [],
    "colours": [
@@ -8741,7 +8939,7 @@
    "nearest_looks": [
     "LB-232",
     "LB-078",
-    "LB-218"
+    "LB-239"
    ],
    "bred_from": [],
    "colours": [
@@ -8890,12 +9088,12 @@
    "type_pairing": [],
    "sheet": "sheets/F9_fine-art_sheet5.jpg",
    "panel": "sheet 5 (added batch 10), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-024",
-   "nn_similarity": 0.6185,
+   "nearest_neighbour": "LB-273",
+   "nn_similarity": 0.657,
    "nearest_looks": [
+    "LB-273",
     "LB-024",
-    "LB-189",
-    "LB-028"
+    "LB-189"
    ],
    "bred_from": [],
    "colours": [
@@ -9156,12 +9354,12 @@
    "type_pairing": [],
    "sheet": "sheets/F9_fine-art_sheet6.jpg",
    "panel": "sheet 6 (added batch 10), row 1 col 1 (panel 1 of 6)",
-   "nearest_neighbour": "LB-120",
-   "nn_similarity": 0.6619,
+   "nearest_neighbour": "LB-273",
+   "nn_similarity": 0.7559,
    "nearest_looks": [
+    "LB-273",
     "LB-120",
-    "LB-184",
-    "LB-081"
+    "LB-184"
    ],
    "bred_from": [],
    "colours": [
@@ -9697,6 +9895,35 @@
    "panel": "sheet 7 (added batch 10), row 2 col 2 (panel 5 of 6)",
    "nearest_neighbour": "LB-055",
    "nn_similarity": 0.6378,
+   "interpreted": {
+    "mood": [
+     "earthy",
+     "cheeky",
+     "warm"
+    ],
+    "themes": [
+     "crude thick dark outlines and flat fills, simple decorative patterns on clothes"
+    ],
+    "domains": [
+     "food",
+     "hospitality"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-136",
+      "name": "Perspective wood-inlay cupboard",
+      "role": "palette"
+     },
+     {
+      "id": "LB-221",
+      "name": "Stiff frontal folk portrait",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "low"
+   },
    "nearest_looks": [
     "LB-055",
     "LB-133",
@@ -9749,8 +9976,8 @@
    "nn_similarity": 0.6303,
    "nearest_looks": [
     "LB-211",
-    "LB-R04R06",
-    "LB-R04R21"
+    "LB-260",
+    "LB-R04R06"
    ],
    "bred_from": [],
    "colours": [
@@ -9803,8 +10030,8 @@
    "nn_similarity": 0.5031,
    "nearest_looks": [
     "LB-124",
-    "LB-108",
-    "LB-156"
+    "LB-276",
+    "LB-269"
    ],
    "bred_from": [],
    "colours": [
@@ -9957,12 +10184,12 @@
    "type_pairing": [],
    "sheet": "sheets/F9_fine-art_sheet8.jpg",
    "panel": "sheet 8 (added batch 10), row 2 col 1 (panel 4 of 6)",
-   "nearest_neighbour": "LB-157",
-   "nn_similarity": 0.6194,
+   "nearest_neighbour": "LB-273",
+   "nn_similarity": 0.686,
    "nearest_looks": [
+    "LB-273",
     "LB-157",
-    "LB-169",
-    "LB-022"
+    "LB-169"
    ],
    "bred_from": [],
    "colours": [
@@ -10116,12 +10343,12 @@
    "type_pairing": [],
    "sheet": "sheets/F9_fine-art_sheet9.jpg",
    "panel": "sheet 9 (added batch 11), row 1 col 1 (panel 1 of 6)",
-   "nearest_neighbour": "LB-170",
-   "nn_similarity": 0.5415,
+   "nearest_neighbour": "LB-236",
+   "nn_similarity": 0.597,
    "nearest_looks": [
-    "LB-170",
-    "LB-166",
-    "LB-179"
+    "LB-236",
+    "LB-251",
+    "LB-170"
    ],
    "bred_from": [],
    "colours": [
@@ -10171,7 +10398,7 @@
    "nearest_looks": [
     "LB-097",
     "LB-154",
-    "LB-121"
+    "LB-240"
    ],
    "bred_from": [],
    "colours": [
@@ -10270,12 +10497,12 @@
    "type_pairing": [],
    "sheet": "sheets/F9_fine-art_sheet9.jpg",
    "panel": "sheet 9 (added batch 11), row 2 col 1 (panel 4 of 6)",
-   "nearest_neighbour": "LB-196",
-   "nn_similarity": 0.6168,
+   "nearest_neighbour": "LB-251",
+   "nn_similarity": 0.6402,
    "nearest_looks": [
+    "LB-251",
     "LB-196",
-    "LB-133",
-    "LB-128"
+    "LB-133"
    ],
    "bred_from": [],
    "colours": [
@@ -10326,6 +10553,37 @@
    "panel": "sheet 9 (added batch 11), row 2 col 2 (panel 5 of 6)",
    "nearest_neighbour": "LB-221",
    "nn_similarity": 0.6826,
+   "interpreted": {
+    "mood": [
+     "precise",
+     "dignified",
+     "quiet"
+    ],
+    "themes": [
+     "precise hard contours, engraved-like linear clarity, smooth even modelling"
+    ],
+    "domains": [
+     "institutions",
+     "museums",
+     "tech",
+     "engineering"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-069",
+      "name": "Nested-square colour study",
+      "role": "palette"
+     },
+     {
+      "id": "LB-104",
+      "name": "Bold wax-resist repeat",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "low"
+   },
    "nearest_looks": [
     "LB-221",
     "LB-206",
@@ -10435,8 +10693,8 @@
    "nn_similarity": 0.5932,
    "nearest_looks": [
     "LB-120",
-    "LB-165",
-    "LB-054"
+    "LB-273",
+    "LB-165"
    ],
    "bred_from": [],
    "colours": [
@@ -10540,7 +10798,7 @@
    "nearest_looks": [
     "LB-194",
     "LB-047",
-    "LB-044"
+    "LB-262"
    ],
    "bred_from": [],
    "colours": [
@@ -10590,7 +10848,7 @@
    "nearest_looks": [
     "LB-190",
     "LB-206",
-    "LB-132"
+    "LB-251"
    ],
    "bred_from": [],
    "colours": [
@@ -10643,8 +10901,8 @@
    "nn_similarity": 0.5664,
    "nearest_looks": [
     "LB-191",
-    "LB-221",
-    "LB-206"
+    "LB-273",
+    "LB-221"
    ],
    "bred_from": [],
    "colours": [
@@ -10698,7 +10956,7 @@
    "nearest_looks": [
     "LB-201",
     "LB-226",
-    "LB-108"
+    "LB-236"
    ],
    "bred_from": [],
    "colours": [
@@ -10855,7 +11113,7 @@
    "nearest_looks": [
     "LB-198",
     "LB-226",
-    "LB-133"
+    "LB-236"
    ],
    "bred_from": [],
    "colours": [
@@ -11155,12 +11413,12 @@
    "type_pairing": [],
    "sheet": "sheets/F9_fine-art_sheet12.jpg",
    "panel": "sheet 12 (added batch 11), row 1 col 3 (panel 3 of 6)",
-   "nearest_neighbour": "LB-008",
-   "nn_similarity": 0.6105,
+   "nearest_neighbour": "LB-236",
+   "nn_similarity": 0.6762,
    "nearest_looks": [
+    "LB-236",
     "LB-008",
-    "LB-208",
-    "LB-035"
+    "LB-208"
    ],
    "bred_from": [],
    "colours": [
@@ -11207,6 +11465,34 @@
    "panel": "sheet 12 (added batch 11), row 2 col 1 (panel 4 of 6)",
    "nearest_neighbour": "LB-207",
    "nn_similarity": 0.6086,
+   "interpreted": {
+    "mood": [
+     "warm",
+     "dreamy",
+     "earthy"
+    ],
+    "themes": [
+     "flat colour with soft simple rounded modelling, smooth clean edges, naive simplified geometry"
+    ],
+    "domains": [
+     "food",
+     "hospitality"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-020",
+      "name": "Op art",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, test-driven 2026-11-04 (cluster_04)",
+    "confidence": "low",
+    "test_drive": {
+     "verdict": "corrected",
+     "note": "Soft rounded flat forms only loosely held; the partner LB-229 desktop palette turned it into a UI gag."
+    }
+   },
    "nearest_looks": [
     "LB-207",
     "LB-008",
@@ -11307,6 +11593,35 @@
    "panel": "sheet 12 (added batch 11), row 2 col 3 (panel 6 of 6)",
    "nearest_neighbour": "LB-205",
    "nn_similarity": 0.6233,
+   "interpreted": {
+    "mood": [
+     "wild",
+     "joyful",
+     "raw"
+    ],
+    "themes": [
+     "thick black spontaneous contours around crude shapes, flat bright fills, crude round eyes"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "shape",
+    "partners": [
+     {
+      "id": "LB-SD07",
+      "name": "Lean Brush-Ink Figure",
+      "role": "palette"
+     },
+     {
+      "id": "LB-117",
+      "name": "Two-ink diagram advert",
+      "role": "making method"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "low"
+   },
    "nearest_looks": [
     "LB-205",
     "LB-015",
@@ -11359,8 +11674,8 @@
    "nn_similarity": 0.6303,
    "nearest_looks": [
     "LB-180",
-    "LB-R04R21",
-    "LB-R04R06"
+    "LB-281",
+    "LB-R04R21"
    ],
    "bred_from": [],
    "colours": [
@@ -11409,8 +11724,8 @@
    "nn_similarity": 0.6145,
    "nearest_looks": [
     "LB-218",
-    "LB-133",
-    "LB-094"
+    "LB-260",
+    "LB-133"
    ],
    "bred_from": [],
    "colours": [
@@ -11507,8 +11822,8 @@
    "nn_similarity": 0.5949,
    "nearest_looks": [
     "LB-087",
-    "LB-081",
-    "LB-R01R11"
+    "LB-270",
+    "LB-276"
    ],
    "bred_from": [],
    "colours": [
@@ -11656,6 +11971,35 @@
    "panel": "sheet 7 (added batch 12), row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-095",
    "nn_similarity": 0.5856,
+   "interpreted": {
+    "mood": [
+     "ancient",
+     "flowing",
+     "mysterious"
+    ],
+    "themes": [
+     "even dark engraved outlines round flat red enamel cells: curves that swell and taper to fine points, compass-drawn arcs, no texture, no patina, no shine"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-036",
+      "name": "Natural-history plate and cyanotype",
+      "role": "palette"
+     },
+     {
+      "id": "LB-186",
+      "name": "Hard-edge colour painting",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "low"
+   },
    "nearest_looks": [
     "LB-095",
     "LB-138",
@@ -11952,8 +12296,8 @@
    "nn_similarity": 0.593,
    "nearest_looks": [
     "LB-046",
-    "LB-096",
-    "LB-119"
+    "LB-256",
+    "LB-096"
    ],
    "bred_from": [],
    "colours": [
@@ -12003,7 +12347,7 @@
    "nearest_looks": [
     "LB-212",
     "LB-108",
-    "LB-194"
+    "LB-248"
    ],
    "bred_from": [],
    "colours": [
@@ -12100,6 +12444,39 @@
    "panel": "sheet 13 (added batch 12), row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-163",
    "nn_similarity": 0.6913,
+   "interpreted": {
+    "mood": [
+     "quiet",
+     "breezy",
+     "sober"
+    ],
+    "themes": [
+     "broad soft wet patches of paint, calm and loose, edges softened, no fine detail"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-116",
+      "name": "Three-ink allegory poster",
+      "role": "palette"
+     },
+     {
+      "id": "LB-237",
+      "name": "Iron Age geometric band vessel",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, test-driven 2026-11-04 (cluster_04)",
+    "confidence": "medium",
+    "test_drive": {
+     "verdict": "confirmed",
+     "note": "Soft wet patches held in the sky and headland; fine for editorial."
+    }
+   },
    "nearest_looks": [
     "LB-163",
     "LB-201",
@@ -12149,6 +12526,39 @@
    "panel": "sheet 13 (added batch 12), row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-137",
    "nn_similarity": 0.5659,
+   "interpreted": {
+    "mood": [
+     "serene",
+     "rhythmic",
+     "pure"
+    ],
+    "themes": [
+     "clean smooth surfaces"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "shape",
+    "partners": [
+     {
+      "id": "LB-105",
+      "name": "Woven-roundel tapestry",
+      "role": "palette"
+     },
+     {
+      "id": "LB-256",
+      "name": "Few-stroke ink brushwork",
+      "role": "making method"
+     }
+    ],
+    "tag_source": "interpreted, test-driven 2026-11-04 (cluster_04)",
+    "confidence": "high",
+    "test_drive": {
+     "verdict": "confirmed",
+     "note": "The grid-bending-into-a-wave shape held exactly; strong shape donor."
+    }
+   },
    "nearest_looks": [
     "LB-137",
     "LB-135",
@@ -12195,12 +12605,12 @@
    "type_pairing": [],
    "sheet": "sheets/F10_digital_sheet5.jpg",
    "panel": "sheet 5 (added batch 12), row 1 col 1 (panel 1 of 6)",
-   "nearest_neighbour": "LB-022",
-   "nn_similarity": 0.5843,
+   "nearest_neighbour": "LB-281",
+   "nn_similarity": 0.6178,
    "nearest_looks": [
+    "LB-281",
     "LB-022",
-    "LB-158",
-    "LB-182"
+    "LB-158"
    ],
    "bred_from": [],
    "colours": [
@@ -12297,8 +12707,8 @@
    "nn_similarity": 0.5451,
    "nearest_looks": [
     "LB-214",
-    "LB-127",
-    "LB-146"
+    "LB-280",
+    "LB-127"
    ],
    "bred_from": [],
    "colours": [
@@ -12346,8 +12756,8 @@
    "nn_similarity": 0.6796,
    "nearest_looks": [
     "LB-105",
-    "LB-131",
-    "LB-161"
+    "LB-237",
+    "LB-131"
    ],
    "bred_from": [],
    "colours": [
@@ -12495,8 +12905,8 @@
    "nn_similarity": 0.6333,
    "nearest_looks": [
     "LB-099",
-    "LB-083",
-    "LB-167"
+    "LB-281",
+    "LB-083"
    ],
    "bred_from": [],
    "colours": [
@@ -12510,6 +12920,2413 @@
     "label": "Art Deco",
     "url": "http://vocab.getty.edu/page/aat/300021426"
    },
+   "status": "live"
+  },
+  {
+   "id": "LB-235",
+   "name": "Flat-tone campaign portrait poster",
+   "kind": "established",
+   "family": 1,
+   "family_name": "Revolutionary and political",
+   "also_family": "",
+   "theme": "One face in flat tones on one strong colour",
+   "use": "civic campaigns, elections and votes, community groups, editorial, events",
+   "mood": [
+    "confident",
+    "civic",
+    "direct"
+   ],
+   "energy": "medium",
+   "avoid_for": "luxury, romance, children's party",
+   "hallmarks": {
+    "palette": "one big flat field of deep royal blue, the portrait in black, warm mid-grey and white, one small red accent",
+    "type": "",
+    "mark_making": "the face and clothes reduced to two or three hard-edged flat tones like a cut stencil, no gradients, no outline",
+    "composition": "a head-and-shoulders portrait set off-centre, turned three-quarters, the shoulders cropped by the bottom edge, the blue field running edge to edge with no band",
+    "subject": "an invented public candidate"
+   },
+   "hint": "a head cut into two or three flat tones on one strong colour field",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "mid-20th-century election posters",
+   "care": "no real candidate, party, emblem, number or slogan",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F1_revolutionary_sheet8.jpg",
+   "panel": "sheet 8 (added batch 13), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R02R24",
+   "nn_similarity": 0.5901,
+   "nearest_looks": [
+    "LB-R02R24",
+    "LB-R02R03",
+    "LB-R03R16"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#234c9b",
+    "#c4c4c4",
+    "#f8f8f8",
+    "#1d1e22",
+    "#838082"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-236",
+   "name": "Profile-rows gouache work poster",
+   "kind": "established",
+   "family": 1,
+   "family_name": "Revolutionary and political",
+   "also_family": "",
+   "theme": "Rows of workers in profile over land bands",
+   "use": "community and labour history, harvest festivals, education, editorial, murals",
+   "mood": [
+    "resolute",
+    "collective",
+    "hopeful"
+   ],
+   "energy": "high",
+   "avoid_for": "luxury, romance, minimal tech",
+   "hallmarks": {
+    "palette": "flat opaque gouache: brick red, rice-green, ochre yellow, dark blue-grey and cream sky",
+    "type": "",
+    "mark_making": "dead-flat matte gouache shapes with crisp edges, figures in two flat tones each, simple dark outlines on faces and hands",
+    "composition": "two or three overlapping rows of figures walking left to right in strict profile, each carrying a farm tool, over stacked horizontal landscape bands (paddy, river, hills, sky), a plain empty band at the top",
+    "subject": "a column of farm workers going to the fields"
+   },
+   "hint": "rows of profile figures over flat landscape bands",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1950s-70s collective-work gouache posters",
+   "care": "tools, not weapons; no slogan, flag or emblem",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F1_revolutionary_sheet8.jpg",
+   "panel": "sheet 8 (added batch 13), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-207",
+   "nn_similarity": 0.6762,
+   "nearest_looks": [
+    "LB-207",
+    "LB-187",
+    "LB-040"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#faf0db",
+    "#65743d",
+    "#a76f40",
+    "#8a9543",
+    "#728794"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-237",
+   "name": "Iron Age geometric band vessel",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Meanders, triangles and tiny birds in bands",
+   "use": "museums and heritage, craft and ceramics, outdoor brands, textiles, education",
+   "mood": [
+    "ancient",
+    "orderly",
+    "earthy"
+   ],
+   "energy": "low",
+   "avoid_for": "tech, nightlife, children's party",
+   "hallmarks": {
+    "palette": "two earths: dark brown-black and graphite on a warm reddish-ochre clay, with cream zones",
+    "type": "",
+    "mark_making": "flat even painted bands with clean edges, geometric motifs only, no modelling on the motifs",
+    "composition": "a wide-shouldered pot seen side-on, its body divided into stacked horizontal zones that alternate dark and light: meander band, row of solid triangles, dot row, a band of small identical stylised birds",
+    "subject": "a banded clay pot"
+   },
+   "hint": "stacked dark-light zones of meanders, triangles and tiny birds",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "early Iron Age geometric pottery",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet8.jpg",
+   "panel": "sheet 8 (added batch 13), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-231",
+   "nn_similarity": 0.6423,
+   "nearest_looks": [
+    "LB-231",
+    "LB-233",
+    "LB-121"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#dbdbdb",
+    "#bc773f",
+    "#363230",
+    "#eedcc2",
+    "#725238"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-238",
+   "name": "Faux-marble block wall",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Painted blocks with loose brushed veins",
+   "use": "interiors and architecture, hotels, heritage, premium packaging backgrounds, galleries",
+   "mood": [
+    "calm",
+    "stately",
+    "solid"
+   ],
+   "energy": "low",
+   "avoid_for": "children's party, tech, sport",
+   "hallmarks": {
+    "palette": "flat mineral colours: oxblood red, yellow ochre, black, pale green and cream",
+    "type": "",
+    "mark_making": "each block one flat painted ground with a few loose brushy scumbled veins dragged across it in a lighter or darker paint, visibly hand-painted with a brush, crisp painted joint lines between blocks",
+    "composition": "a frontal wall section: a tall dado of large upright slabs, a band of long narrow blocks laid in courses above, a slim moulded cornice line at the top; strict horizontal courses and staggered joints",
+    "subject": "a painted wall of imitation stone blocks"
+   },
+   "hint": "flat coloured stone-block courses, no figures",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1st century BCE painted imitation-stone walls",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet8.jpg",
+   "panel": "sheet 8 (added batch 13), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-188",
+   "nn_similarity": 0.5938,
+   "nearest_looks": [
+    "LB-188",
+    "LB-069",
+    "LB-233"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#161717",
+    "#3d1a17",
+    "#cfbda2",
+    "#818266",
+    "#c59e5a"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-239",
+   "name": "Roundel-beast carved capital ornament",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Beasts in roundels under round arches",
+   "use": "heritage, books and publishing, brewing and food, games, museums",
+   "mood": [
+    "sturdy",
+    "medieval",
+    "grave"
+   ],
+   "energy": "medium",
+   "avoid_for": "tech, wellness, minimal luxury",
+   "hallmarks": {
+    "palette": "flat earth red, ochre, dark green and a strong lapis blue on a pale plaster ground, black outline",
+    "type": "",
+    "mark_making": "heavy even black contours, flat colour fills, compressed stocky forms, no shading",
+    "composition": "a row of three round arches on squat columns; under each arch a roundel holding one curled beast (lion, griffin, bird) biting a leafy stem; plain borders of zigzag and billet",
+    "subject": "beasts in roundels under round arches"
+   },
+   "hint": "curled beasts in heavy roundels under round arches",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "11th-12th century carved and painted ornament",
+   "care": "no sacred figures",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet8.jpg",
+   "panel": "sheet 8 (added batch 13), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-121",
+   "nn_similarity": 0.6458,
+   "nearest_looks": [
+    "LB-121",
+    "LB-131",
+    "LB-154"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#f0e3c7",
+    "#154e8f",
+    "#4d5844",
+    "#bc8a30",
+    "#804c24"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-240",
+   "name": "Rope-and-sphere maritime stone ornament",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Rope columns and coral round a stone door",
+   "use": "seafood and coastal brands, heritage, hotels, books, spirits labels",
+   "mood": [
+    "maritime",
+    "exuberant",
+    "proud"
+   ],
+   "energy": "medium",
+   "avoid_for": "minimal tech, children's party, medical",
+   "hallmarks": {
+    "palette": "warm honey limestone in three flat tones against a plain sky blue and a dark doorway",
+    "type": "",
+    "mark_making": "carved forms shown in three flat stone tones with clean edges, crisp shadow shapes, no stone pitting or texture",
+    "composition": "one symmetric doorway seen frontally: twisted rope columns either side, a rope arch knotted at the top, coral-branch and seaweed carving round the frame, an armillary sphere on each side, a scallop shell at the crown",
+    "subject": "a carved maritime doorway"
+   },
+   "hint": "twisted rope columns, knots, coral and armillary spheres round a door",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "16th-century maritime stone ornament",
+   "care": "no coats of arms, crosses or royal emblems",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet8.jpg",
+   "panel": "sheet 8 (added batch 13), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-188",
+   "nn_similarity": 0.6196,
+   "nearest_looks": [
+    "LB-188",
+    "LB-137",
+    "LB-073"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#e5c695",
+    "#75a6cd",
+    "#15181d",
+    "#b39160"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-241",
+   "name": "Cut-print decoupage box",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "Cut printed roses glued on a painted box",
+   "use": "homeware and gifts, crafts, stationery, tea rooms, florists",
+   "mood": [
+    "homely",
+    "pretty",
+    "crafted"
+   ],
+   "energy": "low",
+   "avoid_for": "tech, sport, legal",
+   "hallmarks": {
+    "palette": "a flat sage-green painted box with cut motifs in rose pink, crimson, leaf green and soft yellow, thin gold edging",
+    "type": "",
+    "mark_making": "each motif a cut-out piece of printed paper glued onto the painted wood, with fine printed detail inside and a crisp scissor-cut edge that sits very slightly raised, a thin pale paper rim showing round each cut-out, all under one clear smooth varnish, no crackle",
+    "composition": "a box with a lid seen from slightly above: a central bouquet on the lid, matching cut-out sprays and two birds placed symmetrically on the front, thin gold line borders",
+    "subject": "a decoupaged trinket box"
+   },
+   "hint": "cut printed flowers glued symmetrically on a painted box",
+   "out_there": 2,
+   "read_status": "partial",
+   "era": "18th-19th century decoupage",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet8.jpg",
+   "panel": "sheet 8 (added batch 13), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-121",
+   "nn_similarity": 0.5483,
+   "interpreted": {
+    "mood": [
+     "homely",
+     "pretty",
+     "crafted"
+    ],
+    "themes": [
+     "each motif a cut-out piece of printed paper glued onto the painted wood, with fine printed detail inside and a crisp scissor-cut edge that sits very slightly raised, a thin pale paper rim showing round each cut-out, all under one clear smooth varnish, no crackle"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-046",
+      "name": "Bold-line tattoo flash sheet",
+      "role": "palette"
+     },
+     {
+      "id": "LB-186",
+      "name": "Hard-edge colour painting",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "low"
+   },
+   "nearest_looks": [
+    "LB-121",
+    "LB-223",
+    "LB-027"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#f4e7d1",
+    "#adae8a",
+    "#89885e",
+    "#716941",
+    "#d09187"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-242",
+   "name": "Coiled paper-strip picture",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "A spray of coiled paper strips on edge",
+   "use": "weddings and stationery, crafts, florists, gifts, children's education",
+   "mood": [
+    "delicate",
+    "patient",
+    "charming"
+   ],
+   "energy": "low",
+   "avoid_for": "industry, legal, nightlife",
+   "hallmarks": {
+    "palette": "three or four paper colours: coral, leaf green, mustard yellow and teal on bright white card",
+    "type": "",
+    "mark_making": "narrow paper strips standing on their edges, rolled into tight coils, loose coils, teardrops and eyes, outlines made of single bent strips; small soft shadows",
+    "composition": "one flowering spray seen straight on: a curving stem, five or six flowers made of teardrop petals, coiled leaves, a few scroll tendrils, lots of white space",
+    "subject": "a flowering spray in rolled paper"
+   },
+   "hint": "paper strips on edge rolled into coils and teardrops",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "18th century onward paper quilling",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet8.jpg",
+   "panel": "sheet 8 (added batch 13), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-119",
+   "nn_similarity": 0.6884,
+   "nearest_looks": [
+    "LB-119",
+    "LB-059",
+    "LB-096"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#fcfcfb",
+    "#4f8044",
+    "#b4b19a",
+    "#d1533d",
+    "#dda32d"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-243",
+   "name": "Painted papier-mache folk animal",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "A rounded paper animal in bright patterns",
+   "use": "festivals, children's products, crafts, gifts, restaurants and cafes",
+   "mood": [
+    "joyful",
+    "handmade",
+    "festive"
+   ],
+   "energy": "high",
+   "avoid_for": "legal, finance, minimal luxury",
+   "hallmarks": {
+    "palette": "flat bright paint: hot pink, orange, cobalt, lime green and yellow on a black base coat in places, white dots",
+    "type": "",
+    "mark_making": "smooth rounded moulded forms painted in flat bright colours, patterns of dots, dashes and petals outlined in thin black and white lines",
+    "composition": "one standing animal figure seen side-on on a plain ground, its body covered in bands of painted flowers, dots and zigzags",
+    "subject": "a painted moulded-paper bull"
+   },
+   "hint": "rounded paper animal covered in flat bright painted patterns",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "20th-century painted folk papier-mache",
+   "care": "no sacred or ritual figures",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet8.jpg",
+   "panel": "sheet 8 (added batch 13), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-114",
+   "nn_similarity": 0.6188,
+   "nearest_looks": [
+    "LB-114",
+    "LB-106",
+    "LB-099"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#fcfaf3",
+    "#e76d12",
+    "#e76087",
+    "#4e423b",
+    "#135ebd"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-244",
+   "name": "Flat-back mantel figure pair",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "A glazed pair, decorated front, flat back",
+   "use": "homeware, antiques, heritage, tea rooms, gifts",
+   "mood": [
+    "quaint",
+    "domestic",
+    "nostalgic"
+   ],
+   "energy": "low",
+   "avoid_for": "tech, sport, nightlife",
+   "hallmarks": {
+    "palette": "glossy white glaze with a few flat bright enamels: cobalt, orange-red, black and pink, thin gold lines",
+    "type": "",
+    "mark_making": "simple press-moulded forms with little modelling and a shallow depth, a flat, plain, unpainted white back like a slab, flat colour applied sparingly on white, painted simple faces with fine brushed features",
+    "composition": "one shallow figure group turned three-quarters so the decorated front and the flat plain back both show, a dog at the feet of the woman, plain wall behind",
+    "subject": "a pair of mantelpiece figures"
+   },
+   "hint": "frontal white-glazed figures with sparse bright enamel and gilt",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "19th-century flat-back mantel figures",
+   "care": "no real person portrayed",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet8.jpg",
+   "panel": "sheet 8 (added batch 13), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-218",
+   "nn_similarity": 0.4592,
+   "nearest_looks": [
+    "LB-218",
+    "LB-189",
+    "LB-221"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#e2dedb",
+    "#b8aa9b",
+    "#776c5f"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-245",
+   "name": "Arcade cabinet side-art panel",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "One diagonal blast in four flat colours",
+   "use": "games and esports, bars and arcades, events, merchandise, youth brands",
+   "mood": [
+    "energetic",
+    "playful",
+    "retro"
+   ],
+   "energy": "high",
+   "avoid_for": "legal, medical, luxury",
+   "hallmarks": {
+    "palette": "four flat colours: electric magenta, chrome yellow, cyan and black, on a deep violet panel",
+    "type": "",
+    "mark_making": "flat solid fills with thick even black outlines, hard-edged speed streaks, no gradients",
+    "composition": "the tall angled side of an upright arcade cabinet; one spaceship blasting diagonally up from bottom left to top right through planets and stars, the shape filling the panel",
+    "subject": "a rocket-fighter blasting through planets"
+   },
+   "hint": "tall side panel, one bold diagonal ship in four flats",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1980s arcade cabinet side art",
+   "care": "no real game character, logo or brand",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet8.jpg",
+   "panel": "sheet 8 (added batch 13), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-R04R10",
+   "nn_similarity": 0.7455,
+   "nearest_looks": [
+    "LB-R04R10",
+    "LB-R04R20",
+    "LB-R04R17"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#410d8a",
+    "#040404",
+    "#da0281",
+    "#300a3b",
+    "#05abd0"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-246",
+   "name": "Cut-paper title-sequence frame",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Ragged cut bars and one symbolic object",
+   "use": "film and theatre, books and publishing, jazz and music, galleries, editorial",
+   "mood": [
+    "tense",
+    "stylish",
+    "graphic"
+   ],
+   "energy": "medium",
+   "avoid_for": "children's party, medical, wellness",
+   "hallmarks": {
+    "palette": "two or three flat colours: black and white with one strong orange-red, on a flat ground",
+    "type": "",
+    "mark_making": "hand-cut paper shapes with slightly irregular straight edges, flat fills, no texture",
+    "composition": "a field of uneven vertical and diagonal black bars cut by hand, broken and offset, with one symbolic object (a key) in silhouette placed off-centre",
+    "subject": "cut bars and one key"
+   },
+   "hint": "hand-cut offset bars and one symbolic silhouette",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1950s-60s modernist film title sequences",
+   "care": "no lettering; not a copy of any known title sequence",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet8.jpg",
+   "panel": "sheet 8 (added batch 13), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-127",
+   "nn_similarity": 0.5716,
+   "nearest_looks": [
+    "LB-127",
+    "LB-185",
+    "LB-186"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#fa4109",
+    "#131414",
+    "#c44018"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-247",
+   "name": "Looming-monster drive-in poster",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "A giant menace over tiny fleeing figures",
+   "use": "film nights, Halloween events, bars, games, music posters",
+   "mood": [
+    "lurid",
+    "thrilling",
+    "campy"
+   ],
+   "energy": "high",
+   "avoid_for": "children's education, medical, luxury",
+   "hallmarks": {
+    "palette": "lurid flat poster colours: acid green, blood orange, sulphur yellow and black on a dark violet sky",
+    "type": "",
+    "mark_making": "painted poster figures with real period modelling in a few broad tones, the monster in flat dramatic planes; crisp edges",
+    "composition": "a huge looming creature filling the upper two thirds and leaning over the frame, a small town and a few tiny fleeing figures below, a blank band at the top for a title",
+    "subject": "a giant crab over a seaside town"
+   },
+   "hint": "a giant menace looming over tiny figures, lurid flat colour",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "1950s monster-movie posters",
+   "care": "no real film's creature or title; no gore",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet8.jpg",
+   "panel": "sheet 8 (added batch 13), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-173",
+   "nn_similarity": 0.5341,
+   "nearest_looks": [
+    "LB-173",
+    "LB-045",
+    "LB-174"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#2d1b46",
+    "#1a1227",
+    "#181410",
+    "#4f6227",
+    "#9b4116"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-248",
+   "name": "Even-daylight educational gouache plate",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "An everyday street in even daylight",
+   "use": "education, heritage, books, museums, public services",
+   "mood": [
+    "informative",
+    "reassuring",
+    "nostalgic"
+   ],
+   "energy": "low",
+   "avoid_for": "nightlife, luxury, horror",
+   "hallmarks": {
+    "palette": "clear natural gouache colours: grass green, brick red, sky blue, cream and warm greys",
+    "type": "",
+    "mark_making": "realistic opaque gouache with solid period modelling of people and buildings, even shadowless daylight, smooth flat skies, clean crisp edges",
+    "composition": "a full-page plate inside a thin clean frame: a busy everyday scene at eye level, each figure doing one clear task, everything legible",
+    "subject": "a village post office and street"
+   },
+   "hint": "realistic gouache everyday scene in even daylight",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "1960s educational book plates",
+   "care": "no real place, brand or shop sign text",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet8.jpg",
+   "panel": "sheet 8 (added batch 13), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-157",
+   "nn_similarity": 0.5232,
+   "nearest_looks": [
+    "LB-157",
+    "LB-202",
+    "LB-201"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#93c2e5",
+    "#c3b7a5",
+    "#848375",
+    "#3e4840",
+    "#945933"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-249",
+   "name": "Irregular shaped-panel abstraction",
+   "kind": "established",
+   "family": 9,
+   "family_name": "Fine-art movements",
+   "also_family": "",
+   "theme": "An irregular panel in hard-edged zones",
+   "use": "galleries, architecture, design studios, branding, editorial",
+   "mood": [
+    "playful",
+    "rigorous",
+    "modern"
+   ],
+   "energy": "medium",
+   "avoid_for": "heritage, romance, folk",
+   "hallmarks": {
+    "palette": "4-6 flat colours: cadmium red, cobalt blue, lemon yellow, black, white and a light grey",
+    "type": "",
+    "mark_making": "dead-flat hard-edge colour zones with crisp straight edges, no brush marks",
+    "composition": "one irregular many-sided shaped panel hung on a plain white wall, with notches and a cut-out gap, divided into flat colour zones whose edges run into the outline",
+    "subject": "a shaped abstract panel on a wall"
+   },
+   "hint": "an irregular polygon panel of flat hard-edge colour zones",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1940s-60s shaped-canvas abstraction",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F9_fine-art_sheet14.jpg",
+   "panel": "sheet 14 (added batch 13), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-015",
+   "nn_similarity": 0.6986,
+   "nearest_looks": [
+    "LB-015",
+    "LB-250",
+    "LB-014"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#f3f3f3",
+    "#eb251e",
+    "#0345b5",
+    "#121213",
+    "#beb9b8"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-250",
+   "name": "Slit-cut monochrome canvas",
+   "kind": "established",
+   "family": 9,
+   "family_name": "Fine-art movements",
+   "also_family": "",
+   "theme": "One flat field opened by a single cut",
+   "use": "galleries, architecture, luxury minimal, fashion, music covers",
+   "mood": [
+    "austere",
+    "bold",
+    "silent"
+   ],
+   "energy": "low",
+   "avoid_for": "children's party, folk, food markets",
+   "hallmarks": {
+    "palette": "one flat colour field (warm ochre yellow) with one black gash",
+    "type": "",
+    "mark_making": "a dead-flat even painted surface, the gash one clean curved blade cut with softly curled edges and a dark gap, nothing else",
+    "composition": "a single canvas filling most of the frame, one long curved diagonal gash crossing the field, generous empty field",
+    "subject": "a monochrome canvas with one curved gash"
+   },
+   "hint": "a flat single-colour field cut by one curved gash",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "mid-century cut-canvas painting",
+   "care": "not a copy of any specific work",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F9_fine-art_sheet14.jpg",
+   "panel": "sheet 14 (added batch 13), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-249",
+   "nn_similarity": 0.6357,
+   "nearest_looks": [
+    "LB-249",
+    "LB-069",
+    "LB-079"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#c3933d",
+    "#ddd7d1",
+    "#1c1917"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-251",
+   "name": "Floating-myth figure painting",
+   "kind": "established",
+   "family": 9,
+   "family_name": "Fine-art movements",
+   "also_family": "",
+   "theme": "Myth figures floating over colour fields",
+   "use": "galleries, books and publishing, music covers, fashion, editorial",
+   "mood": [
+    "dreamy",
+    "romantic",
+    "free"
+   ],
+   "energy": "medium",
+   "avoid_for": "legal, finance, technical",
+   "hallmarks": {
+    "palette": "bright flat colours: cadmium yellow, sky blue, rose, leaf green and terracotta on a warm cream ground",
+    "type": "",
+    "mark_making": "loose confident drawing in broad painted contours, flat colour laid loosely inside, figures with the simplified classical modelling of old frescoes, never cartoon faces",
+    "composition": "large figures floating unanchored in an open coloured space, out of scale with a tiny landscape and a small boat below, dreamlike and airy",
+    "subject": "floating figures over a tiny landscape"
+   },
+   "hint": "loose mythic figures floating in bright flat colour",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "1980s figurative painting with historical quotation",
+   "care": "no specific myth illustrated literally; clothed figures",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F9_fine-art_sheet14.jpg",
+   "panel": "sheet 14 (added batch 13), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-190",
+   "nn_similarity": 0.6402,
+   "nearest_looks": [
+    "LB-190",
+    "LB-187",
+    "LB-196"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#84bee2",
+    "#fcc524",
+    "#f8e4bb",
+    "#d47a5a",
+    "#7b9d53"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-252",
+   "name": "Found-nature specimen layout",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Woodland finds laid out like specimens",
+   "use": "outdoor and nature brands, gardening, cafes, stationery, education",
+   "mood": [
+    "earthy",
+    "curious",
+    "cosy"
+   ],
+   "energy": "low",
+   "avoid_for": "luxury tech, finance, nightlife",
+   "hallmarks": {
+    "palette": "earthy browns, moss greens, mushroom cream and rust, on a flat warm beige ground",
+    "type": "",
+    "mark_making": "clean flat gouache-like shapes with soft simple modelling and thin dark outlines, moss as a few flat green clumps, no fine texture",
+    "composition": "a neat specimen layout: about a dozen small finds spaced in loose rows on a plain ground, each isolated with breathing room, a frog and a snail among them",
+    "subject": "a collection of woodland finds"
+   },
+   "hint": "woodland finds laid out like a specimen collection",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "2020s found-nature online aesthetic",
+   "care": "no labels or lettering",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet6.jpg",
+   "panel": "sheet 6 (added batch 13), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-036",
+   "nn_similarity": 0.5947,
+   "nearest_looks": [
+    "LB-036",
+    "LB-067",
+    "LB-145"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#f3dfbb",
+    "#c7ae87",
+    "#585329",
+    "#9d783c"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-253",
+   "name": "Dim-library study vignette",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "A bust, books and lamp in a dusk vignette",
+   "use": "books and publishing, universities, coffee and tea, menswear, museums",
+   "mood": [
+    "scholarly",
+    "moody",
+    "romantic"
+   ],
+   "energy": "low",
+   "avoid_for": "children's party, sport, bright tech",
+   "hallmarks": {
+    "palette": "dim browns, oxblood, bottle green and old gold, with one warm lamp glow",
+    "type": "",
+    "mark_making": "painterly but clean, soft simple modelling in broad tones, crisp shapes, no grain, no grunge",
+    "composition": "one centred vignette inside a dark oval-cornered frame: a desk with a plaster bust, stacked leather books, an inkwell and quill, a green-shaded lamp, a window at dusk behind",
+    "subject": "a scholar's desk at dusk"
+   },
+   "hint": "bust, books and lamp in dim brown and oxblood",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "2010s-20s scholarly online aesthetic",
+   "care": "no readable titles or text",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet6.jpg",
+   "panel": "sheet 6 (added batch 13), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-R03R17",
+   "nn_similarity": 0.626,
+   "nearest_looks": [
+    "LB-R03R17",
+    "LB-R02R06",
+    "LB-R03R01"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#160f0a",
+    "#503d20",
+    "#321f11",
+    "#392e2f",
+    "#a1835d"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-254",
+   "name": "Garden-city solar future",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Curving green buildings with solar panels",
+   "use": "sustainability, energy and architecture, education, community projects, outdoor brands",
+   "mood": [
+    "optimistic",
+    "green",
+    "gentle"
+   ],
+   "energy": "medium",
+   "avoid_for": "horror, nightlife, heritage",
+   "hallmarks": {
+    "palette": "bright leaf greens, warm gold, white and clear sky blue",
+    "type": "",
+    "mark_making": "clean illustrative painting in flat tones with soft simple modelling, crisp edges, no gloss",
+    "composition": "a sunny street view of curving organic buildings with flowing whiplash arches, roof gardens, hanging plants and solar panels, a tram and a few people in the street",
+    "subject": "a green solar-powered town street"
+   },
+   "hint": "curving garden buildings with solar panels under a bright sky",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "2010s-20s optimistic green-future imagery",
+   "care": "no brand or text",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet6.jpg",
+   "panel": "sheet 6 (added batch 13), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-261",
+   "nn_similarity": 0.5882,
+   "nearest_looks": [
+    "LB-261",
+    "LB-270",
+    "LB-265"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#ede9d9",
+    "#99cef0",
+    "#acae98",
+    "#517c38",
+    "#c1b45c"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-255",
+   "name": "Gilded reverse-glass panel",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "Engraved gold on black behind glass",
+   "use": "luxury and jewellery, hotels and bars, spirits labels, premium packaging, heritage",
+   "mood": [
+    "luxurious",
+    "precise",
+    "gleaming"
+   ],
+   "energy": "low",
+   "avoid_for": "children's party, outdoor sport, budget",
+   "hallmarks": {
+    "palette": "gold leaf and dead black only",
+    "type": "",
+    "mark_making": "mirror-flat gold areas with crisp fine engraved lines cut through to the black, no metallic glare or gloss bloom",
+    "composition": "one framed glass panel seen straight on: a central oval with a heron among reeds engraved in the gold, a border of fine scroll lines, black ground around",
+    "subject": "an engraved gold-on-glass heron"
+   },
+   "hint": "flat gold leaf on black behind glass, fine engraved lines",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "18th-19th century gilded reverse-glass panels",
+   "care": "no lettering or monograms",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet6.jpg",
+   "panel": "sheet 6 (added batch 13), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-188",
+   "nn_similarity": 0.6011,
+   "nearest_looks": [
+    "LB-188",
+    "LB-095",
+    "LB-R08R18"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#010201",
+    "#e2b350",
+    "#927537",
+    "#b89344",
+    "#69552a"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-256",
+   "name": "Few-stroke ink brushwork",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "A few ink strokes on mostly empty paper",
+   "use": "tea and food, wellness, galleries, books, premium minimal branding",
+   "mood": [
+    "calm",
+    "spare",
+    "assured"
+   ],
+   "energy": "low",
+   "avoid_for": "children's party, busy retail, tech",
+   "hallmarks": {
+    "palette": "one black ink and one flat grey wash on plain warm white paper",
+    "type": "",
+    "mark_making": "five to nine bold confident brush strokes with tapering ends, one flat grey area, no outline, no hatching, clean paper",
+    "composition": "a bamboo stem and a perched sparrow in the lower left third, the rest of the sheet left empty",
+    "subject": "a bird on bamboo"
+   },
+   "hint": "a few confident ink strokes, much empty paper",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "centuries-old ink brush painting",
+   "care": "no seal, signature or lettering",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet6.jpg",
+   "panel": "sheet 6 (added batch 13), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-130",
+   "nn_similarity": 0.6952,
+   "nearest_looks": [
+    "LB-130",
+    "LB-223",
+    "LB-119"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#fefdf9",
+    "#d1cec9",
+    "#a5a39f"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-257",
+   "name": "Brush-line contour with offset colour",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "One brush line with colour slipped behind",
+   "use": "cafes and food, fashion, editorial, stationery, branding",
+   "mood": [
+    "fresh",
+    "casual",
+    "stylish"
+   ],
+   "energy": "medium",
+   "avoid_for": "legal, heritage, horror",
+   "hallmarks": {
+    "palette": "one black line and one flat colour (warm coral) on a white page",
+    "type": "",
+    "mark_making": "one continuous tapering brush-pen contour of varying weight, no hatching, no fills inside the line; the colour is one flat blob",
+    "composition": "a single object (a coffee pot with a cup) drawn in outline in the centre, a flat coral shape behind it offset to one side, lots of white",
+    "subject": "a coffee pot and cup"
+   },
+   "hint": "one tapering black contour, one offset flat colour shape",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "2010s onward brush-pen contour drawing",
+   "care": "no lettering",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet6.jpg",
+   "panel": "sheet 6 (added batch 13), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-066",
+   "nn_similarity": 0.6209,
+   "nearest_looks": [
+    "LB-066",
+    "LB-083",
+    "LB-234"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#ffffff",
+    "#f78273",
+    "#c3695d"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-258",
+   "name": "Metal-point study on tinted ground",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "Fine hatching on a pale tinted ground",
+   "use": "galleries, books, museums, jewellery, premium stationery",
+   "mood": [
+    "quiet",
+    "precise",
+    "studious"
+   ],
+   "energy": "low",
+   "avoid_for": "children's party, nightlife, bold retail",
+   "hallmarks": {
+    "palette": "fine silvery grey line on a smooth pale blue-grey tinted ground, a touch of white heightening",
+    "type": "",
+    "mark_making": "fine even-weight grey lines, tone built only by neat parallel hatching, faces and hands with the careful real modelling of Renaissance studies, no smudging, no paper texture",
+    "composition": "a small study sheet: a young man's head and shoulders in three-quarter view and, beside it, a separate study of his hand holding a cap, plenty of empty ground",
+    "subject": "a head and hand study"
+   },
+   "hint": "fine grey hatched study on a pale tinted ground",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "15th-16th century metal-point studies",
+   "care": "no real person portrayed; no inscription",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet6.jpg",
+   "panel": "sheet 6 (added batch 13), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-R02R08",
+   "nn_similarity": 0.5808,
+   "nearest_looks": [
+    "LB-R02R08",
+    "LB-R03R14",
+    "LB-R03R03"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#c2cbd2",
+    "#9ea2a5",
+    "#76797a"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-270",
+   "name": "City-pop airbrush poolside",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "An airbrushed poolside under a pastel dusk",
+   "use": "music, summer events, travel, fashion, cocktail menus",
+   "mood": [
+    "breezy",
+    "wistful",
+    "glamorous"
+   ],
+   "energy": "low",
+   "avoid_for": "industry, protest, winter",
+   "hallmarks": {
+    "palette": "pastel peach, lilac and powder blue sky, pool turquoise, white architecture and a little coral",
+    "type": "",
+    "mark_making": "smooth flat airbrush gradients with crisp masked edges, hard clean shadows, no texture",
+    "composition": "a modern white resort building with a curved balcony and a pool in the lower third, two palms, a lone deck chair with a folded towel, a huge empty pastel dusk sky over the top two-thirds",
+    "subject": "a resort pool at dusk"
+   },
+   "hint": "a crisp airbrushed pool and palms under a huge pastel sky",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "late-1970s-80s pop record sleeves",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet9.jpg",
+   "panel": "sheet 9 (added batch 14), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-268",
+   "nn_similarity": 0.6515,
+   "nearest_looks": [
+    "LB-268",
+    "LB-261",
+    "LB-280"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#a8a7df",
+    "#d3b3d5",
+    "#f8bdb5",
+    "#eadbe5",
+    "#6bc0d8"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-259",
+   "name": "Brass-gear steampunk machine",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "A hand-built copper boiler with brass gears",
+   "use": "fiction covers, games, maker events, museums of science, brewing",
+   "mood": [
+    "inventive",
+    "industrious",
+    "romantic"
+   ],
+   "energy": "medium",
+   "avoid_for": "minimal tech, healthcare, children's toddler products",
+   "hallmarks": {
+    "palette": "warm copper, aged brass and cast-iron black with soot, brick red and pale daylight grey",
+    "type": "",
+    "mark_making": "a clean natural photograph of a real hand-built prop: honest copper and brass with real patina, scratches, rivets and screw heads, soft neutral window daylight, true colours, no glare or glow",
+    "composition": "the machine alone as the hero, three-quarter at eye level, whole and inside the frame: a riveted copper boiler on a cast-iron stand, exposed brass gear trains, copper pipes, a glass sight tube, plain-tick gauges and a valve wheel, brick wall and window behind",
+    "subject": "a hand-built brass-and-copper machine"
+   },
+   "hint": "a riveted copper boiler with exposed brass gears and gauges",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1980s onward retro-Victorian maker aesthetic",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet7.jpg",
+   "panel": "sheet 7 (added batch 14), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-282",
+   "nn_similarity": 0.4596,
+   "nearest_looks": [
+    "LB-282",
+    "LB-192",
+    "LB-260"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#887363",
+    "#402f1d",
+    "#674f3d",
+    "#a99e95",
+    "#17110a"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-260",
+   "name": "Riveted dieselpunk machine yard",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Riveted heavy machines on hard diagonals",
+   "use": "transport and industry history, games, posters for engineering events, fiction covers",
+   "mood": [
+    "heavy",
+    "driven",
+    "grim-heroic"
+   ],
+   "energy": "high",
+   "avoid_for": "wellness, children, romance",
+   "hallmarks": {
+    "palette": "gunmetal and smoke greys, rust red, oily black and one dull brass accent",
+    "type": "",
+    "mark_making": "hard flat painted planes with crisp edges, riveted seams as neat dot rows, smoke as flat stacked shapes, no soft haze",
+    "composition": "one massive streamlined machine thrusting along a steep diagonal from a corner, low viewpoint, gantry cranes and smokestacks behind as stepped Deco silhouettes",
+    "subject": "a streamlined interwar heavy machine"
+   },
+   "hint": "a riveted streamlined machine on a hard diagonal, greys and rust",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1990s onward interwar-machine aesthetic",
+   "care": "no military insignia, weapons or war propaganda",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet7.jpg",
+   "panel": "sheet 7 (added batch 14), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-180",
+   "nn_similarity": 0.595,
+   "nearest_looks": [
+    "LB-180",
+    "LB-044",
+    "LB-030"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#363537",
+    "#121417",
+    "#5c5e5f",
+    "#8a8a8b",
+    "#b4b3b1"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-261",
+   "name": "Atompunk domed tomorrow-home",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Domed homes and finned rockets in pastels",
+   "use": "retro-themed events, fiction covers, home and design editorial, games",
+   "mood": [
+    "optimistic",
+    "playful",
+    "nostalgic"
+   ],
+   "energy": "medium",
+   "avoid_for": "serious news, healthcare, heritage",
+   "hallmarks": {
+    "palette": "pastel turquoise, coral, cream and pale lemon with chrome-white and a little black",
+    "type": "",
+    "mark_making": "smooth flat gouache like a 1950s magazine painting of tomorrow, rounded forms with soft single-step shading, chrome as white bands",
+    "composition": "a suburban scene of the future: a domed glass-and-pastel house on a slender stalk, a finned chrome family rocket parked on the drive, atom orbit-ring and boomerang shapes in the garden fence and the sky",
+    "subject": "a domed home of tomorrow with a family rocket"
+   },
+   "hint": "a domed pastel home with a finned rocket on the drive",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "2000s onward retro 1950s atomic futurism",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet7.jpg",
+   "panel": "sheet 7 (added batch 14), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-031",
+   "nn_similarity": 0.6579,
+   "nearest_looks": [
+    "LB-031",
+    "LB-270",
+    "LB-264"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#fdf5b1",
+    "#e2dcca",
+    "#7fbdb4",
+    "#a4c682",
+    "#e1806b"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-262",
+   "name": "Clockpunk walnut ornithopter",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "A walnut clockwork ornithopter",
+   "use": "history of science, museum education, fiction covers, craft and maker brands",
+   "mood": [
+    "ingenious",
+    "warm",
+    "curious"
+   ],
+   "energy": "medium",
+   "avoid_for": "modern tech, nightlife",
+   "hallmarks": {
+    "palette": "warm walnut brown, raw umber, terracotta, aged brass and parchment cream",
+    "type": "",
+    "mark_making": "brown ink contour with flat umber washes, wooden ribs and gear teeth drawn crisply, brass as flat ochre, no metallic glare",
+    "composition": "one wooden clockwork flying machine with ribbed canvas wings and an exposed walnut gear train and brass escapement, perched on a terracotta rooftop with a Renaissance town and hills behind",
+    "subject": "a Renaissance clockwork flying machine"
+   },
+   "hint": "walnut gear trains and canvas wings in umber ink and wash",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "2000s onward Renaissance clockwork aesthetic",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet7.jpg",
+   "panel": "sheet 7 (added batch 14), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-195",
+   "nn_similarity": 0.4996,
+   "nearest_looks": [
+    "LB-195",
+    "LB-194",
+    "LB-R08R14"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#f6e7cb",
+    "#5d4229",
+    "#392a19",
+    "#846747",
+    "#b79368"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-263",
+   "name": "Rain-alley cyberpunk market",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "A rain-wet alley under stacked glowing signs",
+   "use": "games, fiction covers, music, tech-culture editorial",
+   "mood": [
+    "dense",
+    "restless",
+    "gritty"
+   ],
+   "energy": "high",
+   "avoid_for": "wellness, children, heritage, romance",
+   "hallmarks": {
+    "palette": "near-black and wet asphalt grey with flat magenta and acid green sign light; no teal, no orange",
+    "type": "",
+    "mark_making": "hard-edged painted shapes like a 1980s airbrushed paperback cover, rain as fine straight diagonal lines, reflections as flat stripes, no bloom or haze",
+    "composition": "low-angle view up a narrow alley: stacked balconies, air-conditioner boxes and sagging cable bundles crowd the sky, blank glowing sign panels stacked vertically, a street-food awning at street level",
+    "subject": "a courier in a rainy cable-strung alley"
+   },
+   "hint": "stacked blank sign panels and sagging cables over a wet alley, from below",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1980s onward neon-city science fiction",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet7.jpg",
+   "panel": "sheet 7 (added batch 14), row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-268",
+   "nn_similarity": 0.5149,
+   "nearest_looks": [
+    "LB-268",
+    "LB-038",
+    "LB-126"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#0c1014",
+    "#292d2e",
+    "#f1278d"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-264",
+   "name": "Biopunk grown-machine lab",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Veined tissue grown into lab machines",
+   "use": "science fiction covers, biotech editorial, games, music",
+   "mood": [
+    "uncanny",
+    "fertile",
+    "clinical"
+   ],
+   "energy": "medium",
+   "avoid_for": "food, children, wellness, heritage",
+   "hallmarks": {
+    "palette": "acid green, magenta and flesh pink on clinical off-white and black",
+    "type": "",
+    "mark_making": "flat screenprint-like colour areas with crisp outlines, wet sheen as small flat white shapes, cells as clean circles, no slime texture",
+    "composition": "one translucent seed-pod incubator on a lab bench fed by branching veined tubes from a ribbed organic pump; a DNA double ladder spirals up one side; cell clusters bud along the tubes",
+    "subject": "a grown organic lab machine"
+   },
+   "hint": "veined tubes and budding cells grown into a machine",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "1990s onward biotech science fiction",
+   "care": "no gore, wounds or body horror",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet7.jpg",
+   "panel": "sheet 7 (added batch 14), row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-261",
+   "nn_similarity": 0.6228,
+   "nearest_looks": [
+    "LB-261",
+    "LB-041",
+    "LB-R04R20"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#f2f0eb",
+    "#1f1d1f",
+    "#9b797a",
+    "#c6d6a5",
+    "#9c3970"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-265",
+   "name": "Moonlit glow-garden future",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Moss-roofed homes among glowing plants",
+   "use": "sustainability at night, festivals, fiction covers, wellness and sleep, astronomy events",
+   "mood": [
+    "calm",
+    "mystic",
+    "hopeful"
+   ],
+   "energy": "low",
+   "avoid_for": "industry, finance, fast food",
+   "hallmarks": {
+    "palette": "deep indigo and violet night with silver-white and soft glowing blue-green and pale lilac plant light",
+    "type": "",
+    "mark_making": "smooth flat painted shapes, glow shown as flat pale halos with clean edges, no bloom or haze",
+    "composition": "a night terrace of rounded, moss-roofed earth houses with round windows, glowing blue-green ferns and mushrooms lining winding paths, a row of moon phases across the sky above a large crescent",
+    "subject": "a bioluminescent night garden village"
+   },
+   "hint": "glowing blue-green plants under a row of moon phases",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "2020s green-future-after-dark aesthetic",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet8.jpg",
+   "panel": "sheet 8 (added batch 14), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-171",
+   "nn_similarity": 0.6081,
+   "nearest_looks": [
+    "LB-171",
+    "LB-274",
+    "LB-174"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#2c2868",
+    "#2e364f",
+    "#35513d",
+    "#6f6a9c",
+    "#59afb1"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-266",
+   "name": "Seapunk chrome dolphin",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Chrome dolphins and gems over aqua water",
+   "use": "music and club nights, fashion, internet-culture editorial",
+   "mood": [
+    "euphoric",
+    "kitsch",
+    "aquatic"
+   ],
+   "energy": "high",
+   "avoid_for": "heritage, finance, healthcare",
+   "hallmarks": {
+    "palette": "aqua, turquoise and violet-purple with chrome silver and a little hot pink",
+    "type": "",
+    "mark_making": "deliberately crude early-web 3D: low-polygon chrome shapes with simple reflections, a rippling 3D water plane, flat gradient sky, hard cut-out edges",
+    "composition": "one low-poly chrome dolphin leaping over a tiled rippling aqua water surface, floating faceted gems and a yin-yang disc around it, a purple sky",
+    "subject": "a chrome dolphin over 3D water"
+   },
+   "hint": "a low-poly chrome dolphin over a rippling aqua 3D sea",
+   "out_there": 5,
+   "read_status": "reads",
+   "era": "early-2010s web rave graphics",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet8.jpg",
+   "panel": "sheet 8 (added batch 14), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-265",
+   "nn_similarity": 0.5279,
+   "nearest_looks": [
+    "LB-265",
+    "LB-111",
+    "LB-034"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#22b4cb",
+    "#512991",
+    "#734cb7",
+    "#8e74cc",
+    "#386c81"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-267",
+   "name": "Cassette-futurism CRT console",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "A beige console with green wireframe screens",
+   "use": "tech history, games, music, science fiction, podcasts",
+   "mood": [
+    "tactile",
+    "earnest",
+    "retro-technical"
+   ],
+   "energy": "medium",
+   "avoid_for": "nature, romance, luxury fashion",
+   "hallmarks": {
+    "palette": "beige and putty plastic, olive drab, warm grey and black with phosphor green and one safety-orange switch",
+    "type": "",
+    "mark_making": "a clean natural photograph of a real built prop: matte aged ABS plastic with faint wear, painted metal panels and screw heads, CRT images as crisp green phosphor lines with no glow halo, flat even studio light",
+    "composition": "the console alone as the hero, three-quarter from slightly above, whole and inside the frame on a plain warm-grey set: chunky keys, toggle banks, a coiled cable and three boxy CRTs showing green wireframe terrain, a grid tunnel and a radar sweep",
+    "subject": "a chunky analogue CRT console"
+   },
+   "hint": "boxy beige consoles with green wireframe CRT screens",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1970s-80s analogue computing future",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet8.jpg",
+   "panel": "sheet 8 (added batch 14), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-R04R15",
+   "nn_similarity": 0.4479,
+   "nearest_looks": [
+    "LB-R04R15",
+    "LB-R04R10",
+    "LB-070"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#807567",
+    "#ae9f87",
+    "#4f4839",
+    "#1a1c13",
+    "#294724"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-268",
+   "name": "Synthwave grid-road sunset",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "A neon grid road into a striped sunset",
+   "use": "music, games, nightlife, retro events",
+   "mood": [
+    "nostalgic",
+    "cool",
+    "propulsive"
+   ],
+   "energy": "high",
+   "avoid_for": "heritage, healthcare, children",
+   "hallmarks": {
+    "palette": "deep violet-black night, hot magenta, cyan grid lines and a sun striped from yellow to magenta; no teal-orange grading",
+    "type": "",
+    "mark_making": "hard-edged flat vector shapes and thin even neon lines, no bloom, haze or glow spill",
+    "composition": "a perspective grid floor and a straight road running to a big striped setting sun on the horizon, cyan wireframe mountains either side, palm silhouettes at the edges, a small wedge-shaped car on the road",
+    "subject": "a wedge car on a grid road to a striped sun"
+   },
+   "hint": "a perspective grid to a striped sun, thin neon lines",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "2000s onward 1980s-revival neon art",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet8.jpg",
+   "panel": "sheet 8 (added batch 14), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-270",
+   "nn_similarity": 0.6515,
+   "nearest_looks": [
+    "LB-270",
+    "LB-245",
+    "LB-261"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#1b0c44",
+    "#1e2c5f",
+    "#4e1472",
+    "#11072b",
+    "#05030e"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-269",
+   "name": "Glossy aqua nature UI",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Aqua bubbles and glass panels over green hills",
+   "use": "tech nostalgia, eco and water brands, wellness apps, retro-UI editorial",
+   "mood": [
+    "fresh",
+    "clean",
+    "optimistic"
+   ],
+   "energy": "medium",
+   "avoid_for": "heritage, gothic, protest",
+   "hallmarks": {
+    "palette": "sky blue, aqua, grass green and white with a little lime",
+    "type": "",
+    "mark_making": "smooth glossy gradients on glass and bubbles with a crisp white highlight bar across the top of each, clear water drops, clean edges; gloss only on the glass and bubbles",
+    "composition": "rolling bright green hills under a blue sky with soft white clouds, clusters of clear aqua bubbles floating up, two or three rounded glass panels with no icons or writing floating over the scene, water drops on the glass",
+    "subject": "aqua bubbles and glass panels over green hills"
+   },
+   "hint": "aqua bubbles and glass panels with white highlight bars over green hills",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "late-2000s glossy-glass computing look",
+   "care": "no real operating-system or brand interface",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet8.jpg",
+   "panel": "sheet 8 (added batch 14), row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-108",
+   "nn_similarity": 0.5744,
+   "nearest_looks": [
+    "LB-108",
+    "LB-034",
+    "LB-261"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#7ad8f8",
+    "#cfeffa",
+    "#31acf4",
+    "#acd333",
+    "#7db936"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-271",
+   "name": "Glitch-band displaced still life",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "A calm still life torn by glitch bands",
+   "use": "music, tech and security editorial, art events, fashion",
+   "mood": [
+    "broken",
+    "electric",
+    "edgy"
+   ],
+   "energy": "high",
+   "avoid_for": "heritage, children, healthcare",
+   "hallmarks": {
+    "palette": "the image's own calm colours (cream, sage, tulip red) torn through with pure red, green and blue channel fringes",
+    "type": "",
+    "mark_making": "a clean flat-painted picture sliced by sharp horizontal bands shifted sideways, red-green-blue channel offsets along edges, rectangular blocks of enlarged pixels; every break crisp and digital",
+    "composition": "a calm centred still life, about a third of the frame torn by four or five horizontal displacement bands and two blocky pixel tears; the subject still readable",
+    "subject": "a glitched still life of tulips"
+   },
+   "hint": "horizontal shifted bands and RGB splits tearing a calm image",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "1990s onward digital glitch art",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet8.jpg",
+   "panel": "sheet 8 (added batch 14), row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-083",
+   "nn_similarity": 0.6436,
+   "nearest_looks": [
+    "LB-083",
+    "LB-081",
+    "LB-205"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#f0e5d3",
+    "#929e7b",
+    "#9f302a",
+    "#cecab9"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-272",
+   "name": "Cyberdelic fractal checkerboard",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Chrome spheres over an endless checkerboard",
+   "use": "music and club nights, tech history, festivals, fashion",
+   "mood": [
+    "trippy",
+    "euphoric",
+    "techno-naive"
+   ],
+   "energy": "high",
+   "avoid_for": "heritage, healthcare, finance",
+   "hallmarks": {
+    "palette": "acid lime, electric purple, magenta and chrome silver with a black-and-white checkerboard; no teal-orange",
+    "type": "",
+    "mark_making": "early ray-traced computer graphics: perfect mirror spheres with crisp reflections of the checkerboard, hard shadows, a fractal spiral with clean coloured bands, no bloom or haze",
+    "composition": "an endless black-and-white checkerboard plane to the horizon, two chrome spheres and a perfect round chrome torus floating above it, a huge spiralling fractal filling the sky",
+    "subject": "chrome spheres over a checkerboard under a fractal sky"
+   },
+   "hint": "chrome spheres over an endless checkerboard, fractal sky",
+   "out_there": 5,
+   "read_status": "reads",
+   "era": "early-1990s rave computer art",
+   "care": "no drug imagery",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet9.jpg",
+   "panel": "sheet 9 (added batch 14), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-033",
+   "nn_similarity": 0.5183,
+   "nearest_looks": [
+    "LB-033",
+    "LB-125",
+    "LB-245"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#080708",
+    "#9e12e0",
+    "#837973",
+    "#ececec",
+    "#c5e21b"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-273",
+   "name": "Cottagecore kitchen-garden idyll",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Bread and gingham in a pressed-flower oval",
+   "use": "bakeries, craft and gardening, slow-living editorial, weddings, food labels",
+   "mood": [
+    "gentle",
+    "homely",
+    "wistful"
+   ],
+   "energy": "low",
+   "avoid_for": "tech, nightlife, industry",
+   "hallmarks": {
+    "palette": "soft butter yellow, sage, dusty rose and cream with a little cornflower blue",
+    "type": "",
+    "mark_making": "dense opaque matte gouache in solid flat colour areas with firm clean edges, the face and hands modelled in two or three flat tone steps, like a mid-century gouache illustration, gingham as a flat even check with no fabric texture",
+    "composition": "a scene inside an oval frame of pressed wildflowers and leaves on cream: a cottage garden table with a gingham cloth, a loaf, a jug of wildflowers and a basket, a figure picking flowers behind",
+    "subject": "a cottage garden table in an oval of pressed flowers"
+   },
+   "hint": "gingham, bread and wildflowers in an oval of pressed flowers",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "2010s-20s online pastoral aesthetic",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet9.jpg",
+   "panel": "sheet 9 (added batch 14), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-169",
+   "nn_similarity": 0.7559,
+   "nearest_looks": [
+    "LB-169",
+    "LB-184",
+    "LB-164"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#faedcf",
+    "#788158",
+    "#bfbca5",
+    "#d7b777",
+    "#7a93a6"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-274",
+   "name": "Witchcore apothecary shelf",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Herbs, jars and candles on a twilight shelf",
+   "use": "herbal and tea brands, candles, autumn events, fiction covers, tarot-free wellness",
+   "mood": [
+    "cosy",
+    "mysterious",
+    "earthy"
+   ],
+   "energy": "low",
+   "avoid_for": "children's party, corporate, tech",
+   "hallmarks": {
+    "palette": "deep plum, moss green, smoky brown and candle gold with pale cream",
+    "type": "",
+    "mark_making": "flat painted shapes with dark brown outlines, glow as flat cream halos round candle flames, no texture",
+    "composition": "a symmetrical frontal wooden shelf under an arched window with a crescent moon: bundles of dried herbs hanging from the top, rows of corked jars, a mortar and pestle, beeswax candles, a crystal cluster, a sleeping black cat on the middle shelf",
+    "subject": "an apothecary shelf at twilight"
+   },
+   "hint": "hanging herb bundles, corked jars and candles on a plum shelf",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "2010s-20s online hedge-witch aesthetic",
+   "care": "no religious or ritual symbols (no pentagrams, sigils or runes)",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet9.jpg",
+   "panel": "sheet 9 (added batch 14), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-136",
+   "nn_similarity": 0.648,
+   "nearest_looks": [
+    "LB-136",
+    "LB-081",
+    "LB-265"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#1b1515",
+    "#3b2d23",
+    "#32253a",
+    "#6b533b",
+    "#634158"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-275",
+   "name": "Coquette bow-and-pearl vanity",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Satin bows, pearls and cherries in pink",
+   "use": "beauty and fashion, bakeries, gifting, stationery, weddings",
+   "mood": [
+    "sweet",
+    "romantic",
+    "delicate"
+   ],
+   "energy": "low",
+   "avoid_for": "industry, protest, tech",
+   "hallmarks": {
+    "palette": "ballet pink, cream and white with one cherry red and a little gold",
+    "type": "",
+    "mark_making": "soft flat gouache with delicate modelling, satin shown as two flat tones, lace as clean cut-out patterns, no fabric texture",
+    "composition": "a centred top-down vanity arrangement on a lace doily: a heart-shaped hand mirror, a pearl strand, satin ribbon bows, a pair of cherries, a small faceted perfume bottle with no label, a pink cake slice",
+    "subject": "a bow-and-pearl vanity flat-lay"
+   },
+   "hint": "satin bows, pearls and cherries on a lace doily",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "2020s online bow-and-lace aesthetic",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet9.jpg",
+   "panel": "sheet 9 (added batch 14), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-120",
+   "nn_similarity": 0.5013,
+   "nearest_looks": [
+    "LB-120",
+    "LB-193",
+    "LB-034"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#fbc0c2",
+    "#f9eee9",
+    "#f0d2d0"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-276",
+   "name": "Dreamcore cloud-stair doorway",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Floating doors and stairs among clouds",
+   "use": "music, poetry and fiction covers, art events, internet-culture editorial",
+   "mood": [
+    "nostalgic",
+    "eerie",
+    "tender"
+   ],
+   "energy": "low",
+   "avoid_for": "finance, industry, healthcare",
+   "hallmarks": {
+    "palette": "saturated baby blue sky, cotton-white clouds, pastel pink, mint and pale yellow",
+    "type": "",
+    "mark_making": "a soft, slightly over-bright digital collage look with gently blurred edges and flat light, like an edited old phone photo, but clean, with no grain or noise",
+    "composition": "a white staircase rising out of a still pond of clouds to an open door standing alone in the sky; small childhood objects at the water's edge",
+    "subject": "a staircase to a floating door in the clouds"
+   },
+   "hint": "a lone open door at the top of stairs in a pastel sky",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "2010s-20s online surreal-nostalgia aesthetic",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet9.jpg",
+   "panel": "sheet 9 (added batch 14), row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-261",
+   "nn_similarity": 0.5935,
+   "nearest_looks": [
+    "LB-261",
+    "LB-214",
+    "LB-270"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#dde1e5",
+    "#aacee8",
+    "#87b7e0",
+    "#cdd9c8"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-277",
+   "name": "Kidcore primary toy flat-lay",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Primary-coloured toys, smileys and stars",
+   "use": "toys, kids' events, music, playful brands, internet-culture editorial",
+   "mood": [
+    "joyful",
+    "loud",
+    "nostalgic"
+   ],
+   "energy": "high",
+   "avoid_for": "luxury, finance, funerals",
+   "hallmarks": {
+    "palette": "pure primary red, yellow, blue and grass green with white",
+    "type": "",
+    "mark_making": "flat bold colour with thick wobbly hand-drawn black outlines, inherently cartoon simple shapes, no crayon texture",
+    "composition": "a top-down flat-lay on a bright blue ground: plain wooden cube blocks, a plastic dinosaur, a rainbow, a smiley-face sticker, star stickers, a stacking-ring tower, a spinning top, a toy car and a lollipop spread evenly",
+    "subject": "a flat-lay of primary-coloured toys and stickers"
+   },
+   "hint": "primary-colour toys, smileys and stars with wobbly outlines",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "2010s online 90s-childhood aesthetic",
+   "care": "no toy brands or characters",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet9.jpg",
+   "panel": "sheet 9 (added batch 14), row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-159",
+   "nn_similarity": 0.5776,
+   "nearest_looks": [
+    "LB-159",
+    "LB-245",
+    "LB-278"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#0075f0",
+    "#d81812",
+    "#e9c005",
+    "#2b3240",
+    "#2d952c"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-278",
+   "name": "Pastel-goth sticker sheet",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Cute pastel skulls, bats and moons",
+   "use": "fashion and accessories, stationery, Halloween, music, cafes",
+   "mood": [
+    "cute",
+    "spooky",
+    "playful"
+   ],
+   "energy": "medium",
+   "avoid_for": "funerals, heritage, finance",
+   "hallmarks": {
+    "palette": "pastel pink, lilac and mint with solid black and white",
+    "type": "",
+    "mark_making": "flat fills with even thick black outlines and white sticker borders, cute rounded shapes",
+    "composition": "a sticker sheet of evenly spaced motifs on lilac: a skull with a pink bow, a bat, a coffin, a crescent moon, a spider on a web, a potion bottle, a candle, a cat with a bat-wing collar",
+    "subject": "a sheet of cute spooky stickers"
+   },
+   "hint": "cute rounded skulls, bats and coffins in pastels with black outlines",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "2010s online pastel-spooky aesthetic",
+   "care": "no religious symbols (no crosses or pentagrams)",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet10.jpg",
+   "panel": "sheet 10 (added batch 14), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-277",
+   "nn_similarity": 0.5478,
+   "nearest_looks": [
+    "LB-277",
+    "LB-274",
+    "LB-159"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#d3b5e5",
+    "#f0ecef",
+    "#a396a0",
+    "#202022"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-279",
+   "name": "Soft-grunge washed photo strip",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Washed pastel photos on a film strip",
+   "use": "music, fashion, zines, youth editorial",
+   "mood": [
+    "moody",
+    "dreamy",
+    "teenage"
+   ],
+   "energy": "low",
+   "avoid_for": "corporate, children, food",
+   "hallmarks": {
+    "palette": "faded, low-contrast photo tones: milky lavender, dusty pink, pale denim and soft black",
+    "type": "",
+    "mark_making": "a soft over-exposed analogue photo look with lifted blacks and no grain, plus a few small thin white hand-drawn doodles of stars, a crescent moon and a tiny alien head",
+    "composition": "one portrait photo framed by a black film-strip border with sprocket holes along both sides, the figure off-centre by a window, doodles in the empty space",
+    "subject": "a washed-out portrait in a film-strip frame"
+   },
+   "hint": "a milky washed-out photo in a film-strip frame with tiny doodles",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "early-2010s online washed-photo aesthetic",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet10.jpg",
+   "panel": "sheet 10 (added batch 14), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-SD12",
+   "nn_similarity": 0.4682,
+   "nearest_looks": [
+    "LB-SD12",
+    "LB-034",
+    "LB-263"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#0b0b0d",
+    "#ab9ba9",
+    "#ccc1cb",
+    "#877281",
+    "#594b5d"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-280",
+   "name": "Lo-fi rainy-window study room",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "A cosy study room with rain on the window",
+   "use": "music streams, study and productivity apps, cafes, podcasts",
+   "mood": [
+    "calm",
+    "cosy",
+    "focused"
+   ],
+   "energy": "low",
+   "avoid_for": "sports, protest, luxury",
+   "hallmarks": {
+    "palette": "dusky violet and slate blue night with one warm amber lamp pool and a little plant green",
+    "type": "",
+    "mark_making": "clean flat digital illustration with simple two-tone shading and crisp edges, rain as thin straight lines, city lights as flat dots, no bokeh",
+    "composition": "a desk under a big window at night: rain-streaked glass with a city of lit windows beyond, a desk lamp, an open notebook, headphones, a steaming mug, potted plants and a cat asleep on a stack of books",
+    "subject": "a rainy-night desk by a window"
+   },
+   "hint": "a lamp-lit desk and sleeping cat at a rainy violet window",
+   "out_there": 2,
+   "read_status": "reads",
+   "era": "late-2010s online study-stream illustration",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet10.jpg",
+   "panel": "sheet 10 (added batch 14), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-253",
+   "nn_similarity": 0.5941,
+   "nearest_looks": [
+    "LB-253",
+    "LB-107",
+    "LB-270"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#222b48",
+    "#161927",
+    "#232021",
+    "#363b67",
+    "#493c34"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-281",
+   "name": "Hauntology faded public-info print",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "A pylon under a half-set sun in two inks",
+   "use": "music, film and arts events, local history, fiction covers",
+   "mood": [
+    "eerie",
+    "melancholy",
+    "nostalgic"
+   ],
+   "energy": "low",
+   "avoid_for": "children's party, luxury, sport",
+   "hallmarks": {
+    "palette": "two faded inks, olive green and burnt sienna brown, overprinting to a dark third, on off-white",
+    "type": "",
+    "mark_making": "flat screen-printed shapes with slightly misregistered overprint, faded flat colour without texture, simple modernist geometry",
+    "composition": "an ordinary rural landscape (a hill with an electricity pylon and a hedge line) under a half-set sun of two flat bands with short rays, a lone small figure in a duffel coat seen from behind, lots of empty off-white space",
+    "subject": "a pylon on a hill under a half-set banded sun"
+   },
+   "hint": "a faded two-ink pylon and half-set banded sun, eerie and empty",
+   "out_there": 4,
+   "read_status": "reads",
+   "era": "2000s onward look back at 1970s public print",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet10.jpg",
+   "panel": "sheet 10 (added batch 14), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-234",
+   "nn_similarity": 0.6251,
+   "nearest_looks": [
+    "LB-234",
+    "LB-R04R21",
+    "LB-228"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#fbf5e9",
+    "#6e5b30",
+    "#a39b60",
+    "#d07d3e"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-282",
+   "name": "Stonepunk boulder-crane quarry",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "A lashed-log crane at a stone quarry",
+   "use": "games, fiction covers, education, outdoor and craft brands",
+   "mood": [
+    "resourceful",
+    "earthy",
+    "inventive"
+   ],
+   "energy": "medium",
+   "avoid_for": "tech, luxury fashion, nightlife",
+   "hallmarks": {
+    "palette": "ochre, sienna, slate grey, bark brown and sage with sky cream",
+    "type": "",
+    "mark_making": "a clean natural photograph of real built set pieces: real stone, rough timber, hemp rope and leather lashings, honest weathering, soft overcast daylight, true colours",
+    "composition": "the machines alone at a riverside quarry, the whole crane inside the frame: a lever beam across a lashed-log A-frame with a stone counterweight at one end and a slung boulder at the other, a log windlass, a cart on solid stone wheels, a log waterwheel in the stream",
+    "subject": "stone-age machinery at a quarry"
+   },
+   "hint": "a timber-and-rope crane and stone-wheeled cart in earth colours",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "2010s onward stone-age technology fiction",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet10.jpg",
+   "panel": "sheet 10 (added batch 14), row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-259",
+   "nn_similarity": 0.4596,
+   "nearest_looks": [
+    "LB-259",
+    "LB-199",
+    "LB-198"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#e8e4df",
+    "#8f7f67",
+    "#726449",
+    "#ad9b85",
+    "#534632"
+   ],
+   "getty_aat": null,
    "status": "live"
   },
   {
@@ -12552,6 +15369,36 @@
    "panel": "sheet 1 of 13, row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-R01R06",
    "nn_similarity": 0.6407,
+   "interpreted": {
+    "mood": [
+     "hushed",
+     "eerie",
+     "curious"
+    ],
+    "themes": [
+     "natural-history",
+     "quiet-austere"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-058",
+      "name": "Blue-painted tin-glaze tile panel",
+      "role": "palette"
+     },
+     {
+      "id": "LB-200",
+      "name": "Realist labour painting",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R01R06",
     "LB-170",
@@ -12608,6 +15455,36 @@
    "panel": "sheet 1 of 13, row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-R01R05",
    "nn_similarity": 0.733,
+   "interpreted": {
+    "mood": [
+     "dramatic",
+     "dread",
+     "kinetic"
+    ],
+    "themes": [
+     "woodcut-print",
+     "agitprop"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-180",
+      "name": "Precisionist industrial painting",
+      "role": "making method"
+     },
+     {
+      "id": "LB-207",
+      "name": "Sweeping-register earth-colour mural",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R01R05",
     "LB-R01R22",
@@ -12667,6 +15544,36 @@
    "panel": "sheet 1 of 13, row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-R01R19",
    "nn_similarity": 0.7521,
+   "interpreted": {
+    "mood": [
+     "heroic",
+     "austere",
+     "proud"
+    ],
+    "themes": [
+     "agitprop",
+     "deco-machine-age"
+    ],
+    "domains": [
+     "campaigns",
+     "sport"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-SD14",
+      "name": "Engraved-Hatch Ink Panel",
+      "role": "making method"
+     },
+     {
+      "id": "LB-072",
+      "name": "Compass-star interlace",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R01R19",
     "LB-R01R03",
@@ -12726,6 +15633,36 @@
    "panel": "sheet 1 of 13, row 2 col 1 (panel 4 of 6)",
    "nearest_neighbour": "LB-R01R01",
    "nn_similarity": 0.6407,
+   "interpreted": {
+    "mood": [
+     "cosy",
+     "festive",
+     "warm"
+    ],
+    "themes": [
+     "folk-craft",
+     "naive-joyful"
+    ],
+    "domains": [
+     "food",
+     "hospitality"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-224",
+      "name": "Board-game box lid",
+      "role": "making method"
+     },
+     {
+      "id": "LB-001",
+      "name": "Hatched broadsheet relief satire",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R01R01",
     "LB-154",
@@ -12784,6 +15721,37 @@
    "panel": "sheet 1 of 13, row 2 col 2 (panel 5 of 6)",
    "nearest_neighbour": "LB-093",
    "nn_similarity": 0.7188,
+   "interpreted": {
+    "mood": [
+     "playful",
+     "informative",
+     "orderly"
+    ],
+    "themes": [
+     "technical-diagram",
+     "mid-century-modern"
+    ],
+    "domains": [
+     "kids",
+     "events",
+     "packaging"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-225",
+      "name": "Pinball backglass art",
+      "role": "making method"
+     },
+     {
+      "id": "LB-221",
+      "name": "Stiff frontal folk portrait",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-093",
     "LB-R01R05",
@@ -12843,6 +15811,36 @@
    "panel": "sheet 1 of 13, row 2 col 3 (panel 6 of 6)",
    "nearest_neighbour": "LB-R01R19",
    "nn_similarity": 0.7204,
+   "interpreted": {
+    "mood": [
+     "stoic",
+     "maritime",
+     "warm"
+    ],
+    "themes": [
+     "folk-craft",
+     "woodcut-print"
+    ],
+    "domains": [
+     "food",
+     "hospitality"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-194",
+      "name": "Invented-ruin capriccio",
+      "role": "palette"
+     },
+     {
+      "id": "LB-127",
+      "name": "Corner-bending supergraphic stripes",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R01R19",
     "LB-R01R05",
@@ -12901,6 +15899,36 @@
    "panel": "sheet 2 of 13, row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-R01R03",
    "nn_similarity": 0.64,
+   "interpreted": {
+    "mood": [
+     "solitude",
+     "vast",
+     "still"
+    ],
+    "themes": [
+     "quiet-austere",
+     "woodcut-print"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-122",
+      "name": "White-line block print",
+      "role": "palette"
+     },
+     {
+      "id": "LB-034",
+      "name": "Y2K and vaporwave internet aesthetics",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R01R03",
     "LB-163",
@@ -12957,6 +15985,36 @@
    "panel": "sheet 2 of 13, row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-R01R22",
    "nn_similarity": 0.6608,
+   "interpreted": {
+    "mood": [
+     "jubilant",
+     "crowded",
+     "sunny"
+    ],
+    "themes": [
+     "naive-joyful",
+     "folk-craft"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-152",
+      "name": "Crowded flat harvest painting",
+      "role": "palette"
+     },
+     {
+      "id": "LB-192",
+      "name": "Baroque diagonal-light scene",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R01R22",
     "LB-R01R05",
@@ -13012,6 +16070,35 @@
    "panel": "sheet 2 of 13, row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-R01R05",
    "nn_similarity": 0.7521,
+   "interpreted": {
+    "mood": [
+     "wry",
+     "gritty",
+     "DIY"
+    ],
+    "themes": [
+     "pop-zine"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-072",
+      "name": "Compass-star interlace",
+      "role": "palette"
+     },
+     {
+      "id": "LB-237",
+      "name": "Iron Age geometric band vessel",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R01R05",
     "LB-R01R12",
@@ -13071,6 +16158,36 @@
    "panel": "sheet 2 of 13, row 2 col 1 (panel 4 of 6)",
    "nearest_neighbour": "LB-R01R05",
    "nn_similarity": 0.6637,
+   "interpreted": {
+    "mood": [
+     "austere",
+     "monumental",
+     "cold"
+    ],
+    "themes": [
+     "quiet-austere",
+     "deco-machine-age"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-240",
+      "name": "Rope-and-sphere maritime stone ornament",
+      "role": "palette"
+     },
+     {
+      "id": "LB-058",
+      "name": "Blue-painted tin-glaze tile panel",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R01R05",
     "LB-R01R11",
@@ -13127,6 +16244,36 @@
    "panel": "sheet 2 of 13, row 2 col 2 (panel 5 of 6)",
    "nearest_neighbour": "LB-R01R05",
    "nn_similarity": 0.7305,
+   "interpreted": {
+    "mood": [
+     "mythic",
+     "stormy",
+     "theatrical"
+    ],
+    "themes": [
+     "sacred-ornament",
+     "folk-craft"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-092",
+      "name": "Thick-contour mural",
+      "role": "making method"
+     },
+     {
+      "id": "LB-244",
+      "name": "Flat-back mantel figure pair",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R01R05",
     "LB-R01R03",
@@ -13184,6 +16331,35 @@
    "panel": "sheet 2 of 13, row 2 col 3 (panel 6 of 6)",
    "nearest_neighbour": "LB-R03R20",
    "nn_similarity": 0.8352,
+   "interpreted": {
+    "mood": [
+     "deadpan",
+     "bold",
+     "cool"
+    ],
+    "themes": [
+     "pop-zine"
+    ],
+    "domains": [
+     "tech",
+     "science"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-055",
+      "name": "New Year woodblock picture print",
+      "role": "making method"
+     },
+     {
+      "id": "LB-058",
+      "name": "Blue-painted tin-glaze tile panel",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R03R20",
     "LB-R03R22",
@@ -13242,6 +16418,36 @@
    "panel": "sheet 3 of 13, row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-R03R05",
    "nn_similarity": 0.8323,
+   "interpreted": {
+    "mood": [
+     "tense",
+     "sharp",
+     "watchful"
+    ],
+    "themes": [
+     "woodcut-print",
+     "agitprop"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-173",
+      "name": "German Expressionist street painting",
+      "role": "making method"
+     },
+     {
+      "id": "LB-201",
+      "name": "Sun-and-shadow patch painting",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R05",
     "LB-R05R17",
@@ -13299,6 +16505,36 @@
    "panel": "sheet 3 of 13, row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-R02R21",
    "nn_similarity": 0.8265,
+   "interpreted": {
+    "mood": [
+     "deadpan",
+     "cheeky",
+     "raw"
+    ],
+    "themes": [
+     "pop-zine",
+     "postmodern-postmodern squiggle"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-027",
+      "name": "Arts and Crafts pattern and private-press book",
+      "role": "making method"
+     },
+     {
+      "id": "LB-237",
+      "name": "Iron Age geometric band vessel",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R02R21",
     "LB-R03R16",
@@ -13357,6 +16593,37 @@
    "panel": "sheet 3 of 13, row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-R03R17",
    "nn_similarity": 0.8705,
+   "interpreted": {
+    "mood": [
+     "dignified",
+     "warm",
+     "ancient"
+    ],
+    "themes": [
+     "classical-heritage"
+    ],
+    "domains": [
+     "food",
+     "hospitality",
+     "institutions",
+     "museums"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-114",
+      "name": "Wire-cell enamel",
+      "role": "making method"
+     },
+     {
+      "id": "LB-186",
+      "name": "Hard-edge colour painting",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R03R17",
     "LB-R02R06",
@@ -13415,6 +16682,36 @@
    "panel": "sheet 3 of 13, row 2 col 1 (panel 4 of 6)",
    "nearest_neighbour": "LB-R03R22",
    "nn_similarity": 0.8359,
+   "interpreted": {
+    "mood": [
+     "serene",
+     "regal",
+     "still"
+    ],
+    "themes": [
+     "sacred-ornament",
+     "classical-heritage"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-161",
+      "name": "Tulip-and-saz-leaf tile panel",
+      "role": "making method"
+     },
+     {
+      "id": "LB-SD12",
+      "name": "Splash-Acrylic Portrait",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R22",
     "LB-R03R20",
@@ -13472,6 +16769,35 @@
    "panel": "sheet 3 of 13, row 2 col 2 (panel 5 of 6)",
    "nearest_neighbour": "LB-R03R17",
    "nn_similarity": 0.8613,
+   "interpreted": {
+    "mood": [
+     "austere",
+     "luxurious",
+     "heroic"
+    ],
+    "themes": [
+     "classical-heritage"
+    ],
+    "domains": [
+     "campaigns",
+     "sport"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-125",
+      "name": "Fluorescent-on-black poster",
+      "role": "palette"
+     },
+     {
+      "id": "LB-240",
+      "name": "Rope-and-sphere maritime stone ornament",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R03R17",
     "LB-R02R04",
@@ -13527,6 +16853,35 @@
    "panel": "sheet 3 of 13, row 2 col 3 (panel 6 of 6)",
    "nearest_neighbour": "LB-R03R19",
    "nn_similarity": 0.7376,
+   "interpreted": {
+    "mood": [
+     "defiant",
+     "cool",
+     "sharp"
+    ],
+    "themes": [
+     "agitprop"
+    ],
+    "domains": [
+     "tech",
+     "science"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-059",
+      "name": "Mirror-folded layered paper-cut",
+      "role": "palette"
+     },
+     {
+      "id": "LB-SD16",
+      "name": "Central Splatter Emblem",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R19",
     "LB-R02R02",
@@ -13582,6 +16937,39 @@
    "panel": "sheet 4 of 13, row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-R03R14",
    "nn_similarity": 0.8239,
+   "interpreted": {
+    "mood": [
+     "hypnotic",
+     "precise",
+     "cool"
+    ],
+    "themes": [
+     "line-engraving"
+    ],
+    "domains": [
+     "music",
+     "posters",
+     "tech",
+     "engineering",
+     "tech",
+     "science"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-130",
+      "name": "Fine-line bird-and-flower on silk",
+      "role": "palette"
+     },
+     {
+      "id": "LB-177",
+      "name": "Aerial Futurist flight painting",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R03R14",
     "LB-R05R01",
@@ -13637,6 +17025,38 @@
    "panel": "sheet 4 of 13, row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-R05R17",
    "nn_similarity": 0.8138,
+   "interpreted": {
+    "mood": [
+     "rational",
+     "cool",
+     "calm"
+    ],
+    "themes": [
+     "mid-century-modern"
+    ],
+    "domains": [
+     "tech",
+     "science",
+     "wellness",
+     "books",
+     "stationery"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-012",
+      "name": "Statistical graphics: 19th-c. charts to minimal data graphics",
+      "role": "making method"
+     },
+     {
+      "id": "LB-104",
+      "name": "Bold wax-resist repeat",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R05R17",
     "LB-R03R22",
@@ -13693,6 +17113,36 @@
    "panel": "sheet 4 of 13, row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-R03R22",
    "nn_similarity": 0.7595,
+   "interpreted": {
+    "mood": [
+     "wry",
+     "civic",
+     "clean"
+    ],
+    "themes": [
+     "mid-century-modern",
+     "pop-zine"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-097",
+      "name": "Black-white glamour lattice",
+      "role": "palette"
+     },
+     {
+      "id": "LB-008",
+      "name": "Sunburst gouache propaganda poster",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R22",
     "LB-R03R20",
@@ -13748,6 +17198,36 @@
    "panel": "sheet 4 of 13, row 2 col 1 (panel 4 of 6)",
    "nearest_neighbour": "LB-R05R19",
    "nn_similarity": 0.782,
+   "interpreted": {
+    "mood": [
+     "methodical",
+     "calm",
+     "curious"
+    ],
+    "themes": [
+     "technical-diagram"
+    ],
+    "domains": [
+     "wellness",
+     "books",
+     "stationery"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-181",
+      "name": "Surrealist dream plain",
+      "role": "palette"
+     },
+     {
+      "id": "LB-253",
+      "name": "Dim-library study vignette",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R05R19",
     "LB-R03R11",
@@ -13804,6 +17284,36 @@
    "panel": "sheet 4 of 13, row 2 col 2 (panel 5 of 6)",
    "nearest_neighbour": "LB-R02R01",
    "nn_similarity": 0.7867,
+   "interpreted": {
+    "mood": [
+     "jubilant",
+     "hot",
+     "surging"
+    ],
+    "themes": [
+     "psychedelic-groovy",
+     "folk-craft"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-161",
+      "name": "Tulip-and-saz-leaf tile panel",
+      "role": "making method"
+     },
+     {
+      "id": "LB-221",
+      "name": "Stiff frontal folk portrait",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R02R01",
     "LB-R03R22",
@@ -13863,6 +17373,36 @@
    "panel": "sheet 4 of 13, row 2 col 3 (panel 6 of 6)",
    "nearest_neighbour": "LB-R03R06",
    "nn_similarity": 0.7616,
+   "interpreted": {
+    "mood": [
+     "festive",
+     "sweet",
+     "loud"
+    ],
+    "themes": [
+     "folk-craft",
+     "naive-joyful"
+    ],
+    "domains": [
+     "events",
+     "youth campaigns"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-171",
+      "name": "Fauvist pure-colour landscape",
+      "role": "making method"
+     },
+     {
+      "id": "LB-020",
+      "name": "Op art",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R06",
     "LB-R05R01",
@@ -13920,6 +17460,35 @@
    "panel": "sheet 5 of 13, row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-R05R16",
    "nn_similarity": 0.76,
+   "interpreted": {
+    "mood": [
+     "brooding",
+     "nocturnal",
+     "lonely"
+    ],
+    "themes": [
+     "neon-night"
+    ],
+    "domains": [
+     "music",
+     "nightlife"
+    ],
+    "best_layer": "shape",
+    "partners": [
+     {
+      "id": "LB-170",
+      "name": "Symbolist dream painting",
+      "role": "palette"
+     },
+     {
+      "id": "LB-145",
+      "name": "Gilt laurel-and-bee panel",
+      "role": "making method"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R05R16",
     "LB-R03R06",
@@ -13976,6 +17545,36 @@
    "panel": "sheet 5 of 13, row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-R02R04",
    "nn_similarity": 0.7598,
+   "interpreted": {
+    "mood": [
+     "wry",
+     "soft",
+     "homely"
+    ],
+    "themes": [
+     "folk-craft",
+     "pop-zine"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-166",
+      "name": "Neo-Impressionist dot painting",
+      "role": "palette"
+     },
+     {
+      "id": "LB-026",
+      "name": "Heraldry",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R02R04",
     "LB-R05R02",
@@ -14032,6 +17631,35 @@
    "panel": "sheet 5 of 13, row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-R02R02",
    "nn_similarity": 0.7781,
+   "interpreted": {
+    "mood": [
+     "airy",
+     "cool",
+     "gentle"
+    ],
+    "themes": [
+     "mid-century-modern"
+    ],
+    "domains": [
+     "tech",
+     "science"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-095",
+      "name": "Curled-beast metal plaque",
+      "role": "making method"
+     },
+     {
+      "id": "LB-138",
+      "name": "Red-and-black lacquer tray",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R02R02",
     "LB-R05R17",
@@ -14085,6 +17713,35 @@
    "panel": "sheet 5 of 13, row 2 col 1 (panel 4 of 6)",
    "nearest_neighbour": "LB-R03R19",
    "nn_similarity": 0.71,
+   "interpreted": {
+    "mood": [
+     "furious",
+     "intense",
+     "urgent"
+    ],
+    "themes": [
+     "agitprop"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-219",
+      "name": "Paddle-arm whirligig figure",
+      "role": "making method"
+     },
+     {
+      "id": "LB-104",
+      "name": "Bold wax-resist repeat",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R19",
     "LB-R02R12",
@@ -14140,6 +17797,35 @@
    "panel": "sheet 5 of 13, row 2 col 2 (panel 5 of 6)",
    "nearest_neighbour": "LB-R03R16",
    "nn_similarity": 0.8848,
+   "interpreted": {
+    "mood": [
+     "heroic",
+     "resolute",
+     "monumental"
+    ],
+    "themes": [
+     "agitprop"
+    ],
+    "domains": [
+     "campaigns",
+     "sport"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-225",
+      "name": "Pinball backglass art",
+      "role": "making method"
+     },
+     {
+      "id": "LB-203",
+      "name": "Bold-band northern wilderness landscape",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R03R16",
     "LB-R03R18",
@@ -14197,6 +17883,35 @@
    "panel": "sheet 5 of 13, row 2 col 3 (panel 6 of 6)",
    "nearest_neighbour": "LB-R03R20",
    "nn_similarity": 0.823,
+   "interpreted": {
+    "mood": [
+     "raw",
+     "bold",
+     "earthy"
+    ],
+    "themes": [
+     "woodcut-print"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-SD11",
+      "name": "CMYK Newsprint Collage",
+      "role": "palette"
+     },
+     {
+      "id": "LB-193",
+      "name": "Rococo pastel garden party",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R20",
     "LB-R03R22",
@@ -14253,6 +17968,35 @@
    "panel": "sheet 6 of 13, row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-R03R05",
    "nn_similarity": 0.771,
+   "interpreted": {
+    "mood": [
+     "trippy",
+     "intense",
+     "electric"
+    ],
+    "themes": [
+     "psychedelic-groovy"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-055",
+      "name": "New Year woodblock picture print",
+      "role": "making method"
+     },
+     {
+      "id": "LB-105",
+      "name": "Woven-roundel tapestry",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R05",
     "LB-R03R20",
@@ -14309,6 +18053,36 @@
    "panel": "sheet 6 of 13, row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-R05R11",
    "nn_similarity": 0.8123,
+   "interpreted": {
+    "mood": [
+     "warm",
+     "crafted",
+     "dynamic"
+    ],
+    "themes": [
+     "deco-machine-age",
+     "crafted-object"
+    ],
+    "domains": [
+     "food",
+     "hospitality"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-022",
+      "name": "Flat design and vector illustration",
+      "role": "making method"
+     },
+     {
+      "id": "LB-175",
+      "name": "Analytic Cubist faceted still life",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R05R11",
     "LB-R02R02",
@@ -14366,6 +18140,37 @@
    "panel": "sheet 6 of 13, row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-R05R19",
    "nn_similarity": 0.859,
+   "interpreted": {
+    "mood": [
+     "calm",
+     "sparse",
+     "analytical"
+    ],
+    "themes": [
+     "technical-diagram",
+     "quiet-austere"
+    ],
+    "domains": [
+     "wellness",
+     "books",
+     "stationery"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-204",
+      "name": "Metallic cone-and-cylinder figure painting",
+      "role": "palette"
+     },
+     {
+      "id": "LB-008",
+      "name": "Sunburst gouache propaganda poster",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R05R19",
     "LB-R05R01",
@@ -14423,6 +18228,37 @@
    "panel": "sheet 6 of 13, row 2 col 1 (panel 4 of 6)",
    "nearest_neighbour": "LB-R03R05",
    "nn_similarity": 0.7544,
+   "interpreted": {
+    "mood": [
+     "playful",
+     "bold",
+     "collectable"
+    ],
+    "themes": [
+     "postmodern-postmodern squiggle",
+     "mid-century-modern"
+    ],
+    "domains": [
+     "kids",
+     "events",
+     "packaging"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-111",
+      "name": "Low-poly faceted 3D",
+      "role": "making method"
+     },
+     {
+      "id": "LB-192",
+      "name": "Baroque diagonal-light scene",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R05",
     "LB-R02R02",
@@ -14481,6 +18317,36 @@
    "panel": "sheet 6 of 13, row 2 col 2 (panel 5 of 6)",
    "nearest_neighbour": "LB-R03R22",
    "nn_similarity": 0.8383,
+   "interpreted": {
+    "mood": [
+     "bold",
+     "graphic",
+     "rhythmic"
+    ],
+    "themes": [
+     "woodcut-print",
+     "pop-zine"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-SD06",
+      "name": "Sepia Shard Diptych",
+      "role": "palette"
+     },
+     {
+      "id": "LB-107",
+      "name": "Concentric-band silhouette painting",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R22",
     "LB-R02R02",
@@ -14541,6 +18407,36 @@
    "panel": "sheet 6 of 13, row 2 col 3 (panel 6 of 6)",
    "nearest_neighbour": "LB-R03R20",
    "nn_similarity": 0.8465,
+   "interpreted": {
+    "mood": [
+     "cheeky",
+     "cool",
+     "crisp"
+    ],
+    "themes": [
+     "pop-zine",
+     "mid-century-modern"
+    ],
+    "domains": [
+     "tech",
+     "science"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-119",
+      "name": "Fan-and-roundel aesthetic panel",
+      "role": "making method"
+     },
+     {
+      "id": "LB-141",
+      "name": "Machine-motif repeat textile",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R20",
     "LB-R03R07",
@@ -14600,6 +18496,38 @@
    "panel": "sheet 7 of 13, row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-R03R08",
    "nn_similarity": 0.8262,
+   "interpreted": {
+    "mood": [
+     "playful",
+     "loud",
+     "sunny"
+    ],
+    "themes": [
+     "postmodern-postmodern squiggle"
+    ],
+    "domains": [
+     "events",
+     "youth campaigns",
+     "kids",
+     "events",
+     "packaging"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-114",
+      "name": "Wire-cell enamel",
+      "role": "palette"
+     },
+     {
+      "id": "LB-231",
+      "name": "Gold-lustre banded jar",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R03R08",
     "LB-R03R06",
@@ -14658,6 +18586,35 @@
    "panel": "sheet 7 of 13, row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-R03R20",
    "nn_similarity": 0.8441,
+   "interpreted": {
+    "mood": [
+     "friendly",
+     "light",
+     "upbeat"
+    ],
+    "themes": [
+     "postmodern-postmodern squiggle"
+    ],
+    "domains": [
+     "community",
+     "retail"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-251",
+      "name": "Floating-myth figure painting",
+      "role": "making method"
+     },
+     {
+      "id": "LB-231",
+      "name": "Gold-lustre banded jar",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R03R20",
     "LB-R03R07",
@@ -14717,6 +18674,36 @@
    "panel": "sheet 7 of 13, row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-R03R10",
    "nn_similarity": 0.7282,
+   "interpreted": {
+    "mood": [
+     "warm",
+     "rhythmic",
+     "sunny"
+    ],
+    "themes": [
+     "mid-century-modern",
+     "folk-craft"
+    ],
+    "domains": [
+     "food",
+     "hospitality"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-131",
+      "name": "Wave-border fresco panel",
+      "role": "making method"
+     },
+     {
+      "id": "LB-072",
+      "name": "Compass-star interlace",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R10",
     "LB-R03R19",
@@ -14776,6 +18763,36 @@
    "panel": "sheet 7 of 13, row 2 col 1 (panel 4 of 6)",
    "nearest_neighbour": "LB-R03R22",
    "nn_similarity": 0.8154,
+   "interpreted": {
+    "mood": [
+     "crisp",
+     "cool",
+     "Mediterranean"
+    ],
+    "themes": [
+     "folk-craft",
+     "mid-century-modern"
+    ],
+    "domains": [
+     "tech",
+     "science"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-234",
+      "name": "Bold-band painted coffee pot",
+      "role": "palette"
+     },
+     {
+      "id": "LB-247",
+      "name": "Looming-monster drive-in poster",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R22",
     "LB-R02R05",
@@ -14835,6 +18852,40 @@
    "panel": "sheet 7 of 13, row 2 col 2 (panel 5 of 6)",
    "nearest_neighbour": "LB-R05R19",
    "nn_similarity": 0.8343,
+   "interpreted": {
+    "mood": [
+     "cool",
+     "nocturnal",
+     "cerebral"
+    ],
+    "themes": [
+     "technical-diagram",
+     "pop-zine"
+    ],
+    "domains": [
+     "editorial",
+     "science",
+     "music",
+     "nightlife",
+     "tech",
+     "science"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-169",
+      "name": "Tapestry-flat patterned interior",
+      "role": "palette"
+     },
+     {
+      "id": "LB-248",
+      "name": "Even-daylight educational gouache plate",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R05R19",
     "LB-R03R10",
@@ -14896,6 +18947,36 @@
    "panel": "sheet 7 of 13, row 2 col 3 (panel 6 of 6)",
    "nearest_neighbour": "LB-R03R16",
    "nn_similarity": 0.8647,
+   "interpreted": {
+    "mood": [
+     "confident",
+     "modern",
+     "warm-cool"
+    ],
+    "themes": [
+     "mid-century-modern",
+     "agitprop"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-053",
+      "name": "Cobalt-on-white porcelain painting",
+      "role": "making method"
+     },
+     {
+      "id": "LB-008",
+      "name": "Sunburst gouache propaganda poster",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R03R16",
     "LB-R03R20",
@@ -14954,6 +19035,37 @@
    "panel": "sheet 8 of 13, row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-R02R08",
    "nn_similarity": 0.8239,
+   "interpreted": {
+    "mood": [
+     "precise",
+     "cool",
+     "classical"
+    ],
+    "themes": [
+     "line-engraving"
+    ],
+    "domains": [
+     "tech",
+     "engineering",
+     "tech",
+     "science"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-052",
+      "name": "Pixel art and 8-bit graphics",
+      "role": "palette"
+     },
+     {
+      "id": "LB-125",
+      "name": "Fluorescent-on-black poster",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R02R08",
     "LB-R05R01",
@@ -15015,6 +19127,37 @@
    "panel": "sheet 8 of 13, row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-R02R21",
    "nn_similarity": 0.8848,
+   "interpreted": {
+    "mood": [
+     "calm",
+     "airy",
+     "nostalgic"
+    ],
+    "themes": [
+     "mid-century-modern",
+     "quiet-austere"
+    ],
+    "domains": [
+     "wellness",
+     "books",
+     "stationery"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-156",
+      "name": "Dark-ledge still life",
+      "role": "making method"
+     },
+     {
+      "id": "LB-134",
+      "name": "Long-shadow flat icon",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R02R21",
     "LB-R03R13",
@@ -15074,6 +19217,36 @@
    "panel": "sheet 8 of 13, row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-R02R04",
    "nn_similarity": 0.8705,
+   "interpreted": {
+    "mood": [
+     "stately",
+     "vintage",
+     "formal"
+    ],
+    "themes": [
+     "classical-heritage",
+     "sacred-ornament"
+    ],
+    "domains": [
+     "heritage brands",
+     "labels"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-165",
+      "name": "Impressionist colour-dab scene",
+      "role": "making method"
+     },
+     {
+      "id": "LB-237",
+      "name": "Iron Age geometric band vessel",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R02R04",
     "LB-R02R06",
@@ -15132,6 +19305,36 @@
    "panel": "sheet 8 of 13, row 2 col 1 (panel 4 of 6)",
    "nearest_neighbour": "LB-R02R21",
    "nn_similarity": 0.8519,
+   "interpreted": {
+    "mood": [
+     "upbeat",
+     "heroic",
+     "forward"
+    ],
+    "themes": [
+     "agitprop",
+     "space-age-retro"
+    ],
+    "domains": [
+     "campaigns",
+     "sport"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-083",
+      "name": "Interlocking still life",
+      "role": "making method"
+     },
+     {
+      "id": "LB-193",
+      "name": "Rococo pastel garden party",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R02R21",
     "LB-R03R22",
@@ -15190,6 +19393,36 @@
    "panel": "sheet 8 of 13, row 2 col 2 (panel 5 of 6)",
    "nearest_neighbour": "LB-R02R02",
    "nn_similarity": 0.7523,
+   "interpreted": {
+    "mood": [
+     "fierce",
+     "bold",
+     "punchy"
+    ],
+    "themes": [
+     "agitprop",
+     "pop-zine"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-255",
+      "name": "Gilded reverse-glass panel",
+      "role": "making method"
+     },
+     {
+      "id": "LB-201",
+      "name": "Sun-and-shadow patch painting",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R02R02",
     "LB-R02R07",
@@ -15248,6 +19481,36 @@
    "panel": "sheet 8 of 13, row 2 col 3 (panel 6 of 6)",
    "nearest_neighbour": "LB-R03R22",
    "nn_similarity": 0.862,
+   "interpreted": {
+    "mood": [
+     "characterful",
+     "bold",
+     "stoic"
+    ],
+    "themes": [
+     "mid-century-modern",
+     "pop-zine"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-168",
+      "name": "Cloisonnist enamel-cell painting",
+      "role": "making method"
+     },
+     {
+      "id": "LB-248",
+      "name": "Even-daylight educational gouache plate",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R22",
     "LB-R03R13",
@@ -15306,6 +19569,37 @@
    "panel": "sheet 9 of 13, row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-R02R18",
    "nn_similarity": 0.7227,
+   "interpreted": {
+    "mood": [
+     "calm",
+     "minimal",
+     "soft"
+    ],
+    "themes": [
+     "quiet-austere",
+     "crafted-object"
+    ],
+    "domains": [
+     "wellness",
+     "books",
+     "stationery"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-073",
+      "name": "Tone-on-tone damask",
+      "role": "palette"
+     },
+     {
+      "id": "LB-104",
+      "name": "Bold wax-resist repeat",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R02R18",
     "LB-R05R17",
@@ -15359,6 +19653,35 @@
    "panel": "sheet 9 of 13, row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-R03R20",
    "nn_similarity": 0.862,
+   "interpreted": {
+    "mood": [
+     "warm",
+     "earthy",
+     "festive"
+    ],
+    "themes": [
+     "folk-craft"
+    ],
+    "domains": [
+     "food",
+     "hospitality"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-SD01",
+      "name": "Drip Stencil Noir",
+      "role": "making method"
+     },
+     {
+      "id": "LB-141",
+      "name": "Machine-motif repeat textile",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R20",
     "LB-R03R16",
@@ -15415,6 +19738,36 @@
    "panel": "sheet 9 of 13, row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-R04R21",
    "nn_similarity": 0.8449,
+   "interpreted": {
+    "mood": [
+     "optimistic",
+     "adventurous",
+     "retro"
+    ],
+    "themes": [
+     "space-age-retro",
+     "mid-century-modern"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-102",
+      "name": "Satin-stitch patch",
+      "role": "making method"
+     },
+     {
+      "id": "LB-244",
+      "name": "Flat-back mantel figure pair",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R04R21",
     "LB-R04R20",
@@ -15474,6 +19827,36 @@
    "panel": "sheet 9 of 13, row 2 col 1 (panel 4 of 6)",
    "nearest_neighbour": "LB-R04R20",
    "nn_similarity": 0.8338,
+   "interpreted": {
+    "mood": [
+     "monumental",
+     "proud",
+     "warm"
+    ],
+    "themes": [
+     "space-age-retro",
+     "deco-machine-age"
+    ],
+    "domains": [
+     "food",
+     "hospitality"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-175",
+      "name": "Analytic Cubist faceted still life",
+      "role": "palette"
+     },
+     {
+      "id": "LB-186",
+      "name": "Hard-edge colour painting",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R04R20",
     "LB-R04R06",
@@ -15531,10 +19914,39 @@
    "panel": "sheet 9 of 13, row 2 col 2 (panel 5 of 6)",
    "nearest_neighbour": "LB-R04R20",
    "nn_similarity": 0.6536,
+   "interpreted": {
+    "mood": [
+     "electric",
+     "nocturnal",
+     "punchy"
+    ],
+    "themes": [
+     "neon-night"
+    ],
+    "domains": [
+     "music",
+     "nightlife"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-230",
+      "name": "Empty liminal corridor",
+      "role": "palette"
+     },
+     {
+      "id": "LB-247",
+      "name": "Looming-monster drive-in poster",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R04R20",
-    "LB-R04R06",
-    "LB-R04R10"
+    "LB-245",
+    "LB-R04R06"
    ],
    "bred_from": [
     "LB-026",
@@ -15590,6 +20002,36 @@
    "panel": "sheet 9 of 13, row 2 col 3 (panel 6 of 6)",
    "nearest_neighbour": "LB-R04R10",
    "nn_similarity": 0.7974,
+   "interpreted": {
+    "mood": [
+     "nostalgic",
+     "earnest",
+     "modest"
+    ],
+    "themes": [
+     "space-age-retro",
+     "crafted-object"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-212",
+      "name": "Painted carriage-side story frieze",
+      "role": "making method"
+     },
+     {
+      "id": "LB-134",
+      "name": "Long-shadow flat icon",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R04R10",
     "LB-R04R17",
@@ -15647,6 +20089,36 @@
    "panel": "sheet 10 of 13, row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-R04R10",
    "nn_similarity": 0.8028,
+   "interpreted": {
+    "mood": [
+     "jolly",
+     "homespun",
+     "bright"
+    ],
+    "themes": [
+     "naive-joyful",
+     "folk-craft"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-172",
+      "name": "Expressionist tilted-room scene",
+      "role": "palette"
+     },
+     {
+      "id": "LB-163",
+      "name": "Romantic sublime seascape",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R04R10",
     "LB-R04R06",
@@ -15706,6 +20178,36 @@
    "panel": "sheet 10 of 13, row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-R04R10",
    "nn_similarity": 0.8338,
+   "interpreted": {
+    "mood": [
+     "loud",
+     "punky",
+     "electric"
+    ],
+    "themes": [
+     "pop-zine",
+     "neon-night"
+    ],
+    "domains": [
+     "events",
+     "youth campaigns"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-184",
+      "name": "Magic realist still scene",
+      "role": "making method"
+     },
+     {
+      "id": "LB-125",
+      "name": "Fluorescent-on-black poster",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R04R10",
     "LB-R04R06",
@@ -15760,6 +20262,35 @@
    "panel": "sheet 10 of 13, row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-R04R06",
    "nn_similarity": 0.8449,
+   "interpreted": {
+    "mood": [
+     "surging",
+     "festive",
+     "loud"
+    ],
+    "themes": [
+     "psychedelic-groovy"
+    ],
+    "domains": [
+     "events",
+     "youth campaigns"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-159",
+      "name": "Puffy clay 3D objects",
+      "role": "making method"
+     },
+     {
+      "id": "LB-203",
+      "name": "Bold-band northern wilderness landscape",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R04R06",
     "LB-R04R10",
@@ -15820,6 +20351,36 @@
    "panel": "sheet 10 of 13, row 2 col 1 (panel 4 of 6)",
    "nearest_neighbour": "LB-R03R08",
    "nn_similarity": 0.8109,
+   "interpreted": {
+    "mood": [
+     "delicate",
+     "quiet",
+     "wry"
+    ],
+    "themes": [
+     "folk-craft",
+     "quiet-austere"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-214",
+      "name": "Flat-tint axonometric drawing",
+      "role": "palette"
+     },
+     {
+      "id": "LB-072",
+      "name": "Compass-star interlace",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R08",
     "LB-R03R03",
@@ -15873,6 +20434,35 @@
    "panel": "sheet 10 of 13, row 2 col 2 (panel 5 of 6)",
    "nearest_neighbour": "LB-R02R16",
    "nn_similarity": 0.732,
+   "interpreted": {
+    "mood": [
+     "cosy",
+     "knitted",
+     "homely"
+    ],
+    "themes": [
+     "folk-craft"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-167",
+      "name": "Post-Impressionist bold-contour landscape",
+      "role": "making method"
+     },
+     {
+      "id": "LB-044",
+      "name": "Railway and transit travel poster",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R02R16",
     "LB-R02R04",
@@ -15931,6 +20521,37 @@
    "panel": "sheet 10 of 13, row 2 col 3 (panel 6 of 6)",
    "nearest_neighbour": "LB-R05R17",
    "nn_similarity": 0.8188,
+   "interpreted": {
+    "mood": [
+     "busy",
+     "mythic",
+     "playful"
+    ],
+    "themes": [
+     "postmodern-postmodern squiggle",
+     "folk-craft"
+    ],
+    "domains": [
+     "kids",
+     "events",
+     "packaging"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-036",
+      "name": "Natural-history plate and cyanotype",
+      "role": "palette"
+     },
+     {
+      "id": "LB-199",
+      "name": "Luminist still-water painting",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R05R17",
     "LB-R03R17",
@@ -15988,6 +20609,35 @@
    "panel": "sheet 11 of 13, row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-R05R17",
    "nn_similarity": 0.7942,
+   "interpreted": {
+    "mood": [
+     "light",
+     "airy",
+     "optimistic"
+    ],
+    "themes": [
+     "mid-century-modern"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-007",
+      "name": "WPA Federal Art Project silkscreen poster",
+      "role": "palette"
+     },
+     {
+      "id": "LB-138",
+      "name": "Red-and-black lacquer tray",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R05R17",
     "LB-R03R16",
@@ -16046,6 +20696,36 @@
    "panel": "sheet 11 of 13, row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-R05R12",
    "nn_similarity": 0.7315,
+   "interpreted": {
+    "mood": [
+     "formal",
+     "ornamental",
+     "rhythmic"
+    ],
+    "themes": [
+     "sacred-ornament",
+     "line-engraving"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-242",
+      "name": "Coiled paper-strip picture",
+      "role": "palette"
+     },
+     {
+      "id": "LB-203",
+      "name": "Bold-band northern wilderness landscape",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R05R12",
     "LB-R05R17",
@@ -16104,6 +20784,36 @@
    "panel": "sheet 11 of 13, row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-R03R22",
    "nn_similarity": 0.8151,
+   "interpreted": {
+    "mood": [
+     "groovy",
+     "warm",
+     "laid-back"
+    ],
+    "themes": [
+     "psychedelic-groovy",
+     "mid-century-modern"
+    ],
+    "domains": [
+     "food",
+     "hospitality"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-113",
+      "name": "Cut-stone inlay panel",
+      "role": "making method"
+     },
+     {
+      "id": "LB-020",
+      "name": "Op art",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R03R22",
     "LB-R03R01",
@@ -16161,6 +20871,37 @@
    "panel": "sheet 11 of 13, row 2 col 1 (panel 4 of 6)",
    "nearest_neighbour": "LB-R05R09",
    "nn_similarity": 0.7315,
+   "interpreted": {
+    "mood": [
+     "playful",
+     "homespun",
+     "repeatable"
+    ],
+    "themes": [
+     "folk-craft",
+     "pop-zine"
+    ],
+    "domains": [
+     "kids",
+     "events",
+     "packaging"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-090",
+      "name": "Tape-strip picture",
+      "role": "making method"
+     },
+     {
+      "id": "LB-192",
+      "name": "Baroque diagonal-light scene",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R05R09",
     "LB-R03R22",
@@ -16220,6 +20961,38 @@
    "panel": "sheet 11 of 13, row 2 col 2 (panel 5 of 6)",
    "nearest_neighbour": "LB-R02R15",
    "nn_similarity": 0.76,
+   "interpreted": {
+    "mood": [
+     "warm",
+     "nocturnal",
+     "minimal"
+    ],
+    "themes": [
+     "neon-night",
+     "quiet-austere"
+    ],
+    "domains": [
+     "food",
+     "hospitality",
+     "music",
+     "nightlife"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-014",
+      "name": "Suprematism",
+      "role": "palette"
+     },
+     {
+      "id": "LB-127",
+      "name": "Corner-bending supergraphic stripes",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R02R15",
     "LB-R02R12",
@@ -16277,6 +21050,37 @@
    "panel": "sheet 11 of 13, row 2 col 3 (panel 6 of 6)",
    "nearest_neighbour": "LB-R02R02",
    "nn_similarity": 0.8195,
+   "interpreted": {
+    "mood": [
+     "thoughtful",
+     "worldly",
+     "calm"
+    ],
+    "themes": [
+     "mid-century-modern",
+     "woodcut-print"
+    ],
+    "domains": [
+     "wellness",
+     "books",
+     "stationery"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-118",
+      "name": "Flat-tint relief map",
+      "role": "making method"
+     },
+     {
+      "id": "LB-221",
+      "name": "Stiff frontal folk portrait",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R02R02",
     "LB-R05R04",
@@ -16335,6 +21139,41 @@
    "panel": "sheet 12 of 13, row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-R03R03",
    "nn_similarity": 0.859,
+   "interpreted": {
+    "mood": [
+     "calm",
+     "cerebral",
+     "cool"
+    ],
+    "themes": [
+     "technical-diagram",
+     "quiet-austere"
+    ],
+    "domains": [
+     "editorial",
+     "science",
+     "tech",
+     "science",
+     "wellness",
+     "books",
+     "stationery"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-SD02",
+      "name": "Colour-Field Screenprint Pop",
+      "role": "palette"
+     },
+     {
+      "id": "LB-240",
+      "name": "Rope-and-sphere maritime stone ornament",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R03R03",
     "LB-R03R11",
@@ -16392,10 +21231,41 @@
    "panel": "sheet 12 of 13, row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-R07R23",
    "nn_similarity": 0.6643,
+   "interpreted": {
+    "mood": [
+     "dreamy",
+     "calm",
+     "nostalgic"
+    ],
+    "themes": [
+     "space-age-retro",
+     "quiet-austere"
+    ],
+    "domains": [
+     "wellness",
+     "books",
+     "stationery"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-140",
+      "name": "Single-emblem two-ink poster",
+      "role": "palette"
+     },
+     {
+      "id": "LB-107",
+      "name": "Concentric-band silhouette painting",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R07R23",
     "LB-098",
-    "LB-R07R24"
+    "LB-281"
    ],
    "bred_from": [
     "LB-044"
@@ -16450,6 +21320,39 @@
    "panel": "sheet 12 of 13, row 1 col 3 (panel 3 of 6)",
    "nearest_neighbour": "LB-R07R22",
    "nn_similarity": 0.6643,
+   "interpreted": {
+    "mood": [
+     "calm",
+     "orderly",
+     "cerebral"
+    ],
+    "themes": [
+     "technical-diagram",
+     "quiet-austere"
+    ],
+    "domains": [
+     "editorial",
+     "science",
+     "wellness",
+     "books",
+     "stationery"
+    ],
+    "best_layer": "palette",
+    "partners": [
+     {
+      "id": "LB-082",
+      "name": "Circle-framed crest",
+      "role": "making method"
+     },
+     {
+      "id": "LB-104",
+      "name": "Bold wax-resist repeat",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R07R22",
     "LB-098",
@@ -16507,6 +21410,36 @@
    "panel": "sheet 12 of 13, row 2 col 1 (panel 4 of 6)",
    "nearest_neighbour": "LB-R07R22",
    "nn_similarity": 0.6129,
+   "interpreted": {
+    "mood": [
+     "lively",
+     "homespun",
+     "festive"
+    ],
+    "themes": [
+     "folk-craft",
+     "naive-joyful"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-133",
+      "name": "Box-house fresco scene",
+      "role": "palette"
+     },
+     {
+      "id": "LB-192",
+      "name": "Baroque diagonal-light scene",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R07R22",
     "LB-085",
@@ -16565,6 +21498,39 @@
    "panel": "sheet 12 of 13, row 2 col 2 (panel 5 of 6)",
    "nearest_neighbour": "LB-R08R14",
    "nn_similarity": 0.7129,
+   "interpreted": {
+    "mood": [
+     "calm",
+     "cool",
+     "thoughtful"
+    ],
+    "themes": [
+     "quiet-austere",
+     "crafted-object"
+    ],
+    "domains": [
+     "tech",
+     "science",
+     "wellness",
+     "books",
+     "stationery"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-107",
+      "name": "Concentric-band silhouette painting",
+      "role": "palette"
+     },
+     {
+      "id": "LB-163",
+      "name": "Romantic sublime seascape",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R08R14",
     "LB-R08R13",
@@ -16623,6 +21589,36 @@
    "panel": "sheet 12 of 13, row 2 col 3 (panel 6 of 6)",
    "nearest_neighbour": "LB-R08R18",
    "nn_similarity": 0.7846,
+   "interpreted": {
+    "mood": [
+     "regal",
+     "ornate",
+     "warm"
+    ],
+    "themes": [
+     "sacred-ornament",
+     "classical-heritage"
+    ],
+    "domains": [
+     "food",
+     "hospitality"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-145",
+      "name": "Gilt laurel-and-bee panel",
+      "role": "palette"
+     },
+     {
+      "id": "LB-105",
+      "name": "Woven-roundel tapestry",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "high"
+   },
    "nearest_looks": [
     "LB-R08R18",
     "LB-R08R14",
@@ -16681,6 +21677,36 @@
    "panel": "sheet 13 of 13, row 1 col 1 (panel 1 of 6)",
    "nearest_neighbour": "LB-R08R13",
    "nn_similarity": 0.761,
+   "interpreted": {
+    "mood": [
+     "eerie",
+     "regal",
+     "still"
+    ],
+    "themes": [
+     "sacred-ornament",
+     "crafted-object"
+    ],
+    "domains": [
+     "posters",
+     "editorial"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-127",
+      "name": "Corner-bending supergraphic stripes",
+      "role": "palette"
+     },
+     {
+      "id": "LB-209",
+      "name": "Poured colour-band painting",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R08R13",
     "LB-R08R01",
@@ -16740,6 +21766,36 @@
    "panel": "sheet 13 of 13, row 1 col 2 (panel 2 of 6)",
    "nearest_neighbour": "LB-R08R13",
    "nn_similarity": 0.7846,
+   "interpreted": {
+    "mood": [
+     "gentle",
+     "pastoral",
+     "warm"
+    ],
+    "themes": [
+     "woodcut-print",
+     "folk-craft"
+    ],
+    "domains": [
+     "food",
+     "hospitality"
+    ],
+    "best_layer": "making method",
+    "partners": [
+     {
+      "id": "LB-071",
+      "name": "One-ink pastoral toile",
+      "role": "palette"
+     },
+     {
+      "id": "LB-034",
+      "name": "Y2K and vaporwave internet aesthetics",
+      "role": "shape"
+     }
+    ],
+    "tag_source": "interpreted, unreviewed",
+    "confidence": "medium"
+   },
    "nearest_looks": [
     "LB-R08R13",
     "LB-R08R14",
