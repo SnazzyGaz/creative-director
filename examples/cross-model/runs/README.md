@@ -2,6 +2,7 @@
 
 | Run | Model and route | Status | What it shows |
 |---|---|---|---|
+| [clean-2026-11-04](clean-2026-11-04/) | Claude via Cowork (all 6 runs); ChatGPT Free, default model (2 of 6 runs) | **First clean runs** (fresh sessions, rubric not seen; scoring not fully blind) | Claude: the baseline already finds most faults, and the skill mainly adds structure and measurements. GPT: partial, no pair yet. |
 | [claude-opus-5.5-2026-11-01](claude-opus-5.5-2026-11-01/) | Claude Opus 5.5, claude.ai with code execution, full skill (repo checkout) | **Contaminated: smoke test only, not a score** | The kit and tools work outside Grok Bot. See below. |
 
 ## claude-opus-5.5-2026-11-01 (smoke test)
@@ -28,6 +29,8 @@ What it shows:
 - Task A's rewritten page was not rendered by GPT. Checked here: it passes contrast (all text pairs, lowest 3.00:1 for large text, 5.89:1 for normal text), reflows at 390 px and at 200% text, and keeps the brief's facts. See [`VERIFY.md`](gpt-6-2026-11-01-pilot/VERIFY.md).
 
 ## What the two pilots suggest (not proof)
+
+The pilots are kept as smoke tests only. For results, see [clean-2026-11-04](clean-2026-11-04/).
 
 - **Baselines are already good at finding faults.** In both pilots the strong models found most planted faults without the skill (GPT's baseline: 4 or 5 of 5). The skill is not mainly a fault-finder for these models.
 - **The added value showed as structure:** blockers ranked first, rule IDs, the brief kept intact, confidence stated, and owner questions at the end.

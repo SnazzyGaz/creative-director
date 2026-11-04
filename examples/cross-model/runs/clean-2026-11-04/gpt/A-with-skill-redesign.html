@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5efe5">
+  <meta name="description" content="Crumb & Co. Weekend bread in Hebden Bridge. Pre-order by Thursday and collect on Saturday.">
+  <title>Crumb &amp; Co. — Weekend Bread</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f5efe5;
+      --paper-deep: #ebe0d1;
+      --ink: #25221e;
+      --muted: #625b52;
+      --orange: #E8743B;
+      --orange-dark: #873510;
+      --line: #d8cabb;
+      --white: #fffdf9;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Arial, Helvetica, sans-serif;
+      --mono: "Courier New", monospace;
+      --page-width: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.5;
+    }
+
+    a { color: inherit; }
+
+    a:focus-visible {
+      outline: 3px solid var(--orange-dark);
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .header-inner,
+    main,
+    .footer-inner {
+      width: min(calc(100% - 48px), var(--page-width));
+      margin-inline: auto;
+    }
+
+    .header-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .wordmark {
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 23px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .wordmark span { color: var(--orange-dark); }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .nav a {
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .nav a:hover { color: var(--orange-dark); }
+
+    .hero {
+      padding: clamp(54px, 9vw, 112px) 0 72px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(270px, .8fr);
+      align-items: center;
+      gap: clamp(32px, 6vw, 84px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 20px;
+      color: var(--orange-dark);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 3px;
+      background: var(--orange);
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(58px, 8.4vw, 112px);
+      font-weight: 700;
+      letter-spacing: -.075em;
+      line-height: .88;
+    }
+
+    h1 .amp {
+      color: var(--orange-dark);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .hero-intro {
+      max-width: 580px;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: clamp(19px, 2.1vw, 25px);
+      line-height: 1.35;
+    }
+
+    .order-panel {
+      position: relative;
+      padding: clamp(26px, 4vw, 42px);
+      background: var(--orange);
+      color: #211b17;
+      box-shadow: 9px 9px 0 var(--ink);
+    }
+
+    .order-panel::before {
+      content: "WEEKEND BREAD";
+      display: block;
+      margin-bottom: 26px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .14em;
+    }
+
+    .order-panel h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 48px);
+      letter-spacing: -.045em;
+      line-height: 1.02;
+    }
+
+    .order-panel p {
+      margin: 18px 0 25px;
+      max-width: 30ch;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 19px;
+      border: 2px solid var(--ink);
+      background: var(--ink);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color .15s ease, color .15s ease, transform .15s ease;
+    }
+
+    .button:hover {
+      background: var(--white);
+      color: var(--ink);
+      transform: translateY(-2px);
+    }
+
+    .order-note {
+      display: block;
+      margin-top: 13px;
+      font-family: var(--mono);
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    .bread-section {
+      padding: 46px 0 62px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(30px, 4vw, 42px);
+      letter-spacing: -.04em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .bread-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .bread-item {
+      min-height: 112px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .bread-item + .bread-item { border-left: 1px solid var(--line); }
+
+    .bread-item h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 27px;
+      letter-spacing: -.03em;
+    }
+
+    .bread-item span {
+      color: var(--orange-dark);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .visit-section {
+      padding: 62px 0 76px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(32px, 7vw, 90px);
+    }
+
+    .visit-section h2 {
+      margin: 0 0 17px;
+      font-family: var(--serif);
+      font-size: clamp(32px, 4vw, 43px);
+      letter-spacing: -.04em;
+    }
+
+    .visit-section p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .hours {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .hours th,
+    .hours td {
+      padding: 9px 0;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+    }
+
+    .hours th { font-weight: 700; }
+    .hours td { color: var(--muted); text-align: right; }
+
+    address {
+      margin-top: 18px;
+      color: var(--muted);
+      font-style: normal;
+      line-height: 1.7;
+    }
+
+    .footer {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .footer-inner {
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      font-family: var(--mono);
+      font-size: 11px;
+    }
+
+    .footer a { color: var(--paper); }
+
+    @media (max-width: 700px) {
+      .header-inner,
+      main,
+      .footer-inner {
+        width: min(calc(100% - 36px), var(--page-width));
+      }
+
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 0;
+      }
+
+      .nav { gap: 10px 17px; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        padding: 58px 0 52px;
+      }
+
+      .hero-intro { margin-top: 20px; }
+
+      .order-panel {
+        width: calc(100% - 9px);
+        max-width: 520px;
+      }
+
+      .bread-section { padding: 38px 0 44px; }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+      }
+
+      .bread-list { grid-template-columns: 1fr; }
+
+      .bread-item {
+        min-height: 88px;
+        padding: 18px 20px;
+      }
+
+      .bread-item + .bread-item {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .visit-section {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        padding: 48px 0 56px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px 0;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .header-inner,
+      main,
+      .footer-inner {
+        width: calc(100% - 28px);
+      }
+
+      .nav { font-size: 11px; gap: 9px 12px; }
+      h1 { font-size: clamp(53px, 16vw, 62px); }
+      .order-panel { padding: 23px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#" aria-label="Crumb and Co home">Crumb <span>&amp;</span> Co.</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#bread">The bread</a>
+        <a href="#pre-order">Pre-order</a>
+        <a href="#visit">Find us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Hebden Bridge bakery</p>
+        <h1 id="page-title">Weekend<br><span class="amp">bread.</span></h1>
+        <p class="hero-intro">Pre-order by Thursday. Collect your bread from the shop on Saturday.</p>
+      </div>
+
+      <aside class="order-panel" id="pre-order" aria-labelledby="order-title">
+        <h2 id="order-title">Order by Thursday.</h2>
+        <p>Choose sourdough, rye or seeded bread. Collect your order from the shop on Saturday.</p>
+        <a class="button" href="tel:01422000000">Call to pre-order</a>
+        <span class="order-note">Collection: Saturday, from the shop.</span>
+      </aside>
+    </section>
+
+    <section class="bread-section" id="bread" aria-labelledby="bread-title">
+      <div class="section-heading">
+        <h2 id="bread-title">Pick your loaf.</h2>
+        <p>Sourdough / Rye / Seeded</p>
+      </div>
+      <div class="bread-list">
+        <article class="bread-item">
+          <h3>Sourdough</h3>
+          <span>01</span>
+        </article>
+        <article class="bread-item">
+          <h3>Rye</h3>
+          <span>02</span>
+        </article>
+        <article class="bread-item">
+          <h3>Seeded</h3>
+          <span>03</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="visit-section" id="visit" aria-labelledby="hours-title">
+      <div>
+        <h2 id="hours-title">Come on in.</h2>
+        <p>Find us at 14 Mill Lane, Hebden Bridge.</p>
+        <address>
+          14 Mill Lane<br>
+          Hebden Bridge
+        </address>
+        <p style="margin-top: 12px;">01422 000000</p>
+      </div>
+
+      <div>
+        <h2>Opening hours</h2>
+        <table class="hours">
+          <tbody>
+            <tr><th scope="row">Monday</th><td>Closed</td></tr>
+            <tr><th scope="row">Tuesday–Friday</th><td>7am–3pm</td></tr>
+            <tr><th scope="row">Saturday</th><td>8am–1pm</td></tr>
+            <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© Crumb &amp; Co.</span>
+      <span>Hebden Bridge</span>
+    </div>
+  </footer>
+</body>
+</html>

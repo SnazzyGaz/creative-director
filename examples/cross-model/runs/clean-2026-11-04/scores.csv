@@ -1,0 +1,9 @@
+task,condition,run,model,found_of5,blockers_found,ranked,false_alarms,fix_quality_of10,brief_kept,notes
+A,with-skill,run-01,claude,5,3/3,1,0,10,1,full rewrite HTML; counts 8 typefaces (key 6); redesign uses Fraunces
+A,with-skill,run-01,gpt,5,3/3,1,0,6,1,A1 weak (says CTA unclear not dead); fixes vague; no render verified
+C,baseline,run-02,claude,5,5/5,1,0,10,1,pixel-measured VPs/ellipses; extra: centring check
+C,baseline,run-02,gpt,2,2/5,1,2,3,1,found C2 + C4(wrong fix: make ellipses identical); missed C1 C3 C5; called ellipse tilt not inherently wrong
+B,with-skill,run-03,claude,5,1/1,1,0,8,1,B1 only implied (name one key light); extras gutter/text area real
+B,baseline,run-04,claude,4,0/1,1,0,8,1,missed B1 light conflict; extras text area/gutter/shipwreck real
+A,baseline,run-05,claude,5,3/3,1,0,9,1,full HTML; says nine fonts loaded none
+C,with-skill,run-06,claude,5,5/5,1,0,10,1,tool-measured; rule IDs all correct
