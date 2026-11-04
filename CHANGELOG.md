@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- **Style bleed showcase** (README, after Before and after; `examples/lookbook-strength/`): four showcase 3 sheets, each a base render beside one look at 20, 50 and 80%, with a one-line caption on which level won and why: LOW END, Cold Open and Torsion Dance at 80% (the look's structure carried the brief's idea; Cold Open with creep), Page not found at 50% (80% crept into a fake desktop). Picked by the owner of the work; one render per level, not blind. 1,600 px web JPEGs (about 90-245 KB). No rule changes.
+
 ## v0.9.8 (3 November 2026)
 
 **Lookbook strength: 20-50% by default, strong only on purpose, and people keep who they are.** Three new rules in `modules/lookbook/README.md`, from the showcase 3 strength test: 21 briefs, each a base render beside one look at 20, 50 and 80%. The new rules are internal evidence: owner-judged, a small sample (one render per level), not blind. No budget was raised.

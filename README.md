@@ -26,6 +26,20 @@ Same prompt and image model, one sample each: an illustration, not a benchmark. 
 
 Illustrative, not test evidence: one sample each, with six of ten pairs picked by the owner of the work. Notes and the rules that fired: [examples/showcase/](examples/showcase/). The evidence is the [blind test](examples/blind-test/RESULTS.md).
 
+## Style bleed
+
+Each sheet is a base render (full rules, no look) beside one [lookbook](modules/lookbook/) look at 20, 50 and 80%. LOOK-1 keeps looks at 20-50% by default; LOOK-2 allows 80% only when the look's structure carries the brief's idea, after a check that its subject hasn't crept in.
+
+[<img alt="LOW END club poster, base and one collage look at 20, 50 and 80%: a hooded figure under sound rings, then torn newsprint strips, then CMY circles behind the head." src="examples/lookbook-strength/sheets/17-low-end.jpg" width="100%">](examples/lookbook-strength/sheets/17-low-end.jpg)<br>**LOW END: 80% won.** The look's CMY circles read as speaker cones and its type strips stay illegible; at 50% the scraps carried near-words.
+
+[<img alt="Cold Open podcast cover, base and one three-ink poster look at 20, 50 and 80%: a figure under a street lamp, then a coat figure in red and navy blocks, then a woman with a red bar across her eyes." src="examples/lookbook-strength/sheets/16-cold-open.jpg" width="100%">](examples/lookbook-strength/sheets/16-cold-open.jpg)<br>**Cold Open: 80% won, with creep.** The red block became a redaction bar across the eyes, right for true crime, but the brief's anonymous coat figure turned into the look's own glamorous woman.
+
+[<img alt="Torsion Dance Company brochure, base and one serpentine-figure look at 20, 50 and 80%: one curled dancer, then ribbon-painted pairs, then figures wrung into one knot." src="examples/lookbook-strength/sheets/06-torsion-dance.jpg" width="100%">](examples/lookbook-strength/sheets/06-torsion-dance.jpg)<br>**Torsion Dance: 80% won.** The look's structure is the brief's idea: figures wrung into one ribbon knot are the strongest read of "torsion".
+
+[<img alt="Page not found web page, base and one grey-bevel desktop look at 20, 50 and 80%: a sketched paper boat, then one bevelled window, then a whole fake desktop with icons and a task bar." src="examples/lookbook-strength/sheets/14-page-not-found.jpg" width="100%">](examples/lookbook-strength/sheets/14-page-not-found.jpg)<br>**Page not found: 50% won; 80% crept.** One bevelled dialog on teal is nostalgic and still a web page; at 80% icons, a task bar and a start button made it a fake desktop.
+
+Four of 21 sheets, picked by the owner of the work; one render per level, not blind. Tally and notes: [examples/lookbook-strength/](examples/lookbook-strength/README.md).
+
 ## Install
 
 Works with any agent or LLM. [`docs/install.md`](docs/install.md) has the steps, with sources, for each one.
