@@ -81,7 +81,7 @@ Always send the actual output (image, screenshot at real size, URL or renders), 
 | [film](modules/film/) (optional) | story first: shots, continuity, light, grading, editing, sound, generated-video QC |
 | [lookbook](modules/lookbook/) (optional) | 320 visual looks to offer as directions, named by technique or era, never by living artists; used at 20-50% by default, stronger only on purpose |
 
-Also: a [font library](fonts/) of 61 free families in 18 themes, and [`tools/`](tools/) for every measurable check (one-command auto check, contrast, vanishing points, ellipses, layout grid, chart and route drawing).
+Also: a [font library](fonts/) of 107 free families in 29 themes, tagged by mood, and [`tools/`](tools/) for every measurable check (one-command auto check, contrast, vanishing points, ellipses, layout grid, chart and route drawing).
 
 ## How it works
 
@@ -133,7 +133,7 @@ modules/    technical-drawing · illustration · character · web-ui · ux · 3d
             lookbook (optional: 320 established looks and wildcards, tag file and image sheets)
 tools/      auto check (one command, every measurable rule), look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, 3D intersections, before/after
 examples/   stress tests, round by round, including this README's own critique
-fonts/      61 free font families in 18 themes, catalogue and specimen sheets
+fonts/      107 free font families in 29 themes, catalogue and specimen sheets
 lite/       the loop, core rules and blockers in one short file
 skills/     the installable skill folder, generated from the files above
 docs/       gallery, README images, reference library, design notes (DECISIONS.md, RETIRED-IDS.md; PROPOSED-REPO.md is historical)

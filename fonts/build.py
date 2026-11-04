@@ -22,6 +22,11 @@ SAMPLE = {
     'humanist-sans': 'Clear Paths for Everyone', 'monospace-code': 'git commit -m "fix"',
     'condensed-poster': 'LIVE AT THE ARENA', 'handwritten-marker': 'Back in five minutes',
     'nautical-vintage': 'The Salt Road Voyage', 'luxury-didone': 'Maison Lumière',
+    'heritage-badge': 'The Kings Arms, Est. 1898', 'blackletter': 'Iron and Ink Tattoo',
+    'grotesk-display': 'Raw Concrete Weekly', 'expressive-variable': 'Shape Shifter Festival',
+    'rounded-friendly': 'Hello, nice to meet you', 'stencil-industrial': 'CARGO BAY 07',
+    'signage-din': 'Platform 4, Exit B', 'wide-extended': 'WIDE OPEN ROADS',
+    'modern-serif': 'The Modern Edit', 'oldstyle-text': 'A Long Walk Home', 'script-signage': 'Fresh Coffee Daily',
 }
 PANGRAM = 'The quick brown fox jumps over the lazy dog 0123456789'
 
@@ -108,17 +113,25 @@ def overview(themes, by_theme):
         y += -(-len(by_theme[t['id']]) // cols) * ch + 12
     return im
 
+def mood_index():
+    lines = ['\n## By mood\n', 'Families tagged with each mood (craft judgement written for this repo, not research). Pick by mood, then check the theme and the "avoid" note.\n',
+             '| Mood | Families |', '|---|---|']
+    for m in CAT.get('mood_vocabulary', []):
+        fams = sorted(f['family'] for f in CAT['families'] if m in f.get('moods', []))
+        lines.append(f"| {m} | {', '.join(fams)} |")
+    return lines + ['\n## By theme']
+
 def table(themes, by_theme):
-    lines = []
+    lines = mood_index()
     for t in themes:
         lines.append(f"\n### {t['name']}\n\n{t['use']} Specimen: [`specimens/{t['id']}.png`](specimens/{t['id']}.png)\n")
-        lines.append('| Family | Licence | Axes / weights | Good for | Avoid | Pairs with |')
-        lines.append('|---|---|---|---|---|---|')
+        lines.append('| Family | Licence | Axes / weights | Moods | Good for | Avoid | Pairs with |')
+        lines.append('|---|---|---|---|---|---|---|')
         for f in by_theme[t['id']]:
             also = [x for x in f['themes'] if x != t['id']]
             fam = f"[{f['family']}]({f['source']})" + (f"<br><sub>also: {', '.join(also)}</sub>" if also else '')
             lic = f"[{f['licence']}](../{f['licence_file']})"
-            lines.append(f"| {fam} | {lic} | {axes_text(f)} | {f['good_for']} | {f['avoid']} | {', '.join(f['pairs_with'])} |")
+            lines.append(f"| {fam} | {lic} | {axes_text(f)} | {', '.join(f.get('moods', []))} | {f['good_for']} | {f['avoid']} | {', '.join(f['pairs_with'])} |")
         also = [f['family'] for f in CAT['families'] if t['id'] in f['themes'][1:]]
         if also:
             lines.append(f"\nAlso suits this theme (listed under another): {', '.join(also)}.")

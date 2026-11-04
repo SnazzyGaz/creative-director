@@ -1,5 +1,5 @@
 {
- "about": "Theme-grouped library of free fonts (SIL OFL 1.1 or Apache 2.0) for the creative-director skill. Files and licences from github.com/google/fonts; notes written for this repo.",
+ "about": "Theme-grouped library of free fonts (SIL OFL 1.1 or Apache 2.0) for the creative-director skill. Files and licences from github.com/google/fonts; notes and mood tags written for this repo (craft guidance, not research findings).",
  "themes": [
   {
    "id": "editorial-serif",
@@ -90,6 +90,61 @@
    "id": "luxury-didone",
    "name": "Luxury / high-contrast didone",
    "use": "Fashion, perfume, classical, premium."
+  },
+  {
+   "id": "heritage-badge",
+   "name": "Heritage / badge slab",
+   "use": "Pubs, saloons, breweries, barbers, crests and badges: Clarendon and slab with a stamped, established feel."
+  },
+  {
+   "id": "blackletter",
+   "name": "Blackletter",
+   "use": "Tattoo, metal, brewing, old newspapers, Gothic and German-flavoured heritage."
+  },
+  {
+   "id": "grotesk-display",
+   "name": "Brutalist / grotesk display",
+   "use": "Raw, confident headlines: studios, galleries, tech launches, zines, statement posters."
+  },
+  {
+   "id": "expressive-variable",
+   "name": "Variable expressive display",
+   "use": "Festivals, music, motion titles and identities that stretch, squash and change weight."
+  },
+  {
+   "id": "rounded-friendly",
+   "name": "Rounded friendly sans",
+   "use": "Friendly apps, health, food, family and community brands; soft, approachable UI."
+  },
+  {
+   "id": "stencil-industrial",
+   "name": "Stencil / industrial",
+   "use": "Crates, military, logistics, workshops, streetwear and spray-painted signs."
+  },
+  {
+   "id": "signage-din",
+   "name": "Signage / DIN-like",
+   "use": "Wayfinding, transport, dashboards, instruments, labels read at a glance."
+  },
+  {
+   "id": "wide-extended",
+   "name": "Wide / extended display",
+   "use": "Short, wide statements: motorsport, fashion, tech and luxury logotypes."
+  },
+  {
+   "id": "modern-serif",
+   "name": "High-contrast modern serif",
+   "use": "Contemporary editorial, fashion, culture and premium brand headlines."
+  },
+  {
+   "id": "oldstyle-text",
+   "name": "Warm old-style text serif",
+   "use": "Long reading with a human warmth: books, essays, menus, craft brands."
+  },
+  {
+   "id": "script-signage",
+   "name": "Script / brush signage",
+   "use": "Shopfronts, diners, cafés, surf, retro sports and hand-painted signs."
   }
  ],
  "families": [
@@ -121,6 +176,11 @@
    "pairs_with": [
     "Limelight",
     "Playfair Display"
+   ],
+   "moods": [
+    "elegance",
+    "nostalgia",
+    "calm"
    ]
   },
   {
@@ -147,6 +207,11 @@
    "pairs_with": [
     "Josefin Sans",
     "Poiret One"
+   ],
+   "moods": [
+    "nostalgia",
+    "luxury",
+    "elegance"
    ]
   },
   {
@@ -172,13 +237,19 @@
    "pairs_with": [
     "Playfair Display",
     "Josefin Sans"
+   ],
+   "moods": [
+    "elegance",
+    "nostalgia",
+    "romance"
    ]
   },
   {
    "family": "Baloo 2",
    "themes": [
     "childrens-playful",
-    "humanist-sans"
+    "humanist-sans",
+    "rounded-friendly"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/childrens-playful/baloo2/OFL.txt",
@@ -201,6 +272,10 @@
    "pairs_with": [
     "Fredoka",
     "Atkinson Hyperlegible Next"
+   ],
+   "moods": [
+    "play",
+    "warmth"
    ]
   },
   {
@@ -226,12 +301,17 @@
    "pairs_with": [
     "Patrick Hand",
     "Cabin"
+   ],
+   "moods": [
+    "play",
+    "nostalgia"
    ]
   },
   {
    "family": "Fredoka",
    "themes": [
-    "childrens-playful"
+    "childrens-playful",
+    "rounded-friendly"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/childrens-playful/fredoka/OFL.txt",
@@ -258,6 +338,11 @@
    "pairs_with": [
     "Patrick Hand",
     "Baloo 2"
+   ],
+   "moods": [
+    "play",
+    "warmth",
+    "calm"
    ]
   },
   {
@@ -284,6 +369,11 @@
    "pairs_with": [
     "Courier Prime",
     "Public Sans"
+   ],
+   "moods": [
+    "power",
+    "speed",
+    "authority"
    ]
   },
   {
@@ -312,6 +402,10 @@
    "pairs_with": [
     "Literata",
     "Cabin"
+   ],
+   "moods": [
+    "power",
+    "precision"
    ]
   },
   {
@@ -337,6 +431,11 @@
    "pairs_with": [
     "Special Elite",
     "Source Sans 3"
+   ],
+   "moods": [
+    "power",
+    "authority",
+    "speed"
    ]
   },
   {
@@ -365,13 +464,19 @@
    "pairs_with": [
     "Source Sans 3",
     "Bangers"
+   ],
+   "moods": [
+    "power",
+    "authority",
+    "trust"
    ]
   },
   {
    "family": "EB Garamond",
    "themes": [
     "editorial-serif",
-    "fantasy-medieval"
+    "fantasy-medieval",
+    "oldstyle-text"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/editorial-serif/ebgaramond/OFL.txt",
@@ -395,6 +500,11 @@
    "pairs_with": [
     "Cabin",
     "Source Sans 3"
+   ],
+   "moods": [
+    "heritage",
+    "elegance",
+    "calm"
    ]
   },
   {
@@ -424,12 +534,18 @@
    "avoid": "Big display titles (it is cut for text sizes).",
    "pairs_with": [
     "Public Sans"
+   ],
+   "moods": [
+    "heritage",
+    "trust",
+    "authority"
    ]
   },
   {
    "family": "Literata",
    "themes": [
-    "editorial-serif"
+    "editorial-serif",
+    "oldstyle-text"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/editorial-serif/literata/OFL.txt",
@@ -457,6 +573,11 @@
    "pairs_with": [
     "Source Sans 3",
     "Inter"
+   ],
+   "moods": [
+    "calm",
+    "trust",
+    "warmth"
    ]
   },
   {
@@ -490,6 +611,11 @@
    "pairs_with": [
     "Public Sans",
     "Hanken Grotesk"
+   ],
+   "moods": [
+    "authority",
+    "trust",
+    "precision"
    ]
   },
   {
@@ -519,13 +645,19 @@
    "pairs_with": [
     "EB Garamond",
     "Literata"
+   ],
+   "moods": [
+    "heritage",
+    "authority",
+    "luxury"
    ]
   },
   {
    "family": "Pirata One",
    "themes": [
     "fantasy-medieval",
-    "nautical-vintage"
+    "nautical-vintage",
+    "blackletter"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/fantasy-medieval/pirataone/OFL.txt",
@@ -545,13 +677,19 @@
    "pairs_with": [
     "IM Fell English",
     "Libre Caslon Text"
+   ],
+   "moods": [
+    "menace",
+    "heritage",
+    "rebellion"
    ]
   },
   {
    "family": "UnifrakturMaguntia",
    "themes": [
     "fantasy-medieval",
-    "horror"
+    "horror",
+    "blackletter"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/fantasy-medieval/unifrakturmaguntia/OFL.txt",
@@ -571,6 +709,11 @@
    "pairs_with": [
     "EB Garamond",
     "IM Fell English"
+   ],
+   "moods": [
+    "heritage",
+    "menace",
+    "authority"
    ]
   },
   {
@@ -601,6 +744,11 @@
    "pairs_with": [
     "Shrikhand",
     "Playfair Display"
+   ],
+   "moods": [
+    "precision",
+    "calm",
+    "nostalgia"
    ]
   },
   {
@@ -630,6 +778,11 @@
    "pairs_with": [
     "Libre Caslon Text",
     "Source Sans 3"
+   ],
+   "moods": [
+    "power",
+    "precision",
+    "authority"
    ]
   },
   {
@@ -658,13 +811,19 @@
    "pairs_with": [
     "Literata",
     "JetBrains Mono"
+   ],
+   "moods": [
+    "tech",
+    "calm",
+    "trust"
    ]
   },
   {
    "family": "Bricolage Grotesque",
    "themes": [
     "grotesk-neutral",
-    "condensed-poster"
+    "condensed-poster",
+    "expressive-variable"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/grotesk-neutral/bricolagegrotesque/OFL.txt",
@@ -695,6 +854,11 @@
    "pairs_with": [
     "Literata",
     "Inter"
+   ],
+   "moods": [
+    "play",
+    "rebellion",
+    "warmth"
    ]
   },
   {
@@ -724,6 +888,11 @@
    "pairs_with": [
     "Newsreader",
     "Literata"
+   ],
+   "moods": [
+    "calm",
+    "trust",
+    "precision"
    ]
   },
   {
@@ -756,12 +925,18 @@
    "pairs_with": [
     "Newsreader"
    ],
-   "note": "Vendored earlier for the README images; not duplicated under fonts/."
+   "note": "Vendored earlier for the README images; not duplicated under fonts/.",
+   "moods": [
+    "precision",
+    "calm",
+    "trust"
+   ]
   },
   {
    "family": "Inter",
    "themes": [
-    "grotesk-neutral"
+    "grotesk-neutral",
+    "grotesk-display"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/grotesk-neutral/inter/OFL.txt",
@@ -788,12 +963,19 @@
    "pairs_with": [
     "Newsreader",
     "JetBrains Mono"
+   ],
+   "moods": [
+    "precision",
+    "trust",
+    "calm",
+    "tech"
    ]
   },
   {
    "family": "Public Sans",
    "themes": [
-    "grotesk-neutral"
+    "grotesk-neutral",
+    "signage-din"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/grotesk-neutral/publicsans/OFL.txt",
@@ -817,6 +999,11 @@
    "pairs_with": [
     "Newsreader",
     "Libre Caslon Text"
+   ],
+   "moods": [
+    "trust",
+    "authority",
+    "calm"
    ]
   },
   {
@@ -846,6 +1033,11 @@
    "pairs_with": [
     "Literata",
     "Source Sans 3"
+   ],
+   "moods": [
+    "warmth",
+    "craft",
+    "play"
    ]
   },
   {
@@ -872,6 +1064,11 @@
    "pairs_with": [
     "Bangers",
     "Fredoka"
+   ],
+   "moods": [
+    "warmth",
+    "play",
+    "calm"
    ]
   },
   {
@@ -898,6 +1095,11 @@
    "pairs_with": [
     "Anton",
     "Courier Prime"
+   ],
+   "moods": [
+    "rebellion",
+    "play",
+    "speed"
    ]
   },
   {
@@ -924,6 +1126,11 @@
    "pairs_with": [
     "Oswald",
     "Special Elite"
+   ],
+   "moods": [
+    "rebellion",
+    "craft",
+    "menace"
    ]
   },
   {
@@ -949,6 +1156,10 @@
    "pairs_with": [
     "Anton",
     "Courier Prime"
+   ],
+   "moods": [
+    "menace",
+    "play"
    ]
   },
   {
@@ -974,6 +1185,11 @@
    "pairs_with": [
     "Oswald",
     "Special Elite"
+   ],
+   "moods": [
+    "menace",
+    "play",
+    "nostalgia"
    ]
   },
   {
@@ -1001,12 +1217,18 @@
    "pairs_with": [
     "EB Garamond",
     "IM Fell English"
+   ],
+   "moods": [
+    "menace",
+    "romance",
+    "heritage"
    ]
   },
   {
    "family": "Atkinson Hyperlegible Next",
    "themes": [
-    "humanist-sans"
+    "humanist-sans",
+    "signage-din"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/humanist-sans/atkinsonhyperlegiblenext/OFL.txt",
@@ -1030,6 +1252,11 @@
    "pairs_with": [
     "Literata",
     "Baloo 2"
+   ],
+   "moods": [
+    "trust",
+    "calm",
+    "precision"
    ]
   },
   {
@@ -1063,6 +1290,11 @@
    "pairs_with": [
     "EB Garamond",
     "Fredoka"
+   ],
+   "moods": [
+    "warmth",
+    "trust",
+    "calm"
    ]
   },
   {
@@ -1092,6 +1324,11 @@
    "pairs_with": [
     "Literata",
     "EB Garamond"
+   ],
+   "moods": [
+    "trust",
+    "calm",
+    "precision"
    ]
   },
   {
@@ -1119,12 +1356,18 @@
    "pairs_with": [
     "Cabin",
     "Source Sans 3"
+   ],
+   "moods": [
+    "luxury",
+    "power",
+    "nostalgia"
    ]
   },
   {
    "family": "Bodoni Moda",
    "themes": [
-    "luxury-didone"
+    "luxury-didone",
+    "modern-serif"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/luxury-didone/bodonimoda/OFL.txt",
@@ -1152,13 +1395,19 @@
    "pairs_with": [
     "Josefin Sans",
     "Inter"
+   ],
+   "moods": [
+    "luxury",
+    "elegance",
+    "authority"
    ]
   },
   {
    "family": "DM Serif Display",
    "themes": [
     "luxury-didone",
-    "editorial-serif"
+    "editorial-serif",
+    "modern-serif"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/luxury-didone/dmserifdisplay/OFL.txt",
@@ -1179,13 +1428,19 @@
    "pairs_with": [
     "Outfit",
     "Public Sans"
+   ],
+   "moods": [
+    "elegance",
+    "warmth",
+    "luxury"
    ]
   },
   {
    "family": "Playfair Display",
    "themes": [
     "luxury-didone",
-    "romance-script"
+    "romance-script",
+    "modern-serif"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/luxury-didone/playfairdisplay/OFL.txt",
@@ -1209,6 +1464,11 @@
    "pairs_with": [
     "Source Sans 3",
     "Josefin Sans"
+   ],
+   "moods": [
+    "elegance",
+    "luxury",
+    "romance"
    ]
   },
   {
@@ -1238,6 +1498,10 @@
    "pairs_with": [
     "Inter",
     "Outfit"
+   ],
+   "moods": [
+    "tech",
+    "precision"
    ]
   },
   {
@@ -1271,6 +1535,11 @@
    "pairs_with": [
     "Exo 2",
     "Inter"
+   ],
+   "moods": [
+    "tech",
+    "precision",
+    "speed"
    ]
   },
   {
@@ -1301,13 +1570,19 @@
    "avoid": "Long code listings (quirky shapes).",
    "pairs_with": [
     "Hanken Grotesk"
+   ],
+   "moods": [
+    "tech",
+    "nostalgia",
+    "rebellion"
    ]
   },
   {
    "family": "Alfa Slab One",
    "themes": [
     "nautical-vintage",
-    "western-slab"
+    "western-slab",
+    "heritage-badge"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/nautical-vintage/alfaslabone/OFL.txt",
@@ -1327,6 +1602,11 @@
    "pairs_with": [
     "IM Fell English",
     "Cabin"
+   ],
+   "moods": [
+    "heritage",
+    "power",
+    "nostalgia"
    ]
   },
   {
@@ -1355,13 +1635,19 @@
    "pairs_with": [
     "Pirata One",
     "Libre Caslon Text"
+   ],
+   "moods": [
+    "heritage",
+    "craft",
+    "nostalgia"
    ]
   },
   {
    "family": "Sail",
    "themes": [
     "nautical-vintage",
-    "romance-script"
+    "romance-script",
+    "script-signage"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/nautical-vintage/sail/OFL.txt",
@@ -1381,6 +1667,11 @@
    "pairs_with": [
     "Libre Caslon Text",
     "Josefin Sans"
+   ],
+   "moods": [
+    "nostalgia",
+    "romance",
+    "craft"
    ]
   },
   {
@@ -1408,13 +1699,19 @@
    "pairs_with": [
     "Zilla Slab",
     "Josefin Sans"
+   ],
+   "moods": [
+    "heritage",
+    "nostalgia",
+    "power"
    ]
   },
   {
    "family": "Big Shoulders",
    "themes": [
     "noir-thriller",
-    "condensed-poster"
+    "condensed-poster",
+    "expressive-variable"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/noir-thriller/bigshoulders/OFL.txt",
@@ -1441,6 +1738,11 @@
    "pairs_with": [
     "Courier Prime",
     "Special Elite"
+   ],
+   "moods": [
+    "power",
+    "authority",
+    "speed"
    ]
   },
   {
@@ -1471,6 +1773,11 @@
    "pairs_with": [
     "Big Shoulders",
     "Anton"
+   ],
+   "moods": [
+    "nostalgia",
+    "precision",
+    "authority"
    ]
   },
   {
@@ -1497,6 +1804,11 @@
    "pairs_with": [
     "Bebas Neue",
     "Big Shoulders"
+   ],
+   "moods": [
+    "nostalgia",
+    "menace",
+    "craft"
    ]
   },
   {
@@ -1523,6 +1835,11 @@
    "pairs_with": [
     "Patrick Hand",
     "Oswald"
+   ],
+   "moods": [
+    "play",
+    "speed",
+    "power"
    ]
   },
   {
@@ -1549,13 +1866,18 @@
    "pairs_with": [
     "Fredoka",
     "Patrick Hand"
+   ],
+   "moods": [
+    "play",
+    "power"
    ]
   },
   {
    "family": "Shrikhand",
    "themes": [
     "pulp-retro-comic",
-    "romance-script"
+    "romance-script",
+    "script-signage"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/pulp-retro-comic/shrikhand/OFL.txt",
@@ -1575,13 +1897,19 @@
    "pairs_with": [
     "Jost",
     "Cabin"
+   ],
+   "moods": [
+    "play",
+    "nostalgia",
+    "warmth"
    ]
   },
   {
    "family": "Dancing Script",
    "themes": [
     "romance-script",
-    "handwritten-marker"
+    "handwritten-marker",
+    "script-signage"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/romance-script/dancingscript/OFL.txt",
@@ -1604,6 +1932,11 @@
    "pairs_with": [
     "Josefin Sans",
     "Cabin"
+   ],
+   "moods": [
+    "romance",
+    "warmth",
+    "play"
    ]
   },
   {
@@ -1629,6 +1962,11 @@
    "pairs_with": [
     "Playfair Display",
     "Josefin Sans"
+   ],
+   "moods": [
+    "romance",
+    "elegance",
+    "luxury"
    ]
   },
   {
@@ -1655,6 +1993,11 @@
    "pairs_with": [
     "Bodoni Moda",
     "EB Garamond"
+   ],
+   "moods": [
+    "elegance",
+    "romance",
+    "luxury"
    ]
   },
   {
@@ -1683,6 +2026,10 @@
    "pairs_with": [
     "Orbitron",
     "Martian Mono"
+   ],
+   "moods": [
+    "tech",
+    "speed"
    ]
   },
   {
@@ -1711,6 +2058,11 @@
    "pairs_with": [
     "Exo 2",
     "Space Mono"
+   ],
+   "moods": [
+    "tech",
+    "speed",
+    "power"
    ]
   },
   {
@@ -1740,13 +2092,19 @@
    "pairs_with": [
     "JetBrains Mono",
     "Inter"
+   ],
+   "moods": [
+    "tech",
+    "precision",
+    "speed"
    ]
   },
   {
    "family": "Rye",
    "themes": [
     "western-slab",
-    "nautical-vintage"
+    "nautical-vintage",
+    "heritage-badge"
    ],
    "licence": "OFL-1.1",
    "licence_file": "fonts/western-slab/rye/OFL.txt",
@@ -1766,13 +2124,19 @@
    "pairs_with": [
     "Zilla Slab",
     "Courier Prime"
+   ],
+   "moods": [
+    "heritage",
+    "nostalgia",
+    "rebellion"
    ]
   },
   {
    "family": "Ultra",
    "themes": [
     "western-slab",
-    "pulp-retro-comic"
+    "pulp-retro-comic",
+    "heritage-badge"
    ],
    "licence": "Apache-2.0",
    "licence_file": "fonts/western-slab/ultra/LICENSE.txt",
@@ -1792,6 +2156,11 @@
    "pairs_with": [
     "Zilla Slab",
     "Oswald"
+   ],
+   "moods": [
+    "power",
+    "heritage",
+    "nostalgia"
    ]
   },
   {
@@ -1823,7 +2192,1581 @@
    "pairs_with": [
     "Rye",
     "Ultra"
+   ],
+   "moods": [
+    "trust",
+    "craft",
+    "authority"
+   ]
+  },
+  {
+   "family": "Besley",
+   "themes": [
+    "heritage-badge",
+    "editorial-serif"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/heritage-badge/besley/OFL.txt",
+   "designer": "Owen Earl",
+   "source": "https://github.com/google/fonts/tree/main/ofl/besley",
+   "specimen": "https://fonts.google.com/specimen/Besley",
+   "path": "fonts/heritage-badge/besley/",
+   "files": [
+    "Besley-Italic[wght].ttf",
+    "Besley[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Clarendon-style serif with soft, ball-ended slabs; pub signs, badges, menus, heritage brands, sturdy text.",
+   "avoid": "Cool tech or minimal luxury.",
+   "pairs_with": [
+    "Archivo",
+    "Public Sans"
+   ],
+   "moods": [
+    "heritage",
+    "warmth",
+    "craft",
+    "trust"
+   ]
+  },
+  {
+   "family": "Bevan",
+   "themes": [
+    "heritage-badge",
+    "western-slab"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/heritage-badge/bevan/OFL.txt",
+   "designer": "Vernon Adams",
+   "source": "https://github.com/google/fonts/tree/main/ofl/bevan",
+   "specimen": "https://fonts.google.com/specimen/Bevan",
+   "path": "fonts/heritage-badge/bevan/",
+   "files": [
+    "Bevan-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Heavy, chunky slab for one-word badges, beer labels, saloon and barber signs.",
+   "avoid": "Text, small sizes, anything delicate.",
+   "pairs_with": [
+    "Lora",
+    "Arvo"
+   ],
+   "moods": [
+    "heritage",
+    "power",
+    "nostalgia"
+   ]
+  },
+  {
+   "family": "Rokkitt",
+   "themes": [
+    "heritage-badge",
+    "western-slab"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/heritage-badge/rokkitt/OFL.txt",
+   "designer": "Vernon Adams",
+   "source": "https://github.com/google/fonts/tree/main/ofl/rokkitt",
+   "specimen": "https://fonts.google.com/specimen/Rokkitt",
+   "path": "fonts/heritage-badge/rokkitt/",
+   "files": [
+    "Rokkitt[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Geometric slab from light to black; labels, crates, posters, steady subheads.",
+   "avoid": "Elegant or luxury work.",
+   "pairs_with": [
+    "Overpass",
+    "Cabin"
+   ],
+   "moods": [
+    "heritage",
+    "craft",
+    "trust"
+   ]
+  },
+  {
+   "family": "Holtwood One SC",
+   "themes": [
+    "heritage-badge",
+    "western-slab"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/heritage-badge/holtwoodonesc/OFL.txt",
+   "designer": "Vernon Adams",
+   "source": "https://github.com/google/fonts/tree/main/ofl/holtwoodonesc",
+   "specimen": "https://fonts.google.com/specimen/Holtwood+One+SC",
+   "path": "fonts/heritage-badge/holtwoodonesc/",
+   "files": [
+    "HoltwoodOneSC-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Wood-type Clarendon in small caps; circus, fairground and saloon lettering, badge rings.",
+   "avoid": "More than a line or two; lowercase is not available.",
+   "pairs_with": [
+    "Besley",
+    "Lora"
+   ],
+   "moods": [
+    "heritage",
+    "nostalgia",
+    "power"
+   ]
+  },
+  {
+   "family": "Arvo",
+   "themes": [
+    "heritage-badge",
+    "editorial-serif"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/heritage-badge/arvo/OFL.txt",
+   "designer": "Anton Koovit",
+   "source": "https://github.com/google/fonts/tree/main/ofl/arvo",
+   "specimen": "https://fonts.google.com/specimen/Arvo",
+   "path": "fonts/heritage-badge/arvo/",
+   "files": [
+    "Arvo-Bold.ttf",
+    "Arvo-BoldItalic.ttf",
+    "Arvo-Italic.ttf",
+    "Arvo-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400,
+    700
+   ],
+   "good_for": "Plain geometric slab for readable text and labels under a heavier badge face.",
+   "avoid": "Display drama; it is quiet.",
+   "pairs_with": [
+    "Bevan",
+    "Holtwood One SC"
+   ],
+   "moods": [
+    "trust",
+    "craft",
+    "heritage"
+   ]
+  },
+  {
+   "family": "Bowlby One",
+   "themes": [
+    "heritage-badge",
+    "pulp-retro-comic"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/heritage-badge/bowlbyone/OFL.txt",
+   "designer": "Vernon Adams",
+   "source": "https://github.com/google/fonts/tree/main/ofl/bowlbyone",
+   "specimen": "https://fonts.google.com/specimen/Bowlby+One",
+   "path": "fonts/heritage-badge/bowlbyone/",
+   "files": [
+    "BowlbyOne-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Fat, round-shouldered sans for retro sports, food and badge centres.",
+   "avoid": "Anything quiet or long.",
+   "pairs_with": [
+    "Nunito",
+    "Arvo"
+   ],
+   "moods": [
+    "play",
+    "power",
+    "nostalgia"
+   ]
+  },
+  {
+   "family": "Grenze Gotisch",
+   "themes": [
+    "blackletter",
+    "horror"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/blackletter/grenzegotisch/OFL.txt",
+   "designer": "Omnibus-Type",
+   "source": "https://github.com/google/fonts/tree/main/ofl/grenzegotisch",
+   "specimen": "https://fonts.google.com/specimen/Grenze+Gotisch",
+   "path": "fonts/blackletter/grenzegotisch/",
+   "files": [
+    "GrenzeGotisch[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Readable modern blackletter with a full weight range; metal, brewing, tattoo, headers.",
+   "avoid": "Body text; brands that need to feel open or friendly.",
+   "pairs_with": [
+    "Archivo",
+    "Source Serif 4"
+   ],
+   "moods": [
+    "heritage",
+    "menace",
+    "rebellion",
+    "craft"
+   ]
+  },
+  {
+   "family": "Texturina",
+   "themes": [
+    "blackletter",
+    "fantasy-medieval"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/blackletter/texturina/OFL.txt",
+   "designer": "Guillermo Torres, Omnibus-Type",
+   "source": "https://github.com/google/fonts/tree/main/ofl/texturina",
+   "specimen": "https://fonts.google.com/specimen/Texturina",
+   "path": "fonts/blackletter/texturina/",
+   "files": [
+    "Texturina-Italic[opsz,wght].ttf",
+    "Texturina[opsz,wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     900.0
+    ],
+    "opsz": [
+     12.0,
+     72.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Textura-style blackletter with optical sizes; manuscripts, fantasy maps, old-press flavour.",
+   "avoid": "Long passages; modern tech.",
+   "pairs_with": [
+    "Crimson Pro",
+    "Alegreya"
+   ],
+   "moods": [
+    "heritage",
+    "craft",
+    "menace"
+   ]
+  },
+  {
+   "family": "UnifrakturCook",
+   "themes": [
+    "blackletter",
+    "fantasy-medieval"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/blackletter/unifrakturcook/OFL.txt",
+   "designer": "j. 'mach' wust",
+   "source": "https://github.com/google/fonts/tree/main/ofl/unifrakturcook",
+   "specimen": "https://fonts.google.com/specimen/UnifrakturCook",
+   "path": "fonts/blackletter/unifrakturcook/",
+   "files": [
+    "UnifrakturCook-Bold.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    700
+   ],
+   "good_for": "Traditional bold Fraktur; mastheads, certificates, beer and old-German labels.",
+   "avoid": "Anything longer than a title; casual tone.",
+   "pairs_with": [
+    "EB Garamond",
+    "Arvo"
+   ],
+   "moods": [
+    "heritage",
+    "authority",
+    "menace"
+   ]
+  },
+  {
+   "family": "Archivo",
+   "themes": [
+    "grotesk-display",
+    "grotesk-neutral"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/grotesk-display/archivo/OFL.txt",
+   "designer": "Omnibus-Type",
+   "source": "https://github.com/google/fonts/tree/main/ofl/archivo",
+   "specimen": "https://fonts.google.com/specimen/Archivo",
+   "path": "fonts/grotesk-display/archivo/",
+   "files": [
+    "Archivo-Italic[wdth,wght].ttf",
+    "Archivo[wdth,wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     900.0
+    ],
+    "wdth": [
+     62.0,
+     125.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Grotesk with width and weight axes, from condensed to expanded; editorial and tech headlines, identities, UI.",
+   "avoid": "Warm, cosy or craft briefs.",
+   "pairs_with": [
+    "Source Serif 4",
+    "Instrument Serif"
+   ],
+   "moods": [
+    "precision",
+    "power",
+    "tech",
+    "trust"
+   ]
+  },
+  {
+   "family": "Space Grotesk",
+   "themes": [
+    "grotesk-display",
+    "scifi-tech"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/grotesk-display/spacegrotesk/OFL.txt",
+   "designer": "Florian Karsten",
+   "source": "https://github.com/google/fonts/tree/main/ofl/spacegrotesk",
+   "specimen": "https://fonts.google.com/specimen/Space+Grotesk",
+   "path": "fonts/grotesk-display/spacegrotesk/",
+   "files": [
+    "SpaceGrotesk[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     300.0,
+     700.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Grotesk with quirky details from a mono origin; tech, studios, crypto-era and science brands.",
+   "avoid": "Heritage or romance; overuse in tech makes it generic.",
+   "pairs_with": [
+    "Space Mono",
+    "Newsreader"
+   ],
+   "moods": [
+    "tech",
+    "precision",
+    "rebellion"
+   ]
+  },
+  {
+   "family": "Schibsted Grotesk",
+   "themes": [
+    "grotesk-display",
+    "grotesk-neutral"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/grotesk-display/schibstedgrotesk/OFL.txt",
+   "designer": "Bakken & Bæck, Henrik Kongsvoll",
+   "source": "https://github.com/google/fonts/tree/main/ofl/schibstedgrotesk",
+   "specimen": "https://fonts.google.com/specimen/Schibsted+Grotesk",
+   "path": "fonts/grotesk-display/schibstedgrotesk/",
+   "files": [
+    "SchibstedGrotesk-Italic[wght].ttf",
+    "SchibstedGrotesk[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "News-grade grotesk with character; bold headlines, editorial, media brands.",
+   "avoid": "Delicate luxury.",
+   "pairs_with": [
+    "Newsreader",
+    "Lora"
+   ],
+   "moods": [
+    "authority",
+    "precision",
+    "trust"
+   ]
+  },
+  {
+   "family": "Anybody",
+   "themes": [
+    "expressive-variable",
+    "wide-extended"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/expressive-variable/anybody/OFL.txt",
+   "designer": "Tyler Finck",
+   "source": "https://github.com/google/fonts/tree/main/ofl/anybody",
+   "specimen": "https://fonts.google.com/specimen/Anybody",
+   "path": "fonts/expressive-variable/anybody/",
+   "files": [
+    "Anybody[wdth,wght].ttf"
+   ],
+   "axes": {
+    "wdth": [
+     50.0,
+     150.0
+    ],
+    "wght": [
+     100.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Wide-range width axis (ultra-condensed to extra-expanded) for kinetic type, festivals and posters.",
+   "avoid": "Body text; using every width in one piece.",
+   "pairs_with": [
+    "Inter",
+    "Space Mono"
+   ],
+   "moods": [
+    "play",
+    "speed",
+    "rebellion"
+   ]
+  },
+  {
+   "family": "Syne",
+   "themes": [
+    "expressive-variable",
+    "grotesk-display"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/expressive-variable/syne/OFL.txt",
+   "designer": "Bonjour Monde, Lucas Descroix, George Triantafyllakos",
+   "source": "https://github.com/google/fonts/tree/main/ofl/syne",
+   "specimen": "https://fonts.google.com/specimen/Syne",
+   "path": "fonts/expressive-variable/syne/",
+   "files": [
+    "Syne[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     800.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Gets wider and wilder as weight rises; art spaces, music, fashion identities.",
+   "avoid": "Long text; conservative brands.",
+   "pairs_with": [
+    "Inter",
+    "Instrument Serif"
+   ],
+   "moods": [
+    "rebellion",
+    "play",
+    "luxury"
+   ]
+  },
+  {
+   "family": "Nunito",
+   "themes": [
+    "rounded-friendly",
+    "childrens-playful"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/rounded-friendly/nunito/OFL.txt",
+   "designer": "Vernon Adams, Cyreal, Jacques Le Bailly",
+   "source": "https://github.com/google/fonts/tree/main/ofl/nunito",
+   "specimen": "https://fonts.google.com/specimen/Nunito",
+   "path": "fonts/rounded-friendly/nunito/",
+   "files": [
+    "Nunito-Italic[wght].ttf",
+    "Nunito[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     200.0,
+     1000.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Balanced rounded sans with a full weight range; friendly apps, health, education, UI text.",
+   "avoid": "Authority or luxury briefs.",
+   "pairs_with": [
+    "Lora",
+    "Bowlby One"
+   ],
+   "moods": [
+    "warmth",
+    "play",
+    "calm",
+    "trust"
+   ]
+  },
+  {
+   "family": "Quicksand",
+   "themes": [
+    "rounded-friendly",
+    "geometric-sans"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/rounded-friendly/quicksand/OFL.txt",
+   "designer": "Andrew Paglinawan",
+   "source": "https://github.com/google/fonts/tree/main/ofl/quicksand",
+   "specimen": "https://fonts.google.com/specimen/Quicksand",
+   "path": "fonts/rounded-friendly/quicksand/",
+   "files": [
+    "Quicksand[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     300.0,
+     700.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Light, round geometric; wellbeing, baby, beauty and soft headings.",
+   "avoid": "Small text at light weights; anything that needs weight.",
+   "pairs_with": [
+    "Nunito",
+    "Lora"
+   ],
+   "moods": [
+    "calm",
+    "warmth",
+    "play"
+   ]
+  },
+  {
+   "family": "Varela Round",
+   "themes": [
+    "rounded-friendly"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/rounded-friendly/varelaround/OFL.txt",
+   "designer": "Joe Prince",
+   "source": "https://github.com/google/fonts/tree/main/ofl/varelaround",
+   "specimen": "https://fonts.google.com/specimen/Varela+Round",
+   "path": "fonts/rounded-friendly/varelaround/",
+   "files": [
+    "VarelaRound-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Single-weight rounded sans that reads well small; labels, apps, signs.",
+   "avoid": "Hierarchy needing weights (one weight only).",
+   "pairs_with": [
+    "Nunito",
+    "Arvo"
+   ],
+   "moods": [
+    "warmth",
+    "calm",
+    "trust"
+   ]
+  },
+  {
+   "family": "Comfortaa",
+   "themes": [
+    "rounded-friendly",
+    "geometric-sans"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/rounded-friendly/comfortaa/OFL.txt",
+   "designer": "Johan Aakerlund",
+   "source": "https://github.com/google/fonts/tree/main/ofl/comfortaa",
+   "specimen": "https://fonts.google.com/specimen/Comfortaa",
+   "path": "fonts/rounded-friendly/comfortaa/",
+   "files": [
+    "Comfortaa[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     300.0,
+     700.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Geometric rounded with open forms; playful logotypes, kids’ tech, short headings.",
+   "avoid": "Text and formal work; can look dated if overused.",
+   "pairs_with": [
+    "Nunito",
+    "Quicksand"
+   ],
+   "moods": [
+    "play",
+    "warmth",
+    "nostalgia"
+   ]
+  },
+  {
+   "family": "Saira Stencil One",
+   "themes": [
+    "stencil-industrial",
+    "scifi-tech"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/stencil-industrial/sairastencilone/OFL.txt",
+   "designer": "Hector Gatti, Omnibus-Type",
+   "source": "https://github.com/google/fonts/tree/main/ofl/sairastencilone",
+   "specimen": "https://fonts.google.com/specimen/Saira+Stencil+One",
+   "path": "fonts/stencil-industrial/sairastencilone/",
+   "files": [
+    "SairaStencilOne-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Clean squared stencil; logistics, gear, sci-fi crates, sport kit.",
+   "avoid": "Text; soft or warm briefs.",
+   "pairs_with": [
+    "Saira",
+    "Overpass"
+   ],
+   "moods": [
+    "precision",
+    "power",
+    "tech"
+   ]
+  },
+  {
+   "family": "Stardos Stencil",
+   "themes": [
+    "stencil-industrial",
+    "western-slab"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/stencil-industrial/stardosstencil/OFL.txt",
+   "designer": "Vernon Adams",
+   "source": "https://github.com/google/fonts/tree/main/ofl/stardosstencil",
+   "specimen": "https://fonts.google.com/specimen/Stardos+Stencil",
+   "path": "fonts/stencil-industrial/stardosstencil/",
+   "files": [
+    "StardosStencil-Bold.ttf",
+    "StardosStencil-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400,
+    700
+   ],
+   "good_for": "Rough serif stencil; military surplus, coffee sacks, worn shipping marks.",
+   "avoid": "Clean tech; anything precise.",
+   "pairs_with": [
+    "Arvo",
+    "Rokkitt"
+   ],
+   "moods": [
+    "craft",
+    "heritage",
+    "rebellion"
+   ]
+  },
+  {
+   "family": "Allerta Stencil",
+   "themes": [
+    "stencil-industrial",
+    "signage-din"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/stencil-industrial/allertastencil/OFL.txt",
+   "designer": "Matt McInerney",
+   "source": "https://github.com/google/fonts/tree/main/ofl/allertastencil",
+   "specimen": "https://fonts.google.com/specimen/Allerta+Stencil",
+   "path": "fonts/stencil-industrial/allertastencil/",
+   "files": [
+    "AllertaStencil-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Plain sans stencil for labels, workshop signs and utility branding.",
+   "avoid": "Display drama; it is utilitarian.",
+   "pairs_with": [
+    "Overpass",
+    "B612"
+   ],
+   "moods": [
+    "precision",
+    "trust",
+    "craft"
+   ]
+  },
+  {
+   "family": "Big Shoulders Stencil",
+   "themes": [
+    "stencil-industrial",
+    "condensed-poster"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/stencil-industrial/bigshouldersstencil/OFL.txt",
+   "designer": "Patric King",
+   "source": "https://github.com/google/fonts/tree/main/ofl/bigshouldersstencil",
+   "specimen": "https://fonts.google.com/specimen/Big+Shoulders+Stencil",
+   "path": "fonts/stencil-industrial/bigshouldersstencil/",
+   "files": [
+    "BigShouldersStencil[opsz,wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     900.0
+    ],
+    "opsz": [
+     10.0,
+     72.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Condensed industrial stencil with optical sizes; poster headlines, city, sport, workwear.",
+   "avoid": "Long text.",
+   "pairs_with": [
+    "Big Shoulders",
+    "Public Sans"
+   ],
+   "moods": [
+    "power",
+    "rebellion",
+    "heritage"
+   ]
+  },
+  {
+   "family": "Overpass",
+   "themes": [
+    "signage-din",
+    "grotesk-neutral"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/signage-din/overpass/OFL.txt",
+   "designer": "Delve Withrington, Dave Bailey, Thomas Jockin",
+   "source": "https://github.com/google/fonts/tree/main/ofl/overpass",
+   "specimen": "https://fonts.google.com/specimen/Overpass",
+   "path": "fonts/signage-din/overpass/",
+   "files": [
+    "Overpass-Italic[wght].ttf",
+    "Overpass[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Highway-sign grotesk (Highway Gothic heritage); wayfinding, transit, civic and dashboard text.",
+   "avoid": "Fashion or romance.",
+   "pairs_with": [
+    "Source Serif 4",
+    "Rokkitt"
+   ],
+   "moods": [
+    "trust",
+    "precision",
+    "calm"
+   ]
+  },
+  {
+   "family": "Saira",
+   "themes": [
+    "signage-din",
+    "scifi-tech"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/signage-din/saira/OFL.txt",
+   "designer": "Omnibus-Type",
+   "source": "https://github.com/google/fonts/tree/main/ofl/saira",
+   "specimen": "https://fonts.google.com/specimen/Saira",
+   "path": "fonts/signage-din/saira/",
+   "files": [
+    "Saira-Italic[wdth,wght].ttf",
+    "Saira[wdth,wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     900.0
+    ],
+    "wdth": [
+     50.0,
+     125.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Squared sans with width and weight axes; instruments, motorsport, tech labels, wide titles.",
+   "avoid": "Warm or literary work.",
+   "pairs_with": [
+    "Saira Stencil One",
+    "JetBrains Mono"
+   ],
+   "moods": [
+    "speed",
+    "precision",
+    "tech"
+   ]
+  },
+  {
+   "family": "B612",
+   "themes": [
+    "signage-din",
+    "monospace-code"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/signage-din/b612/OFL.txt",
+   "designer": "Nicolas Chauveau, Thomas Paillot, Jonathan Favre-Lamarine, Jean-Luc Vinot",
+   "source": "https://github.com/google/fonts/tree/main/ofl/b612",
+   "specimen": "https://fonts.google.com/specimen/B612",
+   "path": "fonts/signage-din/b612/",
+   "files": [
+    "B612-Bold.ttf",
+    "B612-BoldItalic.ttf",
+    "B612-Italic.ttf",
+    "B612-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400,
+    700
+   ],
+   "good_for": "Cockpit-display sans designed for legibility on screens; data labels, instruments, dense UI.",
+   "avoid": "Expressive display.",
+   "pairs_with": [
+    "Inter",
+    "JetBrains Mono"
+   ],
+   "moods": [
+    "precision",
+    "trust",
+    "calm"
+   ]
+  },
+  {
+   "family": "Bungee",
+   "themes": [
+    "signage-din",
+    "pulp-retro-comic"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/signage-din/bungee/OFL.txt",
+   "designer": "David Jonathan Ross",
+   "source": "https://github.com/google/fonts/tree/main/ofl/bungee",
+   "specimen": "https://fonts.google.com/specimen/Bungee",
+   "path": "fonts/signage-din/bungee/",
+   "files": [
+    "Bungee-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Vertical-friendly urban signage caps; shop signs, street, games, stacked lettering.",
+   "avoid": "Formal or quiet work; long text.",
+   "pairs_with": [
+    "Nunito",
+    "Overpass"
+   ],
+   "moods": [
+    "play",
+    "rebellion",
+    "power"
+   ]
+  },
+  {
+   "family": "Unbounded",
+   "themes": [
+    "wide-extended",
+    "expressive-variable"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/wide-extended/unbounded/OFL.txt",
+   "designer": "NaN (studio)",
+   "source": "https://github.com/google/fonts/tree/main/ofl/unbounded",
+   "specimen": "https://fonts.google.com/specimen/Unbounded",
+   "path": "fonts/wide-extended/unbounded/",
+   "files": [
+    "Unbounded[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     200.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Wide, rounded-square display with a full weight range; crypto-era tech, music, bold identities.",
+   "avoid": "Text; heritage briefs.",
+   "pairs_with": [
+    "Inter",
+    "Space Mono"
+   ],
+   "moods": [
+    "tech",
+    "play",
+    "power"
+   ]
+  },
+  {
+   "family": "Krona One",
+   "themes": [
+    "wide-extended",
+    "scifi-tech"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/wide-extended/kronaone/OFL.txt",
+   "designer": "Yvonne Schüttler",
+   "source": "https://github.com/google/fonts/tree/main/ofl/kronaone",
+   "specimen": "https://fonts.google.com/specimen/Krona+One",
+   "path": "fonts/wide-extended/kronaone/",
+   "files": [
+    "KronaOne-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Extended grotesk in one heavy-ish weight; logotypes, motorsport, architecture.",
+   "avoid": "Long headlines (it is very wide).",
+   "pairs_with": [
+    "Archivo",
+    "Overpass"
+   ],
+   "moods": [
+    "speed",
+    "precision",
+    "luxury"
+   ]
+  },
+  {
+   "family": "Michroma",
+   "themes": [
+    "wide-extended",
+    "scifi-tech"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/wide-extended/michroma/OFL.txt",
+   "designer": "Vernon Adams",
+   "source": "https://github.com/google/fonts/tree/main/ofl/michroma",
+   "specimen": "https://fonts.google.com/specimen/Michroma",
+   "path": "fonts/wide-extended/michroma/",
+   "files": [
+    "Michroma-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Wide squared sans in the Microgramma tradition; tech, automotive, space, hi-fi.",
+   "avoid": "Warm or human briefs.",
+   "pairs_with": [
+    "Saira",
+    "Inter"
+   ],
+   "moods": [
+    "speed",
+    "tech",
+    "precision"
+   ]
+  },
+  {
+   "family": "Instrument Serif",
+   "themes": [
+    "modern-serif",
+    "editorial-serif"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/modern-serif/instrumentserif/OFL.txt",
+   "designer": "Rodrigo Fuenzalida, Jordan Egstad",
+   "source": "https://github.com/google/fonts/tree/main/ofl/instrumentserif",
+   "specimen": "https://fonts.google.com/specimen/Instrument+Serif",
+   "path": "fonts/modern-serif/instrumentserif/",
+   "files": [
+    "InstrumentSerif-Italic.ttf",
+    "InstrumentSerif-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Condensed, sharp contemporary serif; editorial headlines, studios, culture brands.",
+   "avoid": "Text below about 18 px; one weight only.",
+   "pairs_with": [
+    "Instrument Sans",
+    "Archivo"
+   ],
+   "moods": [
+    "elegance",
+    "luxury",
+    "precision"
+   ]
+  },
+  {
+   "family": "Gloock",
+   "themes": [
+    "modern-serif",
+    "luxury-didone"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/modern-serif/gloock/OFL.txt",
+   "designer": "Duarte Pinto",
+   "source": "https://github.com/google/fonts/tree/main/ofl/gloock",
+   "specimen": "https://fonts.google.com/specimen/Gloock",
+   "path": "fonts/modern-serif/gloock/",
+   "files": [
+    "Gloock-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "High-contrast display serif with soft bracketing; magazine covers, food and fashion titles.",
+   "avoid": "Small sizes.",
+   "pairs_with": [
+    "Inter",
+    "Archivo"
+   ],
+   "moods": [
+    "luxury",
+    "elegance",
+    "warmth"
+   ]
+  },
+  {
+   "family": "Libre Bodoni",
+   "themes": [
+    "modern-serif",
+    "luxury-didone"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/modern-serif/librebodoni/OFL.txt",
+   "designer": "Pablo Impallari, Rodrigo Fuenzalida",
+   "source": "https://github.com/google/fonts/tree/main/ofl/librebodoni",
+   "specimen": "https://fonts.google.com/specimen/Libre+Bodoni",
+   "path": "fonts/modern-serif/librebodoni/",
+   "files": [
+    "LibreBodoni-Italic[wght].ttf",
+    "LibreBodoni[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     700.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Bodoni cut for text and mid sizes; fashion copy, classical programmes, premium packaging.",
+   "avoid": "Screens at tiny sizes (hairlines vanish).",
+   "pairs_with": [
+    "Inter",
+    "Italiana"
+   ],
+   "moods": [
+    "luxury",
+    "elegance",
+    "authority"
+   ]
+  },
+  {
+   "family": "Young Serif",
+   "themes": [
+    "modern-serif",
+    "heritage-badge"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/modern-serif/youngserif/OFL.txt",
+   "designer": "Bastien Sozeau",
+   "source": "https://github.com/google/fonts/tree/main/ofl/youngserif",
+   "specimen": "https://fonts.google.com/specimen/Young+Serif",
+   "path": "fonts/modern-serif/youngserif/",
+   "files": [
+    "YoungSerif-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Heavy, warm old-style display serif; food, publishing, cosy-premium brands.",
+   "avoid": "Long text; one weight only.",
+   "pairs_with": [
+    "Instrument Sans",
+    "Nunito"
+   ],
+   "moods": [
+    "warmth",
+    "heritage",
+    "craft"
+   ]
+  },
+  {
+   "family": "Crimson Pro",
+   "themes": [
+    "oldstyle-text",
+    "editorial-serif"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/oldstyle-text/crimsonpro/OFL.txt",
+   "designer": "Jacques Le Bailly",
+   "source": "https://github.com/google/fonts/tree/main/ofl/crimsonpro",
+   "specimen": "https://fonts.google.com/specimen/Crimson+Pro",
+   "path": "fonts/oldstyle-text/crimsonpro/",
+   "files": [
+    "CrimsonPro-Italic[wght].ttf",
+    "CrimsonPro[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     200.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Garalde-style book text with a full weight range; novels, essays, long reads.",
+   "avoid": "Loud display or UI.",
+   "pairs_with": [
+    "Archivo",
+    "Public Sans"
+   ],
+   "moods": [
+    "calm",
+    "heritage",
+    "trust"
+   ]
+  },
+  {
+   "family": "Alegreya",
+   "themes": [
+    "oldstyle-text",
+    "fantasy-medieval"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/oldstyle-text/alegreya/OFL.txt",
+   "designer": "Juan Pablo del Peral, HT Fonts",
+   "source": "https://github.com/google/fonts/tree/main/ofl/alegreya",
+   "specimen": "https://fonts.google.com/specimen/Alegreya",
+   "path": "fonts/oldstyle-text/alegreya/",
+   "files": [
+    "Alegreya-Italic[wght].ttf",
+    "Alegreya[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     900.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Calligraphic, lively text serif; literature, poetry, story-led brands.",
+   "avoid": "Neutral corporate tone.",
+   "pairs_with": [
+    "Source Sans 3",
+    "Cabin"
+   ],
+   "moods": [
+    "warmth",
+    "craft",
+    "heritage"
+   ]
+  },
+  {
+   "family": "Lora",
+   "themes": [
+    "oldstyle-text",
+    "editorial-serif"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/oldstyle-text/lora/OFL.txt",
+   "designer": "Cyreal",
+   "source": "https://github.com/google/fonts/tree/main/ofl/lora",
+   "specimen": "https://fonts.google.com/specimen/Lora",
+   "path": "fonts/oldstyle-text/lora/",
+   "files": [
+    "Lora-Italic[wght].ttf",
+    "Lora[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     400.0,
+     700.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Brushed-curve contemporary serif for text and headings; blogs, menus, craft food.",
+   "avoid": "Hard tech or luxury fashion.",
+   "pairs_with": [
+    "Nunito",
+    "Source Sans 3"
+   ],
+   "moods": [
+    "warmth",
+    "trust",
+    "calm"
+   ]
+  },
+  {
+   "family": "Source Serif 4",
+   "themes": [
+    "oldstyle-text",
+    "editorial-serif"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/oldstyle-text/sourceserif4/OFL.txt",
+   "designer": "Frank Grießhammer",
+   "source": "https://github.com/google/fonts/tree/main/ofl/sourceserif4",
+   "specimen": "https://fonts.google.com/specimen/Source+Serif+4",
+   "path": "fonts/oldstyle-text/sourceserif4/",
+   "files": [
+    "SourceSerif4-Italic[opsz,wght].ttf",
+    "SourceSerif4[opsz,wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     200.0,
+     900.0
+    ],
+    "opsz": [
+     8.0,
+     60.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Transitional serif with optical sizes from caption to display; reports, docs, editorial.",
+   "avoid": "Playful briefs.",
+   "pairs_with": [
+    "Source Sans 3",
+    "Archivo"
+   ],
+   "moods": [
+    "trust",
+    "authority",
+    "calm"
+   ]
+  },
+  {
+   "family": "Cormorant",
+   "themes": [
+    "oldstyle-text",
+    "luxury-didone"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/oldstyle-text/cormorant/OFL.txt",
+   "designer": "Christian Thalmann",
+   "source": "https://github.com/google/fonts/tree/main/ofl/cormorant",
+   "specimen": "https://fonts.google.com/specimen/Cormorant",
+   "path": "fonts/oldstyle-text/cormorant/",
+   "files": [
+    "Cormorant-Italic[wght].ttf",
+    "Cormorant[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     300.0,
+     700.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Display Garamond with very fine detail; weddings, wine, boutique hotels, book titles.",
+   "avoid": "Small screen text (it is delicate).",
+   "pairs_with": [
+    "Lora",
+    "Italiana"
+   ],
+   "moods": [
+    "elegance",
+    "luxury",
+    "romance"
+   ]
+  },
+  {
+   "family": "Yellowtail",
+   "themes": [
+    "script-signage",
+    "romance-script"
+   ],
+   "licence": "Apache-2.0",
+   "licence_file": "fonts/script-signage/yellowtail/LICENSE.txt",
+   "designer": "Astigmatic",
+   "source": "https://github.com/google/fonts/tree/main/apache/yellowtail",
+   "specimen": "https://fonts.google.com/specimen/Yellowtail",
+   "path": "fonts/script-signage/yellowtail/",
+   "files": [
+    "Yellowtail-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Retro brush script; diners, surf, baseball-style logotypes, 1950s signs.",
+   "avoid": "All caps; long text.",
+   "pairs_with": [
+    "Bevan",
+    "Nunito"
+   ],
+   "moods": [
+    "nostalgia",
+    "play",
+    "warmth"
+   ]
+  },
+  {
+   "family": "Kaushan Script",
+   "themes": [
+    "script-signage",
+    "handwritten-marker"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/script-signage/kaushanscript/OFL.txt",
+   "designer": "Impallari Type",
+   "source": "https://github.com/google/fonts/tree/main/ofl/kaushanscript",
+   "specimen": "https://fonts.google.com/specimen/Kaushan+Script",
+   "path": "fonts/script-signage/kaushanscript/",
+   "files": [
+    "KaushanScript-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Rough brush script; street food, sport, energetic signs.",
+   "avoid": "Formal work; long lines.",
+   "pairs_with": [
+    "Archivo",
+    "Bowlby One"
+   ],
+   "moods": [
+    "speed",
+    "rebellion",
+    "craft"
+   ]
+  },
+  {
+   "family": "Pacifico",
+   "themes": [
+    "script-signage",
+    "childrens-playful"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/script-signage/pacifico/OFL.txt",
+   "designer": "Vernon Adams, Jacques Le Bailly, Botjo Nikoltchev, Ani Petrova",
+   "source": "https://github.com/google/fonts/tree/main/ofl/pacifico",
+   "specimen": "https://fonts.google.com/specimen/Pacifico",
+   "path": "fonts/script-signage/pacifico/",
+   "files": [
+    "Pacifico-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Rounded surf-style brush script; beach, ice cream, casual cafés.",
+   "avoid": "Serious brands; it is heavily used.",
+   "pairs_with": [
+    "Nunito",
+    "Quicksand"
+   ],
+   "moods": [
+    "play",
+    "warmth",
+    "nostalgia"
+   ]
+  },
+  {
+   "family": "Damion",
+   "themes": [
+    "script-signage",
+    "romance-script"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/script-signage/damion/OFL.txt",
+   "designer": "Vernon Adams",
+   "source": "https://github.com/google/fonts/tree/main/ofl/damion",
+   "specimen": "https://fonts.google.com/specimen/Damion",
+   "path": "fonts/script-signage/damion/",
+   "files": [
+    "Damion-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Upright casual connecting script; sign-painter cards, bakery and barber signs.",
+   "avoid": "Long text.",
+   "pairs_with": [
+    "Besley",
+    "Rokkitt"
+   ],
+   "moods": [
+    "nostalgia",
+    "craft",
+    "warmth"
+   ]
+  },
+  {
+   "family": "Manrope",
+   "themes": [
+    "grotesk-neutral",
+    "geometric-sans"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/grotesk-neutral/manrope/OFL.txt",
+   "designer": "Mikhail Sharanda",
+   "source": "https://github.com/google/fonts/tree/main/ofl/manrope",
+   "specimen": "https://fonts.google.com/specimen/Manrope",
+   "path": "fonts/grotesk-neutral/manrope/",
+   "files": [
+    "Manrope[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     200.0,
+     800.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Modern semi-geometric grotesk; fintech and product UI with a little more character than Inter.",
+   "avoid": "Heritage and craft.",
+   "pairs_with": [
+    "Newsreader",
+    "Space Mono"
+   ],
+   "moods": [
+    "trust",
+    "precision",
+    "calm",
+    "tech"
+   ]
+  },
+  {
+   "family": "Sora",
+   "themes": [
+    "geometric-sans",
+    "scifi-tech"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/geometric-sans/sora/OFL.txt",
+   "designer": "Jonathan Barnbrook, Julián Moncada",
+   "source": "https://github.com/google/fonts/tree/main/ofl/sora",
+   "specimen": "https://fonts.google.com/specimen/Sora",
+   "path": "fonts/geometric-sans/sora/",
+   "files": [
+    "Sora[wght].ttf"
+   ],
+   "axes": {
+    "wght": [
+     100.0,
+     800.0
+    ]
+   },
+   "static_weights": [],
+   "good_for": "Wide-ish geometric built for tech brands; product headings and UI.",
+   "avoid": "Literary or heritage work.",
+   "pairs_with": [
+    "Inter",
+    "JetBrains Mono"
+   ],
+   "moods": [
+    "tech",
+    "trust",
+    "precision"
+   ]
+  },
+  {
+   "family": "Italiana",
+   "themes": [
+    "art-deco-display",
+    "luxury-didone"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/art-deco-display/italiana/OFL.txt",
+   "designer": "Santiago Orozco",
+   "source": "https://github.com/google/fonts/tree/main/ofl/italiana",
+   "specimen": "https://fonts.google.com/specimen/Italiana",
+   "path": "fonts/art-deco-display/italiana/",
+   "files": [
+    "Italiana-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Thin, high-contrast deco capitals; fashion mastheads, cocktail bars, perfume.",
+   "avoid": "Small sizes; more than a few words.",
+   "pairs_with": [
+    "Cormorant",
+    "Jost"
+   ],
+   "moods": [
+    "elegance",
+    "luxury",
+    "nostalgia"
+   ]
+  },
+  {
+   "family": "Righteous",
+   "themes": [
+    "art-deco-display",
+    "pulp-retro-comic"
+   ],
+   "licence": "OFL-1.1",
+   "licence_file": "fonts/art-deco-display/righteous/OFL.txt",
+   "designer": "Astigmatic",
+   "source": "https://github.com/google/fonts/tree/main/ofl/righteous",
+   "specimen": "https://fonts.google.com/specimen/Righteous",
+   "path": "fonts/art-deco-display/righteous/",
+   "files": [
+    "Righteous-Regular.ttf"
+   ],
+   "axes": {},
+   "static_weights": [
+    400
+   ],
+   "good_for": "Streamline deco display with rounded geometry; retro diners, arcades, logotypes.",
+   "avoid": "Text; serious subjects.",
+   "pairs_with": [
+    "Nunito",
+    "Josefin Sans"
+   ],
+   "moods": [
+    "nostalgia",
+    "play",
+    "speed"
    ]
   }
+ ],
+ "mood_vocabulary": [
+  "authority",
+  "calm",
+  "craft",
+  "elegance",
+  "heritage",
+  "luxury",
+  "menace",
+  "nostalgia",
+  "play",
+  "power",
+  "precision",
+  "rebellion",
+  "romance",
+  "speed",
+  "tech",
+  "trust",
+  "warmth"
  ]
 }
