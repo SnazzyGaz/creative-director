@@ -6,13 +6,13 @@ One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge).
 |---|---|
 | `judge` | Your name, or the model name and version |
 | `judge_type` | `owner`, `person` or `model` |
-| `sheet` | Already filled: S01 to S108 (S01-S16 batch 1, S17-S28 batch 2, S29-S38 batch 3, S39-S48 batch 4, S49-S58 batch 5, S59-S68 batch 6, S69-S78 batch 7, S79-S108 batch 8) |
+| `sheet` | Already filled: S01 to S118 (S01-S16 batch 1, S17-S28 batch 2, S29-S38 batch 3, S39-S48 batch 4, S49-S58 batch 5, S59-S68 batch 6, S69-S78 batch 7, S79-S108 batch 8, S109-S118 batch 9) |
 | `left_id`, `right_id` | Already filled: the IDs printed under the two images |
 | `preferred_id` | The ID of the piece you'd hand over for that brief, or `SAME` (or `tie`) if you truly can't choose |
 | `strength` | 1 slight, 2 clear, 3 strong |
 | `reason` | A few words: what decided it |
 
-**How to judge.** Look at the sheet as a whole, the way a client would: does it do what the brief asks, is the information right and readable, is it well made, would its audience respond to it. Go with your first reaction; don't zoom in hunting for flaws, and don't go back to change earlier answers. In batch 1 (S01-S16) each pair appears twice with the sides swapped; if you recognise a repeat you can leave it blank, and it counts as one judgement either way. Batches 2 to 8 (S17-S108) have one sheet per pair.
+**How to judge.** Look at the sheet as a whole, the way a client would: does it do what the brief asks, is the information right and readable, is it well made, would its audience respond to it. Go with your first reaction; don't zoom in hunting for flaws, and don't go back to change earlier answers. In batch 1 (S01-S16) each pair appears twice with the sides swapped; if you recognise a repeat you can leave it blank, and it counts as one judgement either way. Batches 2 to 9 (S17-S118) have one sheet per pair.
 
 **Paper version.** If you'd rather not use the CSV, write `S01 ABCD 2 calmer, easier to read` style lines in any text file; it can be typed into the CSV later.
 
@@ -126,3 +126,13 @@ One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge).
 | S106 | DPDB | QGVM | | | |
 | S107 | PFKF | BBSF | | | |
 | S108 | JKJD | KTGA | | | |
+| S109 | SMWK | UDWN | | | |
+| S110 | GWNR | FFJY | | | |
+| S111 | JCHF | NWPA | | | |
+| S112 | MBFH | YSSB | | | |
+| S113 | PGTS | GXDT | | | |
+| S114 | KCEU | YYDM | | | |
+| S115 | QTGL | YYVS | | | |
+| S116 | DSGQ | ZKLM | | | |
+| S117 | YEKT | EZPX | | | |
+| S118 | YRXE | FFNL | | | |

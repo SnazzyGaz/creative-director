@@ -1,6 +1,6 @@
 # Prompt for outside models
 
-Use this only after the owner of the work has filled in their own sheet, so model answers can't colour theirs. Give each model the 108 sheet images (`S01.jpg` to `S108.jpg`) one at a time, in a fresh chat each, with the text below. Don't tell it which tool, skill or rules made the images, and don't show it the key, `briefs.json` or this repo. Record the model name and version in the `judge` column and `model` in `judge_type`.
+Use this only after the owner of the work has filled in their own sheet, so model answers can't colour theirs. Give each model the 118 sheet images (`S01.jpg` to `S118.jpg`) one at a time, in a fresh chat each, with the text below. Don't tell it which tool, skill or rules made the images, and don't show it the key, `briefs.json` or this repo. Record the model name and version in the `judge` column and `model` in `judge_type`.
 
 ---
 

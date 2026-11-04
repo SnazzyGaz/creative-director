@@ -7,6 +7,7 @@ d6f15ed72a8e2c8722c23a269bde69b7c0c0b8112bbcf753b676f64df504c713  blind-test-key
 a03eba1772fcce0e121ef75bda92c1768fdc22cbacca700da2f5b4566b58dacf  blind-test-key-6.json
 c126d59a6f93d5a895626690a6098befdb6e717ad98eedd61fe9db87af3bfa11  blind-test-key-7.json
 b8af46ac5d4962c757d7ac5d1971e74006b85f86d240fc7ec1f4a22bc866a499  blind-test-key-8.json
+7d1ed8836a5d5525488651f8c5b34506a68362fe858ac742955dee2e3cc262b9  blind-test-key-9.json
 
 Each key holds a random salt, so the left/right placements could not be guessed from its hash.
 blind-test-key.json covers batch 1 (S01-S16); blind-test-key-2.json covers batch 2 (S17-S28);
@@ -19,5 +20,7 @@ blind-test-key-7.json covers batch 7 (S69-S78, infographics only, against v0.9.5
 committed on 3 Nov 2026 before any judging, and the key was published after the owner of the work judged batch 7, the same day.
 blind-test-key-8.json covers batch 8 (S79-S108, six themes, against v0.9.6); its hash was committed
 on 3 Nov 2026 before any judging, and the key was published after the owner of the work judged batch 8, the same day.
-`sha256sum -c KEY-SHA256.txt` passes for all eight keys (it also warns about these explanation lines,
-which is expected).
+blind-test-key-9.json covers batch 9 (S109-S118, five infographics and five screens, against v0.9.11); its hash
+was committed on 4 Nov 2026 before any judging, and the key stays unpublished until the owner of the work has judged batch 9.
+`sha256sum -c KEY-SHA256.txt` passes for the eight published keys and reports key 9 as missing until it is
+published (it also warns about these explanation lines, which is expected).

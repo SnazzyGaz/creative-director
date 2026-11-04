@@ -2,6 +2,8 @@
 
 Judged by the owner of the work, alone, on 3 Nov 2026: 100 briefs in eight batches, one image per arm per brief, sides and IDs hidden. One judge, so this says what the owner of the work prefers, not what people in general prefer. How the images were made and the known biases: [`README.md`](README.md).
 
+**Batch 9 (B101-B110, sheets S109-S118), drawn and waiting.** Five infographics and five screens against v0.9.11, built on 4 Nov 2026. Its key hash is committed in [`KEY-SHA256.txt`](KEY-SHA256.txt) and the key stays hidden until the owner of the work has judged it. Not counted below.
+
 ## Result
 
 One judgement per brief (batch 1 shows each pair twice; agreeing picks or the only one filled in count once). One-sided sign test over the briefs that were not ties (`score.py`).
