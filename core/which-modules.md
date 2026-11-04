@@ -20,7 +20,7 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 | A whole product or prototype | web-ui, ux |
 | 3D model, prop, asset, scene | 3d (+ illustration for a beauty render) |
 | 3D as reference for a drawing | 3d, technical-drawing |
-| Logo, mascot, icon set | brand (BRAND-9: one step past the literal; new or changed marks: `brand/logo.md`, LOGO-1 to 14, and `logo-notes.md` for types, moods, clever marks and trends), illustration, web-ui (size and contrast) |
+| Logo, mascot, icon set | brand (BRAND-9: one step past the literal; new or changed marks: `brand/logo.md`, LOGO-1 to 16; `logo-notes.md` for types, moods and trends; `mark-making.md` for what to show, reduction and construction; `clever-marks.md` for double readings), illustration, web-ui (size and contrast) |
 | Storyboard, comic, carousel, image sequence | illustration (ILL-7; `notes.md` for transitions), LAY-18 (+ film `story.md`, `review.md` when it plans video shots) |
 | Video, film, animation, trailer, clip, shot list | film (README + `story.md` + `review.md`; `edit.md` for grading, cutting, sound, titles; `crossover.md` when unsure) + composition, colour-value for key frames (+ typography, character) |
 | Clip made or altered by a video model | film (+ `generated.md`), character, brand for any lettering |
@@ -59,7 +59,7 @@ Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/chec
 | `core/interaction-flow.md` (pointer and diagram only) | 724 |
 | `modules/3d/` | 1,896 |
 | `modules/aesthetic-critique/` | 3,160 |
-| `modules/brand/` (README 4,442; `logo.md` 3,752, LOGO-1 to 14, to make or change a mark; `logo-notes.md` 2,267, optional types, moods, clever marks, trends) | 8,194 |
+| `modules/brand/` (README 4,554; `logo.md` 4,329, LOGO-1 to 16, to make or change a mark; optional: `logo-notes.md` 2,327 types, moods, trends; `mark-making.md` 2,448 what to show, reduction, construction; `clever-marks.md` 1,601 double readings) | 8,883 |
 | `modules/character/` | 4,211 |
 | `modules/colour-value/` | 4,205 |
 | `modules/composition/` (README 5,730, COMP-1 to 18; `sitting-right.md` 3,505, COMP-19 to 25, before delivery) | 9,235 |

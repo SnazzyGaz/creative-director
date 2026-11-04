@@ -1,6 +1,6 @@
-# Logo design: idea first, rules as the edit pass (LOGO-1 to LOGO-14)
+# Logo design: idea first, rules as the edit pass (LOGO-1 to LOGO-16)
 
-Load with the brand README when the job is to make or change a logo, symbol, monogram, badge or mascot mark (not to place an existing one: that is BRAND-4). Format: **What / Why / Check / Fix / Grade / Source**. LOGO-11 is **MUST-BE-RIGHT**; the rest are defaults. Types, moods, clever techniques, trends, case lessons and reading: `logo-notes.md`.
+Load with the brand README when the job is to make or change a logo, symbol, monogram, badge or mascot mark (not to place an existing one: that is BRAND-4). Format: **What / Why / Check / Fix / Grade / Source**. LOGO-11 is **MUST-BE-RIGHT**; the rest are defaults. Types, moods, trends, case lessons and reading: `logo-notes.md`. What to show and how to reduce and build it: `mark-making.md`. Double readings and mashups: `clever-marks.md`.
 
 **How to use these.** The idea comes first (LOGO-1, BRAND-9); the rest are the edit pass that makes an idea survive real use. Most of the rules are the long consensus of practitioners: Rand, Chermayeff & Geismar & Haviv, Airey, Wheeler, Mollerup, Bierut and Draplin agree on the core: simple, distinctive, appropriate, works small and in one colour [SRC-339, SRC-340, SRC-341, SRC-342]. Where a study speaks to a claim, the grade says so.
 
@@ -117,3 +117,19 @@ Load with the brand README when the job is to make or change a logo, symbol, mon
 - **Fix:** Fix one element; reduce the variables; slow the motion.
 - **Grade:** Craft wisdom with cases; standard for flashing (WCAG 2.3.1).
 - **Source:** Pentagram MIT Media Lab [SRC-350]; Experimental Jetset Whitney [SRC-352]; London 2012 [SRC-373].
+
+### LOGO-15. Choose the level of abstraction on purpose, and reduce from the real thing
+- **What:** Decide where the mark sits: literal, associative, metaphorical, abstract or letterform. For a figure, draw the real subject first (life, photos, several angles), then cut to the silhouette and the one feature that names it.
+- **Why:** Logos that show what the business does raised brand evaluations, most for unfamiliar brands [SRC-361]; abstract marks fill with meaning only through years of use [SRC-400, SRC-342]. Many lasting figurative marks began as drawings from life and were reduced over time [SRC-395, SRC-396, SRC-399].
+- **Check:** Can you name the rung and say why it suits this brand's age and budget? For a figure, is there reference drawing behind it, and does the reduced mark still read as this subject, not the category, at 16 px?
+- **Fix:** New brand with a vague abstract mark: move one rung towards the literal. Stiff or generic figure: go back to reference and redraw the pose.
+- **Grade:** Partly supported for descriptiveness [SRC-361]; craft wisdom with cases for the rest.
+- **Source:** Luffarelli et al. [SRC-361]; Rand [SRC-342]; cases [SRC-395, SRC-396, SRC-399, SRC-400]; `mark-making.md`.
+
+### LOGO-16. A second reading must be identifiable and meaningful once seen
+- **What:** In a double-reading mark, the hidden figure must be easy to see once pointed out, and must mean something about the brand. Never count on it working unnoticed.
+- **Why:** In a 2026 set of studies, figure-ground reversal logos raised brand attitude only when the hidden object could be identified and interpreted [SRC-378]; a famous hidden arrow did not steer attention unconsciously, and most viewers did not report it [SRC-379].
+- **Check:** Show five people for two seconds: all name the main reading. Point out the second: each sees it unaided and can say why it fits. At the smallest size, the main reading survives even if the second fades.
+- **Fix:** Enlarge or open the hidden shape; cut a hidden figure that has no link to the brand; if the two figures fight, keep the stronger one alone.
+- **Grade:** Partly supported [SRC-378, SRC-379].
+- **Source:** Li et al. [SRC-378]; Ke et al. [SRC-379]; LOGO-8; `clever-marks.md`.

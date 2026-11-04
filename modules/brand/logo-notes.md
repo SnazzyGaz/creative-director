@@ -1,6 +1,6 @@
 # Logo notes: types, moods, clever marks, trends, cases, reading
 
-Reference for `logo.md` (LOGO-1 to LOGO-14). Load when choosing a type, mapping a mood, looking for a clever move or checking a trend. Famous marks are named as cited examples only: describe them, never draw or reproduce them (BRAND-4, BRAND-8). Grades follow `core/evidence.md`.
+Reference for `logo.md` (LOGO-1 to LOGO-16). How marks represent ideas (abstraction, reduction, gesture, letterforms, construction): `mark-making.md`; double readings and mashups in depth: `clever-marks.md`. Load when choosing a type, mapping a mood, looking for a clever move or checking a trend. Famous marks are named as cited examples only: describe them, never draw or reproduce them (BRAND-4, BRAND-8). Grades follow `core/evidence.md`.
 
 ## Types (LOGO-9)
 
@@ -37,7 +37,7 @@ Mollerup sorts marks into name marks, abbreviation (letter) marks and picture ma
 
 ## Clever marks (LOGO-8)
 
-Famous examples, cited; describe them, never copy them.
+Famous examples, cited; describe them, never copy them. More techniques, process, failure modes and the evidence on why people like them: `clever-marks.md`.
 
 - **Negative-space double read:** an arrow in the gap between the E and the x of FedEx, by Lindon Leader at Landor, with custom letters drawn so the arrow fits without distorting them [SRC-354, SRC-355]; a peacock whose body is the white gap between six coloured feathers (NBC, Steff Geissbuhler at Chermayeff & Geismar); a panda completed by the white around it (WWF, Peter Scott, later Landor); an ice hockey team's W, whale tail and H in one form (Peter Good) [SRC-354].
 - **Merged meanings:** two overlapping circles whose overlap colour was tuned to look like a real mix (Mastercard, Pentagram 2016) [SRC-351].

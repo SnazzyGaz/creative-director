@@ -76,7 +76,7 @@ Always send the actual output (image, screenshot at real size, URL or renders), 
 |---|---|
 | [technical-drawing](modules/technical-drawing/) · [illustration](modules/illustration/) · [character](modules/character/) | perspective, light, anatomy (every hand, limb and face checked; a fail blocks delivery) |
 | [web-ui](modules/web-ui/) · [ux](modules/ux/) · [3d](modules/3d/) | screens, flows and accessibility, clicked and recorded; 3D build defects |
-| [typography](modules/typography/) · [layout](modules/layout/) · [brand](modules/brand/) | type, social cards, posters, slides, print, infographics with charts drawn from the data in code; official logos placed unaltered, never redrawn; new logos made idea first and edited by LOGO-1 to 14 |
+| [typography](modules/typography/) · [layout](modules/layout/) · [brand](modules/brand/) | type, social cards, posters, slides, print, infographics with charts drawn from the data in code; official logos placed unaltered, never redrawn; new logos made idea first and edited by LOGO-1 to 16, with notes on mark making and double readings |
 | [composition](modules/composition/) · [colour-value](modules/colour-value/) · [aesthetic-critique](modules/aesthetic-critique/) | balance, focus, beauty and palette, graded from *well supported* to *myth*; intent model and side-by-side verdicts |
 | [film](modules/film/) (optional) | story first: shots, continuity, light, grading, editing, sound, generated-video QC |
 | [lookbook](modules/lookbook/) (optional) | 320 visual looks to offer as directions, named by technique or era, never by living artists; used at 20-50% by default, stronger only on purpose |

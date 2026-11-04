@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.9.10 (4 November 2026)
+
+**Mark making: how a logo represents an idea, and double readings in depth.** Two new optional notes in `modules/brand/` and two rules, from designers' own write-ups and process accounts, museum and archive pages, Wikimedia Commons, design press, logo galleries, Reddit and X threads, and four studies.
+
+- **Mark making** (`modules/brand/mark-making.md`, 2,448 tokens, optional): the abstraction ladder (literal, associative, metaphorical, abstract, letterform) with cited examples and the descriptiveness evidence; reducing a drawing from life to a mark; gesture and stance in figurative marks; letterforms, monograms, rebus and ambigrams; emblems and badges; construction (grids and circles as tools, the golden ratio flagged as mostly post-hoc, optical corrections, active space); why marks are remembered; disputed origin stories flagged; process and failure modes.
+- **Clever marks** (`modules/brand/clever-marks.md`, 1,601 tokens, optional): eight double-reading techniques (figure-ground reversal, shared contour, letter plus object, hidden number or initial, hidden animal, doubled gesture, ambigram, rebus) with designers and years; how the good ones were found; failure modes (forced, invisible, unintended readings, dies small, redrawn away); why people like them, graded: a 2026 figure-ground study (partly supported, only when the hidden object is identifiable and meaningful) and a 2023 study finding no unconscious effect of a famous hidden arrow; stories to check before retelling.
+- **LOGO-15** choose the abstraction level on purpose and reduce from the real thing (partly supported for descriptiveness; craft wisdom with cases). **LOGO-16** a second reading must be identifiable and meaningful once seen (partly supported).
+- **Pointers.** `logo.md`, `logo-notes.md`, the brand README (index to LOGO-16; a golden-ratio myth), `core/which-modules.md` (routing and token table) and README point to the new notes.
+- **Sources.** SRC-378 to SRC-412 (35 new): four studies, designer and studio pages, museum and archive records, design press, one Commons category, one Reddit thread and one X post.
+- **Budgets after.** Always-on 6,460 of 6,500 (unchanged); brand README 4,554 of 6,000; `logo.md` 4,329, `logo-notes.md` 2,327, `mark-making.md` 2,448 and `clever-marks.md` 1,601 of 4,500; which-modules 2,317.
+
 ## v0.9.9 (4 November 2026)
 
 **Logo design, researched: idea first, fourteen rules as the edit pass; and the font library to 107 families with mood tags.** New `modules/brand/logo.md` (LOGO-1 to LOGO-14) and `logo-notes.md`, from logo books, compendiums, studio case studies, design press, LogoLounge's 2024 to 2026 trend reports and the marketing studies on logo shape. Most rules are practitioner consensus and graded as craft wisdom; the studies support a few claims in part. No budget was raised.

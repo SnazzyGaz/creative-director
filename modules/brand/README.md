@@ -130,9 +130,9 @@ The known failure this module addresses: critique rounds remove errors but canno
 
 ---
 
-## Making a logo (LOGO-1 to LOGO-14)
+## Making a logo (LOGO-1 to LOGO-16)
 
-To make or change a mark, also load `logo.md` (the rules, about 3,800 tokens) and, when choosing a type, mood or clever move, `logo-notes.md`. The idea comes first; the rules are the edit pass. One line each:
+To make or change a mark, also load `logo.md` (the rules, about 3,800 tokens) and, when choosing a type, mood or clever move, `logo-notes.md`; for what to show and how to reduce and build it, `mark-making.md`; for double readings, `clever-marks.md`. The idea comes first; the rules are the edit pass. One line each:
 
 - **LOGO-1** Idea first: brief, word map, 20+ thumbnails over four routes, then pick.
 - **LOGO-2** Simple enough to remember, distinctive enough to own.
@@ -148,6 +148,8 @@ To make or change a mark, also load `logo.md` (the rules, about 3,800 tokens) an
 - **LOGO-12** Redesigns keep the equity.
 - **LOGO-13** Test in the world: size ladder, blur, one colour, five mockups.
 - **LOGO-14** Dynamic identities keep one constant.
+- **LOGO-15** Choose the abstraction level on purpose; reduce from the real thing.
+- **LOGO-16** A second reading must be identifiable and meaningful once seen.
 
 **Further reading:** Airey, *Logo Design Love* [SRC-339]; Wheeler [SRC-119]; Chermayeff, Geismar & Haviv, *Identify* [SRC-340]; Mollerup, *Marks of Excellence* [SRC-343]; Hyland & Bateman, *Symbol* [SRC-344]; Evamy, *Logo* [SRC-345]; Müller, *Logo Modernism* [SRC-346]; Brand New [SRC-375]. More in `logo-notes.md`.
 
@@ -158,5 +160,6 @@ To make or change a mark, also load `logo.md` (the rules, about 3,800 tokens) an
 - **"A brand is its logo."** Logos are one asset among several. Colour, type, shapes and characters can be more distinctive than the mark itself [SRC-120].
 - **"Consistency is boring; refresh it often."** People who aren't the brand team notice assets far less than the team does. Frequent changes waste the memory they've built [SRC-120].
 - **"Colour X means trust / energy."** See `core/evidence.md`: colour-emotion claims are weak. Choose brand colours for distinctiveness and contrast, not psychology.
-- **"A great logo has a hidden trick."** Most lasting marks are plain; a trick helps only when the mark already works without it (LOGO-8).
+- **"A great logo has a hidden trick."** Most lasting marks are plain; a trick helps only when the mark already works without it and the hidden part is seen (LOGO-8, LOGO-16).
+- **"The golden ratio makes a logo work."** Golden overlays are mostly drawn after the fact; use geometry to decide, not to justify (`mark-making.md`).
 - **"A simple mark is always better."** Very simple marks are harder to own and, in one study, less memorable than moderately elaborate ones [SRC-359]; aim for one distinctive feature (LOGO-2).
