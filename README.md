@@ -71,6 +71,7 @@ The skill is the [`skills/creative-director/`](skills/creative-director/) folder
 | **Direct**<br>`creative director: direct this` | Joins at the start: writes the brief, sets direction, picks from rough options, reviews at checkpoints ([CD-1..7](core/creative-direction.md)). |
 | **Remake from scratch**<br>"redo", "rejig", "start over", "reimagine" | Steps back first: what the piece is, who it is for, its one job, the feeling, the given facts (checked against each other) and what must survive. Sends a 5-8 line brief for sign-off, then 4–8 structurally different roughs, a fresh-context same-model head-to-head, the top 2–3 shown for a pick, and only the winner built and runs the full checks ([FP-1..9](core/first-principles.md), [example](examples/first-principles-remake/)). Without these words the light touch stays the default. |
 | **Nudge**<br>"bolder", "quieter", "distill" | Bolder adds contrast, scale difference and commitment; quieter lowers whatever competes with the main thing; with a lookbook look applied, each moves its strength one step. Distill removes until the one job still works, and no further ([commands](core/commands.md)). The *Sitting right* guard still applies, so none of them centres things by default. |
+| **Variations**<br>"variations", "more directions", "another look", or a generic set | Search the [lookbook](modules/lookbook/): keep an unbeled control, bleed one cluster of two or three related looks (splitting 20-50%), and add one wildcard at hint. Cite LB IDs. If a winner is already picked, bleed the picture only. Never on a fix. |
 
 Always send the actual output (image, screenshot at real size, URL or renders), never a description. Interactive and 3D work is reviewed hands-on: clicked, panned, zoomed and recorded, then judged on how it feels to use, not from stills alone. Video is watched in motion at its delivered size with sound, then scrubbed and sampled frame by frame ([film module](modules/film/review.md)).
 
@@ -79,6 +80,7 @@ Always send the actual output (image, screenshot at real size, URL or renders), 
 ```sh
 python3 tools/cd.py brief init 'A short description' --out brief.json
 # Fill idea, feeling, fixed copy/counts, size and must-be-right first.
+python3 tools/cd.py load --brief brief.json
 python3 tools/cd.py check final.png --brief brief.json
 python3 tools/cd.py rule CD-7
 python3 tools/cd.py select r1.png r2.png r3.png r4.png --brief brief.json
@@ -153,7 +155,7 @@ modules/    technical-drawing · illustration · character · web-ui · ux · 3d
             composition (balance, focus, unity, space, beauty) · colour-value
             film (cinematography and video, story first: shots, continuity, light, grading, editing, sound, generated-video QC)
             lookbook (optional: 368 established looks and wildcards, tag file and image sheets)
-tools/      cd.py: brief init, check (JSON), rule <ID>, select; auto check, look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, 3D intersections, before/after
+tools/      cd.py: brief init, load, check (JSON), rule <ID>, select; auto check, look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, 3D intersections, before/after
 examples/   stress tests, round by round, including this README's own critique
 fonts/      107 free font families in 29 themes, catalogue and specimen sheets
 lite/       the loop, core rules and blockers in one short file

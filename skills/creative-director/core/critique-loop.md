@@ -1,6 +1,6 @@
 # The critique loop: idea, roughs, pick, check, fix
 
-**Purpose:** protect intent and what already works. Start from an idea, not a checklist. Judge fresh renders, never code or a prompt. Parallel roughs help explore [SRC-95, SRC-96]; the 4–8 range and fresh-context procedure are practice defaults, not an experimentally proven optimum.
+**Purpose:** protect intent and what already works. Start from an idea, not a checklist. Judge fresh renders, never code or a prompt. Parallel roughs help explore [SRC-95, SRC-96]; the 4–8 range and fresh-context procedure are practice defaults, not a proven optimum.
 
 ```
 read the ask -> idea + brief -> 4–8 roughs -> fresh-context head-to-head
@@ -34,15 +34,15 @@ Use `python3 tools/cd.py rule <ID>` for the full rule and sources; load the rele
 | “Redo”, “rejig”, “start over”, “reimagine” | Remake | `first-principles.md`: brief sign-off, roughs then pick, full QA. |
 | Own output, `+ creative director` | Self-check | Silent checks; ask only unresolved owner choices. |
 
-Never infer a remake from a request for an edit. Unclear ask: unprompted hand-off. “Bolder”, “quieter”, “distill”: `commands.md`.
+Never infer a remake from an edit request. Unclear ask: unprompted hand-off. “Bolder”, “quieter”, “distill”: `commands.md`. “Variations” or a generic set: `modules/lookbook/`.
 
 ## 1. Idea, brief, roughs, pick
 
 - Say **the one idea and feeling first**. Create `brief.json` with `python3 tools/cd.py brief init 'description'`, then fill purpose, audience, format/size, fixed copy/counts, constraints, success and must-be-right (`tools/brief.md`). Do not mistake an empty template for an agreed brief. No brand input: `brand-intake.md`. Run `python3 tools/cd.py load --brief brief.json` and read every listed file before the first rough and each fix; quote the matched media and rule IDs.
 - Record intent (AES-0), each part [brief] or [inferred]. Protect must-keeps (CD-1, CD-5). Inference is not approval to add content.
-- On new work or an authorised reconception, make **4–8 structurally different roughs**, each with a one-line idea. Medium-specific exploration (e.g. logo thumbnails) may start wider, then narrow to 4–8.
+- On new work or an authorised reconception, make **4–8 structurally different roughs**, each with a one-line idea. Logo thumbnails may start wider, then narrow to 4–8.
 - Compare head-to-head in a **fresh context of the same model**, given the brief and roughs, not the maker's rationale. Compare idea, feeling, hierarchy and must-keeps; state the visible difference and trade-off (AES-9). No second model or cross-model checker. `cd.py select` prepares and validates a comparison packet; it calls no model.
-- Show the **top 2–3 to the owner of the work**, explaining what each gains and loses. Wait for a pick; **only the winner enters the fix loop**. No polishing all options.
+- Show the **top 2–3 to the owner of the work**, explaining what each gains and loses. Wait for a pick; **only the winner enters the fix loop**.
 - Edits and consults do not trigger new directions; mark selection not applicable and get approval before widening the task.
 
 ## 2. Render

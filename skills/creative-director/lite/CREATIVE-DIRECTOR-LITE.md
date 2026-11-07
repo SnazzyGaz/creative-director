@@ -30,7 +30,7 @@ These and explicit must-be-right brief conditions block; other findings are impr
 - **Light:** one key direction; lit and shadow sides separate; cast shadows on the ground (TD-LIT-1..3).
 - **Figures, hands, animals (delivery gate):** crop each hand, limb join, face and animal head at 2-4x: five digits per hand, each hand traced to the shoulder on the correct side, thumb opposing on anything held, joints bend right, nothing merged or extra, eyes match, animals true to species. Props whole and used as briefed (chewed, not held). Re-check after every edit (CHAR-3, -4, -7, -9, -10, -11).
 - **Fixed frames:** key content in the safe area; main message readable at about 400 px wide; print 3 mm bleed, 300 ppi (LAY-5, LAY-6, LAY-9). Signage cap height about distance ÷ 250 (LAY-7).
-- **Whitespace (LAY-10):** every empty area is a margin, a gap between groups or named focal space; no empty band or block over about 1.5x the largest intended gap. Re-review after any image swap. A series keeps logo, margins, palette and type logic (BRAND-6).
+- **Whitespace (LAY-10):** every empty area is a margin, a gap between groups or named focal space; no empty band or block over 1.5x the largest gap. Re-review after any image swap or type move. A series keeps logo, margins, palette and type logic (BRAND-6).
 - **Copy and counts:** re-read every fixed string letter for letter (units, case, punctuation) and count every fixed number on the render (CD-7).
 - **Type size:** reading text 14 px or more, nothing meaningful under 12 px (TYPE-3).
 - **Text over images:** a quiet zone; contrast on the worst pixels (LAY-15).

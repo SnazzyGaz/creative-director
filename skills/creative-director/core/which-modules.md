@@ -25,7 +25,7 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 | Video, film, animation, trailer, clip, shot list | film (README + `story.md` + `review.md`; `edit.md` for grading, cutting, sound, titles; `crossover.md` when unsure) + composition, colour-value for key frames (+ typography, character) |
 | Clip made or altered by a video model | film (+ `generated.md`), character, brand for any lettering |
 | Mood, energy or a distinctive feel; correct but flat; choosing between versions | aesthetic-critique (+ the medium's modules, which still decide blockers) |
-| From-scratch concepts; correct but generic; naming a described vibe, screens included | lookbook, optional (at most one concept in three; 20-50%, LOOK-1; never on fixes or edits) |
+| From-scratch concepts; owner asks for variations or more directions; correct but generic; naming a described vibe, screens included | lookbook (at most one concept in three on first roughs, 20-50%, LOOK-1; on variations: unbeled control + one cluster of 2–3 relatives splitting 20-50% + one wildcard at hint; never on fixes or edits) |
 | Stated intent calls for energy, eye-catch or persuasion, once checks pass | `core/energy-pass.md`: quote the intent line, choose full/structure/light; calm, restrained or neutral work can skip regardless of medium |
 | Just "bolder", "quieter" or "distill" | `core/commands.md` + the medium's modules |
 | Remake from scratch ("redo", "rejig", "start over", "reimagine") | `core/first-principles.md` + the medium's modules + aesthetic-critique (AES-9); brand if it carries a mark |
@@ -52,7 +52,7 @@ What each module covers (`modules/<name>/README.md`).
 | `3d` | a 3D file or render (build checks via [model-qa](https://github.com/SnazzyGaz/model-qa)) |
 | `aesthetic-critique` | mood, energy or distinctiveness; choosing between versions |
 | `film` | anything that moves: footage, generated video, animation, storyboards, shot lists, edits (story first: `story.md`; review in motion) |
-| `lookbook` | from-scratch concepts, or a design that passes but feels generic: optional `modules/lookbook/` |
+| `lookbook` | variations, more directions, from-scratch concepts, or a design that passes but feels generic: `modules/lookbook/` |
 
 ## Order of checks when several modules apply
 

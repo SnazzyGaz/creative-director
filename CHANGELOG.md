@@ -12,12 +12,16 @@
 - **Budget recalibration.** Always-on cap 6,500 -> 6,000; with template 8,000 -> 7,500; AGENTS 1,500 -> 1,200; principles 2,100 -> 2,700 to hold the explicit selection and reminders; loop 3,300 -> 3,000; template 1,500 unchanged. Lite 2,500, module entries 6,000 and other on-demand files 4,500 unchanged. Actual cl100k_base counts: always-on 5,931 (previous 6,042), with template 7,096 (previous 7,416); AGENTS 865, principles 2,541, loop 2,525, template 1,165. This is a narrower rule selection, not a claim of a large token reduction.
 - **Checks and mirrors.** Front-door regression tests added to `skill-check`; skill folder regenerated from root files. No eval rebuild, lookbook split, repo slimming, module-card split, packaged CLI/connector, parked test lessons or historical release-zip rewrite.
 
-## Unreleased
+## v0.10.1 (7 November 2026)
 
-**Required module load, and notes from a v0.10 test drive.** Not yet released.
+**Lookbook on variations, leftover space after a contrast move, and the load step from the v0.10 test drive.**
 
 - **`cd.py load --brief`.** Prints the modules and rule IDs a filled brief requires. Making or fixing without reading that list is now marked incomplete in `AGENTS.md` and the critique loop. The which-modules table was already there; this is the step that applies it.
 - **Owner notes written into existing rules, no new IDs:** thicken a mark without changing its silhouette (LOGO-3); if the owner asks to change one part, treat the rest as must-keeps (CD-5 and the fix loop); event posters should read from the street, not as a book jacket, and match the event's energy (LAY-7); book covers may sit further from literal content (LAY-16); a polished cinematic finish counts as a generated-photo tell (PHOTO-7).
+- **Lookbook on variations.** Asking for variations, more directions, or saying the set feels samey now loads the lookbook: an unbeled control, one cluster of two or three relatives splitting 20-50%, and one wildcard at hint. After a correct-but-generic first round, offer this in plain language. Still never on fixes, and still not part of `cd.py load`.
+- **Owner note on leftover space:** moving type to pass contrast must not leave a dead field (empty sky, empty slab). Recrop or recompose so subject and type share the frame (COMP-23, LAY-10, LAY-15).
+
+## Unreleased
 
 Lookbook batches 13 and 14, synced from the breeder with `tools/lookbook_sync.py`. No rule changes; not yet released.
 

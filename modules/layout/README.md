@@ -96,12 +96,12 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Source:** Adobe InDesign user guide (bleed, slug, printing) [SRC-131]; ask the printer for their spec, which overrides these defaults.
 
 ### LAY-10. Whitespace is distributed on purpose (squint for dead zones)
-- **What:** Every empty area is either a margin, a gap between groups, or deliberate focal space (room the subject looks or moves into, a quiet field that frames the one message). Related items sit closer to each other than to anything else, so each group reads as one unit. No empty band is much larger than the largest intended gap unless deliberate and said so. After any image swap, crop or regenerate, re-review the **whole** layout: new imagery moves the space.
+- **What:** Every empty area is either a margin, a gap between groups, or deliberate focal space (room the subject looks or moves into, a quiet field that frames the one message). Related items sit closer to each other than to anything else, so each group reads as one unit. No empty band is much larger than the largest intended gap unless deliberate and said so. After any image swap, crop, regenerate or type move, re-review the whole layout.
 - **Why:** People group by nearness and shared region [SRC-175, SRC-176]; consistent gaps read as structure, a stray large gap as something missing [SRC-177, SRC-178]. This rule is the measure; the idea (active versus dead space) lives in COMP-23.
 - **Check:**
   1. **Measure rows:** list the empty horizontal bands between groups. Flag any band larger than about 1.5× the largest intended inter-group gap that isn't marked as deliberate.
   2. **Squint for 2-D dead zones:** blur the piece and look for empty blocks *inside* a row (a small item left, a small item right), which a row scan misses. Flag any block whose short side exceeds about 1.5× the largest intended gap, unless it flanks a centred group or is declared focal space.
-  3. **After any image change:** re-run 1 and 2 on the full piece and write one line on what moved.
+  3. **After any image or type change:** re-run 1 and 2 on the full piece and write one line on what moved.
   `tools/whitespace.py IMAGE [--intended Y0-Y1]` does 1 and 2 and draws a squint sheet; treat its PASS as "review by eye", not as approval.
 - **Fix:** Pull each group together, then share the space between groups evenly; enlarge or regroup content next to a dead zone; move or re-crop the image so the subject sits one gap from the type; or name the space as deliberate and keep it. Big deliberate fields are valid and often strongest: the flag is for space with no job (COMP-23), and fixing it never means centring by default.
 - **Grade:** Proximity grouping: well supported. The 1.5x dead-zone threshold: self-chosen craft number.
@@ -143,7 +143,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **What:** Place text on an image only over a calm, even area, or add a scrim, overlay or panel. Check contrast against the *worst* part of the background behind the text, not its average.
 - **Why:** Busy, uneven backgrounds make text hard to read and can fail contrast at some letters while passing on average [SRC-260]. W3C lists text over background images that fails contrast as a common failure [SRC-260].
 - **Check:** Crop the region behind each line of text. Sample its lightest and darkest pixels (for light text, the lightest pixel matters most; for dark text, the darkest) and run `tools/contrast.py` against the text colour: ≥ 4.5:1 (≥ 3:1 for large text). Squint: is the area behind the text busy (strong edges, many tones)?
-- **Fix:** Move the text to the calm area, re-crop the image to make one, add a scrim or gradient, or put the text on a solid panel.
+- **Fix:** Re-crop or regenerate so type and subject share the frame; or add a scrim or panel. Do not park type for contrast and leave a large unused slab (COMP-23).
 - **Grade:** Well supported (WCAG; usability research).
 - **Source:** NN/g on text over images and W3C failure F83 [SRC-260]; WCAG [SRC-3]; UI-6; LAY-6.
 

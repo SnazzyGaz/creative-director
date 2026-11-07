@@ -8,9 +8,10 @@ A visual reference of looks: 294 established looks (historic, fine-art, techniqu
 - Every example image is our own render from that look's written rules (captions say "our render from LB-xxx rules"). No look is tied to a real artist, studio, community or specific work, and none should be when you cite it: name looks by technique, structure or broad historic era only.
 
 ## When to reach for it
-1. **From-scratch briefs** (`core/creative-direction.md`, `core/first-principles.md`). Offer two or three directions as thumbnails, each with its LB ID, before building. At most one in three concepts comes from the lookbook; the rest start from the brief alone.
-2. **Rescue.** The work passes every check but feels generic (AES-1 to AES-8). Borrow **one layer** of one look at hint strength: a palette, a mark style, a type habit. It is a way out of the default, not a new style.
-3. **Shared words.** Someone describes a vibe ("rough, protest-y"). Point to the nearest look so both sides picture the same thing, then confirm.
+1. **Variations (the innate trigger).** When the owner asks for variations, more directions, or says the set feels samey: search with `lookbook_find.py` from the brief's feeling and idea. Keep one unbeled control. Bleed one cluster of two or three related looks (`data/clusters.md`), splitting the usual 20-50% influence between them (LOOK-1). Add one wildcard or distant look at hint (~20%). Cite each LB ID. If a winner is already picked, bleed the picture and keep type, colour and arrangement. After a first round that is correct but generic, offer this in plain language even if nobody named the lookbook.
+2. **From-scratch briefs** (`core/creative-direction.md`, `core/first-principles.md`). Offer two or three directions as thumbnails, each with its LB ID, before building. At most one in three concepts comes from the lookbook; the rest start from the brief alone.
+3. **Rescue.** The work passes every check but feels generic (AES-1 to AES-8). Borrow **one layer** of one look at hint strength: a palette, a mark style, a type habit. It is a way out of the default, not a new style.
+4. **Shared words.** Someone describes a vibe ("rough, protest-y"). Point to the nearest look so both sides picture the same thing, then confirm.
 
 **Never on fixes or edits to existing work.** That work keeps its own look.
 
