@@ -133,13 +133,17 @@ For ChatGPT custom GPTs or projects, Gemini Gems, Claude Projects, Le Chat, loca
 
 | File | What it holds | Size |
 |---|---|---|
-| [`creative-director-prompt.md`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt.md) | `AGENTS.md`, principles, critique loop, critique template, commands | about 11,700 tokens |
-| [`creative-director-prompt-full.md`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt-full.md) | the above, the rest of `core/`, and every module | about 98,500 tokens |
-| [`lite/CREATIVE-DIRECTOR-LITE.md`](../lite/CREATIVE-DIRECTOR-LITE.md) | the loop, core rules and blockers, hand-written short version | about 2,300 tokens |
+| [`creative-director-prompt.md`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt.md) | `AGENTS.md`, principles, critique loop, critique template, commands and optional energy section | about 11,400 tokens |
+| [`creative-director-prompt-full.md`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt-full.md) | the above, the rest of `core/`, and every module | about 97,500 tokens |
+| [`lite/CREATIVE-DIRECTOR-LITE.md`](../lite/CREATIVE-DIRECTOR-LITE.md) | the loop, core rules and blockers, hand-written short version | about 2,500 tokens |
 
 Paste one into the system prompt or custom instructions, or upload it as knowledge. Each bundle keeps the repo's file paths as section headings, so "load `core/critique-loop.md`" points at a section in the same file. The bundle tells the model that the Python checks can't run in a plain chat, so it does them by eye and says so. Rebuild the bundles yourself with `python3 tools/build_bundle.py`; the output has no dates, so unchanged sources give identical files.
 
 For a model that can browse but not hold files, give it the raw URL of `AGENTS.md` (`https://raw.githubusercontent.com/SnazzyGaz/creative-director/main/AGENTS.md`) and ask it to follow it. That is how the Grok Bot skill works. [`llms.txt`](../llms.txt) lists every file for tools that read it.
+
+## v0.10.0 workflow
+
+The always-on set carries 40 existing rule IDs and compact reminders; other rules load by `python3 tools/cd.py rule <ID>` or task. Start from an idea and feeling; new work gets 4–8 roughs compared in a fresh context of the same model, then the owner of the work picks from the top 2–3. Only the winner is fixed. Existing edits and consults keep their scope. Every critique finding is rule-backed, intent-backed or exploratory, with provenance and confidence. Pick edit/recompose/art-direct/reconceive/rebuild/explore before changes. “The original is better” is a valid stop. Energy runs only for named intent, not as a blanket ritual.
 
 ## Optional Python tools
 
@@ -148,8 +152,13 @@ The skill carries the measuring scripts in `tools/`. They need Python 3:
 ```bash
 pip install -r tools/requirements.txt     # Pillow, NumPy, OpenCV; trimesh, rtree, manifold3d for 3D; Playwright
 playwright install chromium               # only for page checks (autocheck.py on a URL or HTML file, shot.sh)
-python3 tools/autocheck.py poster.png     # run from the skill or repo folder
+python3 tools/cd.py brief init 'A poster' --out brief.json  # fill before use
+python3 tools/cd.py check poster.png --brief brief.json
+python3 tools/cd.py rule CD-7
+python3 tools/cd.py select r1.png r2.png r3.png r4.png --brief brief.json
 ```
+
+`cd.py` delegates measurements to `autocheck.py`; optional system Tesseract supplies image OCR. It is not installed by pip. Copy and physical counts use the brief; missing measurements never pass. Pixel-only type size still needs visual review. See [`tools/brief.md`](../tools/brief.md) for JSON, exit codes and the selection packet. This is an in-repo front door, not a packaged CLI or model service.
 
 `autocheck.py` checks images with Pillow and NumPy alone. It needs Playwright only for pages. If an agent can't run code, it does the checks by eye and says so. The maintainer scripts (lookbook sync, packaging) and the test suites stay in the repo and aren't in the skill.
 
@@ -182,3 +191,5 @@ Checked 3 November 2026.
 - [L1] Cline, *Skills*: https://docs.cline.bot/customization/skills
 - [A1] Aider, *Specifying coding conventions*: https://aider.chat/docs/usage/conventions.html
 - [V1] vercel-labs/skills, *Creating skills* (discovery paths, supported agents): https://github.com/vercel-labs/skills
+
+The committed skill folder tracks v0.10.0. A tag does not upload release assets: if the latest release zip or prompt bundle still reports an earlier version, use this folder or build fresh assets locally with the maintainer commands above.

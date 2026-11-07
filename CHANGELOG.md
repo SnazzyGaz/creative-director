@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.10.0 (7 November 2026)
+
+**Idea first, roughs then pick; evidence without invented authority.** This release changes the workflow and adds an in-repo front door. It does not claim a new evaluation win.
+
+- **Brief and tools.** `tools/cd.py brief init` writes a fill-in JSON brief (idea, feeling, purpose, audience, format, fixed copy/counts, constraints, must-be-right). `check` emits pass/fail JSON, delegates measurements to `autocheck.py` and its contrast/space/balance helpers, compares exact copy lines and occurrences, reports physical-count evidence, type size and safe area. Pages expose full visible DOM text from the measured render; optional system Tesseract or a labelled transcript supplies image copy. Missing evidence is SKIP, never PASS. Pixel type size and unverified semantic conditions still need visual review. `rule <ID>` returns the canonical rule, not its mirror. `select` prepares and validates a comparison packet; it makes no model calls.
+- **Roughs then pick.** Start from the one idea and feeling; make 4–8 roughs, compare head-to-head in a fresh context of the same model, show the top 2–3 to the owner of the work, and fix only the winner. Existing edits and consults keep their scope. No second-model or cross-model checker.
+- **Findings and intervention.** Every finding is rule-backed (ID), intent-backed (brief line) or exploratory (option), with provenance and confidence. Measured and interpreted stay distinct. Choose edit, recompose, art-direct, reconceive, rebuild or explore before making a change. “The original is better” is a valid verdict and stop; unresolved blockers still get reported.
+- **Energy follows intent.** Quote the brief line that calls for energy before invoking full/structure/light. Quiet, restrained and neutral work may skip regardless of medium; the research and checklist remain available.
+- **40 always-on rules.** CORE-1..11 (11), FLOW-1..5 (5), plus 24 existing intent and delivery-gate reminders in `core/principles.md` (40). They keep brief fidelity, legibility, anatomy, identity and construction present on every job; specialist detail loads by ID or task. Conditional 3D, film and other MUST-BE-RIGHT gates remain mandatory where applicable. No IDs removed or new parallel rule system; lite stays the separate small-context bundle, with matching workflow guidance.
+- **Budget recalibration.** Always-on cap 6,500 -> 6,000; with template 8,000 -> 7,500; AGENTS 1,500 -> 1,200; principles 2,100 -> 2,700 to hold the explicit selection and reminders; loop 3,300 -> 3,000; template 1,500 unchanged. Lite 2,500, module entries 6,000 and other on-demand files 4,500 unchanged. Actual cl100k_base counts: always-on 5,931 (previous 6,042), with template 7,096 (previous 7,416); AGENTS 865, principles 2,541, loop 2,525, template 1,165. This is a narrower rule selection, not a claim of a large token reduction.
+- **Checks and mirrors.** Front-door regression tests added to `skill-check`; skill folder regenerated from root files. No eval rebuild, lookbook split, repo slimming, module-card split, packaged CLI/connector, parked test lessons or historical release-zip rewrite.
+
 ## Unreleased
 
 Lookbook batches 13 and 14, synced from the breeder with `tools/lookbook_sync.py`. No rule changes; not yet released.

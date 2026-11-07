@@ -248,7 +248,7 @@ JS = r"""
     if (!rects.length) continue;
     const s = getComputedStyle(el); const fs = parseFloat(s.fontSize);
     let b = el; while (b !== document.body && !blockish(getComputedStyle(b))) b = b.parentElement;
-    texts.push({t: t.slice(0, 60), len: t.length, tag: el.tagName.toLowerCase(), fs, fw: parseInt(s.fontWeight) || 400, color: rgba(s.color), op, rects,
+    texts.push({t: t.slice(0, 60), full_text: t, len: t.length, tag: el.tagName.toLowerCase(), fs, fw: parseInt(s.fontWeight) || 400, color: rgba(s.color), op, rects,
                 link: !!el.closest('a'), btn: !!el.closest('button,[role=button],label,select,input,summary')});
     if (!blocks.has(b)) { const bs = getComputedStyle(b); const bb = b.getBoundingClientRect();
       blocks.set(b, {tag: b.tagName.toLowerCase(), lh: bs.lineHeight, fsb: parseFloat(bs.fontSize), box: [bb.left, bb.top, bb.right, bb.bottom], rects: [], chars: 0, fsc: {}}); }
@@ -462,7 +462,8 @@ def run_page(target, a, out):
                           "text scales to 200% without being clipped, overlapping or hiding content (UI-10)",
                           ("Clipped: " + "; ".join(dz["clipped"][:5]) + ". " if dz["clipped"] else "") + "Look at page-zoom200.png: a FLAG is a blocker if content is lost.", blocker=False))
         br.close()
-    return dict(target=target, mode="page", size=[a.width, d["docH"]], checks=checks)
+    return dict(target=target, mode="page", size=[a.width, d["docH"]], checks=checks,
+                text="\n".join(t["full_text"] for t in d["texts"]), text_runs=d["texts"])
 
 def jsonable(o):
     return o.item() if hasattr(o, "item") else str(o)

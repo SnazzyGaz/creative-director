@@ -1,76 +1,73 @@
 # Critique template
 
-Copy, fill in, keep it short; drop sections that don't apply. Rules for writing it: `critique-loop.md` section 4. An unprompted hand-off sends only the **Sign-off blurb** (FLOW-1); the delivery uses the **Delivery checklist** (FLOW-3). A remake adds the brief block in `first-principles.md`.
+Keep it short; omit inapplicable tests, not finding labels or the fix-level decision. An unprompted hand-off sends only the sign-off blurb (FLOW-1); delivery uses FLOW-3. A remake adds the brief in `first-principles.md`.
 
 ```markdown
-## Critique: <piece name>, round <n>
+## Critique: <piece>, round <n>
 
-**Owner summary** (for the person deciding; the detail below backs it):
-- Verdict: <one line: what works, what holds it back>
-- Top fixes: 1. <now> -> <after> (<RULE-ID>) 2. ... 3. ...
-- Questions: <taste calls only you can make>
+**Owner summary**
+- Verdict: <keep / improve / the original is better / none good enough; why>
+- Top changes: <now -> after; rule ID or brief line, at most 3>
+- Questions: <owner choices>
 
-**Brief:** <purpose, audience, the one idea, where and how big it is seen, must-keeps, how done is judged (CD-1)>
-**Intent (AES-0):** purpose [brief] / audience [brief] / mood [inferred?] / style / focal experience / polish / must-keeps. Mark each [brief] or [inferred].
-**Criteria judged against:** <rule IDs, e.g. CORE-1, CORE-2, CORE-3, CORE-10, ILL-1, TD-PER-1>
-**Evidence looked at:** <render file names and sizes; tests run>
+**Idea and feeling:** <one sentence each>
+**Brief:** <brief.json; purpose, audience, format/size, fixed copy/counts, must-keeps, success>
+**Intent (AES-0):** <mood, style, focal experience, polish; each [brief] or [inferred]>
+**Criteria:** <applicable rule IDs and explicit brief conditions>
+**Evidence:** <render names, sizes, crop paths, measurements/tools>
+**Selection:** <4–8 rough IDs; same-model fresh-context comparison; strongest differences/trade-offs; top 2–3 shown; owner's pick; or n/a: existing-work edit/consult>
 
-### Brief check (CD-1, CD-5)
-- Answers the brief and audience: <yes / partly / no, with evidence>. Must-keeps intact: <yes / list what changed>.
-- Options considered (CD-3, open briefs only): <chosen, and one line per dropped option>
+### Brief check (CD-1, CD-5, CD-7)
+- Answers the brief: <yes/partly/no, evidence>. Must-keeps: <intact/list>.
+- Copy: <each exact line and occurrence count, as rendered vs briefed; match/slip>.
+- Fixed object counts: <one tick per item on a 2x crop; expected vs observed>.
+- Unverified conditions: <list; not called passes>.
 
-### Test results (evidence)
-- Squint/blur: <what leads at blur; intended element per brief>
-- Thumbnail: <readable at ~200 px: yes/no, what is lost>
-- Flip/mirror: <deviations observed>
-- Greyscale: <number of value groups; subject/ground separation>
-- Crop/edges: <tangents, frame contacts, empty regions>
-- Sitting right (COMP-19..25): <flags from rotate 180°, cover half, edge sweep: each "intended: keep (why)" or "fix"; nothing centred just to clear a flag>
-- Whitespace (LAY-10): <largest intended inter-group gap; any band or 2-D dead zone over ~1.5× it (`tools/whitespace.py`), each marked deliberate or fixed; after an image swap: whole layout re-reviewed, what moved>
-- Viewing distance (LAY-7, signage only): <print size; each key line's cap height in mm and "reads to X m" (≈ distance ÷ 250)>
-- Set (BRAND-6, series only): <logo size/position, margins, palette and type logic shared: yes / list differences>
+### Look and measured checks
+- cd.py check / autocheck: <report path; PASS/FAIL/FLAG/SKIP, numbers and thresholds>.
+- Blur: <what leads>. Thumbnail: <what survives>.
+- Mirror: <deviations>. Greyscale: <value groups>. Crop/edges: <contacts>.
+- Sitting right (COMP-19..25): <rotate, cover half, edge sweep; flags intended/keep/fix, why; never centre by default>.
+- Whitespace (LAY-10): <largest intended gap; bands/dead zones >1.5x; whole-layout review after image swap>.
+- Anatomy (CHAR-9): <inventory incl. partial/background figures; each 2–4x crop, trace/count, PASS/FAIL; any fail blocks; or n/a>.
+- Viewing distance / series / motion checks: <when applicable>.
+- Energy: <skip: brief reason / full, structure or light: named intent line; EN findings>. Medium alone does not trigger it.
 
-### Anatomy pass (CHAR-9; required when a person, hand or animal is in frame, else "n/a")
-- Inventory: <people, hands, animals found, incl. partial and background ones>
-- <crop file> | A<n> <check> | PASS/FAIL | <what was seen, e.g. "figure's left hand (image right): 5 digits, thumb on top, traced along yellow sleeve to left shoulder">
-- Any FAIL is a BLOCKER below; re-run every line after each image edit.
+### Preserve
+- <what works and its evidence; do not fix this away>
 
-### Meets criteria
-- <RULE-ID>: <evidence, one line>
-
-### Findings: MEASURED (checked with a tool or count; only these can be blockers)
-- <RULE-ID>: <value measured, tool, threshold>. e.g. "UI-6: headline 8.97:1 on its background (`tools/contrast.py`), needs 4.5:1. Met."
-
-### Findings: INTERPRETED (aesthetic reading; labelled as interpretation)
-- <AES-ID>: feature <what is visible, where> -> effect <what it does to the viewer> -> trade-off <what changing it would cost>. Confidence: <high / low>.
-- If measured and interpreted findings pull apart, write both and the trade-off; the owner decides, not the neater option.
-
-### Needs improvement (ranked, biggest first, max 5)
-1. [BLOCKER|IMPROVEMENT] <RULE-ID> not met. <where>: <observed evidence>.
-   Fix: <one concrete, smallest effective change>.
+### Findings (ranked by effect; max 5)
+1. [rule-backed | intent-backed | exploratory] [MEASURED | INTERPRETED] [BLOCKER | IMPROVEMENT | OPTION]
+   Basis: <existing rule ID + threshold OR exact brief line OR exploratory question>.
+   Observation: <visible feature, where; measured value or interpreted effect>.
+   Provenance: <tool/measurement, rule lookup/path, or visual read + render/crop>.
+   Confidence: <high/medium/low; why, including evidence limits>.
+   Proposed change: <smallest effective intervention>. Trade-off: <what it costs>.
 2. ...
+- Only verified mandatory failures block. Exploratory never blocks. Interpretation is not a measured failure; state trade-offs rather than choosing neatness by default.
 
-### Comparison with the previous round or alternatives (AES-9)
-- Stronger for this brief: <A / B / none good enough>. Strongest difference: <...>. Caused by: <decisions>. Cost: <what the winner gives up>. Preference: <strong / marginal; did it hold with left and right swapped?>.
-- Aesthetic change this round: <one or two>. Decision: <keep / refine / revert> (AES-10). Measured checks still pass: <yes / list regressions>.
-- Additions (content not in the brief or the previous version: characters, creatures, objects, text, claims): <none / list, each marked [inferred], with the brief line or owner sign-off that allows it, or "remove">.
+### Intervention decision (required before changes)
+- Level: <edit / recompose / art-direct / reconceive / rebuild / explore>.
+- Why this level: <why a smaller change is insufficient; idea and must-keeps protected>.
+- Authority: <signed-off request or pending; reconception needs approval and roughs-then-pick>.
 
-### Deliberate exceptions (if any)
-- <RULE-ID>: broken on purpose because <reason in the brief>.
+### Comparison (AES-9, AES-10)
+- Stronger for the brief: <original / previous / latest / earlier rough / none good enough>.
+- Visible difference and cause: <...>. Cost: <...>. Preference: <strong/marginal; swap-sides result>.
+- Decision: <keep/refine/revert/stop: the original is better>. Remaining blockers: <none/list; preference does not waive them>.
+- Additions: <none/list; [inferred] is not permission; brief line or sign-off, else remove>.
 
-### Next round
-- Apply up to 3 fixes, blockers first. Re-render. Re-run tests. Compare with round <n>.
-- Stop if the result is clearly better and no blockers remain.
+### Next round or stop
+- <up to 3 changes, re-render, verify each applied, repeat measurements/anatomy as needed>.
+- <stop reason; no forced polish, routine round 3 / maximum 5>.
+- Deliberate exceptions: <ID or brief condition; approved reason>.
 
-### Questions for the owner (no rule settles these)
-- <specific choice, with the options>
+### Sign-off blurb (unprompted hand-off only; send, wait)
+1. [edit|regenerate] [finding label] <rule ID or brief line>: <evidence; visible change>.
+Also possible (not needed): <one line or omit>. OK to go ahead?
 
-### Sign-off blurb (unprompted hand-off only; format in FLOW-1). Send, then wait.
-1. [edit|regenerate] <RULE-ID>: <what is wrong, where>. <what will visibly change>.
-Also possible (not needed): <one line, or omit>. OK to go ahead?
-
-### Delivery checklist (after the fixes; FLOW-3). Lead with the result, then:
-1. <point> (<RULE-ID>): done / not done, <evidence or reason>.
-2. ...
-QA re-run on the final render (FLOW-3 gates, one word each: pass / fail / n.a.): light · anatomy · type and contrast · whitespace · sitting right · marks · real-subject crops · copy and counts · additions · energy · text on colour · whites.
+### Delivery (FLOW-3; result first)
+1. <signed-off point>: done / not done, <final-render evidence or reason>.
+QA (pass/fail/n.a./unverified): construction/light · anatomy · type/contrast · whitespace · sitting right · marks · real-subject crops · copy/counts/facts · additions · neutral whites · energy (or skipped: intent reason) · medium-specific gates.
+<Latest and previous renders; what remains and why; owner questions; verdict labelled self-judged.>
 ```

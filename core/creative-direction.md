@@ -19,7 +19,7 @@ Keep it light. These are defaults, not blockers, except CD-7, which is on the MU
 - **Check:** Does each colour, type and layout choice trace back to the direction? If it traces to a default, flag it.
 
 ## CD-3. Try a few options, choose, and drop the rest early
-- **What:** For an open brief, make 2-3 clearly different rough options (thumbnails, quick renders) before polishing one. Pick against the brief and give a one-line reason for each option you drop.
+- **What:** For an open brief, make 4–8 structurally different roughs (thumbnails, quick renders). Compare head-to-head in a fresh context of the same model, not a second model. Show the top 2–3 to the owner of the work; only their winner goes through the fix loop. Pick against the brief and give a one-line reason for each dropped option. `tools/cd.py select` supports the packet and review; `critique-loop.md` is the procedure.
 - **Why:** In a controlled study, making designs in parallel gave better results and more variety than refining one at a time [SRC-95]. Diverge, then converge [SRC-96]. Rough work keeps attention on the idea, not the finish [SRC-91]. Being wrong early is cheap [SRC-94]. Go for one strong idea [SRC-92].
 - **Check:** Were options compared before polishing? Is the chosen one the best answer to CD-1, not just the first one made?
 - **Concept fit:** test each option against the product's category and senses, not only its name: a coffee named after a harbour still has to look like something to drink, not a cleaning product. Look for readings nobody meant (a lone object can suggest an accident). An event sold on fun shows the activity and the people. Details: EN-2 items 7 and 8 (`energy-pass.md`).
@@ -27,7 +27,7 @@ Keep it light. These are defaults, not blockers, except CD-7, which is on the MU
 ## CD-4. Feedback says what and why, not how
 - **What:** Name the problem, where it is, and why it matters for the brief or audience. A fix is offered as an example; the maker decides how to solve it. Talk about the work, never the maker.
 - **Why:** Pixar's Braintrust gives notes without authority to mandate fixes, because the cause of a problem often lies elsewhere [SRC-94]. Feedback that pulls attention to the person rather than the task often lowers performance [SRC-102]. Specific, actionable, justified critique is rated more helpful [SRC-103]. Annotated, precise notes suit later stages, once the concept is locked [SRC-104].
-- **Check:** This is how the template's Fix lines are already written. Keep fixes small and tied to a rule ID.
+- **Check:** This is how the template's Fix lines are already written. Label findings rule-backed (ID), intent-backed (brief line) or exploratory, each with provenance and confidence. Choose the intervention level before changing work (`critique-loop.md`).
 
 ## CD-5. Protect the idea through every round
 - **What:** Each fix, and especially a take-over rework, keeps the one idea and the must-keeps from CD-1. After each round, re-read the brief.
@@ -35,7 +35,7 @@ Keep it light. These are defaults, not blockers, except CD-7, which is on the MU
 - **Check:** Is anything in the brief's must-keeps missing or changed? If so, flag it as CD-5, ranked first.
 
 ## CD-6. Done means the brief is met
-- **What:** Stop when the work meets the CD-1 criteria with no blockers. If the next change serves taste rather than the brief or audience, it's done.
+- **What:** Stop when the work meets the CD-1 criteria with no blockers. If the next change serves taste rather than the brief or audience, it's done. “The original is better” is a valid verdict: revert and stop, reporting any remaining blockers.
 - **Why:** A key art-direction skill is telling real improvement from personal preference [SRC-101]. Agreed criteria make "done" checkable [SRC-88]. The loop's stop rules apply (`critique-loop.md` section 7).
 
 ## CD-7. Exact copy and counts survive generation (MUST-BE-RIGHT)
@@ -46,7 +46,7 @@ Keep it light. These are defaults, not blockers, except CD-7, which is on the MU
 - **Grade:** Procedure. Internal evidence (five slips in one batch, one judge); untested as a rule.
 
 ## When the ask is "from scratch"
-CD-1 to CD-7 assume the brief is given. When the owner asks for a redo, rejig or reimagining, write the brief yourself from first principles, get it signed off, and compare 2-3 structurally different concepts before building: `core/first-principles.md` (FP-1..9).
+CD-1 to CD-7 assume the brief is given. When the owner asks for a redo, rejig or reimagining, write the brief yourself from first principles, get it signed off, and compare 4–8 roughs in a fresh context of the same model, show the top 2–3, and build only the chosen winner: `core/first-principles.md` (FP-1..9).
 
 ## Presenting the result
 Lead with the brief and the idea. Show the chosen option, a one-line reason, and what was dropped and why. Answer the concerns people raise rather than selling harder [SRC-105]. Report open questions plainly.

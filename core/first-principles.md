@@ -7,8 +7,8 @@ Grade: every FP rule is a Procedure (`core/evidence.md`); the rules it calls on 
 Load with: `core/principles.md`, `core/creative-direction.md`, `core/critique-loop.md`, the medium's module, and `modules/aesthetic-critique/`. The brief block to fill in is at the end of this file; the rest of the critique uses `core/critique-template.md`.
 
 ```
-step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 2-3 concepts (FP-5)
-   -> recommend one, owner picks (FP-6) -> imagery from the subject (FP-9) -> build -> normal critique loop and full QA (FP-7)
+step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 4–8 roughs, fresh-context comparison (FP-5)
+   -> show top 2–3, owner picks (FP-6) -> imagery from the subject (FP-9) -> build -> normal critique loop and full QA (FP-7)
 ```
 
 ---
@@ -41,13 +41,13 @@ step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 2-3 co
 - **Why:** A brief works as a platform that opens ideas up, and it is the agreed yardstick for "done" [SRC-88, SRC-89, SRC-90]. IDEO frames a challenge as one short, memorable problem statement that still allows many solutions. Its quick test: if you can think of five possible answers, the frame is about right [SRC-167]. A point of view gives a reference for judging competing ideas, and it gets revised as you learn [SRC-166].
 - **Check:** Is it 5-8 lines? Could a stranger make the piece from it without seeing the old version? Has the owner signed it off, or is it stated at the top of the delivery?
 
-## FP-5. Make 2-3 concepts that differ in structure, not only in style
-- **What:** From the brief, not from the old layout, make 2-3 rough concepts. Each gets a one-line idea, a thumbnail, and a note of what leads in it. They must differ in structure: what leads, how the space is divided, and the reading order or the metaphor. A different typeface or palette on the same layout is a variation, not a concept. Make at least one concept that the old version could not have become by polishing.
+## FP-5. Make 4–8 rough concepts that differ in structure, not only in style
+- **What:** From the brief, not from the old layout, make 4–8 rough concepts. Compare them head-to-head in a fresh context of the same model (not a second-model checker); use `tools/cd.py select` for the comparison packet. Each gets a one-line idea, a thumbnail, and a note of what leads in it. They must differ in structure: what leads, how the space is divided, and the reading order or the metaphor. A different typeface or palette on the same layout is a variation, not a concept. Make at least one concept that the old version could not have become by polishing.
 - **Why:** Making designs in parallel gives better results and more variety than refining one at a time [SRC-95]. Frame creation means trying new framings of the same need, not new surfaces on the old frame [SRC-165]. Process models across fields separate analysis (what is) from synthesis (what could be) [SRC-168]. Dubberly also notes that a proposed solution often redefines the problem, so let a concept send you back to the brief [SRC-169].
 - **Check:** The structure test: describe each concept in one sentence without naming a font, colour or effect. Are the sentences different? Does each one answer the brief's one job?
 
 ## FP-6. Recommend one, with reasons; the owner chooses
-- **What:** Score each concept against the brief's success line and its one job, not against taste. Recommend one. Give one line on why, and one line per dropped concept on what it does better and why it lost. The owner picks; then build only that one.
+- **What:** Score each concept against the brief's success line and its one job, not against taste. Show the top 2–3 to the owner of the work and recommend one. Give one line on why, and one line per dropped concept on what it does better and why it lost. The owner picks; then build only that one.
 - **Why:** Choose against the brief and drop the rest early (CD-3). Being clear about what was traded makes the choice reviewable (CD-6, AES-9).
 - **Check:** Does each reason cite a line of the brief? Is there a dropped-concept line for each of the others?
 
@@ -59,7 +59,7 @@ step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 2-3 co
   - type size and contrast (TYPE-3, UI-6);
   - marks (BRAND-4, BRAND-8);
   - additions (AES-10).
-  Then compare side by side with both the original and a light-touch fix, if one exists (AES-9): which is stronger for the brief, why, and at what cost. "The light touch was enough" is an allowed answer. Report it and offer the polish.
+  Then compare side by side with both the original and a light-touch fix, if one exists (AES-9): which is stronger for the brief, why, and at what cost. “The light touch was enough” and “the original is better” are allowed answers. Revert and stop when appropriate; preference never clears remaining blockers. Report it and offer the polish.
 - **Why:** A remake drops the light-touch cap, not the checks. The MUST-BE-RIGHT list still blocks (`critique-loop.md`), and regenerating is exactly where subjects drift and hands break (`take-over.md`).
 - **Check:** Is there a delivery checklist (FLOW-3) with the brief at the top, the three-way comparison, and the QA line?
 
@@ -93,7 +93,7 @@ Send this first, then wait.
 - Facts (FP-3): <transcription of the original, word for word, incl. disclaimers> then <one line per check; contradictions and unsourced claims as questions; what is held back until answered>
 - Imagery (FP-9, ILL-12; only if new imagery is made): <subject sheet: what it is, its parts, 2+ real references with sources> · <art direction> · <2-4× crops: structure / no tiling / components / material and light / marks>
 - **Brief (5-8 lines, FP-4):** <what and where> · <for whom> · <one job> · <feeling> · <must survive, incl. official marks (FP-8)> · <free to change> · <judged done when> · <open questions>
-- Concepts (FP-5), each with a thumbnail: A <one-line idea; what leads> / B <...> / C <...>. Structure test: <the one-sentence descriptions differ without naming a font, colour or effect: yes / no>
+- Roughs (FP-5), 4–8 each with a thumbnail: <IDs, one-line idea; what leads>. Same-model fresh-context head-to-head: <visible differences and trade-offs>. Top 2–3 shown: <IDs>. Structure test: <the one-sentence descriptions differ without naming a font, colour or effect: yes / no>
 - Recommend (FP-6): <concept, reason citing a brief line>. Dropped: <one line each: what it does better, why it lost>. The owner picks.
 - Comparison after the build (FP-7, AES-9): original vs light-touch fix (if any) vs remake: <stronger for the brief, why, cost>
 ```

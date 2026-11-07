@@ -1,16 +1,16 @@
-# Energy pass: eye-catch after the checks pass
+# Energy pass: only when intent calls for it
 
-**Purpose:** the loop's checks make work accurate, clear and uncluttered; on their own they can stop at "correct and plain". In the repo's blind test (`examples/blind-test/RESULTS.md`, history there) the owner of the work called many early with-skill pieces sterile, clinical or basic, and where the other side won, its notes named eye-catch, energy or an obvious call to action. This pass answers that. It runs once, after accuracy and clarity pass, and pushes the piece toward energy without letting clutter, invented content or the generated look back in. Infographics get it from structure (EN-4); screens get it too, with task clarity first (UI-12).
+**Purpose:** the loop's checks make work accurate, clear and uncluttered; on their own they can stop at "correct and plain". In the repo's blind test (`examples/blind-test/RESULTS.md`, history there) the owner of the work called many early with-skill pieces sterile, clinical or basic, and where the other side won, its notes named eye-catch, energy or an obvious call to action. This pass answers that. When the agreed intent calls for energy, it runs once after accuracy and clarity pass and pushes the piece toward energy without letting clutter, invented content or the generated look back in. When invoked, infographics get it from structure (EN-4); screens keep task clarity first (UI-12). Medium alone never triggers this pass.
 
 Format: **What / Check / Fix / Why / Grade**. EN-1 to EN-4 are Procedures (`evidence.md`); the Why lines say how far the cited studies go.
 
-### EN-1. Run it after the checks, where it applies
-- **What:** Run it once the blockers and the brief check pass (MUST-BE-RIGHT, CD-1, FP-3, AES-10), before the Sitting right pass and delivery. It is part of the loop, not a new round: its fixes count toward the round's three changes.
-  - **Full pass:** posters, flyers, covers, packaging, logos, social cards, picture books, character art, editorial illustration, and screens that sell or greet: web heroes, landing pages, pricing sections, app home and summary screens (with UI-12; task clarity still wins).
-  - **Structure pass** (EN-4): infographics of every kind: how-tos, data, process, maps, safety, timelines and fact sheets.
-  - **Light pass** (EN-2 items 1, 2, 3, 6 and 8 only): official notices, dashboards, menus, signage and timetables, where plain, high-contrast, easy-to-scan design is the aim, not a failure of nerve (LAY-17).
+### EN-1. Invoke from intent, then choose the scope
+- **What:** First quote the agreed brief line that calls for energy, eye-catch, persuasion or a deliberately lively feeling. Without that intent, skip and record the reason; do not infer permission just because the piece is a poster, infographic or screen. If the intent is unclear, ask rather than make it louder. When invoked, run it once the blockers and the brief check pass (MUST-BE-RIGHT, CD-1, FP-3, AES-10), before the Sitting right pass and delivery. It is part of the loop, not a new round: its fixes count toward the round's three changes.
+  - **Full pass, if intent calls for it:** posters, flyers, covers, packaging, logos, social cards, picture books, character art, editorial illustration, and screens that sell or greet: web heroes, landing pages, pricing sections, app home and summary screens (with UI-12; task clarity still wins).
+  - **Structure pass** (EN-4), when intent calls for it: infographics of every kind: how-tos, data, process, maps, safety, timelines and fact sheets.
+  - **Light pass**, only if useful to the stated intent (EN-2 items 1, 2, 3, 6 and 8 only): official notices, dashboards, menus, signage and timetables, where plain, high-contrast, easy-to-scan design is the aim, not a failure of nerve (LAY-17).
   - **Skip:** forms, checkout steps, dense tables, legal or medical text, settings screens, accessibility-critical UI, and any piece where calm is the job. "Quieter" from the owner wins (CMD-2).
-- **Check:** Is the scope (full, light, skip) written in the critique with its reason?
+- **Check:** Is the intent line and scope (full, structure, light or skip) written in the critique? Could a quiet or neutral brief skip regardless of medium? Routine hierarchy, legibility and identity checks still apply when energy is skipped.
 - **Why:** A quiet brief still needs a clear focus and chosen type; quiet is not sterile. But energy pushed onto a form or a data table costs the task (UX-1, CORE-8).
 
 ### EN-2. The checklist (yes or no on the render)
@@ -32,7 +32,7 @@ Format: **What / Check / Fix / Why / Grade**. EN-1 to EN-4 are Procedures (`evid
   - no over-render: grain, speckle, noisy micro-detail, airbrushed gloss, glow on every edge, sparkles, bokeh, or the glowing, over-detailed chocolate-box painting; aim for clean, concise and dynamic (ILL-11);
   - no outline stroke round a subject and no glow or halo round text to separate them: fix the values (CV-10);
   - no generic generated layout: a centred hero in a radial burst, every surface textured, floating particles, ribbons and seals nobody asked for, fake small print (UI-7, TYPE-9).
-- **Check:** The auto check has no new FAIL; the five tests still pass; the piece reads in the thumbnail at least as well as before. Then judge it honestly against the left column below (even wins have been called "academically tight but bland and sterile"); if it reads that way, one more item from EN-2 is due, not a pass.
+- **Check:** The auto check has no new FAIL; the five tests still pass; the piece reads in the thumbnail at least as well as before. Then judge it honestly against the left column below (even wins have been called "academically tight but bland and sterile"); if it reads that way against an energetic brief, test one more item from EN-2. If the original is better, revert (AES-9). Never label deliberate calm sterile simply because it is quiet.
 - **The failure pair.** Both ends fail; aim for the middle column.
 
 | Sterile (over-corrected) | Aim | Slop (under-corrected) |

@@ -1,6 +1,6 @@
 # Creative director, lite
 
-Short version for small context windows; full rules and sources in `core/` and `modules/`.
+Small-context bundle; full rules and sources in `core/` and `modules/`.
 
 ## The loop
 
@@ -8,21 +8,21 @@ Judge a fresh render or screenshot, never your own code or prompt.
 
 **Read the ask first.** Work handed over with no specific request: reply with a short ranked list of only the imperative changes (rule ID, the change, [edit] or [regenerate]) and wait for sign-off. Then apply every signed-off point, re-check each one and the light, anatomy and type blockers, and deliver with one done / not done line per point. "Just fix it" skips the sign-off, not the checks. Never hand over an unapplied critique as the result.
 
-0. **Brief.** Purpose, audience, where it is seen, must-keeps, what "done" means, and the intended mood, style and polish, each marked [brief] or [inferred]. Count what the brief fixes ("it" is one). Never invent facts (names, prices, addresses, slogans) or add story content (characters, objects) unless the brief leaves room or the owner agrees. No brand input: ask for name, audience, colours, type, three voice words, likes and dislikes; otherwise label choices as assumed. Before calling a choice a flaw, ask whether it looks deliberate and works.
-1. **Render** at real viewing size plus a thumbnail; UI at 390 px, 1280 px and 200% zoom. Keep every round.
+0. **Idea and feeling first, then brief.** Purpose, audience, where it is seen, must-keeps, what "done" means, and the intended mood, style and polish, each marked [brief] or [inferred]. Count what the brief fixes ("it" is one). Never invent facts (names, prices, addresses, slogans) or add story content (characters, objects) unless the brief leaves room or the owner agrees. No brand input: ask for name, audience, colours, type, three voice words, likes and dislikes; otherwise label choices as assumed. Before calling a choice a flaw, ask whether it looks deliberate and works.
+1. **Roughs then pick:** new work gets 4–8 roughs, head-to-head in a fresh context of the SAME model, top 2–3 shown to the owner, only their winner fixed. Existing edits/consults preserve intent. **Render** at real viewing size plus a thumbnail; UI at 390 px, 1280 px and 200% zoom. Keep every round.
 2. **Look:** blur (what leads?), thumbnail (does the idea survive?), flip (lopsided?), greyscale (value structure?), edges and corners (tangents, stray spots). One factual line each.
-3. **Critique.** Every point names a rule, the evidence and one fix; no rule, no point (ask the owner instead). Note what already works, so it is kept. Rank by effect, structure before surface, five points at most. Neutral, no praise. Measure at 2x or with a tool before calling a failure. Keep measured findings (only these block) apart from interpreted ones (name the feature, its effect and the trade-off; label it).
-4. **Fix** at most 3 per round, blockers first, smallest change that works; keep subject, style, mood and layout idea. Re-render, compare side by side, check each fix applied, revert what got worse. For mood or energy, change one or two things and judge old against new for the brief (which is stronger, why, at what cost; "neither" is allowed), not by score.
-**Energy pass**, once the checks pass (skip for forms, dense data, accessibility-critical UI; light for notices, menus, dashboards; full for heroes, pricing and app home screens, with a named mood): one focal hook that leads at thumbnail, off its ground in value, display type with a big size step, one accent or a colour code (text on strong colour: the better of black or white), some movement, an obvious call to action, the issuer's real mark on official pieces, an idea one step past the literal that fits the category and genre, a title as loud as the mood, traits shown by pose, life in picture books. Energy from structure, not texture: no clutter, grain or added content (EN-1..3).
-5. **Stop** when no blockers remain and the top points are done, a round is not clearly better, what is left is taste, or at round 3 (5 at most). Hand off both renders, changes with rule IDs, what was left and why, and questions. The owner decides when it is finished.
+3. **Critique.** Label each finding rule-backed (ID), intent-backed (brief line) or exploratory (option), with provenance and confidence. Note what already works, so it is kept. Rank by effect, structure before surface, five points at most. Measure before calling failure. Keep measured findings (only these block) apart from interpreted ones (name the feature, its effect and the trade-off; label it).
+4. **Pick the fix level first:** edit, recompose, art-direct, reconceive, rebuild or explore; why and authority. **Fix** at most 3 per round, blockers first, smallest change that works; keep subject, style, mood and layout idea. Re-render, compare side by side, check each fix applied, revert what got worse. For mood or energy, change one or two things and judge old against new for the brief (which is stronger, why, at what cost; "neither" is allowed), not by score.
+**Energy pass:** only if the stated intent calls for energy; quote that line and choose full/structure/light (`core/energy-pass.md`). Otherwise skip, regardless of medium. When invoked: focal hook, type hierarchy, purposeful colour, movement, clear action, real marks, concept fit. Structure, not texture or invented content (EN-1..4).
+5. **Stop** when no blockers remain and the top points are done, a round is not clearly better, what is left is taste, or “the original is better” (revert; report remaining blockers), or at round 3 (5 at most). Deliver both renders, changes, leftovers and questions; the owner decides taste.
 
-**Remake from scratch** (only on "redo", "start over" or similar): write a 5-8 line brief for sign-off (what and where, who for, one job, feeling, the given facts word for word, what must survive). Make 2-3 concepts that differ in structure, not just font or colour; recommend one, build it, run every blocker, compare with the original (FP-1..9). Design for the real medium. Build new imagery from what the subject really is, never by re-describing the old picture; crop food and real subjects at 2-4x for plausibility (FP-9, ILL-12).
+**Remake from scratch** (only on "redo", "start over" or similar): write a 5-8 line brief for sign-off (what and where, who for, one job, feeling, the given facts word for word, what must survive). Use the roughs-then-pick step above; concepts differ in structure, not just font or colour. Build the winner, run every blocker, compare with the original (FP-1..9). Design for the real medium. Build new imagery from what the subject really is, never by re-describing the old picture; crop food and real subjects at 2-4x for plausibility (FP-9, ILL-12).
 
 **Take over** (rework, no 3-fix cap) when 3+ blockers, one that breaks the piece, a failed blur and thumbnail, more than 3 rounds needed, or unusable. Say so and why, keep the brief's idea and must-keeps, then run the loop.
 
 ## Blockers (MUST-BE-RIGHT)
 
-Only these block; everything else is an improvement.
+These and explicit must-be-right brief conditions block; other findings are improvements or options.
 
 - **Perspective:** one horizon; objects on one ground share it; verticals vertical unless 3-point is meant; foreshortening matches distance (TD-PER-1..5).
 - **Ellipses:** minor axis on the cylinder's axis; fuller away from eye level; smooth, no lemons (TD-ELL-1..3).

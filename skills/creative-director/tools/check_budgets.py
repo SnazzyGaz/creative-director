@@ -21,11 +21,11 @@ except Exception:                                   # no tiktoken, or no network
 ALWAYS = ["AGENTS.md", "core/principles.md", "core/critique-loop.md"]
 # (label, files, budget). Sets are summed. Per-file rules for everything else follow below.
 BUDGETS = [
-    ("always-on set (AGENTS + principles + loop)", ALWAYS, 6500),
-    ("always-on set + critique template", ALWAYS + ["core/critique-template.md"], 8000),
-    ("AGENTS.md", ["AGENTS.md"], 1500),
-    ("core/principles.md", ["core/principles.md"], 2100),
-    ("core/critique-loop.md", ["core/critique-loop.md"], 3300),
+    ("always-on set (AGENTS + principles + loop)", ALWAYS, 6000),
+    ("always-on set + critique template", ALWAYS + ["core/critique-template.md"], 7500),
+    ("AGENTS.md", ["AGENTS.md"], 1200),
+    ("core/principles.md", ["core/principles.md"], 2700),
+    ("core/critique-loop.md", ["core/critique-loop.md"], 3000),
     ("core/critique-template.md", ["core/critique-template.md"], 1500),
     ("lite/CREATIVE-DIRECTOR-LITE.md", ["lite/CREATIVE-DIRECTOR-LITE.md"], 2500),
 ]
@@ -34,7 +34,8 @@ ON_DEMAND = 4500         # each other .md in core/ and modules/ (detail files lo
 SKIP = {"modules/lookbook/UPDATING.md"}   # maintainer notes, never loaded for a critique
 
 LOADS = {  # typical loads, as listed in core/which-modules.md
-    "screen (web-ui + ux + energy-pass)": ["modules/web-ui/README.md", "modules/ux/README.md", "core/energy-pass.md"],
+    "screen (web-ui + ux; energy only by intent)": ["modules/web-ui/README.md", "modules/ux/README.md"],
+    "energetic screen (+ energy-pass)": ["modules/web-ui/README.md", "modules/ux/README.md", "core/energy-pass.md"],
     "social card (layout + typography)": ["modules/layout/README.md", "modules/typography/README.md"],
     "social card + composition (with Sitting right)": ["modules/layout/README.md", "modules/typography/README.md",
         "modules/composition/README.md", "modules/composition/sitting-right.md"],

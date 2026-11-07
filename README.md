@@ -1,6 +1,6 @@
 <p><img alt="creative director: design judgement for AI agents. A white great egret in profile with lace plumes, its level gaze drawn as a 20-degree viewing cone that runs through the red square mark." src="docs/assets/banner-dark.png" width="100%"></p>
 
-A set of design rules and a critique loop that any AI agent can read. It helps an agent judge and improve its own visual work (drawings, illustrations, 3D renders, web and app UI, UX flows, infographics, video): render it, look at it the way a designer would, cite a rule for every problem, make up to three small fixes, and stop when the work is clearly better. It stops agents inventing details nobody asked for (addresses, slogans, facts), breaking contrast and accessibility, and drifting from the brief, then an [energy pass](core/energy-pass.md) gives the work a focal hook, confident type and purposeful colour. Rules are grounded in perception research where it exists and in craft practice where it doesn't, and taste calls stay with the person who owns the work.
+Design judgement for any AI agent making or reviewing visual work: drawings, illustrations, 3D, screens, flows, infographics and film. **v0.10.0 starts from the idea and feeling**, makes 4–8 roughs, compares them head-to-head in a fresh context of the same model, and shows the top 2–3 to the owner of the work. Only the winner enters the fix loop. Critiques label rule-backed, intent-backed and exploratory findings, with provenance and confidence. Choose the fix level before changing work; “the original is better” is a valid stop. [Energy](core/energy-pass.md) runs only when the intent calls for it, not on every piece. Research and craft keep their evidence grades; taste stays with the owner of the work.
 
 **Start here**
 1. What it is: a rule set and critique loop an agent reads to judge and improve its own visual work.
@@ -57,7 +57,7 @@ Works with any agent or LLM. [`docs/install.md`](docs/install.md) has the steps,
 | Claude Code, Codex, Cursor, Copilot, Devin, Cline | `gh skill install SnazzyGaz/creative-director creative-director --agent <agent>` (or `npx skills add SnazzyGaz/creative-director`) |
 | Gemini CLI | `gemini skills install https://github.com/SnazzyGaz/creative-director.git --path skills/creative-director` |
 | claude.ai, Claude desktop | Upload [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip) in Customize > Skills ([steps](docs/install.md#claude)) |
-| ChatGPT, Gemini Gems, Claude Projects, any chat LLM | Paste or upload [`creative-director-prompt.md`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt.md) (about 12k tokens) or the [full bundle](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt-full.md) (about 99k) |
+| ChatGPT, Gemini Gems, Claude Projects, any chat LLM | Paste or upload [`creative-director-prompt.md`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt.md) (about 11.4k tokens) or the [full bundle](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt-full.md) (about 97.5k) |
 | Aider | `aider --read AGENTS.md` |
 
 The skill is the [`skills/creative-director/`](skills/creative-director/) folder, in the open [Agent Skills](https://agentskills.io/specification) format. Inside a clone of this repo, agents read [`AGENTS.md`](AGENTS.md) directly or through a pointer file ([`CLAUDE.md`](CLAUDE.md), [`GEMINI.md`](GEMINI.md), [`.github/copilot-instructions.md`](.github/copilot-instructions.md), [`.cursor/rules/`](.cursor/rules/creative-director.mdc)). Every route leads back to `AGENTS.md`, and [`llms.txt`](llms.txt) is there for tools that read it.
@@ -69,14 +69,26 @@ The skill is the [`skills/creative-director/`](skills/creative-director/) folder
 | **Self-check**<br>`+ creative director` | The agent runs the loop on its own output. Cheapest. |
 | **Consult**<br>`consult creative director` | Send the brief and the real output; get back a neutral critique with ranked fixes ([template](core/critique-template.md)). |
 | **Direct**<br>`creative director: direct this` | Joins at the start: writes the brief, sets direction, picks from rough options, reviews at checkpoints ([CD-1..7](core/creative-direction.md)). |
-| **Remake from scratch**<br>"redo", "rejig", "start over", "reimagine" | Steps back first: what the piece is, who it is for, its one job, the feeling, the given facts (checked against each other) and what must survive. Sends a 5-8 line brief for sign-off, then 2-3 concepts that differ in structure, recommends one, builds it and runs the full checks ([FP-1..9](core/first-principles.md), [example](examples/first-principles-remake/)). Without these words the light touch stays the default. |
+| **Remake from scratch**<br>"redo", "rejig", "start over", "reimagine" | Steps back first: what the piece is, who it is for, its one job, the feeling, the given facts (checked against each other) and what must survive. Sends a 5-8 line brief for sign-off, then 4–8 structurally different roughs, a fresh-context same-model head-to-head, the top 2–3 shown for a pick, and only the winner built and runs the full checks ([FP-1..9](core/first-principles.md), [example](examples/first-principles-remake/)). Without these words the light touch stays the default. |
 | **Nudge**<br>"bolder", "quieter", "distill" | Bolder adds contrast, scale difference and commitment; quieter lowers whatever competes with the main thing; with a lookbook look applied, each moves its strength one step. Distill removes until the one job still works, and no further ([commands](core/commands.md)). The *Sitting right* guard still applies, so none of them centres things by default. |
 
 Always send the actual output (image, screenshot at real size, URL or renders), never a description. Interactive and 3D work is reviewed hands-on: clicked, panned, zoomed and recorded, then judged on how it feels to use, not from stills alone. Video is watched in motion at its delivered size with sound, then scrubbed and sampled frame by frame ([film module](modules/film/review.md)).
 
+## In-repo tools (v0.10.0)
+
+```sh
+python3 tools/cd.py brief init 'A short description' --out brief.json
+# Fill idea, feeling, fixed copy/counts, size and must-be-right first.
+python3 tools/cd.py check final.png --brief brief.json
+python3 tools/cd.py rule CD-7
+python3 tools/cd.py select r1.png r2.png r3.png r4.png --brief brief.json
+```
+
+[`tools/brief.md`](tools/brief.md) defines the JSON brief and comparison packet. `check` reuses the existing measurement tools; page copy comes from the rendered DOM, image copy from optional system Tesseract or a labelled transcript. Physical counts need crop/count evidence. Missing evidence is SKIP, not PASS; pixel-only type size still needs visual review. No script calls a second model or certifies taste. This is an in-repo helper, not a distributed CLI product.
+
 ## Modules
 
-[`core/`](core/) is always loaded (principles and the loop); the agent picks modules for the job ([`core/which-modules.md`](core/which-modules.md)).
+Only `AGENTS.md`, principles and the loop are always loaded: [40 existing rule IDs and compact reminders](core/principles.md#the-40-always-on-rules-v0100), with other rules looked up by `cd.py rule <ID>` or by module for the job ([`core/which-modules.md`](core/which-modules.md)).
 
 | Module | Covers |
 |---|---|
@@ -92,14 +104,17 @@ Also: a [font library](fonts/) of 107 free families in 29 themes, tagged by mood
 
 ## How it works
 
-<p><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/loop-dark.png">
-  <img alt="The loop: 0 Brief, 1 Render, 2 Look, 3 Critique, 4 Fix, 5 Stop. Fix loops back to Render. If the work is fundamentally broken, take over and rework." src="docs/assets/loop-light.png" width="100%">
-</picture></p>
+```text
+idea + brief -> 4–8 roughs -> fresh-context comparison (same model)
+ -> show top 2–3 -> owner picks -> render/check/look -> labelled critique
+ -> choose fix level -> fix winner -> compare -> keep, revert or stop
+```
 
-Each rule has an ID (`CORE-2`, `TD-PER-1`, `UI-6`) and the same parts: what, why, a check you can run, the usual fix, an honest evidence grade, and a source. Only **MUST-BE-RIGHT** errors (perspective, anatomy, light, contrast and accessibility, broken flows, 3D build defects) block; everything else is a default. Any picture with a person, hand or animal also gets an anatomy pass: every hand, limb and face is cropped and checked one by one (count, trace to the shoulder, grip, joints), and a fail blocks delivery ([CHAR-9](modules/character/README.md#char-9-anatomy-pass-crop-trace-count-must-be-right-delivery-gate)). Full loop: [`core/critique-loop.md`](core/critique-loop.md).
+Edits and consults preserve existing intent; they do not force a new concept round. Intervention levels: **edit, recompose, art-direct, reconceive, rebuild, explore**. Reconception needs authority to revisit the idea.
 
-Passing the rules makes work correct, not necessarily good, so the [composition](modules/composition/), [colour-value](modules/colour-value/) and [aesthetic](modules/aesthetic-critique/) modules and the [energy pass](core/energy-pass.md) handle the rest, and a *Sitting right* pass flags placement that looks accidental without pushing work toward centring. **Handing over work with no specific ask** gets a short, ranked list of changes, and nothing changes until you sign off ([`core/interaction-flow.md`](core/interaction-flow.md)).
+Each rule has an ID (`CORE-2`, `TD-PER-1`, `UI-6`) and the same parts: what, why, a check you can run, the usual fix, an honest evidence grade, and a source. Only explicit must-be-right brief conditions and **MUST-BE-RIGHT** errors (perspective, anatomy, light, contrast and accessibility, broken flows, 3D build defects) block; everything else is a default. Any picture with a person, hand or animal also gets an anatomy pass: every hand, limb and face is cropped and checked one by one (count, trace to the shoulder, grip, joints), and a fail blocks delivery ([CHAR-9](modules/character/README.md#char-9-anatomy-pass-crop-trace-count-must-be-right-delivery-gate)). Full loop: [`core/critique-loop.md`](core/critique-loop.md).
+
+Passing the rules makes work correct, not necessarily good, so the [composition](modules/composition/), [colour-value](modules/colour-value/) and [aesthetic](modules/aesthetic-critique/) modules handle the rest; the [energy pass](core/energy-pass.md) joins only for stated energetic intent, and a *Sitting right* pass flags placement that looks accidental without pushing work toward centring. **Handing over work with no specific ask** gets a short, ranked list of changes, and nothing changes until you sign off ([`core/interaction-flow.md`](core/interaction-flow.md)).
 
 ## Examples
 
@@ -126,7 +141,7 @@ The owner of the work judged with-skill and plain-prompt images side by side wit
 - **Recommended setup:** Playwright or headless Chrome for UI (`tools/shot.sh` uses Chrome; `tools/autocheck.py` uses Playwright for pages), Blender for 3D (plus [model-qa](https://github.com/SnazzyGaz/model-qa) for build checks), and Python 3 with Pillow and NumPy for the `tools/` scripts (the auto check, look tests, contrast, vanishing points, ellipses, layout grid, 3D intersections; `pip install -r tools/requirements.txt`).
 - **Without vision** you only get a rules-only review of code or a description. It can still catch contrast, spacing and flow problems in code, but it can't judge how the work looks, and it is much weaker.
 
-Context cost: about 6,400 tokens always loaded (`AGENTS.md`, principles and the loop; 7,800 with the critique template), plus 1,200-5,800 per module README, with bigger modules split into on-demand files (film: about 10,300 for its three core files) ([table](core/which-modules.md#token-cost-per-module)). Budgets are enforced in CI (`tools/check_budgets.py`). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 2,300 tokens.
+Context cost: about 5,900 tokens always loaded (`AGENTS.md`, principles and the loop; about 7,100 with the critique template), plus 1,200-5,800 per module README, with bigger modules split into on-demand files (film: about 10,300 for its three core files) ([table](core/which-modules.md#token-cost-per-module)). Budgets are enforced in CI (`tools/check_budgets.py`). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 2,500 tokens.
 
 ## What's inside
 
@@ -138,7 +153,7 @@ modules/    technical-drawing · illustration · character · web-ui · ux · 3d
             composition (balance, focus, unity, space, beauty) · colour-value
             film (cinematography and video, story first: shots, continuity, light, grading, editing, sound, generated-video QC)
             lookbook (optional: 368 established looks and wildcards, tag file and image sheets)
-tools/      auto check (one command, every measurable rule), look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, 3D intersections, before/after
+tools/      cd.py: brief init, check (JSON), rule <ID>, select; auto check, look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, 3D intersections, before/after
 examples/   stress tests, round by round, including this README's own critique
 fonts/      107 free font families in 29 themes, catalogue and specimen sheets
 lite/       the loop, core rules and blockers in one short file
@@ -149,7 +164,7 @@ docs/       gallery, README images, reference library, design notes (DECISIONS.m
 ## Principles of the critique
 
 - **Neutral.** Factual, like a thesis supervisor. No praise padding, no harshness.
-- **Rule-cited.** Every point names a rule ID and the evidence. No rule, no point; it becomes a question for the owner.
+- **Evidence-labelled.** Rule-backed findings cite IDs; intent-backed findings cite the brief; exploratory findings are options. All carry provenance and confidence, not invented authority.
 - **Light touch.** Keep the intent and what already works. At most three fixes a round, then stop when clearly better.
 - **Take over when broken.** If the construction is fundamentally wrong, rework it, then re-check it still answers the brief.
 

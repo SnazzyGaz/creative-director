@@ -1,14 +1,14 @@
-# creative-director
+# creative-director v0.10.0
 
 > Cited, checkable design rules and a light-touch critique loop that AI agents use to judge and improve visual work.
 
 - [Agent instructions](AGENTS.md): start here; says what to load
-- [Core principles](core/principles.md): always loaded
-- [Critique loop](core/critique-loop.md): always loaded; read the ask, brief, render, look, critique, fix, deliver; the blocker list
+- [Core principles](core/principles.md): always loaded; 40 existing rule IDs and compact reminders, others looked up by ID
+- [Critique loop](core/critique-loop.md): always loaded; idea, 4–8 roughs, fresh-context same-model head-to-head, owner picks from top 2–3, winner-only fix loop; labelled findings, intervention levels, original-is-better stop; the blocker list
 - [Take over](core/take-over.md): when the work is broken: take over or nudge (FLOW-5)
 - [Critique template](core/critique-template.md): when writing a critique
 - [Commands](core/commands.md): what "bolder", "quieter" and "distill" mean, with checks
-- [Energy pass](core/energy-pass.md): eye-catch after the checks pass (focal hook, display type, colour, movement, call to action, issuer mark, concept fit), screens with a named mood included, without slop
+- [Energy pass](core/energy-pass.md): only when stated intent calls for energy; calm/neutral work may skip regardless of medium
 - [Creative direction](core/creative-direction.md): intent, mood and judging between versions
 - [First-principles remake](core/first-principles.md): when asked to redo or reimagine from scratch
 - [Which modules to load](core/which-modules.md): task-to-module table and token costs
@@ -23,6 +23,7 @@
 - [Prompt bundle](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt.md): AGENTS.md and the always-loaded core in one file; [full bundle](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt-full.md) adds every module
 - [Lite version](lite/CREATIVE-DIRECTOR-LITE.md): loop, core rules and blockers in one short file
 - [Font library](fonts/README.md): theme-grouped free fonts (OFL / Apache) with a catalogue and specimens; shortlist with `tools/font_find.py --mood ... --genre ...`
+- [Structured brief and CLI contract](tools/brief.md): `tools/cd.py brief init`, `check` pass/fail JSON (missing evidence never passes), `rule <ID>`, `select` same-model fresh-context packet
 - [Tools](tools/README.md): `autocheck.py` runs every measurable check in one go (pass, fail or flag per rule ID); measuring scripts (contrast, grids, perspective, ellipses, intersections, whitespace, balance)
 - [Case study](examples/case-study-may-specials/README.md): one sign remade from first principles, with every check shown
 - [Blind test kit](examples/blind-test/README.md): 100 briefs made with and without the skill by the same image model, judged blind by the owner of the work; batches 1 and 2 tied 10 to 10, batches 3 to 5 (after the energy pass) went 22 to 7 with one tie, batches 6 and 7 (infographics only, v0.9.4 and v0.9.5) 4 to 6 and 3 to 7, batch 8 (30 briefs over six themes, v0.9.6) 20 to 10; 59 to 40 with one tie overall (p = 0.035, meeting the 59-of-100 bar set in advance, a clear result); screens were the weak spot, and v0.9.7 adds rules for the batch 8 gaps (untested); batch 9 (10 briefs, infographics and screens, v0.9.11) awaits judging; results, keys and caveats in RESULTS.md

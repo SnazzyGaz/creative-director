@@ -1,6 +1,6 @@
 # Core principles
 
-Apply to every kind of visual work, before any module rule. Cite by ID (e.g. `CORE-2`). Format: **What / Why / Check / Fix / Grade / Source**; grades are defined in `evidence.md`.
+Apply to every kind of visual work as an edit pass after the idea, not a recipe for generating it. Cite by ID (e.g. `CORE-2`). Format: **What / Why / Check / Fix / Grade / Source**; grades are defined in `evidence.md`.
 
 ---
 
@@ -95,3 +95,36 @@ Apply to every kind of visual work, before any module rule. Cite by ID (e.g. `CO
 ---
 
 Myths (golden ratio, thirds as a law, colour-emotion claims) are in `evidence.md`. Never use them as reasons.
+
+## The 40 always-on rules (v0.10.0)
+
+Keep CORE-1..11 (11), FLOW-1..5 in `critique-loop.md` (5), and these 24 reminders: 40 existing IDs, not new rules or grades. Full wording and sources: `python3 tools/cd.py rule <ID>`. Other rules load by ID or task (`which-modules.md`); lite stays separate.
+
+| ID | Always-on reminder | Why kept |
+|---|---|---|
+| CD-1 | Brief before making; one idea, audience, format, success. | Every job |
+| CD-5 | Protect the idea and must-keeps each round. | Every job |
+| CD-7 | Exact rendered copy and physical counts, no slips. | Blocker |
+| AES-0 | Intent first; distinguish supplied and inferred. | Every judgement |
+| AES-9 | Compare versions for this brief; name the cost. | Every revision |
+| AES-10 | Small aesthetic changes, no invented additions; re-check. | Every revision |
+| TYPE-3 | Respect the medium's type-size floor. | Legibility gate |
+| UI-6 | Measure text contrast, 4.5:1 or 3:1 for large text. | Blocker |
+| UI-10 | Text resizes to 200% without lost content. | Access gate |
+| UX-1 | The main task can be completed. | Purpose gate |
+| LAY-5 | Keep text and key elements in the safe area. | Blocker |
+| LAY-9 | Print needs bleed and real output resolution. | Production gate |
+| LAY-15 | Text over images must read on its actual ground. | Blocker |
+| LAY-19 | Draw data and routes from truth, not generated guesses. | Blocker |
+| INF-6 | Required and safety steps survive exactly. | Blocker |
+| CHAR-9 | Crop, trace and count every body, hand and animal. | Anatomy gate |
+| CHAR-10 | Animal parts and counts stay plausible. | Anatomy gate |
+| CHAR-11 | Props and gear as briefed; check figure/prop joins. | Blocker |
+| BRAND-4 | Place the official file, unaltered; verify overlay. | Identity gate |
+| BRAND-8 | No invented or generated official marks. | Identity gate |
+| ILL-12 | Real subjects, especially food, must be physically plausible. | Blocker |
+| CV-11 | Whites stay neutral unless the brief names an exception. | Cross-medium guardrail |
+| TD-PER-1 | One horizon per picture. | Construction gate |
+| TD-LIT-1 | One key light direction. | Construction gate |
+
+Conditional gates (including 3D and film) stay mandatory in the loop. The selection keeps general intent and delivery safety always present, not every specialist rule.

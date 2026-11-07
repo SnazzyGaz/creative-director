@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "description": "",
+  "idea": "",
+  "feeling": "",
+  "audience": "",
+  "purpose": "",
+  "success": "",
+  "format": {"kind": "fixed", "width": 1200, "height": 800},
+  "copy": [],
+  "exact_copy": true,
+  "counts": [],
+  "constraints": [],
+  "must_be_right": [],
+  "safe_area_px": 48
+}

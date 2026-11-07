@@ -1,6 +1,6 @@
 # Which modules to load
 
-Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus `core/critique-template.md` when writing a critique). Then add only what the task needs: loading everything wastes attention. A module's `notes.md` is optional depth. Not sure? Use the module table in `AGENTS.md`. Merged or retired rule IDs: `docs/RETIRED-IDS.md`.
+Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus `core/critique-template.md` when writing a critique). The 40-rule selection is listed in `principles.md`; full rules are available through `python3 tools/cd.py rule <ID>`. Then add only what the task needs: loading everything wastes attention. A module's `notes.md` is optional depth. Not sure? Use the module table in `AGENTS.md`. Merged or retired rule IDs: `docs/RETIRED-IDS.md`.
 
 | Task | Load |
 |---|---|
@@ -11,11 +11,11 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 | Construction errors only | technical-drawing |
 | Poster, cover, header, social graphic, thumbnail, link preview | layout, typography, composition (+ illustration, colour-value; brand if it carries a name; LAY-16 for covers) |
 | Slide deck, print piece (flyer, packaging) | layout, typography (+ brand; BRAND-10 for packaging) |
-| Infographic of any kind | layout + `layout/infographics.md` (INF rules; LAY-18 panels; LAY-19 data in code), typography, illustration (+ character, brand); structure pass (EN-4) |
-| Menu board, signage, timetable, price list | layout (LAY-7, LAY-17), typography; light energy pass at most |
+| Infographic of any kind | layout + `layout/infographics.md` (INF rules; LAY-18 panels; LAY-19 data in code), typography, illustration (+ character, brand); EN-4 structure pass only if the brief calls for energy |
+| Menu board, signage, timetable, price list | layout (LAY-7, LAY-17), typography; energy only if the intent calls for it |
 | Type is the point (wordmark, editorial page, type-led poster) | typography (+ layout or web-ui) |
 | A named brand or product, or a brand guide | brand (+ the medium's module); no brand input: `core/brand-intake.md` at step 0 |
-| Web page, landing page, pricing, app screen, dashboard (how it looks) | web-ui (UI-12 for mood) + `core/energy-pass.md` (full for heroes, pricing, app home; light for dashboards) (+ typography; brand; lookbook, optional, for the direction) |
+| Web page, landing page, pricing, app screen, dashboard (how it looks) | web-ui (UI-12 for mood); `core/energy-pass.md` only if intent calls for energy (+ typography; brand; lookbook, optional, for the direction) |
 | Sign-up, checkout, settings, multi-step task (how it works) | ux (+ web-ui); energy pass skipped |
 | A whole product or prototype | web-ui, ux |
 | 3D model, prop, asset, scene | 3d (+ illustration for a beauty render) |
@@ -26,7 +26,7 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 | Clip made or altered by a video model | film (+ `generated.md`), character, brand for any lettering |
 | Mood, energy or a distinctive feel; correct but flat; choosing between versions | aesthetic-critique (+ the medium's modules, which still decide blockers) |
 | From-scratch concepts; correct but generic; naming a described vibe, screens included | lookbook, optional (at most one concept in three; 20-50%, LOOK-1; never on fixes or edits) |
-| Any piece that sells or greets, once the checks pass | `core/energy-pass.md`: full pass for posters, covers, packaging, logos, social cards, picture books, character art, heroes and app home screens; structure pass for infographics; light for notices, dashboards, menus; skip for forms and dense data |
+| Stated intent calls for energy, eye-catch or persuasion, once checks pass | `core/energy-pass.md`: quote the intent line, choose full/structure/light; calm, restrained or neutral work can skip regardless of medium |
 | Just "bolder", "quieter" or "distill" | `core/commands.md` + the medium's modules |
 | Remake from scratch ("redo", "rejig", "start over", "reimagine") | `core/first-principles.md` + the medium's modules + aesthetic-critique (AES-9); brand if it carries a mark |
 | Photograph or photoreal image, shot or generated (portrait, product, food, lifestyle, documentary) | photo (PHOTO-1 to 7; PHOTO-7 tells pass for generated photos), character for people (CHAR-9 gate), illustration for staging (+ brand for any lettering; ILL-12 for food) |
@@ -58,27 +58,27 @@ What each module covers (`modules/<name>/README.md`).
 
 1. Core hierarchy and value (does it read at all?)
 2. Blockers (perspective, proportion, anatomy pass, light, broken flows, failing contrast): the MUST-BE-RIGHT list in `core/critique-loop.md`.
-3. Energy pass where it applies (`energy-pass.md`): after accuracy and clarity, never instead of them.
+3. Energy pass only from named intent (`energy-pass.md`), after accuracy and clarity. Otherwise skip with a brief reason.
 4. Composition and layout (`composition/` COMP-1 to 18, with the *Sitting right* pass COMP-19 to 25 in `sitting-right.md` last before delivery; `colour-value/` CV-1 to 11).
 5. Surface: edges, texture, micro-spacing, polish.
 
 ## Token cost per module
 
-Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.9.11, 4 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
+Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.10.0, 7 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,000 (7,500 with template); AGENTS 1,200, principles 2,700, loop 3,000, template 1,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
 
 | File or set | Tokens |
 |---|---|
-| `AGENTS.md` (entry point, always) | 1,077 |
-| `core/principles.md` (always) | 1,929 |
-| `core/critique-loop.md` (always) | 3,036 |
-| `core/critique-template.md` (when writing a critique) | 1,374 |
-| `core/energy-pass.md` (eye-catch after the checks pass) | 2,761 |
-| `core/commands.md` (bolder, quieter, distill) | 1,192 |
-| `core/creative-direction.md` (direct mode, open briefs) | 1,759 |
-| `core/first-principles.md` (remake from scratch) | 3,234 |
+| `AGENTS.md` (entry point, always) | 865 |
+| `core/principles.md` (always) | 2,541 |
+| `core/critique-loop.md` (always) | 2,525 |
+| `core/critique-template.md` (when writing a critique) | 1,165 |
+| `core/energy-pass.md` (intent-gated) | 2,904 |
+| `core/commands.md` (bolder, quieter, distill) | 1,195 |
+| `core/creative-direction.md` (direct mode, open briefs) | 1,886 |
+| `core/first-principles.md` (remake from scratch) | 3,331 |
 | `core/brand-intake.md` (no brand input) | 775 |
 | `core/evidence.md` (before claiming people prefer something) | 2,961 |
-| `core/which-modules.md` (this file) | 2,918 |
+| `core/which-modules.md` (this file) | 2,849 |
 | `core/interaction-flow.md` (pointer and diagram only) | 723
 | `core/take-over.md` (work looks broken: take over or nudge, FLOW-5) | 241 |
 | `modules/3d/` | 1,896 |
@@ -96,7 +96,7 @@ Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/chec
 | `modules/photo/` (PHOTO-1 to 7) | 2,519 |
 | `modules/ux/` | 2,496 |
 | `modules/web-ui/` (+ notes 447) | 4,117 |
-| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 2,498 |
+| `lite/CREATIVE-DIRECTOR-LITE.md` (everything in one short file) | 2,499 |
 | `BIBLIOGRAPHY.md` (reading list; not needed for a critique) | 4,736 |
 
-Typical loads, with the always-on set and the critique template (about 7,400): a screen (web-ui + ux + energy pass) about 16,800; a social card (layout + typography) about 17,500, plus about 5,700 for the composition README and 3,500 for `sitting-right.md`; a figure (character + technical-drawing + illustration) about 19,000; a photo or photoreal image (photo + character + illustration) about 18,400; a poster remake (first-principles + layout + typography + aesthetic-critique) about 23,900; an infographic (layout with `infographics.md`, typography, illustration) about 23,400; a video review (film README, `story.md` and `review.md`) about 17,900, or 24,000 with `edit.md` and `generated.md`. For a pre-delivery check alone, load just `composition/sitting-right.md` (COMP-19 to 25). If that is too much, use the lite file.
+Typical loads use the always-on set plus the template; run `python3 tools/check_budgets.py --loads` for current totals. A screen loads web-ui + ux; energy adds about 2,900 only when the brief calls for it. Rule-by-ID lookup is cheaper than whole modules for a narrow question. Pre-delivery placement alone can load `composition/sitting-right.md` (COMP-19 to 25). Use lite for small contexts.

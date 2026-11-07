@@ -27,7 +27,7 @@ DESC = ("Judge and improve visual work (generated images, illustrations, technic
         "UX flows, typography, layout, brand, film and video: shots, edits, generated clips) against cited, checkable design rules, with a light-touch "
         "render-critique-fix loop and a comparative aesthetic layer (intent, side-by-side judgement, revision checks). Use when making or reviewing anything visual, or when the user says "
         "\"+ creative director\", \"consult creative director\" or \"creative director: direct this\", or asks to redo, rejig or reimagine "
-        "a piece from scratch (step back, brief from first principles, 2-3 concepts, then build).")
+        "a piece from scratch (step back, brief from first principles, 4-8 roughs, fresh-context same-model comparison, owner picks, then build).")
 DIRS = ["core", "modules", "lite", "tools"]
 FILES = ["SOURCES.md", "BIBLIOGRAPHY.md", "LICENSE", "fonts/README.md", "fonts/CATALOGUE.md", "fonts/catalogue.json"]   # font catalogue only; font files are a release asset (tools/fetch_assets.py)
 SKIP_FILES = {"modules/lookbook/looks.csv",            # the json carries the same rows

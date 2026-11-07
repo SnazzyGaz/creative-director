@@ -1,126 +1,113 @@
-# The critique loop: read the ask, render, look, critique, fix, deliver
+# The critique loop: idea, roughs, pick, check, fix
 
-**Purpose:** a light touch: nudge the output toward what people measurably prefer, keeping its intent and what already works. Smallest changes, biggest effect; stop once it is clearly better. Always judge a fresh render, never your own code or prompt.
+**Purpose:** protect intent and what already works. Start from an idea, not a checklist. Judge fresh renders, never code or a prompt. Parallel roughs help explore [SRC-95, SRC-96]; the 4–8 range and fresh-context procedure are practice defaults, not an experimentally proven optimum.
 
 ```
-read the ask -> brief -> render -> AUTO CHECK -> LOOK (5 tests, energy) -> CRITIQUE (ranked, rule IDs) -> [sign-off] -> FIX -> re-render -> compare -> deliver
-                           ^                                                                       |
-                           +---------------------- repeat only while clearly improving ------------+
+read the ask -> idea + brief -> 4–8 roughs -> fresh-context head-to-head
+ -> show top 2–3 -> owner picks -> render -> check -> look -> critique
+ -> choose fix level -> [sign-off] -> fix winner -> re-render -> compare -> stop
 ```
-
-Appeal is judged in about 50 ms [SRC-36]; high complexity is liked least [SRC-35]; attractive work earns tolerance for minor problems, not serious ones [SRC-34]. So fix blockers first, simplify, then polish lightly. Every rule here is a Procedure (`evidence.md`).
 
 ## Blockers (MUST-BE-RIGHT)
 
-Only these block delivery; everything else is a default.
-- **Construction:** one horizon and consistent perspective, ellipses, proportion, one key light (TD-PER, TD-ELL, TD-PRO, TD-LIT).
-- **Copy and counts:** every string the brief fixes reads letter for letter on the render (words, units, case, punctuation), and every number it fixes is counted (CD-7).
-- **Bodies:** a clean anatomy pass (CHAR-9) when a person, hand or animal is in frame; animal counts (CHAR-10); the MUST-BE-RIGHT lines in CHAR-2 to CHAR-7; props as briefed (CHAR-11).
-- **Fixed frames:** safe area (LAY-5), legible at feed size (LAY-6), print bleed and resolution (LAY-9), text over images (LAY-15), type under the size floor (TYPE-3), data and routes drawn true (LAY-19), safe steps (INF-6).
-- **Screens and flows:** contrast (UI-6), text resize (UI-10), the main flow completes (UX-1).
-- **3D:** builds clean, right size and way up (3D-1, 3D-2).
-- **Moving image:** no flashing above the threshold (FILM-ACC-1); one key direction within a continuous scene (FILM-LIT-1); for generated video, identity, anatomy on sampled frames and no invented text (FILM-GEN-2, -3, -8).
-- **Marks and subjects:** official marks unaltered (BRAND-4), no invented marks (BRAND-8), food physically plausible (ILL-12).
+Only these and explicit must-be-right brief conditions block delivery. Scope gates to the medium; conditional gates remain mandatory, looked up by ID. The 40-rule selection is in `principles.md`.
+
+- Construction: one horizon, consistent perspective, ellipses, proportion and key light (TD-PER, TD-ELL, TD-PRO, TD-LIT).
+- Copy and counts: every fixed string letter for letter, every fixed number counted on the render (CD-7).
+- Bodies: CHAR-9 anatomy pass, animal counts (CHAR-10), MUST-BE-RIGHT lines in CHAR-2 to CHAR-7, props as briefed (CHAR-11).
+- Fixed frames: safe area (LAY-5), feed-size legibility (LAY-6), print bleed/resolution (LAY-9), text over images (LAY-15), type floor (TYPE-3), truthful data/routes (LAY-19), safe steps (INF-6).
+- Screens: contrast (UI-6), text resize (UI-10), main flow completes (UX-1).
+- 3D: builds clean, right size and way up (3D-1, 3D-2).
+- Moving image: flash threshold (FILM-ACC-1), continuous key direction (FILM-LIT-1); generated video: identity, sampled anatomy, no invented text (FILM-GEN-2, FILM-GEN-3, FILM-GEN-8).
+- Subjects and marks: official marks unaltered (BRAND-4), no invented marks (BRAND-8), food physically plausible (ILL-12).
+
+Use `python3 tools/cd.py rule <ID>` for the full rule and sources; load the relevant module when a group of rules is needed. Outside the 40 does not mean optional.
 
 ## 0. Read the ask
 
-| What the person said | Call it | What happens |
+| Ask | Mode | Action |
 |---|---|---|
-| Work handed over, no specific ask ("here's a cover") | **Unprompted hand-off** | Analyse, send a sign-off blurb, wait (FLOW-1). |
-| "Just fix it", "I want the result" | **Result wanted** | No blurb. Fix every imperative point, check, deliver (FLOW-4). |
-| "What's wrong with this?", "consult creative director" | **Consult** | Critique only (`critique-template.md`); change nothing. "Do it" afterwards is the sign-off. |
-| "creative director: direct this", or a brief with no work | **Direct** | Brief, direction, rough options (`creative-direction.md`, CD-1 to CD-3), then the loop; sign-off at those checkpoints. |
-| "Redo / rejig / start over / reimagine / from scratch" | **Remake** | `first-principles.md` (FP-1 to FP-9): brief signed off, 2-3 concepts, build, full QA. |
-| The agent's own output (`+ creative director`) | **Self-check** | Run the loop silently; ask only taste calls; deliver with the FLOW-3 checklist. |
+| Work handed over, no specific request | Unprompted hand-off | Analyse, send FLOW-1 blurb, wait. |
+| “Just fix it”, “I want the result” | Result wanted | No wait; apply every imperative point, same checks (FLOW-4). |
+| “What's wrong?”, “consult creative director” | Consult | Critique only; change nothing. |
+| Open brief, “direct this” | Direct | Idea and brief, roughs then pick (`creative-direction.md`). |
+| “Redo”, “rejig”, “start over”, “reimagine” | Remake | `first-principles.md`: brief sign-off, roughs then pick, full QA. |
+| Own output, `+ creative director` | Self-check | Silent checks; ask only unresolved owner choices. |
 
-Never assume a remake without a from-scratch word. Unclear ask: treat it as an unprompted hand-off; a blurb costs one message, a wrong redo the piece (`interaction-flow.md`).
+Never infer a remake from a request for an edit. Unclear ask: unprompted hand-off. “Bolder”, “quieter”, “distill”: `commands.md`.
 
-## 1. Brief
+## 1. Idea, brief, roughs, pick
 
-- **Idea first (guidance, not a rule):** say the one idea and the feeling before anything else. The rules come after, as the edit pass that sharpens it, not the place the piece starts from.
-- Have the brief (CD-1) and direction (CD-2). No brand input (colours, type, voice, logo)? Run `brand-intake.md` first. Open brief: 2-3 rough options first (CD-3).
-- **Intent model (AES-0):** purpose, audience, mood, style, focal experience, polish, must-keeps, each marked [brief] or [inferred]. Count what the brief fixes ("it" is one). Before calling a choice a flaw, ask if it is deliberate and works.
-- The first critique point every round: does it answer the brief, are the must-keeps intact (CD-1, CD-5)?
+- Say **the one idea and feeling first**. Create `brief.json` with `python3 tools/cd.py brief init 'description'`, then fill purpose, audience, format/size, fixed copy/counts, constraints, success and must-be-right (`tools/brief.md`). Do not mistake an empty template for an agreed brief. No brand input: `brand-intake.md`.
+- Record intent (AES-0), each part [brief] or [inferred]. Protect must-keeps (CD-1, CD-5). Inference is not approval to add content.
+- On new work or an authorised reconception, make **4–8 structurally different roughs**, each with a one-line idea. Keep them cheap. A medium-specific exploration can start wider (e.g. logo thumbnails); select 4–8 developed roughs for comparison.
+- Compare head-to-head in a **fresh context of the same model**. Give it the brief and roughs, not the maker's rationale. Compare idea, feeling, hierarchy and must-keeps; state the visible difference and trade-off (AES-9). No second model or cross-model checker. `cd.py select` prepares a packet and validates a returned comparison; it does not call a model or prove context freshness.
+- Show the **top 2–3 to the owner of the work**, explaining what each gains and loses. Wait for a pick; **only the winner enters the fix loop**. No polishing all options.
+- Existing-work edits and consults do not trigger four new directions. Mark selection not applicable and preserve intent; get approval before widening the task.
 
 ## 2. Render
 
-At the size people see it, plus a thumbnail. UI: phone and desktop widths and 200% zoom (`tools/shot.sh`). 3D: measured checks (`modules/3d/`), then a contact sheet. Keep every round.
+Render the winner at actual use size plus a 150–200 px thumbnail; keep each round. UI: phone, desktop, 200% zoom (`tools/shot.sh`). 3D: measured checks and a contact sheet. Film: review in motion and on sampled frames.
 
-## 3. Look: auto check, then five tests
+## 3. Check, then look
 
-**Auto check first** (if you can run code): `python3 tools/autocheck.py FILE|URL --out DIR` measures contrast, type, spacing, edges, space, balance and whites against each rule's own number. Fix every FAIL (* = blocker), then judge by eye, quoting its numbers. FLAG asks "intended?"; balance is never a FAIL or a reason to centre. Image text checks are SKIP without `--text-box`: check by eye.
+`python3 tools/cd.py check FILE --brief brief.json` emits JSON and delegates to `autocheck.py` (contrast, type, spacing, edges, space, balance, whites). Quote numbers. FAILs need fixing; FLAG means “intended?”, not a reason to centre. SKIP is missing evidence, never clearance. Images need OCR/transcription, text regions for contrast, and manual type-size review; fixed object counts need labelled crop/count evidence. Without tools, check by eye and say so.
 
-| Test | How | Reveals |
-|---|---|---|
-| **Squint / blur** | Blur ~5-10 px at screen size | What leads when detail goes [SRC-1] |
-| **Thumbnail** | ~150-200 px wide | Whether the idea survives at feed size |
-| **Mirror** | Flip horizontally (and upside down for pictures) | Drawing errors, lopsided weight, tilts [SRC-7] |
-| **Greyscale** | By luminance or OKLCH L, not HSL L | Value structure [SRC-5] |
-| **Crop / edges** | Each edge and corner; a tighter crop | Tangents, frame contacts, dead space, stray brights |
+Do the five tests (`tools/look.py`), one factual line each: blur/squint (what leads), thumbnail (what survives), mirror (drawing/weight), luminance greyscale (value groups), crop/edges (contacts and stray brights). Basis: hierarchy [SRC-1], value [SRC-5], mirror [SRC-7].
 
-`tools/look.py` makes all five as one sheet. One factual line per test ("Blur: the badge leads; the headline is second").
+**Anatomy gate:** any person, hand or animal: crop hands, joins, faces and animal heads at 2–4x; trace and count, one PASS/FAIL line per crop (CHAR-9, `tools/anatomy_crops.py`). Whole-image viewing is not enough. Any fail blocks; repeat after figure edits.
 
-**Anatomy pass (delivery gate):** with any person, hand or animal in frame, crop each hand, limb join, face and animal head at 2-4x and write one pass/fail line per crop (CHAR-9, `tools/anatomy_crops.py`). A whole-image look doesn't count; any fail blocks.
+**Energy is intent-gated:** load `energy-pass.md` only when the agreed feeling or purpose calls for energy, eye-catch or persuasion. Name the brief line and scope (full/structure/light). Calm, restrained and neutral work may skip it, regardless of medium. Never turn a quiet brief louder to complete a ritual.
 
-**Energy pass** (after the checks, where it applies, screens included; `energy-pass.md`): a focal hook that stands off its ground at thumbnail, display type with real hierarchy, purposeful colour, movement, an obvious call to action, an idea that fits the category, the issuer's real mark on official pieces. From structure, not texture: no clutter, grain or additions.
-
-**Before delivery, the Sitting right pass** (COMP-19 to COMP-25, `modules/composition/sitting-right.md`): rotate 180°, cover each half, gap measure (LAY-10), `tools/balance.py`, edge and alignment sweep. Flag only what looks accidental and ask "intended?". Fix broken balance with a counterweight or firmer asymmetry; never centre or symmetrise by default.
+Before delivery, the *Sitting right* pass (COMP-19 to COMP-25, `modules/composition/sitting-right.md`): rotate 180°, cover each half, gap measure, balance, edge/alignment sweep. Flag accidents, ask “intended?”. Use counterweight or firmer asymmetry; never centre by default.
 
 ## 4. Critique (`critique-template.md`)
 
-- **Criteria first:** list the rule IDs in scope. **Every point cites a rule ID**; no rule, no point: it becomes a question for the owner.
-- **No myths as reasons** (golden ratio, thirds as law, colour-emotion tables; `evidence.md`).
-- **Meets criteria:** record what to preserve.
-- **Needs improvement:** ranked by effect on the whole, structure before surface, five at most. Blockers marked.
-- **Measure at zoom** (2x+, or `tools/vp.py`, `ellipse.py`, `contrast.py`) before calling a failure.
-- **MEASURED vs INTERPRETED:** measured findings (tool or count) can block; interpreted ones (AES-1 to AES-8) name a visible feature, its effect and the trade-off, labelled as interpretation. When they conflict, state the trade-off; don't settle it toward the neater option.
-- **Register:** factual: "CORE-3 not met: highest contrast is the top-right sky, not the face. Fix: lower the sky one value step."
+Brief check first: answer the purpose, keep must-keeps. Record what works. Rank at most five findings by effect, structure before surface. Each finding has:
 
-### FLOW-1. An unprompted hand-off gets a sign-off blurb, not a redo
-- **What:** After the full analysis, reply with only the **imperative** changes (blockers, and what the piece fails its brief without): ranked, five at most, each with its rule ID, what visibly changes, and **[edit]** (keep the art) or **[regenerate]** (new art). Optional ideas go on one "also possible" line or nowhere. Ask for sign-off; apply nothing before it.
-- **Why:** Notes are suggestions until the owner accepts them (CD-4). Asking costs one message; a wrong guess costs a redo.
-- **Check:** Ranked, cited, concrete, tagged, five lines at most, nothing changed yet?
-- **Format:**
-  ```
-  Imperative changes (sign off and I'll apply all of them):
-  1. [regenerate] CHAR-9: the hand at bottom right has no arm. New art with both hands traced to the shoulders.
-  2. [edit] TYPE-3, UI-6: author name is 3.1:1 on the sky. Set in code on a darker band, at least 4.5:1.
-  Also possible (not needed): a warmer palette. OK to go ahead?
-  ```
+- **rule-backed**: cite a broken existing rule ID and threshold;
+- **intent-backed**: cite the conflicting brief line, without inventing a rule;
+- **exploratory**: a visible possibility, not an obligation. No rule ID required.
 
-## 5. Fix and re-render
+All three carry **provenance** (tool/version and measurement, rule lookup/path, or visual read/crop) and **confidence** (high/medium/low with why). Also distinguish MEASURED from INTERPRETED: taste is not a measured failure. Only verified mandatory failures block; a verified conflict with an explicit must-be-right brief condition can block too. An exploratory finding never blocks. No myths as reasons (`evidence.md`).
 
-- **Preserve intent:** subject, style, mood, palette and layout concepts belong to the brief and the owner.
-- **At most ~3 changes a round**, blockers first; smallest effective change; prefer removing to adding.
-- **Check each fix applied** against the fix as written (generators skip and drift); a fix that didn't apply is not done.
-- **Re-run the anatomy pass in full** after any edit touching a figure, and the LAY-10 whole-layout review after any image swap or re-crop.
-- **Aesthetic changes one or two at a time**: compare side by side; keep, refine or revert; re-run the measured checks (AES-9, AES-10).
-- Re-run the five tests; revert anything that made it worse. One log line per round: change, rule, result.
+### FLOW-1. An unprompted hand-off gets sign-off, not a redo
 
-### FLOW-2. After sign-off, apply every signed-off point
-- **What:** Apply all signed-off points; the three-fix cap doesn't cut the list short (spread it over rounds). If an edit can't achieve a point, regenerate rather than drop it, and say so. Keep the idea and must-keeps (CD-5).
-- **Check:** Points signed off = points attempted.
+Send only imperative findings, ranked, five at most: label, rule ID or brief line, visible change, **[edit]** or **[regenerate]**. Optional ideas stay on one “also possible” line. Ask for sign-off and change nothing until it comes. Notes are suggestions until accepted (CD-4).
 
-### FLOW-4. "Just fix it" skips the sign-off, not the checks
-- **What:** Apply every imperative point, run FLOW-3, and deliver the result first, with the change list after it.
-- **Check:** Is the first thing delivered the result, with done / not done lines?
+## 5. Pick the fix level, then fix
 
-## 6. Take over or nudge
+Before any change, name **one intervention level and why**:
 
-Three or more blockers, one that breaks the whole piece, or work unusable for its purpose: take over, and say so in the first line (FLOW-5, `take-over.md`).
+- **edit**: local copy, value, spacing or detail; keep the structure.
+- **recompose**: move or resize existing parts; keep the idea.
+- **art-direct**: change staging, light, pose or treatment; keep the idea.
+- **reconceive**: change the idea; needs authority to revisit it and roughs-then-pick.
+- **rebuild**: remake production to realise the approved idea reliably.
+- **explore**: a reversible test, not a required correction.
 
-## 7. Stop and deliver
+This level is separate from execution ([edit] or [regenerate]); neither silently grants permission to change the brief. Preserve subject, mood, palette and must-keeps. At most three changes per round; blockers first, smallest effective intervention. Check each change actually applied on a fresh render. After image swaps, review the whole layout (LAY-10); after figure changes, repeat anatomy. Make aesthetic changes one or two at a time; compare and re-run measurements (AES-9, AES-10).
 
-Stop when: no blockers remain (a clean anatomy pass on the latest render included) and the top improvements are done; the latest round isn't clearly better; what is left is questions no rule settles; the next fix would change the brief or something approved; or round 3 for routine work (5 at most). Report rather than polish.
+### FLOW-2. Apply every signed-off point
 
-### FLOW-3. Re-check before delivery; never pass off an unapplied critique as the result
-- **What:** On the final render, check each signed-off point, then the QA gates: light (TD-LIT-1), anatomy (CHAR-9), type size and contrast (TYPE-3, UI-6), whitespace (LAY-10), Sitting right (COMP-25), marks (BRAND-4 overlay check, BRAND-8), real-subject crops (ILL-12), copy, counts and facts (CD-7, FP-3), no additions (AES-10), whites (CV-11), energy (EN-2, where it applies); signage adds viewing distance (LAY-7), a series adds the set pass (BRAND-6). Deliver the result first, then one line per point, **done** or **not done** with the reason. A critique alone is never the deliverable.
-- **Why:** Edits silently skip instructions; an anatomy fault once passed every other check because nobody cropped the hands (`examples/character-anatomy-pass/`); exact strings and counts slip in generation (CD-7).
-- **Check:** A line for every point? Does each "done" match the render?
-- **Format:**
-  ```
-  1. Hand traced to the arm (CHAR-9): done, anatomy pass clean.
-  QA: light · anatomy · type · copy and counts · whitespace pass · sitting right: 1 flag, intended. Left for you: palette (taste call).
-  ```
+The three-change cap spreads a signed-off list over rounds; it never truncates it. If an edit cannot achieve a point, regenerate rather than omit it, preserving intent and saying why. Signed-off points = attempted points.
 
-After the checklist: latest and previous render, what changed (rule IDs), what was left and why, questions for the owner. Never call work finished on taste; label your own verdicts as self-judged.
+### FLOW-4. “Just fix it” skips waiting, not checks
+
+Apply every imperative point, run FLOW-3, deliver the result first with done/not-done lines.
+
+### Take-over (FLOW-5)
+
+Three blockers, one whole-piece failure, or unusable work: `take-over.md`. Say it is a redo; preserve its approved idea. A take-over does not authorise reconception.
+
+## 6. Compare and stop
+
+Compare latest, previous and original for this brief, including the cost of a change. Swap left/right when preference is marginal. **“The original is better” is a valid verdict and stop**, including an earlier rough: revert, preserve it, explain why. Never repair it merely to justify a critique. If that original still has blockers, name them; preference does not clear delivery gates.
+
+Stop when no blockers remain and top improvements are done; the round is not clearly better; the remainder is taste; the next change alters an approved brief; or round 3 for routine work (5 maximum). Report rather than polish. Label verdicts self-judged; the owner decides taste.
+
+### FLOW-3. Re-check and deliver the result, not an unapplied critique
+
+On the final render verify every signed-off point. QA: construction/light; anatomy; type/contrast; whitespace and Sitting right; official/invented marks; real-subject crops; exact copy/counts/facts; no additions; neutral whites; intent-gated energy or “skipped: brief reason”. Signage adds viewing distance (LAY-7); a series adds BRAND-6. See the blocker list above for medium-specific gates.
+
+Result first, then one **done / not done + evidence/reason** line per point. Include latest and previous render, what changed, what remains and why, and owner questions. A favourable comparison is not evidence that an unapplied fix was done.

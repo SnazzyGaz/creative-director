@@ -1,6 +1,6 @@
 # Interaction flow: what the creative director is for, and the flow at a glance
 
-The rules FLOW-1 to FLOW-5 and the "read the ask" table now live in `critique-loop.md` (v0.6.0), so a bot loads one file to run a job. This page keeps the overview and the diagram for people. IDs are unchanged.
+The loop and FLOW-1 to FLOW-4 live in `critique-loop.md`; FLOW-5 is in `take-over.md`, with its always-on reminder in the loop (v0.10.0). This page keeps the overview and the diagram for people. IDs are unchanged.
 
 ## What it is good for
 
@@ -19,16 +19,17 @@ flowchart TD
     B -->|Nothing specific| C[Analyse: brief, intent, look tests, anatomy pass, measured checks]
     B -->|Just fix it / I want the result| C2[Analyse the same way]
     B -->|Critique only| K[Consult: critique with the template, change nothing]
-    B -->|Start from a brief| D[Direct: brief, direction, rough options]
+    B -->|Start from a brief| D[Direct: idea and feeling, brief, 4–8 roughs]
     B -->|From scratch / rejig / reimagine| P[Step back: what it is, for whom, one job,<br>feeling, given facts, must-survive FP-2, FP-3]
     P --> P1[Brief from first principles, 5-8 lines:<br>owner signs off FP-4]
-    P1 --> P2[2-3 concepts that differ in structure,<br>recommend one, owner picks FP-5, FP-6]
-    P2 --> H
-    D --> C2
+    P1 --> P2[4–8 roughs, same-model fresh-context head-to-head,<br>show top 2–3, owner picks FP-5, FP-6]
+    P2 --> L[Winner only: choose fix level,<br>edit / recompose / art-direct / reconceive / rebuild / explore]
+    L --> H
+    D --> P2
     C --> E{Egregious?<br>take-over triggers, take-over.md}
     E -->|Yes| E1[Say up front: this is a redo, and why]
     E -->|No| F
-    E1 --> F[Sign-off blurb: imperative changes only,<br>ranked, rule ID, what changes,<br>keep-the-art edit or regenerate]
+    E1 --> F[Sign-off blurb: imperative changes only,<br>ranked, finding label, rule ID or brief line, provenance/confidence, what changes,<br>keep-the-art edit or regenerate]
     F --> G{Owner signs off?}
     G -->|Yes, all or some points| H
     G -->|Changes the list| F
@@ -36,5 +37,6 @@ flowchart TD
     C2 --> H[Apply every signed-off point.<br>Edit can't do it? Regenerate or redo]
     H --> I[Re-check each point on the new render,<br>plus QA blockers: light, anatomy, type]
     I -->|A point or blocker fails| H
+    I -->|Original is better| O[Revert and stop; report remaining blockers]
     I -->|All pass, or a failure is reported| J[Deliver the result with<br>one line per point: done / not done]
 ```
