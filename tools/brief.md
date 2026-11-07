@@ -4,6 +4,7 @@ Run from the repo or the installed skill folder; no service, account or packaged
 
 ```sh
 python tools/cd.py brief init 'A quiet exhibition invitation' --out brief.json
+python tools/cd.py load --brief brief.json
 python tools/cd.py rule CD-7
 python tools/cd.py check final.png --brief brief.json
 python tools/cd.py select r1.png r2.png r3.png r4.png --brief brief.json > selection.json
@@ -11,7 +12,7 @@ python tools/cd.py select r1.png r2.png r3.png r4.png --brief brief.json > selec
 
 ## Brief contract
 
-`brief init` copies `brief-template.json` and records the description, without inventing intent. It refuses to overwrite a file. Fill the idea, feeling, audience, purpose and success before making roughs. Record assumptions explicitly in constraints; must_be_right holds the owner's non-negotiables. The template's empty lists mean **no fixed copy or counts**, not a completed brief. The check reports incomplete intent as unverified.
+`brief init` copies `brief-template.json` and records the description, without inventing intent. It refuses to overwrite a file. Fill the idea, feeling, audience, purpose and success before making roughs. Then run `python tools/cd.py load --brief brief.json` and read every file it lists before making or fixing; quote the matched media and rule IDs. Record assumptions explicitly in constraints; must_be_right holds the owner's non-negotiables. The template's empty lists mean **no fixed copy or counts**, not a completed brief. The check reports incomplete intent as unverified.
 
 Format width/height and safe_area_px are final rendered pixels, not print points or OCR glyph height. Set kind to fixed or screen. The template uses a 6% short-side text margin (LAY-5); update it when the format changes. Screens use their declared viewport, and a longer rendered document is reported as a format mismatch, not silently cropped.
 

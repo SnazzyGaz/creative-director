@@ -71,10 +71,10 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Source:** Lindgaard et al. [SRC-36]; Legge & Bigelow [SRC-114]; UI-6.
 
 ### LAY-7. Posters: read at distance, then up close
-- **What:** A poster has two reading distances: the far glance (one image and the headline) and the near read (details). Design the far layer first.
-- **Why:** People decide whether to approach from across the room; small type can't do that job.
-- **Check:** View the poster at about 10% of its size (roughly how a 50 cm-wide poster looks from 5 m). Do the image and headline still read? Is the detail text set together, not scattered?
-  **Signage and A-boards:** note the printed size and reading distances (a pavement board: headline and price from 3-5 m, body from about 1-1.5 m); convert each key line's cap height to millimetres at print size. A practical working minimum is cap height ≈ distance ÷ 250 (12-20 mm for 3-5 m). The sign industry's best-case figure, head-on in good light, is about distance ÷ 360; signs seen at an angle or in passing need far more, about distance ÷ 120 [SRC-179, SRC-180]. Report each line as "reads to X m".
+- **What:** A poster has two reading distances: the far glance (one image and the headline) and the near read (details). Design the far layer first. Read as a street poster, not a literary jacket: type that carries across the room, and a scene that matches the event's energy. Prefer a photograph of people over generic digital illustration unless the brief asks for illustration.
+- **Why:** People decide whether to approach from across the room; small type can't do that job. A solemn single image with quiet type is the usual jacket treatment.
+- **Check:** View the poster at about 10% of its size (a 50 cm poster seen from 5 m). Do the image and headline still read? Is the detail text grouped? Does it read as a street poster, not a book cover, and does the scene match the event?
+  **Signage and A-boards:** note the printed size and reading distances (a pavement board: headline and price from 3-5 m, body from about 1-1.5 m); convert each key line's cap height to millimetres at print size. A practical working minimum is cap height ≈ distance ÷ 250 (12-20 mm for 3-5 m). Best case, head-on in good light: distance ÷ 360; at an angle or in passing: about distance ÷ 120 [SRC-179, SRC-180]. Report each line as "reads to X m".
 - **Fix:** Enlarge the headline and simplify the image; group details into one block on the grid. On signage, cut words before shrinking the type that must read from the pavement.
 - **Grade:** Standard (sign-industry guidance) for the size rule; the two-distance test is craft.
 - **Source:** Müller-Brockmann [SRC-60]; CORE-1; United States Sign Council Foundation [SRC-179, SRC-180].
@@ -96,7 +96,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Source:** Adobe InDesign user guide (bleed, slug, printing) [SRC-131]; ask the printer for their spec, which overrides these defaults.
 
 ### LAY-10. Whitespace is distributed on purpose (squint for dead zones)
-- **What:** Every empty area is either a margin, a gap between groups, or deliberate focal space (room the subject looks or moves into, a quiet field that frames the one message). Related items sit closer to each other than to anything else, so each group reads as one unit. No empty band or block is much larger than the largest intended gap between groups unless it is deliberate and said so. After any image swap, crop change or regenerate, re-review the **whole** layout, not only the changed element: new imagery changes where the space is.
+- **What:** Every empty area is either a margin, a gap between groups, or deliberate focal space (room the subject looks or moves into, a quiet field that frames the one message). Related items sit closer to each other than to anything else, so each group reads as one unit. No empty band is much larger than the largest intended gap unless deliberate and said so. After any image swap, crop or regenerate, re-review the **whole** layout: new imagery moves the space.
 - **Why:** People group by nearness and shared region [SRC-175, SRC-176]; consistent gaps read as structure, a stray large gap as something missing [SRC-177, SRC-178]. This rule is the measure; the idea (active versus dead space) lives in COMP-23.
 - **Check:**
   1. **Measure rows:** list the empty horizontal bands between groups. Flag any band larger than about 1.5× the largest intended inter-group gap that isn't marked as deliberate.
@@ -148,7 +148,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Source:** NN/g on text over images and W3C failure F83 [SRC-260]; WCAG [SRC-3]; UI-6; LAY-6.
 
 ### LAY-16. Covers: title, image and author name each get their place, and the cover signals its genre
-- **What:** The title has its own clear zone that doesn't fight the focal image. The author name sits on the cover's axis (LAY-11), not tucked into a corner as an afterthought, and reads clearly: contrast measured on the worst pixels behind it, never left to busy texture such as grass, foliage or cloud (LAY-15). Type and image signal the genre and tone the book really has (EN-2 item 8).
+- **What:** The title has its own clear zone that doesn't fight the focal image. The author name sits on the cover's axis (LAY-11), not tucked in a corner, and reads clearly: contrast measured on the worst pixels behind it, never busy texture like grass or cloud (LAY-15). Type and image signal the genre and tone the book really has (EN-2 item 8). Covers may sit further from literal content than posters or screens if title, author and genre read.
 - **Why:** Covers are read at thumbnail first. In the blind test the owner marked down a title fighting the moon (S35), an author name tucked bottom-left (S46) and one lost in grass (S101), preferred a central title (S80), and read genre from styling (S40).
 - **Check:** At thumbnail, does the title read without competing? Is the author name on the axis, and does `tools/contrast.py` on its worst background pixels give ≥ 4.5:1 (≥ 3:1 large)? Name the genre the cover signals in two words: does it match the book?
 - **Fix:** Give the title a calm band; move the name onto the axis and a calm area or scrim, in the better of black or white (CV-10); match type and colour to the genre (TYPE-10).
@@ -156,7 +156,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Source:** LAY-11; LAY-15; TYPE-10; CV-10; `examples/blind-test/RESULTS.md`.
 
 ### LAY-17. Scanned information is plain, high contrast and lined up
-- **What:** Anything read at a distance or in passing (menus, signage, timetables, price lists, opening times) works best plain: one grid, high contrast, items and values lined up, sizes that read from where people stand (LAY-7). Plain is the aim here, not a lack of nerve; energy is a light pass at most (EN-1).
+- **What:** Anything read at a distance or in passing (menus, signage, timetables, price lists, opening times) works best plain: one grid, high contrast, items and values lined up, sizes that read from where people stand (LAY-7). Plain is the aim; energy is a light pass at most (EN-1).
 - **Why:** Reading distance sets the type size [SRC-179, SRC-180]; scanning favours clear headings and aligned items (LAY-14). E.g. a plain, high-contrast menu board beat a livelier one as "effective for its job" (S55, internal evidence, one judge).
 - **Check:** From the expected distance, can each item and its value be found in a few seconds? Do values align? Is decoration costing legibility?
 - **Fix:** One grid, more contrast, aligned values; cut decoration before shrinking type.
@@ -164,7 +164,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Source:** LAY-7; LAY-14; United States Sign Council Foundation [SRC-179, SRC-180].
 
 ### LAY-18. Multi-panel pieces: every panel checked, each one different, the set one flow
-- **What:** In a step-by-step sheet, timeline, comic strip, storyboard or icon set, every panel is checked on its own (anatomy, objects, text, order): one broken panel fails the whole piece, however clean the rest. Each panel or period shows what is specific to it (where the cuff sits, what the dial reads), with its own frame, colour band or icon; never the same picture repeated. Visible connectors (arrows, a path, a timeline spine) carry the eye from one to the next. People, objects and setting stay the same throughout. (Merges the former INF-3.)
+- **What:** In a step-by-step sheet, timeline, comic strip, storyboard or icon set, check every panel on its own (anatomy, objects, text, order): one broken panel fails the piece. Each panel shows what is specific to it (where the cuff sits, what the dial reads), with its own frame, colour band or icon; never one picture repeated. Connectors (arrows, a path, a timeline spine) carry the eye onward. People, objects and setting stay constant. (Merges the former INF-3.)
 - **Why:** Readers follow steps in order; one wrong step breaks the instruction. E.g. a broken third panel sank a readable hand-washing sheet (S43); one image repeated in every panel lost as "repetitive, wasteful" (S64); framing told periods apart where the other read "samey" (S78); transitional flow read better (S75); stable characters won (S59). Internal evidence, one judge.
 - **Check:** Crop each panel at 2-4x, one line per panel (CHAR-9 for hands): what does it show that the others don't? Same person, same object? Cover the labels: can you still tell the steps apart? Follow the connectors start to end without a jump.
 - **Fix:** Regenerate or redraw the failed panel only, then re-check the set (BRAND-6); give each step its own framing or colour; draw the path between them.
@@ -172,7 +172,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Source:** CHAR-9; FP-3; BRAND-6; `examples/blind-test/RESULTS.md`.
 
 ### LAY-19. Charts, maps and routes are drawn from the data in code (MUST-BE-RIGHT where numbers or a route carry the message)
-- **What:** Never trust an image model for numbers, bar lengths, scales or route geometry. Draw the chart or route from the data in code (`tools/datagraphic.py`, SVG or matplotlib), styled as part of the piece, never as a panel pasted on: the integration recipes and checks are INF-1 in [`infographics.md`](infographics.md), which every infographic loads. A loop route visibly closes at start = finish; every crossing of water or a road shows a bridge.
+- **What:** Never trust image models for numbers, bar lengths, scales or route geometry. Draw the chart or route from the data in code (`tools/datagraphic.py`, SVG or matplotlib), styled into the piece, never pasted on: recipes and checks are INF-1 in [`infographics.md`](infographics.md), which every infographic loads. A loop route visibly closes at start = finish; every crossing of water or a road shows a bridge.
 - **Why:** Distorted bars change how big readers judge a difference [SRC-336]. In batch 6 no generated chart was to scale (small bars overstated by up to 12.5 points) and neither route map closed its loop or showed its bridge; in batch 7 a generated donut was 8 points off.
 - **Check:** `datagraphic.py check-bars` on the final image: every bar within 2% of its data share (`--scale-max` for a visible track). Routes: the tool reports a closed loop and bridges = crossings; labels sit by their places, in order.
 - **Fix:** Redraw from the data; never edit generated bars.

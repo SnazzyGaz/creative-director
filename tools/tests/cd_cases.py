@@ -40,8 +40,37 @@ class FrontDoor(unittest.TestCase):
     def test_help(self):
         p = self.cli('--help')
         self.assertEqual(p.returncode, 0)
-        for word in ('brief', 'rule', 'check', 'select'):
+        for word in ('brief', 'rule', 'check', 'select', 'load'):
             self.assertIn(word, p.stdout)
+
+    def test_load_from_brief(self):
+        poster = dict(self.b)
+        poster['description'] = 'Harbor Night Market poster: a lantern over water'
+        self.write('poster.json', poster)
+        data = json.loads(self.cli('load', '--brief', self.root / 'poster.json').stdout)
+        self.assertEqual(data['schema_version'], 1)
+        self.assertIn('poster', data['matched'])
+        self.assertIn('LAY-7', data['rules'])
+        self.assertIn('modules/layout/README.md', data['files'])
+        self.assertIn('COMP-23', data['rules'])
+        self.assertIn('modules/composition/sitting-right.md', data['files'])
+
+        screen = dict(self.b)
+        screen['description'] = 'Bakery pickup confirmation'
+        screen['format'] = {'kind': 'screen', 'width': 390, 'height': 844}
+        self.write('screen.json', screen)
+        data = json.loads(self.cli('load', '--brief', self.root / 'screen.json').stdout)
+        self.assertIn('screen', data['matched'])
+        self.assertIn('LAY-10', data['rules'])
+        self.assertIn('COMP-23', data['rules'])
+
+        logo = dict(self.b)
+        logo['description'] = 'A one-colour logo for a survey firm'
+        self.write('logo.json', logo)
+        data = json.loads(self.cli('load', '--brief', self.root / 'logo.json').stdout)
+        self.assertIn('logo', data['matched'])
+        self.assertIn('LOGO-3', data['rules'])
+        self.assertIn('modules/brand/logo.md', data['files'])
 
     def test_init_and_no_overwrite(self):
         out = self.root / 'new.json'

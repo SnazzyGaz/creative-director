@@ -26,7 +26,7 @@ Load with the brand README when the job is to make or change a logo, symbol, mon
 - **What:** The mark reads at 16 and 32 px (favicon, tab, app icon), on a 1 cm stamp and across a building. Fine detail, thin strokes and small counters that fill in are drawn out, or a simplified small version is part of the system.
 - **Why:** "Think small" is a core trait [SRC-339]. Responsive logos simplify step by step as space shrinks [SRC-353]. Search engines show favicons from a square image, recommended larger than 48 px [SRC-368].
 - **Check:** Render at 16, 32 and 48 px and at 1 cm wide in print. Does it still read as itself, with no merged strokes or filled counters? Strokes at least about 1 px at 16 px.
-- **Fix:** Thicken strokes, open counters, drop secondary parts; draw a dedicated small version (often the symbol or initial alone).
+- **Fix:** Thicken strokes, open counters, drop secondary parts; draw a dedicated small version (often the symbol or initial alone). When thickening, keep the silhouette and proportions that carry the idea: a long mark should stay long. Making it short and heavy turns it into a different object.
 - **Grade:** Standard for the platform sizes; craft wisdom for the detail limits.
 - **Source:** Airey [SRC-339]; Harrison [SRC-353]; Google Search Central [SRC-368]; UI-5.
 

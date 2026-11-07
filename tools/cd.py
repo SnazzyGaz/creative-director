@@ -224,6 +224,90 @@ def select(a):
     return 0
 
 
+def haystack(brief):
+    parts = [brief.get(key, '') or '' for key in ('description', 'idea', 'feeling', 'audience', 'purpose', 'success')]
+    parts.extend(brief.get('constraints') or [])
+    parts.extend(brief.get('must_be_right') or [])
+    return ' '.join(str(p) for p in parts).lower()
+
+
+def has_word(text, word):
+    return re.search(r'(?<![a-z0-9])' + re.escape(word) + r'(?![a-z0-9])', text) is not None
+
+
+LOAD_HINTS = (
+    dict(id='logo', words=('logo', 'wordmark', 'mascot', 'favicon'),
+         files=('modules/brand/README.md', 'modules/brand/logo.md'),
+         rules=('LOGO-3', 'LOGO-5', 'LOGO-13', 'CORE-10'),
+         why='marks must survive at 16 px and on a stamp'),
+    dict(id='poster', words=('poster', 'flyer', 'signage', 'a-board'),
+         files=('modules/layout/README.md', 'modules/typography/README.md', 'modules/composition/README.md'),
+         rules=('LAY-7', 'COMP-14', 'TYPE-3', 'CORE-10'),
+         why='posters must read from across a room, not as a book jacket'),
+    dict(id='cover', words=('book cover', 'jacket', 'cover'),
+         files=('modules/layout/README.md', 'modules/typography/README.md'),
+         rules=('LAY-16', 'TYPE-10'),
+         why='covers need title, author and genre to read; they may sit further from literal content'),
+    dict(id='screen', words=('app screen', 'dashboard', 'interface'),
+         kinds=('screen',),
+         files=('modules/web-ui/README.md', 'modules/composition/sitting-right.md', 'modules/layout/README.md'),
+         rules=('COMP-23', 'LAY-10', 'CORE-11', 'UI-6'),
+         why='screens need distributed space, not a compacted cluster over dead space'),
+    dict(id='photo', words=('photograph', 'photoreal', 'photo', 'documentary'),
+         files=('modules/photo/README.md',),
+         rules=('PHOTO-4', 'PHOTO-7'),
+         why='generated or photoreal images need casting and tell checks'),
+    dict(id='people', words=('people', 'person', 'figure', 'crowd', 'faces'),
+         files=('modules/character/README.md',),
+         rules=('CHAR-9',),
+         why='any person or animal requires the anatomy gate'),
+)
+
+ALWAYS_FILES = ('modules/composition/sitting-right.md',)
+ALWAYS_RULES = ('CORE-11', 'COMP-19', 'COMP-23')
+
+
+def load_plan(brief):
+    text = haystack(brief)
+    kind = (brief.get('format') or {}).get('kind')
+    matched, files, rules, reasons = [], [], [], []
+    seen_files, seen_rules = set(), set()
+
+    def add(hint):
+        matched.append(hint['id'])
+        for path in hint['files']:
+            if path not in seen_files:
+                seen_files.add(path)
+                files.append(path)
+        for rid in hint['rules']:
+            if rid not in seen_rules:
+                seen_rules.add(rid)
+                rules.append(rid)
+        reasons.append(hint['why'])
+
+    for hint in LOAD_HINTS:
+        hit = any(has_word(text, word) for word in hint['words'])
+        if hint.get('kinds') and kind in hint['kinds']:
+            hit = True
+        if hit:
+            add(hint)
+    for path in ALWAYS_FILES:
+        if path not in seen_files:
+            files.append(path)
+    for rid in ALWAYS_RULES:
+        if rid not in seen_rules:
+            rules.append(rid)
+    reasons.append('delivery: broken-balance and dead-space checks apply to every piece')
+    return dict(
+        schema_version=1,
+        matched=matched,
+        files=files,
+        rules=rules,
+        reasons=reasons,
+        instruction='Read each file before making or fixing. Look up each rule with python3 tools/cd.py rule <ID>. Quote matched and rules in the critique. Skipping this list is how medium rules get missed.',
+    )
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     sub = ap.add_subparsers(dest='command', required=True)
@@ -241,6 +325,8 @@ def main():
     cp.add_argument('--observations', help='Count evidence bound to the current image SHA-256')
     rp = sub.add_parser('rule', help='Print the canonical definition of an existing rule')
     rp.add_argument('id')
+    lp = sub.add_parser('load', help='List modules and rules this brief requires, to read before making or fixing')
+    lp.add_argument('--brief', default='brief.json')
     sp = sub.add_parser('select', help='Prepare or validate a same-model fresh-context rough comparison')
     sp.add_argument('roughs', nargs='+')
     sp.add_argument('--brief', default='brief.json')
@@ -260,6 +346,9 @@ def main():
             if found is None:
                 raise ValueError('unknown rule ID: ' + a.id + '; see docs/RETIRED-IDS.md for merged IDs')
             print(f'<!-- {found[0]} -->\n{found[1]}')
+            return 0
+        if a.command == 'load':
+            emit(load_plan(read_brief(a.brief)))
             return 0
         return check(a) if a.command == 'check' else select(a)
     except (ValueError, OSError, KeyError, TypeError, subprocess.TimeoutExpired) as e:

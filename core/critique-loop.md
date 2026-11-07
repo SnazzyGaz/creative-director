@@ -38,12 +38,12 @@ Never infer a remake from a request for an edit. Unclear ask: unprompted hand-of
 
 ## 1. Idea, brief, roughs, pick
 
-- Say **the one idea and feeling first**. Create `brief.json` with `python3 tools/cd.py brief init 'description'`, then fill purpose, audience, format/size, fixed copy/counts, constraints, success and must-be-right (`tools/brief.md`). Do not mistake an empty template for an agreed brief. No brand input: `brand-intake.md`.
+- Say **the one idea and feeling first**. Create `brief.json` with `python3 tools/cd.py brief init 'description'`, then fill purpose, audience, format/size, fixed copy/counts, constraints, success and must-be-right (`tools/brief.md`). Do not mistake an empty template for an agreed brief. No brand input: `brand-intake.md`. Run `python3 tools/cd.py load --brief brief.json` and read every listed file before the first rough and each fix; quote the matched media and rule IDs.
 - Record intent (AES-0), each part [brief] or [inferred]. Protect must-keeps (CD-1, CD-5). Inference is not approval to add content.
-- On new work or an authorised reconception, make **4–8 structurally different roughs**, each with a one-line idea. Keep them cheap. A medium-specific exploration can start wider (e.g. logo thumbnails); select 4–8 developed roughs for comparison.
-- Compare head-to-head in a **fresh context of the same model**. Give it the brief and roughs, not the maker's rationale. Compare idea, feeling, hierarchy and must-keeps; state the visible difference and trade-off (AES-9). No second model or cross-model checker. `cd.py select` prepares a packet and validates a returned comparison; it does not call a model or prove context freshness.
+- On new work or an authorised reconception, make **4–8 structurally different roughs**, each with a one-line idea. Medium-specific exploration (e.g. logo thumbnails) may start wider, then narrow to 4–8.
+- Compare head-to-head in a **fresh context of the same model**, given the brief and roughs, not the maker's rationale. Compare idea, feeling, hierarchy and must-keeps; state the visible difference and trade-off (AES-9). No second model or cross-model checker. `cd.py select` prepares and validates a comparison packet; it calls no model.
 - Show the **top 2–3 to the owner of the work**, explaining what each gains and loses. Wait for a pick; **only the winner enters the fix loop**. No polishing all options.
-- Existing-work edits and consults do not trigger four new directions. Mark selection not applicable and preserve intent; get approval before widening the task.
+- Edits and consults do not trigger new directions; mark selection not applicable and get approval before widening the task.
 
 ## 2. Render
 
@@ -57,7 +57,7 @@ Do the five tests (`tools/look.py`), one factual line each: blur/squint (what le
 
 **Anatomy gate:** any person, hand or animal: crop hands, joins, faces and animal heads at 2–4x; trace and count, one PASS/FAIL line per crop (CHAR-9, `tools/anatomy_crops.py`). Whole-image viewing is not enough. Any fail blocks; repeat after figure edits.
 
-**Energy is intent-gated:** load `energy-pass.md` only when the agreed feeling or purpose calls for energy, eye-catch or persuasion. Name the brief line and scope (full/structure/light). Calm, restrained and neutral work may skip it, regardless of medium. Never turn a quiet brief louder to complete a ritual.
+**Energy is intent-gated:** load `energy-pass.md` only when the agreed feeling or purpose calls for energy, eye-catch or persuasion. Name the brief line and scope (full/structure/light). Calm or neutral work may skip it. Never turn a quiet brief louder to complete a ritual.
 
 Before delivery, the *Sitting right* pass (COMP-19 to COMP-25, `modules/composition/sitting-right.md`): rotate 180°, cover each half, gap measure, balance, edge/alignment sweep. Flag accidents, ask “intended?”. Use counterweight or firmer asymmetry; never centre by default.
 
@@ -86,7 +86,7 @@ Before any change, name **one intervention level and why**:
 - **rebuild**: remake production to realise the approved idea reliably.
 - **explore**: a reversible test, not a required correction.
 
-This level is separate from execution ([edit] or [regenerate]); neither silently grants permission to change the brief. Preserve subject, mood, palette and must-keeps. At most three changes per round; blockers first, smallest effective intervention. Check each change actually applied on a fresh render. After image swaps, review the whole layout (LAY-10); after figure changes, repeat anatomy. Make aesthetic changes one or two at a time; compare and re-run measurements (AES-9, AES-10).
+This level is separate from execution ([edit] or [regenerate]); neither silently grants permission to change the brief. Preserve subject, mood, palette and must-keeps (CD-5). If the owner of the work asked to change only one part, change only that, keeping type, colour and arrangement; do not regenerate the whole piece. At most three changes per round; blockers first, smallest effective intervention. Check each change applied on a fresh render. After image swaps, review the whole layout (LAY-10); after figure changes, repeat anatomy. Make aesthetic changes one or two at a time; compare and re-run measurements (AES-9, AES-10).
 
 ### FLOW-2. Apply every signed-off point
 
@@ -102,12 +102,12 @@ Three blockers, one whole-piece failure, or unusable work: `take-over.md`. Say i
 
 ## 6. Compare and stop
 
-Compare latest, previous and original for this brief, including the cost of a change. Swap left/right when preference is marginal. **“The original is better” is a valid verdict and stop**, including an earlier rough: revert, preserve it, explain why. Never repair it merely to justify a critique. If that original still has blockers, name them; preference does not clear delivery gates.
+Compare latest, previous and original for this brief, including the cost of a change. Swap left/right when preference is marginal. **“The original is better” is a valid verdict and stop**, including an earlier rough: revert, preserve it, explain why. If that original still has blockers, name them; preference does not clear delivery gates.
 
-Stop when no blockers remain and top improvements are done; the round is not clearly better; the remainder is taste; the next change alters an approved brief; or round 3 for routine work (5 maximum). Report rather than polish. Label verdicts self-judged; the owner decides taste.
+Stop when no blockers remain and top improvements are done; the round is not clearly better; the remainder is taste; the next change alters an approved brief; or round 3 for routine work (5 maximum). Label verdicts self-judged; the owner decides taste.
 
 ### FLOW-3. Re-check and deliver the result, not an unapplied critique
 
-On the final render verify every signed-off point. QA: construction/light; anatomy; type/contrast; whitespace and Sitting right; official/invented marks; real-subject crops; exact copy/counts/facts; no additions; neutral whites; intent-gated energy or “skipped: brief reason”. Signage adds viewing distance (LAY-7); a series adds BRAND-6. See the blocker list above for medium-specific gates.
+On the final render verify every signed-off point. QA: construction/light; anatomy; type/contrast; whitespace and Sitting right; official/invented marks; real-subject crops; exact copy/counts/facts; no additions; neutral whites; intent-gated energy or “skipped: brief reason”; the `cd.py load` list quoted and those files read. Signage adds viewing distance (LAY-7); a series adds BRAND-6. See the blocker list above for medium-specific gates.
 
 Result first, then one **done / not done + evidence/reason** line per point. Include latest and previous render, what changed, what remains and why, and owner questions. A favourable comparison is not evidence that an unapplied fix was done.

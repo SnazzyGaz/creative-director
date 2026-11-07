@@ -14,6 +14,11 @@
 
 ## Unreleased
 
+**Required module load, and notes from a v0.10 test drive.** Not yet released.
+
+- **`cd.py load --brief`.** Prints the modules and rule IDs a filled brief requires. Making or fixing without reading that list is now marked incomplete in `AGENTS.md` and the critique loop. The which-modules table was already there; this is the step that applies it.
+- **Owner notes written into existing rules, no new IDs:** thicken a mark without changing its silhouette (LOGO-3); if the owner asks to change one part, treat the rest as must-keeps (CD-5 and the fix loop); event posters should read from the street, not as a book jacket, and match the event's energy (LAY-7); book covers may sit further from literal content (LAY-16); a polished cinematic finish counts as a generated-photo tell (PHOTO-7).
+
 Lookbook batches 13 and 14, synced from the breeder with `tools/lookbook_sync.py`. No rule changes; not yet released.
 
 - **Looks:** 368 live, up from 320. 48 added, all established: LB-235 to LB-282, including modern genre looks such as brass-gear steampunk (LB-259), rain-alley cyberpunk (LB-263) and kitchen-garden cottagecore (LB-273). Nothing retired.

@@ -30,9 +30,9 @@ Keep it light. These are defaults, not blockers, except CD-7, which is on the MU
 - **Check:** This is how the template's Fix lines are already written. Label findings rule-backed (ID), intent-backed (brief line) or exploratory, each with provenance and confidence. Choose the intervention level before changing work (`critique-loop.md`).
 
 ## CD-5. Protect the idea through every round
-- **What:** Each fix, and especially a take-over rework, keeps the one idea and the must-keeps from CD-1. After each round, re-read the brief.
+- **What:** Each fix, and especially a take-over rework, keeps the one idea and the must-keeps from CD-1. After each round, re-read the brief. If the owner of the work asks to change only one part (the photograph, a stroke weight), treat everything they did not name as a must-keep. Do not regenerate the whole piece and rewrite type, colour or arrangement along the way.
 - **Why:** Directors guard the core idea against compromise [SRC-87, SRC-89, SRC-93]. In the stress tests, a rework fixed the perspective but quietly dropped part of the subject (`examples/technical-drawing-still-life/`).
-- **Check:** Is anything in the brief's must-keeps missing or changed? If so, flag it as CD-5, ranked first.
+- **Check:** Is anything in the brief's must-keeps missing or changed? If so, flag it as CD-5, ranked first. Did a revision change something that was not asked for, such as type arrangement, palette or lockup proportions?
 
 ## CD-6. Done means the brief is met
 - **What:** Stop when the work meets the CD-1 criteria with no blockers. If the next change serves taste rather than the brief or audience, it's done. “The original is better” is a valid verdict: revert and stop, reporting any remaining blockers.
