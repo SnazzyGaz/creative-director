@@ -90,7 +90,7 @@ Why it matters: people are expert face and body readers. Small errors that would
 - **Source:** Goldfinger, *Animal Anatomy for Artists* [SRC-152]; Kamali et al. [SRC-150].
 
 ### CHAR-11. Props: built whole, used as the brief says (MUST-BE-RIGHT where the brief names the prop or the action)
-- **What:** A prop a character holds, wears or uses is complete and plausible as an object (a sock is one whole sock, a cup has its handle), and the character does with it what the brief says: eats, chews, reads, throws, not merely holds. A defining action is the story; a held prop is a pose.
+- **What:** A prop a character holds, wears or uses is complete and plausible as an object (a sock is one whole sock, a cup has its handle), and the character does with it what the brief says: eats, chews, reads, throws, not merely holds. A defining action is the story; a held prop is a pose. At a close crop the object and action must make physical sense: parts sit where they would on the real thing, and the picture does not invent sloppy nonsense to fill a space.
 - **Why:** Generators make objects that break apart and default to "holding" whatever the verb. In batch 8 a creature brief said it eats lost socks: the with-skill side's sock was broken (S108) and the creature held its sock rather than chewing it (B90). Internal evidence, one judge.
 - **Check:** Name each prop and the verb the brief gives it. Crop the prop at 2-4x: is it one whole, believable object? Does the pose show the verb, or only possession?
 - **Fix:** Edit the region with the object and the action stated ("chewing the end of one whole striped sock"); regenerate if the object stays broken. Then rerun the anatomy pass (grip, A5).

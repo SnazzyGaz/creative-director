@@ -38,32 +38,32 @@ Never infer a remake from an edit request. Unclear ask: unprompted hand-off. “
 
 ## 1. Idea, brief, roughs, pick
 
-- Say **the one idea and feeling first**. Create `brief.json` with `python3 tools/cd.py brief init 'description'`, then fill purpose, audience, format/size, fixed copy/counts, constraints, success and must-be-right (`tools/brief.md`). Do not mistake an empty template for an agreed brief. No brand input: `brand-intake.md`. Run `python3 tools/cd.py load --brief brief.json` and read every listed file before the first rough and each fix; quote the matched media and rule IDs.
+- Say **the one idea, feeling and tone first** (what kind of piece it is). Let that shape type, colour, energy and adornment; no single tidy default. Create `brief.json` with `python3 tools/cd.py brief init 'description'`, then fill purpose, audience, format/size, fixed copy/counts, constraints, success and must-be-right (`tools/brief.md`). Do not mistake an empty template for an agreed brief. No brand input: `brand-intake.md`. Run `python3 tools/cd.py load --brief brief.json` and read every listed file before the first rough and each fix; quote the matched media and rule IDs.
 - Record intent (AES-0), each part [brief] or [inferred]. Protect must-keeps (CD-1, CD-5). Inference is not approval to add content.
-- On new work or an authorised reconception, make **4–8 structurally different roughs**, each with a one-line idea. Logo thumbnails may start wider, then narrow to 4–8.
-- Compare head-to-head in a **fresh context of the same model**, given the brief and roughs, not the maker's rationale. Compare idea, feeling, hierarchy and must-keeps; state the visible difference and trade-off (AES-9). No second model or cross-model checker. `cd.py select` prepares and validates a comparison packet; it calls no model.
+- On new work or an authorised reconception, make **4–8 structurally different roughs**, each with a one-line idea.
+- Compare head-to-head in a **fresh context of the same model**, given the brief and roughs, not the maker's rationale. Compare idea, feeling, tone, hierarchy and must-keeps; state the visible difference and trade-off (AES-9). `cd.py select` prepares the packet; no second-model checker.
 - Show the **top 2–3 to the owner of the work**, explaining what each gains and loses. Wait for a pick; **only the winner enters the fix loop**.
 - Edits and consults do not trigger new directions; mark selection not applicable and get approval before widening the task.
 
 ## 2. Render
 
-Render the winner at actual use size plus a 150–200 px thumbnail; keep each round. UI: phone, desktop, 200% zoom (`tools/shot.sh`). 3D: measured checks and a contact sheet. Film: review in motion and on sampled frames.
+Render the winner at use size plus a 150–200 px thumbnail; keep each round. UI: phone, desktop, 200% zoom (`tools/shot.sh`). 3D: a contact sheet. Film: review in motion and on sampled frames.
 
 ## 3. Check, then look
 
 `python3 tools/cd.py check FILE --brief brief.json` emits JSON and delegates to `autocheck.py` (contrast, type, spacing, edges, space, balance, whites). Quote numbers. FAILs need fixing; FLAG means “intended?”, not a reason to centre. SKIP is missing evidence, never clearance. Images need OCR/transcription, text regions for contrast, and manual type-size review; fixed object counts need labelled crop/count evidence. Without tools, check by eye and say so.
 
-Do the five tests (`tools/look.py`), one factual line each: blur/squint (what leads), thumbnail (what survives), mirror (drawing/weight), luminance greyscale (value groups), crop/edges (contacts and stray brights). Basis: hierarchy [SRC-1], value [SRC-5], mirror [SRC-7].
+Do the five tests (`tools/look.py`), one factual line each: blur/squint (what leads), thumbnail (what survives), mirror (drawing/weight), luminance greyscale (value groups), crop/edges (contacts and stray brights).
 
 **Anatomy gate:** any person, hand or animal: crop hands, joins, faces and animal heads at 2–4x; trace and count, one PASS/FAIL line per crop (CHAR-9, `tools/anatomy_crops.py`). Whole-image viewing is not enough. Any fail blocks; repeat after figure edits.
 
-**Energy is intent-gated:** load `energy-pass.md` only when the agreed feeling or purpose calls for energy, eye-catch or persuasion. Name the brief line and scope (full/structure/light). Calm or neutral work may skip it. Never turn a quiet brief louder to complete a ritual.
+**Energy follows the named tone:** load `energy-pass.md` when the feeling, purpose or kind of piece calls for life. Name the genre and scope (full/structure/light). A quiet literary or official brief may skip. Never turn a quiet brief louder to complete a ritual.
 
 Before delivery, the *Sitting right* pass (COMP-19 to COMP-25, `modules/composition/sitting-right.md`): rotate 180°, cover each half, gap measure, balance, edge/alignment sweep. Flag accidents, ask “intended?”. Use counterweight or firmer asymmetry; never centre by default.
 
 ## 4. Critique (`critique-template.md`)
 
-Brief check first: answer the purpose, keep must-keeps. Record what works. Rank at most five findings by effect, structure before surface. Each finding has:
+Judge composition, colour, lighting, readability, purpose and the design rules together; a passed measurement is not the whole job. Keep must-keeps. Record what works. Rank at most five findings by effect, structure before surface. Each finding has:
 
 - **rule-backed**: cite a broken existing rule ID and threshold;
 - **intent-backed**: cite the conflicting brief line, without inventing a rule;

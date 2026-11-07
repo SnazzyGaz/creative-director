@@ -23,7 +23,7 @@ step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 4–8 
   1. **What it is:** the type of piece, the medium, and where and how it is seen (size, distance, time spent on it). Design for that real medium and use: a printed poster, a feed post, a board read from the pavement. Don't design for incidental framing, such as how a camera roll, screenshot or chat preview happened to crop the reference. Don't infer constraints from how a reference image was captured (its crop, angle, glare or resolution).
   2. **Who it is for:** the people who use it, and what they already know.
   3. **Its one job:** what someone should do, know or feel afterwards, in one sentence.
-  4. **The feeling:** the tone it should carry, in three words or fewer.
+  4. **The feeling:** the tone and kind of piece (a thriller, a comedy, a children's book, a play, a fete, a concert and what kind of music).
   5. **The given facts:** the text, data, names, dates, logos and constraints that were supplied, listed word for word.
   6. **What must survive:** the facts, the official marks (FP-8), anything the owner has asked to keep, and any constraint in the brief. Separately, list what was incidental in the old version: its layout, styling, extra copy and default choices.
   7. **Success:** how you'll judge it done, tied to its use (e.g. "the date reads from 3 m").

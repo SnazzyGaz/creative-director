@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.10.2 (7 November 2026)
+
+**Tone and genre shape the piece; leftover space gets a job; judge the whole picture.**
+
+- **Name the tone.** The brief's feeling names the kind of piece (a thriller, a comedy, a children's book, a play, a fete, a concert and what kind of music). That governs type, colour, energy and adornment, instead of one tidy default. Written into the loop, `tools/brief.md`, first-principles (FP-2) and the energy pass. No new required brief field.
+- **Energy follows the named genre.** A children's book, comedy, fete or concert poster invokes the energy pass even without the word "energy". Children's work can be more energetic in type and adornment without inventing extra words (ILL-17, EN-3). A quiet literary or official brief may still skip.
+- **Judge the whole picture.** After generate-by-rules and amend-by-rules, judge composition, colour, lighting, readability, purpose and the design rules together. A passed measurement is not the whole job.
+- **Leftover space.** If type moved for contrast and left a dead field, give that field a job (a bigger title there is valid) or close it; do not regenerate art that already works (COMP-23, LAY-15).
+- **Physical sense.** At a close crop, objects and actions must make physical sense; the picture must not invent sloppy nonsense to fill a space (CHAR-11).
+- **Budget.** Always-on 5,995 / 6,000 after the loop pointer was shortened to fit. Details live in on-demand files (energy-pass, brief notes, first-principles, CHAR-11, ILL-17, COMP-23, LAY-15). Skill folder regenerated from root files. No README hero swap, parked lookbook batches, eval rebuild or new rule IDs.
+
 ## v0.10.0 (7 November 2026)
 
 **Idea first, roughs then pick; evidence without invented authority.** This release changes the workflow and adds an in-repo front door. It does not claim a new evaluation win.

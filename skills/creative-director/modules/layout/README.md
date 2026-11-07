@@ -143,7 +143,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **What:** Place text on an image only over a calm, even area, or add a scrim, overlay or panel. Check contrast against the *worst* part of the background behind the text, not its average.
 - **Why:** Busy, uneven backgrounds make text hard to read and can fail contrast at some letters while passing on average [SRC-260]. W3C lists text over background images that fails contrast as a common failure [SRC-260].
 - **Check:** Crop the region behind each line of text. Sample its lightest and darkest pixels (for light text, the lightest pixel matters most; for dark text, the darkest) and run `tools/contrast.py` against the text colour: ≥ 4.5:1 (≥ 3:1 for large text). Squint: is the area behind the text busy (strong edges, many tones)?
-- **Fix:** Re-crop or regenerate so type and subject share the frame; or add a scrim or panel. Do not park type for contrast and leave a large unused slab (COMP-23).
+- **Fix:** Give the leftover field a job (a bigger title there is valid) or close it; or add a scrim or panel. Do not regenerate art that already works (COMP-23).
 - **Grade:** Well supported (WCAG; usability research).
 - **Source:** NN/g on text over images and W3C failure F83 [SRC-260]; WCAG [SRC-3]; UI-6; LAY-6.
 
