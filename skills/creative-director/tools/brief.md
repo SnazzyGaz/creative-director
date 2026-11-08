@@ -1,4 +1,4 @@
-# Structured brief and the in-repo front door (v0.11.3)
+# Structured brief and the in-repo front door (v0.11.4)
 
 Run from the repo or the installed skill folder; no service, account or packaged CLI is needed.
 

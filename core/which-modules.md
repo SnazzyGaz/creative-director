@@ -26,7 +26,7 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 | Clip made or altered by a video model | film (+ `generated.md`), character, brand for any lettering |
 | Mood, energy or a distinctive feel; correct but flat; choosing between versions | aesthetic-critique (+ the medium's modules, which still decide blockers) |
 | From-scratch concepts; owner asks for variations or more directions; correct but generic; naming a described vibe, screens included | lookbook (at most one concept in three on first roughs, 20-50%, LOOK-1; on variations: unbeled control + one cluster of 2–3 relatives splitting 20-50% + one wildcard at hint; never on fixes or edits) |
-| Feeling, purpose or kind of piece calls for life (a children's book, a fete, a concert, a concert poster, a comedy), once checks pass | `core/energy-pass.md`: quote the tone or genre, choose full/structure/light; a quiet literary or official brief can skip the push; the EN-5 ceiling still applies |
+| Feeling, purpose or kind of piece calls for life (a children's book, a fete, a concert, a concert poster, a comedy), once checks pass | `core/energy-pass.md`: quote the tone or genre, choose full/structure/light; a quiet literary or official brief can skip the push; the EN-5 ceiling and EN-6 still apply |
 | Just "bolder", "quieter" or "distill" | `core/commands.md` + the medium's modules |
 | Remake from scratch ("redo", "rejig", "start over", "reimagine") | `core/first-principles.md` + the medium's modules + aesthetic-critique (AES-9); brand if it carries a mark |
 | Writing, website copy, web copy, email, email reply, email replies, reply, replies, newsletter, newsletters, blurb, blurbs, about page, about text, microcopy, empty state, empty states, error message, error messages, button copy, buttons/empty/error copy, supporting copy, filler copy, supporting/filler copy, draft copy, prose; a visual piece still needs copy drafted | writing (WRITE-1 to 11; CD-7 still checks fixed rendered strings, AES-10 still forbids extra claims) |
@@ -60,13 +60,13 @@ What each module covers (`modules/<name>/README.md`).
 
 1. Core hierarchy and value (does it read at all?)
 2. Blockers (perspective, proportion, anatomy pass, light, broken flows, failing contrast): the MUST-BE-RIGHT list in `core/critique-loop.md`.
-3. Energy pass from the named tone or genre (`energy-pass.md`), after accuracy and clarity. Otherwise skip the push with a reason; the EN-5 ceiling still applies.
+3. Energy pass from the named tone or genre (`energy-pass.md`), after accuracy and clarity. Otherwise skip the push with a reason; the EN-5 ceiling and EN-6 still apply.
 4. Composition and layout (`composition/` COMP-1 to 18, with the *Sitting right* pass COMP-19 to 25 in `sitting-right.md` last before delivery; `colour-value/` CV-1 to 11).
 5. Surface: edges, texture, micro-spacing, polish.
 
 ## Token cost per module
 
-Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.11.3, 8 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,000 (7,500 with template); AGENTS 1,200, principles 2,700, loop 3,000, template 1,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
+Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.11.4, 8 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,000 (7,500 with template); AGENTS 1,200, principles 2,700, loop 3,000, template 1,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
 
 | File or set | Tokens |
 |---|---|

@@ -96,7 +96,7 @@ Apply to every kind of visual work as an edit pass after the idea, not a recipe 
 
 Myths (golden ratio, thirds as a law, colour-emotion claims) are in `evidence.md`. Never use them as reasons.
 
-## The 40 always-on rules (v0.11.3)
+## The 40 always-on rules (v0.11.4)
 
 Keep CORE-1..11 (11), FLOW-1..5 in `critique-loop.md` (5), and these 24 reminders: 40 existing IDs, not new rules or grades. Full wording and sources: `python3 tools/cd.py rule <ID>`. Other rules load by ID or task (`which-modules.md`); lite stays separate.
 

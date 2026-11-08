@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.11.4 (8 November 2026)
+
+**Match graphic ambition to the job, so restraint does not flatten everything into a typed card.**
+
+- **Graphic ambition.** EN-6: restraint (EN-5) is not a reason to strip a piece down to well-set type. Some jobs should stay typographically lean, such as a basic wine-bar menu. Posters, covers, labels and similar surfaces that have room for art still need a visual idea worth looking at. Take the weight the job can carry, not a remake of another piece that happened to land. Restraint means not gilding that idea, not omitting it.
+- **Companion edits.** EN-5 says the attractive-slop ceiling is not permission to omit a visual idea. TYPE-15 says fewest marks is not no graphic art, and points at EN-6. AGENTS.md, the critique loop and which-modules note that EN-6 still applies when the energy push is skipped.
+- **Budget.** Always-on 5,999 / 6,000 after the EN-6 pointers. Skill folder and prompt bundles regenerated.
+
+
 ## v0.11.3 (8 November 2026)
 
 **Stop two clicks before attractive slop; name over-textured type and food illustration as slop, not genre energy.**
