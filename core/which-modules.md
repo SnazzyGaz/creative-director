@@ -1,6 +1,6 @@
 # Which modules to load
 
-Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus `core/critique-template.md` when writing a critique). The 40-rule selection is listed in `principles.md`; full rules are available through `python3 tools/cd.py rule <ID>`. Then add only what the task needs: loading everything wastes attention. After the brief is filled, run `python3 tools/cd.py load --brief FILE` and read every file it lists. Do not skip this because the always-on set already mentions balance or size: the medium's full rules still need loading. A module's `notes.md` is optional depth. Not sure? Use the module table in `AGENTS.md`. Merged or retired rule IDs: `docs/RETIRED-IDS.md`.
+Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus `core/critique-template.md` when writing a critique). The 40-rule selection is listed in `principles.md`; full rules are available through `python3 tools/cd.py rule <ID>`. The front door routes from the Task/Load table below, using the required `medium`, the explicit `has_people_or_animals` gate and named intent for energy. Then add only what the task needs: loading everything wastes attention. After the brief is filled, run `python3 tools/cd.py load --brief FILE` and read every file it lists. Do not skip this because the always-on set already mentions balance or size: the medium's full rules still need loading. A module's `notes.md` is optional depth. Not sure? Use the module table in `AGENTS.md`. Merged or retired rule IDs: `docs/RETIRED-IDS.md`.
 
 | Task | Load |
 |---|---|
@@ -18,7 +18,7 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 | Web page, landing page, pricing, app screen, dashboard (how it looks) | web-ui (UI-12 for mood); `core/energy-pass.md` only if intent calls for energy (+ typography; brand; lookbook, optional, for the direction) |
 | Sign-up, checkout, settings, multi-step task (how it works) | ux (+ web-ui); energy pass skipped |
 | A whole product or prototype | web-ui, ux |
-| 3D model, prop, asset, scene | 3d (+ illustration for a beauty render) |
+| 3D model, 3D render, prop, asset, scene | 3d (+ illustration for a beauty render) |
 | 3D as reference for a drawing | 3d, technical-drawing |
 | Logo, mascot, icon set | brand (BRAND-9: one step past the literal; new or changed marks: `brand/logo.md`, LOGO-1 to 16; `logo-notes.md` for types, moods and trends; `mark-making.md` for what to show, reduction and construction; `clever-marks.md` for double readings), illustration, web-ui (size and contrast) |
 | Storyboard, comic, carousel, image sequence | illustration (ILL-7; `notes.md` for transitions), LAY-18 (+ film `story.md`, `review.md` when it plans video shots) |
@@ -26,10 +26,10 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 | Clip made or altered by a video model | film (+ `generated.md`), character, brand for any lettering |
 | Mood, energy or a distinctive feel; correct but flat; choosing between versions | aesthetic-critique (+ the medium's modules, which still decide blockers) |
 | From-scratch concepts; owner asks for variations or more directions; correct but generic; naming a described vibe, screens included | lookbook (at most one concept in three on first roughs, 20-50%, LOOK-1; on variations: unbeled control + one cluster of 2–3 relatives splitting 20-50% + one wildcard at hint; never on fixes or edits) |
-| Feeling, purpose or kind of piece calls for life (a children's book, a fete, a concert poster, a comedy), once checks pass | `core/energy-pass.md`: quote the tone or genre, choose full/structure/light; a quiet literary or official brief can skip regardless of medium |
+| Feeling, purpose or kind of piece calls for life (a children's book, a fete, a concert, a concert poster, a comedy), once checks pass | `core/energy-pass.md`: quote the tone or genre, choose full/structure/light; a quiet literary or official brief can skip regardless of medium |
 | Just "bolder", "quieter" or "distill" | `core/commands.md` + the medium's modules |
 | Remake from scratch ("redo", "rejig", "start over", "reimagine") | `core/first-principles.md` + the medium's modules + aesthetic-critique (AES-9); brand if it carries a mark |
-| Website copy, email replies, newsletters, blurbs, about text, buttons/empty/error copy, supporting/filler copy; a visual piece still needs copy drafted | writing (WRITE-1 to 11; CD-7 still checks fixed rendered strings, AES-10 still forbids extra claims) |
+| Writing, website copy, web copy, email, email reply, email replies, reply, replies, newsletter, newsletters, blurb, blurbs, about page, about text, microcopy, empty state, empty states, error message, error messages, button copy, buttons/empty/error copy, supporting copy, filler copy, supporting/filler copy, draft copy, prose; a visual piece still needs copy drafted | writing (WRITE-1 to 11; CD-7 still checks fixed rendered strings, AES-10 still forbids extra claims) |
 | Photograph or photoreal image, shot or generated (portrait, product, food, lifestyle, documentary) | photo (PHOTO-1 to 7; PHOTO-7 tells pass for generated photos), character for people (CHAR-9 gate), illustration for staging (+ brand for any lettering; ILL-12 for food) |
 | Image from an AI image model | illustration, technical-drawing; photo when it should read as a photograph; brand for any lettering (BRAND-8); character for people or animals (CHAR-9 gate); exact copy and counts (CD-7) |
 
@@ -66,11 +66,11 @@ What each module covers (`modules/<name>/README.md`).
 
 ## Token cost per module
 
-Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.11.0, 8 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,000 (7,500 with template); AGENTS 1,200, principles 2,700, loop 3,000, template 1,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
+Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.11.1, 8 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,000 (7,500 with template); AGENTS 1,200, principles 2,700, loop 3,000, template 1,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
 
 | File or set | Tokens |
 |---|---|
-| `AGENTS.md` (entry point, always) | 865 |
+| `AGENTS.md` (entry point, always) | 901 |
 | `core/principles.md` (always) | 2,541 |
 | `core/critique-loop.md` (always) | 2,525 |
 | `core/critique-template.md` (when writing a critique) | 1,165 |
@@ -80,7 +80,7 @@ Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/chec
 | `core/first-principles.md` (remake from scratch) | 3,331 |
 | `core/brand-intake.md` (no brand input) | 775 |
 | `core/evidence.md` (before claiming people prefer something) | 2,961 |
-| `core/which-modules.md` (this file) | 2,849 |
+| `core/which-modules.md` (this file) | 3,174 |
 | `core/interaction-flow.md` (pointer and diagram only) | 723
 | `core/take-over.md` (work looks broken: take over or nudge, FLOW-5) | 241 |
 | `modules/3d/` | 1,896 |

@@ -24,7 +24,7 @@ class FrontDoor(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
         self.b = json.loads(cd.BRIEF.read_text())
-        self.b.update(idea='One opening', feeling='Quiet', audience='Visitors', purpose='Invite', success='Date reads')
+        self.b.update(medium='poster', idea='One opening', feeling='Quiet', audience='Visitors', purpose='Invite', success='Date reads')
         self.b['format'].update(width=800, height=800)
         self.brief = self.write('brief.json', self.b)
         self.roughs = [self.write(f'r{i}.png', 'rough') for i in range(4)]
@@ -65,6 +65,7 @@ class FrontDoor(unittest.TestCase):
         self.assertIn('COMP-23', data['rules'])
 
         logo = dict(self.b)
+        logo['medium'] = 'logo'
         logo['description'] = 'A one-colour logo for a survey firm'
         self.write('logo.json', logo)
         data = json.loads(self.cli('load', '--brief', self.root / 'logo.json').stdout)
@@ -76,7 +77,8 @@ class FrontDoor(unittest.TestCase):
         for description in ('Website copy for an about page',
                             'An email reply to a customer',
                             'A poster with supporting copy to draft',
-                            'Microcopy for empty states and error messages'):
+                            'Microcopy for empty states and error messages',
+                            'A reply to a customer', 'Replies to supporters'):
             with self.subTest(description=description):
                 brief = dict(self.b, description=description)
                 path = self.write('writing.json', brief)
@@ -95,7 +97,11 @@ class FrontDoor(unittest.TestCase):
     def test_init_and_no_overwrite(self):
         out = self.root / 'new.json'
         self.assertEqual(self.cli('brief', 'init', 'One idea', '--out', out).returncode, 0)
-        self.assertEqual(json.loads(out.read_text())['description'], 'One idea')
+        initial = json.loads(out.read_text())
+        self.assertEqual(initial['description'], 'One idea')
+        self.assertEqual(initial['medium'], '')
+        self.assertIs(initial['has_people_or_animals'], False)
+        self.assertEqual(self.cli('load', '--brief', out).returncode, 2)
         self.assertEqual(self.cli('brief', 'init', '--out', out).returncode, 2)
         self.assertEqual(json.loads(out.read_text())['description'], 'One idea')
 
@@ -134,7 +140,7 @@ class FrontDoor(unittest.TestCase):
         self.assertEqual(cd.copy_check(self.b, None, 'fixture')['status'], 'SKIP')
 
     def test_invalid_briefs_json(self):
-        for change in ({'schema_version': 4}, {'format': []}, {'safe_area_px': -1}, {'copy': [{'text': 'x', 'count': -1}]}, {'constraints': 'no'}):
+        for change in ({'medium': ''}, {'medium': 3}, {'has_people_or_animals': 1}, {'has_people_or_animals': 'false'}, {'schema_version': 4}, {'format': []}, {'safe_area_px': -1}, {'copy': [{'text': 'x', 'count': -1}]}, {'constraints': 'no'}):
             b = copy.deepcopy(self.b)
             b.update(change)
             bad = self.write('bad.json', b)
@@ -179,7 +185,7 @@ class FrontDoor(unittest.TestCase):
         if not complete:
             b['idea'] = ''
         brief = self.write('mock.json', b)
-        a = cd.argparse.Namespace(target=str(self.roughs[0]), brief=brief, text_box=[], no_ocr=False, ocr_text=None, observations=observations)
+        a = cd.argparse.Namespace(target=str(self.roughs[0]), brief=brief, boxes=None, text_box=[], no_ocr=False, ocr_text=None, observations=observations)
         def helper(cmd, **kwargs):
             Path(cmd[cmd.index('--json') + 1]).write_text(json.dumps(dict(size=[800, 800], checks=[dict(id=i, status=helper_status) for i in ('contrast', 'text-size') ])))
             return subprocess.CompletedProcess(cmd, 0, '', '')
@@ -202,7 +208,7 @@ class FrontDoor(unittest.TestCase):
             self.assertFalse(r['passed'])
 
     def test_safe_area_and_copy_failures(self):
-        for kwargs, cid in (({'boxes': [[1, 100, 300, 150]]}, 'safe-area'), ({'text': 'Opon'}, 'copy')):
+        for kwargs, cid in (({'boxes': [[1, 100, 300, 150]]}, 'safe-area'),):
             code, r = self.mock_check(**kwargs)
             self.assertEqual(code, 1)
             self.assertEqual(next(c for c in r['checks'] if c['id'] == cid)['status'], 'FAIL')
@@ -224,10 +230,166 @@ class FrontDoor(unittest.TestCase):
         with patch.object(cd.shutil, 'which', return_value='/usr/bin/tesseract'), patch.object(cd.subprocess, 'run', return_value=subprocess.CompletedProcess([], 0, header + rows, '')):
             text, boxes, source = cd.ocr_image(self.roughs[0])
         self.assertEqual(text, 'Open now.')
-        self.assertEqual(boxes, [[100, 100, 130, 120], [140, 100, 160, 120]])
+        self.assertEqual(boxes, [[100, 100, 160, 120]])
         self.assertIn('tesseract', source)
         with patch.object(cd.shutil, 'which', return_value=None):
             self.assertIsNone(cd.ocr_image(self.roughs[0])[0])
+
+    def test_ocr_low_confidence_dropped(self):
+        header = 'level\tpage_num\tblock_num\tpar_num\tline_num\tword_num\tleft\ttop\twidth\theight\tconf\ttext\n'
+        rows = ''.join(f'5\t1\t1\t1\t1\t{i}\t100\t100\t30\t20\t{conf}\t{text}\n'
+                       for i, (conf, text) in enumerate([(49.9, 'junk'), (-1, 'invalid'), (50, 'Open')], 1))
+        with patch.object(cd.shutil, 'which', return_value='tesseract'), patch.object(cd.subprocess, 'run', return_value=subprocess.CompletedProcess([], 0, header + rows, '')):
+            text, boxes, source = cd.ocr_image(self.roughs[0])
+        self.assertEqual(text, 'Open')
+        self.assertEqual(boxes, [[100, 100, 130, 120]])
+        self.assertIn('confidence >= 50', source)
+
+    def image_check(self, *, manifest=None, transcript=None, ocr='Opon', boxes=None, helper_status='PASS'):
+        from PIL import Image
+        target = self.root / 'final.png'
+        Image.new('RGB', (800, 800), 'white').save(target)
+        b = copy.deepcopy(self.b)
+        b['copy'] = [{'text': 'Open', 'count': 1}]
+        a = cd.argparse.Namespace(target=str(target), brief=self.write('image.json', b), boxes=manifest,
+                                 text_box=[], no_ocr=False, ocr_text=transcript, observations=None)
+        def helper(cmd, **kwargs):
+            Path(cmd[cmd.index('--json') + 1]).write_text(json.dumps(dict(size=[800, 800], checks=[dict(id=i, status=helper_status) for i in ('contrast', 'text-size')])))
+            return subprocess.CompletedProcess(cmd, 0, '', '')
+        out = io.StringIO()
+        with patch.object(cd.subprocess, 'run', side_effect=helper), patch.object(cd, 'ocr_image', return_value=(ocr, boxes or [[100, 100, 200, 130]], 'tesseract fixture')) as adapter, redirect_stdout(out):
+            code = cd.check(a)
+        return code, json.loads(out.getvalue()), adapter.call_count
+
+    def test_ocr_mismatch_flag_and_crops(self):
+        code, r, _ = self.image_check()
+        self.assertEqual(code, 0)
+        self.assertEqual(r['status'], 'FLAG')
+        self.assertFalse(r['passed'])  # FLAG is not certified PASS, but is not exit 1.
+        c = next(c for c in r['checks'] if c['id'] == 'copy')
+        self.assertEqual(c['status'], 'FLAG')
+        self.assertEqual(c['crop_boxes'], [[100, 100, 200, 130]])
+        self.assertEqual(len(c['crops']), 2)  # extra line + overview for missed text
+        from PIL import Image
+        for crop in c['crops']:
+            with Image.open(crop['path']) as im:
+                self.assertLessEqual(im.width, 640)
+                self.assertLessEqual(im.height, 320)
+        self.assertEqual(self.image_check(boxes=[[1, 100, 200, 130]])[0], 1)
+        self.assertEqual(self.image_check(helper_status='SKIP')[0], 1)
+
+    def test_manifest_priority_and_real_mismatch(self):
+        path = self.write('type.json', [['Open', [100, 100, 200, 130], [0, 0, 0]]])
+        code, r, calls = self.image_check(manifest=path, transcript=self.write('wrong.txt', 'Wrong'))
+        self.assertEqual(code, 0)
+        self.assertEqual(calls, 0)
+        self.assertEqual(next(c for c in r['checks'] if c['id'] == 'copy')['status'], 'PASS')
+        self.assertIn(str(path), next(c for c in r['checks'] if c['id'] == 'copy')['provenance'])
+        self.write('type.json', [['Opon', [100, 100, 200, 130], [0, 0, 0]]])
+        code, r, _ = self.image_check(manifest=path)
+        self.assertEqual(code, 1)
+        self.assertEqual(next(c for c in r['checks'] if c['id'] == 'copy')['status'], 'FAIL')
+        self.write('final-boxes.json', [['Open', [1, 100, 200, 130], [0, 0, 0]]])
+        code, r, calls = self.image_check()
+        self.assertEqual(calls, 0)
+        self.assertEqual(next(c for c in r['checks'] if c['id'] == 'copy')['status'], 'PASS')
+        self.assertEqual(next(c for c in r['checks'] if c['id'] == 'safe-area')['status'], 'FAIL')
+        self.assertEqual(code, 1)
+
+    def test_supplied_transcript_mismatch_fails(self):
+        code, r, calls = self.image_check(transcript=self.write('wrong.txt', 'Wrong'))
+        self.assertEqual(code, 1)
+        self.assertEqual(calls, 0)
+        self.assertEqual(next(c for c in r['checks'] if c['id'] == 'copy')['status'], 'FAIL')
+
+    def test_allotment_real_manifest(self):
+        from PIL import Image
+        target = cd.ROOT / 'examples/aesthetic-across-domains/poster/after.png'
+        manifest = target.parent / 'src/after-boxes.json'
+        lines = ['Hollin Lane Allotments', 'SEED', 'SWAP', 'Sat 13 March 2027',
+                 '10:00 to 13:00, in the hut', 'Bring spare seeds and take some home.',
+                 'Envelopes provided. Free. Tea in the hut.']
+        self.assertEqual([row[0] for row in cd.load(manifest)], lines)
+        b = copy.deepcopy(self.b)
+        with Image.open(target) as im:
+            b['format'].update(width=im.width, height=im.height)
+        b['copy'] = [dict(text=line, count=1) for line in lines]
+        brief = self.write('allotment.json', b)
+        p = self.cli('check', target, '--brief', brief, '--boxes', manifest)
+        self.assertIn(p.returncode, (0, 1), p.stdout + p.stderr)
+        r = json.loads(p.stdout)
+        c = next(c for c in r['checks'] if c['id'] == 'copy')
+        self.assertEqual(c['status'], 'PASS')
+        self.assertIn(str(manifest), c['provenance'])
+        self.assertNotIn('tesseract', c['provenance'])
+        # Image font-size/contrast evidence can still be incomplete; not an OCR failure.
+        self.assertTrue(all(c['id'] != 'copy' for c in r['checks'] if c['status'] != 'PASS'))
+
+    def test_load_every_task_row(self):
+        # Independent fixtures in table order. A new task row must add a fixture.
+        fixtures = [
+            ('drawing', 'technical-drawing illustration composition colour-value', ''),
+            ('balance', 'composition colour-value', ''),
+            ('palette', 'colour-value', ''),
+            ('animal', 'character technical-drawing illustration', ''),
+            ('construction errors only', 'technical-drawing', ''),
+            ('poster', 'layout typography composition illustration colour-value brand', ''),
+            ('packaging', 'layout typography brand', ''),
+            ('infographic', 'layout typography illustration character brand', 'modules/layout/infographics.md'),
+            ('signage', 'layout typography', ''),
+            ('wordmark', 'typography layout web-ui', ''),
+            ('brand guide', 'brand', 'core/brand-intake.md'),
+            ('landing page', 'web-ui typography brand lookbook', ''),
+            ('checkout', 'ux web-ui', ''),
+            ('whole product', 'web-ui ux', ''),
+            ('3d render', '3d illustration', ''),
+            ('3d as reference for a drawing', '3d technical-drawing', ''),
+            ('logo', 'brand illustration web-ui', 'modules/brand/logo.md modules/brand/logo-notes.md modules/brand/mark-making.md modules/brand/clever-marks.md'),
+            ('storyboard', 'illustration film', 'modules/illustration/notes.md modules/film/story.md modules/film/review.md'),
+            ('video', 'film composition colour-value typography character', 'modules/film/story.md modules/film/review.md modules/film/edit.md modules/film/crossover.md'),
+            ('clip made or altered by a video model', 'film character brand', 'modules/film/generated.md'),
+            ('distinctive feel', 'aesthetic-critique', ''),
+            ('from-scratch concepts', 'lookbook', ''),
+            ('poster', '', 'core/energy-pass.md'),
+            ('bolder', '', 'core/commands.md'),
+            ('remake from scratch', 'aesthetic-critique brand', 'core/first-principles.md'),
+            ('writing', 'writing', ''),
+            ('photograph', 'photo character illustration brand', ''),
+            ('image from an ai image model', 'illustration technical-drawing photo brand character', ''),
+        ]
+        routes = cd.task_routes()
+        self.assertEqual(len(fixtures), len(routes))
+        for (medium, modules, extra), (task, _) in zip(fixtures, routes):
+            with self.subTest(task=task):
+                b = dict(self.b, medium=medium, has_people_or_animals=(medium == 'animal'))
+                if 'core/energy-pass.md' in extra:
+                    b['feeling'] = 'Joyful brass-band concert'
+                data = cd.load_plan(b)
+                self.assertIn(task, data['reasons'])
+                expected = {f'modules/{m}/README.md' for m in modules.split()} | set(extra.split())
+                self.assertTrue(expected <= set(data['files']), expected - set(data['files']))
+                self.assertTrue(all((cd.ROOT / p).is_file() for p in data['files']))
+                self.assertTrue(set(data['rules']) <= cd.rules().keys())
+
+    def test_load_explicit_gates_and_word_boundaries(self):
+        for medium, path in [('infographic', 'layout/infographics.md'), ('packaging label', 'layout/README.md'),
+                             ('3d render', '3d/README.md'), ('video', 'film/README.md'), ('landing page', 'web-ui/README.md')]:
+            with self.subTest(medium=medium):
+                self.assertIn('modules/' + path, cd.load_plan(dict(self.b, medium=medium))['files'])
+        fox = cd.load_plan(dict(self.b, medium='picture-book cover', has_people_or_animals=True, description='A fox'))
+        self.assertIn('modules/character/README.md', fox['files'])
+        self.assertIn('CHAR-9', fox['rules'])
+        self.assertIn('modules/layout/README.md', fox['files'])
+        for subject in ('girl', 'baker', 'fox'):
+            self.assertIn('CHAR-9', cd.load_plan(dict(self.b, description=subject, has_people_or_animals=True))['rules'])
+        concert = cd.load_plan(dict(self.b, feeling='Joyful brass-band concert poster'))
+        self.assertIn('core/energy-pass.md', concert['files'])
+        self.assertNotIn('core/energy-pass.md', cd.load_plan(dict(self.b, medium='concert poster'))['files'])
+        self.assertNotIn('modules/layout/README.md', cd.load_plan(dict(self.b, medium='discover'))['files'])
+        for description, medium in [('A book cover', 'book cover'), ('A concert poster', 'poster'), ('A photograph', 'photograph')]:
+            self.assertNotIn('modules/writing/README.md', cd.load_plan(dict(self.b, medium=medium, description=description))['files'])
+        self.assertIn('WRITE-11', cd.load_plan(dict(self.b, medium='writing'))['rules'])
+
 
     def test_errors_are_json(self):
         p = self.cli('check', self.root / 'missing.png', '--brief', self.brief)

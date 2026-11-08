@@ -28,13 +28,17 @@ def load(path):
     return json.loads(Path(path).read_text(encoding='utf-8'))
 
 
-def read_brief(path):
+def read_brief(path, require_medium=True):
     b = load(path)
     if not isinstance(b, dict) or type(b.get('schema_version')) is not int or b.get('schema_version') != 1:
         raise ValueError('brief schema_version must be 1')
     for field in ('description', 'idea', 'feeling', 'audience', 'purpose', 'success'):
         if not isinstance(b.get(field), str):
             raise ValueError(f'brief {field} must be a string')
+    if not isinstance(b.get('medium'), str) or (require_medium and not b['medium'].strip()):
+        raise ValueError('brief medium must be a nonempty string (fill it after brief init)')
+    if type(b.get('has_people_or_animals')) is not bool:
+        raise ValueError('brief has_people_or_animals must be boolean')
     for field in ('constraints', 'must_be_right'):
         if not isinstance(b.get(field), list) or not all(isinstance(x, str) for x in b[field]):
             raise ValueError(f'brief {field} must be a list of strings')
@@ -86,7 +90,7 @@ def result(cid, status, provenance, **extra):
     return dict(id=cid, status=status, passed=status == 'PASS', provenance=provenance, **extra)
 
 
-def copy_check(b, text, provenance):
+def copy_check(b, text, provenance, fallible_ocr=False):
     if text is None:
         return result('copy', 'SKIP', provenance, reason='No rendered text evidence; cannot certify CD-7.')
     # Each entry is a complete rendered line (DOM: a visible text run).
@@ -94,9 +98,13 @@ def copy_check(b, text, provenance):
     expected = Counter({x['text']: x['count'] for x in b['copy']})
     missing = list((expected - observed).elements())
     extra = list((observed - expected).elements()) if b['exact_copy'] else [line for line, n in (observed - expected).items() if line in expected for _ in range(n)]
-    return result('copy', 'FAIL' if missing or extra else 'PASS', provenance, rule='CD-7',
+    return result('copy', ('FLAG' if fallible_ocr else 'FAIL') if missing or extra else 'PASS', provenance, rule='CD-7',
                   missing=missing, extra=extra, observed=dict(observed),
                   diff=list(difflib.ndiff(list(expected.elements()), text.splitlines())))
+
+
+# Tesseract word confidence is 0–100; -1 denotes non-word/no confidence.
+OCR_MIN_CONFIDENCE = 50
 
 
 def ocr_image(target):
@@ -106,15 +114,55 @@ def ocr_image(target):
     if p.returncode:
         raise ValueError('tesseract failed: ' + p.stderr.strip())
     groups = {}
-    boxes = []
+    boxes = {}
     for row in csv.DictReader(io.StringIO(p.stdout), delimiter='\t', quoting=csv.QUOTE_NONE):
-        if row['level'] != '5' or not row['text'].strip():
+        if row['level'] != '5' or not row['text'].strip() or float(row['conf']) < OCR_MIN_CONFIDENCE:
             continue
         key = tuple(row[k] for k in ('page_num', 'block_num', 'par_num', 'line_num'))
         groups.setdefault(key, []).append(row['text'])
         x, y, w, h = (int(row[k]) for k in ('left', 'top', 'width', 'height'))
-        boxes.append([x, y, x + w, y + h])
-    return '\n'.join(' '.join(words) for words in groups.values()), boxes, 'tesseract TSV on current render (fallible; verify visually)'
+        old = boxes.get(key, [x, y, x + w, y + h])
+        boxes[key] = [min(old[0], x), min(old[1], y), max(old[2], x + w), max(old[3], y + h)]
+    return '\n'.join(' '.join(words) for words in groups.values()), list(boxes.values()), f'tesseract TSV on current render; confidence >= {OCR_MIN_CONFIDENCE} (fallible; verify visually)'
+
+
+def text_manifest(path):
+    """Code-set text: [text, [x0,y0,x1,y1], [r,g,b]] per rendered line."""
+    rows = load(path)
+    if not isinstance(rows, list):
+        raise ValueError('boxes manifest must be a list')
+    for row in rows:
+        if not isinstance(row, list) or len(row) != 3 or not isinstance(row[0], str) or '\n' in row[0] or '\r' in row[0]:
+            raise ValueError('boxes manifest rows need text, box and RGB')
+        box, rgb = row[1:]
+        if not isinstance(box, list) or len(box) != 4 or not all(type(v) in (int, float) and math.isfinite(v) for v in box) or min(box[:2]) < 0 or box[2] <= box[0] or box[3] <= box[1]:
+            raise ValueError('invalid manifest text box')
+        if not isinstance(rgb, list) or len(rgb) != 3 or not all(type(v) in (int, float) and math.isfinite(v) and 0 <= v <= 255 for v in rgb):
+            raise ValueError('invalid manifest RGB')
+    return '\n'.join(row[0] for row in rows), [row[1] for row in rows]
+
+
+def copy_crops(target, boxes, missing):
+    """Candidate OCR regions, not proof: missing lines may be anywhere in the frame."""
+    from PIL import Image
+    target = Path(target)
+    dest = target.with_name(target.stem + '-copy-crops')
+    dest.mkdir(exist_ok=True)
+    crops = []
+    with Image.open(target) as im:
+        regions = list(boxes)
+        if missing or not regions:
+            regions.append([0, 0, im.width, im.height])
+        for i, box in enumerate(regions):
+            x0, y0, x1, y1 = box
+            bounds = [max(0, math.floor(x0) - 8), max(0, math.floor(y0) - 8),
+                      min(im.width, math.ceil(x1) + 8), min(im.height, math.ceil(y1) + 8)]
+            crop = im.crop(bounds)
+            crop.thumbnail((640, 320))
+            path = dest / f'region-{i + 1}.png'
+            crop.save(path)
+            crops.append(dict(box=bounds, path=str(path)))
+    return crops
 
 
 def check(a):
@@ -131,13 +179,21 @@ def check(a):
             raise ValueError('autocheck failed: ' + p.stderr.strip()[-1200:])
         measured = load(report)
     text, boxes, source = None, [], 'no OCR evidence'
+    fallible_ocr = False
     if page:
         text, source = measured.get('text'), 'autocheck visible DOM text (not OCR; verify image/canvas text by eye)'
         boxes = [r for t in measured.get('text_runs', []) for r in t['rects']]
-    elif not a.no_ocr:
-        text, boxes, source = ocr_image(a.target)
-    if a.ocr_text:
-        text, source = Path(a.ocr_text).read_text(encoding='utf-8').rstrip('\n'), 'supplied render transcript: ' + a.ocr_text
+    else:
+        manifest = Path(a.boxes) if a.boxes else Path(a.target).with_name(Path(a.target).stem + '-boxes.json')
+        if a.boxes or manifest.is_file():
+            text, boxes = text_manifest(manifest)
+            source = 'code-set text manifest: ' + str(manifest)
+        elif not a.no_ocr and not a.ocr_text:
+            text, boxes, source = ocr_image(a.target)
+            fallible_ocr = True
+    if a.ocr_text and not source.startswith('code-set text manifest:'):
+        text, source = Path(a.ocr_text).read_text(encoding='utf-8').rstrip('\n'), 'supplied render transcript: ' + str(a.ocr_text)
+        fallible_ocr = False
     if a.text_box:
         for box in a.text_box:
             vals = [int(v) for v in box.split(':')[0].split(',')]
@@ -145,7 +201,12 @@ def check(a):
                 raise ValueError('text boxes require x0,y0,x1,y1 within the frame')
             boxes.append(vals)
     missing_intent = [k for k in ('idea', 'feeling', 'audience', 'purpose', 'success') if not b[k].strip()]
-    checks = [result('brief-intent', 'SKIP' if missing_intent else 'PASS', 'structured brief; not an aesthetic judgement', missing=missing_intent), copy_check(b, text, source)]
+    copy_result = copy_check(b, text, source, fallible_ocr=fallible_ocr)
+    if copy_result['status'] == 'FLAG':
+        suspect = [box for line, box in zip(text.splitlines(), boxes) if line in copy_result['extra']]
+        copy_result.update(crop_boxes=suspect, crops=copy_crops(a.target, suspect, copy_result['missing']),
+                           reason='Fallible OCR mismatch: read candidate crops and whole-frame overview for missed lettering.')
+    checks = [result('brief-intent', 'SKIP' if missing_intent else 'PASS', 'structured brief; not an aesthetic judgement', missing=missing_intent), copy_result]
     # Counts refer to objects, not OCR word occurrences. Never pretend OCR counts bodies or cups.
     evidence = load(a.observations) if a.observations else {}
     if not isinstance(evidence, dict) or not isinstance(evidence.get('counts', {}), dict):
@@ -168,18 +229,20 @@ def check(a):
     margin = b['safe_area_px']
     bad = [box for box in boxes if min(box[0], box[1], width - box[2], height - box[3]) < margin]
     checks.append(result('safe-area', 'FAIL' if bad else ('PASS' if boxes else 'SKIP'),
-                         'visible DOM/OCR text boxes plus supplied text boxes; non-text key elements still need visual review',
+                         source + '; text geometry plus supplied boxes; non-text key elements still need visual review',
                          rule='LAY-5', margin_px=margin, outside=bad, measured_boxes=len(boxes)))
     checks.append(result('format', 'PASS' if [width, height] == [b['format']['width'], b['format']['height']] else 'FAIL',
                          'autocheck rendered size', expected=b['format'], observed=[width, height]))
-    passed = all(c['passed'] for c in checks) and not any(c['status'] == 'FAIL' for c in measured['checks'])
-    emit(dict(schema_version=1, target=a.target, passed=passed, status='PASS' if passed else 'FAIL', checks=checks,
+    complete = all(c['status'] in ('PASS', 'FLAG') for c in checks) and not any(c['status'] == 'FAIL' for c in measured['checks'])
+    flagged = any(c['status'] == 'FLAG' for c in checks)
+    status = ('FLAG' if flagged else 'PASS') if complete else 'FAIL'
+    emit(dict(schema_version=1, target=a.target, passed=complete and not flagged, status=status, checks=checks,
               autocheck=measured, unverified_brief_conditions=b['must_be_right'], scope='Mechanical checks only. SKIP/FLAG is not a pass; review OCR, figures, marks and intent visually.'))
-    return 0 if passed else 1
+    return 0 if complete else 1
 
 
 def select(a):
-    b = read_brief(a.brief)
+    b = read_brief(a.brief, require_medium=False)
     if not 4 <= len(a.roughs) <= 8 or len(set(a.roughs)) != len(a.roughs):
         raise ValueError('select needs 4–8 distinct rough files')
     for path in a.roughs:
@@ -235,83 +298,101 @@ def has_word(text, word):
     return re.search(r'(?<![a-z0-9])' + re.escape(word) + r'(?![a-z0-9])', text) is not None
 
 
-LOAD_HINTS = (
-    dict(id='logo', words=('logo', 'wordmark', 'mascot', 'favicon'),
-         files=('modules/brand/README.md', 'modules/brand/logo.md'),
-         rules=('LOGO-3', 'LOGO-5', 'LOGO-13', 'CORE-10'),
-         why='marks must survive at 16 px and on a stamp'),
-    dict(id='poster', words=('poster', 'flyer', 'signage', 'a-board'),
-         files=('modules/layout/README.md', 'modules/typography/README.md', 'modules/composition/README.md'),
-         rules=('LAY-7', 'COMP-14', 'TYPE-3', 'CORE-10'),
-         why='posters must read from across a room, not as a book jacket'),
-    dict(id='cover', words=('book cover', 'jacket', 'cover'),
-         files=('modules/layout/README.md', 'modules/typography/README.md'),
-         rules=('LAY-16', 'TYPE-10'),
-         why='covers need title, author and genre to read; they may sit further from literal content'),
-    dict(id='screen', words=('app screen', 'dashboard', 'interface'),
-         kinds=('screen',),
-         files=('modules/web-ui/README.md', 'modules/composition/sitting-right.md', 'modules/layout/README.md'),
-         rules=('COMP-23', 'LAY-10', 'CORE-11', 'UI-6'),
-         why='screens need distributed space, not a compacted cluster over dead space'),
-    dict(id='writing', words=('email', 'newsletter', 'website copy', 'web copy',
-                              'about page', 'about text', 'microcopy', 'empty state',
-                              'empty states', 'error message', 'error messages',
-                              'blurb', 'blurbs', 'reply', 'replies', 'supporting copy',
-                              'filler copy', 'button copy', 'draft copy', 'prose'),
-         files=('modules/writing/README.md',),
-         rules=tuple(f'WRITE-{i}' for i in range(1, 12)),
-         why='words need purpose, honest claims and a fitting voice, not a visual-only pass'),
-    dict(id='photo', words=('photograph', 'photoreal', 'photo', 'documentary'),
-         files=('modules/photo/README.md',),
-         rules=('PHOTO-4', 'PHOTO-7'),
-         why='generated or photoreal images need casting and tell checks'),
-    dict(id='people', words=('people', 'person', 'figure', 'crowd', 'faces'),
-         files=('modules/character/README.md',),
-         rules=('CHAR-9',),
-         why='any person or animal requires the anatomy gate'),
-)
-
 ALWAYS_FILES = ('modules/composition/sitting-right.md',)
 ALWAYS_RULES = ('CORE-11', 'COMP-19', 'COMP-23')
 
 
+def task_routes():
+    """Only the first Task/Load table is routing data, never the module index."""
+    text = (ROOT / 'core/which-modules.md').read_text(encoding='utf-8')
+    table = text.split('| Task | Load |', 1)[1].split('\n\n', 1)[0]
+    return [tuple(cell.strip() for cell in line.strip().strip('|').split('|'))
+            for line in table.splitlines() if line.startswith('|') and not line.startswith('|---')]
+
+
+def normalise(text):
+    return text.lower().replace('’', "'").replace('“', '"').replace('”', '"')
+
+
+def task_phrases(task):
+    # Phrase boundaries come from the table, not a second keyword catalogue.
+    # No individual generic words (e.g. "copy", "page") are stolen from phrases.
+    phrases = re.split(r'[,;()]| or | / ', normalise(task))
+    return [re.sub(r'^(?:a |an |the )', '', p.strip(' "')) for p in phrases if p.strip(' "')]
+
+
+def route_files(cell):
+    modules = {p.name for p in (ROOT / 'modules').iterdir() if (p / 'README.md').is_file()}
+    module_pattern = r'(?<![a-z0-9/-])(' + '|'.join(re.escape(m) for m in sorted(modules, key=len, reverse=True)) + r')(?![a-z0-9/-])'
+    mentions = list(re.finditer(module_pattern, normalise(cell)))
+    paths = [f'modules/{m.group()}/README.md' for m in mentions]
+    for match in re.finditer(r'`([^`]+\.md)`', cell):
+        name = match.group(1)
+        if name.startswith(('core/', 'modules/')):
+            path = name
+        elif '/' in name:
+            path = 'modules/' + name
+        else:
+            preceding = [m.group() for m in mentions if m.start() < match.start()]
+            if not preceding:
+                raise ValueError('No module context for table path: ' + name)
+            path = 'modules/' + preceding[-1] + '/' + name
+        if not (ROOT / path).is_file():
+            raise ValueError('Unknown table path: ' + path)
+        paths.append(path)
+    return list(dict.fromkeys(paths))
+
+
+def route_rules(cell, paths, index):
+    ids = set(re.findall(r'\b[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*-\d+\b', cell))
+    for prefix, first, last in re.findall(r'\b([A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*)-(\d+)\s+(?:to|[–-])\s*(\d+)', cell):
+        ids.update(f'{prefix}-{i}' for i in range(int(first), int(last) + 1))
+    # Reading a module includes its rules, including shorthand such as "INF rules".
+    ids.update(rid for rid, (path, _) in index.items() if path in paths)
+    return sorted(ids & index.keys())
+
+
 def load_plan(brief):
-    text = haystack(brief)
-    kind = (brief.get('format') or {}).get('kind')
-    matched, files, rules, reasons = [], [], [], []
-    seen_files, seen_rules = set(), set()
-
-    def add(hint):
-        matched.append(hint['id'])
-        for path in hint['files']:
-            if path not in seen_files:
-                seen_files.add(path)
-                files.append(path)
-        for rid in hint['rules']:
-            if rid not in seen_rules:
-                seen_rules.add(rid)
-                rules.append(rid)
-        reasons.append(hint['why'])
-
-    for hint in LOAD_HINTS:
-        hit = any(has_word(text, word) for word in hint['words'])
-        if hint.get('kinds') and kind in hint['kinds']:
+    medium = normalise(brief['medium'].strip())
+    text = normalise(haystack(brief))
+    intent = normalise(' '.join(brief.get(k, '') for k in ('feeling', 'purpose', 'idea')))
+    routes = task_routes()
+    energy_task = next(task for task, cell in routes if cell.startswith('`core/energy-pass.md`'))
+    examples = re.search(r'\((.*?)\)', energy_task).group(1)
+    energetic = any(has_word(intent, phrase) for phrase in task_phrases(examples))
+    files, ids, matched, reasons = list(ALWAYS_FILES), list(ALWAYS_RULES), [], []
+    index = rules()
+    for task, cell in routes:
+        lower_task = normalise(task)
+        anatomy = 'anatomy pass CHAR-9' in cell
+        writing = cell.startswith('writing (')
+        screen = cell.startswith('web-ui (') and brief['format']['kind'] == 'screen'
+        hit = has_word(lower_task, medium) or any(has_word(medium, phrase) for phrase in task_phrases(task)) or screen
+        if anatomy and brief['has_people_or_animals']:
             hit = True
-        if hit:
-            add(hint)
-    for path in ALWAYS_FILES:
-        if path not in seen_files:
-            files.append(path)
-    for rid in ALWAYS_RULES:
-        if rid not in seen_rules:
-            rules.append(rid)
-    reasons.append('delivery: broken-balance and dead-space checks apply to every piece')
+        if task == energy_task:
+            hit = energetic  # never infer energy from the medium alone
+        if writing:
+            hit = hit or any(has_word(text, phrase) for phrase in task_phrases(task))
+        if not hit:
+            continue
+        matched.append('writing' if writing else ('screen' if screen else medium))
+        reasons.append(task)
+        paths = route_files(cell)
+        if task != energy_task:
+            paths = [p for p in paths if p != 'core/energy-pass.md']
+        row_ids = route_rules(cell, paths, index)
+        # Rule-only references also resolve to their canonical files. Energy stays intent-gated.
+        row_ids = [rid for rid in row_ids if index[rid][0] != 'core/energy-pass.md' or energetic]
+        paths.extend(index[rid][0] for rid in row_ids)
+        files.extend(paths)
+        ids.extend(row_ids)
     return dict(
         schema_version=1,
-        matched=matched,
-        files=files,
-        rules=rules,
-        reasons=reasons,
+        matched=list(dict.fromkeys(matched)),
+        files=list(dict.fromkeys(files)),
+        rules=list(dict.fromkeys(ids)),
+        reasons=reasons + ['delivery: broken-balance and dead-space checks apply to every piece'],
         instruction='Read each file before making or fixing. Look up each rule with python3 tools/cd.py rule <ID>. Quote matched and rules in the critique. Skipping this list is how medium rules get missed.',
     )
 
@@ -327,6 +408,7 @@ def main():
     cp = sub.add_parser('check', help='Mechanical checks as JSON; missing evidence never passes')
     cp.add_argument('target')
     cp.add_argument('--brief', default='brief.json')
+    cp.add_argument('--boxes', help='Code-set text manifest [text, box, RGB]; auto-detects <stem>-boxes.json beside image')
     cp.add_argument('--ocr-text', help='UTF-8 rendered line transcript; provenance is labelled')
     cp.add_argument('--no-ocr', action='store_true')
     cp.add_argument('--text-box', action='append', default=[])

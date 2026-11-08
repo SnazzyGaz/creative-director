@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.11.1 (8 November 2026)
+
+- **Copy-check evidence.** When type is set in code, compare exact copy against the `*-boxes.json` text manifest supplied with `--boxes` or found beside the image as `{stem}-boxes.json`. OCR is for generated lettering, not a verdict over code-set type; Tesseract tokens below confidence 50 (including -1) are dropped. OCR mismatches are FLAG with crops, not FAIL. Manifest, DOM and supplied-transcript mismatches remain FAIL; missing evidence still does not pass.
+- **Table-driven load router.** Briefs require `medium` and `has_people_or_animals`. Routes are parsed from the first Task/Load table in `core/which-modules.md`, keeping one source for module loading, with a test brief for every table row. Skill folder and prompt bundles regenerated; no new rules or budget increases.
+
 ## v0.11.0 (8 November 2026)
 
 - **Writing module (on demand).** WRITE-1 to WRITE-11 cover web/email copy, replies, blurbs, about text, buttons, empty/error states and supporting copy: reader/purpose, locked versus draftable words, substantiated claims, structure, concrete prose, flow/voice, cliché diagnosis, rhetorical-habit review, truthful microcopy, house style and final-context checks. British English by default; no dash/word bans, sentence quotas or AI-authorship verdicts. Changed locked words, invented facts/claims and misleading buttons/errors are hard failures; other findings allow reasoned exceptions. Existing CD-7, AES-10, FP-3, UI-11 and BRAND-8 are referenced, not rewritten. Sources SRC-434 to SRC-486 distinguish craft, production practice, observational research, extracts, abstracts and speculation. Routing, load hints and regression tests added; always-on rules and token budget unchanged.

@@ -4,7 +4,7 @@ description: 'Judge and improve visual work (generated images, illustrations, te
 license: MIT (see LICENSE)
 metadata:
   author: the owner of the work
-  version: "0.11.0"
+  version: "0.11.1"
   repository: https://github.com/SnazzyGaz/creative-director
 ---
 
@@ -24,7 +24,7 @@ Design judgement for visual work: idea first, roughs then pick, evidence-labelle
 ## Work
 
 0. **Read the ask.** Unprompted hand-off: analyse, sign-off blurb, wait (FLOW-1). “Just fix it”: no wait, same checks (FLOW-4). Consult: critique only. From-scratch words: `core/first-principles.md`; no silent remake. “Bolder”, “quieter”, “distill”: `core/commands.md`.
-1. **Idea, feeling and tone first**, then structured `brief.json` (`tools/cd.py brief init`). Purpose, audience, size, exact copy/counts, constraints and must-be-right; distinguish [brief] from [inferred]. No brand input: `core/brand-intake.md`; open direction: `core/creative-direction.md`. Then `python3 tools/cd.py load --brief brief.json`. Read every listed file before making or fixing, and quote the match list.
+1. **Idea, feeling and tone first**, then structured `brief.json` (`tools/cd.py brief init`). Medium, people/animals, purpose, audience, size, copy/counts, constraints, must-be-right; distinguish [brief] from [inferred]. No brand input: `core/brand-intake.md`; open direction: `core/creative-direction.md`. Then `python3 tools/cd.py load --brief brief.json`. Read every listed file before work; quote the match list.
 2. **Roughs then pick.** New work: 4–8 roughs; head-to-head in a fresh context of the SAME model, not a second model. Show top 2–3 to the owner; only their winner enters the fix loop. `tools/cd.py select` supports this. Existing edits/consults preserve intent; no forced new directions.
 3. **Render and look.** Actual size and thumbnail. `tools/cd.py check` delegates to `autocheck.py`; SKIP is not clearance. Five tests (`tools/look.py`); exact copy/counts (CD-7); cropped anatomy gate (CHAR-9) if applicable. Energy from the named tone. Sitting right before delivery: never centre to clear a flag.
 4. **Critique.** Label findings **rule-backed** (ID), **intent-backed** (brief line), **exploratory** (option). Every finding: provenance and confidence. Separate measured from interpreted. Exploratory findings never block.
@@ -42,4 +42,4 @@ Tools and JSON contracts: `tools/README.md`, `tools/brief.md`. Without code, che
 
 **Needs:** a model that can see images, and a way to render or screenshot the work at real size. Without vision, say the review is rules-only.
 
-This folder is generated from the repo root by `tools/package_skill.py` (version 0.11.0). To change a rule, edit the repo's root files, not this copy.
+This folder is generated from the repo root by `tools/package_skill.py` (version 0.11.1). To change a rule, edit the repo's root files, not this copy.
