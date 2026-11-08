@@ -57,7 +57,7 @@ Do the five tests (`tools/look.py`), one factual line each: blur/squint (what le
 
 **Anatomy gate:** any person, hand or animal: crop hands, joins, faces and animal heads at 2–4x; trace and count, one PASS/FAIL line per crop (CHAR-9, `tools/anatomy_crops.py`). Whole-image viewing is not enough. Any fail blocks; repeat after figure edits.
 
-**Energy follows the named tone:** load `energy-pass.md` when the feeling, purpose or kind of piece calls for life. Name the genre and scope (full/structure/light). A quiet literary or official brief may skip. Never turn a quiet brief louder to complete a ritual.
+**Energy follows the named tone:** load `energy-pass.md` when feeling, purpose or kind calls for life. Name the genre and scope. A quiet brief may skip the push; EN-5 still applies. Never turn a quiet brief louder to complete a ritual.
 
 Before delivery, the *Sitting right* pass (COMP-19 to COMP-25, `modules/composition/sitting-right.md`): rotate 180°, cover each half, gap measure, balance, edge/alignment sweep. Flag accidents, ask “intended?”. Use counterweight or firmer asymmetry; never centre by default.
 

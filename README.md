@@ -1,6 +1,6 @@
 <p><img alt="creative director: design judgement for AI agents. A white great egret in profile with lace plumes, its level gaze drawn as a 20-degree viewing cone that runs through the red square mark." src="docs/assets/banner-dark.png" width="100%"></p>
 
-Design judgement for any AI agent making or reviewing visual work and copy: drawings, illustrations, 3D, screens, flows, infographics, film and writing. **v0.11.2 starts from the idea, feeling and tone**, makes 4–8 roughs, compares them head-to-head in a fresh context of the same model, and shows the top 2–3 to the owner of the work. Only the winner enters the fix loop. Critiques label rule-backed, intent-backed and exploratory findings, with provenance and confidence. Choose the fix level before changing work; “the original is better” is a valid stop. [Energy](core/energy-pass.md) follows the named tone and genre, not a default ritual. Research and craft keep their evidence grades; taste stays with the owner of the work.
+Design judgement for any AI agent making or reviewing visual work and copy: drawings, illustrations, 3D, screens, flows, infographics, film and writing. **v0.11.3 starts from the idea, feeling and tone**, makes 4–8 roughs, compares them head-to-head in a fresh context of the same model, and shows the top 2–3 to the owner of the work. Only the winner enters the fix loop. Critiques label rule-backed, intent-backed and exploratory findings, with provenance and confidence. Choose the fix level before changing work; “the original is better” is a valid stop. [Energy](core/energy-pass.md) follows the named tone and genre, not a default ritual. Research and craft keep their evidence grades; taste stays with the owner of the work.
 
 **Start here**
 1. What it is: a rule set and critique loop an agent reads to judge and improve its own visual work.
@@ -75,7 +75,7 @@ The skill is the [`skills/creative-director/`](skills/creative-director/) folder
 
 Always send the actual output (image, screenshot at real size, URL or renders), never a description. Interactive and 3D work is reviewed hands-on: clicked, panned, zoomed and recorded, then judged on how it feels to use, not from stills alone. Video is watched in motion at its delivered size with sound, then scrubbed and sampled frame by frame ([film module](modules/film/review.md)).
 
-## In-repo tools (v0.11.2)
+## In-repo tools (v0.11.3)
 
 ```sh
 python3 tools/cd.py brief init 'A short description' --out brief.json

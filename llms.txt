@@ -1,4 +1,4 @@
-# creative-director v0.11.2
+# creative-director v0.11.3
 
 > Cited, checkable design rules and a light-touch critique loop that AI agents use to judge and improve visual work.
 

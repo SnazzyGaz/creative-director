@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.11.3 (8 November 2026)
+
+**Stop two clicks before attractive slop; name over-textured type and food illustration as slop, not genre energy.**
+
+- **Attractive-slop ceiling.** EN-5: once the piece has the structure the job needs (TYPE-15) and the energy the genre needs, stop two clicks before a well-composed, hyper-attractive finish. That is slop even without grain, glow or fake badges. The aim sits just above the older, slightly restrained treatment. The ceiling applies even when the energy pass itself is skipped.
+- **Designed surface, fewest marks.** A label, ticket, menu, poster or cover is the artwork itself, not a pack shot of that artwork on a bottle, hung in a room or sat on a table, unless the brief asked for one. TYPE-15 uses the fewest marks that do the job (one scale change and one holding shape often beat a ribbon plus a badge plus a pennant). The previous fix line that restored "label on a bottle" is corrected.
+- **Over-textured lettering.** TYPE-9, EN-3 and EN-5 name cracked, peeling or grunge-filled display type, the default distressed brush-script "industrial" style, and high-guidance VAE type (crunch or haze baked through the glyphs so letters look sampled rather than set) as slop the owner of the work never wants. It is not genre energy for metal or vintage work, and it often bleeds into image generation.
+- **Over-textured food illustration.** ILL-11, ILL-12 and EN-3 name the default tight watercolour or rendered food drawing, with over-textured meat and busy crumb or shine, as slop. Food should be real photography or a clearly more stylised graphic, not that in-between painted-study look. Being physically plausible does not make that style acceptable.
+- **Companion edits.** ILL-11 also names the hyper-attractive finish as a generated-look tell. AGENTS.md, the critique loop and which-modules note that a quiet brief may skip the energy push; EN-5 still applies.
+- **Budget.** Always-on 5,991 / 6,000 after those pointers were tightened to fit. Skill folder and prompt bundles regenerated.
+
+
 ## v0.11.2 (8 November 2026)
 
 - **Type and marks as structure.** TYPE-15: on posters, covers, labels, tickets and other designed surfaces, type is page architecture, not a caption parked on a picture. Lines change scale and style; rules, banners, badges and small ornaments bound a group, lead the eye or balance a field, without adding words. Setting type in code is fine for locked wording; it is not a reason to park a title in a safe band and dump facts into opposite corners. Emblems stay emblem-sized; a label, tin or ticket should still read as that object.

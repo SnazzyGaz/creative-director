@@ -4,7 +4,7 @@ description: 'Judge and improve visual work (generated images, illustrations, te
 license: MIT (see LICENSE)
 metadata:
   author: the owner of the work
-  version: "0.11.2"
+  version: "0.11.3"
   repository: https://github.com/SnazzyGaz/creative-director
 ---
 
@@ -17,7 +17,7 @@ Design judgement for visual work: idea first, roughs then pick, evidence-labelle
 1. **Always:** this file, `core/principles.md` (40 existing rules: CORE-1..11, FLOW-1..5 and 24 gate/intent reminders) and `core/critique-loop.md`.
 2. **Critique:** `core/critique-template.md`.
 3. **On demand:** `python3 tools/cd.py rule <ID>` for full wording and sources; task routing in `core/which-modules.md`. Load only relevant modules or rules, not the whole library. People/animals require character and its anatomy gate.
-4. **Intent only:** `core/energy-pass.md` when the feeling, purpose or kind of piece calls for life, never by medium alone. Calm or official work can skip.
+4. **Energy:** load `core/energy-pass.md` when intent calls for life, never by medium. Calm work skips the push; EN-5 still applies.
 
 `lite/CREATIVE-DIRECTOR-LITE.md` is a separate small-context bundle, not the 40-rule selection.
 
@@ -42,4 +42,4 @@ Tools and JSON contracts: `tools/README.md`, `tools/brief.md`. Without code, che
 
 **Needs:** a model that can see images, and a way to render or screenshot the work at real size. Without vision, say the review is rules-only.
 
-This folder is generated from the repo root by `tools/package_skill.py` (version 0.11.2). To change a rule, edit the repo's root files, not this copy.
+This folder is generated from the repo root by `tools/package_skill.py` (version 0.11.3). To change a rule, edit the repo's root files, not this copy.

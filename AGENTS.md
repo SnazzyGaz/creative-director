@@ -1,4 +1,4 @@
-# AGENTS.md — creative-director v0.11.2
+# AGENTS.md — creative-director v0.11.3
 
 Design judgement for visual work: idea first, roughs then pick, evidence-labelled critique, then the smallest effective fix. Taste stays with the owner of the work.
 
@@ -7,7 +7,7 @@ Design judgement for visual work: idea first, roughs then pick, evidence-labelle
 1. **Always:** this file, `core/principles.md` (40 existing rules: CORE-1..11, FLOW-1..5 and 24 gate/intent reminders) and `core/critique-loop.md`.
 2. **Critique:** `core/critique-template.md`.
 3. **On demand:** `python3 tools/cd.py rule <ID>` for full wording and sources; task routing in `core/which-modules.md`. Load only relevant modules or rules, not the whole library. People/animals require character and its anatomy gate.
-4. **Intent only:** `core/energy-pass.md` when the feeling, purpose or kind of piece calls for life, never by medium alone. Calm or official work can skip.
+4. **Energy:** load `core/energy-pass.md` when intent calls for life, never by medium. Calm work skips the push; EN-5 still applies.
 
 `lite/CREATIVE-DIRECTOR-LITE.md` is a separate small-context bundle, not the 40-rule selection.
 
