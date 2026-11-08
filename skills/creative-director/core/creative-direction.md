@@ -9,9 +9,20 @@ Keep it light. These are defaults, not blockers, except CD-7, which is on the MU
 ## CD-1. Have a brief before making anything
 - **What:** Six short lines: the problem or purpose; the audience; the one idea (a single sentence); where and how big it is seen; must-keeps and constraints (brand, subject, format); how you'll judge it done.
 - **Why:** Weak briefs waste work. In a 2022 survey most agency staff called client briefs inadequate, and few marketers had agreed criteria for judging the work [SRC-88]. A good brief is a platform that opens up ideas, not a box that closes them [SRC-89, SRC-90, SRC-107].
-- **Check:** Can you fill all six lines? If not, ask the owner, or write your assumptions down and flag them.
+- **Check:** Can you fill all six lines? If not, see *When the world is not locked*: ask the owner, or if they asked you to invent, write the brief and show it before generating.
 - **Read it exactly:** count what the brief fixes ("it" means one; a named number is that number; CD-7 checks it on the render), and keep background facts as mood rather than forcing each into the picture or the copy (ILL-6).
 - **Production cost:** note how it will be made and paid for. Full-colour print, 3D renders or special finishes may be wasteful on a council or charity budget; ask, or offer a cheaper version that keeps the idea (owner's note on a batch 4 council notice, S44).
+
+
+## When the world is not locked
+
+A locked brief from the owner of the work (purpose, audience, the facts that must appear, tone or genre) is enough: do not re-ask; note any leftover CD-1 lines as [inferred] and work.
+
+If the ask has no world and they did not say to invent one, ask them, all at once. Short answers and "don't know" are fine. Ask: what it is for; who it is for; the facts that must appear (who, what, when, where); and the tone or genre. Propose theme, mood and colour from those answers, unless they already named them. Do not collect a long form.
+
+If they said to invent (from your mind, surprise me, make some up), write a complete brief first: purpose, audience, the facts, tone or genre, and a proposed theme, mood and colour. Show that world, or those worlds if there are several, before generating. Do not generate from an invented brief they have not seen.
+
+When inventing worlds, vary them. Do not default to salt, marshes, lighthouses, harbours or coastal weather; that cluster is a habit, not a standing direction.
 
 ## CD-2. Set the direction once, then hold it
 - **What:** Before styling, write 3-5 mood words or "pillars", a do/don't list, and the tokens that follow from them (palette roles, type, shape, light). Use your own or generated references; describe, don't copy.

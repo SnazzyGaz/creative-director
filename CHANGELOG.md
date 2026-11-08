@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- **Intake when the world is not locked.** CD-1 now distinguishes a locked brief (do not re-ask) from an open ask (purpose, audience, must-have facts, tone or genre; propose theme, mood and colour from those) and from an ask to invent (write the full brief and show the worlds before generating). Invented worlds should vary; do not default to salt, marshes, lighthouses, harbours or coastal weather.
+
+
 ## v0.11.4 (8 November 2026)
 
 **Match graphic ambition to the job, so restraint does not flatten everything into a typed card.**
