@@ -71,24 +71,24 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Source:** Lindgaard et al. [SRC-36]; Legge & Bigelow [SRC-114]; UI-6.
 
 ### LAY-7. Posters: read at distance, then up close
-- **What:** A poster has two reading distances: the far glance (one image and the headline) and the near read (details). Design the far layer first. Read as a street poster, not a literary jacket: type that carries across the room, and a scene that matches the event's energy. Prefer a photograph of people over generic digital illustration unless the brief asks for illustration.
-- **Why:** People decide whether to approach from across the room; small type can't do that job. A solemn single image with quiet type is the usual jacket treatment.
-- **Check:** View the poster at about 10% of its size (a 50 cm poster seen from 5 m). Do the image and headline still read? Is the detail text grouped? Does it read as a street poster, not a book cover, and does the scene match the event?
+- **What:** A poster has two reading distances: the far glance (headline and one image) and the near read (details). Design both as one page, not a picture with type parked in a safe band (TYPE-15). Read as a street poster, not a literary jacket, and match the event's energy. Prefer a photograph of people over generic digital illustration unless the brief asks for illustration.
+- **Why:** People decide whether to approach from across the room; small type can't do that job. A solemn image with quiet type is the usual jacket treatment.
+- **Check:** View the poster at about 10% of its size (a 50 cm poster seen from 5 m). Do the image and headline still read? Is the type a designed system or a caption on the picture (TYPE-15)? Does it read as a street poster, not a book cover, and match the event?
   **Signage and A-boards:** note the printed size and reading distances (a pavement board: headline and price from 3-5 m, body from about 1-1.5 m); convert each key line's cap height to millimetres at print size. A practical working minimum is cap height ≈ distance ÷ 250 (12-20 mm for 3-5 m). Best case, head-on in good light: distance ÷ 360; at an angle or in passing: about distance ÷ 120 [SRC-179, SRC-180]. Report each line as "reads to X m".
-- **Fix:** Enlarge the headline and simplify the image; group details into one block on the grid. On signage, cut words before shrinking the type that must read from the pavement.
+- **Fix:** Enlarge the headline; rebuild the type system with only the allowed words (TYPE-15); do not dump facts into opposite corners. On signage, cut words before shrinking the type that must read from the pavement.
 - **Grade:** Standard (sign-industry guidance) for the size rule; the two-distance test is craft.
 - **Source:** Müller-Brockmann [SRC-60]; CORE-1; United States Sign Council Foundation [SRC-179, SRC-180].
 
 ### LAY-8. Slides: one point each, with signals
 - **What:** One message per slide, stated as the title (a sentence, not a topic label). Remove decoration that doesn't explain. Text a room can read: about 24 pt or more at 1920 × 1080, at most about six short lines. Highlight what the speaker is talking about.
-- **Why:** People learn more when extraneous material is cut (coherence) and when the key items are signalled; text that duplicates speech word for word can hurt (redundancy) [SRC-132]. Dense slides become documents nobody reads [SRC-133].
+- **Why:** People learn more when extraneous material is cut and key items are signalled; text that duplicates speech word for word can hurt [SRC-132]. Dense slides become documents nobody reads [SRC-133].
 - **Check:** Can the slide's point be read from its title alone? Count lines and the smallest size. Is there clip art, a stock photo or a template ornament with no job?
 - **Fix:** Rewrite titles as claims; split crowded slides; move detail to speaker notes or a handout.
 - **Grade:** Partly supported (multimedia-learning experiments [SRC-132]).
 - **Source:** Mayer, *Multimedia Learning* [SRC-132]; Duarte, *slide:ology* [SRC-133].
 
 ### LAY-9. Print files: bleed, resolution, colour (MUST-BE-RIGHT for print)
-- **What:** Anything that runs off the edge extends 3 mm (0.125 in) past the trim (the bleed). Text and key elements stay at least 3-5 mm inside the trim. Images are at least 300 ppi at final printed size (line art higher). Colour is converted with the printer's CMYK profile, or spot colours are named; deep blacks for large areas use the printer's rich-black mix; small text stays 100% K.
+- **What:** Anything that runs off the edge extends 3 mm past the trim (the bleed). Text and key elements stay at least 3-5 mm inside the trim. Images are at least 300 ppi at final printed size. Colour is converted with the printer's CMYK profile, or spot colours are named; large-area rich black follows the printer; small text stays 100% K.
 - **Why:** Trimming is not exact; without bleed you get white slivers, and without a safe margin text gets cut. Low-res images print soft; RGB colours shift when converted late.
 - **Check:** Read the document setup (bleed, trim, margins). Compute ppi: image pixels ÷ printed inches. Check the output intent or profile of the PDF and that fonts are embedded.
 - **Fix:** Extend backgrounds into the bleed; re-source or re-render low-res images (don't upsample and call it 300); export PDF/X with the printer's profile, or ask the printer.
@@ -96,7 +96,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Source:** Adobe InDesign user guide (bleed, slug, printing) [SRC-131]; ask the printer for their spec, which overrides these defaults.
 
 ### LAY-10. Whitespace is distributed on purpose (squint for dead zones)
-- **What:** Every empty area is either a margin, a gap between groups, or deliberate focal space (room the subject looks or moves into, a quiet field that frames the one message). Related items sit closer to each other than to anything else, so each group reads as one unit. No empty band is much larger than the largest intended gap unless deliberate and said so. After any image swap, crop, regenerate or type move, re-review the whole layout.
+- **What:** Every empty area is either a margin, a gap between groups, or deliberate focal space (room the subject looks or moves into, a quiet field that frames the one message). Related items sit closer to each other than to anything else, so each group reads as one unit. No empty band is much larger than the largest intended gap unless deliberate. After any image swap, crop, regenerate or type move, re-review the whole layout.
 - **Why:** People group by nearness and shared region [SRC-175, SRC-176]; consistent gaps read as structure, a stray large gap as something missing [SRC-177, SRC-178]. This rule is the measure; the idea (active versus dead space) lives in COMP-23.
 - **Check:**
   1. **Measure rows:** list the empty horizontal bands between groups. Flag any band larger than about 1.5× the largest intended inter-group gap that isn't marked as deliberate.
@@ -108,7 +108,7 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Source:** Wertheimer [SRC-175]; Palmer [SRC-176]; NN/g on proximity [SRC-177]; White [SRC-178]; LAY-3; COMP-23 to COMP-25.
 
 ### LAY-11. Commit to one axis: symmetric or asymmetric
-- **What:** Decide whether the layout is built on a central axis (centred, symmetric, formal) or on edges (flush left or right, asymmetric, active), and keep each group consistent. Mixing centred and flush blocks at random gives many weak alignment lines.
+- **What:** Decide whether the layout is built on a central axis (centred, symmetric, formal) or on edges (flush left or right, asymmetric, active), and keep each group consistent. Mixing centred and flush blocks at random weakens the alignment.
 - **Why:** Tschichold's later work defended the centred classical page; his earlier *New Typography* argued for asymmetry; both are coherent systems [SRC-211]. What fails is the unsystematic mix (CORE-5).
 - **Check:** List the alignment axes in use (left edges, right edges, centre lines). More than three in one group, or a centred heading over a flush-left block with no reason?
 - **Fix:** Pick one axis per group; centre only short, symmetrical material; snap the rest to the grid (LAY-1).
@@ -116,18 +116,18 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **Source:** Tschichold [SRC-211]; Müller-Brockmann [SRC-60]; Lupton [SRC-54]; CORE-5; COMP-17.
 
 ### LAY-12. Margins from a system, with the optical centre a little high
-- **What:** Derive margins from one rule (a single unit, a ratio, or a classic book canon) and keep them consistent across pages. When a block is centred vertically, place it slightly above the true centre, and make the bottom margin at least as large as the top; equal top and bottom space looks bottom-heavy.
-- **Why:** Book canons (Van de Graaf, Tschichold's 2:3 page with margins about 2:3:4:6) give consistent, generous margins [SRC-211]. The slightly high optical centre is an old printing rule [SRC-205] with only a small perceptual basis; evidence and limits: COMP-22.
-- **Check:** Measure the four margins. Do they follow one rule? For a vertically centred block, is it at the true centre (often reads low) or a little above (a few percent of the page height)?
+- **What:** Derive margins from one rule (a single unit, a ratio, or a classic book canon) and keep them consistent across pages. When a block is centred vertically, place it slightly above the true centre; equal top and bottom space looks bottom-heavy.
+- **Why:** Book canons give consistent, generous margins [SRC-211]. The slightly high optical centre is an old printing rule [SRC-205]; evidence and limits: COMP-22.
+- **Check:** Measure the four margins. Do they follow one rule? For a vertically centred block, is it at the true centre (often reads low) or a little above?
 - **Fix:** Move the block up slightly; enlarge the bottom margin; set margins from the system, not by eye per page.
 - **Grade:** Canons: traditional craft. Optical centre: craft wisdom with a small perceptual basis. "Margins must follow the golden ratio": myth (COMP-16).
 - **Source:** Tschichold and the page canons [SRC-211]; Gress on the optical centre [SRC-205]; Drain & Reuter-Lorenz [SRC-264]; LAY-2; COMP-16.
 
-### LAY-13. Group with space and alignment first; add boxes and rules last
-- **What:** Make groups with proximity and alignment before reaching for borders, background panels or divider lines. Add a box only where space can't do the job (dense data, mixed content).
-- **Why:** A shared boundary is a strong grouping cue that can override proximity [SRC-176], so unnecessary boxes create false groups and clutter. Proximity alone usually suffices [SRC-177, SRC-250].
-- **Check:** For each box, rule or panel, imagine it removed: does the grouping still read from space? If yes, the box is decoration.
-- **Fix:** Remove the box and widen the gap between groups (LAY-10); keep boxes for real containers.
+### LAY-13. Group with space and alignment first; use boxes and rules as structure, not garnish
+- **What:** Make groups with proximity and alignment first. Then add a box, rule or banner where it bounds a group, leads the eye or balances a field — not as garnish, and not to hold invented words (TYPE-15, CD-7).
+- **Why:** A shared boundary is a strong grouping cue [SRC-176]. Unnecessary boxes create false groups; missing ones that did a structural job flatten the page [SRC-177, SRC-250].
+- **Check:** For each box, rule or panel: does it bound, lead or balance? If removing it leaves the page no weaker, it is garnish; if it holds a lockup or leads the eye, keep it.
+- **Fix:** Remove garnish; keep or add the mark that does a structural job, using only allowed words (LAY-10).
 - **Grade:** Well supported (grouping principles).
 - **Source:** Palmer [SRC-176]; NN/g [SRC-177]; Wagemans et al. [SRC-250]; CORE-4; LAY-10.
 
@@ -143,15 +143,15 @@ Why it matters: most social images are first seen as a small tile in a moving fe
 - **What:** Place text on an image only over a calm, even area, or add a scrim, overlay or panel. Check contrast against the *worst* part of the background behind the text, not its average.
 - **Why:** Busy, uneven backgrounds make text hard to read and can fail contrast at some letters while passing on average [SRC-260]. W3C lists text over background images that fails contrast as a common failure [SRC-260].
 - **Check:** Crop the region behind each line of text. Sample its lightest and darkest pixels (for light text, the lightest pixel matters most; for dark text, the darkest) and run `tools/contrast.py` against the text colour: ≥ 4.5:1 (≥ 3:1 for large text). Squint: is the area behind the text busy (strong edges, many tones)?
-- **Fix:** Give the leftover field a job (a bigger title there is valid) or close it; or add a scrim or panel. Do not regenerate art that already works (COMP-23).
+- **Fix:** Give the leftover field a job (a bigger title there is valid) or close it; or add a scrim or panel. Pick type colour from the picture (CV-12), not default white or cream. Do not regenerate art that already works (COMP-23).
 - **Grade:** Well supported (WCAG; usability research).
 - **Source:** NN/g on text over images and W3C failure F83 [SRC-260]; WCAG [SRC-3]; UI-6; LAY-6.
 
 ### LAY-16. Covers: title, image and author name each get their place, and the cover signals its genre
-- **What:** The title has its own clear zone that doesn't fight the focal image. The author name sits on the cover's axis (LAY-11), not tucked in a corner, and reads clearly: contrast measured on the worst pixels behind it, never busy texture like grass or cloud (LAY-15). Type and image signal the genre and tone the book really has (EN-2 item 8). Covers may sit further from literal content than posters or screens if title, author and genre read.
+- **What:** The title has its own clear zone that doesn't fight the focal image, set as a lockup (TYPE-15). The author name sits on the cover's axis (LAY-11), not tucked in a corner, and reads clearly: contrast measured on the worst pixels behind it, never busy texture like grass or cloud (LAY-15). Type and image signal the genre and tone the book really has (EN-2 item 8). Covers may sit further from literal content than posters or screens if title, author and genre read.
 - **Why:** Covers are read at thumbnail first. In the blind test the owner marked down a title fighting the moon (S35), an author name tucked bottom-left (S46) and one lost in grass (S101), preferred a central title (S80), and read genre from styling (S40).
 - **Check:** At thumbnail, does the title read without competing? Is the author name on the axis, and does `tools/contrast.py` on its worst background pixels give ≥ 4.5:1 (≥ 3:1 large)? Name the genre the cover signals in two words: does it match the book?
-- **Fix:** Give the title a calm band; move the name onto the axis and a calm area or scrim, in the better of black or white (CV-10); match type and colour to the genre (TYPE-10).
+- **Fix:** Give the title a designed lockup in its own zone (TYPE-15); move the name onto the axis and a calm area or scrim; match type and colour to the genre (TYPE-10, CV-12).
 - **Grade:** Well supported for the contrast check (WCAG, LAY-15); placement and genre are craft wisdom, internal evidence, one judge.
 - **Source:** LAY-11; LAY-15; TYPE-10; CV-10; `examples/blind-test/RESULTS.md`.
 

@@ -192,4 +192,4 @@ Checked 3 November 2026.
 - [A1] Aider, *Specifying coding conventions*: https://aider.chat/docs/usage/conventions.html
 - [V1] vercel-labs/skills, *Creating skills* (discovery paths, supported agents): https://github.com/vercel-labs/skills
 
-The committed skill folder tracks v0.11.1. A tag does not upload release assets: if the latest release zip or prompt bundle still reports an earlier version, use this folder or build fresh assets locally with the maintainer commands above.
+The committed skill folder tracks v0.11.2. A tag does not upload release assets: if the latest release zip or prompt bundle still reports an earlier version, use this folder or build fresh assets locally with the maintainer commands above.

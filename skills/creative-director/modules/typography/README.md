@@ -4,7 +4,7 @@ Choosing and setting type anywhere words appear: UI, posters, social cards, deck
 
 Format: **What / Why / Check / Fix / Grade / Source**. Rules marked **MUST-BE-RIGHT** are blockers; the rest are defaults. Most checks are measurements an agent can run on computed styles or on a render.
 
-Evidence in one line: typeface choice matters less than most people think (serif vs sans makes no reliable legibility difference [SRC-111]), while size, measure and spacing make measurable differences [SRC-113, SRC-114, SRC-117]. So spend critique on setting, not on font taste.
+Evidence in one line: serif versus sans makes no reliable legibility difference [SRC-111], while size, measure and spacing do [SRC-113, SRC-114, SRC-117]. Spend critique on setting and on whether the face belongs to this job (TYPE-10): voice and fit are not the same as a serif-versus-sans taste argument.
 
 ---
 
@@ -59,8 +59,8 @@ Evidence in one line: typeface choice matters less than most people think (serif
 ### TYPE-7. Hierarchy uses as few signals as needed
 - **What:** Each level of hierarchy changes one or two properties (size, weight, colour or case), not all of them. Three levels are enough for most pages; four or more need a reason.
 - **Why:** When everything is bold, large and coloured, nothing leads (CORE-1).
-- **Check:** Blur test: can you name the first, second and third things read? For each text role, list how it differs from the role below. Three or more differences at once, or none that survives greyscale?
-- **Fix:** Remove signals until each level is separated by one strong difference (usually size or weight). Keep colour for meaning.
+- **Check:** Blur test: can you name the first, second and third things read? For each text role, list how it differs from the role below. Three or more differences at once, or none that survives greyscale? On a poster, cover or label: have neighbouring display lines flattened to one face and one alignment (TYPE-15)?
+- **Fix:** Remove redundant signals until each level is separated by one strong difference (usually size or weight). Keep colour for meaning. On designed surfaces, a change of scale or style between lines is hierarchy, not clutter.
 - **Grade:** Craft wisdom.
 - **Source:** NN/g, *Visual Hierarchy* [SRC-1]; Lupton [SRC-54]; CORE-1.
 
@@ -73,7 +73,7 @@ Evidence in one line: typeface choice matters less than most people think (serif
 - **Source:** Butterick, *Practical Typography* [SRC-10]; Bringhurst [SRC-52].
 
 ### TYPE-9. Avoid the generic AI type look
-- **What:** Common tells: Inter, Roboto or Poppins for everything with no reason; a huge centred bold headline with a grey subhead under it; gradient-filled text; every heading in title case with an emoji; all text the same weight; three sizes only, a few pixels apart; letter-spaced caps labels on every section.
+- **What:** Common tells: Inter, Roboto or Poppins for everything with no reason; a huge centred bold headline with a grey subhead under it; gradient-filled text; every heading in title case with an emoji; all text the same weight; three sizes only, a few pixels apart; letter-spaced caps labels on every section; a respectable default serif or sans chosen because it will set cleanly, with no named reason it belongs to this job; a photograph with a title parked in a safe band and the facts lined up or split into opposite corners.
 - **Why:** None is wrong alone. Together they say "no one chose this" (UI-7) and make the work look like everything else [SRC-27, SRC-28].
 - **Check:** Count the tells. Two or more: flag. For each typeface, can you name the reason it was chosen (brand, subject, legibility need)? If not, it's a default.
 - **Fix:** Take type from the brand guide (BRAND-3). With none, pick a face whose voice suits the subject, then set it carefully (TYPE-2 to TYPE-6). A neutral face set well beats a distinctive face set badly. The choice of face itself is a taste call for the owner of the work.
@@ -81,7 +81,7 @@ Evidence in one line: typeface choice matters less than most people think (serif
 - **Source:** Anticode [SRC-27]; Superdesign [SRC-28]; UI-7.
 
 ### TYPE-10. Pick type from the theme catalogue to suit the genre; don't reuse one face everywhere
-- **What:** Match the display face to the brief's genre and tone, using the theme catalogue in [`fonts/CATALOGUE.md`](../../fonts/CATALOGUE.md) (107 free families in 29 themes, each with what it's good for, what to avoid, pairings and mood tags; a "By mood" index lists families per mood); shortlist with `python3 tools/font_find.py --mood ... --genre ...` rather than reading the whole catalogue. Name the theme and the reason in the critique or the log ("pulp comedy cover: Shrikhand title, Cabin author line"). Match the title's loudness to the mood as well: a cold, measured thriller wants a quieter, tighter title than a fun run (owner's note on a batch 5 crime cover, S51). Don't default to the same family across unrelated briefs, and vary type across a set of examples or a portfolio; one face in every piece reads as a house style nobody chose.
+- **What:** Match the display face to the brief's genre and tone, using the theme catalogue in [`fonts/CATALOGUE.md`](../../fonts/CATALOGUE.md) (107 free families in 29 themes, each with what it's good for, what to avoid, pairings and mood tags; a "By mood" index lists families per mood); shortlist with `python3 tools/font_find.py --mood ... --genre ...` rather than reading the whole catalogue. Name the theme and the reason in the critique or the log ("pulp comedy cover: Shrikhand title, Cabin author line"). Match the title's loudness to the mood as well: a cold, measured thriller wants a quieter, tighter title than a fun run (owner's note on a batch 5 crime cover, S51). Don't pick a face because it will overlay cleanly: hone the choice to this job's purpose and fit (a playbill, a cider label and a quiet cookbook should not share one safe pair). Don't default to the same family across unrelated briefs, and vary type across a set of examples or a portfolio; repeating one overlay pair (a display serif plus a sans) is the same fault as reusing one face.
 - **Why:** Readers consistently attribute personality to typefaces, and to text, so a face whose persona clashes with the content changes how the piece is read [SRC-156, SRC-157]. Choosing on voice is the craft advice too [SRC-54, SRC-116]. Repeating one face across unrelated briefs is the type form of the generic look (TYPE-9).
 - **Check:** Which catalogue theme fits the brief's genre and tone? Is the chosen face from it (or is there a stated reason not)? Across the last few pieces, or across a set of examples, does one family recur where the briefs differ? The face's "avoid" line in the catalogue: does this use break it (e.g. a script in all caps, a thin deco face at text size)?
 - **Fix:** Pick from the matching theme; pair with a text face from the catalogue's "pairs with" line; then set it carefully (TYPE-2 to TYPE-6). This is a default, not a blocker; the owner of the work can choose otherwise, and a brand guide (BRAND-3) wins over the catalogue.
@@ -119,6 +119,15 @@ Evidence in one line: typeface choice matters less than most people think (serif
 - **Fix:** Hang punctuation; nudge round letters; letterspace caps (TYPE-6); switch figure style.
 - **Grade:** Craft wisdom (well established in type design).
 - **Source:** Bringhurst, 2.1.6, 3.2.1 [SRC-212]; Gress [SRC-205]; TYPE-6; TYPE-8.
+
+
+### TYPE-15. Type and graphic marks are structure, not garnish
+- **What:** On posters, covers, labels, tickets and other designed surfaces, type is page architecture, not a caption parked on a picture. Neighbouring lines change scale and style enough to form a rhythm (TYPE-2, TYPE-7). Simple graphic marks — rules, banners, badges, holding shapes, small ornaments — are structure when they bound a group, lead the eye or balance a field. Do this without adding a single extra word (CD-7). Setting type in code over textless art is fine for locked wording; it is not a reason to default to "title in a safe band, facts in opposite corners." An emblem (a pebble, a sprig, a badge) stays emblem-sized; it should not swell into a large study that pushes the words aside. A label, tin or ticket should still read as that object unless the brief asked for a flat artwork.
+- **Why:** Refusing invented slogans is right; throwing away the graphic system those words sat in is the fail. In comparison proofs the owner of the work found with-skill pieces flattening to a picture plus type, while without-skill pieces used type changeups and graphic marks as structure, and chose faces and colours that belonged to the job.
+- **Check:** Squint. Is this a designed page, or a photograph with a caption? Do neighbouring display lines differ by a deliberate scale or style step? Point at each rule, banner, badge or ornament: does it bound, lead or balance, or is it missing because the words were cleaned? If you stripped invented copy, did the lockup, rules and grouping go with it? Are emblems still small enough to sit as marks?
+- **Fix:** Rebuild the type system with only the allowed words. Change scale and style between roles. Add a rule, banner or holding shape where it groups, points or balances. Keep emblems small. Restore the object (label on a bottle, type on a tin, ticket as a ticket) if the brief is for that object. Do not invent copy to fill a mark.
+- **Grade:** Craft wisdom; the comparison cases are internal evidence, one judge.
+- **Source:** Müller-Brockmann [SRC-60]; Lupton [SRC-54]; TYPE-2; TYPE-7; TYPE-10; LAY-7; CD-7; CORE-1.
 
 ---
 

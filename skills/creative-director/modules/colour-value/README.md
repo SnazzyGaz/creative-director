@@ -101,6 +101,15 @@ Measuring: `tools/look.py` gives a greyscale copy and L* statistics; `tools/cont
 
 ---
 
+
+### CV-12. Type colour sits in the picture, not only on it
+- **What:** The colour of type, rules and panels should belong to the picture's atmosphere (CV-7) and still pass the contrast check on the worst pixels (LAY-15). Don't default to white, cream or black solely because they will pass; sample the scene and pick a hue that sits in it (gold on a warm dark, ink that matches the print, a colour already in the palette) that still clears 4.5:1 (3:1 for large type). A scrim or panel is fine when needed for contrast; it should take its tint from the picture, not look pasted on.
+- **Why:** Colour is judged relative to its surround (CV-4) [SRC-217]. Type that ignores the light and palette reads as an overlay, even when the contrast ratio passes. In comparison proofs the owner of the work found the without-skill pieces more subtle in colour, while with-skill pieces often used a contrast-safe overlay.
+- **Check:** Peephole the type and the ground separately, then together (CV-4). Does the type share the scene's tint, or could it have been dropped onto any photograph? Does it still pass `tools/contrast.py` on the worst background pixels?
+- **Fix:** Recolour type from the picture's key; tint a necessary scrim toward the scene; then re-check contrast and raise it without jumping straight to plain white or cream unless that is the atmosphere.
+- **Grade:** Colour-in-context: well supported (CV-4, CV-7). The overlay habit is internal evidence, one judge.
+- **Source:** CV-4; CV-7; LAY-15; Gurney [SRC-51]; Palmer, Schloss & Sammartino [SRC-217].
+
 ## Myths and weak claims (details in `core/evidence.md`)
 - **Colour-wheel schemes guarantee harmony:** weak (CV-5).
 - **"Goethe's" area ratios** (via Itten) and other fixed "colour proportion" numbers: tradition only (CV-6).

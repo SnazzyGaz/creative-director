@@ -43,7 +43,7 @@ The viewing tests (squint, thumbnail, mirror, rotate 180°, cover half, distance
 - **Source:** Cerf, Frady & Koch [SRC-239]; Friesen & Kingstone [SRC-240]; ILL-2; LAY-3.
 
 ### COMP-4. Guide the eye with what eyes actually follow; treat lines as support
-- **What:** Plan an eye path (entry, focus, pauses, exit), but build it from strong cues: contrast, faces and gaze direction, pointing, text, and isolation. Leading lines and S-curves help connect places, but they don't drive the eye on their own.
+- **What:** Plan an eye path (entry, focus, pauses, exit), but build it from strong cues: contrast, faces and gaze direction, pointing, text, and isolation. Leading lines and S-curves help connect places, but they don't drive the eye on their own. On a page, rules, banners and other graphic marks can support that path when they bound a group or point to the next thing (TYPE-15).
 - **Why:** Eye-tracking of paintings shows viewers returning to a few high-information regions, on a path that depends on viewer and task [SRC-241, SRC-242]. Gaze and pointing cues shift attention reliably [SRC-240]; faces win in paintings with people, contrast and colour in landscapes [SRC-243]. There is little direct evidence that leading lines on their own steer the eye.
 - **Check:** Blur the work and note the first three places the eye lands. Are they the focus and the planned secondary points, in that order? Does any depicted gaze or pointing arm lead out of the frame or to nothing?
 - **Fix:** Raise the focus's contrast; turn a figure's gaze toward the focus; add a secondary accent where the path should pause; cut or calm the cue that pulls off-route.

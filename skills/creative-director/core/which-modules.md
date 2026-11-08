@@ -66,7 +66,7 @@ What each module covers (`modules/<name>/README.md`).
 
 ## Token cost per module
 
-Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.11.1, 8 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,000 (7,500 with template); AGENTS 1,200, principles 2,700, loop 3,000, template 1,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
+Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.11.2, 8 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,000 (7,500 with template); AGENTS 1,200, principles 2,700, loop 3,000, template 1,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
 
 | File or set | Tokens |
 |---|---|

@@ -1,4 +1,4 @@
-# AGENTS.md — creative-director v0.11.1
+# AGENTS.md — creative-director v0.11.2
 
 Design judgement for visual work: idea first, roughs then pick, evidence-labelled critique, then the smallest effective fix. Taste stays with the owner of the work.
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.11.2 (8 November 2026)
+
+- **Type and marks as structure.** TYPE-15: on posters, covers, labels, tickets and other designed surfaces, type is page architecture, not a caption parked on a picture. Lines change scale and style; rules, banners, badges and small ornaments bound a group, lead the eye or balance a field, without adding words. Setting type in code is fine for locked wording; it is not a reason to park a title in a safe band and dump facts into opposite corners. Emblems stay emblem-sized; a label, tin or ticket should still read as that object.
+- **Type fitted to the job.** TYPE-9 and TYPE-10 treat a respectable default face chosen only because it will set cleanly as a generic-look tell, and say to hone the face to this job's purpose and fit. The module intro no longer says to skip font taste: voice and fit are not a serif-versus-sans argument.
+- **Colour sits in the picture.** CV-12: type colour belongs to the scene's atmosphere and still passes contrast; do not default to white or cream solely to pass a check.
+- **Companion edits.** LAY-7, LAY-13, LAY-15, LAY-16, COMP-4, COMP-23 and BRAND-10 point at that structure: a poster is one page, not a captioned photo; boxes and rules are structure, not garnish; leftover facts in opposite corners are not a job for empty space; packs stay objects and emblems stay small. Always-on unchanged at 5,997 / 6,000. Skill folder and prompt bundles regenerated.
+
 ## v0.11.1 (8 November 2026)
 
 - **Copy-check evidence.** When type is set in code, compare exact copy against the `*-boxes.json` text manifest supplied with `--boxes` or found beside the image as `{stem}-boxes.json`. OCR is for generated lettering, not a verdict over code-set type; Tesseract tokens below confidence 50 (including -1) are dropped. OCR mismatches are FLAG with crops, not FAIL. Manifest, DOM and supplied-transcript mismatches remain FAIL; missing evidence still does not pass.
