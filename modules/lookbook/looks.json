@@ -4,8 +4,8 @@
  "generated_by": "tools/lookbook_sync.py from the breeder export (see modules/lookbook/UPDATING.md)",
  "paths_relative_to": "modules/lookbook/",
  "counts": {
-  "live": 368,
-  "established": 294,
+  "live": 415,
+  "established": 341,
   "keepers": 74,
   "partial": [
    "LB-066",
@@ -724,8 +724,8 @@
    "nn_similarity": 0.5369,
    "nearest_looks": [
     "LB-213",
-    "LB-068",
-    "LB-093"
+    "LB-301",
+    "LB-324"
    ],
    "bred_from": [],
    "colours": [
@@ -980,8 +980,8 @@
    "nn_similarity": 0.5679,
    "nearest_looks": [
     "LB-118",
-    "LB-186",
-    "LB-070"
+    "LB-322",
+    "LB-186"
    ],
    "bred_from": [],
    "colours": [
@@ -1546,12 +1546,12 @@
    "type_pairing": [],
    "sheet": "sheets/F3_ornamental_sheet2.jpg",
    "panel": "sheet 2 of 2, row 1 col 1 (panel 1 of 6)",
-   "nearest_neighbour": "LB-233",
-   "nn_similarity": 0.4735,
+   "nearest_neighbour": "LB-305",
+   "nn_similarity": 0.4826,
    "nearest_looks": [
+    "LB-305",
     "LB-233",
-    "LB-090",
-    "LB-185"
+    "LB-090"
    ],
    "bred_from": [],
    "colours": [
@@ -1760,12 +1760,12 @@
    "type_pairing": [],
    "sheet": "sheets/F3_ornamental_sheet2.jpg",
    "panel": "sheet 2 of 2, row 2 col 2 (panel 5 of 6)",
-   "nearest_neighbour": "LB-152",
-   "nn_similarity": 0.557,
+   "nearest_neighbour": "LB-296",
+   "nn_similarity": 0.6068,
    "nearest_looks": [
+    "LB-296",
     "LB-152",
-    "LB-169",
-    "LB-268"
+    "LB-169"
    ],
    "bred_from": [],
    "colours": [
@@ -3174,7 +3174,7 @@
    "nearest_looks": [
     "LB-161",
     "LB-053",
-    "LB-071"
+    "LB-327"
    ],
    "bred_from": [],
    "colours": [
@@ -3323,8 +3323,8 @@
    "nn_similarity": 0.572,
    "nearest_looks": [
     "LB-242",
-    "LB-143",
-    "LB-137"
+    "LB-309",
+    "LB-308"
    ],
    "bred_from": [],
    "colours": [
@@ -3622,7 +3622,7 @@
    "nearest_looks": [
     "LB-101",
     "LB-091",
-    "LB-041"
+    "LB-320"
    ],
    "bred_from": [],
    "colours": [
@@ -3969,7 +3969,7 @@
    "nearest_looks": [
     "LB-213",
     "LB-184",
-    "LB-SD07"
+    "LB-322"
    ],
    "bred_from": [],
    "colours": [
@@ -4018,7 +4018,7 @@
    "nearest_looks": [
     "LB-015",
     "LB-014",
-    "LB-250"
+    "LB-295"
    ],
    "bred_from": [],
    "colours": [
@@ -4062,12 +4062,12 @@
    "type_pairing": [],
    "sheet": "sheets/F2_modernist_sheet3.jpg",
    "panel": "sheet 3 (added batch 5), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-118",
-   "nn_similarity": 0.5492,
+   "nearest_neighbour": "LB-323",
+   "nn_similarity": 0.5885,
    "nearest_looks": [
+    "LB-323",
     "LB-118",
-    "LB-R05R19",
-    "LB-124"
+    "LB-R05R19"
    ],
    "bred_from": [],
    "colours": [
@@ -4158,12 +4158,12 @@
    "type_pairing": [],
    "sheet": "sheets/F3_ornamental_sheet3.jpg",
    "panel": "sheet 3 (added batch 5), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-232",
-   "nn_similarity": 0.5728,
+   "nearest_neighbour": "LB-309",
+   "nn_similarity": 0.586,
    "nearest_looks": [
+    "LB-309",
     "LB-232",
-    "LB-143",
-    "LB-053"
+    "LB-286"
    ],
    "bred_from": [],
    "colours": [
@@ -4213,7 +4213,7 @@
    "nearest_looks": [
     "LB-121",
     "LB-096",
-    "LB-215"
+    "LB-286"
    ],
    "bred_from": [],
    "colours": [
@@ -4307,12 +4307,12 @@
    "type_pairing": [],
    "sheet": "sheets/F4_print_sheet3.jpg",
    "panel": "sheet 3 (added batch 5), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-116",
-   "nn_similarity": 0.6543,
+   "nearest_neighbour": "LB-316",
+   "nn_similarity": 0.6856,
    "nearest_looks": [
+    "LB-316",
     "LB-116",
-    "LB-040",
-    "LB-128"
+    "LB-293"
    ],
    "bred_from": [],
    "colours": [
@@ -4359,8 +4359,8 @@
    "nn_similarity": 0.6575,
    "nearest_looks": [
     "LB-145",
-    "LB-067",
-    "LB-073"
+    "LB-313",
+    "LB-067"
    ],
    "bred_from": [],
    "colours": [
@@ -4503,12 +4503,12 @@
    "type_pairing": [],
    "sheet": "sheets/F5_pop_sheet3.jpg",
    "panel": "sheet 3 (added batch 5), row 1 col 3 (panel 3 of 6)",
-   "nearest_neighbour": "LB-020",
-   "nn_similarity": 0.6397,
+   "nearest_neighbour": "LB-323",
+   "nn_similarity": 0.6442,
    "nearest_looks": [
+    "LB-323",
     "LB-020",
-    "LB-250",
-    "LB-186"
+    "LB-306"
    ],
    "bred_from": [],
    "colours": [
@@ -4882,7 +4882,7 @@
    "nearest_looks": [
     "LB-158",
     "LB-034",
-    "LB-228"
+    "LB-323"
    ],
    "bred_from": [],
    "colours": [
@@ -4931,8 +4931,8 @@
    "nn_similarity": 0.5949,
    "nearest_looks": [
     "LB-214",
-    "LB-163",
-    "LB-122"
+    "LB-327",
+    "LB-163"
    ],
    "bred_from": [],
    "colours": [
@@ -4977,8 +4977,8 @@
    "type_pairing": [],
    "sheet": "sheets/F11_technique_sheet1.jpg",
    "panel": "sheet 1 (added batch 5), row 1 col 1 (panel 1 of 6)",
-   "nearest_neighbour": "LB-R02R10",
-   "nn_similarity": 0.546,
+   "nearest_neighbour": "LB-311",
+   "nn_similarity": 0.6602,
    "interpreted": {
     "mood": [
      "elegant",
@@ -5015,9 +5015,9 @@
     }
    },
    "nearest_looks": [
+    "LB-311",
     "LB-R02R10",
-    "LB-253",
-    "LB-R02R06"
+    "LB-253"
    ],
    "bred_from": [],
    "colours": [
@@ -5064,8 +5064,8 @@
    "nn_similarity": 0.6129,
    "nearest_looks": [
     "LB-025",
-    "LB-R08R18",
-    "LB-R08R01"
+    "LB-328",
+    "LB-R08R18"
    ],
    "bred_from": [],
    "colours": [
@@ -5603,12 +5603,12 @@
    "type_pairing": [],
    "sheet": "sheets/F4_print_sheet4.jpg",
    "panel": "sheet 4 (added batch 6), row 1 col 3 (panel 3 of 6)",
-   "nearest_neighbour": "LB-089",
-   "nn_similarity": 0.4803,
+   "nearest_neighbour": "LB-330",
+   "nn_similarity": 0.5258,
    "nearest_looks": [
+    "LB-330",
     "LB-089",
-    "LB-256",
-    "LB-119"
+    "LB-256"
    ],
    "bred_from": [],
    "colours": [
@@ -6832,8 +6832,8 @@
    "nn_similarity": 0.6543,
    "nearest_looks": [
     "LB-075",
-    "LB-R05R01",
-    "LB-040"
+    "LB-316",
+    "LB-293"
    ],
    "bred_from": [],
    "colours": [
@@ -6882,8 +6882,8 @@
    "nn_similarity": 0.6014,
    "nearest_looks": [
     "LB-205",
-    "LB-257",
-    "LB-090"
+    "LB-315",
+    "LB-304"
    ],
    "bred_from": [],
    "colours": [
@@ -6926,12 +6926,12 @@
    "type_pairing": [],
    "sheet": "sheets/F2_modernist_sheet5.jpg",
    "panel": "sheet 5 (added batch 8), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-177",
-   "nn_similarity": 0.6101,
+   "nearest_neighbour": "LB-323",
+   "nn_similarity": 0.6115,
    "nearest_looks": [
+    "LB-323",
     "LB-177",
-    "LB-182",
-    "LB-142"
+    "LB-182"
    ],
    "bred_from": [],
    "colours": [
@@ -7034,8 +7034,8 @@
    "nn_similarity": 0.6976,
    "nearest_looks": [
     "LB-028",
-    "LB-169",
-    "LB-121"
+    "LB-293",
+    "LB-169"
    ],
    "bred_from": [],
    "colours": [
@@ -7531,8 +7531,8 @@
    "nn_similarity": 0.6952,
    "nearest_looks": [
     "LB-256",
-    "LB-222",
-    "LB-119"
+    "LB-298",
+    "LB-222"
    ],
    "bred_from": [],
    "colours": [
@@ -7773,12 +7773,12 @@
    "type_pairing": [],
    "sheet": "sheets/F10_digital_sheet3.jpg",
    "panel": "sheet 3 (added batch 8), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-227",
-   "nn_similarity": 0.5263,
+   "nearest_neighbour": "LB-301",
+   "nn_similarity": 0.5456,
    "nearest_looks": [
+    "LB-301",
     "LB-227",
-    "LB-158",
-    "LB-034"
+    "LB-158"
    ],
    "bred_from": [],
    "colours": [
@@ -7871,8 +7871,8 @@
    "type_pairing": [],
    "sheet": "sheets/F11_technique_sheet3.jpg",
    "panel": "sheet 3 (added batch 8), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-240",
-   "nn_similarity": 0.6156,
+   "nearest_neighbour": "LB-283",
+   "nn_similarity": 0.7019,
    "interpreted": {
     "mood": [
      "crafted",
@@ -7907,9 +7907,9 @@
     }
    },
    "nearest_looks": [
-    "LB-240",
-    "LB-073",
-    "LB-233"
+    "LB-283",
+    "LB-309",
+    "LB-240"
    ],
    "bred_from": [],
    "colours": [
@@ -7957,8 +7957,8 @@
    "nn_similarity": 0.581,
    "nearest_looks": [
     "LB-217",
-    "LB-205",
-    "LB-186"
+    "LB-306",
+    "LB-205"
    ],
    "bred_from": [],
    "colours": [
@@ -8149,12 +8149,12 @@
    "type_pairing": [],
    "sheet": "sheets/F3_ornamental_sheet6.jpg",
    "panel": "sheet 6 (added batch 9), row 1 col 1 (panel 1 of 6)",
-   "nearest_neighbour": "LB-161",
-   "nn_similarity": 0.6743,
+   "nearest_neighbour": "LB-286",
+   "nn_similarity": 0.7367,
    "nearest_looks": [
+    "LB-286",
     "LB-161",
-    "LB-121",
-    "LB-073"
+    "LB-121"
    ],
    "bred_from": [],
    "colours": [
@@ -8602,8 +8602,8 @@
    "type_pairing": [],
    "sheet": "sheets/F6_cultural_sheet6.jpg",
    "panel": "sheet 6 (added batch 9), row 1 col 3 (panel 3 of 6)",
-   "nearest_neighbour": "LB-161",
-   "nn_similarity": 0.6825,
+   "nearest_neighbour": "LB-286",
+   "nn_similarity": 0.7431,
    "interpreted": {
     "mood": [
      "homely",
@@ -8638,9 +8638,9 @@
     }
    },
    "nearest_looks": [
+    "LB-286",
     "LB-161",
-    "LB-063",
-    "LB-059"
+    "LB-063"
    ],
    "bred_from": [],
    "colours": [
@@ -9093,7 +9093,7 @@
    "nearest_looks": [
     "LB-273",
     "LB-024",
-    "LB-189"
+    "LB-293"
    ],
    "bred_from": [],
    "colours": [
@@ -9412,8 +9412,8 @@
    "nn_similarity": 0.6303,
    "nearest_looks": [
     "LB-120",
-    "LB-128",
-    "LB-055"
+    "LB-318",
+    "LB-128"
    ],
    "bred_from": [],
    "colours": [
@@ -9678,12 +9678,12 @@
    "type_pairing": [],
    "sheet": "sheets/F9_fine-art_sheet7.jpg",
    "panel": "sheet 7 (added batch 10), row 1 col 1 (panel 1 of 6)",
-   "nearest_neighbour": "LB-176",
-   "nn_similarity": 0.6278,
+   "nearest_neighbour": "LB-292",
+   "nn_similarity": 0.6363,
    "nearest_looks": [
+    "LB-292",
     "LB-176",
-    "LB-083",
-    "LB-128"
+    "LB-083"
    ],
    "bred_from": [],
    "colours": [
@@ -10130,12 +10130,12 @@
    "type_pairing": [],
    "sheet": "sheets/F9_fine-art_sheet8.jpg",
    "panel": "sheet 8 (added batch 10), row 1 col 3 (panel 3 of 6)",
-   "nearest_neighbour": "LB-SD15",
-   "nn_similarity": 0.4984,
+   "nearest_neighbour": "LB-294",
+   "nn_similarity": 0.5114,
    "nearest_looks": [
+    "LB-294",
     "LB-SD15",
-    "LB-200",
-    "LB-009"
+    "LB-200"
    ],
    "bred_from": [],
    "colours": [
@@ -10295,8 +10295,8 @@
    "nn_similarity": 0.7717,
    "nearest_looks": [
     "LB-209",
-    "LB-178",
-    "LB-015"
+    "LB-295",
+    "LB-178"
    ],
    "bred_from": [],
    "colours": [
@@ -10448,7 +10448,7 @@
    "nearest_looks": [
     "LB-128",
     "LB-164",
-    "LB-179"
+    "LB-293"
    ],
    "bred_from": [],
    "colours": [
@@ -10640,8 +10640,8 @@
    "nn_similarity": 0.6387,
    "nearest_looks": [
     "LB-200",
-    "LB-226",
-    "LB-038"
+    "LB-319",
+    "LB-226"
    ],
    "bred_from": [],
    "colours": [
@@ -10743,12 +10743,12 @@
    "type_pairing": [],
    "sheet": "sheets/F9_fine-art_sheet10.jpg",
    "panel": "sheet 10 (added batch 11), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-201",
-   "nn_similarity": 0.5688,
+   "nearest_neighbour": "LB-291",
+   "nn_similarity": 0.6174,
    "nearest_looks": [
+    "LB-291",
     "LB-201",
-    "LB-195",
-    "LB-198"
+    "LB-195"
    ],
    "bred_from": [],
    "colours": [
@@ -10848,7 +10848,7 @@
    "nearest_looks": [
     "LB-190",
     "LB-206",
-    "LB-251"
+    "LB-311"
    ],
    "bred_from": [],
    "colours": [
@@ -11163,7 +11163,7 @@
    "nearest_looks": [
     "LB-038",
     "LB-173",
-    "LB-201"
+    "LB-317"
    ],
    "bred_from": [],
    "colours": [
@@ -11359,12 +11359,12 @@
    "type_pairing": [],
    "sheet": "sheets/F9_fine-art_sheet12.jpg",
    "panel": "sheet 12 (added batch 11), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-196",
-   "nn_similarity": 0.6163,
+   "nearest_neighbour": "LB-311",
+   "nn_similarity": 0.6238,
    "nearest_looks": [
+    "LB-311",
     "LB-196",
-    "LB-191",
-    "LB-R03R17"
+    "LB-191"
    ],
    "bred_from": [],
    "colours": [
@@ -11818,12 +11818,12 @@
    "type_pairing": [],
    "sheet": "sheets/F2_modernist_sheet7.jpg",
    "panel": "sheet 7 (added batch 12), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-087",
-   "nn_similarity": 0.5949,
+   "nearest_neighbour": "LB-305",
+   "nn_similarity": 0.6626,
    "nearest_looks": [
+    "LB-305",
     "LB-087",
-    "LB-270",
-    "LB-276"
+    "LB-270"
    ],
    "bred_from": [],
    "colours": [
@@ -12145,12 +12145,12 @@
    "type_pairing": [],
    "sheet": "sheets/F4_print_sheet7.jpg",
    "panel": "sheet 7 (added batch 12), row 1 col 3 (panel 3 of 6)",
-   "nearest_neighbour": "LB-130",
-   "nn_similarity": 0.4808,
+   "nearest_neighbour": "LB-328",
+   "nn_similarity": 0.5301,
    "nearest_looks": [
-    "LB-130",
-    "LB-065",
-    "LB-219"
+    "LB-328",
+    "LB-298",
+    "LB-289"
    ],
    "bred_from": [],
    "colours": [
@@ -12198,7 +12198,7 @@
    "nearest_looks": [
     "LB-191",
     "LB-024",
-    "LB-164"
+    "LB-293"
    ],
    "bred_from": [],
    "colours": [
@@ -12292,12 +12292,12 @@
    "type_pairing": [],
    "sheet": "sheets/F5_pop_sheet7.jpg",
    "panel": "sheet 7 (added batch 12), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-046",
-   "nn_similarity": 0.593,
+   "nearest_neighbour": "LB-287",
+   "nn_similarity": 0.5962,
    "nearest_looks": [
+    "LB-287",
     "LB-046",
-    "LB-256",
-    "LB-096"
+    "LB-256"
    ],
    "bred_from": [],
    "colours": [
@@ -12524,8 +12524,8 @@
    "type_pairing": [],
    "sheet": "sheets/F9_fine-art_sheet13.jpg",
    "panel": "sheet 13 (added batch 12), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-137",
-   "nn_similarity": 0.5659,
+   "nearest_neighbour": "LB-329",
+   "nn_similarity": 0.598,
    "interpreted": {
     "mood": [
      "serene",
@@ -12560,9 +12560,9 @@
     }
    },
    "nearest_looks": [
-    "LB-137",
-    "LB-135",
-    "LB-124"
+    "LB-329",
+    "LB-308",
+    "LB-137"
    ],
    "bred_from": [],
    "colours": [
@@ -12654,12 +12654,12 @@
    "type_pairing": [],
    "sheet": "sheets/F10_digital_sheet5.jpg",
    "panel": "sheet 5 (added batch 12), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-086",
-   "nn_similarity": 0.5332,
+   "nearest_neighbour": "LB-322",
+   "nn_similarity": 0.5666,
    "nearest_looks": [
+    "LB-322",
     "LB-086",
-    "LB-214",
-    "LB-087"
+    "LB-305"
    ],
    "bred_from": [],
    "colours": [
@@ -13104,12 +13104,12 @@
    "type_pairing": [],
    "sheet": "sheets/F3_ornamental_sheet8.jpg",
    "panel": "sheet 8 (added batch 13), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-188",
-   "nn_similarity": 0.5938,
+   "nearest_neighbour": "LB-312",
+   "nn_similarity": 0.6816,
    "nearest_looks": [
-    "LB-188",
-    "LB-069",
-    "LB-233"
+    "LB-312",
+    "LB-283",
+    "LB-188"
    ],
    "bred_from": [],
    "colours": [
@@ -13204,12 +13204,12 @@
    "type_pairing": [],
    "sheet": "sheets/F3_ornamental_sheet8.jpg",
    "panel": "sheet 8 (added batch 13), row 2 col 1 (panel 4 of 6)",
-   "nearest_neighbour": "LB-188",
-   "nn_similarity": 0.6196,
+   "nearest_neighbour": "LB-283",
+   "nn_similarity": 0.793,
    "nearest_looks": [
-    "LB-188",
-    "LB-137",
-    "LB-073"
+    "LB-283",
+    "LB-310",
+    "LB-284"
    ],
    "bred_from": [],
    "colours": [
@@ -13432,12 +13432,12 @@
    "type_pairing": [],
    "sheet": "sheets/F4_print_sheet8.jpg",
    "panel": "sheet 8 (added batch 13), row 2 col 1 (panel 4 of 6)",
-   "nearest_neighbour": "LB-218",
-   "nn_similarity": 0.4592,
+   "nearest_neighbour": "LB-289",
+   "nn_similarity": 0.51,
    "nearest_looks": [
+    "LB-289",
     "LB-218",
-    "LB-189",
-    "LB-221"
+    "LB-189"
    ],
    "bred_from": [],
    "colours": [
@@ -13530,12 +13530,12 @@
    "type_pairing": [],
    "sheet": "sheets/F5_pop_sheet8.jpg",
    "panel": "sheet 8 (added batch 13), row 1 col 2 (panel 2 of 6)",
-   "nearest_neighbour": "LB-127",
-   "nn_similarity": 0.5716,
+   "nearest_neighbour": "LB-295",
+   "nn_similarity": 0.5811,
    "nearest_looks": [
+    "LB-295",
     "LB-127",
-    "LB-185",
-    "LB-186"
+    "LB-185"
    ],
    "bred_from": [],
    "colours": [
@@ -13733,7 +13733,7 @@
    "nearest_looks": [
     "LB-249",
     "LB-069",
-    "LB-079"
+    "LB-303"
    ],
    "bred_from": [],
    "colours": [
@@ -14029,8 +14029,8 @@
    "nn_similarity": 0.6952,
    "nearest_looks": [
     "LB-130",
-    "LB-223",
-    "LB-119"
+    "LB-298",
+    "LB-223"
    ],
    "bred_from": [],
    "colours": [
@@ -14073,12 +14073,12 @@
    "type_pairing": [],
    "sheet": "sheets/F11_technique_sheet6.jpg",
    "panel": "sheet 6 (added batch 13), row 1 col 3 (panel 3 of 6)",
-   "nearest_neighbour": "LB-066",
-   "nn_similarity": 0.6209,
+   "nearest_neighbour": "LB-302",
+   "nn_similarity": 0.6558,
    "nearest_looks": [
+    "LB-302",
     "LB-066",
-    "LB-083",
-    "LB-234"
+    "LB-083"
    ],
    "bred_from": [],
    "colours": [
@@ -14219,12 +14219,12 @@
    "type_pairing": [],
    "sheet": "sheets/F10_digital_sheet7.jpg",
    "panel": "sheet 7 (added batch 14), row 1 col 1 (panel 1 of 6)",
-   "nearest_neighbour": "LB-282",
-   "nn_similarity": 0.4596,
+   "nearest_neighbour": "LB-314",
+   "nn_similarity": 0.4799,
    "nearest_looks": [
-    "LB-282",
-    "LB-192",
-    "LB-260"
+    "LB-314",
+    "LB-317",
+    "LB-282"
    ],
    "bred_from": [],
    "colours": [
@@ -14820,8 +14820,8 @@
    "nn_similarity": 0.5183,
    "nearest_looks": [
     "LB-033",
-    "LB-125",
-    "LB-245"
+    "LB-306",
+    "LB-125"
    ],
    "bred_from": [],
    "colours": [
@@ -14966,12 +14966,12 @@
    "type_pairing": [],
    "sheet": "sheets/F10_digital_sheet9.jpg",
    "panel": "sheet 9 (added batch 14), row 2 col 1 (panel 4 of 6)",
-   "nearest_neighbour": "LB-120",
-   "nn_similarity": 0.5013,
+   "nearest_neighbour": "LB-308",
+   "nn_similarity": 0.5242,
    "nearest_looks": [
-    "LB-120",
-    "LB-193",
-    "LB-034"
+    "LB-308",
+    "LB-314",
+    "LB-120"
    ],
    "bred_from": [],
    "colours": [
@@ -15311,12 +15311,12 @@
    "type_pairing": [],
    "sheet": "sheets/F10_digital_sheet10.jpg",
    "panel": "sheet 10 (added batch 14), row 2 col 2 (panel 5 of 6)",
-   "nearest_neighbour": "LB-259",
-   "nn_similarity": 0.4596,
+   "nearest_neighbour": "LB-317",
+   "nn_similarity": 0.5636,
    "nearest_looks": [
+    "LB-317",
     "LB-259",
-    "LB-199",
-    "LB-198"
+    "LB-291"
    ],
    "bred_from": [],
    "colours": [
@@ -15325,6 +15325,2307 @@
     "#726449",
     "#ad9b85",
     "#534632"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-283",
+   "name": "Fine-relief candelabra facade",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Fine carved relief around a dark doorway",
+   "use": "heritage, architecture, museums, premium packaging",
+   "mood": [
+    "stately",
+    "refined",
+    "ornate"
+   ],
+   "energy": "low",
+   "avoid_for": "minimal tech, youth sport",
+   "hallmarks": {
+    "palette": "one warm pale limestone, soft grey recesses, neutral overcast light",
+    "type": "",
+    "mark_making": "actual shallow stone carving, fine crisp chiselled relief without pitting: medallions, candelabra stems, paired leaves and miniature columns",
+    "composition": "a complete small entrance surround, straight on, fine relief arranged in narrow vertical panels; plain wall visible outside all four edges",
+    "subject": "one invented early-16th-century limestone doorway surround with dense shallow leaf relief, blank round medallions and candelabra stems, empty dark doorway, no heraldry or sacred motifs"
+   },
+   "hint": "a complete small entrance surround, straight on, fine relief arranged in narrow vertical panels; plain wall visible outside all four edges",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1490–1560",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet9.jpg",
+   "panel": "sheet 9 (added batch 15), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-310",
+   "nn_similarity": 0.7978,
+   "nearest_looks": [
+    "LB-310",
+    "LB-240",
+    "LB-137"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#e9e6df",
+    "#cfbfac",
+    "#1b140e",
+    "#ac9a82"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-284",
+   "name": "Gilt inverted-obelisk woodwork",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Gilded obelisk supports and scroll crown",
+   "use": "theatre, heritage, luxury interiors, spirits packaging",
+   "mood": [
+    "exuberant",
+    "theatrical",
+    "grand"
+   ],
+   "energy": "high",
+   "avoid_for": "medical, minimal tech",
+   "hallmarks": {
+    "palette": "warm matte gold leaf on carved wood, dark wine-red recesses",
+    "type": "",
+    "mark_making": "real carved and gilded wood with crisp volutes, leaves and inverted-obelisk pilasters; material relief, not painted illusion",
+    "composition": "one complete symmetric ornamental overmantel: two tapering-down obelisk supports and a crowded scroll crown around a plain oval; safe wall margin outside every edge",
+    "subject": "a real freestanding gilded wooden overmantel with two inverted-obelisk pilasters, dense deeply carved scrolls and a blank central oval, no altar, cross or emblem"
+   },
+   "hint": "one complete symmetric ornamental overmantel: two tapering-down obelisk supports and a crowded scroll crown around a plain oval; safe wall margin outside every edge",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1690–1750",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet9.jpg",
+   "panel": "sheet 9 (added batch 15), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-283",
+   "nn_similarity": 0.6899,
+   "nearest_looks": [
+    "LB-283",
+    "LB-240",
+    "LB-310"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#eae3dd",
+    "#a57d49",
+    "#c0b1a0",
+    "#704f28",
+    "#917f68"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-285",
+   "name": "Teardrop-flower mirrored repeat",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Mirrored flower-filled teardrops",
+   "use": "textiles, fashion, stationery, wrapping paper",
+   "mood": [
+    "intricate",
+    "decorative",
+    "rhythmic"
+   ],
+   "energy": "medium",
+   "avoid_for": "technical instructions, legal",
+   "hallmarks": {
+    "palette": "six flat colours: burgundy, indigo, cream, mustard, leaf green and coral",
+    "type": "",
+    "mark_making": "crisp flat printed contours, teardrops filled with nested tiny flowers and leaf curls, no textile texture",
+    "composition": "a complete rectangular repeat-design panel: mirrored rows of bent teardrops and a dense separate banded border, fully visible inside cream margins",
+    "subject": "an invented textile-design panel of six large curved teardrop motifs filled with small flowers, alternating mirror directions, with dense floral border stripes"
+   },
+   "hint": "a complete rectangular repeat-design panel: mirrored rows of bent teardrops and a dense separate banded border, fully visible inside cream margins",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "17th–19th centuries",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet9.jpg",
+   "panel": "sheet 9 (added batch 15), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-063",
+   "nn_similarity": 0.6336,
+   "nearest_looks": [
+    "LB-063",
+    "LB-286",
+    "LB-121"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#faf3e2",
+    "#b36045",
+    "#bba59b",
+    "#aaaa7b",
+    "#e2ae53"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-286",
+   "name": "Lobed-medallion carpet design",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Lobed medallion in a red vine field",
+   "use": "interiors, rugs, heritage, premium food packaging",
+   "mood": [
+    "formal",
+    "rich",
+    "ordered"
+   ],
+   "energy": "low",
+   "avoid_for": "sport, minimal tech",
+   "hallmarks": {
+    "palette": "deep red field, indigo lobed medallion, cream, dull gold and pale blue accents",
+    "type": "",
+    "mark_making": "flat sharply drawn knot-design shapes, angular little vines and flowers; design drawing, no visible wool fibres or mottling",
+    "composition": "one complete tall carpet design, central lobed medallion, four quarter-medallion corners and three nested border stripes; plain cream margin beyond it",
+    "subject": "one invented rectangular carpet design with a large cream-edged lobed blue central medallion in a dark red scrolling-vine field, matching corner quarters and multiple narrow borders"
+   },
+   "hint": "one complete tall carpet design, central lobed medallion, four quarter-medallion corners and three nested border stripes; plain cream margin beyond it",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "16th century onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet9.jpg",
+   "panel": "sheet 9 (added batch 15), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-154",
+   "nn_similarity": 0.7431,
+   "nearest_looks": [
+    "LB-154",
+    "LB-143",
+    "LB-121"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#f5eddb",
+    "#b19174",
+    "#832820",
+    "#60676c",
+    "#93928e"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-287",
+   "name": "Fine-outline flower-niche panel",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Three flowering plants in cusped niches",
+   "use": "botanical publishing, florists, jewellery, museums",
+   "mood": [
+    "delicate",
+    "balanced",
+    "precise"
+   ],
+   "energy": "low",
+   "avoid_for": "industrial, nightlife",
+   "hallmarks": {
+    "palette": "flat ruby, emerald and sapphire on warm ivory with a restrained gold arch",
+    "type": "",
+    "mark_making": "fine even dark outlines, thin opaque jewel-colour fills, carefully separated petals, no tonal shading",
+    "composition": "three upright cusped arch niches, each with one flowering plant growing from a small ground tuft, strong bilateral symmetry and ample outer margin",
+    "subject": "an invented panel of three cusped niches containing respectively a red lily plant, a blue iris plant and a pink flowering stalk, each upright and almost symmetrical"
+   },
+   "hint": "three upright cusped arch niches, each with one flowering plant growing from a small ground tuft, strong bilateral symmetry and ample outer margin",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1600–1750",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet9.jpg",
+   "panel": "sheet 9 (added batch 15), row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-161",
+   "nn_similarity": 0.6776,
+   "nearest_looks": [
+    "LB-161",
+    "LB-059",
+    "LB-153"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#fdf7e7",
+    "#366e4f",
+    "#d7bf86",
+    "#bba79e"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-288",
+   "name": "Gold-ground asymmetric iris screen",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Blue irises across a gold folding screen",
+   "use": "interiors, exhibitions, premium stationery, cultural publishing",
+   "mood": [
+    "spacious",
+    "elegant",
+    "luminous"
+   ],
+   "energy": "low",
+   "avoid_for": "busy retail, technical manuals",
+   "hallmarks": {
+    "palette": "smooth gold-leaf ground, mineral cobalt petals, malachite green leaves and white accents",
+    "type": "",
+    "mark_making": "real mineral-pigment painting on a folding screen, large flat stylised colour shapes with fine clean silhouettes, smooth leaf ground without crinkled foil",
+    "composition": "one complete three-panel screen photographed frontally with tiny hinge angles; a low asymmetric sweep of large irises, much empty gold above, wall margin around it",
+    "subject": "an invented three-panel low folding screen painted with a sweeping asymmetric bank of large blue irises and long green leaves on a gold ground, no people"
+   },
+   "hint": "one complete three-panel screen photographed frontally with tiny hinge angles; a low asymmetric sweep of large irises, much empty gold above, wall margin around it",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1600s onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet9.jpg",
+   "panel": "sheet 9 (added batch 15), row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-312",
+   "nn_similarity": 0.5724,
+   "nearest_looks": [
+    "LB-312",
+    "LB-287",
+    "LB-271"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#cfad6c",
+    "#dad8d3",
+    "#9a9481",
+    "#2e5c4f",
+    "#2b5499"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-289",
+   "name": "Matte moulded-plaster mantel animal",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "Painted plaster hare on a plinth",
+   "use": "homeware, antiques, craft, gifts",
+   "mood": [
+    "domestic",
+    "quaint",
+    "handmade"
+   ],
+   "energy": "low",
+   "avoid_for": "minimal tech, legal",
+   "hallmarks": {
+    "palette": "matte cream plaster, flat burnt-orange, cobalt and green paint, sparse white dot bands",
+    "type": "",
+    "mark_making": "real hollow cast plaster, simple blunt moulded volumes, matte opaque painted bands and large evenly spaced dots; no cartoon expression",
+    "composition": "one complete sitting animal on a simple integral plinth, three-quarter view, all ears, feet, tail and plinth surrounded by empty pale-grey background",
+    "subject": "one real vintage-style hollow moulded-plaster hare mantel ornament with tall ears, broad simple forms, orange and blue painted saddle-like bands and a few large dots, plain animal face"
+   },
+   "hint": "one complete sitting animal on a simple integral plinth, three-quarter view, all ears, feet, tail and plinth surrounded by empty pale-grey background",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "19th century",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet9.jpg",
+   "panel": "sheet 9 (added batch 15), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-231",
+   "nn_similarity": 0.5418,
+   "nearest_looks": [
+    "LB-231",
+    "LB-105",
+    "LB-328"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#dcd7d3",
+    "#ae9c83",
+    "#6e694f"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-290",
+   "name": "Oversized carved-object hanging sign",
+   "kind": "established",
+   "family": 4,
+   "family_name": "Print and folk craft",
+   "also_family": "",
+   "theme": "Carved watering-can hanging trade sign",
+   "use": "gardening, local retail, heritage, outdoor trades",
+   "mood": [
+    "direct",
+    "crafted",
+    "welcoming"
+   ],
+   "energy": "medium",
+   "avoid_for": "finance, digital dashboards",
+   "hallmarks": {
+    "palette": "flat bottle green, red and cream enamel on painted wood, dark iron bracket",
+    "type": "",
+    "mark_making": "real oversized carved wood, smooth broad planes, hand-painted solid colour, simple readable silhouette",
+    "composition": "one complete hanging trade object with bracket, chains and the whole object visible against plain wall, no plaque or lettering",
+    "subject": "an oversized carved wooden watering can painted bottle green with a red rose spray, hanging as a garden-shop sign from two chains on a simple black iron wall bracket, complete spout and handle clearly visible"
+   },
+   "hint": "one complete hanging trade object with bracket, chains and the whole object visible against plain wall, no plaque or lettering",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "18th–19th centuries",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F4_print_sheet9.jpg",
+   "panel": "sheet 9 (added batch 15), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-241",
+   "nn_similarity": 0.5346,
+   "nearest_looks": [
+    "LB-241",
+    "LB-325",
+    "LB-308"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#dcd7d3",
+    "#323e35",
+    "#aea9a2",
+    "#747262"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-291",
+   "name": "Cool panoramic floating-island painting",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Floating islands over a dry lake",
+   "use": "music, speculative fiction, exhibitions, theatre",
+   "mood": [
+    "dreamlike",
+    "expansive",
+    "strange"
+   ],
+   "energy": "medium",
+   "avoid_for": "legal, medical, technical instructions",
+   "hallmarks": {
+    "palette": "cool ultramarine, lavender, sage, chalk white and muted ochre",
+    "type": "",
+    "mark_making": "smooth hand-painted opaque sleeve-art modelling, precise rock and cloud silhouettes, broad untextured paint transitions",
+    "composition": "gatefold-wide dream landscape, a chain of floating limestone islands above a dry lake with a tiny unused stone aqueduct on one island; no text zone",
+    "subject": "an invented panoramic landscape of three flat-topped floating limestone islands over a pale dry lake, a small empty aqueduct on the nearest, winding cool cloud ribbons and distant violet hills"
+   },
+   "hint": "gatefold-wide dream landscape, a chain of floating limestone islands above a dry lake with a tiny unused stone aqueduct on one island; no text zone",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1970s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet10.jpg",
+   "panel": "sheet 10 (added batch 15), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-194",
+   "nn_similarity": 0.6174,
+   "nearest_looks": [
+    "LB-194",
+    "LB-265",
+    "LB-226"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#d3cebf",
+    "#a9a791",
+    "#bbb9d5",
+    "#8d8ec4",
+    "#4d5ea6"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-292",
+   "name": "Two-ink photo-block record sleeve",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "A sharp bass photo block on ochre",
+   "use": "music, publishing, events, editorial",
+   "mood": [
+    "cool",
+    "spare",
+    "graphic"
+   ],
+   "energy": "medium",
+   "avoid_for": "children's party, ornament-heavy heritage",
+   "hallmarks": {
+    "palette": "one flat ochre-yellow field with a deep purple and cream duotone photograph",
+    "type": "",
+    "mark_making": "a real sharply cropped photographic rectangle converted to exactly two flat inks, no halftone dots, rest of sleeve a single solid colour",
+    "composition": "a square wordless sleeve: one large vertical photographic block placed hard left within a wide ochre field, cropped subject inside photo only, margins intentional",
+    "subject": "a square wordless record sleeve with a tall duotone photo of an invented upright double bass leaning alone in a rehearsal room, purple shadow and cream light, placed left on a big flat ochre field"
+   },
+   "hint": "a square wordless sleeve: one large vertical photographic block placed hard left within a wide ochre field, cropped subject inside photo only, margins intentional",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1950s–1960s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet10.jpg",
+   "panel": "sheet 10 (added batch 15), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-175",
+   "nn_similarity": 0.6363,
+   "nearest_looks": [
+    "LB-175",
+    "LB-136",
+    "LB-176"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#cd9123",
+    "#e4dbc7",
+    "#503458"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-293",
+   "name": "Whiplash-floral robe-fashion print",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "A floral-robed figure within fine scrolls",
+   "use": "fashion, publishing, perfumes, theatre",
+   "mood": [
+    "poised",
+    "elegant",
+    "decorative"
+   ],
+   "energy": "low",
+   "avoid_for": "industrial, sport",
+   "hallmarks": {
+    "palette": "flat vermilion, teal-green, cream, mauve and ink black",
+    "type": "",
+    "mark_making": "fine elegant printed contours, flat bright floral garment patterns, early-20th-century fashion anatomy and elongated poised modelling, no cute face",
+    "composition": "one fully clothed European adult fashion figure in a long floral wrap robe, framed by a thin whiplash-flower border; complete head and feet with generous outer paper margin",
+    "subject": "an invented European adult woman with chestnut hair in a low knot, wearing a full-length high-necked floral wrap robe with wide sleeves and a sash, standing in profile holding a folded fan, fine curling flower border"
+   },
+   "hint": "one fully clothed European adult fashion figure in a long floral wrap robe, framed by a thin whiplash-flower border; complete head and feet with generous outer paper margin",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1912–1926",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet10.jpg",
+   "panel": "sheet 10 (added batch 15), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-120",
+   "nn_similarity": 0.6621,
+   "nearest_looks": [
+    "LB-120",
+    "LB-075",
+    "LB-318"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#fcefd4",
+    "#cac1a9",
+    "#949887",
+    "#996856",
+    "#b74f31"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-294",
+   "name": "Bright painted stage-mystery montage",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Two portraits above a stair and suitcase",
+   "use": "theatre, film events, fiction, music posters",
+   "mood": [
+    "dramatic",
+    "suspicious",
+    "urgent"
+   ],
+   "energy": "high",
+   "avoid_for": "wellness, medical",
+   "hallmarks": {
+    "palette": "flat bright crimson, cobalt, yellow and black with natural muted skin tones",
+    "type": "",
+    "mark_making": "hand-painted display-poster faces with solid period portrait modelling in broad opaque tones; hard-edged dramatic silhouette accents, no grain",
+    "composition": "two large contrasting adult faces above one small empty theatre stair and an open suitcase, diagonally linked as one painted montage; all heads clear of the frame",
+    "subject": "an invented theatre mystery poster without type: a European woman with short copper hair looking left and a European grey-haired man looking right, fully clothed busts in dark coats, a little empty backstage stair and open suitcase below, no weapons"
+   },
+   "hint": "two large contrasting adult faces above one small empty theatre stair and an open suitcase, diagonally linked as one painted montage; all heads clear of the frame",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1950s–1980s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet10.jpg",
+   "panel": "sheet 10 (added batch 15), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-SD10",
+   "nn_similarity": 0.6059,
+   "nearest_looks": [
+    "LB-SD10",
+    "LB-126",
+    "LB-SD02"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#b90a06",
+    "#071324",
+    "#510e06",
+    "#c07d43",
+    "#5d442a"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-295",
+   "name": "Fluorescent conduit-cell abstraction",
+   "kind": "established",
+   "family": 9,
+   "family_name": "Fine-art movements",
+   "also_family": "",
+   "theme": "Six cells joined by squared conduits",
+   "use": "galleries, technology culture, music, graphic identity",
+   "mood": [
+    "synthetic",
+    "rigorous",
+    "charged"
+   ],
+   "energy": "high",
+   "avoid_for": "folk heritage, rustic food",
+   "hallmarks": {
+    "palette": "three flat colours only: fluorescent orange, acid green and deep violet",
+    "type": "",
+    "mark_making": "hard-edged flat painted rectangles, crisp single-width conduit bars with squared elbows, no gradients",
+    "composition": "a deliberately asymmetric network of unequal rectangular cells joined by conduit bars with several dead ends and much violet negative space; complete network inside a quiet outer margin",
+    "subject": "one invented abstract painting of six unequal orange and green rectangular cells connected by squared conduit bars on a flat dark violet field"
+   },
+   "hint": "a deliberately asymmetric network of unequal rectangular cells joined by conduit bars with several dead ends and much violet negative space; complete network inside a quiet outer margin",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1980s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F9_fine-art_sheet15.jpg",
+   "panel": "sheet 15 (added batch 15), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-069",
+   "nn_similarity": 0.68,
+   "nearest_looks": [
+    "LB-069",
+    "LB-186",
+    "LB-015"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#3e1f59",
+    "#f76b12",
+    "#a7ca1f"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-296",
+   "name": "Clashing-pattern zone painting",
+   "kind": "established",
+   "family": 9,
+   "family_name": "Fine-art movements",
+   "also_family": "",
+   "theme": "Four clashing ornamental zones",
+   "use": "textiles, fashion, galleries, wrapping paper",
+   "mood": [
+    "clashing",
+    "abundant",
+    "decorative"
+   ],
+   "energy": "high",
+   "avoid_for": "legal, calm technical information",
+   "hallmarks": {
+    "palette": "flat coral, cobalt, mustard, pink, cream and black",
+    "type": "",
+    "mark_making": "four large competing ornamental repeat patterns, crisp opaque shapes, one zone of scallops, one diamonds, one rosettes and one wavy stripe; no texture",
+    "composition": "four unequal interlocking zones of equally insistent ornament filling one flat rectangular painting, no figure, focal object, room or perspective",
+    "subject": "an invented all-over decorative painting partitioned into four interlocking large zones of scallops, diamonds, flat rosettes and wavy stripes, clashing repeat scales and colours, no subject scene"
+   },
+   "hint": "four unequal interlocking zones of equally insistent ornament filling one flat rectangular painting, no figure, focal object, room or perspective",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1975–1985",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F9_fine-art_sheet15.jpg",
+   "panel": "sheet 15 (added batch 15), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-033",
+   "nn_similarity": 0.6068,
+   "nearest_looks": [
+    "LB-033",
+    "LB-096",
+    "LB-119"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#0443a3",
+    "#e5728b",
+    "#e6aa0e",
+    "#4d4c60",
+    "#d5bf9d"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-297",
+   "name": "Raw-stone and steel tension installation",
+   "kind": "established",
+   "family": 9,
+   "family_name": "Fine-art movements",
+   "also_family": "",
+   "theme": "Steel plate, block and separate boulder",
+   "use": "galleries, architecture, sculpture exhibitions, design studios",
+   "mood": [
+    "spare",
+    "tense",
+    "material"
+   ],
+   "energy": "low",
+   "avoid_for": "children's party, busy retail",
+   "hallmarks": {
+    "palette": "natural charcoal-grey stone, cool steel grey, white gallery and soft grey shadows",
+    "type": "",
+    "mark_making": "real unpolished stone and a precisely fabricated plain steel sheet, visible honest material edges without added microtexture or distressed surface overlay",
+    "composition": "a broad thin steel plate leaning at a stable slight angle against a squat stone block, a second rounded stone isolated away from it; sparse floor, whole installation well inside frame",
+    "subject": "an invented real gallery installation: a broad plain rectangular steel plate leans against a low squat stone block, a second rounded boulder separated by a clear empty gap, all on a white gallery floor, no machinery or people"
+   },
+   "hint": "a broad thin steel plate leaning at a stable slight angle against a squat stone block, a second rounded stone isolated away from it; sparse floor, whole installation well inside frame",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1968–1975",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F9_fine-art_sheet15.jpg",
+   "panel": "sheet 15 (added batch 15), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-250",
+   "nn_similarity": 0.5517,
+   "nearest_looks": [
+    "LB-250",
+    "LB-249",
+    "LB-329"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#e6e2de",
+    "#bbb7b3",
+    "#4b4a4a",
+    "#9d9994"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-298",
+   "name": "Fine-mineral-colour bird painting",
+   "kind": "established",
+   "family": 9,
+   "family_name": "Fine-art movements",
+   "also_family": "",
+   "theme": "A long-tailed bird and flowering branch",
+   "use": "nature publishing, galleries, museums, stationery",
+   "mood": [
+    "quiet",
+    "observant",
+    "delicate"
+   ],
+   "energy": "low",
+   "avoid_for": "nightlife, sport",
+   "hallmarks": {
+    "palette": "pale blue-grey ground, mineral umber, chalk white, muted green and a little red ochre",
+    "type": "",
+    "mark_making": "fine even outline, translucent layers of flat mineral pigment, carefully separated wing feathers in broad shapes; no splatter or paper grain",
+    "composition": "one long-tailed pheasant standing under a bent flowering branch in a modern asymmetric vertical composition, neither silhouette touching frame, ample unpainted pale ground",
+    "subject": "an invented mineral-pigment painting of a brown and white long-tailed pheasant standing on one low mound under a bent plum-blossom branch on a pale blue-grey ground"
+   },
+   "hint": "one long-tailed pheasant standing under a bent flowering branch in a modern asymmetric vertical composition, neither silhouette touching frame, ample unpainted pale ground",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1880s onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F9_fine-art_sheet15.jpg",
+   "panel": "sheet 15 (added batch 15), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-130",
+   "nn_similarity": 0.6913,
+   "nearest_looks": [
+    "LB-130",
+    "LB-256",
+    "LB-027"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#c4d1d9",
+    "#9f9783",
+    "#b7b4ad",
+    "#e7e2d9"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-299",
+   "name": "Acid-green industrial club fashion",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Black clubwear with two short green tubes",
+   "use": "club fashion, music, editorial, costumes",
+   "mood": [
+    "industrial",
+    "subcultural",
+    "defiant"
+   ],
+   "energy": "high",
+   "avoid_for": "heritage, conservative finance",
+   "hallmarks": {
+    "palette": "acid green and deep black with tiny silver fasteners, neutral grey background",
+    "type": "",
+    "mark_making": "real editorial fashion photograph, hard contrast without glow, honest matte black fabrics and rigid ribbed neon-green accessories, unretouched adult face",
+    "composition": "one European adult fully clothed in black clubwear, green goggles on forehead and two neatly connected green ribbed costume tubes, whole figure and boots inside frame",
+    "subject": "an invented European adult woman with dark braided hair, wearing a black long-sleeved fitted jacket, black trousers and boots, green forehead goggles and a black costume vest with two short green ribbed tubes securely attached at both ends, standing in a plain industrial room, no warning symbols or text"
+   },
+   "hint": "one European adult fully clothed in black clubwear, green goggles on forehead and two neatly connected green ribbed costume tubes, whole figure and boots inside frame",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1990s onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet11.jpg",
+   "panel": "sheet 11 (added batch 15), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-300",
+   "nn_similarity": 0.5481,
+   "nearest_looks": [
+    "LB-300",
+    "LB-263",
+    "LB-SD05"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#9c9897",
+    "#767270",
+    "#151517",
+    "#2d2d2e"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-300",
+   "name": "Monochrome mesh sports-fashion study",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Black mesh sportswear and white trainers",
+   "use": "sports fashion, editorial, technical clothing",
+   "mood": [
+    "stark",
+    "athletic",
+    "restrained"
+   ],
+   "energy": "low",
+   "avoid_for": "ornamental heritage, children's party",
+   "hallmarks": {
+    "palette": "black, neutral white and reflective silver accents only",
+    "type": "",
+    "mark_making": "clean real sports-fashion photograph, matte technical jersey and a broad mesh outer layer over opaque black clothing, realistic adult face and fabric folds",
+    "composition": "a stark isolated full-body European adult figure in fitted black sportswear and an open mesh sleeveless overshirt, white empty background, reflective seam accents; safe clearance above head and below trainers",
+    "subject": "an invented European adult man with short brown hair in a black long-sleeved athletic top and black track trousers, mesh sleeveless outer vest and reflective seam strips, neutral white trainers, standing relaxed against a white studio wall, no logos"
+   },
+   "hint": "a stark isolated full-body European adult figure in fitted black sportswear and an open mesh sleeveless overshirt, white empty background, reflective seam accents; safe clearance above head and below trainers",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "2013–2015",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet11.jpg",
+   "panel": "sheet 11 (added batch 15), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-299",
+   "nn_similarity": 0.5481,
+   "nearest_looks": [
+    "LB-299",
+    "LB-310",
+    "LB-SD04"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#f2f2f2",
+    "#242428",
+    "#c8c7c6"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-301",
+   "name": "Cool machine-vision photo overlay",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Six hardware objects with thin green boxes",
+   "use": "technology editorial, industrial design, exhibitions",
+   "mood": [
+    "analytic",
+    "cool",
+    "mechanical"
+   ],
+   "energy": "low",
+   "avoid_for": "romance, rustic crafts",
+   "hallmarks": {
+    "palette": "cool photographic greys with thin lime-green and white box outlines",
+    "type": "",
+    "mark_making": "real sharply focused top-down industrial photograph with a precise digital overlay of thin rectangular machine-vision boxes, no labels, no numerals, no camouflage texture",
+    "composition": "one overhead photograph of sorted hardware on a grey sorting tray; thin offset boxes each locate a complete object without hiding its silhouette, irregular uncluttered layout",
+    "subject": "an invented overhead industrial camera photo of three metal washers, one hex nut and two short steel bolts separated on a plain grey tray, individual thin green machine-vision bounding boxes around the complete hardware pieces, no text"
+   },
+   "hint": "one overhead photograph of sorted hardware on a grey sorting tray; thin offset boxes each locate a complete object without hiding its silhouette, irregular uncluttered layout",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "2011 onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet11.jpg",
+   "panel": "sheet 11 (added batch 15), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-135",
+   "nn_similarity": 0.5456,
+   "nearest_looks": [
+    "LB-135",
+    "LB-013",
+    "LB-329"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#c3c3c3",
+    "#8e8e8c",
+    "#5a5955"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-302",
+   "name": "Bent-wire continuous silhouette",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "A bent-wire jug joined to a pear",
+   "use": "homeware, galleries, cafes, stationery",
+   "mood": [
+    "spare",
+    "playful",
+    "sculptural"
+   ],
+   "energy": "low",
+   "avoid_for": "busy retail, technical diagrams",
+   "hallmarks": {
+    "palette": "one black wire against a neutral white wall, soft grey cast shadow",
+    "type": "",
+    "mark_making": "actual single continuous bent black metal wire, clear slim circular section, no fills, no drawn substitute",
+    "composition": "one wall-mounted contour sculpture of a jug and pear connected at the base by one flowing wire; complete silhouette inside generous white space",
+    "subject": "one real continuous black-wire wall sculpture outlining a bulbous water jug and a pear beside it, a thin connecting baseline, tiny discreet mountings, viewed square-on"
+   },
+   "hint": "one wall-mounted contour sculpture of a jug and pear connected at the base by one flowing wire; complete silhouette inside generous white space",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "modern wire craft",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet7.jpg",
+   "panel": "sheet 7 (added batch 15), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-257",
+   "nn_similarity": 0.6558,
+   "nearest_looks": [
+    "LB-257",
+    "LB-083",
+    "LB-066"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#f4f3f3",
+    "#d1cfcd",
+    "#575756"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-303",
+   "name": "Straight-thread curve-envelope panel",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "Two overlapping fans on three pin rows",
+   "use": "craft, education, interiors, exhibitions",
+   "mood": [
+    "precise",
+    "crafted",
+    "rhythmic"
+   ],
+   "energy": "medium",
+   "avoid_for": "legal, historical narrative",
+   "hallmarks": {
+    "palette": "copper-orange and cream threads on a flat midnight-blue board",
+    "type": "",
+    "mark_making": "real taut straight threads stretched between evenly spaced small pins, crossing line fans form curved envelopes, no actual curved thread segments",
+    "composition": "a complete rectangular board with two overlapping parabolic thread fans anchored to pin rows, visible pins and generous plain border around the construction",
+    "subject": "one invented string-art board with copper-orange and cream straight threads stretched in two overlapping fan systems between three straight rows of pins on a dark blue board, forming airy curved envelopes"
+   },
+   "hint": "a complete rectangular board with two overlapping parabolic thread fans anchored to pin rows, visible pins and generous plain border around the construction",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1960s–1970s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet7.jpg",
+   "panel": "sheet 7 (added batch 15), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-326",
+   "nn_similarity": 0.6554,
+   "nearest_looks": [
+    "LB-326",
+    "LB-079",
+    "LB-250"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#c9c4ba",
+    "#192139",
+    "#4b3d3e",
+    "#734e3e",
+    "#d1b191"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-304",
+   "name": "Interlocking rotary-curve rosettes",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "Three continuous rotary-line rosettes",
+   "use": "education, stationery, music, exhibitions",
+   "mood": [
+    "regular",
+    "intricate",
+    "playful"
+   ],
+   "energy": "medium",
+   "avoid_for": "urgent safety information, photoreal scenes",
+   "hallmarks": {
+    "palette": "three single-colour line sets in cobalt, crimson and green on white",
+    "type": "",
+    "mark_making": "thin mechanically even continuous pen lines looping into mathematically regular rotary curves, white voids between lines, no shaded fills",
+    "composition": "three overlapping unequal hypotrochoid rosettes as a clean pen drawing, largest low left, smaller ones upper right; complete curves away from all edges",
+    "subject": "an invented pen drawing of three overlapping rotary-curve rosettes in thin blue, red and green lines, one broad open-centred loop, one narrow petalled loop and one small dense loop on clean white"
+   },
+   "hint": "three overlapping unequal hypotrochoid rosettes as a clean pen drawing, largest low left, smaller ones upper right; complete curves away from all edges",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1965 onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet7.jpg",
+   "panel": "sheet 7 (added batch 15), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-205",
+   "nn_similarity": 0.6236,
+   "nearest_looks": [
+    "LB-205",
+    "LB-079",
+    "LB-209"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#fefefe",
+    "#ccdadd",
+    "#acbedb",
+    "#edd0d6",
+    "#e1aeba"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-305",
+   "name": "Continuous stepped-line silver drawing",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "One stepped continuous greenhouse line",
+   "use": "games, education, stationery, editorial",
+   "mood": [
+    "mechanical",
+    "spare",
+    "nostalgic"
+   ],
+   "energy": "low",
+   "avoid_for": "luxury polish, naturalistic portraiture",
+   "hallmarks": {
+    "palette": "one dark grey line on a perfectly flat light silver-grey ground",
+    "type": "",
+    "mark_making": "one continuous thin line composed only of horizontal, vertical and tiny staircase diagonal segments, no curves, fill, hatching or grey smudge",
+    "composition": "a small wordless angular drawing of a greenhouse with a stepped pitched roof and two plant pots, generous silver-grey margin, no device casing",
+    "subject": "an invented continuous-line angular drawing of a tiny greenhouse with a pitched roof, a central door and two blocky plants in pots, on a flat silver-grey field"
+   },
+   "hint": "a small wordless angular drawing of a greenhouse with a stepped pitched roof and two plant pots, generous silver-grey margin, no device casing",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1960 onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet7.jpg",
+   "panel": "sheet 7 (added batch 15), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-214",
+   "nn_similarity": 0.6626,
+   "nearest_looks": [
+    "LB-214",
+    "LB-323",
+    "LB-322"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#d7d7d7",
+    "#b4b4b4"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-306",
+   "name": "Long-exposure loop-light photograph",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "Two looping light trails on black",
+   "use": "music, performance, events, exhibitions",
+   "mood": [
+    "fluid",
+    "ephemeral",
+    "bright"
+   ],
+   "energy": "medium",
+   "avoid_for": "technical instructions, heritage",
+   "hallmarks": {
+    "palette": "amber and violet light on deep neutral black only",
+    "type": "",
+    "mark_making": "real long-exposure light photography, smooth continuous luminous lines with a narrow soft optical halo, no starfield, dust, speckle or surface",
+    "composition": "two interwoven freehand light loops floating in an empty black studio, both complete and comfortably inside frame, no visible performer or supporting object",
+    "subject": "an invented long-exposure studio photograph of one amber light loop winding twice around a tall violet loop, suspended as graceful intersecting luminous trails against empty black, no people visible"
+   },
+   "hint": "two interwoven freehand light loops floating in an empty black studio, both complete and comfortably inside frame, no visible performer or supporting object",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "modern long exposure",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet7.jpg",
+   "panel": "sheet 7 (added batch 15), row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-R02R15",
+   "nn_similarity": 0.6146,
+   "nearest_looks": [
+    "LB-R02R15",
+    "LB-079",
+    "LB-125"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#010101",
+    "#8b47b7",
+    "#4d2710"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-307",
+   "name": "Cloud-scroll lattice fretwork",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Cloud-scroll lattice fretwork",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "red, muted gold and deep blue painted wood",
+    "type": "",
+    "mark_making": "actual crisply cut wooden fret lattice with flat cloud curls and small bat silhouettes, clean broad planes",
+    "composition": "complete rectangular screen of rectilinear fret cells and curling cloud scrolls, plain wall beyond every edge",
+    "subject": "one invented painted wooden fretwork screen with an open square lattice, five cloud-shaped curls and four small symmetric bat silhouettes, no symbols or words"
+   },
+   "hint": "complete rectangular screen of rectilinear fret cells and curling cloud scrolls, plain wall beyond every edge",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "imperial era",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet10.jpg",
+   "panel": "sheet 10 (added batch 16), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-312",
+   "nn_similarity": 0.5769,
+   "nearest_looks": [
+    "LB-312",
+    "LB-154",
+    "LB-286"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#e2e1e1",
+    "#8d3831",
+    "#62534d",
+    "#2c2b32",
+    "#ad8255"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-308",
+   "name": "Layered lace-paper keepsake card",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Layered lace-paper keepsake card",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "white paper lace, pale pink with a small green and red flower scrap",
+    "type": "",
+    "mark_making": "real fine embossed openwork paper, three layered die-cut lace edges and one tiny smooth chromolithographic flower image",
+    "composition": "one complete upright rectangular lace-paper card, central oval flower scrap, light cast shadows between layers, wide pale grey ground",
+    "subject": "an invented layered white lace-paper keepsake card with tiny pierced arches and a single pink rose scrap in a small central oval, no text or handwriting"
+   },
+   "hint": "one complete upright rectangular lace-paper card, central oval flower scrap, light cast shadows between layers, wide pale grey ground",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1840–1880",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet10.jpg",
+   "panel": "sheet 10 (added batch 16), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-309",
+   "nn_similarity": 0.6871,
+   "nearest_looks": [
+    "LB-309",
+    "LB-283",
+    "LB-137"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#dfdfde",
+    "#afaca8"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-309",
+   "name": "Radial pierced-paper lace roundel",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Radial pierced-paper lace roundel",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "one clean white paper on a smooth slate-blue ground",
+    "type": "",
+    "mark_making": "actual die-cut pierced paper, concentric lace openwork and clean cut edges, no paper tooth",
+    "composition": "one full circular scalloped doily, concentric rings of radial petal openings and small diamond holes, generous ground all round",
+    "subject": "one invented white circular paper doily with a twelve-lobed scalloped rim and concentric bands of pierced petal and diamond motifs"
+   },
+   "hint": "one full circular scalloped doily, concentric rings of radial petal openings and small diamond holes, generous ground all round",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "19th c. onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet10.jpg",
+   "panel": "sheet 10 (added batch 16), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-308",
+   "nn_similarity": 0.6871,
+   "nearest_looks": [
+    "LB-308",
+    "LB-137",
+    "LB-072"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#728ca3",
+    "#f3f2f1",
+    "#cfd3d6",
+    "#a1acb5"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-310",
+   "name": "Painted illusion niche ornament",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Painted illusion niche ornament",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "stone cream, muted brown and grey in a consistent soft side light",
+    "type": "",
+    "mark_making": "smooth opaque architectural illusion painting on a flat panel, painted shadows and highlights only, no physical carved relief",
+    "composition": "one complete symmetric rectangular painted panel with an empty arched niche, shallow false mouldings and a painted ledge, all inside a quiet border",
+    "subject": "a flat painted panel depicting an invented empty arched niche and projecting frame, with one coherent light source at upper left; show paint illusion, not a photograph of actual architecture"
+   },
+   "hint": "one complete symmetric rectangular painted panel with an empty arched niche, shallow false mouldings and a painted ledge, all inside a quiet border",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "Renaissance onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet10.jpg",
+   "panel": "sheet 10 (added batch 16), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-283",
+   "nn_similarity": 0.7978,
+   "nearest_looks": [
+    "LB-283",
+    "LB-240",
+    "LB-284"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#deccb4",
+    "#b5a188",
+    "#897559",
+    "#6a573e"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-311",
+   "name": "Five-tone sculptural-figure painting",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Five-tone sculptural-figure painting",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "exactly five neutral greys from near-white to charcoal, no hue",
+    "type": "",
+    "mark_making": "smooth opaque monochrome painting, sculptural light-dark modelling in five tonal steps, mature classical adult anatomy",
+    "composition": "one fully clothed adult in contrapposto inside a simple shallow niche, complete head and feet, calm upright arrangement",
+    "subject": "an invented European adult woman in a long plain draped dress, carrying a closed unmarked book, painted like a sculptural study in five greys inside an austere niche"
+   },
+   "hint": "one fully clothed adult in contrapposto inside a simple shallow niche, complete head and feet, calm upright arrangement",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "medieval onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet10.jpg",
+   "panel": "sheet 10 (added batch 16), row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-088",
+   "nn_similarity": 0.6602,
+   "nearest_looks": [
+    "LB-088",
+    "LB-R02R06",
+    "LB-R02R09"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#9a9a9a",
+    "#6b6b6b",
+    "#464646"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-312",
+   "name": "Horizontal plant-grid leaded glass",
+   "kind": "established",
+   "family": 3,
+   "family_name": "Ornamental and decorative",
+   "also_family": "",
+   "theme": "Horizontal plant-grid leaded glass",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "amber, olive, cream and muted brick-red glass, thin dark leading",
+    "type": "",
+    "mark_making": "actual geometric coloured glass pieces joined by straight dark lead strips, abstracted plant forms as squares and long rectangles",
+    "composition": "one complete wide framed window with strong low horizontal bands and two asymmetric square-stem plant grids, wall margin around the frame",
+    "subject": "one invented leaded-glass panel of earth-colour horizontal rectangles and two highly abstract plant forms built from square flowers and straight stems, no figurative emblems"
+   },
+   "hint": "one complete wide framed window with strong low horizontal bands and two asymmetric square-stem plant grids, wall margin around the frame",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1900–1920",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F3_ornamental_sheet10.jpg",
+   "panel": "sheet 10 (added batch 16), row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-238",
+   "nn_similarity": 0.6816,
+   "nearest_looks": [
+    "LB-238",
+    "LB-326",
+    "LB-307"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#dbdad6",
+    "#635731",
+    "#c3b59d",
+    "#b5853d",
+    "#473925"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-313",
+   "name": "Chromolithographic vegetable packet",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Chromolithographic vegetable packet",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "rich leaf green, ivory, orange-red and muted yellow",
+    "type": "",
+    "mark_making": "precise multicolour lithographic flat ink separations with crisp modelled vegetable contours, no print grain",
+    "composition": "one large central cabbage and one cut wedge within a small ornamental border, blank upper band, full packet artwork inside ivory margin",
+    "subject": "an invented wordless seed-packet artwork showing a large crinkled green cabbage and a cut wedge, neat double ornamental border and blank cream top band, no brand or instructions"
+   },
+   "hint": "one large central cabbage and one cut wedge within a small ornamental border, blank upper band, full packet artwork inside ivory margin",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1880–1950",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet11.jpg",
+   "panel": "sheet 11 (added batch 16), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-076",
+   "nn_similarity": 0.6138,
+   "nearest_looks": [
+    "LB-076",
+    "LB-067",
+    "LB-119"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#fef8e9",
+    "#92a66c",
+    "#cac987",
+    "#517845",
+    "#d1ceaf"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-314",
+   "name": "Theatrical pastel-and-gilt prop",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Theatrical pastel-and-gilt prop",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "powder blue, blush pink, fake gold and pearl white",
+    "type": "",
+    "mark_making": "real ornate production-design object, glossy enamel confined to a banal appliance, gilded resin scrollwork, satin and pearl trim",
+    "composition": "one complete decorated desk fan on a flamboyant low pedestal, clear silhouette and empty blush studio around it",
+    "subject": "an invented powder-blue electric desk fan dressed in excessive gilt scroll trim, fake pearl garlands and two pink feather fans on a squat ornate gold pedestal, no people, no brand or dial markings"
+   },
+   "hint": "one complete decorated desk fan on a flamboyant low pedestal, clear silhouette and empty blush studio around it",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "not specified",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet11.jpg",
+   "panel": "sheet 11 (added batch 16), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-284",
+   "nn_similarity": 0.5175,
+   "nearest_looks": [
+    "LB-284",
+    "LB-275",
+    "LB-308"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#f5c4bf",
+    "#a0acb8",
+    "#cda87e"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-315",
+   "name": "Loose-line single-tint spot vignette",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Loose-line single-tint spot vignette",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "black loose line, one flat mint-green tint, white ground",
+    "type": "",
+    "mark_making": "economical lively pen outline with a few uneven flicks, no shading or hatching, one sparse flat tint",
+    "composition": "one small frame-free witty object vignette occupying the middle third of a wide white field",
+    "subject": "a small invented magazine spot drawing of a ripe pear resting in the cradle of an oversized open paperclip, one mint-green shadow shape, no person, no text"
+   },
+   "hint": "one small frame-free witty object vignette occupying the middle third of a wide white field",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "20th c.",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet11.jpg",
+   "panel": "sheet 11 (added batch 16), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-257",
+   "nn_similarity": 0.5642,
+   "nearest_looks": [
+    "LB-257",
+    "LB-205",
+    "LB-117"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#ffffff",
+    "#b3ddc9",
+    "#d9dfdc"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-316",
+   "name": "Fluid-outline fashion study",
+   "kind": "established",
+   "family": 5,
+   "family_name": "Pop, commercial and vernacular",
+   "also_family": "",
+   "theme": "Fluid-outline fashion study",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "black ink with a single flat mustard accent on white",
+    "type": "",
+    "mark_making": "fluid economical brushed outline, elongated elegant adult proportions, realistic period fashion modelling, no cute or cartoon face",
+    "composition": "one complete standing clothed figure, long coat silhouette, very few internal lines, ample white ground",
+    "subject": "an invented European adult woman in a long dark-outline coat and mustard wide-brim hat, one hand in a pocket and the other hidden behind the coat, complete heeled shoes and mature profile"
+   },
+   "hint": "one complete standing clothed figure, long coat silhouette, very few internal lines, ample white ground",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1920s–1960s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F5_pop_sheet11.jpg",
+   "panel": "sheet 11 (added batch 16), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-075",
+   "nn_similarity": 0.6856,
+   "nearest_looks": [
+    "LB-075",
+    "LB-116",
+    "LB-293"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#fffffe",
+    "#dbdada",
+    "#b0afad"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-317",
+   "name": "Naturalistic muted-oil courtyard",
+   "kind": "established",
+   "family": 9,
+   "family_name": "Fine-art movements",
+   "also_family": "",
+   "theme": "Naturalistic muted-oil courtyard",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "muted umber, grey-green, dusty brick and soft ivory",
+    "type": "",
+    "mark_making": "naturalistic academic oil modelling and coherent perspective, smooth deliberate brushwork, no decorative contour outlines",
+    "composition": "quiet courtyard in three spatial planes, tiled workshop and small well, oblique morning daylight",
+    "subject": "an invented quiet courtyard with a low tiled workshop, an old stone well and one empty wooden handcart, muted naturalistic oil painting, no people"
+   },
+   "hint": "quiet courtyard in three spatial planes, tiled workshop and small well, oblique morning daylight",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1870s onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F9_fine-art_sheet16.jpg",
+   "panel": "sheet 16 (added batch 16), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-282",
+   "nn_similarity": 0.5636,
+   "nearest_looks": [
+    "LB-282",
+    "LB-202",
+    "LB-198"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#6e6047",
+    "#4e4430",
+    "#8f7c60",
+    "#292318",
+    "#b39f80"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-318",
+   "name": "Elongated-figure translucent wash",
+   "kind": "established",
+   "family": 9,
+   "family_name": "Fine-art movements",
+   "also_family": "",
+   "theme": "Elongated-figure translucent wash",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "thin sepia, soft rust, pale olive and ivory",
+    "type": "",
+    "mark_making": "delicate layered transparent wash with flat soft tonal fields and fine restrained contours, elongated mature classical figure modelling",
+    "composition": "one slender fully clothed adult beside a shallow pond, tall vertical arrangement and quiet untouched ground",
+    "subject": "an invented European adult woman in a long plain rust-coloured robe, standing beside one white water flower in a shallow pond, mature elongated naturalistic profile, quiet translucent wash, no sacred symbols"
+   },
+   "hint": "one slender fully clothed adult beside a shallow pond, tall vertical arrangement and quiet untouched ground",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1900s–1930s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F9_fine-art_sheet16.jpg",
+   "panel": "sheet 16 (added batch 16), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-170",
+   "nn_similarity": 0.6268,
+   "nearest_looks": [
+    "LB-170",
+    "LB-293",
+    "LB-028"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#f7efde",
+    "#c8ba97",
+    "#a3936c",
+    "#a6704b",
+    "#805031"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-319",
+   "name": "Bright-sky collective-work painting",
+   "kind": "established",
+   "family": 9,
+   "family_name": "Fine-art movements",
+   "also_family": "",
+   "theme": "Bright-sky collective-work painting",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "clear sky blue, warm ochre, brick red and workwear navy",
+    "type": "",
+    "mark_making": "realistic academic painting with confident idealised adult modelling, clean legible anatomy, smooth opaque colour",
+    "composition": "three fully clothed workers cooperating on a small footbridge, optimistic bright sky and clear narrative, complete figures and tools",
+    "subject": "three invented European adult workers fitting a wooden plank to a modest footbridge over a canal, one kneeling and two standing, constructive optimistic teamwork in a mid-century realistic painting, no flags, fists, banners or slogans"
+   },
+   "hint": "three fully clothed workers cooperating on a small footbridge, optimistic bright sky and clear narrative, complete figures and tools",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1932–1980s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F9_fine-art_sheet16.jpg",
+   "panel": "sheet 16 (added batch 16), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-192",
+   "nn_similarity": 0.5465,
+   "nearest_looks": [
+    "LB-192",
+    "LB-200",
+    "LB-201"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#5c4c2a",
+    "#1f2c30",
+    "#ac8852",
+    "#68a5d4",
+    "#4785ba"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-320",
+   "name": "Repeated-grin deadpan figure painting",
+   "kind": "established",
+   "family": 9,
+   "family_name": "Fine-art movements",
+   "also_family": "",
+   "theme": "Repeated-grin deadpan figure painting",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "flat rose pink, cool cyan, warm flesh and navy",
+    "type": "",
+    "mark_making": "smooth realistic adult figure modelling against flat bright colour, controlled repetition and dry deadpan irony, not caricature drawing",
+    "composition": "three similar bald adult figures spaced across a frontal field, repeated broad grins and still bodies, no busy scenery",
+    "subject": "three invented fully clothed European adult bald men in plain navy coats, standing at different intervals beside one empty bench against a flat pink field, broad repeated grins with believable mouths and teeth, deliberately deadpan fine-art painting"
+   },
+   "hint": "three similar bald adult figures spaced across a frontal field, repeated broad grins and still bodies, no busy scenery",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1990s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F9_fine-art_sheet16.jpg",
+   "panel": "sheet 16 (added batch 16), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-SD04",
+   "nn_similarity": 0.4983,
+   "nearest_looks": [
+    "LB-SD04",
+    "LB-200",
+    "LB-040"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#ee949d",
+    "#141f2f",
+    "#557c94"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-322",
+   "name": "Two-colour-cell computer graphic",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Two-colour-cell computer graphic",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "bright fixed palette with black outlines, exactly two colours allowed within each eight-by-eight pixel cell",
+    "type": "",
+    "mark_making": "hard stepped low-resolution pixel construction, obvious colour leakage locked to an eight-pixel attribute grid, no smoothing or gradients",
+    "composition": "a legible simple still life with colour blocks visibly clashing across object boundaries on a square cell grid",
+    "subject": "an invented low-resolution computer picture of a red kettle, blue cup and green angular plant, rigid eight-pixel colour-cell clashes passing across their black outlines, not smooth pixel shading"
+   },
+   "hint": "a legible simple still life with colour blocks visibly clashing across object boundaries on a square cell grid",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1982–1990",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet12.jpg",
+   "panel": "sheet 12 (added batch 16), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-118",
+   "nn_similarity": 0.5678,
+   "nearest_looks": [
+    "LB-118",
+    "LB-229",
+    "LB-018"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#e7e7cb",
+    "#dc313a",
+    "#33a150",
+    "#14120f"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-323",
+   "name": "Single-weight vector arcade field",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Single-weight vector arcade field",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "one bright emerald-green vector colour on pure black",
+    "type": "",
+    "mark_making": "thin single-weight luminous geometric lines, unfilled outlines, crisp corners and narrow optical glow only",
+    "composition": "top-down sparse field of one angular ship and several broken polygonal rocks, no horizon or filled surfaces",
+    "subject": "an invented sparse early vector game field: one small asymmetric outline survey craft near the lower left, four irregular polygon rocks and three tiny point markers on black, no scores or words"
+   },
+   "hint": "top-down sparse field of one angular ship and several broken polygonal rocks, no horizon or filled surfaces",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1979–1985",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet12.jpg",
+   "panel": "sheet 12 (added batch 16), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-079",
+   "nn_similarity": 0.6442,
+   "nearest_looks": [
+    "LB-079",
+    "LB-118",
+    "LB-070"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#000000",
+    "#0e4221",
+    "#082613"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-324",
+   "name": "Visible-line wireframe machine",
+   "kind": "established",
+   "family": 10,
+   "family_name": "Digital and internet",
+   "also_family": "",
+   "theme": "Visible-line wireframe machine",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "one bright cyan line colour on pure black",
+    "type": "",
+    "mark_making": "fine straight polygon-mesh lines with all hidden edges visible, early computer wireframe, no shaded faces or textured surfaces",
+    "composition": "one oblique three-dimensional mechanical pump above a sparse perspective grid, complete mesh away from edges",
+    "subject": "an invented wireframe image of a compact hand-cranked piston pump, visible back edges through the front mesh, sparse grid below, no people or text"
+   },
+   "hint": "one oblique three-dimensional mechanical pump above a sparse perspective grid, complete mesh away from edges",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1980s",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F10_digital_sheet12.jpg",
+   "panel": "sheet 12 (added batch 16), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-079",
+   "nn_similarity": 0.5036,
+   "nearest_looks": [
+    "LB-079",
+    "LB-R04R12",
+    "LB-305"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#010102",
+    "#0c2030",
+    "#113853"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-325",
+   "name": "Flat felt-shape hanging banner",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "Flat felt-shape hanging banner",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "four flat felt colours: rust, cream, teal and mustard",
+    "type": "",
+    "mark_making": "real broad cut felt shapes with even blanket stitches only along boundaries, no macro fibres or all-over texture emphasis",
+    "composition": "one complete simple rectangular hanging banner with two hanging tabs, five large appliqued shapes on a plain ground",
+    "subject": "an invented felt banner showing one cream sailboat, mustard sun, teal water band and rust hill as broad flat shapes on a dark felt ground, neat boundary stitches, no letters"
+   },
+   "hint": "one complete simple rectangular hanging banner with two hanging tabs, five large appliqued shapes on a plain ground",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "not specified",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet8.jpg",
+   "panel": "sheet 8 (added batch 16), row 1 col 1 (panel 1 of 6)",
+   "nearest_neighbour": "LB-327",
+   "nn_similarity": 0.7241,
+   "nearest_looks": [
+    "LB-327",
+    "LB-326",
+    "LB-087"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#f0e8dc",
+    "#dfd1b7",
+    "#a35022",
+    "#383631",
+    "#a69a84"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-326",
+   "name": "Four-colour pieced-block quilt",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "Four-colour pieced-block quilt",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "four plain cotton colours: indigo, ivory, coral and mustard",
+    "type": "",
+    "mark_making": "actual straight-seamed flat cotton patchwork, large clean patches and restrained quilting, no patterned fabrics or fibre emphasis",
+    "composition": "one complete rectangular quilt of twelve large alternating triangle-and-square blocks with a plain border, photographed flat on a neutral wall",
+    "subject": "an invented twelve-block patchwork quilt in four solid colours, alternating diagonal triangles and offset squares, clear straight seams and plain indigo border, no people"
+   },
+   "hint": "one complete rectangular quilt of twelve large alternating triangle-and-square blocks with a plain border, photographed flat on a neutral wall",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "not specified",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet8.jpg",
+   "panel": "sheet 8 (added batch 16), row 1 col 2 (panel 2 of 6)",
+   "nearest_neighbour": "LB-303",
+   "nn_similarity": 0.6554,
+   "nearest_looks": [
+    "LB-303",
+    "LB-325",
+    "LB-312"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#d6d3ce",
+    "#243653",
+    "#c79149",
+    "#d0735f"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-327",
+   "name": "Five-colour perforated-bead mosaic",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "Five-colour perforated-bead mosaic",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "five solid bead colours: dark blue, cream, red, mustard and green",
+    "type": "",
+    "mark_making": "actual round fuse beads in a square grid, distinct circular central hole in each bead, stepped motif edges, no random texture",
+    "composition": "one complete small square pegboard with a simple large blocky picture and a quiet blank pegboard border",
+    "subject": "an invented fuse-bead picture of a red sailboat below a mustard sun on blue water with green shore, five colours of evenly spaced round hollow beads on a square pegboard, every bead visibly pierced"
+   },
+   "hint": "one complete small square pegboard with a simple large blocky picture and a quiet blank pegboard border",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "1960s onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet8.jpg",
+   "panel": "sheet 8 (added batch 16), row 1 col 3 (panel 3 of 6)",
+   "nearest_neighbour": "LB-325",
+   "nn_similarity": 0.7241,
+   "nearest_looks": [
+    "LB-325",
+    "LB-087",
+    "LB-326"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#b0b0ae",
+    "#e9e7e4",
+    "#307d3f",
+    "#0f2f65"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-328",
+   "name": "Two-colour crisp folded-paper form",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "Two-colour crisp folded-paper form",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "one side terracotta paper, reverse ivory, plain light-grey ground",
+    "type": "",
+    "mark_making": "real folded paper with seven to nine large flat facets, crisp creases and clean cut-free silhouette, smooth paper with no tooth",
+    "composition": "one complete angular folded bird seen three-quarter view, long neck and one raised folded wing, generous ground",
+    "subject": "an invented folded-paper standing water bird with an angular long neck, two simple feet and one raised folded wing, terracotta outer facets and ivory underside, no eye drawing or symbols"
+   },
+   "hint": "one complete angular folded bird seen three-quarter view, long neck and one raised folded wing, generous ground",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "not specified",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet8.jpg",
+   "panel": "sheet 8 (added batch 16), row 2 col 1 (panel 4 of 6)",
+   "nearest_neighbour": "LB-089",
+   "nn_similarity": 0.5968,
+   "nearest_looks": [
+    "LB-089",
+    "LB-326",
+    "LB-329"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#ada7a4",
+    "#8f8a86",
+    "#75706c",
+    "#b55d3c",
+    "#dccbbb"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-329",
+   "name": "White three-plane pop-up card",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "White three-plane pop-up card",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "clean white card and soft natural grey cast shadows only",
+    "type": "",
+    "mark_making": "actual single cut-and-fold card with three planar levels, crisp incision edges, cast shadows between planes, no added illustration",
+    "composition": "one fully open card with a small three-step architectural bridge rising from the fold, all card edges within generous pale background",
+    "subject": "an invented white paper pop-up card opened to a right angle, with a small connected three-plane stepped bridge cut and folded from the card itself, physically plausible supports, no words"
+   },
+   "hint": "one fully open card with a small three-step architectural bridge rising from the fold, all card edges within generous pale background",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "not specified",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet8.jpg",
+   "panel": "sheet 8 (added batch 16), row 2 col 2 (panel 5 of 6)",
+   "nearest_neighbour": "LB-227",
+   "nn_similarity": 0.598,
+   "nearest_looks": [
+    "LB-227",
+    "LB-328",
+    "LB-249"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#e4e2e2",
+    "#b8b5b3"
+   ],
+   "getty_aat": null,
+   "status": "live"
+  },
+  {
+   "id": "LB-330",
+   "name": "Connected-openwork steel screen",
+   "kind": "established",
+   "family": 11,
+   "family_name": "Technique and medium",
+   "also_family": "",
+   "theme": "Connected-openwork steel screen",
+   "use": "editorial, exhibitions and books",
+   "mood": [
+    "precise",
+    "distinctive",
+    "assured"
+   ],
+   "energy": "medium",
+   "avoid_for": "unrelated genre pastiche",
+   "hallmarks": {
+    "palette": "matte dark steel, warm white light through the gaps",
+    "type": "",
+    "mark_making": "real single laser-cut steel sheet, image made only by negative cutout shapes and necessary connecting bridges, no etched tonal shading",
+    "composition": "one full upright rectangular dark panel on two plain feet, cutout branching fern-like plant connected to its frame, generous space around panel",
+    "subject": "an invented freestanding laser-cut dark steel screen with one tall branching fern silhouette cut as open negative shapes; all steel islands joined by clear bridges and all feet intact, no person"
+   },
+   "hint": "one full upright rectangular dark panel on two plain feet, cutout branching fern-like plant connected to its frame, generous space around panel",
+   "out_there": 3,
+   "read_status": "reads",
+   "era": "2000s onward",
+   "care": "",
+   "themes": [],
+   "type_pairing": [],
+   "sheet": "sheets/F11_technique_sheet8.jpg",
+   "panel": "sheet 8 (added batch 16), row 2 col 3 (panel 6 of 6)",
+   "nearest_neighbour": "LB-100",
+   "nn_similarity": 0.5258,
+   "nearest_looks": [
+    "LB-100",
+    "LB-256",
+    "LB-223"
+   ],
+   "bred_from": [],
+   "colours": [
+    "#eeedec",
+    "#373738",
+    "#b2b1b0",
+    "#797978"
    ],
    "getty_aat": null,
    "status": "live"
@@ -21356,7 +23657,7 @@
    "nearest_looks": [
     "LB-R07R22",
     "LB-098",
-    "LB-R07R24"
+    "LB-326"
    ],
    "bred_from": [
     "LB-020",

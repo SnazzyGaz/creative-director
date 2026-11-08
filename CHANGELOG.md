@@ -45,6 +45,14 @@ Lookbook batches 13 and 14, synced from the breeder with `tools/lookbook_sync.py
 - **Clusters:** new `modules/lookbook/data/clusters.md`, a catalogue of 24 named clusters for mixing several looks in one bleed (8 alike, 16 unlike), 14 tested in small self-judged proofs, the rest predictions. Proof images stay in the breeder.
 - **Sheets:** 93 (up from 81), 1,000 px JPEGs like the rest. The breeder's rebuild re-laid some families, so 50 existing sheets changed too.
 
+### Lookbook batches 15 and 16
+
+- **Looks:** 415 live, up from 368 (+47 established; 341 established and 74 wildcards). Batch 15 adds LB-283 to LB-306; batch 16 adds LB-307 to LB-320 and LB-322 to LB-330. Nothing retired; LB-064 and LB-R02R22 remain the two retired IDs. LB-321 was rejected at draft review and never compiled, so the ID is unused and never reused.
+- **Sheets and size:** 104 sheets, up from 93 (+11). All 93 existing sheets refreshed from the share manifest; sheets are now 1,200 px JPEGs. Module size is about 36.1 MB, up from 20.8 MB (+15.3 MB), below the approximately 50 MB asset threshold. The index and live tag files were refreshed too.
+- **Derived tags:** neighbours and dominant colours regenerated from the existing render data. Getty AAT terms come only from the existing verified mapping; all 47 new looks remain blank rather than inventing terms.
+- **Search:** unchanged 33-brief suite, recall@8 unchanged at 0.912, avoid-for violations 0, no zero-recall briefs. Own-palette colour search improves from 96% to 97% first and top-three matches; neighbour lookup still returns every listed neighbour. No expected results weakened or briefs changed.
+- **Packaging:** portable skill mirror refreshed without images. No lookbook rule changes, version bump, tag or release.
+
 ## v0.9.11 (4 November 2026)
 
 **Photography, screen states and accessibility; idea first; a font finder; and more headroom in the always-on set.** A new `photo` module, six new screen and UX rules, a search tool for the font library, and the always-on files trimmed so future rules have room.

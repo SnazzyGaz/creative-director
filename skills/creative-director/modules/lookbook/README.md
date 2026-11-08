@@ -1,9 +1,9 @@
 # Module: lookbook (optional)
 
-A visual reference of looks: 294 established looks (historic, fine-art, technique-based, digital and contemporary figure styles: LB-001 to LB-282 and LB-SD01 to LB-SD17, in 10 families) and 74 wildcards (LB-R…), 368 in all, each with use, mood, energy, what to avoid it for, hallmarks by layer and a one-line hint. It is a source of directions, not rules. Every core rule and module still applies, and wins over a look whenever they disagree.
+A visual reference of looks: 341 established looks (historic, fine-art, technique-based, digital and contemporary figure styles: LB-001 to LB-330 (unused draft-reject IDs excepted) and LB-SD01 to LB-SD17, in 10 families) and 74 wildcards (LB-R…), 415 in all, each with use, mood, energy, what to avoid it for, hallmarks by layer and a one-line hint. It is a source of directions, not rules. Every core rule and module still applies, and wins over a look whenever they disagree.
 
 - `looks.json` (and `looks.csv`): the tag file, one row per live look, plus the `retired` IDs. Search it; don't load it whole.
-- `sheets/`: 93 sheets, named by family, six looks to a sheet, each with its caption. `index.png`: every ID and name on one page. The sheets in git are 1,000 px wide; full-size ones are in `creative-director-lookbook-full.zip` on the [assets-v1 release](https://github.com/SnazzyGaz/creative-director/releases/tag/assets-v1) (`python3 tools/fetch_assets.py --lookbook`). Each look's full text is also in `looks.json`. 88 looks also carry an `interpreted` block (mood, domains, best layer in a mix, partner looks, confidence), marked as interpreted and unreviewed.
+- `sheets/`: 104 sheets, named by family, six looks to a sheet, each with its caption. `index.png`: every ID and name on one page. The sheets in git are 1,200 px wide; an earlier full-size sheet archive is in `creative-director-lookbook-full.zip` on the [assets-v1 release](https://github.com/SnazzyGaz/creative-director/releases/tag/assets-v1) (`python3 tools/fetch_assets.py --lookbook`). Each look's full text is also in `looks.json`. 88 looks also carry an `interpreted` block (mood, domains, best layer in a mix, partner looks, confidence), marked as interpreted and unreviewed.
 - [`data/clusters.md`](data/clusters.md): reference data, read only the entry you need. A catalogue of named look clusters (alike and unlike trios) for mixing several looks in one bleed, with predicted and tested results, mood and use tags, and readings for the wildcards; untested entries are marked as such.
 - Every example image is our own render from that look's written rules (captions say "our render from LB-xxx rules"). No look is tied to a real artist, studio, community or specific work, and none should be when you cite it: name looks by technique, structure or broad historic era only.
 
@@ -63,9 +63,9 @@ It matches `use`/`theme`, `mood` and `energy`, drops looks whose `avoid_for` mat
 - **More like this:** `--like LB-010` lists that look's `nearest_looks` (the three most similar renders) and the looks that list it back.
 - **By colour:** `--colour "#c5040f,#ed6322"` ranks looks by how close their dominant `colours` (3-5 hex values from the render) come to the given ones; combine with `--use`/`--mood`.
 - **Era term:** established looks with a clear movement or period carry `getty_aat` (Getty AAT Styles and Periods ID and preferred term, [SRC-266](../../SOURCES.md), ODC-By). It is a pointer for further reading, not a claim that the look copies any work. Technique-named and generic looks are left blank on purpose.
-- **Search quality:** `python3 modules/lookbook/tests/score_find.py` scores the search on 26 generic briefs (`tests/briefs.json`): recall@8 and avoid-for violations.
+- **Search quality:** `python3 modules/lookbook/tests/score_find.py` scores the search on 33 generic briefs (`tests/briefs.json`): recall@8 and avoid-for violations.
 
 ## Cite
 `LB-014 Suprematism at ~20%`: ID, name, strength. Add the layers taken above hint (`LB-005 Russian Constructivism at ~50%: palette, composition`).
 
-New batches are folded in with `tools/lookbook_sync.py` (see `UPDATING.md`). IDs are stable and retired IDs are never reused.
+New batches are folded in with `tools/lookbook_sync.py` (see `UPDATING.md`). IDs are stable and retired IDs are never reused. LB-321 was rejected at draft review and never compiled, so the ID is unused and never reused (like LB-139, LB-144, LB-149 and LB-162).
