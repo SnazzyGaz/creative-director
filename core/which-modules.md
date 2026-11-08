@@ -29,6 +29,7 @@ Always load `AGENTS.md`, `core/principles.md` and `core/critique-loop.md` (plus 
 | Feeling, purpose or kind of piece calls for life (a children's book, a fete, a concert poster, a comedy), once checks pass | `core/energy-pass.md`: quote the tone or genre, choose full/structure/light; a quiet literary or official brief can skip regardless of medium |
 | Just "bolder", "quieter" or "distill" | `core/commands.md` + the medium's modules |
 | Remake from scratch ("redo", "rejig", "start over", "reimagine") | `core/first-principles.md` + the medium's modules + aesthetic-critique (AES-9); brand if it carries a mark |
+| Website copy, email replies, newsletters, blurbs, about text, buttons/empty/error copy, supporting/filler copy; a visual piece still needs copy drafted | writing (WRITE-1 to 11; CD-7 still checks fixed rendered strings, AES-10 still forbids extra claims) |
 | Photograph or photoreal image, shot or generated (portrait, product, food, lifestyle, documentary) | photo (PHOTO-1 to 7; PHOTO-7 tells pass for generated photos), character for people (CHAR-9 gate), illustration for staging (+ brand for any lettering; ILL-12 for food) |
 | Image from an AI image model | illustration, technical-drawing; photo when it should read as a photograph; brand for any lettering (BRAND-8); character for people or animals (CHAR-9 gate); exact copy and counts (CD-7) |
 
@@ -46,6 +47,7 @@ What each module covers (`modules/<name>/README.md`).
 | `layout` | a fixed frame: social card, poster, cover, slide, print, infographics |
 | `typography` | words: type choice, scale, measure, leading, setting |
 | `brand` | a name, logo, mascot, packaging or brand guide (official marks: BRAND-4, BRAND-8; new marks: `logo.md`) |
+| `writing` | words to draft or review: web/email copy, replies, blurbs, about text, microcopy, empty/error states and supporting copy |
 | `photo` | a photograph or photoreal image, shot or generated: lens and viewpoint, light, casting, styling, set, retouching, generated-photo tells |
 | `web-ui` | a screen: mood, grid, components, states, contrast, colour roles, dark mode, reflow, motion |
 | `ux` | a task people complete: flows, errors, defaults, keyboard and focus, alt text |
@@ -64,7 +66,7 @@ What each module covers (`modules/<name>/README.md`).
 
 ## Token cost per module
 
-Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.10.0, 7 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,000 (7,500 with template); AGENTS 1,200, principles 2,700, loop 3,000, template 1,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
+Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/check_budgets.py --loads` prints the current numbers; v0.11.0, 8 Nov 2026). Other models tokenise differently, so expect roughly ±15%. Budgets: the always-on set 6,000 (7,500 with template); AGENTS 1,200, principles 2,700, loop 3,000, template 1,500, lite 2,500, a module README 6,000, any other rule file 4,500; the CI fails when a file goes over.
 
 | File or set | Tokens |
 |---|---|
@@ -93,6 +95,7 @@ Approximate: counted with tiktoken's `cl100k_base` encoding (`python3 tools/chec
 | `modules/layout/` (README 5,974; `infographics.md` 1,611, INF-1, INF-2, INF-4 to INF-6, for any infographic) | 7,585 |
 | `modules/technical-drawing/` | 3,038 |
 | `modules/typography/` (picking type: `tools/font_find.py --mood ... --genre ...`, a few hundred tokens of output; never read `fonts/CATALOGUE.md` whole, about 15,300) | 4,102
+| `modules/writing/` (WRITE-1 to 11; measured 8 Nov 2026) | 3,933 |
 | `modules/photo/` (PHOTO-1 to 7) | 2,519 |
 | `modules/ux/` | 2,496 |
 | `modules/web-ui/` (+ notes 447) | 4,117 |

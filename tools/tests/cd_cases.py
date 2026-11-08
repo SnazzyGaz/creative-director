@@ -72,6 +72,26 @@ class FrontDoor(unittest.TestCase):
         self.assertIn('LOGO-3', data['rules'])
         self.assertIn('modules/brand/logo.md', data['files'])
 
+    def test_writing_load_from_brief(self):
+        for description in ('Website copy for an about page',
+                            'An email reply to a customer',
+                            'A poster with supporting copy to draft',
+                            'Microcopy for empty states and error messages'):
+            with self.subTest(description=description):
+                brief = dict(self.b, description=description)
+                path = self.write('writing.json', brief)
+                result = self.cli('load', '--brief', path)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                data = json.loads(result.stdout)
+                self.assertIn('writing', data['matched'])
+                self.assertIn('modules/writing/README.md', data['files'])
+                self.assertTrue({f'WRITE-{i}' for i in range(1, 12)} <= set(data['rules']))
+        for description in ('A book cover', 'A concert poster', 'A photograph'):
+            with self.subTest(description=description):
+                data = cd.load_plan(dict(self.b, description=description))
+                self.assertNotIn('writing', data['matched'])
+                self.assertNotIn('modules/writing/README.md', data['files'])
+
     def test_init_and_no_overwrite(self):
         out = self.root / 'new.json'
         self.assertEqual(self.cli('brief', 'init', 'One idea', '--out', out).returncode, 0)
@@ -80,7 +100,7 @@ class FrontDoor(unittest.TestCase):
         self.assertEqual(json.loads(out.read_text())['description'], 'One idea')
 
     def test_rule_lookup(self):
-        for rid in ('CD-7', 'CORE-2', 'FLOW-5', '3D-1', 'FILM-GEN-8'):
+        for rid in ('CD-7', 'CORE-2', 'FLOW-5', '3D-1', 'FILM-GEN-8', 'WRITE-1', 'WRITE-11'):
             with self.subTest(rid=rid):
                 p = self.cli('rule', rid)
                 self.assertEqual(p.returncode, 0, p.stdout)

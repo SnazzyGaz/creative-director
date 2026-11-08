@@ -1,6 +1,6 @@
 <p><img alt="creative director: design judgement for AI agents. A white great egret in profile with lace plumes, its level gaze drawn as a 20-degree viewing cone that runs through the red square mark." src="docs/assets/banner-dark.png" width="100%"></p>
 
-Design judgement for any AI agent making or reviewing visual work: drawings, illustrations, 3D, screens, flows, infographics and film. **v0.10.2 starts from the idea, feeling and tone**, makes 4–8 roughs, compares them head-to-head in a fresh context of the same model, and shows the top 2–3 to the owner of the work. Only the winner enters the fix loop. Critiques label rule-backed, intent-backed and exploratory findings, with provenance and confidence. Choose the fix level before changing work; “the original is better” is a valid stop. [Energy](core/energy-pass.md) follows the named tone and genre, not a default ritual. Research and craft keep their evidence grades; taste stays with the owner of the work.
+Design judgement for any AI agent making or reviewing visual work and copy: drawings, illustrations, 3D, screens, flows, infographics, film and writing. **v0.11.0 starts from the idea, feeling and tone**, makes 4–8 roughs, compares them head-to-head in a fresh context of the same model, and shows the top 2–3 to the owner of the work. Only the winner enters the fix loop. Critiques label rule-backed, intent-backed and exploratory findings, with provenance and confidence. Choose the fix level before changing work; “the original is better” is a valid stop. [Energy](core/energy-pass.md) follows the named tone and genre, not a default ritual. Research and craft keep their evidence grades; taste stays with the owner of the work.
 
 **Start here**
 1. What it is: a rule set and critique loop an agent reads to judge and improve its own visual work.
@@ -75,7 +75,7 @@ The skill is the [`skills/creative-director/`](skills/creative-director/) folder
 
 Always send the actual output (image, screenshot at real size, URL or renders), never a description. Interactive and 3D work is reviewed hands-on: clicked, panned, zoomed and recorded, then judged on how it feels to use, not from stills alone. Video is watched in motion at its delivered size with sound, then scrubbed and sampled frame by frame ([film module](modules/film/review.md)).
 
-## In-repo tools (v0.10.2)
+## In-repo tools (v0.11.0)
 
 ```sh
 python3 tools/cd.py brief init 'A short description' --out brief.json
@@ -99,6 +99,7 @@ Only `AGENTS.md`, principles and the loop are always loaded: [40 existing rule I
 | [typography](modules/typography/) · [layout](modules/layout/) · [brand](modules/brand/) | type, social cards, posters, slides, print, infographics with charts drawn from the data in code; official logos placed unaltered, never redrawn; new logos made idea first and edited by LOGO-1 to 16, with notes on mark making and double readings |
 | [composition](modules/composition/) · [colour-value](modules/colour-value/) · [aesthetic-critique](modules/aesthetic-critique/) | balance, focus, beauty and palette, graded from *well supported* to *myth*; intent model and side-by-side verdicts |
 | [photo](modules/photo/) | photographs and photoreal images, shot or generated: distance and lens, camera height, named light, casting, styling, retouch limits, generated-photo tells |
+| [writing](modules/writing/) (on demand) | website copy, emails and replies, blurbs, about text, UI microcopy and supporting copy: purpose, facts, flow, voice and style |
 | [film](modules/film/) (optional) | story first: shots, continuity, light, grading, editing, sound, generated-video QC |
 | [lookbook](modules/lookbook/) (optional) | 368 visual looks to offer as directions, named by technique or era, never by living artists; used at 20-50% by default, stronger only on purpose |
 

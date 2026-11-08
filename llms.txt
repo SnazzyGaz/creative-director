@@ -1,4 +1,4 @@
-# creative-director v0.10.0
+# creative-director v0.11.0
 
 > Cited, checkable design rules and a light-touch critique loop that AI agents use to judge and improve visual work.
 
@@ -14,8 +14,9 @@
 - [Which modules to load](core/which-modules.md): task-to-module table and token costs
 - [Evidence](core/evidence.md): grades and myths, before claiming people prefer something
 - [Retired IDs](docs/RETIRED-IDS.md): rule IDs that moved or merged, kept reserved
-- [Modules](modules/): technical-drawing, illustration, character, web-ui, ux, 3d, typography, layout, brand, aesthetic-critique, composition, colour-value, photo, film
+- [Modules](modules/): technical-drawing, illustration, character, web-ui, ux, 3d, typography, layout, brand, aesthetic-critique, composition, colour-value, photo, writing, film
 - [Photo](modules/photo/README.md): photographs and photoreal images, shot or generated: distance and lens, camera height, light, casting, styling and set, retouch limits, generated-photo tells
+- [Writing](modules/writing/README.md): on demand for web/email copy, replies, blurbs, about text, UI microcopy and supporting copy; purpose, honest claims, flow, voice and consistent style
 - [Film](modules/film/README.md): cinematography and the moving image, story first (`story.md`): shots, continuity, camera, light, flashing; colour, editing, sound and subtitles in `edit.md`; look vocabulary and myths in `notes.md`; generated-video QC, crossover map
 - [Lookbook](modules/lookbook/README.md): optional; 368 established looks and wildcards with tags and image sheets, for from-scratch concepts or work that feels generic; search by use, mood, colour or "more like this"
 - [Install guide](docs/install.md): steps for Hermes Agent, Claude, Codex, Cursor, Gemini CLI, Copilot, Devin, Cline, Aider, Grok Bot and any chat LLM

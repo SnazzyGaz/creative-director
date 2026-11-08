@@ -1,4 +1,4 @@
-# Structured brief and the in-repo front door (v0.10.2)
+# Structured brief and the in-repo front door (v0.11.0)
 
 Run from the repo or the installed skill folder; no service, account or packaged CLI is needed.
 
@@ -11,6 +11,8 @@ python tools/cd.py select r1.png r2.png r3.png r4.png --brief brief.json > selec
 ```
 
 ## Brief contract
+
+For a writing job, name audience, purpose, channel, next action, tone/genre and English variety; record locked versus draftable copy in existing fields/constraints, then load `modules/writing/README.md`. No new required JSON field.
 
 `brief init` copies `brief-template.json` and records the description, without inventing intent. It refuses to overwrite a file. Fill the idea, feeling (name the tone and kind of piece: a thriller, a comedy, a children's book, a play, a fete, a concert and what kind of music — this shapes type, colour, energy and adornment), audience, purpose and success before making roughs. Then run `python tools/cd.py load --brief brief.json` and read every file it lists before making or fixing; quote the matched media and rule IDs. Record assumptions explicitly in constraints; must_be_right holds the owner's non-negotiables. The template's empty lists mean **no fixed copy or counts**, not a completed brief. The check reports incomplete intent as unverified.
 

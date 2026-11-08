@@ -4,7 +4,7 @@ description: 'Judge and improve visual work (generated images, illustrations, te
 license: MIT (see LICENSE)
 metadata:
   author: the owner of the work
-  version: "0.10.2"
+  version: "0.11.0"
   repository: https://github.com/SnazzyGaz/creative-director
 ---
 
@@ -42,4 +42,4 @@ Tools and JSON contracts: `tools/README.md`, `tools/brief.md`. Without code, che
 
 **Needs:** a model that can see images, and a way to render or screenshot the work at real size. Without vision, say the review is rules-only.
 
-This folder is generated from the repo root by `tools/package_skill.py` (version 0.10.2). To change a rule, edit the repo's root files, not this copy.
+This folder is generated from the repo root by `tools/package_skill.py` (version 0.11.0). To change a rule, edit the repo's root files, not this copy.
