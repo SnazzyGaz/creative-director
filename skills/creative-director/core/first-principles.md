@@ -15,8 +15,9 @@ step back (FP-2) -> check the facts (FP-3) -> brief, signed off (FP-4) -> 4–8 
 
 ## FP-1. Use this mode only when asked
 - **What:** The triggers are "from scratch", "redo", "rejig", "start over", "reimagine" and "rethink", or an explicit "don't just polish it". Without one of these, the light touch stays the default (`critique-loop.md` section 5). A take-over (`take-over.md`) is not this mode: a take-over repairs a broken piece and keeps its idea. This mode questions the idea itself.
+- **Ask which remake first (guidance):** when the owner supplies an existing design and asks for a remake without saying which kind, ask before working: (a) **a remake in its vein**, keeping its concept, layout basis, palette and energy but fixing it by these rules (at most recompose or art-direct, its idea kept as in CD-5), or (b) **a full first-principles rebuild** (this mode). Explicit "from scratch", "start over" or "don't keep any of it" already answers the question. Asking up front costs one message; guessing wrong costs whole rounds.
 - **Why:** Reframing is how designers handle a problem the first framing can't solve [SRC-164, SRC-165]. But redoing work that only needed a nudge throws away what the owner made and approved (CD-5, AES-10).
-- **Check:** Can you quote the words that put you in this mode? If you can't, use the light touch, or ask.
+- **Check:** Can you quote the words that put you in this mode? If you can't, use the light touch, or ask. Supplied design plus a bare "remake" or "redo": did you ask in-vein or rebuild?
 
 ## FP-2. Step back: answer the seven questions before you draw anything
 - **What:** Write one line for each:

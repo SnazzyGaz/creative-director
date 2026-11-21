@@ -1,6 +1,6 @@
 <p><img alt="creative director: design judgement for AI agents. A white great egret in profile with lace plumes, its level gaze drawn as a 20-degree viewing cone that runs through the red square mark." src="docs/assets/banner-dark.png" width="100%"></p>
 
-Design judgement for any AI agent making or reviewing visual work and copy: drawings, illustrations, 3D, screens, flows, infographics, film and writing. **v0.11.4 starts from the idea, feeling and tone**, makes 4–8 roughs, compares them head-to-head in a fresh context of the same model, and shows the top 2–3 to the owner of the work. Only the winner enters the fix loop. Critiques label rule-backed, intent-backed and exploratory findings, with provenance and confidence. Choose the fix level before changing work; “the original is better” is a valid stop. [Energy](core/energy-pass.md) follows the named tone and genre, not a default ritual. Research and craft keep their evidence grades; taste stays with the owner of the work.
+Design judgement for any AI agent making or reviewing visual work and copy: drawings, illustrations, 3D, screens, flows, infographics, film and writing. **v0.11.4 starts from the idea, feeling and tone**, makes 4–8 roughs, compares them head-to-head in a fresh context of the same model, and shows the top 2–3 to the owner. Only the winner enters the fix loop. Critiques label rule-backed, intent-backed and exploratory findings, with provenance and confidence. Choose the fix level before changing work; “the original is better” is a valid stop. [Energy](core/energy-pass.md) follows the named tone and genre, not a default ritual. Research and craft keep their evidence grades; taste stays with the owner.
 
 **Start here**
 1. What it is: a rule set and critique loop an agent reads to judge and improve its own visual work.
@@ -24,7 +24,7 @@ Same prompt and image model, one sample each: an illustration, not a benchmark. 
 | [<img alt="Character design, baseline and with the skill: an invented club logo and text, against a striding girl inventor with only the briefed props." src="examples/showcase/04-character-design.jpg" width="100%">](examples/showcase/04-character-design.jpg)<br>**Character:** the invented logo is gone, and her traits show in the pose. | [<img alt="Café logo, baseline and with the skill: three separate icons and an invented tagline, against one kettle that is also a kiln." src="examples/showcase/06-logo.jpg" width="100%">](examples/showcase/06-logo.jpg)<br>**Logo:** one mark a step past the literal, with no tagline. |
 | [<img alt="Jazz poster, baseline and with the skill: a saxophone, against a trumpet whose sound becomes the northern lights." src="examples/showcase/08-event-poster.jpg" width="100%">](examples/showcase/08-event-poster.jpg)<br>**Poster:** the name's idea is used; the baseline was already strong. | [<img alt="Exploded lamp view, baseline and with the skill: invented descriptions and parts off-axis, against five labelled parts on one axis." src="examples/showcase/09-product-illustration.jpg" width="100%">](examples/showcase/09-product-illustration.jpg)<br>**Exploded view:** only the five labels, with the parts on one axis. |
 
-Illustrative, not test evidence: one sample each, with six of ten pairs picked by the owner of the work. Notes and the rules that fired: [examples/showcase/](examples/showcase/). The evidence is the [blind test](examples/blind-test/RESULTS.md).
+Illustrative, not test evidence: one sample each, with six of ten pairs picked by the owner. Notes and the rules that fired: [examples/showcase/](examples/showcase/). The evidence is the [blind test](examples/blind-test/RESULTS.md).
 
 ## Style bleed
 
@@ -44,7 +44,7 @@ Each sheet starts with a small thumbnail of the [lookbook](modules/lookbook/) lo
 
 [<img alt="Torsion Dance Company brochure, base and one serpentine-figure look at 20, 50 and 80%, with the look's lookbook image as a reference thumbnail: one curled dancer, then ribbon-painted pairs, then figures wrung into one knot." src="examples/lookbook-strength/sheets/06-torsion-dance.jpg" width="100%">](examples/lookbook-strength/sheets/06-torsion-dance.jpg)<br>**Torsion Dance: 80% won.** The look's structure is the brief's idea: figures wrung into one ribbon knot are the strongest read of "torsion". *(LB-155 Serpentine elongated figure painting.)*
 
-Seven sheets, picked by the owner of the work, one kept render per level, not blind. The four textless rows come from a set of ten random bleeds (looks, subjects, themes and domains drawn at random); the three 20/50/80 rows are from the 21-sheet test. Tally and notes: [examples/lookbook-strength/](examples/lookbook-strength/README.md).
+Seven sheets, picked by the owner, one kept render per level, not blind. The four textless rows come from a set of ten random bleeds (looks, subjects, themes and domains drawn at random); the three 20/50/80 rows are from the 21-sheet test. Tally and notes: [examples/lookbook-strength/](examples/lookbook-strength/README.md).
 
 ## Install
 
@@ -71,7 +71,7 @@ The skill is the [`skills/creative-director/`](skills/creative-director/) folder
 | **Direct**<br>`creative director: direct this` | Joins at the start: writes the brief, sets direction, picks from rough options, reviews at checkpoints ([CD-1..7](core/creative-direction.md)). |
 | **Remake from scratch**<br>"redo", "rejig", "start over", "reimagine" | Steps back first: what the piece is, who it is for, its one job, the feeling, the given facts (checked against each other) and what must survive. Sends a 5-8 line brief for sign-off, then 4–8 structurally different roughs, a fresh-context same-model head-to-head, the top 2–3 shown for a pick, and only the winner built and runs the full checks ([FP-1..9](core/first-principles.md), [example](examples/first-principles-remake/)). Without these words the light touch stays the default. |
 | **Nudge**<br>"bolder", "quieter", "distill" | Bolder adds contrast, scale difference and commitment; quieter lowers whatever competes with the main thing; with a lookbook look applied, each moves its strength one step. Distill removes until the one job still works, and no further ([commands](core/commands.md)). The *Sitting right* guard still applies, so none of them centres things by default. |
-| **Variations**<br>"variations", "more directions", "another look", or a generic set | Search the [lookbook](modules/lookbook/): keep an unbeled control, bleed one cluster of two or three related looks (splitting 20-50%), and add one wildcard at hint. Cite LB IDs. If a winner is already picked, bleed the picture only. Never on a fix. |
+| **Variations**<br>"variations", "more directions", "another look", or a generic set | Search the [lookbook](modules/lookbook/): keep an unlabelled control, bleed one cluster of two or three related looks (splitting 20-50%), and add one wildcard at hint. Cite LB IDs. If a winner is already picked, bleed the picture only. Never on a fix. |
 
 Always send the actual output (image, screenshot at real size, URL or renders), never a description. Interactive and 3D work is reviewed hands-on: clicked, panned, zoomed and recorded, then judged on how it feels to use, not from stills alone. Video is watched in motion at its delivered size with sound, then scrubbed and sampled frame by frame ([film module](modules/film/review.md)).
 
@@ -135,7 +135,7 @@ Take-overs of bad work, nudges, one small case per common agent failure and the 
 
 ## Blind test
 
-The owner of the work judged with-skill and plain-prompt images side by side without knowing which was which: over 100 briefs the skill won 59 to 40 with one tie (one-sided sign test p = 0.035), meeting the 59-of-100 bar set in advance, so a clear result. It leads on pictures, logos and packaging and is behind on screens and infographics. One judge, and later batches were not independent of the rule-writing, so read it as one person's taste, not research. Batches, keys and caveats: [`examples/blind-test/RESULTS.md`](examples/blind-test/RESULTS.md).
+The owner judged with-skill and plain-prompt images side by side without knowing which was which: over 100 briefs the skill won 59 to 40 with one tie (one-sided sign test p = 0.035), meeting the 59-of-100 bar set in advance, so a clear result. It leads on pictures, logos and packaging and is behind on screens and infographics. One judge, and later batches were not independent of the rule-writing, so read it as one person's taste, not research. Batches, keys and caveats: [`examples/blind-test/RESULTS.md`](examples/blind-test/RESULTS.md).
 
 ## Requirements
 

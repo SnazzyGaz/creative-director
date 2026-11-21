@@ -1,5 +1,5 @@
 # "May Specials" A-board: first-principles brief (self-judged)
-Trigger (FP-1): the owner of the work asked for it "from scratch, with an aesthetic pass".
+Trigger (FP-1): the owner asked for it "from scratch, with an aesthetic pass".
 
 ## Facts as transcribed (FP-3), word for word from the perspective-corrected photo (original.jpg)
 - MAY SPECIALS! / Bigger Flavor. Better Times.

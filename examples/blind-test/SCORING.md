@@ -1,6 +1,6 @@
 # Scoring form
 
-One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge). The owner of the work fills in theirs first and alone.
+One row per sheet in [`scoring.csv`](scoring.csv) (copy it, one copy per judge). The owner fills in theirs first and alone.
 
 | Column | What to write |
 |---|---|

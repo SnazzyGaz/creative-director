@@ -71,7 +71,7 @@
 
 - **`cd.py load --brief`.** Prints the modules and rule IDs a filled brief requires. Making or fixing without reading that list is now marked incomplete in `AGENTS.md` and the critique loop. The which-modules table was already there; this is the step that applies it.
 - **Owner notes written into existing rules, no new IDs:** thicken a mark without changing its silhouette (LOGO-3); if the owner asks to change one part, treat the rest as must-keeps (CD-5 and the fix loop); event posters should read from the street, not as a book jacket, and match the event's energy (LAY-7); book covers may sit further from literal content (LAY-16); a polished cinematic finish counts as a generated-photo tell (PHOTO-7).
-- **Lookbook on variations.** Asking for variations, more directions, or saying the set feels samey now loads the lookbook: an unbeled control, one cluster of two or three relatives splitting 20-50%, and one wildcard at hint. After a correct-but-generic first round, offer this in plain language. Still never on fixes, and still not part of `cd.py load`.
+- **Lookbook on variations.** Asking for variations, more directions, or saying the set feels samey now loads the lookbook: an unlabelled control, one cluster of two or three relatives splitting 20-50%, and one wildcard at hint. After a correct-but-generic first round, offer this in plain language. Still never on fixes, and still not part of `cd.py load`.
 - **Owner note on leftover space:** moving type to pass contrast must not leave a dead field (empty sky, empty slab). Recrop or recompose so subject and type share the frame (COMP-23, LAY-10, LAY-15).
 
 ## Unreleased

@@ -1,6 +1,6 @@
 # Anatomy pass: a hand that belonged to no one
 
-A book cover ("My Tuna Lover", a comic story about a sailor obsessed with a tuna) made with Grok Bot's built-in GenerateImage, with the title and author set in code. The first delivered version passed the checks that were run on it (one key light, clean edges, type hierarchy and contrast) and still had a broken hand. The owner of the work spotted it at once. This example is why CHAR-9 exists: the fault was small in the frame and a whole-image look passed it.
+A book cover ("My Tuna Lover", a comic story about a sailor obsessed with a tuna) made with Grok Bot's built-in GenerateImage, with the title and author set in code. The first delivered version passed the checks that were run on it (one key light, clean edges, type hierarchy and contrast) and still had a broken hand. The owner spotted it at once. This example is why CHAR-9 exists: the fault was small in the frame and a whole-image look passed it.
 
 All art here is AI-generated (1 November 2026). The pass/fail calls are Grok Bot's own, made by eye on the crops; no outside judge.
 

@@ -4,7 +4,7 @@
 
 Each batch has its own key (batch 1: S01-S16, briefs B1-B8, two sheets per brief with sides swapped; batch 2:
 S17-S28, briefs B9-B20, one sheet per brief; batch 3: S29-S38, briefs B21-B30, one sheet per brief; batch 4: S39-S48, briefs B31-B40, one sheet per brief; batch 5: S49-S58, briefs B41-B50, one sheet per brief; batch 6: S59-S68, briefs B51-B60, infographics, one sheet per brief; batch 7: S69-S78, briefs B61-B70, infographics, one sheet per brief; batch 8: S79-S108, briefs B71-B100, six themes, one sheet per brief; batch 9: S109-S118, briefs B101-B110, infographics and screens, one sheet per brief). Pass every key whose sheets were judged. Each judge is reported on
-their own, the owner of the work first; nothing is pooled across judges.
+their own, the owner first; nothing is pooled across judges.
 
 One judgement per brief. Batch 1's two sheets for a brief are read as one judgement: if both were filled and
 agree, that is the pick; if only one was filled (a judge who recognises the repeat may skip it), that one is

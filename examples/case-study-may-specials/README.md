@@ -1,6 +1,6 @@
 # Case study: "May Specials" A-board
 
-> **Third-party sign, used only as a teaching example.** This is a sidewalk A-board from a restaurant with no connection to this project. There is no affiliation, endorsement or commission. The original photo was supplied by the owner of the work for a critique exercise. The remake is a self-judged study, not a delivered or approved design. "Butterfinger" is a trademark of its owner; it appears here only as plain menu text. If you are the rights holder and want this removed, open an issue.
+> **Third-party sign, used only as a teaching example.** This is a sidewalk A-board from a restaurant with no connection to this project. There is no affiliation, endorsement or commission. The original photo was supplied by the owner for a critique exercise. The remake is a self-judged study, not a delivered or approved design. "Butterfinger" is a trademark of its owner; it appears here only as plain menu text. If you are the rights holder and want this removed, open an issue.
 
 This is the only worked example in the repo that names a real piece. It shows the rules in action from start to finish: first-principles brief → imagery → viewing distance → whitespace → marks → facts. Everything below is **self-judged**.
 

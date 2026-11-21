@@ -143,7 +143,7 @@ For a model that can browse but not hold files, give it the raw URL of `AGENTS.m
 
 ## v0.10.0 workflow
 
-The always-on set carries 40 existing rule IDs and compact reminders; other rules load by `python3 tools/cd.py rule <ID>` or task. Start from an idea and feeling; new work gets 4–8 roughs compared in a fresh context of the same model, then the owner of the work picks from the top 2–3. Only the winner is fixed. Existing edits and consults keep their scope. Every critique finding is rule-backed, intent-backed or exploratory, with provenance and confidence. Pick edit/recompose/art-direct/reconceive/rebuild/explore before changes. “The original is better” is a valid stop. Energy runs only for named intent, not as a blanket ritual.
+The always-on set carries 40 existing rule IDs and compact reminders; other rules load by `python3 tools/cd.py rule <ID>` or task. Start from an idea and feeling; new work gets 4–8 roughs compared in a fresh context of the same model, then the owner picks from the top 2–3. Only the winner is fixed. Existing edits and consults keep their scope. Every critique finding is rule-backed, intent-backed or exploratory, with provenance and confidence. Pick edit/recompose/art-direct/reconceive/rebuild/explore before changes. “The original is better” is a valid stop. Energy runs only for named intent, not as a blanket ritual.
 
 ## Optional Python tools
 
