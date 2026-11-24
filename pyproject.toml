@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "creative-director-tools"
+version = "2.0.0a1"
+description = "Deterministic visual QA, compositing, lookbook search, and MCP server for AI agents (creative-director v2)."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "pillow>=10.0",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+page = ["playwright>=1.40"]
+vision = ["opencv-python-headless>=4.8"]
+3d = ["trimesh>=4.0", "rtree>=1.0", "manifold3d>=2.5", "scipy>=1.11"]
+tokens = ["tiktoken>=0.7"]
+yaml = ["pyyaml>=6.0"]
+all = [
+    "playwright>=1.40",
+    "opencv-python-headless>=4.8",
+    "trimesh>=4.0",
+    "rtree>=1.0",
+    "manifold3d>=2.5",
+    "scipy>=1.11",
+    "tiktoken>=0.7",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+cd-cli = "tools.cd:main"
+cd-mcp = "tools.mcp_server:main"
+cd-compose = "tools.compose:main"
+cd-autocheck = "tools.autocheck:main"
+
+[tool.setuptools.packages.find]
+include = ["tools*"]
+exclude = ["tools.tests*"]

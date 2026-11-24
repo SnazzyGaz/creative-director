@@ -1,11 +1,12 @@
 <p><img alt="creative director: design judgement for AI agents. A white great egret in profile with lace plumes, its level gaze drawn as a 20-degree viewing cone that runs through the red square mark." src="docs/assets/banner-dark.png" width="100%"></p>
 
-Design judgement for any AI agent making or reviewing visual work and copy: drawings, illustrations, 3D, screens, flows, infographics, film and writing. **v0.11.4 starts from the idea, feeling and tone**, makes 4–8 roughs, compares them head-to-head in a fresh context of the same model, and shows the top 2–3 to the owner. Only the winner enters the fix loop. Critiques label rule-backed, intent-backed and exploratory findings, with provenance and confidence. Choose the fix level before changing work; “the original is better” is a valid stop. [Energy](core/energy-pass.md) follows the named tone and genre, not a default ritual. Research and craft keep their evidence grades; taste stays with the owner.
+Design judgement and deterministic visual QA for AI agents: drawings, illustrations, 3D, screens, flows, infographics, film and writing. **v2.0.0-alpha.1 inverts the stack** — hard gates enforced in code (`tools/cd.py`, `tools/compose.py`, `tools/autocheck.py`, `tools/mcp_server.py`), a **lean ≤ 1,600-token always-on kernel** ([`AGENTS.md`](AGENTS.md) + [`core/kernel.md`](core/kernel.md)), **manifest-driven module routing** ([`manifest.json`](manifest.json)), **three proportional workflow tiers** (`fast`, `directed`, `remake`), and **separate project taste profiles** ([`taste.default.json`](taste.default.json)). Research and craft keep their evidence grades; taste stays with the owner.
 
 **Start here**
-1. What it is: a rule set and critique loop an agent reads to judge and improve its own visual work.
-2. Always load [`AGENTS.md`](AGENTS.md), [`core/principles.md`](core/principles.md) and [`core/critique-loop.md`](core/critique-loop.md).
-3. Then add only the modules the task needs, from [`core/which-modules.md`](core/which-modules.md).
+1. What it is: a tool-first QA/compositing kit + lean design-judgement kernel and modular rule library.
+2. Always load [`AGENTS.md`](AGENTS.md) and [`core/kernel.md`](core/kernel.md) (≤ 1,600 tokens — down 75% from v0.11).
+3. Route the task declaratively with `python3 tools/cd.py load --brief brief.json` (backed by [`manifest.json`](manifest.json) and [`core/which-modules.md`](core/which-modules.md)).
+4. Optionally install as a Python package (`pip install -e .`) for `cd-cli`, `cd-compose`, `cd-autocheck`, and the zero-dependency stdio MCP server (`cd-mcp`).
 
 **[Gallery](https://snazzygaz.github.io/creative-director/gallery/)** · **[Install as Grok Bot](https://x.ai/bot/XWBKgRnDOw7uR5SpKx3Af)** · **[Claude Skill zip](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip)** · **[Lite version](lite/CREATIVE-DIRECTOR-LITE.md)**
 
@@ -57,7 +58,8 @@ Works with any agent or LLM. [`docs/install.md`](docs/install.md) has the steps,
 | Claude Code, Codex, Cursor, Copilot, Devin, Cline | `gh skill install SnazzyGaz/creative-director creative-director --agent <agent>` (or `npx skills add SnazzyGaz/creative-director`) |
 | Gemini CLI | `gemini skills install https://github.com/SnazzyGaz/creative-director.git --path skills/creative-director` |
 | claude.ai, Claude desktop | Upload [`creative-director-skill.zip`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip) in Customize > Skills ([steps](docs/install.md#claude)) |
-| ChatGPT, Gemini Gems, Claude Projects, any chat LLM | Paste or upload [`creative-director-prompt.md`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt.md) (about 11.4k tokens) or the [full bundle](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt-full.md) (about 97.5k) |
+| ChatGPT, Gemini Gems, Claude Projects, any chat LLM | Paste or upload [`creative-director-prompt.md`](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt.md) (core bundle) or the [full bundle](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-prompt-full.md) (all manifest modules) |
+| MCP clients (Claude Code, Cursor, Codex, Antigravity, Gemini CLI) | `pip install -e .` and register `cd-mcp` (or `python3 tools/mcp_server.py`) |
 | Aider | `aider --read AGENTS.md` |
 
 The skill is the [`skills/creative-director/`](skills/creative-director/) folder, in the open [Agent Skills](https://agentskills.io/specification) format. Inside a clone of this repo, agents read [`AGENTS.md`](AGENTS.md) directly or through a pointer file ([`CLAUDE.md`](CLAUDE.md), [`GEMINI.md`](GEMINI.md), [`.github/copilot-instructions.md`](.github/copilot-instructions.md), [`.cursor/rules/`](.cursor/rules/creative-director.mdc)). Every route leads back to `AGENTS.md`, and [`llms.txt`](llms.txt) is there for tools that read it.
@@ -75,33 +77,34 @@ The skill is the [`skills/creative-director/`](skills/creative-director/) folder
 
 Always send the actual output (image, screenshot at real size, URL or renders), never a description. Interactive and 3D work is reviewed hands-on: clicked, panned, zoomed and recorded, then judged on how it feels to use, not from stills alone. Video is watched in motion at its delivered size with sound, then scrubbed and sampled frame by frame ([film module](modules/film/review.md)).
 
-## In-repo tools (v0.11.4)
+## In-repo tools & MCP server (v2.0.0-alpha.1)
 
 ```sh
 python3 tools/cd.py brief init 'A short description' --out brief.json
-# Fill idea, feeling, fixed copy/counts, size and must-be-right first.
-python3 tools/cd.py load --brief brief.json
-python3 tools/cd.py check final.png --brief brief.json
+python3 tools/cd.py taste init --out taste.json          # optional personal/brand taste profile
+python3 tools/cd.py load --brief brief.json              # manifest-driven tier, modules & gates
+python3 tools/cd.py compose spec.json --out final.png    # art plate + exact copy/logos/charts + boxes manifest
+python3 tools/cd.py check final.png --brief brief.json   # copy, contrast, safe-area, counts, whites, format
 python3 tools/cd.py rule CD-7
-python3 tools/cd.py select r1.png r2.png r3.png r4.png --brief brief.json
+python3 tools/cd.py select r1.png r2.png r3.png --brief brief.json
+python3 tools/mcp_server.py                              # zero-dependency stdio MCP server (or `cd-mcp`)
 ```
 
-[`tools/brief.md`](tools/brief.md) defines the JSON brief and comparison packet. `check` reuses the existing measurement tools; page copy comes from the rendered DOM, image copy from optional system Tesseract or a labelled transcript. Physical counts need crop/count evidence. Missing evidence is SKIP, not PASS; pixel-only type size still needs visual review. No script calls a second model or certifies taste. This is an in-repo helper, not a distributed CLI product.
+[`tools/brief.md`](tools/brief.md) defines the JSON brief, taste profile, and selection contracts. `compose.py` renders exact locked typography, official logo marks (`BRAND-4`), and accurate bar charts (`LAY-19`) over clean art plates while emitting `{stem}-boxes.json`, which `cd.py check` automatically feeds into `autocheck.py` for worst-pixel WCAG contrast, safe-area, and exact copy checks. Missing evidence is `SKIP`, never `PASS`. No script calls a second model or certifies taste.
 
 ## Modules
 
-Only `AGENTS.md`, principles and the loop are always loaded: [40 existing rule IDs and compact reminders](core/principles.md#the-40-always-on-rules-v0100), with other rules looked up by `cd.py rule <ID>` or by module for the job ([`core/which-modules.md`](core/which-modules.md)).
+Only `AGENTS.md` and `core/kernel.md` are always loaded (≤ 1,600 tokens). All 313 rules across 16 modules (13 `core-visual` + 3 cleanly isolated `optional-domain`: `writing`, `film`, `3d`) load declaratively via `manifest.json` (`cd.py load` or `cd.py rule <ID>`).
 
 | Module | Covers |
 |---|---|
 | [technical-drawing](modules/technical-drawing/) · [illustration](modules/illustration/) · [character](modules/character/) | perspective, light, anatomy (every hand, limb and face checked; a fail blocks delivery) |
-| [web-ui](modules/web-ui/) · [ux](modules/ux/) · [3d](modules/3d/) | screens, flows and accessibility (states, dark mode, reflow, reduced motion, focus order, alt text), clicked and recorded; 3D build defects |
+| [web-ui](modules/web-ui/) · [ux](modules/ux/) | screens, flows and accessibility (states, dark mode, reflow, reduced motion, focus order, alt text), clicked and recorded |
 | [typography](modules/typography/) · [layout](modules/layout/) · [brand](modules/brand/) | type, social cards, posters, slides, print, infographics with charts drawn from the data in code; official logos placed unaltered, never redrawn; new logos made idea first and edited by LOGO-1 to 16, with notes on mark making and double readings |
 | [composition](modules/composition/) · [colour-value](modules/colour-value/) · [aesthetic-critique](modules/aesthetic-critique/) | balance, focus, beauty and palette, graded from *well supported* to *myth*; intent model and side-by-side verdicts |
 | [photo](modules/photo/) | photographs and photoreal images, shot or generated: distance and lens, camera height, named light, casting, styling, retouch limits, generated-photo tells |
-| [writing](modules/writing/) (on demand) | website copy, emails and replies, blurbs, about text, UI microcopy and supporting copy: purpose, facts, flow, voice and style |
-| [film](modules/film/) (optional) | story first: shots, continuity, light, grading, editing, sound, generated-video QC |
-| [lookbook](modules/lookbook/) (optional) | 368 visual looks to offer as directions, named by technique or era, never by living artists; used at 20-50% by default, stronger only on purpose |
+| [lookbook](modules/lookbook/) (optional) | 415 visual looks to offer as directions, named by technique or era, never by living artists; used at 20-50% by default, stronger only on purpose |
+| [writing](modules/writing/) · [film](modules/film/) · [3d](modules/3d/) (`optional-domain`) | cleanly isolated optional domains: web/email copy & microcopy; cinematography, story, editing & generated-video QC; 3D build QA |
 
 Also: a [font library](fonts/) of 107 free families in 29 themes, tagged by mood and searchable with `tools/font_find.py`, and [`tools/`](tools/) for every measurable check (one-command auto check, contrast, vanishing points, ellipses, layout grid, chart and route drawing).
 
@@ -144,24 +147,26 @@ The owner judged with-skill and plain-prompt images side by side without knowing
 - **Recommended setup:** Playwright or headless Chrome for UI (`tools/shot.sh` uses Chrome; `tools/autocheck.py` uses Playwright for pages), Blender for 3D (plus [model-qa](https://github.com/SnazzyGaz/model-qa) for build checks), and Python 3 with Pillow and NumPy for the `tools/` scripts (the auto check, look tests, contrast, vanishing points, ellipses, layout grid, 3D intersections; `pip install -r tools/requirements.txt`).
 - **Without vision** you only get a rules-only review of code or a description. It can still catch contrast, spacing and flow problems in code, but it can't judge how the work looks, and it is much weaker.
 
-Context cost: about 5,900 tokens always loaded (`AGENTS.md`, principles and the loop; about 7,100 with the critique template), plus 1,200-5,800 per module README, with bigger modules split into on-demand files (film: about 10,300 for its three core files) ([table](core/which-modules.md#token-cost-per-module)). Budgets are enforced in CI (`tools/check_budgets.py`). For small context windows, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) has the loop, core rules and blockers in about 2,500 tokens.
+Context cost: **about 1,400 tokens always loaded** (`AGENTS.md` + `core/kernel.md`, budget ≤ 1,600 — a 75% reduction from v0.11's 6,000), plus only the specific modules routed by `cd.py load` from `manifest.json` (`python3 tools/check_budgets.py --loads`). Budgets are enforced in CI on both Linux and Windows. For single-file small-context chat use, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) fits in about 2,500 tokens.
 
 ## What's inside
 
 ```
-core/       always: principles, the loop (with sign-off and delivery). On demand: critique template,
-            creative direction, first-principles remake, brand intake, evidence, module picker
-modules/    technical-drawing · illustration · character · web-ui · ux · 3d
-            typography · layout (social, posters, slides, print) · brand · aesthetic-critique
-            composition (balance, focus, unity, space, beauty) · colour-value
-            film (cinematography and video, story first: shots, continuity, light, grading, editing, sound, generated-video QC)
-            lookbook (optional: 368 established looks and wildcards, tag file and image sheets)
-tools/      cd.py: brief init, load, check (JSON), rule <ID>, select; auto check, look tests, WCAG contrast, screenshots, vanishing points, ellipses, layout grid, whitespace, balance, 3D intersections, before/after
-examples/   stress tests, round by round, including this README's own critique
-fonts/      107 free font families in 29 themes, catalogue and specimen sheets
-lite/       the loop, core rules and blockers in one short file
-skills/     the installable skill folder, generated from the files above
-docs/       gallery, README images, reference library, design notes (DECISIONS.md, RETIRED-IDS.md; PROPOSED-REPO.md is historical)
+manifest.json       declarative source of truth: kernel, tiers, hard gates, routes, modules
+taste.default.json  starter project taste profile (separates personal/brand style from universal rules)
+pyproject.toml      installable `creative-director-tools` package (`cd-cli`, `cd-mcp`, `cd-compose`, `cd-autocheck`)
+core/               always: kernel.md. On demand: principles, critique-loop, critique-template,
+                    creative-direction, first-principles, brand-intake, evidence, taste-profile, which-modules
+modules/            core-visual: technical-drawing · illustration · character · web-ui · ux · typography
+                    layout · brand · aesthetic-critique · composition · colour-value · photo · lookbook (415 looks)
+                    optional-domain: writing · film · 3d
+tools/              cd.py, mcp_server.py (stdio MCP), compose.py (deterministic art+copy+logo+chart compositor),
+                    autocheck.py, datagraphic.py, look.py, contrast.py, vp.py, ellipse.py, grid.py, whitespace.py, balance.py, intersect.py
+examples/           stress tests, blind test, cross-model runs, round by round
+fonts/              107 free font families in 29 themes, catalogue and specimen sheets
+lite/               the loop, core rules and blockers in one short file
+skills/             the installable Agent Skill folder, generated from the root files
+docs/               gallery, README images, reference library, design notes
 ```
 
 ## Principles of the critique

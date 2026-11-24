@@ -1,10 +1,12 @@
 {
   "schema_version": 1,
   "description": "",
+  "tier": "",
   "medium": "",
   "has_people_or_animals": false,
   "idea": "",
   "feeling": "",
+  "intent_tags": [],
   "audience": "",
   "purpose": "",
   "success": "",

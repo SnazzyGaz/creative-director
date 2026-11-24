@@ -1,16 +1,23 @@
-# Structured brief and the in-repo front door (v0.11.4)
+# Structured brief, taste profile, and v2 CLI (`tools/cd.py`)
 
-Run from the repo or the installed skill folder; no service, account or packaged CLI is needed.
+Run directly from the repo (`python3 tools/cd.py ...`), installed via `pip install -e .` (`cd-cli`, `cd-compose`, `cd-mcp`), or via the stdio MCP server (`tools/mcp_server.py`).
 
 ```sh
-python tools/cd.py brief init 'A quiet exhibition invitation' --out brief.json
-python tools/cd.py load --brief brief.json
-python tools/cd.py rule CD-7
-python tools/cd.py check final.png --brief brief.json
-python tools/cd.py select r1.png r2.png r3.png r4.png --brief brief.json > selection.json
+python3 tools/cd.py brief init "A quiet exhibition invitation" --out brief.json
+python3 tools/cd.py taste init --out taste.json
+python3 tools/cd.py load --brief brief.json [--taste taste.json]
+python3 tools/cd.py rule CD-7
+python3 tools/cd.py compose spec.json --out final.png [--html final.html]
+python3 tools/cd.py check final.png --brief brief.json [--taste taste.json]
+python3 tools/cd.py select r1.png r2.png r3.png --brief brief.json > selection.json
 ```
 
-## Brief contract
+## Brief & Taste Contracts
+
+- **Brief (`brief.json`, `schema_version: 1` or `2`):** `brief init` creates a starter template with `medium: ""`, `has_people_or_animals: false`, optional `tier` (`""` | `"fast"` | `"directed"` | `"remake"`), and optional `intent_tags` (`[]`). Routing is driven declaratively from `manifest.json` (`cd.py load`), never regex-scraped from Markdown prose.
+- **Taste profile (`taste.json`):** `taste init` copies `taste.default.json`. Keeps owner/brand house style (`english_variety`, `whites`, `finish_ceiling`, `avoid_typefaces`, `avoid_tropes`) separate from universal rules (`core/taste-profile.md`). Placing `taste.json` beside `brief.json` auto-loads it; warm-white settings forward `--warm` to `autocheck.py`.
+- **Deterministic compositing (`compose.py`):** Renders clean art plates + panels + unaltered official marks (`BRAND-4`) + accurate bar charts (`LAY-19`) + locked copy (`CD-7`), emitting `{stem}-boxes.json`. When `{stem}-boxes.json` (or `--boxes`) is present on an image, `cd.py check` automatically forwards those bounding boxes to `autocheck.py` for worst-pixel WCAG contrast (`UI-6`, `LAY-15`) alongside exact copy (`CD-7`) and safe-area (`LAY-5`) checks.
+- **Proportional selection (`select`):** Supports **2–8 roughs** (3 recommended for Tier 2 `directed`). Defaults to `pairwise` for 2–4 roughs and `bracket` for 5–8 roughs (`--mode pairwise|bracket|ranked`). Records an honest `context_mode` (`"isolated-subagent"` | `"separate-session"` | `"same-session-self-review"`) rather than requiring fake fresh-context attestations.
 
 For a writing job, name audience, purpose, channel, next action, tone/genre and English variety; record locked versus draftable copy in existing fields/constraints, then load `modules/writing/README.md`. Use `medium: "writing"` for a writing job.
 

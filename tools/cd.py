@@ -1,5 +1,18 @@
 #!/usr/bin/env python3
-"""In-repo creative-director front door. See tools/brief.md for the JSON contract."""
+"""creative-director v2 CLI front door.
+
+Commands:
+  cd.py brief init "Description" --out brief.json
+  cd.py taste init --out taste.json
+  cd.py load --brief brief.json [--taste taste.json]
+  cd.py rule <ID>
+  cd.py check TARGET --brief brief.json [--taste taste.json] [--boxes ...] [--observations ...]
+  cd.py select r1.png r2.png r3.png --brief brief.json [--review review.json] [--owner-choice R2]
+  cd.py compose spec.json --out final.png [--html final.html]
+  cd.py generate-docs
+
+See manifest.json and tools/brief.md for schemas. Zero dependencies beyond stdlib + Pillow/NumPy.
+"""
 import argparse
 from collections import Counter
 import csv
@@ -16,25 +29,60 @@ import sys
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
+MANIFEST_PATH = ROOT / 'manifest.json'
 BRIEF = ROOT / 'tools' / 'brief-template.json'
+TASTE_DEFAULT = ROOT / 'taste.default.json'
 RULE_HEADING = re.compile(r'^#{2,6}\s+(?:\*\*)?([A-Z0-9][A-Z0-9]*(?:-[A-Z0-9]+)*-\d+)\b.*$', re.M)
+VALID_TIERS = ('', 'fast', 'directed', 'remake')
+VALID_CONTEXT_MODES = ('isolated-subagent', 'separate-session', 'same-session-self-review')
+REMAKE_WORDS = ('from scratch', 'redo', 'rejig', 'start over', 'reimagine', 'rethink')
+OCR_MIN_CONFIDENCE = 50
 
 
 def emit(value):
     print(json.dumps(value, indent=2, ensure_ascii=False))
 
 
-def load(path):
+def load_json(path):
     return json.loads(Path(path).read_text(encoding='utf-8'))
 
 
+# Backward-compatible alias used by older tests/callers
+load = load_json
+
+
+def load_manifest():
+    return load_json(MANIFEST_PATH)
+
+
+def rel_posix(path):
+    return Path(path).resolve().relative_to(ROOT.resolve()).as_posix()
+
+
+def approx_tokens(paths):
+    total = 0
+    for rel in paths:
+        p = ROOT / rel
+        if p.is_file():
+            total += round(len(p.read_text(encoding='utf-8')) / 4)
+    return total
+
+
 def read_brief(path, require_medium=True):
-    b = load(path)
-    if not isinstance(b, dict) or type(b.get('schema_version')) is not int or b.get('schema_version') != 1:
-        raise ValueError('brief schema_version must be 1')
+    b = load_json(path)
+    if not isinstance(b, dict) or type(b.get('schema_version')) is not int or b.get('schema_version') not in (1, 2):
+        raise ValueError('brief schema_version must be 1 or 2')
     for field in ('description', 'idea', 'feeling', 'audience', 'purpose', 'success'):
         if not isinstance(b.get(field), str):
             raise ValueError(f'brief {field} must be a string')
+    tier = b.get('tier', '')
+    if not isinstance(tier, str) or tier not in VALID_TIERS:
+        raise ValueError(f'brief tier must be one of {VALID_TIERS}')
+    b.setdefault('tier', '')
+    intent_tags = b.get('intent_tags', [])
+    if not isinstance(intent_tags, list) or not all(isinstance(x, str) for x in intent_tags):
+        raise ValueError('brief intent_tags must be a list of strings')
+    b.setdefault('intent_tags', [])
     if not isinstance(b.get('medium'), str) or (require_medium and not b['medium'].strip()):
         raise ValueError('brief medium must be a nonempty string (fill it after brief init)')
     if type(b.get('has_people_or_animals')) is not bool:
@@ -69,20 +117,53 @@ def read_brief(path, require_medium=True):
     return b
 
 
+def read_taste(taste_path=None, brief_path=None):
+    """Load an explicit taste.json, a sibling taste.json beside brief.json, or taste.default.json."""
+    chosen = None
+    source = 'default'
+    if taste_path:
+        chosen = Path(taste_path)
+        if not chosen.is_file():
+            raise ValueError(f'taste profile not found: {taste_path}')
+        source = str(chosen)
+    elif brief_path:
+        sibling = Path(brief_path).resolve().parent / 'taste.json'
+        if sibling.is_file():
+            chosen = sibling
+            source = str(sibling)
+    if chosen is None:
+        if TASTE_DEFAULT.is_file():
+            chosen = TASTE_DEFAULT
+            source = 'taste.default.json'
+        else:
+            return None, 'none'
+    if chosen.suffix.lower() in ('.yaml', '.yml'):
+        try:
+            import yaml
+        except ImportError as exc:
+            raise ValueError('YAML taste profiles require PyYAML; use JSON (.json) for zero-dependency support') from exc
+        data = yaml.safe_load(chosen.read_text(encoding='utf-8'))
+    else:
+        data = load_json(chosen)
+    if not isinstance(data, dict):
+        raise ValueError('taste profile must be a JSON object')
+    return data, source
+
+
 def rules():
-    """Canonical root files only; ignore mirrors, notes, examples and retired IDs."""
+    """Canonical root files only; normalized to POSIX relative paths on all platforms."""
     found = {}
     for p in sorted([*(ROOT / 'core').glob('*.md'), *(ROOT / 'modules').glob('*/*.md')]):
         text = p.read_text(encoding='utf-8')
+        rel = p.relative_to(ROOT).as_posix()
         for m in RULE_HEADING.finditer(text):
-            # End at the next heading of the same or higher level, not a subheading.
             level = len(m.group().split()[0])
             end = re.search(r'^#{1,' + str(level) + r'}\s', text[m.end():], re.M)
             block = text[m.start():m.end() + end.start() if end else len(text)].strip()
             rid = m.group(1)
             if rid in found:
-                raise ValueError(f'ambiguous rule {rid}: {found[rid][0]} and {p.relative_to(ROOT)}')
-            found[rid] = (str(p.relative_to(ROOT)), block)
+                raise ValueError(f'ambiguous rule {rid}: {found[rid][0]} and {rel}')
+            found[rid] = (rel, block)
     return found
 
 
@@ -93,7 +174,6 @@ def result(cid, status, provenance, **extra):
 def copy_check(b, text, provenance, fallible_ocr=False):
     if text is None:
         return result('copy', 'SKIP', provenance, reason='No rendered text evidence; cannot certify CD-7.')
-    # Each entry is a complete rendered line (DOM: a visible text run).
     observed = Counter(text.splitlines())
     expected = Counter({x['text']: x['count'] for x in b['copy']})
     missing = list((expected - observed).elements())
@@ -101,10 +181,6 @@ def copy_check(b, text, provenance, fallible_ocr=False):
     return result('copy', ('FLAG' if fallible_ocr else 'FAIL') if missing or extra else 'PASS', provenance, rule='CD-7',
                   missing=missing, extra=extra, observed=dict(observed),
                   diff=list(difflib.ndiff(list(expected.elements()), text.splitlines())))
-
-
-# Tesseract word confidence is 0–100; -1 denotes non-word/no confidence.
-OCR_MIN_CONFIDENCE = 50
 
 
 def ocr_image(target):
@@ -128,7 +204,7 @@ def ocr_image(target):
 
 def text_manifest(path):
     """Code-set text: [text, [x0,y0,x1,y1], [r,g,b]] per rendered line."""
-    rows = load(path)
+    rows = load_json(path)
     if not isinstance(rows, list):
         raise ValueError('boxes manifest must be a list')
     for row in rows:
@@ -140,6 +216,18 @@ def text_manifest(path):
         if not isinstance(rgb, list) or len(rgb) != 3 or not all(type(v) in (int, float) and math.isfinite(v) and 0 <= v <= 255 for v in rgb):
             raise ValueError('invalid manifest RGB')
     return '\n'.join(row[0] for row in rows), [row[1] for row in rows]
+
+
+def manifest_to_text_boxes(boxes):
+    """Convert manifest bounding boxes into autocheck --text-box specs (estimating :large for tall display lines)."""
+    specs = []
+    for box in boxes:
+        x0, y0, x1, y1 = (int(round(v)) for v in box)
+        if x1 <= x0 or y1 <= y0:
+            continue
+        suffix = ':large' if (y1 - y0) >= 28 else ''
+        specs.append(f'{x0},{y0},{x1},{y1}{suffix}')
+    return specs
 
 
 def copy_crops(target, boxes, missing):
@@ -167,30 +255,42 @@ def copy_crops(target, boxes, missing):
 
 def check(a):
     b = read_brief(a.brief)
+    taste, taste_source = read_taste(getattr(a, 'taste', None), a.brief)
     page = bool(re.match(r'https?://', a.target)) or Path(a.target).suffix.lower() not in ('.png', '.jpg', '.jpeg', '.webp')
-    with tempfile.TemporaryDirectory(prefix='cd-check-') as tmp:
-        report = Path(tmp) / 'autocheck.json'
-        cmd = [sys.executable, str(ROOT / 'tools/autocheck.py'), a.target, '--json', str(report),
-               '--width', str(b['format']['width']), '--height', str(b['format']['height'])]
-        for box in a.text_box:
-            cmd += ['--text-box', box]
-        p = subprocess.run(cmd, capture_output=True, text=True, timeout=240)
-        if p.returncode not in (0, 1) or not report.exists():
-            raise ValueError('autocheck failed: ' + p.stderr.strip()[-1200:])
-        measured = load(report)
+
+    # Pre-discover text manifest on images so its geometry feeds autocheck contrast automatically.
     text, boxes, source = None, [], 'no OCR evidence'
     fallible_ocr = False
-    if page:
-        text, source = measured.get('text'), 'autocheck visible DOM text (not OCR; verify image/canvas text by eye)'
-        boxes = [r for t in measured.get('text_runs', []) for r in t['rects']]
-    else:
+    auto_text_boxes = list(a.text_box)
+    if not page:
         manifest = Path(a.boxes) if a.boxes else Path(a.target).with_name(Path(a.target).stem + '-boxes.json')
         if a.boxes or manifest.is_file():
             text, boxes = text_manifest(manifest)
             source = 'code-set text manifest: ' + str(manifest)
-        elif not a.no_ocr and not a.ocr_text:
-            text, boxes, source = ocr_image(a.target)
-            fallible_ocr = True
+            if not auto_text_boxes:
+                auto_text_boxes.extend(manifest_to_text_boxes(boxes))
+
+    with tempfile.TemporaryDirectory(prefix='cd-check-') as tmp:
+        report = Path(tmp) / 'autocheck.json'
+        cmd = [sys.executable, str(ROOT / 'tools/autocheck.py'), a.target, '--json', str(report),
+               '--width', str(b['format']['width']), '--height', str(b['format']['height'])]
+        for box in auto_text_boxes:
+            cmd += ['--text-box', box]
+        if taste and isinstance(taste.get('whites'), dict) and taste['whites'].get('default') == 'warm':
+            reason = taste['whites'].get('warm_reason') or f"taste profile ({taste.get('name', 'custom')})"
+            cmd += ['--warm', reason]
+        p = subprocess.run(cmd, capture_output=True, text=True, timeout=240)
+        if p.returncode not in (0, 1) or not report.exists():
+            raise ValueError('autocheck failed: ' + p.stderr.strip()[-1200:])
+        measured = load_json(report)
+
+    if page:
+        text, source = measured.get('text'), 'autocheck visible DOM text (not OCR; verify image/canvas text by eye)'
+        boxes = [r for t in measured.get('text_runs', []) for r in t['rects']]
+    elif not source.startswith('code-set text manifest:') and not a.no_ocr and not a.ocr_text:
+        text, boxes, source = ocr_image(a.target)
+        fallible_ocr = True
+
     if a.ocr_text and not source.startswith('code-set text manifest:'):
         text, source = Path(a.ocr_text).read_text(encoding='utf-8').rstrip('\n'), 'supplied render transcript: ' + str(a.ocr_text)
         fallible_ocr = False
@@ -200,6 +300,7 @@ def check(a):
             if len(vals) != 4 or vals[0] < 0 or vals[1] < 0 or vals[2] <= vals[0] or vals[3] <= vals[1]:
                 raise ValueError('text boxes require x0,y0,x1,y1 within the frame')
             boxes.append(vals)
+
     missing_intent = [k for k in ('idea', 'feeling', 'audience', 'purpose', 'success') if not b[k].strip()]
     copy_result = copy_check(b, text, source, fallible_ocr=fallible_ocr)
     if copy_result['status'] == 'FLAG':
@@ -207,8 +308,8 @@ def check(a):
         copy_result.update(crop_boxes=suspect, crops=copy_crops(a.target, suspect, copy_result['missing']),
                            reason='Fallible OCR mismatch: read candidate crops and whole-frame overview for missed lettering.')
     checks = [result('brief-intent', 'SKIP' if missing_intent else 'PASS', 'structured brief; not an aesthetic judgement', missing=missing_intent), copy_result]
-    # Counts refer to objects, not OCR word occurrences. Never pretend OCR counts bodies or cups.
-    evidence = load(a.observations) if a.observations else {}
+
+    evidence = load_json(a.observations) if a.observations else {}
     if not isinstance(evidence, dict) or not isinstance(evidence.get('counts', {}), dict):
         raise ValueError('observations must be an object with a counts object')
     if evidence:
@@ -222,9 +323,11 @@ def check(a):
                              obs['provenance'] if obs else 'no crop/count evidence supplied', rule='CD-7', expected=item['count'], observed=obs))
     if not b['counts']:
         checks.append(result('counts', 'PASS', 'brief has no fixed object counts', rule='CD-7'))
+
     for cid in ('contrast', 'text-size'):
         c = next((c for c in measured['checks'] if c['id'] == cid), None)
         checks.append(result(cid, c['status'] if c else 'SKIP', 'tools/autocheck.py (uses contrast.py)', measurement=c))
+
     width, height = measured['size']
     margin = b['safe_area_px']
     bad = [box for box in boxes if min(box[0], box[1], width - box[2], height - box[3]) < margin]
@@ -236,200 +339,407 @@ def check(a):
     complete = all(c['status'] in ('PASS', 'FLAG') for c in checks) and not any(c['status'] == 'FAIL' for c in measured['checks'])
     flagged = any(c['status'] == 'FLAG' for c in checks)
     status = ('FLAG' if flagged else 'PASS') if complete else 'FAIL'
-    emit(dict(schema_version=1, target=a.target, passed=complete and not flagged, status=status, checks=checks,
-              autocheck=measured, unverified_brief_conditions=b['must_be_right'], scope='Mechanical checks only. SKIP/FLAG is not a pass; review OCR, figures, marks and intent visually.'))
+    emit(dict(schema_version=2, target=a.target, passed=complete and not flagged, status=status, checks=checks,
+              taste_profile=taste_source, autocheck=measured, unverified_brief_conditions=b['must_be_right'],
+              scope='Mechanical checks only. SKIP/FLAG is not a pass; review OCR, figures, marks and intent visually.'))
     return 0 if complete else 1
 
 
 def select(a):
     b = read_brief(a.brief, require_medium=False)
-    if not 4 <= len(a.roughs) <= 8 or len(set(a.roughs)) != len(a.roughs):
-        raise ValueError('select needs 4–8 distinct rough files')
+    if not 2 <= len(a.roughs) <= 8 or len(set(a.roughs)) != len(a.roughs):
+        raise ValueError('select needs 2–8 distinct rough files (3 recommended for Tier 2)')
     for path in a.roughs:
         if not Path(path).is_file():
             raise ValueError('rough not found: ' + path)
     ids = [f'R{i + 1}' for i in range(len(a.roughs))]
-    packet = dict(schema_version=1, stage='fresh-context-review', brief=b,
-                  roughs=dict(zip(ids, a.roughs)),
-                  instruction='Same model, fresh context, no maker rationale. Compare every pair against idea, feeling and must-be-right. Name evidence and trade-off; no averaged taste scores. Show the top 2–3 to the owner of the work. Only their winner enters the fix loop. The original is better is a valid verdict.',
-                  review_template=dict(same_model=True, fresh_context=True, comparisons=[dict(a='R1', b='R2', stronger='R1', reason='', trade_off='', confidence='low')], shortlist=['R1', 'R2']))
+    mode = getattr(a, 'mode', None) or ('pairwise' if len(ids) <= 4 else 'bracket')
+    if mode not in ('pairwise', 'bracket', 'ranked'):
+        raise ValueError('mode must be pairwise, bracket, or ranked')
+
+    review_template = dict(
+        context_mode='isolated-subagent',
+        mode=mode,
+        comparisons=[dict(a='R1', b='R2', stronger='R1', reason='', trade_off='', confidence='medium')],
+        shortlist=ids[:min(2, len(ids))],
+    )
+    packet = dict(
+        schema_version=2,
+        stage='review-needed',
+        mode=mode,
+        brief=b,
+        roughs=dict(zip(ids, a.roughs)),
+        instruction=(
+            'Compare roughs against idea, feeling, and must_be_right. Use an isolated subagent or separate session '
+            'without maker rationale when available; otherwise record context_mode="same-session-self-review" honestly. '
+            'Name visible differences and trade-offs. Show the top 2–3 to the owner; only their winner enters the fix loop. '
+            '"The original is better" is a valid stop.'
+        ),
+        review_template=review_template,
+    )
+
     if a.review:
-        review = load(a.review)
-        if not isinstance(review, dict) or not isinstance(review.get('comparisons'), list):
-            raise ValueError('review needs an object with comparisons list')
-        if review.get('same_model') is not True or review.get('fresh_context') is not True:
-            raise ValueError('review must attest same_model and fresh_context')
-        pairs = set()
-        for pair in review.get('comparisons', []):
-            if not isinstance(pair, dict):
-                raise ValueError('comparison must be an object')
-            x, y = pair.get('a'), pair.get('b')
-            if x not in ids or y not in ids or x == y or pair.get('stronger') not in (x, y, None):
-                raise ValueError('invalid head-to-head comparison')
-            key = tuple(sorted((x, y)))
-            if key in pairs:
-                raise ValueError('duplicate pair')
-            if not pair.get('reason') or not pair.get('trade_off') or pair.get('confidence') not in ('high', 'medium', 'low'):
-                raise ValueError('each pair needs reason, trade_off and confidence')
-            pairs.add(key)
-        if len(pairs) != len(ids) * (len(ids) - 1) // 2:
-            raise ValueError('compare every pair before shortlisting')
+        review = load_json(a.review)
+        if not isinstance(review, dict):
+            raise ValueError('review must be a JSON object')
+        # Honest context mode: support v2 context_mode or legacy same_model/fresh_context fields.
+        if 'context_mode' in review:
+            ctx = review['context_mode']
+            if ctx not in VALID_CONTEXT_MODES:
+                raise ValueError(f'context_mode must be one of {VALID_CONTEXT_MODES}')
+        elif review.get('same_model') is True and review.get('fresh_context') is True:
+            ctx = 'separate-session'
+        else:
+            raise ValueError(f'review must set context_mode ({", ".join(VALID_CONTEXT_MODES)})')
+
+        review_mode = review.get('mode', mode)
+        comps = review.get('comparisons')
+        if review_mode in ('pairwise', 'bracket'):
+            if not isinstance(comps, list) or not comps:
+                raise ValueError('review needs a nonempty comparisons list')
+            pairs = set()
+            touched = set()
+            for pair in comps:
+                if not isinstance(pair, dict):
+                    raise ValueError('comparison must be an object')
+                x, y = pair.get('a'), pair.get('b')
+                if x not in ids or y not in ids or x == y or pair.get('stronger') not in (x, y, None):
+                    raise ValueError('invalid head-to-head comparison')
+                key = tuple(sorted((x, y)))
+                if key in pairs:
+                    raise ValueError('duplicate pair')
+                if not pair.get('reason') or not pair.get('trade_off') or pair.get('confidence') not in ('high', 'medium', 'low'):
+                    raise ValueError('each pair needs reason, trade_off and confidence')
+                pairs.add(key)
+                touched.update((x, y))
+            if review_mode == 'pairwise' and len(pairs) != len(ids) * (len(ids) - 1) // 2:
+                raise ValueError('pairwise mode requires comparing every pair before shortlisting')
+            if review_mode == 'bracket' and touched != set(ids):
+                raise ValueError('bracket mode must evaluate every rough in at least one comparison')
+        elif review_mode == 'ranked':
+            ranking = review.get('ranking')
+            if not isinstance(ranking, list) or len(ranking) != len(ids) or set(r.get('id') for r in ranking if isinstance(r, dict)) != set(ids):
+                raise ValueError('ranked mode requires a ranking entry for every rough ID')
+            for r in ranking:
+                if not r.get('reason') or not r.get('trade_off'):
+                    raise ValueError('each ranked entry needs reason and trade_off')
+        else:
+            raise ValueError('review mode must be pairwise, bracket, or ranked')
+
         shortlist = review.get('shortlist', [])
-        if not isinstance(shortlist, list) or not all(isinstance(x, str) for x in shortlist) or len(shortlist) not in (2, 3) or len(set(shortlist)) != len(shortlist) or not set(shortlist) <= set(ids):
-            raise ValueError('shortlist must hold 2–3 distinct rough IDs')
+        max_short = min(3, len(ids))
+        min_short = min(2, len(ids))
+        if not isinstance(shortlist, list) or not all(isinstance(x, str) for x in shortlist) or not (min_short <= len(shortlist) <= max_short) or len(set(shortlist)) != len(shortlist) or not set(shortlist) <= set(ids):
+            raise ValueError(f'shortlist must hold {min_short}–{max_short} distinct rough IDs')
         if a.owner_choice and a.owner_choice not in shortlist:
             raise ValueError('owner choice must be in the shortlist')
-        packet.update(stage='winner-ready' if a.owner_choice else 'awaiting-owner', review=review,
-                      winner=a.owner_choice, choice_provenance='caller-supplied owner choice; not inferred by this tool')
+        packet.update(
+            stage='winner-ready' if a.owner_choice else 'awaiting-owner',
+            context_mode=ctx,
+            mode=review_mode,
+            review=review,
+            winner=a.owner_choice,
+            choice_provenance='caller-supplied owner choice; not inferred by this tool',
+        )
     elif a.owner_choice:
         raise ValueError('--owner-choice needs a completed --review')
     emit(packet)
     return 0
 
 
-def haystack(brief):
-    parts = [brief.get(key, '') or '' for key in ('description', 'idea', 'feeling', 'audience', 'purpose', 'success')]
-    parts.extend(brief.get('constraints') or [])
-    parts.extend(brief.get('must_be_right') or [])
-    return ' '.join(str(p) for p in parts).lower()
-
-
-def has_word(text, word):
-    return re.search(r'(?<![a-z0-9])' + re.escape(word) + r'(?![a-z0-9])', text) is not None
-
-
-ALWAYS_FILES = ('modules/composition/sitting-right.md',)
-ALWAYS_RULES = ('CORE-11', 'COMP-19', 'COMP-23')
-
-
-def task_routes():
-    """Only the first Task/Load table is routing data, never the module index."""
-    text = (ROOT / 'core/which-modules.md').read_text(encoding='utf-8')
-    table = text.split('| Task | Load |', 1)[1].split('\n\n', 1)[0]
-    return [tuple(cell.strip() for cell in line.strip().strip('|').split('|'))
-            for line in table.splitlines() if line.startswith('|') and not line.startswith('|---')]
-
-
 def normalise(text):
     return text.lower().replace('’', "'").replace('“', '"').replace('”', '"')
 
 
-def task_phrases(task):
-    # Phrase boundaries come from the table, not a second keyword catalogue.
-    # No individual generic words (e.g. "copy", "page") are stolen from phrases.
-    phrases = re.split(r'[,;()]| or | / ', normalise(task))
-    return [re.sub(r'^(?:a |an |the )', '', p.strip(' "')) for p in phrases if p.strip(' "')]
+def has_word(text, phrase):
+    return re.search(r'(?<![a-z0-9])' + re.escape(normalise(phrase)) + r'(?![a-z0-9])', normalise(text)) is not None
 
 
-def route_files(cell):
-    modules = {p.name for p in (ROOT / 'modules').iterdir() if (p / 'README.md').is_file()}
-    module_pattern = r'(?<![a-z0-9/-])(' + '|'.join(re.escape(m) for m in sorted(modules, key=len, reverse=True)) + r')(?![a-z0-9/-])'
-    mentions = list(re.finditer(module_pattern, normalise(cell)))
-    paths = [f'modules/{m.group()}/README.md' for m in mentions]
-    for match in re.finditer(r'`([^`]+\.md)`', cell):
-        name = match.group(1)
-        if name.startswith(('core/', 'modules/')):
-            path = name
-        elif '/' in name:
-            path = 'modules/' + name
-        else:
-            preceding = [m.group() for m in mentions if m.start() < match.start()]
-            if not preceding:
-                raise ValueError('No module context for table path: ' + name)
-            path = 'modules/' + preceding[-1] + '/' + name
-        if not (ROOT / path).is_file():
-            raise ValueError('Unknown table path: ' + path)
-        paths.append(path)
-    return list(dict.fromkeys(paths))
+def haystack(brief):
+    parts = [brief.get(key, '') or '' for key in ('description', 'idea', 'feeling', 'audience', 'purpose', 'success')]
+    parts.extend(brief.get('constraints') or [])
+    parts.extend(brief.get('must_be_right') or [])
+    parts.extend(brief.get('intent_tags') or [])
+    return ' '.join(str(p) for p in parts)
 
 
-def route_rules(cell, paths, index):
-    ids = set(re.findall(r'\b[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*-\d+\b', cell))
-    for prefix, first, last in re.findall(r'\b([A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*)-(\d+)\s+(?:to|[–-])\s*(\d+)', cell):
-        ids.update(f'{prefix}-{i}' for i in range(int(first), int(last) + 1))
-    # Reading a module includes its rules, including shorthand such as "INF rules".
-    ids.update(rid for rid, (path, _) in index.items() if path in paths)
-    return sorted(ids & index.keys())
+def infer_tier(brief):
+    if brief.get('tier'):
+        return brief['tier']
+    probe = normalise(' '.join((brief.get('description', ''), brief.get('medium', ''), brief.get('purpose', ''))))
+    if any(has_word(probe, w) for w in REMAKE_WORDS):
+        return 'remake'
+    if any(has_word(probe, w) for w in ('consult', 'quick fix', 'self-check', 'edit only', 'tweak')):
+        return 'fast'
+    return 'directed'
 
 
-def load_plan(brief):
-    medium = normalise(brief['medium'].strip())
-    text = normalise(haystack(brief))
-    intent = normalise(' '.join(brief.get(k, '') for k in ('feeling', 'purpose', 'idea')))
-    routes = task_routes()
-    energy_task = next(task for task, cell in routes if cell.startswith('`core/energy-pass.md`'))
-    examples = re.search(r'\((.*?)\)', energy_task).group(1)
-    energetic = any(has_word(intent, phrase) for phrase in task_phrases(examples))
-    files, ids, matched, reasons = list(ALWAYS_FILES), list(ALWAYS_RULES), [], []
+def load_plan(brief, taste=None, taste_source='default'):
+    manifest = load_manifest()
     index = rules()
-    for task, cell in routes:
-        lower_task = normalise(task)
-        anatomy = 'anatomy pass CHAR-9' in cell
-        writing = cell.startswith('writing (')
-        screen = cell.startswith('web-ui (') and brief['format']['kind'] == 'screen'
-        hit = has_word(lower_task, medium) or any(has_word(medium, phrase) for phrase in task_phrases(task)) or screen
-        if anatomy and brief['has_people_or_animals']:
+    medium = normalise(brief['medium'].strip())
+    full_text = normalise(haystack(brief))
+    intent_text = normalise(' '.join([
+        brief.get('feeling', ''),
+        brief.get('purpose', ''),
+        brief.get('idea', ''),
+        ' '.join(brief.get('intent_tags') or []),
+    ]))
+
+    tier = infer_tier(brief)
+    tier_info = manifest['tiers'][tier]
+    energetic = any(has_word(intent_text, trig) for trig in manifest.get('energy_triggers', []))
+
+    files = []
+    optional_files = []
+    matched = []
+    groups = []
+    reasons = []
+    explicit_rule_ids = set()
+
+    # Tier-level core docs (keep Tier 1 fast lean; add direction/remake guides on demand).
+    for cf in tier_info.get('core_files', []):
+        files.append(cf)
+
+    # Match routes declaratively from manifest.json.
+    for route in manifest['routes']:
+        hit = False
+        matched_label = None
+        for m in route.get('media', []):
+            if has_word(medium, m) or (medium and medium == normalise(m)):
+                hit = True
+                matched_label = route['id']
+                break
+        if not hit and route.get('format_kind') and brief['format']['kind'] == route['format_kind']:
             hit = True
-        if task == energy_task:
-            hit = energetic  # never infer energy from the medium alone
-        if writing:
-            hit = hit or any(has_word(text, phrase) for phrase in task_phrases(task))
+            matched_label = 'screen'
+        if not hit and route.get('brief_flag') and brief.get(route['brief_flag']) is True:
+            hit = True
+            matched_label = route['id']
+        if not hit and route.get('text_triggers'):
+            if any(has_word(full_text, phrase) for phrase in route['text_triggers']):
+                hit = True
+                matched_label = route['id']
         if not hit:
             continue
-        matched.append('writing' if writing else ('screen' if screen else medium))
-        reasons.append(task)
-        paths = route_files(cell)
-        if task != energy_task:
-            paths = [p for p in paths if p != 'core/energy-pass.md']
-        row_ids = route_rules(cell, paths, index)
-        # Rule-only references also resolve to their canonical files. Energy stays intent-gated.
-        row_ids = [rid for rid in row_ids if index[rid][0] != 'core/energy-pass.md' or energetic]
-        paths.extend(index[rid][0] for rid in row_ids)
-        files.extend(paths)
-        ids.extend(row_ids)
+
+        matched.append(matched_label)
+        groups.append(route.get('group', 'core-visual'))
+        reasons.append(route['label'])
+        files.extend(route.get('files', []))
+        optional_files.extend(route.get('optional_files', []))
+        explicit_rule_ids.update(route.get('rules', []))
+
+    # Explicit command triggers (bolder / quieter / distill).
+    if any(has_word(medium, w) for w in ('bolder', 'quieter', 'distill')):
+        files.append('core/commands.md')
+        reasons.append('Nudge command (bolder / quieter / distill)')
+
+    # Intent-gated energy pass (never inferred from medium alone).
+    if energetic:
+        files.append('core/energy-pass.md')
+        reasons.append('Energy pass triggered by brief intent/feeling')
+
+    # Delivery placement guard for visual work (skipped for pure writing briefs).
+    pure_writing = bool(matched) and set(matched) == {'writing-optional'}
+    if not pure_writing:
+        files.insert(0, 'modules/composition/sitting-right.md')
+        explicit_rule_ids.update(('CORE-11', 'COMP-19', 'COMP-23'))
+        reasons.append('Delivery guard: balance and dead-space checks for visual work')
+
+    files = list(dict.fromkeys(files))
+    optional_files = [p for p in dict.fromkeys(optional_files) if p not in files]
+
+    # Collect all canonical rule IDs defined inside the loaded files, plus explicitly cited route IDs.
+    file_set = set(files)
+    rule_ids = set(explicit_rule_ids & index.keys())
+    for rid, (path, _) in index.items():
+        if path in file_set:
+            rule_ids.add(rid)
+    # Include the canonical file for any explicit rule ID not yet listed (respecting energy gate).
+    for rid in sorted(rule_ids):
+        rpath = index[rid][0]
+        if rpath == 'core/energy-pass.md' and not energetic:
+            continue
+        if rpath not in file_set and rpath.startswith(('modules/', 'core/')):
+            # Only add if it's a module file (avoid pulling core/principles.md implicitly).
+            if rpath.startswith('modules/'):
+                files.append(rpath)
+                file_set.add(rpath)
+
+    # Filter hard gates relevant to this brief.
+    scopes = {'all'}
+    if brief['format']['kind'] == 'screen':
+        scopes.add('screen')
+    else:
+        scopes.add('fixed')
+    if brief['has_people_or_animals']:
+        scopes.add('people_or_animals')
+    if 'infographic' in matched:
+        scopes.add('infographic')
+    if '3d-optional' in matched:
+        scopes.add('3d')
+    if 'film-optional' in matched:
+        scopes.add('film')
+    if any(m in matched for m in ('logo-mark', 'brand-system', 'print-packaging-slides')):
+        scopes.add('brand')
+    if any(m in matched for m in ('illustration-drawing', 'photo')):
+        scopes.update(('illustration', 'photo', '3d_space'))
+    if 'construction-only' in matched:
+        scopes.add('3d_space')
+    if 'print-packaging-slides' in matched:
+        scopes.add('print')
+
+    applicable_gates = [
+        g['id'] for g in manifest.get('hard_gates', [])
+        if set(g['scope'].split(',')) & scopes
+    ]
+
+    taste_summary = None
+    if taste:
+        taste_summary = dict(
+            source=taste_source,
+            name=taste.get('name', 'custom'),
+            english_variety=taste.get('english_variety', 'en-GB'),
+            whites=(taste.get('whites') or {}).get('default', 'neutral'),
+            finish_ceiling=taste.get('finish_ceiling', 'restrained'),
+            avoid_typefaces=taste.get('avoid_typefaces', []),
+        )
+
     return dict(
-        schema_version=1,
+        schema_version=2,
+        tier=tier,
+        tier_label=tier_info['label'],
+        roughs=tier_info['roughs'],
+        max_rounds=tier_info['max_rounds'],
         matched=list(dict.fromkeys(matched)),
-        files=list(dict.fromkeys(files)),
-        rules=list(dict.fromkeys(ids)),
-        reasons=reasons + ['delivery: broken-balance and dead-space checks apply to every piece'],
-        instruction='Read each file before making or fixing. Look up each rule with python3 tools/cd.py rule <ID>. Quote matched and rules in the critique. Skipping this list is how medium rules get missed.',
+        groups=list(dict.fromkeys(groups)),
+        energetic=energetic,
+        files=files,
+        optional_files=optional_files,
+        rules=sorted(rule_ids),
+        hard_gates=applicable_gates,
+        estimated_tokens=approx_tokens(files),
+        taste=taste_summary,
+        reasons=reasons,
+        instruction='Always-on kernel is AGENTS.md + core/kernel.md. Read the listed files for this task, use cd.py rule <ID> for single lookups, and run cd.py check on renders.',
     )
 
 
+def generate_which_modules():
+    """Regenerate core/which-modules.md from manifest.json so routing docs never drift."""
+    manifest = load_manifest()
+    lines = [
+        '# Which modules to load (generated from `manifest.json`)',
+        '',
+        'Always load `AGENTS.md` and `core/kernel.md` (≤ 1,600 tokens). Everything else loads on demand via `python3 tools/cd.py load --brief brief.json` or `python3 tools/cd.py rule <ID>`.',
+        '',
+        'Do not edit this routing table by hand — edit `manifest.json` and run `python3 tools/cd.py generate-docs`.',
+        '',
+        '## Task routes (`core-visual` and `optional-domain`)',
+        '',
+        '| Route | Group | Media / Triggers | Files loaded |',
+        '|---|---|---|---|',
+    ]
+    for r in manifest['routes']:
+        grp = r.get('group', 'core-visual')
+        triggers = ', '.join(r.get('media', [])[:6])
+        if r.get('brief_flag'):
+            triggers += f" (or `{r['brief_flag']}: true`)"
+        if r.get('format_kind'):
+            triggers += f" (or `format.kind: {r['format_kind']}`)"
+        flist = ', '.join(f'`{f}`' for f in r.get('files', []))
+        lines.append(f"| {r['label']} | `{grp}` | {triggers} | {flist} |")
+
+    lines += [
+        '',
+        '## Module index',
+        '',
+        '| Module | Group | Entry | Extra files | Covers |',
+        '|---|---|---|---|---|',
+    ]
+    for name, info in manifest['modules'].items():
+        extras = ', '.join(f'`{Path(e).name}`' for e in info.get('extra_files', [])) or '—'
+        lines.append(f"| `{name}` | `{info['group']}` | `{info['entry']}` | {extras} | {info['summary']} |")
+
+    lines += [
+        '',
+        '## Energy triggers (intent-gated only)',
+        '',
+        '`core/energy-pass.md` loads only when the brief\'s `feeling`, `purpose`, `idea`, or `intent_tags` match an energetic intent — never from `medium` alone:',
+        '',
+        ', '.join(f'`{t}`' for t in manifest.get('energy_triggers', [])),
+        '',
+        '## Token budgets',
+        '',
+        'Run `python3 tools/check_budgets.py --loads` for live token counts. Budgets are enforced in CI on both Linux and Windows.',
+        '',
+    ]
+    out = ROOT / 'core' / 'which-modules.md'
+    out.write_text('\n'.join(lines), encoding='utf-8')
+    return str(out.relative_to(ROOT).as_posix())
+
+
 def main():
-    ap = argparse.ArgumentParser(description=__doc__)
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest='command', required=True)
+
     bp = sub.add_parser('brief', help='Create a structured brief')
     bs = bp.add_subparsers(dest='action', required=True)
     bi = bs.add_parser('init')
     bi.add_argument('description', nargs='?', default='')
     bi.add_argument('--out', default='brief.json')
+
+    tp = sub.add_parser('taste', help='Manage project taste profiles')
+    ts = tp.add_subparsers(dest='action', required=True)
+    ti = ts.add_parser('init')
+    ti.add_argument('--out', default='taste.json')
+
     cp = sub.add_parser('check', help='Mechanical checks as JSON; missing evidence never passes')
     cp.add_argument('target')
     cp.add_argument('--brief', default='brief.json')
-    cp.add_argument('--boxes', help='Code-set text manifest [text, box, RGB]; auto-detects <stem>-boxes.json beside image')
+    cp.add_argument('--taste', help='Optional taste.json profile (auto-discovers sibling taste.json)')
+    cp.add_argument('--boxes', help='Code-set text manifest [text, box, RGB]; auto-detects <stem>-boxes.json')
     cp.add_argument('--ocr-text', help='UTF-8 rendered line transcript; provenance is labelled')
     cp.add_argument('--no-ocr', action='store_true')
     cp.add_argument('--text-box', action='append', default=[])
     cp.add_argument('--observations', help='Count evidence bound to the current image SHA-256')
+
     rp = sub.add_parser('rule', help='Print the canonical definition of an existing rule')
     rp.add_argument('id')
-    lp = sub.add_parser('load', help='List modules and rules this brief requires, to read before making or fixing')
+
+    lp = sub.add_parser('load', help='Route a brief to required modules, tier, hard gates, and rules')
     lp.add_argument('--brief', default='brief.json')
-    sp = sub.add_parser('select', help='Prepare or validate a same-model fresh-context rough comparison')
+    lp.add_argument('--taste', help='Optional taste.json profile')
+
+    sp = sub.add_parser('select', help='Prepare or validate a rough-selection packet (2–8 roughs)')
     sp.add_argument('roughs', nargs='+')
     sp.add_argument('--brief', default='brief.json')
+    sp.add_argument('--mode', choices=('pairwise', 'bracket', 'ranked'))
     sp.add_argument('--review')
     sp.add_argument('--owner-choice')
+
+    comp = sub.add_parser('compose', help='Deterministically composite art, locked copy, logos, and charts')
+    comp.add_argument('spec', help='Composition spec JSON')
+    comp.add_argument('--out', required=True, help='Output PNG path (also writes <stem>-boxes.json)')
+    comp.add_argument('--html', help='Optional standalone HTML/SVG export path')
+
+    sub.add_parser('generate-docs', help='Regenerate core/which-modules.md from manifest.json')
+
     a = ap.parse_args()
     try:
         if a.command == 'brief':
-            b = load(BRIEF)
+            b = load_json(BRIEF)
             b['description'] = a.description
             with Path(a.out).open('x', encoding='utf-8') as out:
                 out.write(json.dumps(b, indent=2, ensure_ascii=False) + '\n')
-            emit(dict(path=a.out, status='created', next='Fill the brief; description is not an inferred intent.'))
+            emit(dict(path=a.out, status='created', next='Fill medium, idea, feeling, audience, purpose, success, and copy/counts.'))
+            return 0
+        if a.command == 'taste':
+            t = load_json(TASTE_DEFAULT)
+            with Path(a.out).open('x', encoding='utf-8') as out:
+                out.write(json.dumps(t, indent=2, ensure_ascii=False) + '\n')
+            emit(dict(path=a.out, status='created', next='Edit personal/brand preferences; universal hard gates remain in core/kernel.md.'))
             return 0
         if a.command == 'rule':
             found = rules().get(a.id.upper())
@@ -438,11 +748,26 @@ def main():
             print(f'<!-- {found[0]} -->\n{found[1]}')
             return 0
         if a.command == 'load':
-            emit(load_plan(read_brief(a.brief)))
+            brief = read_brief(a.brief)
+            taste, tsrc = read_taste(a.taste, a.brief)
+            emit(load_plan(brief, taste=taste, taste_source=tsrc))
+            return 0
+        if a.command == 'compose':
+            cmd = [sys.executable, str(ROOT / 'tools' / 'compose.py'), a.spec, '--out', a.out]
+            if a.html:
+                cmd += ['--html', a.html]
+            p = subprocess.run(cmd, capture_output=True, text=True)
+            if p.returncode != 0:
+                raise ValueError((p.stderr or p.stdout).strip())
+            print(p.stdout.strip())
+            return 0
+        if a.command == 'generate-docs':
+            written = generate_which_modules()
+            emit(dict(status='generated', files=[written]))
             return 0
         return check(a) if a.command == 'check' else select(a)
     except (ValueError, OSError, KeyError, TypeError, subprocess.TimeoutExpired) as e:
-        emit(dict(schema_version=1, status='ERROR', passed=False, error=str(e)))
+        emit(dict(schema_version=2, status='ERROR', passed=False, error=str(e)))
         return 2
 
 

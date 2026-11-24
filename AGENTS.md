@@ -1,28 +1,29 @@
-# AGENTS.md — creative-director v0.11.4
+# AGENTS.md — creative-director v2.0.0-alpha.1
 
-Design judgement for visual work: idea first, roughs then pick, evidence-labelled critique, then the smallest effective fix. Taste stays with the owner of the work.
+Tool-first design judgement and verification for AI agents: hard gates enforced in code, proportional workflow tiers, honest evidence, and owner-controlled taste.
 
-## Load
+## Always Load (≤ 1,600 tokens)
 
-1. **Always:** this file, `core/principles.md` (40 existing rules: CORE-1..11, FLOW-1..5 and 24 gate/intent reminders) and `core/critique-loop.md`.
-2. **Critique:** `core/critique-template.md`.
-3. **On demand:** `python3 tools/cd.py rule <ID>` for full wording and sources; task routing in `core/which-modules.md`. Load only relevant modules or rules, not the whole library. People/animals require character and its anatomy gate.
-4. **Energy:** load `core/energy-pass.md` when intent calls for life, never by medium. Calm work skips the push; EN-5 and EN-6 still apply.
+1. Load `AGENTS.md` + `core/kernel.md`. Never load the whole library.
+2. Route tasks declaratively from `manifest.json`:
+   ```sh
+   python3 tools/cd.py brief init "Short description" --out brief.json
+   python3 tools/cd.py load --brief brief.json
+   python3 tools/cd.py rule <ID>
+   ```
+3. Keep personal/brand style in `taste.json` (`python3 tools/cd.py taste init`), never in universal rules (`core/taste-profile.md`).
 
-`lite/CREATIVE-DIRECTOR-LITE.md` is a separate small-context bundle, not the 40-rule selection.
+## Proportional Tiers
 
-## Work
+- **`fast` (Tier 1, default for edits/consults/self-checks):** 0 roughs, ≤ 2 rounds. Run `cd.py check`, preserve intent.
+- **`directed` (Tier 2, new work / open brief):** Lock brief (`CD-1`), make 3 distinct roughs (2–4), compare via `cd.py select`, show top 2–3, build and verify only the owner's winner (≤ 3 rounds).
+- **`remake` (Tier 3, explicit "redo / start over / reimagine"):** Load `core/first-principles.md`. Rebrief from facts first, 3–6 structural concepts, full gates (≤ 5 rounds).
 
-0. **Read the ask.** Unprompted hand-off: analyse, sign-off blurb, wait (FLOW-1). “Just fix it”: no wait, same checks (FLOW-4). Consult: critique only. From-scratch words: `core/first-principles.md`; no silent remake. “Bolder”, “quieter”, “distill”: `core/commands.md`.
-1. **Idea, feeling and tone first**, then structured `brief.json` (`tools/cd.py brief init`). Medium, people/animals, purpose, audience, size, copy/counts, constraints, must-be-right; distinguish [brief] from [inferred]. No brand input: `core/brand-intake.md`; open direction: `core/creative-direction.md`. Then `python3 tools/cd.py load --brief brief.json`. Read every listed file before work; quote the match list.
-2. **Roughs then pick.** New work: 4–8 roughs; head-to-head in a fresh context of the SAME model, not a second model. Show top 2–3 to the owner; only their winner enters the fix loop. `tools/cd.py select` supports this. Existing edits/consults preserve intent; no forced new directions.
-3. **Render and look.** Actual size and thumbnail. `tools/cd.py check` delegates to `autocheck.py`; SKIP is not clearance. Five tests (`tools/look.py`); exact copy/counts (CD-7); cropped anatomy gate (CHAR-9) if applicable. Energy from the named tone. Sitting right before delivery: never centre to clear a flag.
-4. **Critique.** Label findings **rule-backed** (ID), **intent-backed** (brief line), **exploratory** (option). Every finding: provenance and confidence. Separate measured from interpreted. Exploratory findings never block.
-5. **Choose the fix level first:** edit, recompose, art-direct, reconceive, rebuild or explore; state why and authority. At most 3 changes per round, the signed-off list in full. Check each applied, re-render, compare.
-6. **Stop.** No blockers and clearly better, not improving, or **the original is better**: revert and stop. Preference never clears remaining blockers. Round 3 routine / 5 max. Result first, done/not-done evidence per point and final QA (FLOW-3). Take-over: name it up front (FLOW-5, `core/take-over.md`).
+## Core Rules
 
-## Guardrails
+1. **Construct deterministically.** Set locked copy, official logos, and data charts in code (`tools/compose.py`, `tools/datagraphic.py`, HTML/SVG) instead of fighting generator spelling or scale drift.
+2. **Verify renders, not prompts.** Run `tools/cd.py check TARGET --brief brief.json`. `SKIP` is missing evidence, never `PASS`.
+3. **Separate gates from taste.** Only verified hard gates (`core/kernel.md`) and explicit `must_be_right` brief lines block delivery. Label findings `rule-backed`, `intent-backed`, or `exploratory`, with provenance and confidence.
+4. **Know when to stop.** *"The original is better"* is valid: revert and stop (report unresolved blockers). Taste stays with the owner (`AES-12`); no debunked myths (`core/evidence.md`).
 
-Blockers: explicit must-be-right brief conditions and the loop's conditional gates. Never invent facts, copy or story content. Official marks use the unaltered file; no generated marks. Neutral whites. Balance is not symmetry: counterweight or firmer asymmetry, not automatic centring. Evidence grades stay honest; no golden-ratio or thirds-as-law reasons (`core/evidence.md`). Plain, factual notes; self-judged verdicts labelled, owner choices left open.
-
-Tools and JSON contracts: `tools/README.md`, `tools/brief.md`. Without code, check by eye and say so; without vision, call the review rules-only.
+Tools: `tools/cd.py`, `tools/compose.py`, `tools/autocheck.py`, and stdio MCP server `tools/mcp_server.py` (`cd-mcp`). Without Python tools, check by eye and say so; without vision, label the review rules-only.

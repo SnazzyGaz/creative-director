@@ -1,0 +1,369 @@
+{
+  "schema_version": 2,
+  "version": "2.0.0-alpha.1",
+  "repository": "https://github.com/SnazzyGaz/creative-director",
+  "kernel": {
+    "always_on": [
+      "AGENTS.md",
+      "core/kernel.md"
+    ],
+    "token_budget": 1600,
+    "notes": "Lean always-on kernel (<=1,600 tokens). Full core reference files and domain modules load on demand via cd.py load or cd.py rule <ID>."
+  },
+  "tiers": {
+    "fast": {
+      "label": "Tier 1: Fast QA",
+      "when": "Routine edits, self-checks, consults, or quick fixes on existing work.",
+      "roughs": [0, 0],
+      "max_rounds": 2,
+      "core_files": []
+    },
+    "directed": {
+      "label": "Tier 2: Directed Creation",
+      "when": "New visual pieces, open briefs, or variations.",
+      "roughs": [2, 4],
+      "recommended_roughs": 3,
+      "max_rounds": 3,
+      "core_files": [
+        "core/creative-direction.md"
+      ]
+    },
+    "remake": {
+      "label": "Tier 3: Deep Remake",
+      "when": "Explicit redo, rejig, start-over, or reimagine from scratch.",
+      "roughs": [3, 6],
+      "recommended_roughs": 4,
+      "max_rounds": 5,
+      "core_files": [
+        "core/first-principles.md",
+        "core/creative-direction.md"
+      ]
+    }
+  },
+  "core_files": [
+    {"path": "AGENTS.md", "role": "entry", "always_on": true, "budget": 700},
+    {"path": "core/kernel.md", "role": "always-on-kernel", "always_on": true, "budget": 1100},
+    {"path": "core/principles.md", "role": "reference-principles", "always_on": false, "budget": 2800},
+    {"path": "core/critique-loop.md", "role": "full-loop", "always_on": false, "budget": 3200},
+    {"path": "core/critique-template.md", "role": "critique-template", "always_on": false, "budget": 1600},
+    {"path": "core/creative-direction.md", "role": "directed-creation", "always_on": false, "budget": 2500},
+    {"path": "core/first-principles.md", "role": "remake", "always_on": false, "budget": 4500},
+    {"path": "core/energy-pass.md", "role": "intent-gated-energy", "always_on": false, "budget": 4500},
+    {"path": "core/commands.md", "role": "nudges", "always_on": false, "budget": 2000},
+    {"path": "core/brand-intake.md", "role": "brand-intake", "always_on": false, "budget": 1500},
+    {"path": "core/evidence.md", "role": "evidence-and-myths", "always_on": false, "budget": 4500},
+    {"path": "core/interaction-flow.md", "role": "flow-diagram", "always_on": false, "budget": 1500},
+    {"path": "core/take-over.md", "role": "take-over", "always_on": false, "budget": 1000},
+    {"path": "core/taste-profile.md", "role": "taste-separation", "always_on": false, "budget": 1500},
+    {"path": "core/which-modules.md", "role": "routing-docs", "always_on": false, "budget": 4500}
+  ],
+  "hard_gates": [
+    {"id": "CD-7", "scope": "all", "checkable": "code+visual", "summary": "Exact locked copy strings and fixed physical object counts"},
+    {"id": "BRAND-4", "scope": "brand", "checkable": "code+visual", "summary": "Official marks placed unaltered from source file"},
+    {"id": "BRAND-8", "scope": "all", "checkable": "visual", "summary": "No invented logos or garbled lettering"},
+    {"id": "UI-6", "scope": "screen,fixed", "checkable": "code", "summary": "WCAG text contrast >= 4.5:1 (3:1 large text and UI boundaries)"},
+    {"id": "UI-10", "scope": "screen", "checkable": "code", "summary": "Text scales to 200% without clipping or lost content"},
+    {"id": "UI-11", "scope": "screen,fixed", "checkable": "visual", "summary": "No invented product screens in finished work"},
+    {"id": "UX-1", "scope": "screen", "checkable": "interactive", "summary": "Primary user flow completes end to end"},
+    {"id": "TYPE-3", "scope": "screen,fixed", "checkable": "code+visual", "summary": "Minimum readable type size respected"},
+    {"id": "LAY-5", "scope": "fixed", "checkable": "code", "summary": "Text and key elements inside safe area"},
+    {"id": "LAY-6", "scope": "fixed", "checkable": "visual", "summary": "Main message reads at feed/thumbnail size"},
+    {"id": "LAY-9", "scope": "print", "checkable": "code", "summary": "Print bleed and >= 300 ppi at physical size"},
+    {"id": "LAY-15", "scope": "fixed,screen", "checkable": "code", "summary": "Text over images passes contrast on worst ground pixels"},
+    {"id": "LAY-19", "scope": "infographic", "checkable": "code", "summary": "Charts, maps and routes drawn accurately from data in code"},
+    {"id": "INF-6", "scope": "infographic", "checkable": "visual", "summary": "Required and safety/medical steps survive accurately"},
+    {"id": "CHAR-9", "scope": "people_or_animals", "checkable": "crop+visual", "summary": "2-4x cropped anatomy pass on every hand, limb, face and animal"},
+    {"id": "CHAR-10", "scope": "people_or_animals", "checkable": "crop+visual", "summary": "Animal anatomy and part counts plausible"},
+    {"id": "CHAR-11", "scope": "people_or_animals", "checkable": "crop+visual", "summary": "Props and gear match brief and connect physically"},
+    {"id": "ILL-12", "scope": "illustration,photo", "checkable": "crop+visual", "summary": "Real subjects (especially food) physically plausible at 2-4x crop"},
+    {"id": "TD-PER-1", "scope": "3d_space", "checkable": "code+visual", "summary": "Consistent single horizon and perspective"},
+    {"id": "TD-LIT-1", "scope": "3d_space", "checkable": "visual", "summary": "Consistent single key light direction"},
+    {"id": "3D-1", "scope": "3d", "checkable": "code", "summary": "3D mesh builds clean (intersections, manifold, normals)"},
+    {"id": "FILM-ACC-1", "scope": "film", "checkable": "code+visual", "summary": "Video flash threshold safe (<= 3 large flashes/sec)"}
+  ],
+  "energy_triggers": [
+    "energetic", "energy", "lively", "playful", "bold", "kinetic", "vibrant",
+    "exciting", "dynamic", "festive", "celebration", "festival", "fete",
+    "concert", "gig", "party", "carnival", "comedy", "children", "children's",
+    "kids", "youth", "sport", "run", "race", "club", "nightlife", "loud",
+    "punchy", "dramatic", "thriller", "action", "promotional", "campaign"
+  ],
+  "modules": {
+    "layout": {
+      "group": "core-visual",
+      "summary": "Fixed frames: posters, covers, social cards, slides, print, signage, packaging and infographics.",
+      "entry": "modules/layout/README.md",
+      "extra_files": ["modules/layout/infographics.md"]
+    },
+    "typography": {
+      "group": "core-visual",
+      "summary": "Type choice, scale, measure, leading, display hierarchy and font selection.",
+      "entry": "modules/typography/README.md",
+      "extra_files": []
+    },
+    "composition": {
+      "group": "core-visual",
+      "summary": "Balance, visual weight, focus, unity, space and the pre-delivery Sitting right pass.",
+      "entry": "modules/composition/README.md",
+      "extra_files": ["modules/composition/sitting-right.md"]
+    },
+    "colour-value": {
+      "group": "core-visual",
+      "summary": "Value grouping, colour roles, neutral whites, simultaneous contrast and CVD safety.",
+      "entry": "modules/colour-value/README.md",
+      "extra_files": []
+    },
+    "illustration": {
+      "group": "core-visual",
+      "summary": "Picture-making, focal hierarchy, silhouettes, edges, storyboards and generated-image tells.",
+      "entry": "modules/illustration/README.md",
+      "extra_files": ["modules/illustration/notes.md"]
+    },
+    "character": {
+      "group": "core-visual",
+      "summary": "People, faces, hands, animals and props, including the CHAR-9 cropped anatomy delivery gate.",
+      "entry": "modules/character/README.md",
+      "extra_files": []
+    },
+    "technical-drawing": {
+      "group": "core-visual",
+      "summary": "Perspective, horizons, ellipses, proportion and consistent key lighting.",
+      "entry": "modules/technical-drawing/README.md",
+      "extra_files": []
+    },
+    "brand": {
+      "group": "core-visual",
+      "summary": "Official marks, brand systems, packaging identity and logo mark-making (LOGO-1..16).",
+      "entry": "modules/brand/README.md",
+      "extra_files": [
+        "modules/brand/logo.md",
+        "modules/brand/logo-notes.md",
+        "modules/brand/mark-making.md",
+        "modules/brand/clever-marks.md"
+      ]
+    },
+    "photo": {
+      "group": "core-visual",
+      "summary": "Photographs and photoreal imagery: lens distance, camera height, light, casting and AI photo tells.",
+      "entry": "modules/photo/README.md",
+      "extra_files": []
+    },
+    "web-ui": {
+      "group": "core-visual",
+      "summary": "Web and app screens: layout grids, components, states, contrast, dark mode, reflow and motion.",
+      "entry": "modules/web-ui/README.md",
+      "extra_files": ["modules/web-ui/notes.md"]
+    },
+    "ux": {
+      "group": "core-visual",
+      "summary": "Task flows, error recovery, defaults, keyboard focus order and alt text.",
+      "entry": "modules/ux/README.md",
+      "extra_files": []
+    },
+    "aesthetic-critique": {
+      "group": "core-visual",
+      "summary": "Intent modelling, comparative pairwise verdicts, regression checks and novelty-typicality balance.",
+      "entry": "modules/aesthetic-critique/README.md",
+      "extra_files": []
+    },
+    "lookbook": {
+      "group": "core-visual",
+      "summary": "Optional 415 curated visual looks and clusters for controlled 20-50% style bleed on concepts/variations.",
+      "entry": "modules/lookbook/README.md",
+      "extra_files": []
+    },
+    "writing": {
+      "group": "optional-domain",
+      "summary": "Optional domain: website copy, emails, replies, blurbs, about pages and UI microcopy (WRITE-1..11).",
+      "entry": "modules/writing/README.md",
+      "extra_files": []
+    },
+    "film": {
+      "group": "optional-domain",
+      "summary": "Optional domain: cinematography, story beats, continuity, editing, grading, sound and generated-video QC.",
+      "entry": "modules/film/README.md",
+      "extra_files": [
+        "modules/film/story.md",
+        "modules/film/review.md",
+        "modules/film/edit.md",
+        "modules/film/generated.md",
+        "modules/film/crossover.md",
+        "modules/film/notes.md"
+      ]
+    },
+    "3d": {
+      "group": "optional-domain",
+      "summary": "Optional domain: 3D models, renders, scene scale, build QA and Blender/AgX workflows.",
+      "entry": "modules/3d/README.md",
+      "extra_files": []
+    }
+  },
+  "routes": [
+    {
+      "id": "poster-cover-social",
+      "label": "Poster, cover, header, social graphic, thumbnail, link preview",
+      "media": ["poster", "cover", "book cover", "album cover", "picture-book cover", "header", "social graphic", "social card", "thumbnail", "link preview", "flyer", "ticket"],
+      "files": ["modules/layout/README.md", "modules/typography/README.md", "modules/composition/README.md", "modules/colour-value/README.md"],
+      "optional_files": ["modules/illustration/README.md", "modules/brand/README.md"],
+      "rules": ["LAY-5", "LAY-6", "LAY-7", "LAY-10", "LAY-15", "LAY-16"]
+    },
+    {
+      "id": "print-packaging-slides",
+      "label": "Slide deck, print piece, packaging, label",
+      "media": ["slide", "slide deck", "slides", "print", "print piece", "packaging", "packaging label", "label", "brochure", "wrapper", "box"],
+      "files": ["modules/layout/README.md", "modules/typography/README.md", "modules/brand/README.md"],
+      "optional_files": ["modules/colour-value/README.md"],
+      "rules": ["LAY-9", "BRAND-10"]
+    },
+    {
+      "id": "infographic",
+      "label": "Infographic, chart, diagram, map, fact sheet, timeline",
+      "media": ["infographic", "chart", "diagram", "route map", "map", "fact sheet", "timeline", "how-to"],
+      "files": ["modules/layout/README.md", "modules/layout/infographics.md", "modules/typography/README.md"],
+      "optional_files": ["modules/illustration/README.md", "modules/brand/README.md"],
+      "rules": ["LAY-18", "LAY-19", "INF-1", "INF-2", "INF-4", "INF-5", "INF-6"]
+    },
+    {
+      "id": "signage-menu",
+      "label": "Menu board, signage, timetable, price list, official notice",
+      "media": ["menu", "menu board", "signage", "sign", "timetable", "price list", "notice", "official notice"],
+      "files": ["modules/layout/README.md", "modules/typography/README.md"],
+      "optional_files": [],
+      "rules": ["LAY-7", "LAY-17"]
+    },
+    {
+      "id": "type-led",
+      "label": "Type-led piece (wordmark, editorial page, type-led poster)",
+      "media": ["wordmark", "editorial", "editorial page", "type-led", "type-led poster", "typography"],
+      "files": ["modules/typography/README.md", "modules/layout/README.md"],
+      "optional_files": [],
+      "rules": ["TYPE-2", "TYPE-3", "TYPE-9", "TYPE-10", "TYPE-15"]
+    },
+    {
+      "id": "illustration-drawing",
+      "label": "Drawing, painting, illustration, concept art, scene, picture book",
+      "media": ["drawing", "painting", "illustration", "concept art", "scene", "picture book", "picture-book spread", "spread", "ai image", "generated image"],
+      "files": ["modules/illustration/README.md", "modules/technical-drawing/README.md", "modules/composition/README.md", "modules/colour-value/README.md"],
+      "optional_files": [],
+      "rules": ["TD-PER-1", "TD-LIT-1", "ILL-11", "ILL-12"]
+    },
+    {
+      "id": "construction-only",
+      "label": "Technical drawing or construction errors only",
+      "media": ["technical drawing", "technical-drawing", "construction", "construction errors only", "perspective", "orthographic", "exploded view"],
+      "files": ["modules/technical-drawing/README.md"],
+      "optional_files": [],
+      "rules": ["TD-PER-1", "TD-ELL-1", "TD-PRO-1", "TD-LIT-1"]
+    },
+    {
+      "id": "character-anatomy",
+      "label": "Any person, face, hand, creature, mascot or animal",
+      "media": ["character", "character design", "creature", "creature design", "portrait", "animal", "figure", "mascot"],
+      "brief_flag": "has_people_or_animals",
+      "files": ["modules/character/README.md", "modules/technical-drawing/README.md"],
+      "optional_files": ["modules/illustration/README.md"],
+      "rules": ["CHAR-9", "CHAR-10", "CHAR-11"]
+    },
+    {
+      "id": "photo",
+      "label": "Photograph or photoreal image (shot or generated)",
+      "media": ["photo", "photograph", "photography", "photoreal", "product photo", "food photo"],
+      "files": ["modules/photo/README.md"],
+      "optional_files": ["modules/illustration/README.md", "modules/colour-value/README.md"],
+      "rules": ["PHOTO-1", "PHOTO-2", "PHOTO-3", "PHOTO-7"]
+    },
+    {
+      "id": "logo-mark",
+      "label": "Logo, mark, emblem, crest, icon set",
+      "media": ["logo", "mark", "emblem", "crest", "icon", "icon set", "monogram"],
+      "files": ["modules/brand/README.md", "modules/brand/logo.md", "modules/brand/mark-making.md"],
+      "optional_files": ["modules/brand/logo-notes.md", "modules/brand/clever-marks.md"],
+      "rules": ["BRAND-4", "BRAND-8", "BRAND-9", "LOGO-1", "LOGO-3"]
+    },
+    {
+      "id": "brand-system",
+      "label": "Brand guide or brand identity system",
+      "media": ["brand", "brand guide", "brand identity", "identity"],
+      "files": ["modules/brand/README.md", "core/brand-intake.md"],
+      "optional_files": ["modules/typography/README.md", "modules/colour-value/README.md"],
+      "rules": ["BRAND-4", "BRAND-6", "BRAND-8"]
+    },
+    {
+      "id": "web-ui",
+      "label": "Web page, landing page, pricing section, app screen, dashboard",
+      "media": ["web", "web page", "website", "landing page", "web hero", "hero", "pricing", "app screen", "mobile app screen", "screen", "dashboard", "ui", "web-ui"],
+      "format_kind": "screen",
+      "files": ["modules/web-ui/README.md", "modules/typography/README.md"],
+      "optional_files": ["modules/ux/README.md", "modules/brand/README.md"],
+      "rules": ["UI-4", "UI-5", "UI-6", "UI-10", "UI-11", "UI-12", "UI-13", "UI-15"]
+    },
+    {
+      "id": "ux-flow",
+      "label": "Sign-up, checkout, settings, form, multi-step flow or whole product",
+      "media": ["ux", "flow", "sign-up", "signup", "checkout", "settings", "form", "onboarding", "whole product", "prototype"],
+      "files": ["modules/ux/README.md", "modules/web-ui/README.md"],
+      "optional_files": [],
+      "rules": ["UX-1", "UX-3", "UX-10", "UX-11"]
+    },
+    {
+      "id": "composition-palette",
+      "label": "Balance, focus, composition or colour/value review",
+      "media": ["balance", "composition", "palette", "colour", "color", "value"],
+      "files": ["modules/composition/README.md", "modules/colour-value/README.md"],
+      "optional_files": [],
+      "rules": ["CORE-11", "COMP-2", "COMP-19", "CV-1", "CV-11"]
+    },
+    {
+      "id": "aesthetic-direction",
+      "label": "Mood, distinctiveness, aesthetic critique or version comparison",
+      "media": ["aesthetic", "distinctive feel", "mood", "critique", "comparison"],
+      "files": ["modules/aesthetic-critique/README.md"],
+      "optional_files": [],
+      "rules": ["AES-0", "AES-9", "AES-10", "AES-11", "AES-12"]
+    },
+    {
+      "id": "lookbook-variations",
+      "label": "Variations, visual directions, style exploration",
+      "media": ["variations", "lookbook", "directions", "from-scratch concepts"],
+      "files": ["modules/lookbook/README.md"],
+      "optional_files": [],
+      "rules": ["LOOK-1", "LOOK-2", "LOOK-3"]
+    },
+    {
+      "id": "storyboard-comic",
+      "label": "Storyboard, comic, carousel or image sequence",
+      "media": ["storyboard", "comic", "carousel", "image sequence"],
+      "files": ["modules/illustration/README.md", "modules/illustration/notes.md"],
+      "optional_files": ["modules/film/story.md", "modules/film/review.md"],
+      "rules": ["ILL-7", "LAY-18"]
+    },
+    {
+      "id": "3d-optional",
+      "label": "3D model, prop, asset, scene or render (optional domain)",
+      "group": "optional-domain",
+      "media": ["3d", "3d model", "3d render", "3d prop", "3d scene", "blender", "mesh"],
+      "files": ["modules/3d/README.md"],
+      "optional_files": ["modules/illustration/README.md", "modules/technical-drawing/README.md"],
+      "rules": ["3D-1", "3D-2", "3D-6", "3D-7"]
+    },
+    {
+      "id": "film-optional",
+      "label": "Video, film, animation, trailer, shot list or generated clip (optional domain)",
+      "group": "optional-domain",
+      "media": ["film", "video", "animation", "trailer", "clip", "shot list", "generated video", "generated clip"],
+      "files": ["modules/film/README.md", "modules/film/story.md", "modules/film/review.md"],
+      "optional_files": ["modules/film/edit.md", "modules/film/generated.md", "modules/film/crossover.md"],
+      "rules": ["FILM-STORY-0", "FILM-ACC-1", "FILM-LIT-1", "FILM-GEN-2", "FILM-GEN-3", "FILM-GEN-8"]
+    },
+    {
+      "id": "writing-optional",
+      "label": "Website copy, emails, replies, blurbs, microcopy (optional domain)",
+      "group": "optional-domain",
+      "media": ["writing", "copy", "web copy", "website copy", "email", "email reply", "newsletter", "blurb", "about page", "microcopy", "prose"],
+      "text_triggers": ["website copy", "web copy", "email reply", "email replies", "newsletter", "blurb", "about page", "about text", "microcopy", "empty state", "empty states", "error message", "error messages", "button copy", "supporting copy", "draft copy", "reply to a customer", "replies to supporters"],
+      "files": ["modules/writing/README.md"],
+      "optional_files": [],
+      "rules": ["WRITE-1", "WRITE-2", "WRITE-3", "WRITE-4", "WRITE-5", "WRITE-6", "WRITE-7", "WRITE-8", "WRITE-9", "WRITE-10", "WRITE-11"]
+    }
+  ]
+}

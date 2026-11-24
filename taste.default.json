@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "default",
+  "description": "Neutral starter taste profile. Copy to taste.json in your project to encode brand or personal preferences without modifying universal design rules.",
+  "english_variety": "en-GB",
+  "whites": {
+    "default": "neutral",
+    "warm_reason": ""
+  },
+  "finish_ceiling": "restrained",
+  "preferred_typefaces": [],
+  "avoid_typefaces": [],
+  "avoid_tropes": [
+    "generic-ai-purple-gradient",
+    "cracked-grunge-display-type",
+    "over-textured-food-watercolour",
+    "unrequested-pack-shot-staging"
+  ],
+  "brand_tokens": {
+    "palette_roles": {},
+    "notes": ""
+  },
+  "owner_notes": []
+}
