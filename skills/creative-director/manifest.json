@@ -91,7 +91,7 @@
   "modules": {
     "layout": {
       "group": "core-visual",
-      "summary": "Fixed frames: posters, covers, social cards, slides, print, signage, packaging and infographics.",
+      "summary": "Fixed frames: posters, covers, social cards, slides, print, signage, packaging and infographics. Infographic recipes are less mature until Batch 9 is judged.",
       "entry": "modules/layout/README.md",
       "extra_files": ["modules/layout/infographics.md"]
     },
@@ -150,13 +150,13 @@
     },
     "web-ui": {
       "group": "core-visual",
-      "summary": "Web and app screens: layout grids, components, states, contrast, dark mode, reflow and motion.",
+      "summary": "Web and app screens: layout grids, components, states, contrast, dark mode, reflow and motion. Less mature until Batch 9 (screens and infographics) is judged.",
       "entry": "modules/web-ui/README.md",
       "extra_files": ["modules/web-ui/notes.md"]
     },
     "ux": {
       "group": "core-visual",
-      "summary": "Task flows, error recovery, defaults, keyboard focus order and alt text.",
+      "summary": "Task flows, error recovery, defaults, keyboard focus order and alt text. Less mature until Batch 9 (screens and infographics) is judged.",
       "entry": "modules/ux/README.md",
       "extra_files": []
     },

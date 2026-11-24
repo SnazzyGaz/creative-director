@@ -98,8 +98,8 @@ Only `AGENTS.md` and `core/kernel.md` are always loaded (≤ 1,600 tokens). All 
 | Module | Covers |
 |---|---|
 | [technical-drawing](modules/technical-drawing/) · [illustration](modules/illustration/) · [character](modules/character/) | perspective, light, anatomy (every hand, limb and face checked; a fail blocks delivery) |
-| [web-ui](modules/web-ui/) · [ux](modules/ux/) | screens, flows and accessibility (states, dark mode, reflow, reduced motion, focus order, alt text), clicked and recorded |
-| [typography](modules/typography/) · [layout](modules/layout/) · [brand](modules/brand/) | type, social cards, posters, slides, print, infographics with charts drawn from the data in code; official logos placed unaltered, never redrawn; new logos made idea first and edited by LOGO-1 to 16, with notes on mark making and double readings |
+| [web-ui](modules/web-ui/) · [ux](modules/ux/) | screens, flows and accessibility (states, dark mode, reflow, reduced motion, focus order, alt text), clicked and recorded. Less mature until Batch 9 (screens and infographics) is judged. |
+| [typography](modules/typography/) · [layout](modules/layout/) · [brand](modules/brand/) | type, social cards, posters, slides, print, and infographics with charts drawn from the data in code (infographics are less mature until Batch 9 is judged); official logos placed unaltered, never redrawn; new logos made idea first and edited by LOGO-1 to 16, with notes on mark making and double readings |
 | [composition](modules/composition/) · [colour-value](modules/colour-value/) · [aesthetic-critique](modules/aesthetic-critique/) | balance, focus, beauty and palette, graded from *well supported* to *myth*; intent model and side-by-side verdicts |
 | [photo](modules/photo/) | photographs and photoreal images, shot or generated: distance and lens, camera height, named light, casting, styling, retouch limits, generated-photo tells |
 | [lookbook](modules/lookbook/) (optional) | 415 visual looks to offer as directions, named by technique or era, never by living artists; used at 20-50% by default, stronger only on purpose |
@@ -146,7 +146,7 @@ The owner judged with-skill and plain-prompt images side by side without knowing
 - **Recommended setup:** Playwright or headless Chrome for UI (`tools/shot.sh` uses Chrome; `tools/autocheck.py` uses Playwright for pages), Blender for 3D (plus [model-qa](https://github.com/SnazzyGaz/model-qa) for build checks), and Python 3 with Pillow and NumPy for the `tools/` scripts (the auto check, look tests, contrast, vanishing points, ellipses, layout grid, 3D intersections; `pip install -r tools/requirements.txt`).
 - **Without vision** you only get a rules-only review of code or a description. It can still catch contrast, spacing and flow problems in code, but it can't judge how the work looks, and it is much weaker.
 
-Context cost: **about 1,400 tokens always loaded** (`AGENTS.md` + `core/kernel.md`, budget ≤ 1,600 — a 75% reduction from v0.11's 6,000), plus only the specific modules routed by `cd.py load` from `manifest.json` (`python3 tools/check_budgets.py --loads`). Budgets are enforced in CI on both Linux and Windows. For single-file small-context chat use, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) fits in about 2,500 tokens.
+Context cost: **1,526 of 1,600 tokens always loaded** (`AGENTS.md` + `core/kernel.md` — about a 75% reduction from v0.11's 5,999), plus only the specific modules routed by `cd.py load` from `manifest.json` (`python3 tools/check_budgets.py --loads`). Budgets are enforced in CI on both Linux and Windows. For single-file small-context chat use, [`lite/CREATIVE-DIRECTOR-LITE.md`](lite/CREATIVE-DIRECTOR-LITE.md) fits in about 2,500 tokens.
 
 ## What's inside
 

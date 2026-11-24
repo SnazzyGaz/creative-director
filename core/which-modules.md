@@ -33,7 +33,7 @@ Do not edit this routing table by hand — edit `manifest.json` and run `python3
 
 | Module | Group | Entry | Extra files | Covers |
 |---|---|---|---|---|
-| `layout` | `core-visual` | `modules/layout/README.md` | `infographics.md` | Fixed frames: posters, covers, social cards, slides, print, signage, packaging and infographics. |
+| `layout` | `core-visual` | `modules/layout/README.md` | `infographics.md` | Fixed frames: posters, covers, social cards, slides, print, signage, packaging and infographics. Infographic recipes are less mature until Batch 9 is judged. |
 | `typography` | `core-visual` | `modules/typography/README.md` | — | Type choice, scale, measure, leading, display hierarchy and font selection. |
 | `composition` | `core-visual` | `modules/composition/README.md` | `sitting-right.md` | Balance, visual weight, focus, unity, space and the pre-delivery Sitting right pass. |
 | `colour-value` | `core-visual` | `modules/colour-value/README.md` | — | Value grouping, colour roles, neutral whites, simultaneous contrast and CVD safety. |
@@ -42,8 +42,8 @@ Do not edit this routing table by hand — edit `manifest.json` and run `python3
 | `technical-drawing` | `core-visual` | `modules/technical-drawing/README.md` | — | Perspective, horizons, ellipses, proportion and consistent key lighting. |
 | `brand` | `core-visual` | `modules/brand/README.md` | `logo.md`, `logo-notes.md`, `mark-making.md`, `clever-marks.md` | Official marks, brand systems, packaging identity and logo mark-making (LOGO-1..16). |
 | `photo` | `core-visual` | `modules/photo/README.md` | — | Photographs and photoreal imagery: lens distance, camera height, light, casting and AI photo tells. |
-| `web-ui` | `core-visual` | `modules/web-ui/README.md` | `notes.md` | Web and app screens: layout grids, components, states, contrast, dark mode, reflow and motion. |
-| `ux` | `core-visual` | `modules/ux/README.md` | — | Task flows, error recovery, defaults, keyboard focus order and alt text. |
+| `web-ui` | `core-visual` | `modules/web-ui/README.md` | `notes.md` | Web and app screens: layout grids, components, states, contrast, dark mode, reflow and motion. Less mature until Batch 9 (screens and infographics) is judged. |
+| `ux` | `core-visual` | `modules/ux/README.md` | — | Task flows, error recovery, defaults, keyboard focus order and alt text. Less mature until Batch 9 (screens and infographics) is judged. |
 | `aesthetic-critique` | `core-visual` | `modules/aesthetic-critique/README.md` | — | Intent modelling, comparative pairwise verdicts, regression checks and novelty-typicality balance. |
 | `lookbook` | `core-visual` | `modules/lookbook/README.md` | — | Optional 415 curated visual looks and clusters for controlled 20-50% style bleed on concepts/variations. |
 | `writing` | `optional-domain` | `modules/writing/README.md` | — | Optional domain: website copy, emails, replies, blurbs, about pages and UI microcopy (WRITE-1..11). |
@@ -55,6 +55,10 @@ Do not edit this routing table by hand — edit `manifest.json` and run `python3
 `core/energy-pass.md` loads only when the brief's `feeling`, `purpose`, `idea`, or `intent_tags` match an energetic intent — never from `medium` alone:
 
 `energetic`, `energy`, `lively`, `playful`, `bold`, `kinetic`, `vibrant`, `exciting`, `dynamic`, `festive`, `celebration`, `festival`, `fete`, `concert`, `gig`, `party`, `carnival`, `comedy`, `children`, `children's`, `kids`, `youth`, `sport`, `run`, `race`, `club`, `nightlife`, `loud`, `punchy`, `dramatic`, `thriller`, `action`, `promotional`, `campaign`
+
+## Maturity
+
+The `web-ui` and `ux` modules, and the infographic recipes in `modules/layout/infographics.md`, are less mature than the rest. Blind-test Batch 9, which covers screens and infographics, is drawn and waiting to be judged.
 
 ## Token budgets
 
