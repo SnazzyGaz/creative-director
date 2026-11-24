@@ -1,12 +1,11 @@
 <p><img alt="creative director: design judgement for AI agents. A white great egret in profile with lace plumes, its level gaze drawn as a 20-degree viewing cone that runs through the red square mark." src="docs/assets/banner-dark.png" width="100%"></p>
 
-Design judgement and deterministic visual QA for AI agents: drawings, illustrations, 3D, screens, flows, infographics, film and writing. **v2.0.0-alpha.1 inverts the stack** — hard gates enforced in code (`tools/cd.py`, `tools/compose.py`, `tools/autocheck.py`, `tools/mcp_server.py`), a **lean ≤ 1,600-token always-on kernel** ([`AGENTS.md`](AGENTS.md) + [`core/kernel.md`](core/kernel.md)), **manifest-driven module routing** ([`manifest.json`](manifest.json)), **three proportional workflow tiers** (`fast`, `directed`, `remake`), and **separate project taste profiles** ([`taste.default.json`](taste.default.json)). Research and craft keep their evidence grades; taste stays with the owner.
+Design judgement and automated visual checks for AI agents making or reviewing illustrations, posters, packaging, logos, infographics, screens, 3D, film and copy. Instead of asking an AI to eyeball its own work against a wall of rules, **v2** checks contrast, exact text, safe areas, chart scales, and zoomed anatomy crops in code—and keeps the always-on instructions small (≤ 1,600 tokens) while loading specialist modules only when a job needs them. Research and craft keep their evidence grades; taste stays with the owner.
 
 **Start here**
-1. What it is: a tool-first QA/compositing kit + lean design-judgement kernel and modular rule library.
-2. Always load [`AGENTS.md`](AGENTS.md) and [`core/kernel.md`](core/kernel.md) (≤ 1,600 tokens — down 75% from v0.11).
-3. Route the task declaratively with `python3 tools/cd.py load --brief brief.json` (backed by [`manifest.json`](manifest.json) and [`core/which-modules.md`](core/which-modules.md)).
-4. Optionally install as a Python package (`pip install -e .`) for `cd-cli`, `cd-compose`, `cd-autocheck`, and the zero-dependency stdio MCP server (`cd-mcp`).
+1. Always load [`AGENTS.md`](AGENTS.md) and [`core/kernel.md`](core/kernel.md) (≤ 1,600 tokens — down from ~6,000 in v0.11).
+2. Let `python3 tools/cd.py load --brief brief.json` pick only the rules your task needs (backed by [`manifest.json`](manifest.json)).
+3. Check finished renders with `python3 tools/cd.py check final.png --brief brief.json` (or connect the sandboxed MCP server `cd-mcp` after `pip install -e .`).
 
 **[Gallery](https://snazzygaz.github.io/creative-director/gallery/)** · **[Install as Grok Bot](https://x.ai/bot/XWBKgRnDOw7uR5SpKx3Af)** · **[Claude Skill zip](https://github.com/SnazzyGaz/creative-director/releases/latest/download/creative-director-skill.zip)** · **[Lite version](lite/CREATIVE-DIRECTOR-LITE.md)**
 

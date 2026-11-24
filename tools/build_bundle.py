@@ -79,6 +79,7 @@ def main(argv):
         "dist/creative-director-prompt-full.md": bundle(True),
     }
     for path, text in out.items():
+        assert "Fraunces" not in text, f"Fraunces leaked into {path}"
         tokens = round(len(text) / 4 / 100) * 100
         if "--check" not in argv:
             p = ROOT / path

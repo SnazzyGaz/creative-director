@@ -28,6 +28,11 @@ import subprocess
 import sys
 import tempfile
 
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8')
+
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / 'manifest.json'
 BRIEF = ROOT / 'tools' / 'brief-template.json'
@@ -540,12 +545,13 @@ def load_plan(brief, taste=None, taste_source='default'):
         files.append('core/energy-pass.md')
         reasons.append('Energy pass triggered by brief intent/feeling')
 
-    # Delivery placement guard for visual work (skipped for pure writing briefs).
+    # Delivery placement & always-on craft guardrails for visual work (skipped for pure writing briefs).
+    explicit_rule_ids.add('CD-5')
     pure_writing = bool(matched) and set(matched) == {'writing-optional'}
     if not pure_writing:
         files.insert(0, 'modules/composition/sitting-right.md')
-        explicit_rule_ids.update(('CORE-11', 'COMP-19', 'COMP-23'))
-        reasons.append('Delivery guard: balance and dead-space checks for visual work')
+        explicit_rule_ids.update(('CORE-11', 'COMP-19', 'COMP-23', 'EN-5', 'EN-6'))
+        reasons.append('Delivery guard: balance, dead-space, and EN-5/EN-6 craft ceiling apply to visual work')
 
     files = list(dict.fromkeys(files))
     optional_files = [p for p in dict.fromkeys(optional_files) if p not in files]

@@ -1,21 +1,16 @@
 {
   "schema_version": 1,
   "name": "default",
-  "description": "Neutral starter taste profile. Copy to taste.json in your project to encode brand or personal preferences without modifying universal design rules.",
-  "english_variety": "en-GB",
+  "description": "Genuinely neutral starter taste profile (no pre-filled personal dislikes). Copy to taste.json in your project to set brand or personal preferences.",
+  "english_variety": "",
   "whites": {
     "default": "neutral",
     "warm_reason": ""
   },
-  "finish_ceiling": "restrained",
+  "finish_ceiling": "",
   "preferred_typefaces": [],
   "avoid_typefaces": [],
-  "avoid_tropes": [
-    "generic-ai-purple-gradient",
-    "cracked-grunge-display-type",
-    "over-textured-food-watercolour",
-    "unrequested-pack-shot-staging"
-  ],
+  "avoid_tropes": [],
   "brand_tokens": {
     "palette_roles": {},
     "notes": ""

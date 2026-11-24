@@ -23,6 +23,9 @@ from pathlib import Path
 import sys
 from PIL import Image, ImageColor, ImageDraw, ImageFont
 
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+
 ROOT = Path(__file__).resolve().parents[1]
 
 

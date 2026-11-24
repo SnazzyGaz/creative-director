@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "name": "house-example",
+  "description": "Example opinionated house taste profile showing how personal/brand preferences live cleanly outside universal design rules.",
+  "english_variety": "en-GB",
+  "whites": {
+    "default": "neutral",
+    "warm_reason": ""
+  },
+  "finish_ceiling": "restrained",
+  "preferred_typefaces": [],
+  "avoid_typefaces": [
+    "Fraunces"
+  ],
+  "avoid_tropes": [
+    "coastal-lighthouse-harbour-default",
+    "generic-ai-purple-gradient",
+    "cracked-grunge-display-type",
+    "over-textured-food-watercolour",
+    "unrequested-pack-shot-staging"
+  ],
+  "brand_tokens": {
+    "palette_roles": {},
+    "notes": "Two clicks restrained below hyper-polished AI finish; match graphic ambition to the job."
+  },
+  "owner_notes": []
+}
