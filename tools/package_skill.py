@@ -105,12 +105,22 @@ def tree(d: pathlib.Path):
     return sorted(p.relative_to(d).as_posix() for p in d.rglob("*") if p.is_file() and "__pycache__" not in p.parts)
 
 
+def same_file(a: pathlib.Path, b: pathlib.Path) -> bool:
+    if filecmp.cmp(a, b, shallow=False):
+        return True
+    # Tolerate git autocrlf line-ending differences on Windows runners.
+    try:
+        return a.read_bytes().replace(b"\r\n", b"\n") == b.read_bytes().replace(b"\r\n", b"\n")
+    except OSError:
+        return False
+
+
 def check():
     with tempfile.TemporaryDirectory() as t:
         fresh = pathlib.Path(t) / NAME
         build(fresh)
         a, b = tree(fresh), tree(SKILL_DIR) if SKILL_DIR.exists() else []
-        stale = sorted(set(a) ^ set(b)) + [f for f in a if f in b and not filecmp.cmp(fresh / f, SKILL_DIR / f, shallow=False)]
+        stale = sorted(set(a) ^ set(b)) + [f for f in a if f in b and not same_file(fresh / f, SKILL_DIR / f)]
     if stale:
         print("skills/creative-director/ is out of date; run python3 tools/package_skill.py\n  " + "\n  ".join(stale))
         return 1
